@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Calculator Page Blog</title>
+    <link>https://thecalculatorpage.com/blog</link>
+    <description>Financial literacy articles, calculator guides, and money management tips</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Jan 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://thecalculatorpage.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>The Millionaire's Cheat Code: Why Timing the Market Is a Losing Game</title>
+      <link>https://thecalculatorpage.com/blog/cheat-code-01</link>
+      <description>Discover the investment strategy that wealthy investors use to build wealth consistently, regardless of market conditions.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/blog/cheat-code-01</guid>
+    </item>
+    
+    <item>
+      <title>Your Complete Financial Journey: From Budgeting to Building Wealth</title>
+      <link>https://thecalculatorpage.com/learn/financial-journey</link>
+      <description>A comprehensive guide to achieving financial independence through five key stages.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/learn/financial-journey</guid>
+    </item>
+    
+    <item>
+      <title>The 50/30/20 Budget Rule: A Simple Framework for Financial Success</title>
+      <link>https://thecalculatorpage.com/learn/fifty-thirty-twenty-budget</link>
+      <description>Learn how to allocate your income effectively using the popular 50/30/20 budgeting method.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/learn/fifty-thirty-twenty-budget</guid>
+    </item>
+    
+    <item>
+      <title>Building Your Emergency Fund: A Complete Guide</title>
+      <link>https://thecalculatorpage.com/learn/emergency-fund</link>
+      <description>Step-by-step guide to building an emergency fund that protects your financial future.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/learn/emergency-fund</guid>
+    </item>
+    
+    <item>
+      <title>Automate Your Finances: Set It and Forget It</title>
+      <link>https://thecalculatorpage.com/learn/automate-finances</link>
+      <description>Discover how to automate your finances to save time and build wealth effortlessly.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/learn/automate-finances</guid>
+    </item>
+    
+    <item>
+      <title>Where Does Your Money Actually Go?</title>
+      <link>https://thecalculatorpage.com/learn/where-money-goes</link>
+      <description>Track and understand your spending patterns to take control of your finances.</description>
+      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <guid>https://thecalculatorpage.com/learn/where-money-goes</guid>
+    </item>
+  </channel>
+</rss>

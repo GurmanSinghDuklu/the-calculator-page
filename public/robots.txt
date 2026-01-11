@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Do not index the "Unlocked" success page or payment page
+Disallow: /blog/cheat-code-01-payment
+Disallow: /blog/cheat-code-01-unlocked
+
+Sitemap: https://thecalculatorpage.com/sitemap.xml
