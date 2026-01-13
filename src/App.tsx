@@ -7,10 +7,12 @@ const App = () => {
   return (
     <HelmetProvider>
       <TooltipProvider>
-        {/* We provide default SEO props so it doesn't error out */}
-        <SEO title="The Calculator Page" description="Expert financial calculators and mortgage advice tools designed for the modern financial journey." />
+        {/* Move SEO inside the main container or ensure it's rendered consistently */}
+        <SEO 
+          title="The Calculator Page" 
+          description="Expert financial calculators and mortgage advice tools." 
+        />
         <main>
-          {/* WITHOUT THIS LINE, THE PAGE WILL BE BLANK */}
           <Outlet /> 
         </main>
       </TooltipProvider>

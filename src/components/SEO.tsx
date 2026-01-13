@@ -41,10 +41,9 @@ const SEO = ({
 }: SEOProps) => {
   const fullTitle = `${title} | Calculator Page`;
 
-  const isClient = typeof window !== 'undefined';
-  const siteUrl = isClient ? window.location.origin : 'https://thecalculatorpage.com'; 
-  const currentUrl = canonicalUrl || (isClient ? window.location.href : siteUrl);
-
+  const siteUrl = 'https://thecalculatorpage.com'; 
+// Use the canonicalUrl prop if provided, otherwise fallback to a safe default
+const currentUrl = canonicalUrl || siteUrl;
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",

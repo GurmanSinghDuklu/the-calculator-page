@@ -37,6 +37,8 @@ import AgeCalculator from '../pages/misc/AgeCalculator';
 import DateCalculator from '../pages/misc/DateCalculator';
 import DiscountCalculator from '../pages/misc/DiscountCalculator';
 import PercentageCalculator from '../pages/misc/PercentageCalculator';
+import PercentageOfCalculator from '../pages/misc/PercentageOfCalculator';
+import PercentageChangeCalculator from '../pages/misc/PercentageChangeCalculator';
 import TipCalculator from '../pages/misc/TipCalculator';
 
 // Unit Converters
@@ -99,6 +101,8 @@ export const routes: RouteObject[] = [
       { path: 'misc/date', element: <DateCalculator /> },
       { path: 'misc/discount', element: <DiscountCalculator /> },
       { path: 'misc/percentage', element: <PercentageCalculator /> },
+      { path: 'misc/percentage-of', element: <PercentageOfCalculator /> },
+      { path: 'misc/percentage-change', element: <PercentageChangeCalculator /> },
       { path: 'misc/tip', element: <TipCalculator /> },
 
       // Unit Converter Routes
