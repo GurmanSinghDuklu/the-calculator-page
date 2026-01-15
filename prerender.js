@@ -66,6 +66,33 @@ const routesToPrerender = [
   '/blog/cheat-code-01/payment',
   '/blog/cheat-code-01/unlocked',
   '/blog/mortgage-cheat-code',
+  // NEW Learn Articles
+  '/learn/before-you-invest',
+  '/learn/budget-irregular-costs',
+  '/learn/build-portfolio',
+  '/learn/choose-savings-account',
+  '/learn/credit-scores',
+  '/learn/debt-landscape',
+  '/learn/ethical-investing',
+  '/learn/financial-freedom',
+  '/learn/first-1000',
+  '/learn/inflation-guide',
+  '/learn/interest-impact',
+  '/learn/investing-basics',
+  '/learn/investing-vs-trading',
+  '/learn/monthly-dashboard',
+  '/learn/portfolio-rebalancing',
+  '/learn/protect-wealth',
+  '/learn/snowball-avalanche',
+  '/learn/tax-efficient-accounts',
+  '/learn/teach-money-skills',
+
+  // Legal Pages
+  '/about',
+  '/privacy',
+  '/cookies',
+  '/terms',
+  '/disclaimer',
 ]
 
 ;(async () => {

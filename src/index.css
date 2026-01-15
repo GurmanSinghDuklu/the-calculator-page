@@ -125,6 +125,9 @@
     @apply font-normal tracking-tight;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @layer utilities {
   .font-serif { font-family: var(--font-serif); }

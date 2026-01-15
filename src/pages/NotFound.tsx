@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { SEO } from "@/components/SEO";
 
@@ -20,12 +20,15 @@ const NotFound = () => {
         <div className="text-center px-6">
           <h1 className="mb-6 font-serif text-6xl font-normal text-foreground">404</h1>
           <p className="mb-8 text-lg text-muted-foreground">Page not found</p>
-          <a 
-            href="/home" 
+          
+          {/* Changed <a> to <Link> and added 'replace' */}
+          <Link 
+            to="/home" 
+            replace={true}
             className="inline-block px-8 py-3 text-sm tracking-wider uppercase border border-foreground/20 hover:border-foreground/60 hover:bg-foreground hover:text-background transition-all duration-300"
           >
             Return Home
-          </a>
+          </Link>
         </div>
       </div>
     </>
