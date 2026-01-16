@@ -129,7 +129,7 @@ export const routes: RouteObject[] = [
       { path: 'converters/temperature', element: <TemperatureConverter /> },
       { path: 'converters/universal', element: <UniversalConverter /> },
 
-      // Learn Hub Routes
+      // Learning Hub Routes
       { path: 'learn/financial-journey', element: <FinancialJourney /> },
       { path: 'learn/where-money-goes', element: <WhereMoneyGoes /> },
       { path: 'learn/50-30-20-budget', element: <FiftyThirtyTwentyBudget /> },
