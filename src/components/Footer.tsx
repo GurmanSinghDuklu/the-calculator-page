@@ -18,9 +18,8 @@ const Footer = () => {
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               At <strong>The Calculator Page</strong>, we bridge the gap between complex financial mathematics and everyday usability. 
-              Our suite of tools is engineered using industry-standard models, including the <strong>Standard Annuity Formula</strong> 
-              for loan amortizations and <strong>Compound Interest Algorithms</strong> utilized by global banking institutions. 
-              Every calculation is verified against real-world financial benchmarks to ensure precision down to the sixth decimal place.
+              Our suite of tools is engineered using industry-standard models and verified against real-world financial benchmarks 
+              to ensure precision.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -32,7 +31,7 @@ const Footer = () => {
                   <h4 className="text-sm font-semibold mb-1">Privacy-First Architecture</h4>
                   <p className="text-xs text-muted-foreground">
                     Your financial data never touches our servers. All processing happens <strong>client-side</strong> 
-                    in your browser, ensuring 100% data sovereignty and near-instant results.
+                    in your browser, ensuring 100% data sovereignty.
                   </p>
                 </div>
               </div>
@@ -152,7 +151,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-[10px] md:text-xs text-muted-foreground text-center md:text-right max-w-md italic">
-              *All calculations are for informational purposes only. The accuracy of the result is not guaranteed and may vary based on specific institutional terms.
+              *All calculations are for informational purposes only. Results are not guaranteed and may vary based on institutional terms.
             </p>
           </div>
         </div>
