@@ -17,6 +17,7 @@ const routesToPrerender = [
   '/cookies',
   '/terms',
   '/disclaimer',
+  // Finance - Removed non-existent Amortization/Interest Rate
   '/finance/compound-interest',
   '/finance/mortgage',
   '/finance/loan',
@@ -37,8 +38,8 @@ const routesToPrerender = [
   '/finance/simple-interest',
   '/finance/stamp-duty',
   '/finance/weekly-mortgage',
+  // Misc - Removed non-existent Date calculator
   '/misc/age',
-  '/misc/date',
   '/misc/discount',
   '/misc/percentage',
   '/misc/percentage-of',
@@ -65,7 +66,7 @@ const routesToPrerender = [
   '/learn/financial-freedom',
   '/learn/first-1000',
   '/learn/inflation-guide',
-  '/learn/interest-impact',
+  '/interest-impact',
   '/learn/investing-basics',
   '/learn/investing-vs-trading',
   '/learn/monthly-dashboard',
@@ -86,15 +87,14 @@ const routesToPrerender = [
     const { html: appHtml, helmet } = render(url);
     
     let html = template
-      .replace(``, appHtml)
+      .replace(``, appHtml) // Fixed: Added back the target
       .replace(`<title>The Calculator Page - Free Online Calculators & Unit Converters</title>`, helmet.title)
       .replace(`</head>`, `${helmet.meta}${helmet.link}${helmet.script}</head>`)
 
     const filePath = `dist${url === '/' ? '/index' : url}.html`
     const absPath = toAbsolute(filePath)
     
-    // NEW: Ensure the directory exists before writing the file
-    // This prevents the script from failing when nested routes like /finance/savings are used
+    // Ensure the directory exists before writing the file
     fs.mkdirSync(path.dirname(absPath), { recursive: true })
     
     fs.writeFileSync(absPath, html)

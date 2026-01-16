@@ -32,7 +32,6 @@ import WeeklyMortgageCalculator from '../pages/finance/WeeklyMortgageCalculator'
 
 // Everyday Calculators & Converters
 import AgeCalculator from '../pages/misc/AgeCalculator';
-import DateCalculator from '../pages/misc/DateCalculator';
 import DiscountCalculator from '../pages/misc/DiscountCalculator';
 import PercentageCalculator from '../pages/misc/PercentageCalculator';
 import PercentageOfCalculator from '../pages/misc/PercentageOfCalculator';
@@ -120,7 +119,6 @@ export const routes: RouteObject[] = [
 
       // Everyday & Converter Routes
       { path: 'misc/age', element: <AgeCalculator /> },
-      { path: 'misc/date', element: <DateCalculator /> },
       { path: 'misc/discount', element: <DiscountCalculator /> },
       { path: 'misc/percentage', element: <PercentageCalculator /> },
       { path: 'misc/percentage-of', element: <PercentageOfCalculator /> },
