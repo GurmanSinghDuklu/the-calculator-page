@@ -39,7 +39,7 @@ const BlogIndex = () => {
         title="The Cheat Code - Financial Blog | Calculator Page"
         description="Learn the secrets of finance and money to get ahead. Expert insights on wealth building, investing strategies, and financial independence."
         keywords="financial blog, wealth building, investment strategies, money management, financial education"
-        canonicalUrl="https://thecalculatorpage.com/blog"
+        canonicalUrl="https://www.thecalculatorpage.com/blog"
       />
 
       <div className="min-h-screen bg-background">

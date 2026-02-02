@@ -121,9 +121,9 @@ const Footer = () => {
             <div className="space-y-3">
               <div>
                 <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Get in Touch</h4>
-                <a href="mailto:hello@thecalculatorpage.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:thecalculatorpage@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
                   <Mail className="h-4 w-4" />
-                  hello@thecalculatorpage.com
+                  thecalculatorpage@gmail.com
                 </a>
               </div>
               <div>

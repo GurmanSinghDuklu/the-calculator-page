@@ -134,7 +134,7 @@ const About = () => {
                 Have a question, suggestion, or found a bug? We'd love to hear from you.
               </p>
               <p className="text-muted-foreground">
-                Email us at: <a href="mailto:hello@thecalculatorpage.com" className="text-primary hover:underline">hello@thecalculatorpage.com</a>
+                Email us at: <a href="mailto:thecalculatorpage@gmail.com" className="text-primary hover:underline">thecalculatorpage@gmail.com</a>
               </p>
             </section>
           </article>

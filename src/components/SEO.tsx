@@ -39,60 +39,89 @@ const SEO = ({
   howToSchema,
   articleSchema
 }: SEOProps) => {
-  const fullTitle = `${title} | Calculator Page`;
+  const siteUrl = 'https://www.thecalculatorpage.com'; 
+  
+  // FIX: Force removal of trailing slash to match sitemap and avoid duplicate errors
+  const cleanCanonical = canonicalUrl 
+    ? canonicalUrl.replace(/\/$/, "") 
+    : siteUrl;
 
-  const siteUrl = 'https://thecalculatorpage.com'; 
-// Use the canonicalUrl prop if provided, otherwise fallback to a safe default
-const currentUrl = canonicalUrl || siteUrl;
-  const defaultStructuredData = {
+  const fullTitle = `${title} | The Calculator Page`;
+
+  // Base Schema
+  const baseSchema = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Calculator Page",
+    "@type": type === "article" ? "Article" : "WebPage",
+    "name": title,
     "description": description,
-    "url": siteUrl,
+    "url": cleanCanonical,
   };
 
-  const allSchemas = [
-    structuredData || defaultStructuredData,
-  ].filter(Boolean);
+  // Combine all schemas into an array
+  const allSchemas: any[] = [baseSchema];
 
-  const finalStructuredData = allSchemas.length === 1 ? allSchemas[0] : allSchemas;
+  if (structuredData) allSchemas.push(structuredData as any);
+  
+  if (calculatorSchema) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": calculatorSchema.name,
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "description": description
+    });
+  }
+
+  if (faqSchema) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqSchema.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
+    });
+  }
 
   return (
     <Helmet>
+      {/* Standard Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={currentUrl} />
       
-      {/* --- ICON FIXES --- */}
-      {/* This forces the browser to look for favicon.png in your public folder */}
+      {/* CRITICAL FIX: data-rh="true" ensures react-helmet-async 
+          replaces the tag instead of duplicating it.
+      */}
+      <link rel="canonical" href={cleanCanonical} data-rh="true" />
+      
+      {/* Favicons (Using PNG as specified in your icons fix) */}
       <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="shortcut icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/favicon.png" />
-      
-      {/* Open Graph and Twitter tags */}
+
+      {/* Social Meta Tags */}
+      <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:image" content="/favicon.png" />
-      <meta name="twitter:image" content="/favicon.png" />
+      <meta property="og:url" content={cleanCanonical} />
+      <meta property="og:image" content={`${siteUrl}/og-image.png`} />
       
-      {/* Structured Data Mapping */}
-      {Array.isArray(finalStructuredData) ? (
-        finalStructuredData.map((data, index) => (
-          <script key={index} type="application/ld+json">
-            {JSON.stringify(data)}
-          </script>
-        ))
-      ) : (
-        <script type="application/ld+json">
-          {JSON.stringify(finalStructuredData)}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+
+      {/* Injecting Structured Data */}
+      {allSchemas.map((schema, index) => (
+        <script key={`schema-${index}`} type="application/ld+json">
+          {JSON.stringify(schema)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 };
 
-export { SEO }; 
+export { SEO };
 export default SEO;

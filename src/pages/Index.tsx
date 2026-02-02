@@ -3,12 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import SEO from "@/components/SEO"; // Changed to default import to match your SEO.tsx
+import SEO from "@/components/SEO"; 
 import { NavigationMenu } from "@/components/NavigationMenu";
 import { Logo } from "@/components/Logo";
-import compoundCalcImg from "@/assets/compound-calc.png";
-import mortgageCalcImg from "@/assets/mortgage-calc.png";
-import retirementCalcImg from "@/assets/retirement-calc.png";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 
@@ -27,10 +24,7 @@ const Index = () => {
     { title: "Weekly Mortgage", path: "/finance/weekly-mortgage", icon: Home },
     { title: "Mortgage Overpayment", path: "/finance/mortgage-overpayment", icon: Home },
     { title: "Stamp Duty Calculator", path: "/finance/stamp-duty", icon: Landmark },
-    { title: "Future House Value", path: "/finance/future-house-value", icon: Building2 },
-    { title: "Rent vs Buy", path: "#", icon: Key },
-    { title: "Affordability Calculator", path: "#", icon: Home },
-    { title: "Moving Costs", path: "#", icon: Home },
+    { title: "Future House Value", path: "/finance/future-house-value", icon: Building2 }
   ];
 
   const financeCalculators = [
@@ -41,23 +35,20 @@ const Index = () => {
     { title: "Car Loan Calculator", path: "/finance/car-loan", icon: DollarSign },
     { title: "Loan Calculator", path: "/finance/loan", icon: DollarSign },
     { title: "Savings Calculator", path: "/finance/savings", icon: PiggyBank },
-    { title: "Simple Interest", path: "/finance/simple-interest", icon: TrendingUp },
-    { title: "Amortization Calculator", path: "#", icon: DollarSign },
-    { title: "Interest Rate Calculator", path: "#", icon: TrendingUp },
+    { title: "Simple Interest", path: "/finance/simple-interest", icon: TrendingUp }
   ];
 
   const miscCalculators = [
     { title: "Percentage Calculator", path: "/misc/percentage", icon: Percent },
     { title: "Age Calculator", path: "/misc/age", icon: Calendar },
     { title: "Discount Calculator", path: "/misc/discount", icon: Percent },
-    { title: "Tip Calculator", path: "/misc/tip", icon: DollarSign },
-    { title: "Days Between Dates", path: "#", icon: Calendar },
+    { title: "Tip Calculator", path: "/misc/tip", icon: DollarSign }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="The Calculator Page"
+        title="The Calculator Page - Professional Financial Tools"
         description="50+ free calculators: compound interest, mortgage, retirement, and unit converters."
       />
       
@@ -73,7 +64,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h1 className="font-serif text-4xl sm:text-6xl font-normal tracking-tight">
+          <h1 className="font-serif text-4xl sm:text-6xl font-normal tracking-tight text-foreground">
             Financial Calculators
             <span className="block text-2xl sm:text-4xl text-muted-foreground mt-3 font-sans font-light">
               & Unit Converters
@@ -93,11 +84,11 @@ const Index = () => {
             {searchQuery && (
               <div className="absolute w-full mt-2 bg-card border rounded-lg shadow-lg z-50 text-left overflow-hidden">
                 {[...financeCalculators, ...homeCalculators, ...miscCalculators]
-                  .filter(c => c.title.toLowerCase().includes(searchQuery.toLowerCase()) && c.path !== "#")
+                  .filter(c => c.title.toLowerCase().includes(searchQuery.toLowerCase()))
                   .slice(0, 6)
                   .map(calc => (
                     <Link
-                      key={`search-${calc.title}`} // UNIQUE KEY FIX
+                      key={`search-${calc.title}`}
                       to={calc.path}
                       className="block p-3 hover:bg-accent border-b last:border-0"
                       onClick={() => setSearchQuery("")}
@@ -114,11 +105,11 @@ const Index = () => {
       {/* Featured Section */}
       <section id="featured" className="py-16 px-6 bg-accent/5">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="font-serif text-3xl mb-10 text-center">Featured Tools</h2>
+          <h2 className="font-serif text-3xl mb-10 text-center text-foreground">Featured Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularCalculatorsAndConversions.map((calc) => (
-              <Link key={`popular-${calc.title}`} to={calc.path}> {/* UNIQUE KEY FIX */}
-                <Card className="h-full hover:border-brand-gold/50 transition-all">
+              <Link key={`popular-${calc.title}`} to={calc.path}>
+                <Card className="h-full hover:border-brand-gold/50 transition-all cursor-pointer">
                   <CardHeader>
                     <div className="flex justify-between items-start mb-2">
                       <calc.icon className="h-6 w-6 text-brand-gold" />
@@ -136,7 +127,7 @@ const Index = () => {
 
       {/* Grid Sections */}
       <section className="py-16 px-6">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-3 gap-12">
+        <div className="container mx-auto max-w-6xl grid md:grid-cols-3 gap-12 text-foreground">
           {/* Property Column */}
           <div>
             <h3 className="font-serif text-xl mb-6 flex items-center gap-2">
@@ -145,11 +136,11 @@ const Index = () => {
             <div className="space-y-2">
               {homeCalculators.map(calc => (
                 <Link 
-                  key={`home-${calc.title}`} // UNIQUE KEY FIX
+                  key={`home-${calc.title}`} 
                   to={calc.path} 
                   className="block p-2 hover:bg-accent rounded text-sm transition-colors"
                 >
-                  {calc.title} {calc.path === "#" && <span className="text-[10px] opacity-50">(Soon)</span>}
+                  {calc.title}
                 </Link>
               ))}
             </div>
@@ -163,7 +154,7 @@ const Index = () => {
             <div className="space-y-2">
               {financeCalculators.map(calc => (
                 <Link 
-                  key={`fin-${calc.title}`} // UNIQUE KEY FIX
+                  key={`fin-${calc.title}`} 
                   to={calc.path} 
                   className="block p-2 hover:bg-accent rounded text-sm transition-colors"
                 >
@@ -173,7 +164,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Misc Column */}
+          {/* Everyday Column */}
           <div>
             <h3 className="font-serif text-xl mb-6 flex items-center gap-2">
               <Star className="h-5 w-5 text-brand-gold" /> Everyday
@@ -181,7 +172,7 @@ const Index = () => {
             <div className="space-y-2">
               {miscCalculators.map(calc => (
                 <Link 
-                  key={`misc-${calc.title}`} // UNIQUE KEY FIX
+                  key={`misc-${calc.title}`} 
                   to={calc.path} 
                   className="block p-2 hover:bg-accent rounded text-sm transition-colors"
                 >

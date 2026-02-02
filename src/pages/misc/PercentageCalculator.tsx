@@ -67,19 +67,19 @@ const PercentageCalculator = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://thecalculatorpage.com/"
+        "item": "https://www.thecalculatorpage.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Everyday Calculators",
-        "item": "https://thecalculatorpage.com/#misc"
+        "item": "https://www.thecalculatorpage.com/#misc"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Percentage Calculator",
-        "item": "https://thecalculatorpage.com/misc/percentage"
+        "item": "https://www.thecalculatorpage.com/misc/percentage"
       }
     ]
   };

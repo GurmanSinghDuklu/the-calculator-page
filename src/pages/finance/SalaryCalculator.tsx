@@ -210,7 +210,7 @@ const SalaryCalculator = () => {
         title="Salary Calculator - Calculate Take Home Pay After Tax"
         description="Free salary calculator for 2024. Calculate your take-home pay after income tax deductions for UK and US. Get monthly, weekly and daily breakdowns."
         keywords="salary calculator, take home pay calculator, income tax calculator, net salary calculator, gross to net calculator"
-        canonicalUrl="https://thecalculatorpage.com/finance/salary"
+        canonicalUrl="https://www.thecalculatorpage.com/finance/salary"
       />
       <CalculatorLayout
         title="Salary Calculator"

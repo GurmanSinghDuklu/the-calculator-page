@@ -135,7 +135,7 @@ const WeeklyMortgageCalculator = () => {
         title="Weekly Mortgage Payment Calculator | Save Years on Your Mortgage"
         description="Calculate how switching to weekly mortgage payments can save you thousands in interest and years off your mortgage. Free UK mortgage calculator."
         keywords="weekly mortgage payments, mortgage calculator UK, pay off mortgage faster, mortgage interest savings, bi-weekly mortgage payments"
-        canonicalUrl="https://thecalculatorpage.com/finance/weekly-mortgage"
+        canonicalUrl="https://www.thecalculatorpage.com/finance/weekly-mortgage"
       />
       <CalculatorLayout
         title="Weekly Mortgage Calculator"

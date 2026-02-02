@@ -11,7 +11,7 @@ const Welcome = () => {
         title="Calculator Page - Professional Financial Calculators & Tools"
         description="Free professional calculators for finance, budgeting, retirement planning, and unit conversions. Calculate compound interest, mortgages, and more."
         keywords="calculator, financial calculator, compound interest, mortgage calculator, retirement calculator"
-        canonicalUrl="https://thecalculatorpage.com/"
+        canonicalUrl="https://www.thecalculatorpage.com/"
       />
 
       {/* Animated Background */}

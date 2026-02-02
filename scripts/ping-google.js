@@ -11,9 +11,9 @@ const keys = JSON.parse(fs.readFileSync(KEY_FILE, 'utf8'));
 
 // The URLs you want to be "Instant Indexed"
 const URLS_TO_INDEX = [
-  'https://thecalculatorpage.com/',
-  'https://thecalculatorpage.com/finance/compound-interest',
-  'https://thecalculatorpage.com/finance/mortgage'
+  'https://www.thecalculatorpage.com/',
+  'https://www.thecalculatorpage.com/finance/compound-interest',
+  'https://www.thecalculatorpage.com/finance/mortgage'
 ];
 
 const jwtClient = new google.auth.JWT({

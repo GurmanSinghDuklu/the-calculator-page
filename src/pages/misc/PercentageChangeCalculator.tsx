@@ -81,7 +81,7 @@ const PercentageChangeCalculator = () => {
         title="Percentage Increase/Decrease Calculator - Free Online Tool"
         description="Calculate percentage increase or decrease instantly. What is X% increase or decrease of Y? Simple, fast calculator with formula explanation."
         keywords="percentage increase calculator, percentage decrease calculator, calculate percentage change, percent increase, percent decrease, percentage calculator"
-        canonicalUrl="https://thecalculatorpage.com/misc/percentage-change"
+        canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-change"
       />
       <CalculatorLayout
         title="Percentage Increase/Decrease Calculator"

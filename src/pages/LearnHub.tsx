@@ -112,7 +112,7 @@ const LearnHub = () => {
         title="Learn & Insights - Financial Education Hub | Calculator Page"
         description="Master personal finance with our comprehensive guides, cheat codes, and educational content. From budgeting basics to wealth building strategies."
         keywords="financial education, money management, budgeting guide, investment strategies, wealth building, personal finance"
-        canonicalUrl="https://thecalculatorpage.com/learn"
+        canonicalUrl="https://www.thecalculatorpage.com/learn"
       />
 
       <div className="min-h-screen bg-background">

@@ -76,7 +76,7 @@ const PercentageOfCalculator = () => {
         title="Percentage Of Calculator - What is X% of Y? | Free Online Tool"
         description="Instantly calculate what percentage of any number is. Simple, fast percentage calculator. What is X% of Y? Free online tool with formula explanation."
         keywords="percentage of calculator, what is percent of, calculate percentage, percentage calculator, math calculator, percentage formula"
-        canonicalUrl="https://thecalculatorpage.com/misc/percentage-of"
+        canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-of"
       />
       <CalculatorLayout
         title="Percentage Of Calculator"

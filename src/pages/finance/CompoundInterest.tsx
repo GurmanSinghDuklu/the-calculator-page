@@ -95,19 +95,19 @@ const CompoundInterest = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://thecalculatorpage.com/"
+        "item": "https://www.thecalculatorpage.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Finance Calculators",
-        "item": "https://thecalculatorpage.com/#finance"
+        "item": "https://www.thecalculatorpage.com/finance"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Compound Interest Calculator",
-        "item": "https://thecalculatorpage.com/finance/compound-interest"
+        "item": "https://www.thecalculatorpage.com/finance/compound-interest"
       }
     ]
   };
