@@ -101,30 +101,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Featured Section */}
-      <section id="featured" className="py-16 px-6 bg-accent/5">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="font-serif text-3xl mb-10 text-center text-foreground">Featured Tools</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularCalculatorsAndConversions.map((calc) => (
-              <Link key={`popular-${calc.title}`} to={calc.path}>
-                <Card className="h-full hover:border-brand-gold/50 transition-all cursor-pointer">
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <calc.icon className="h-6 w-6 text-brand-gold" />
-                      <Badge variant="outline" className="text-[10px]">{calc.badge}</Badge>
-                    </div>
-                    <CardTitle className="text-lg">{calc.title}</CardTitle>
-                    <CardDescription>{calc.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Grid Sections */}
       <section className="py-16 px-6">
         <div className="container mx-auto max-w-6xl grid md:grid-cols-3 gap-12 text-foreground">
@@ -183,6 +159,30 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured Section */}
+      <section id="featured" className="py-16 px-6 bg-accent/5">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="font-serif text-3xl mb-10 text-center text-foreground">Featured Tools</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularCalculatorsAndConversions.map((calc) => (
+              <Link key={`popular-${calc.title}`} to={calc.path}>
+                <Card className="h-full hover:border-brand-gold/50 transition-all cursor-pointer">
+                  <CardHeader>
+                    <div className="flex justify-between items-start mb-2">
+                      <calc.icon className="h-6 w-6 text-brand-gold" />
+                      <Badge variant="outline" className="text-[10px]">{calc.badge}</Badge>
+                    </div>
+                    <CardTitle className="text-lg">{calc.title}</CardTitle>
+                    <CardDescription>{calc.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
