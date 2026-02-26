@@ -1,6 +1,5 @@
-import { Menu, TrendingUp, DollarSign, PiggyBank, Percent, Calendar, Calculator, Ruler, Thermometer, Weight, GraduationCap, BookOpen, Home, Building2, Landmark, Key } from "lucide-react";
+import { TrendingUp, DollarSign, PiggyBank, Percent, Calendar, Calculator, Ruler, Thermometer, Weight, GraduationCap, BookOpen, Home, Building2, Landmark } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
@@ -48,23 +47,41 @@ export const NavigationMenu = () => {
     { title: "Weight Converter", path: "/converters/weight", icon: Weight },
   ];
 
+  const sections = [
+    { label: "Home & Property", icon: Home, data: homeCalculators, accent: "group-hover:text-accent-orange" },
+    { label: "Finance Calculators", icon: DollarSign, data: financeCalculators, accent: "group-hover:text-accent-blue" },
+    { label: "Everyday Calculators", icon: Calculator, data: miscCalculators, accent: "group-hover:text-accent-green" },
+    { label: "Unit Converters", icon: Ruler, data: converters, accent: "group-hover:text-accent-yellow" },
+  ];
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="relative border-border hover:bg-accent">
-          <Menu className="h-5 w-5" />
-          <span className="sr-only">Open menu</span>
-        </Button>
+        <button className="flex items-center gap-3 group">
+          <span className="hidden sm:inline font-heading text-sm font-bold uppercase tracking-widest text-gray-400 group-hover:text-white transition-colors">
+            Menu
+          </span>
+          <div className="w-10 h-10 bg-black border border-white/20 flex flex-col items-center justify-center gap-[5px] group-hover:border-white transition-colors">
+            <span className="block w-5 h-[1.5px] bg-white" />
+            <span className="block w-5 h-[1.5px] bg-white" />
+            <span className="block w-3 h-[1.5px] bg-white" />
+          </div>
+        </button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[90vw] sm:w-[80vw] max-w-6xl p-0 border-l border-border">
-        <SheetHeader className="px-6 py-5 border-b border-border">
-          <SheetTitle className="text-left font-serif text-xl font-normal tracking-tight">All Calculators</SheetTitle>
+
+      <SheetContent side="right" className="w-[90vw] sm:w-[80vw] max-w-6xl p-0 border-l border-white/10 bg-black">
+        <SheetHeader className="px-6 py-5 border-b border-white/10">
+          <SheetTitle className="text-left font-display text-4xl tracking-widest text-white uppercase">
+            All Calculators
+          </SheetTitle>
         </SheetHeader>
+
         <ScrollArea className="h-[calc(100vh-80px)]">
           <div className="px-6 py-6 space-y-8">
+
             {/* Financial Education */}
             <div>
-              <h3 className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-4 flex items-center gap-2">
+              <h3 className="text-[10px] tracking-[0.3em] text-white/30 uppercase mb-4 flex items-center gap-2 font-heading">
                 <GraduationCap className="h-4 w-4" />
                 Financial Education
               </h3>
@@ -72,35 +89,30 @@ export const NavigationMenu = () => {
                 {[
                   { to: "/learn", label: "Learn & Insights Hub", sub: "All educational content", icon: BookOpen },
                   { to: "/learn/financial-journey", label: "Financial Growth Journey", sub: "Step-by-step education", icon: GraduationCap },
-                  { to: "/blog", label: "The Cheat Code Blog", sub: "Learn the secrets of finance", icon: BookOpen }
+                  { to: "/blog", label: "The Cheat Code Blog", sub: "Learn the secrets of finance", icon: BookOpen },
                 ].map((item) => (
                   <Link
                     key={item.to}
                     to={item.to}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-lg border border-border hover:bg-accent transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 border border-white/10 hover:border-white/30 hover:bg-white/5 transition-colors group"
                   >
-                    <item.icon className="h-5 w-5 text-foreground" />
+                    <item.icon className="h-5 w-5 text-white/40 group-hover:text-white transition-colors" />
                     <div>
-                      <div className="font-medium text-sm">{item.label}</div>
-                      <div className="text-xs text-muted-foreground">{item.sub}</div>
+                      <div className="font-heading text-sm uppercase tracking-wide text-white">{item.label}</div>
+                      <div className="text-xs text-white/40 font-sans">{item.sub}</div>
                     </div>
                   </Link>
                 ))}
               </div>
             </div>
 
-            <Separator className="bg-border" />
+            <Separator className="bg-white/10" />
 
-            {/* Sections Mapping */}
-            {[
-              { label: "Home & Property", icon: Home, data: homeCalculators },
-              { label: "Finance Calculators", icon: DollarSign, data: financeCalculators },
-              { label: "Everyday Calculators", icon: Calculator, data: miscCalculators },
-              { label: "Unit Converters", icon: Ruler, data: converters }
-            ].map((section) => (
+            {/* Calculator Sections */}
+            {sections.map((section) => (
               <div key={section.label}>
-                <h3 className="text-[10px] tracking-[0.3em] text-muted-foreground uppercase mb-4 flex items-center gap-2">
+                <h3 className="text-[10px] tracking-[0.3em] text-white/30 uppercase mb-4 flex items-center gap-2 font-heading">
                   <section.icon className="h-4 w-4" />
                   {section.label}
                 </h3>
@@ -110,16 +122,19 @@ export const NavigationMenu = () => {
                       key={calc.title}
                       to={calc.path}
                       onClick={() => setOpen(false)}
-                      className="flex flex-col items-center gap-2 px-3 py-4 rounded-lg border border-border bg-card hover:bg-accent transition-colors group"
+                      className="flex flex-col items-center gap-2 px-3 py-4 border border-white/10 hover:border-white/30 hover:bg-white/5 transition-colors group"
                     >
-                      <calc.icon className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
-                      <span className="text-xs text-center font-medium">{calc.title}</span>
+                      <calc.icon className={`h-5 w-5 text-white/30 transition-colors ${section.accent}`} />
+                      <span className="text-xs text-center font-heading uppercase tracking-wide text-gray-400 group-hover:text-white transition-colors">
+                        {calc.title}
+                      </span>
                     </Link>
                   ))}
                 </div>
-                <Separator className="bg-border mt-8" />
+                <Separator className="bg-white/10 mt-8" />
               </div>
             ))}
+
           </div>
         </ScrollArea>
       </SheetContent>

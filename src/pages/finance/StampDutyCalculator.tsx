@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import { CalculatorLayout } from "@/components/CalculatorLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
-import { Home, Building2, TrendingUp, Calculator, Info, PoundSterling } from "lucide-react";
+import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
+// ─── Accent colour for Property category ─────────────────────────────────────
+const ACCENT = "#F97316";
+
+// ─── Types & Calculation logic (100% unchanged) ───────────────────────────────
 type BuyerType = "first-time" | "home-mover" | "additional";
 
 interface TaxBand {
@@ -24,427 +23,341 @@ interface CalculationResult {
   bands: TaxBand[];
 }
 
-// UK Stamp Duty rates effective from 1st April 2025
 const STAMP_DUTY_RATES = {
   "first-time": {
-    // First time buyers get relief up to £300k (0%), then 5% from £300k-£500k
-    // If property > £500k, they lose FTB relief and pay standard rates
     thresholdForRelief: 500000,
     bands: [
-      { from: 0, to: 300000, rate: 0 },
+      { from: 0,      to: 300000, rate: 0 },
       { from: 300000, to: 500000, rate: 5 },
     ],
-    // If over £500k, use standard rates
     standardBands: [
-      { from: 0, to: 125000, rate: 0 },
-      { from: 125000, to: 250000, rate: 2 },
-      { from: 250000, to: 925000, rate: 5 },
-      { from: 925000, to: 1500000, rate: 10 },
-      { from: 1500000, to: null, rate: 12 },
+      { from: 0,       to: 125000,  rate: 0  },
+      { from: 125000,  to: 250000,  rate: 2  },
+      { from: 250000,  to: 925000,  rate: 5  },
+      { from: 925000,  to: 1500000, rate: 10 },
+      { from: 1500000, to: null,    rate: 12 },
     ],
   },
   "home-mover": {
     bands: [
-      { from: 0, to: 125000, rate: 0 },
-      { from: 125000, to: 250000, rate: 2 },
-      { from: 250000, to: 925000, rate: 5 },
-      { from: 925000, to: 1500000, rate: 10 },
-      { from: 1500000, to: null, rate: 12 },
+      { from: 0,       to: 125000,  rate: 0  },
+      { from: 125000,  to: 250000,  rate: 2  },
+      { from: 250000,  to: 925000,  rate: 5  },
+      { from: 925000,  to: 1500000, rate: 10 },
+      { from: 1500000, to: null,    rate: 12 },
     ],
   },
   "additional": {
-    // Additional property rates (Buy to Let / Second Homes) - 5% surcharge
     bands: [
-      { from: 0, to: 125000, rate: 5 },
-      { from: 125000, to: 250000, rate: 7 },
-      { from: 250000, to: 925000, rate: 10 },
-      { from: 925000, to: 1500000, rate: 15 },
-      { from: 1500000, to: null, rate: 17 },
+      { from: 0,       to: 125000,  rate: 5  },
+      { from: 125000,  to: 250000,  rate: 7  },
+      { from: 250000,  to: 925000,  rate: 10 },
+      { from: 925000,  to: 1500000, rate: 15 },
+      { from: 1500000, to: null,    rate: 17 },
     ],
   },
 };
 
-const calculateStampDuty = (
-  propertyPrice: number,
-  buyerType: BuyerType
-): CalculationResult => {
-  if (propertyPrice <= 0) {
-    return { totalTax: 0, effectiveRate: 0, bands: [] };
-  }
-
+const calculateStampDuty = (propertyPrice: number, buyerType: BuyerType): CalculationResult => {
+  if (propertyPrice <= 0) return { totalTax: 0, effectiveRate: 0, bands: [] };
   let bands: { from: number; to: number | null; rate: number }[];
-
   if (buyerType === "first-time") {
-    // First time buyers lose relief if property > £500k
-    if (propertyPrice > STAMP_DUTY_RATES["first-time"].thresholdForRelief) {
-      bands = STAMP_DUTY_RATES["first-time"].standardBands;
-    } else {
-      bands = STAMP_DUTY_RATES["first-time"].bands;
-    }
+    bands = propertyPrice > STAMP_DUTY_RATES["first-time"].thresholdForRelief
+      ? STAMP_DUTY_RATES["first-time"].standardBands
+      : STAMP_DUTY_RATES["first-time"].bands;
   } else {
     bands = STAMP_DUTY_RATES[buyerType].bands;
   }
-
   const calculatedBands: TaxBand[] = [];
   let totalTax = 0;
   let remainingValue = propertyPrice;
-
   for (const band of bands) {
-    const bandStart = band.from;
     const bandEnd = band.to ?? Infinity;
-
-    if (remainingValue <= 0 || propertyPrice <= bandStart) {
-      calculatedBands.push({
-        from: band.from,
-        to: band.to,
-        rate: band.rate,
-        taxableSum: 0,
-        tax: 0,
-      });
+    if (remainingValue <= 0 || propertyPrice <= band.from) {
+      calculatedBands.push({ from: band.from, to: band.to, rate: band.rate, taxableSum: 0, tax: 0 });
       continue;
     }
-
-    const taxableInBand = Math.min(
-      Math.max(0, propertyPrice - bandStart),
-      bandEnd - bandStart
-    );
+    const taxableInBand = Math.min(Math.max(0, propertyPrice - band.from), bandEnd - band.from);
     const actualTaxable = Math.min(taxableInBand, remainingValue);
     const taxForBand = actualTaxable * (band.rate / 100);
-
-    calculatedBands.push({
-      from: band.from,
-      to: band.to,
-      rate: band.rate,
-      taxableSum: actualTaxable,
-      tax: taxForBand,
-    });
-
+    calculatedBands.push({ from: band.from, to: band.to, rate: band.rate, taxableSum: actualTaxable, tax: taxForBand });
     totalTax += taxForBand;
     remainingValue -= actualTaxable;
   }
-
-  const effectiveRate = propertyPrice > 0 ? (totalTax / propertyPrice) * 100 : 0;
-
-  return { totalTax, effectiveRate, bands: calculatedBands };
+  return { totalTax, effectiveRate: (totalTax / propertyPrice) * 100, bands: calculatedBands };
 };
 
-const formatCurrency = (value: number): string => {
-  return new Intl.NumberFormat("en-GB", {
-    style: "currency",
-    currency: "GBP",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(value);
+const formatCurrency = (value: number) =>
+  new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(value);
+
+const formatBandRange = (from: number, to: number | null) => {
+  if (to === null) return `Over ${formatCurrency(from)}`;
+  if (from === 0) return `Up to ${formatCurrency(to)}`;
+  return `${formatCurrency(from)} – ${formatCurrency(to)}`;
 };
 
-const formatBandRange = (from: number, to: number | null): string => {
-  if (to === null) {
-    return `Over ${formatCurrency(from)}`;
-  }
-  if (from === 0) {
-    return `Up to ${formatCurrency(to)}`;
-  }
-  return `${formatCurrency(from)} - ${formatCurrency(to)}`;
-};
-
+// ─── Component ────────────────────────────────────────────────────────────────
 const StampDutyCalculator = () => {
   const [buyerType, setBuyerType] = useState<BuyerType>("first-time");
-  const [propertyPrice, setPropertyPrice] = useState<string>("350000");
+  const [propertyPrice, setPropertyPrice] = useState("350000");
   const [result, setResult] = useState<CalculationResult | null>(null);
 
   useEffect(() => {
     const price = parseFloat(propertyPrice) || 0;
-    const calculation = calculateStampDuty(price, buyerType);
-    setResult(calculation);
+    setResult(calculateStampDuty(price, buyerType));
   }, [propertyPrice, buyerType]);
 
-  const handleCalculate = () => {
-    const price = parseFloat(propertyPrice) || 0;
-    const calculation = calculateStampDuty(price, buyerType);
-    setResult(calculation);
-  };
-
-  const getBuyerTypeInfo = (type: BuyerType) => {
-    switch (type) {
-      case "first-time":
-        return {
-          title: "First Time Buyer",
-          icon: Home,
-          description:
-            "First time buyers benefit from stamp duty relief. No tax on properties up to £300,000, and 5% on the portion between £300,000 and £500,000. Properties over £500,000 pay standard rates.",
-        };
-      case "home-mover":
-        return {
-          title: "Home Mover",
-          icon: Building2,
-          description:
-            "Standard stamp duty rates apply for home movers. No tax on the first £125,000, then graduated rates apply on the remaining value.",
-        };
-      case "additional":
-        return {
-          title: "Buy to Let / Additional Property",
-          icon: TrendingUp,
-          description:
-            "A 5% surcharge applies to all purchases of additional properties, including buy-to-let investments and second homes.",
-        };
-    }
-  };
-
-  const currentInfo = getBuyerTypeInfo(buyerType);
   const price = parseFloat(propertyPrice) || 0;
-  const showFTBWarning =
-    buyerType === "first-time" &&
-    price > STAMP_DUTY_RATES["first-time"].thresholdForRelief;
+  const showFTBWarning = buyerType === "first-time" && price > STAMP_DUTY_RATES["first-time"].thresholdForRelief;
+
+  const buyerTypes: { key: BuyerType; label: string; icon: typeof Home; sub: string }[] = [
+    { key: "first-time", label: "First Time Buyer",          icon: Home,      sub: "Relief up to £500k" },
+    { key: "home-mover", label: "Home Mover",                icon: Building2, sub: "Standard rates" },
+    { key: "additional", label: "Buy to Let",                icon: TrendingUp, sub: "+5% surcharge" },
+  ];
+
+  const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
   return (
     <>
       <SEO
         title="UK Stamp Duty Calculator - Calculate SDLT Tax"
         description="Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland."
-        keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty, buy to let stamp duty, property tax calculator"
+        keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
         canonicalUrl="https://www.thecalculatorpage.com/finance/stamp-duty"
       />
-      <CalculatorLayout
-        title="UK Stamp Duty Calculator"
-        description="Calculate Stamp Duty Land Tax (SDLT) for residential properties in England and Northern Ireland. Updated with rates effective from 1st April 2025."
-      >
-        <div className="space-y-6">
-          {/* Tabs for buyer type */}
-          <Tabs
-            value={buyerType}
-            onValueChange={(value) => setBuyerType(value as BuyerType)}
-            className="w-full"
-          >
-            <TabsList className="grid w-full grid-cols-3 h-auto">
-              <TabsTrigger
-                value="first-time"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-3 px-2 text-xs sm:text-sm"
-              >
-                <Home className="h-4 w-4" />
-                <span>First Time Buyer</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="home-mover"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-3 px-2 text-xs sm:text-sm"
-              >
-                <Building2 className="h-4 w-4" />
-                <span>Home Mover</span>
-              </TabsTrigger>
-              <TabsTrigger
-                value="additional"
-                className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 py-3 px-2 text-xs sm:text-sm"
-              >
-                <TrendingUp className="h-4 w-4" />
-                <span>Buy to Let</span>
-              </TabsTrigger>
-            </TabsList>
 
-            <TabsContent value={buyerType} className="mt-6">
-              <div className="grid gap-6 md:grid-cols-2">
-                {/* Input Card */}
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-lg">
-                      <currentInfo.icon className="h-5 w-5 text-brand-gold" />
-                      {currentInfo.title}
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground">
-                      {currentInfo.description}
+      <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">
+
+        {/* Breadcrumb */}
+        <div className="max-w-7xl mx-auto px-6 pt-6">
+          <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
+            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/categories/property" className="hover:text-white transition-colors">Property</Link>
+            <span>/</span>
+            <span className="text-white/60">Stamp Duty</span>
+          </nav>
+        </div>
+
+        {/* Split-screen hero */}
+        <div className="flex flex-col lg:flex-row min-h-[90vh] max-w-7xl mx-auto px-6 py-12 gap-12 lg:gap-20 items-center">
+
+          {/* LEFT — Typography + buyer type selector */}
+          <div className="flex flex-col z-10 lg:w-1/2 select-none">
+            <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
+
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span
+                className="block text-[13vw] lg:text-[100px]"
+                style={{
+                  background: `linear-gradient(135deg, ${ACCENT} 0%, #ef4444 100%)`,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+                }}
+              >
+                STAMP
+              </span>
+              <span className="block text-[9vw] lg:text-[70px]" style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, #ef4444 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                DUTY
+              </span>
+              <span className="block text-[7vw] lg:text-[55px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                CALCULATOR
+              </span>
+            </h1>
+
+            <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
+              <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+                Calculate Stamp Duty Land Tax (SDLT) for residential properties in England and Northern Ireland. Rates effective from 1st April 2025.
+              </p>
+            </div>
+
+            {/* Buyer type selector */}
+            <div className="mt-8 flex flex-col gap-3">
+              <p className={labelClass}>Buyer Type</p>
+              {buyerTypes.map(({ key, label, icon: Icon, sub }) => (
+                <button
+                  key={key}
+                  onClick={() => setBuyerType(key)}
+                  className="flex items-center gap-4 p-4 border rounded-lg transition-all text-left"
+                  style={{
+                    borderColor: buyerType === key ? ACCENT : "rgba(255,255,255,0.08)",
+                    background: buyerType === key ? `${ACCENT}15` : "transparent",
+                  }}
+                >
+                  <Icon className="h-5 w-5 flex-shrink-0 transition-colors" style={{ color: buyerType === key ? ACCENT : "rgba(255,255,255,0.25)" }} />
+                  <div>
+                    <p className="font-heading text-sm uppercase tracking-widest" style={{ color: buyerType === key ? ACCENT : "rgba(255,255,255,0.4)" }}>
+                      {label}
                     </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="propertyPrice" className="text-sm font-medium">
-                        Property Purchase Price
-                      </Label>
-                      <div className="relative">
-                        <PoundSterling className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-                        <Input
-                          id="propertyPrice"
-                          type="number"
-                          value={propertyPrice}
-                          onChange={(e) => setPropertyPrice(e.target.value)}
-                          className="pl-9"
-                          placeholder="Enter property price"
-                          min="0"
-                        />
-                      </div>
-                    </div>
+                    <p className="text-xs text-white/25 font-sans">{sub}</p>
+                  </div>
+                </button>
+              ))}
+            </div>
 
-                    <Button onClick={handleCalculate} className="w-full">
-                      <Calculator className="mr-2 h-4 w-4" />
-                      Calculate Stamp Duty
-                    </Button>
+            {/* Summary stats if result exists */}
+            {result && price > 0 && (
+              <div className="mt-8 grid grid-cols-2 gap-3">
+                {[
+                  { label: "Stamp Duty",    value: formatCurrency(result.totalTax) },
+                  { label: "Effective Rate", value: `${result.effectiveRate.toFixed(2)}%` },
+                  { label: "Property Price", value: formatCurrency(price) },
+                  { label: "Total Cost",     value: formatCurrency(price + result.totalTax) },
+                ].map(({ label, value }) => (
+                  <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                    <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                    <p className="font-display text-lg text-white">{value}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
-                    {showFTBWarning && (
-                      <div className="p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg">
-                        <p className="text-sm text-amber-800 dark:text-amber-200 flex items-start gap-2">
-                          <Info className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                          <span>
-                            First time buyer relief is only available for properties up to
-                            £500,000. Standard rates apply for this purchase.
-                          </span>
-                        </p>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
+          {/* RIGHT — Form + results card */}
+          <div className="w-full lg:w-1/2 z-20 relative flex flex-col gap-6">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-3xl -z-10 pointer-events-none opacity-10" style={{ background: ACCENT }} />
 
-                {/* Results Card */}
-                <Card className="shadow-card">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Stamp Duty to Pay</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    {result && (
-                      <div className="space-y-4">
-                        <div className="text-center p-6 bg-muted rounded-lg">
-                          <p className="text-sm text-muted-foreground mb-1">
-                            Total Stamp Duty
-                          </p>
-                          <p className="text-4xl font-serif font-semibold text-foreground">
-                            {formatCurrency(result.totalTax)}
-                          </p>
-                          <p className="text-sm text-muted-foreground mt-2">
-                            Effective rate:{" "}
-                            <span className="font-medium">
-                              {result.effectiveRate.toFixed(2)}%
-                            </span>
-                          </p>
-                        </div>
-
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Property Price</span>
-                            <span className="font-medium">{formatCurrency(price)}</span>
-                          </div>
-                          <div className="flex justify-between text-sm">
-                            <span className="text-muted-foreground">Stamp Duty</span>
-                            <span className="font-medium">
-                              {formatCurrency(result.totalTax)}
-                            </span>
-                          </div>
-                          <hr className="my-2" />
-                          <div className="flex justify-between text-sm font-semibold">
-                            <span>Total Cost</span>
-                            <span>{formatCurrency(price + result.totalTax)}</span>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
+            {/* Input card */}
+            <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="font-display text-3xl uppercase text-white tracking-wide">Parameters</h3>
+                <Calculator className="h-6 w-6" style={{ color: ACCENT }} />
               </div>
 
-              {/* Tax Bands Breakdown */}
-              {result && result.bands.length > 0 && (
-                <Card className="mt-6 shadow-card">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Tax Band Breakdown</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-sm">
-                        <thead>
-                          <tr className="border-b">
-                            <th className="text-left py-3 px-2 font-medium text-muted-foreground">
-                              Tax Band
-                            </th>
-                            <th className="text-right py-3 px-2 font-medium text-muted-foreground">
-                              Rate
-                            </th>
-                            <th className="text-right py-3 px-2 font-medium text-muted-foreground">
-                              Taxable Sum
-                            </th>
-                            <th className="text-right py-3 px-2 font-medium text-muted-foreground">
-                              Tax
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {result.bands.map((band, index) => (
-                            <tr key={index} className="border-b last:border-b-0">
-                              <td className="py-3 px-2">
-                                {formatBandRange(band.from, band.to)}
-                              </td>
-                              <td className="text-right py-3 px-2">{band.rate}%</td>
-                              <td className="text-right py-3 px-2">
-                                {formatCurrency(band.taxableSum)}
-                              </td>
-                              <td className="text-right py-3 px-2 font-medium">
-                                {formatCurrency(band.tax)}
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                        <tfoot>
-                          <tr className="bg-muted/50">
-                            <td
-                              colSpan={3}
-                              className="py-3 px-2 font-semibold text-right"
-                            >
-                              Total SDLT
-                            </td>
-                            <td className="text-right py-3 px-2 font-semibold">
-                              {formatCurrency(result.totalTax)}
-                            </td>
-                          </tr>
-                        </tfoot>
-                      </table>
+              <div className="space-y-5">
+                <div>
+                  <label className={labelClass}>Property Purchase Price</label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading">£</span>
+                    <input
+                      type="number"
+                      value={propertyPrice}
+                      onChange={e => setPropertyPrice(e.target.value)}
+                      placeholder="350,000"
+                      min="0"
+                      className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all"
+                      onFocus={e => (e.target.style.borderColor = ACCENT)}
+                      onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                    />
+                  </div>
+                </div>
+
+                {/* FTB warning */}
+                {showFTBWarning && (
+                  <div className="flex items-start gap-3 p-4 border rounded-lg" style={{ borderColor: `${ACCENT}40`, background: `${ACCENT}10` }}>
+                    <Info className="h-4 w-4 flex-shrink-0 mt-0.5" style={{ color: ACCENT }} />
+                    <p className="text-xs font-sans leading-relaxed" style={{ color: ACCENT }}>
+                      First time buyer relief is only available for properties up to £500,000. Standard rates apply for this purchase.
+                    </p>
+                  </div>
+                )}
+
+                {/* Live result */}
+                {result && price > 0 && (
+                  <div className="pt-4 border-t border-white/10 space-y-3">
+                    <div className="flex justify-between items-end pb-3 border-b border-white/10">
+                      <span className="text-white/40 text-sm font-heading uppercase tracking-widest">Total SDLT</span>
+                      <span className="text-3xl font-display text-white">{formatCurrency(result.totalTax)}</span>
                     </div>
-                  </CardContent>
-                </Card>
-              )}
-            </TabsContent>
-          </Tabs>
+                    {[
+                      { label: "Property Price", value: formatCurrency(price) },
+                      { label: "Stamp Duty",     value: formatCurrency(result.totalTax) },
+                      { label: "Total Cost",     value: formatCurrency(price + result.totalTax), highlight: true },
+                    ].map(({ label, value, highlight }) => (
+                      <div key={label} className="flex justify-between items-center">
+                        <span className="text-white/30 text-xs font-heading uppercase tracking-widest">{label}</span>
+                        <span className={`font-heading ${highlight ? "text-white" : "text-white/60"}`}>{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-          {/* Information Section */}
-          <Card className="shadow-card">
-            <CardHeader>
-              <CardTitle className="text-lg">About UK Stamp Duty (SDLT)</CardTitle>
-            </CardHeader>
-            <CardContent className="prose prose-sm max-w-none text-muted-foreground">
-              <p>
-                Stamp Duty Land Tax (SDLT) is a tax paid when purchasing property or land
-                in England and Northern Ireland. The rates shown are effective from 1st
-                April 2025.
-              </p>
+                <button
+                  onClick={() => setResult(calculateStampDuty(price, buyerType))}
+                  className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
+                  style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px -5px ${ACCENT}80`)}
+                >
+                  Calculate Stamp Duty
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
 
-              <h4 className="font-semibold text-foreground mt-4 mb-2">
-                First Time Buyers
-              </h4>
-              <p>
-                First time buyers benefit from stamp duty relief on properties up to
-                £500,000. No tax is payable on the first £300,000, with 5% charged on the
-                portion between £300,000 and £500,000. Properties over £500,000 are
-                subject to standard rates.
-              </p>
-
-              <h4 className="font-semibold text-foreground mt-4 mb-2">Home Movers</h4>
-              <p>
-                Standard rates apply for home movers replacing their main residence. The
-                nil rate band is £125,000, with graduated rates applying above this
-                threshold.
-              </p>
-
-              <h4 className="font-semibold text-foreground mt-4 mb-2">
-                Additional Properties
-              </h4>
-              <p>
-                A 5% surcharge applies to purchases of additional residential properties,
-                including buy-to-let investments and second homes. This is added to the
-                standard rates.
-              </p>
-
-              <p className="text-xs mt-4 italic">
-                Note: This calculator is for freehold residential properties in England
-                and Northern Ireland only. Different rules apply in Scotland (LBTT) and
-                Wales (LTT). Always consult a professional for specific advice.
-              </p>
-            </CardContent>
-          </Card>
+            {/* Tax band breakdown table */}
+            {result && result.bands.length > 0 && price > 0 && (
+              <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl">
+                <p className="text-[10px] font-heading uppercase tracking-widest text-white/30 mb-4">Tax Band Breakdown</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        {["Band", "Rate", "Taxable", "Tax"].map(h => (
+                          <th key={h} className={`py-3 font-heading uppercase tracking-widest text-white/25 ${h === "Band" ? "text-left" : "text-right"}`}>{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {result.bands.map((band, i) => (
+                        <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                          <td className="py-3 text-white/50 font-sans">{formatBandRange(band.from, band.to)}</td>
+                          <td className="py-3 text-right font-heading text-white/50">{band.rate}%</td>
+                          <td className="py-3 text-right font-heading text-white/50">{formatCurrency(band.taxableSum)}</td>
+                          <td className="py-3 text-right font-heading text-white" style={{ color: band.tax > 0 ? ACCENT : "rgba(255,255,255,0.3)" }}>
+                            {formatCurrency(band.tax)}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                    <tfoot>
+                      <tr className="border-t border-white/10">
+                        <td colSpan={3} className="py-3 font-heading uppercase tracking-widest text-white/30 text-xs text-right">Total SDLT</td>
+                        <td className="py-3 text-right font-display text-xl text-white">{formatCurrency(result.totalTax)}</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-      </CalculatorLayout>
+
+        {/* About section */}
+        <div className="max-w-7xl mx-auto px-6 pb-20">
+          <div className="bg-[#252323]/50 border border-white/10 rounded-2xl p-8">
+            <p className="text-[10px] font-heading uppercase tracking-widest text-white/30 mb-6">About UK Stamp Duty (SDLT)</p>
+            <div className="grid md:grid-cols-3 gap-8 text-sm text-white/40 font-sans leading-relaxed">
+              <div>
+                <p className="font-heading uppercase tracking-widest text-white/60 text-xs mb-3" style={{ color: ACCENT }}>First Time Buyers</p>
+                <p>No tax on the first £300,000, with 5% charged on the portion between £300,000 and £500,000. Properties over £500,000 pay standard rates.</p>
+              </div>
+              <div>
+                <p className="font-heading uppercase tracking-widest text-white/60 text-xs mb-3" style={{ color: ACCENT }}>Home Movers</p>
+                <p>Standard rates apply for home movers replacing their main residence. The nil rate band is £125,000, with graduated rates above this threshold.</p>
+              </div>
+              <div>
+                <p className="font-heading uppercase tracking-widest text-white/60 text-xs mb-3" style={{ color: ACCENT }}>Additional Properties</p>
+                <p>A 5% surcharge applies to purchases of additional residential properties, including buy-to-let and second homes, added to standard rates.</p>
+              </div>
+            </div>
+            <p className="text-[10px] text-white/20 font-sans italic mt-6">
+              For freehold residential properties in England and Northern Ireland only. Different rules apply in Scotland (LBTT) and Wales (LTT). Always consult a professional for specific advice.
+            </p>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="bg-black border-t border-white/10 py-8 px-6">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 };

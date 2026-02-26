@@ -1,299 +1,344 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
-import { CalculatorLayout } from "@/components/CalculatorLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowRight, CalendarDays } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// ─── Accent colour for Everyday category ─────────────────────────────────────
+const ACCENT = "#22C55E";
+
+type Mode = "add" | "difference" | "fromToday";
+
+const MS_PER_DAY = 86_400_000;
+const toUtcMidnight = (d: Date | string) => {
+  const dt = d instanceof Date ? d : new Date(d);
+  return Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate());
+};
+const daysBetween = (d1: string, d2: string, incl: boolean) => {
+  const days = Math.round((toUtcMidnight(d2) - toUtcMidnight(d1)) / MS_PER_DAY);
+  return incl ? (days >= 0 ? days + 1 : days - 1) : days;
+};
+const daysFromToday = (target: string, incl: boolean) => {
+  const today = new Date();
+  const days = Math.round((toUtcMidnight(target) - Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())) / MS_PER_DAY);
+  return incl ? (days >= 0 ? days + 1 : days - 1) : days;
+};
 
 const DateCalculator = () => {
-  const [addDate, setAddDate] = useState(new Date().toISOString().split('T')[0]);
+  const today = new Date().toISOString().split("T")[0];
+  const [mode, setMode] = useState<Mode>("add");
+
+  // Add/subtract state
+  const [addDate,  setAddDate]  = useState(today);
   const [addValue, setAddValue] = useState("30");
-  const [addUnit, setAddUnit] = useState("days");
+  const [addUnit,  setAddUnit]  = useState("days");
   const [addResult, setAddResult] = useState<string | null>(null);
 
-  const [date1, setDate1] = useState(new Date().toISOString().split('T')[0]);
-  const [date2, setDate2] = useState(new Date().toISOString().split('T')[0]);
+  // Difference state
+  const [date1,     setDate1]     = useState(today);
+  const [date2,     setDate2]     = useState(today);
   const [inclusive, setInclusive] = useState(false);
-  const [diffResult, setDiffResult] = useState<{
-    days: number;
-    weeks: number;
-    months: number;
-    years: number;
-  } | null>(null);
+  const [diffResult, setDiffResult] = useState<{ days: number; weeks: number; months: number; years: number } | null>(null);
 
-  const [targetDate, setTargetDate] = useState(new Date().toISOString().split('T')[0]);
+  // From today state
+  const [targetDate,         setTargetDate]         = useState(today);
   const [fromTodayInclusive, setFromTodayInclusive] = useState(false);
-  const [fromTodayResult, setFromTodayResult] = useState<number | null>(null);
-
-  // UTC-based helpers to avoid DST issues
-  const MS_PER_DAY = 86_400_000;
-  const toUtcMidnight = (d: Date | string) => {
-    const dt = (d instanceof Date) ? d : new Date(d);
-    return Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate());
-  };
-
-  const daysBetween = (d1: Date | string, d2: Date | string, isInclusive: boolean) => {
-    const days = Math.round((toUtcMidnight(d2) - toUtcMidnight(d1)) / MS_PER_DAY);
-    return isInclusive ? (days >= 0 ? days + 1 : days - 1) : days;
-  };
-
-  const daysFromToday = (target: Date | string, isInclusive: boolean) => {
-    const today = new Date();
-    const days = Math.round((toUtcMidnight(target) - Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())) / MS_PER_DAY);
-    return isInclusive ? (days >= 0 ? days + 1 : days - 1) : days;
-  };
+  const [fromTodayResult,    setFromTodayResult]    = useState<number | null>(null);
 
   const calculateAddDate = () => {
-    const date = new Date(addDate);
+    const date  = new Date(addDate);
     const value = parseInt(addValue);
-
     if (isNaN(value)) return;
-
-    switch (addUnit) {
-      case 'days':
-        date.setDate(date.getDate() + value);
-        break;
-      case 'weeks':
-        date.setDate(date.getDate() + value * 7);
-        break;
-      case 'months':
-        date.setMonth(date.getMonth() + value);
-        break;
-      case 'years':
-        date.setFullYear(date.getFullYear() + value);
-        break;
-    }
-
-    setAddResult(date.toISOString().split('T')[0]);
+    if (addUnit === "days")   date.setDate(date.getDate() + value);
+    if (addUnit === "weeks")  date.setDate(date.getDate() + value * 7);
+    if (addUnit === "months") date.setMonth(date.getMonth() + value);
+    if (addUnit === "years")  date.setFullYear(date.getFullYear() + value);
+    setAddResult(date.toISOString().split("T")[0]);
   };
 
   const calculateDateDifference = () => {
     const days = daysBetween(date1, date2, inclusive);
-    const weeks = Math.floor(Math.abs(days) / 7);
-    const months = Math.floor(Math.abs(days) / 30.44);
-    const years = Math.floor(Math.abs(days) / 365.25);
-
-    setDiffResult({ days: Math.abs(days), weeks, months, years });
+    setDiffResult({ days: Math.abs(days), weeks: Math.floor(Math.abs(days) / 7), months: Math.floor(Math.abs(days) / 30.44), years: Math.floor(Math.abs(days) / 365.25) });
   };
 
-  const calculateDaysFromToday = () => {
-    const days = daysFromToday(targetDate, fromTodayInclusive);
-    setFromTodayResult(days);
-  };
+  const calculateDaysFromToday = () => setFromTodayResult(daysFromToday(targetDate, fromTodayInclusive));
+
+  const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
+  const dateClass  = "w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all [color-scheme:dark]";
+  const selectClass = "w-full bg-black/40 border-white/10 text-white rounded-lg";
+  const selectContent = "bg-[#1C1A1A] border-white/10 text-white";
+
+  const modes: { key: Mode; label: string }[] = [
+    { key: "add",        label: "Add / Subtract" },
+    { key: "difference", label: "Days Between" },
+    { key: "fromToday",  label: "From Today" },
+  ];
+
+  // Derive left-panel result text
+  let heroResult: React.ReactNode = null;
+  if (mode === "add" && addResult) {
+    heroResult = (
+      <div className="mt-10 space-y-4">
+        <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
+          <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Result Date</p>
+          <p className="font-display text-3xl" style={{ color: ACCENT }}>
+            {new Date(addResult).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}
+          </p>
+          <p className="text-xs text-white/25 font-sans mt-2">{addResult}</p>
+        </div>
+      </div>
+    );
+  }
+  if (mode === "difference" && diffResult) {
+    heroResult = (
+      <div className="mt-10 space-y-4">
+        <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
+          <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Days Between</p>
+          <p className="font-display text-5xl" style={{ color: ACCENT }}>{diffResult.days.toLocaleString()}</p>
+          <p className="text-xs text-white/25 font-sans mt-1">calendar days</p>
+        </div>
+        <div className="grid grid-cols-3 gap-3">
+          {[
+            { label: "Weeks",  value: diffResult.weeks.toLocaleString() },
+            { label: "Months", value: diffResult.months.toLocaleString() },
+            { label: "Years",  value: diffResult.years.toLocaleString() },
+          ].map(({ label, value }) => (
+            <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+              <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+              <p className="font-display text-xl text-white">{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (mode === "fromToday" && fromTodayResult !== null) {
+    heroResult = (
+      <div className="mt-10 space-y-4">
+        <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
+          <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">
+            {fromTodayResult >= 0 ? "Days Until" : "Days Since"}
+          </p>
+          <p className="font-display text-5xl" style={{ color: ACCENT }}>{Math.abs(fromTodayResult).toLocaleString()}</p>
+          <p className="text-xs text-white/25 font-sans mt-1">
+            {fromTodayResult >= 0 ? `${Math.abs(fromTodayResult)} days from today` : `${Math.abs(fromTodayResult)} days ago`}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Date Calculator - Add, Subtract & Compare Dates"
         description="Free date calculator to add or subtract days, weeks, months from any date. Calculate the difference between two dates."
         keywords="date calculator, date difference calculator, add days to date, subtract dates"
       />
-      <CalculatorLayout
-        title="Date Calculator"
-        description="Add or subtract days from dates and calculate differences between dates"
-      >
-      <Tabs defaultValue="add" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="add">Add/Subtract</TabsTrigger>
-          <TabsTrigger value="difference">Days Between</TabsTrigger>
-          <TabsTrigger value="fromToday">Days From Today</TabsTrigger>
-        </TabsList>
 
-        <TabsContent value="add">
-          <Card>
-            <CardHeader>
-              <CardTitle>Add or Subtract Time</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="addDate">Start Date</Label>
-                <Input
-                  id="addDate"
-                  type="date"
-                  value={addDate}
-                  onChange={(e) => setAddDate(e.target.value)}
-                />
+      <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">
+
+        {/* Breadcrumb */}
+        <div className="max-w-7xl mx-auto px-6 pt-6">
+          <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
+            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/categories/everyday" className="hover:text-white transition-colors">Everyday</Link>
+            <span>/</span>
+            <span className="text-white/60">Date Calculator</span>
+          </nav>
+        </div>
+
+        {/* Split-screen hero */}
+        <div className="flex flex-col lg:flex-row min-h-[90vh] max-w-7xl mx-auto px-6 py-12 gap-12 lg:gap-20 items-center">
+
+          {/* LEFT — Typography + results */}
+          <div className="flex flex-col z-10 lg:w-1/2 select-none">
+            <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
+
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span className="block text-[14vw] lg:text-[115px]" style={{
+                background: `linear-gradient(135deg, ${ACCENT} 0%, #06b6d4 100%)`,
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+              }}>DATE</span>
+              <span className="block text-[8vw] lg:text-[65px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                CALCULATOR
+              </span>
+            </h1>
+
+            <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
+              <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+                Add or subtract time from any date, calculate the difference between two dates, or find how many days until any event.
+              </p>
+            </div>
+
+            {heroResult}
+          </div>
+
+          {/* RIGHT — Form card */}
+          <div className="w-full lg:w-1/2 z-20 relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-3xl -z-10 pointer-events-none opacity-10" style={{ background: ACCENT }} />
+
+            <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-display text-3xl uppercase text-white tracking-wide">Parameters</h3>
+                <CalendarDays className="h-6 w-6" style={{ color: ACCENT }} />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="addValue">Add/Subtract</Label>
-                  <Input
-                    id="addValue"
-                    type="number"
-                    value={addValue}
-                    onChange={(e) => setAddValue(e.target.value)}
-                    placeholder="30"
-                  />
-                  <p className="text-xs text-muted-foreground">Use negative numbers to subtract</p>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="addUnit">Time Unit</Label>
-                  <Select value={addUnit} onValueChange={setAddUnit}>
-                    <SelectTrigger id="addUnit">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="days">Days</SelectItem>
-                      <SelectItem value="weeks">Weeks</SelectItem>
-                      <SelectItem value="months">Months</SelectItem>
-                      <SelectItem value="years">Years</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+              {/* Mode toggle */}
+              <div className="grid grid-cols-3 gap-2 mb-6">
+                {modes.map(({ key, label }) => (
+                  <button key={key} onClick={() => setMode(key)}
+                    className="py-2.5 px-2 rounded-lg font-heading text-[10px] uppercase tracking-widest transition-all border text-center"
+                    style={{
+                      borderColor: mode === key ? ACCENT : "rgba(255,255,255,0.08)",
+                      background:  mode === key ? `${ACCENT}20` : "transparent",
+                      color:       mode === key ? ACCENT : "rgba(255,255,255,0.3)",
+                    }}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
 
-              <Button onClick={calculateAddDate} className="w-full">
-                Calculate Date
-              </Button>
+              <div className="space-y-5">
 
-              {addResult && (
-                <div className="p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg border-2 border-primary">
-                  <p className="text-sm text-muted-foreground mb-1">Result Date</p>
-                  <p className="text-3xl font-bold text-primary">
-                    {new Date(addResult).toLocaleDateString('en-US', {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">{addResult}</p>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        <TabsContent value="difference">
-          <Card>
-            <CardHeader>
-              <CardTitle>Calculate Date Difference</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="date1">First Date</Label>
-                <Input
-                  id="date1"
-                  type="date"
-                  value={date1}
-                  onChange={(e) => setDate1(e.target.value)}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="date2">Second Date</Label>
-                <Input
-                  id="date2"
-                  type="date"
-                  value={date2}
-                  onChange={(e) => setDate2(e.target.value)}
-                />
-              </div>
-
-              <div className="flex items-center space-x-2 mb-2">
-                <input
-                  type="checkbox"
-                  id="inclusive"
-                  checked={inclusive}
-                  onChange={(e) => setInclusive(e.target.checked)}
-                  className="h-4 w-4"
-                />
-                <Label htmlFor="inclusive" className="text-sm font-normal cursor-pointer">
-                  Inclusive (add 1 day)
-                </Label>
-              </div>
-
-              <Button onClick={calculateDateDifference} className="w-full">
-                Calculate Difference
-              </Button>
-
-              {diffResult && (
-                <div className="space-y-3">
-                  <div className="p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg border-2 border-primary">
-                    <p className="text-sm text-muted-foreground mb-1">Days Between</p>
-                    <p className="text-3xl font-bold text-primary">
-                      {diffResult.days.toLocaleString()} days
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="p-3 bg-card rounded-lg border">
-                      <p className="text-xs text-muted-foreground">Weeks</p>
-                      <p className="text-xl font-semibold">{diffResult.weeks}</p>
+                {/* ── ADD / SUBTRACT ── */}
+                {mode === "add" && (
+                  <>
+                    <div>
+                      <label className={labelClass}>Start Date</label>
+                      <input type="date" value={addDate} onChange={e => setAddDate(e.target.value)}
+                        className={dateClass}
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                     </div>
-                    <div className="p-3 bg-card rounded-lg border">
-                      <p className="text-xs text-muted-foreground">Months</p>
-                      <p className="text-xl font-semibold">{diffResult.months}</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className={labelClass}>Add / Subtract</label>
+                        <input type="number" value={addValue} onChange={e => setAddValue(e.target.value)} placeholder="30"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <p className="text-[9px] text-white/20 font-sans mt-1">Negative to subtract</p>
+                      </div>
+                      <div>
+                        <label className={labelClass}>Unit</label>
+                        <Select value={addUnit} onValueChange={setAddUnit}>
+                          <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                          <SelectContent className={selectContent}>
+                            <SelectItem value="days">Days</SelectItem>
+                            <SelectItem value="weeks">Weeks</SelectItem>
+                            <SelectItem value="months">Months</SelectItem>
+                            <SelectItem value="years">Years</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
                     </div>
-                    <div className="p-3 bg-card rounded-lg border">
-                      <p className="text-xs text-muted-foreground">Years</p>
-                      <p className="text-xl font-semibold">{diffResult.years}</p>
+                    {addResult && (
+                      <div className="pt-3 border-t border-white/10">
+                        <div className="flex justify-between items-end">
+                          <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Result</span>
+                          <span className="font-display text-xl" style={{ color: ACCENT }}>
+                            {new Date(addResult).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                          </span>
+                        </div>
+                      </div>
+                    )}
+                    <button onClick={calculateAddDate}
+                      className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
+                      style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
+                      onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
+                      onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px -5px ${ACCENT}80`)}>
+                      Calculate Date <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </>
+                )}
+
+                {/* ── DAYS BETWEEN ── */}
+                {mode === "difference" && (
+                  <>
+                    <div>
+                      <label className={labelClass}>First Date</label>
+                      <input type="date" value={date1} onChange={e => setDate1(e.target.value)}
+                        className={dateClass}
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                     </div>
-                  </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
+                    <div>
+                      <label className={labelClass}>Second Date</label>
+                      <input type="date" value={date2} onChange={e => setDate2(e.target.value)}
+                        className={dateClass}
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                    </div>
+                    <label className="flex items-center gap-3 cursor-pointer">
+                      <input type="checkbox" checked={inclusive} onChange={e => setInclusive(e.target.checked)}
+                        className="w-4 h-4 rounded accent-green-500" />
+                      <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Inclusive (add 1 day)</span>
+                    </label>
+                    {diffResult && (
+                      <div className="pt-3 border-t border-white/10">
+                        <div className="flex justify-between items-end">
+                          <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Days Between</span>
+                          <span className="font-display text-xl" style={{ color: ACCENT }}>{diffResult.days.toLocaleString()} days</span>
+                        </div>
+                      </div>
+                    )}
+                    <button onClick={calculateDateDifference}
+                      className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
+                      style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
+                      onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
+                      onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px -5px ${ACCENT}80`)}>
+                      Calculate Difference <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </>
+                )}
 
-        <TabsContent value="fromToday">
-          <Card>
-            <CardHeader>
-              <CardTitle>Days From Today</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="targetDate">Target Date</Label>
-                <Input
-                  id="targetDate"
-                  type="date"
-                  value={targetDate}
-                  onChange={(e) => setTargetDate(e.target.value)}
-                />
+                {/* ── FROM TODAY ── */}
+                {mode === "fromToday" && (
+                  <>
+                    <div>
+                      <label className={labelClass}>Target Date</label>
+                      <input type="date" value={targetDate} onChange={e => setTargetDate(e.target.value)}
+                        className={dateClass}
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                    </div>
+                    <label className="flex items-center gap-3 cursor-pointer">
+                      <input type="checkbox" checked={fromTodayInclusive} onChange={e => setFromTodayInclusive(e.target.checked)}
+                        className="w-4 h-4 rounded accent-green-500" />
+                      <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Inclusive (add 1 day)</span>
+                    </label>
+                    {fromTodayResult !== null && (
+                      <div className="pt-3 border-t border-white/10">
+                        <div className="flex justify-between items-end">
+                          <span className="text-white/40 text-xs font-heading uppercase tracking-widest">
+                            {fromTodayResult >= 0 ? "Days Until" : "Days Since"}
+                          </span>
+                          <span className="font-display text-xl" style={{ color: ACCENT }}>{Math.abs(fromTodayResult).toLocaleString()} days</span>
+                        </div>
+                      </div>
+                    )}
+                    <button onClick={calculateDaysFromToday}
+                      className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
+                      style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
+                      onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
+                      onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px -5px ${ACCENT}80`)}>
+                      Calculate Days <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </>
+                )}
+
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div className="flex items-center space-x-2 mb-2">
-                <input
-                  type="checkbox"
-                  id="fromTodayInclusive"
-                  checked={fromTodayInclusive}
-                  onChange={(e) => setFromTodayInclusive(e.target.checked)}
-                  className="h-4 w-4"
-                />
-                <Label htmlFor="fromTodayInclusive" className="text-sm font-normal cursor-pointer">
-                  Inclusive (add 1 day)
-                </Label>
-              </div>
-
-              <Button onClick={calculateDaysFromToday} className="w-full">
-                Calculate Days
-              </Button>
-
-              {fromTodayResult !== null && (
-                <div className="p-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg border-2 border-primary">
-                  <p className="text-sm text-muted-foreground mb-1">
-                    {fromTodayResult >= 0 ? 'Days Until' : 'Days Since'}
-                  </p>
-                  <p className="text-3xl font-bold text-primary">
-                    {Math.abs(fromTodayResult).toLocaleString()} days
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {fromTodayResult >= 0 
-                      ? `${Math.abs(fromTodayResult)} days from today` 
-                      : `${Math.abs(fromTodayResult)} days ago`}
-                  </p>
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        </TabsContent>
-      </Tabs>
-    </CalculatorLayout>
+        {/* Footer */}
+        <footer className="bg-black border-t border-white/10 py-8 px-6">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 };

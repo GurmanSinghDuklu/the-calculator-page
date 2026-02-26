@@ -1,425 +1,331 @@
 import { useState } from "react";
-import { CalculatorLayout } from "@/components/CalculatorLayout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SEO } from "@/components/SEO";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Link } from "react-router-dom";
+
+// ─── Accent colour for Finance category ───────────────────────────────────────
+const ACCENT = "#3B82F6";
 
 type Country = "UK" | "US";
 type FilingStatus = "single" | "married_joint" | "married_separate" | "head_household";
 
+// ─── Tax logic (100% unchanged) ───────────────────────────────────────────────
+const ukPersonalAllowance = 12570;
+const ukBasicRateThreshold = 50270;
+const ukHigherRateThreshold = 125140;
+
+const usTaxBrackets: Record<FilingStatus, { min: number; max: number; rate: number }[]> = {
+  single:           [{ min: 0, max: 11600, rate: .10 },{ min: 11600, max: 47150, rate: .12 },{ min: 47150, max: 100525, rate: .22 },{ min: 100525, max: 191950, rate: .24 },{ min: 191950, max: 243725, rate: .32 },{ min: 243725, max: 609350, rate: .35 },{ min: 609350, max: Infinity, rate: .37 }],
+  married_joint:    [{ min: 0, max: 23200, rate: .10 },{ min: 23200, max: 94300, rate: .12 },{ min: 94300, max: 201050, rate: .22 },{ min: 201050, max: 383900, rate: .24 },{ min: 383900, max: 487450, rate: .32 },{ min: 487450, max: 731200, rate: .35 },{ min: 731200, max: Infinity, rate: .37 }],
+  married_separate: [{ min: 0, max: 11600, rate: .10 },{ min: 11600, max: 47150, rate: .12 },{ min: 47150, max: 100525, rate: .22 },{ min: 100525, max: 191950, rate: .24 },{ min: 191950, max: 243725, rate: .32 },{ min: 243725, max: 365600, rate: .35 },{ min: 365600, max: Infinity, rate: .37 }],
+  head_household:   [{ min: 0, max: 16550, rate: .10 },{ min: 16550, max: 63100, rate: .12 },{ min: 63100, max: 100500, rate: .22 },{ min: 100500, max: 191950, rate: .24 },{ min: 191950, max: 243700, rate: .32 },{ min: 243700, max: 609350, rate: .35 },{ min: 609350, max: Infinity, rate: .37 }],
+};
+const usStandardDeduction: Record<FilingStatus, number> = { single: 14600, married_joint: 29200, married_separate: 14600, head_household: 21900 };
+const stateTaxRates: Record<string, number> = { none: 0, CA: 0.0725, NY: 0.0685, TX: 0, FL: 0, WA: 0, IL: 0.0495, PA: 0.0307, OH: 0.04, GA: 0.055, NC: 0.0525 };
+
+function calculateUKTax(annualSalary: number) {
+  let taxableIncome = Math.max(0, annualSalary - ukPersonalAllowance);
+  if (annualSalary > 100000) {
+    const reduction = Math.min(ukPersonalAllowance, (annualSalary - 100000) / 2);
+    taxableIncome = annualSalary - (ukPersonalAllowance - reduction);
+  }
+  let incomeTax = 0;
+  if (taxableIncome > 0) incomeTax += Math.min(taxableIncome, ukBasicRateThreshold - ukPersonalAllowance) * 0.20;
+  if (taxableIncome > (ukBasicRateThreshold - ukPersonalAllowance)) incomeTax += Math.min(taxableIncome - (ukBasicRateThreshold - ukPersonalAllowance), ukHigherRateThreshold - ukBasicRateThreshold) * 0.40;
+  if (taxableIncome > (ukHigherRateThreshold - ukPersonalAllowance)) incomeTax += (taxableIncome - (ukHigherRateThreshold - ukPersonalAllowance)) * 0.45;
+  let nationalInsurance = 0;
+  if (annualSalary > 12570) {
+    nationalInsurance += Math.min(annualSalary - 12570, 50270 - 12570) * 0.12;
+    if (annualSalary > 50270) nationalInsurance += (annualSalary - 50270) * 0.02;
+  }
+  return { incomeTax, socialTax: nationalInsurance, socialTaxLabel: "National Insurance", federalTax: undefined, stateTax: undefined };
+}
+
+function calculateUSTax(annualSalary: number, filingStatus: FilingStatus, state: string) {
+  const deduction = usStandardDeduction[filingStatus];
+  const taxableIncome = Math.max(0, annualSalary - deduction);
+  let federalTax = 0, remaining = taxableIncome;
+  for (const b of usTaxBrackets[filingStatus]) {
+    if (remaining <= 0) break;
+    const taxable = Math.min(remaining, b.max - b.min);
+    federalTax += taxable * b.rate;
+    remaining -= taxable;
+  }
+  const socialSecurity = Math.min(annualSalary, 168600) * 0.062;
+  const medicare = annualSalary * 0.0145 + (annualSalary > 200000 ? (annualSalary - 200000) * 0.009 : 0);
+  const stateTax = annualSalary * (stateTaxRates[state] || 0);
+  return { incomeTax: federalTax + stateTax, socialTax: socialSecurity + medicare, socialTaxLabel: "FICA (SS + Medicare)", federalTax, stateTax };
+}
+
+// ─── Component ────────────────────────────────────────────────────────────────
 const SalaryCalculator = () => {
-  const [salary, setSalary] = useState<string>("50000");
-  const [period, setPeriod] = useState<string>("yearly");
-  const [country, setCountry] = useState<Country>("UK");
-  const [taxCode, setTaxCode] = useState<string>("1257L");
-  const [filingStatus, setFilingStatus] = useState<FilingStatus>("single");
-  const [state, setState] = useState<string>("none");
+  const [salary,        setSalary]        = useState("50000");
+  const [country,       setCountry]       = useState<Country>("UK");
+  const [taxCode,       setTaxCode]       = useState("1257L");
+  const [filingStatus,  setFilingStatus]  = useState<FilingStatus>("single");
+  const [state,         setState]         = useState("none");
 
-  // UK Tax Rates 2024/25
-  const ukPersonalAllowance = 12570;
-  const ukBasicRateThreshold = 50270;
-  const ukHigherRateThreshold = 125140;
+  const annualSalary = parseFloat(salary) || 0;
+  const taxResult = country === "UK"
+    ? calculateUKTax(annualSalary)
+    : calculateUSTax(annualSalary, filingStatus, state);
 
-  // US Federal Tax Rates 2024 (Single)
-  const usTaxBrackets = {
-    single: [
-      { min: 0, max: 11600, rate: 0.10 },
-      { min: 11600, max: 47150, rate: 0.12 },
-      { min: 47150, max: 100525, rate: 0.22 },
-      { min: 100525, max: 191950, rate: 0.24 },
-      { min: 191950, max: 243725, rate: 0.32 },
-      { min: 243725, max: 609350, rate: 0.35 },
-      { min: 609350, max: Infinity, rate: 0.37 },
-    ],
-    married_joint: [
-      { min: 0, max: 23200, rate: 0.10 },
-      { min: 23200, max: 94300, rate: 0.12 },
-      { min: 94300, max: 201050, rate: 0.22 },
-      { min: 201050, max: 383900, rate: 0.24 },
-      { min: 383900, max: 487450, rate: 0.32 },
-      { min: 487450, max: 731200, rate: 0.35 },
-      { min: 731200, max: Infinity, rate: 0.37 },
-    ],
-    married_separate: [
-      { min: 0, max: 11600, rate: 0.10 },
-      { min: 11600, max: 47150, rate: 0.12 },
-      { min: 47150, max: 100525, rate: 0.22 },
-      { min: 100525, max: 191950, rate: 0.24 },
-      { min: 191950, max: 243725, rate: 0.32 },
-      { min: 243725, max: 365600, rate: 0.35 },
-      { min: 365600, max: Infinity, rate: 0.37 },
-    ],
-    head_household: [
-      { min: 0, max: 16550, rate: 0.10 },
-      { min: 16550, max: 63100, rate: 0.12 },
-      { min: 63100, max: 100500, rate: 0.22 },
-      { min: 100500, max: 191950, rate: 0.24 },
-      { min: 191950, max: 243700, rate: 0.32 },
-      { min: 243700, max: 609350, rate: 0.35 },
-      { min: 609350, max: Infinity, rate: 0.37 },
-    ],
-  };
+  const totalDeductions = taxResult.incomeTax + taxResult.socialTax;
+  const net     = annualSalary - totalDeductions;
+  const monthly = net / 12;
+  const weekly  = net / 52;
+  const daily   = net / 260;
 
-  const usStandardDeduction = {
-    single: 14600,
-    married_joint: 29200,
-    married_separate: 14600,
-    head_household: 21900,
-  };
+  const fmt = (n: number) => new Intl.NumberFormat(country === "UK" ? "en-GB" : "en-US", {
+    style: "currency", currency: country === "UK" ? "GBP" : "USD",
+    minimumFractionDigits: 2, maximumFractionDigits: 2,
+  }).format(n);
 
-  // State tax rates (simplified flat rates for major states)
-  const stateTaxRates: Record<string, number> = {
-    none: 0,
-    CA: 0.0725, // California average
-    NY: 0.0685, // New York average
-    TX: 0,      // Texas - no income tax
-    FL: 0,      // Florida - no income tax
-    WA: 0,      // Washington - no income tax
-    IL: 0.0495, // Illinois flat rate
-    PA: 0.0307, // Pennsylvania flat rate
-    OH: 0.04,   // Ohio average
-    GA: 0.055,  // Georgia average
-    NC: 0.0525, // North Carolina flat rate
-  };
-
-  const calculateUKTax = (annualSalary: number) => {
-    let taxableIncome = Math.max(0, annualSalary - ukPersonalAllowance);
-    
-    if (annualSalary > 100000) {
-      const reduction = Math.min(ukPersonalAllowance, (annualSalary - 100000) / 2);
-      taxableIncome = annualSalary - (ukPersonalAllowance - reduction);
-    }
-    
-    let incomeTax = 0;
-    
-    if (taxableIncome > 0) {
-      const basicRateTax = Math.min(taxableIncome, ukBasicRateThreshold - ukPersonalAllowance) * 0.20;
-      incomeTax += basicRateTax;
-    }
-    
-    if (taxableIncome > (ukBasicRateThreshold - ukPersonalAllowance)) {
-      const higherRateAmount = Math.min(
-        taxableIncome - (ukBasicRateThreshold - ukPersonalAllowance),
-        ukHigherRateThreshold - ukBasicRateThreshold
-      );
-      incomeTax += higherRateAmount * 0.40;
-    }
-    
-    if (taxableIncome > (ukHigherRateThreshold - ukPersonalAllowance)) {
-      const additionalRateAmount = taxableIncome - (ukHigherRateThreshold - ukPersonalAllowance);
-      incomeTax += additionalRateAmount * 0.45;
-    }
-    
-    let nationalInsurance = 0;
-    const niThreshold = 12570;
-    const niUpperLimit = 50270;
-    
-    if (annualSalary > niThreshold) {
-      const niAtBasic = Math.min(annualSalary - niThreshold, niUpperLimit - niThreshold) * 0.12;
-      nationalInsurance += niAtBasic;
-      
-      if (annualSalary > niUpperLimit) {
-        nationalInsurance += (annualSalary - niUpperLimit) * 0.02;
-      }
-    }
-    
-    return { incomeTax, socialTax: nationalInsurance, socialTaxLabel: "National Insurance" };
-  };
-
-  const calculateUSTax = (annualSalary: number) => {
-    const deduction = usStandardDeduction[filingStatus];
-    const taxableIncome = Math.max(0, annualSalary - deduction);
-    const brackets = usTaxBrackets[filingStatus];
-    
-    let federalTax = 0;
-    let remainingIncome = taxableIncome;
-    
-    for (const bracket of brackets) {
-      if (remainingIncome <= 0) break;
-      const taxableInBracket = Math.min(remainingIncome, bracket.max - bracket.min);
-      federalTax += taxableInBracket * bracket.rate;
-      remainingIncome -= taxableInBracket;
-    }
-    
-    // FICA taxes (Social Security + Medicare)
-    const socialSecurityRate = 0.062;
-    const medicareRate = 0.0145;
-    const socialSecurityWageBase = 168600;
-    
-    const socialSecurity = Math.min(annualSalary, socialSecurityWageBase) * socialSecurityRate;
-    const medicare = annualSalary * medicareRate;
-    const additionalMedicare = annualSalary > 200000 ? (annualSalary - 200000) * 0.009 : 0;
-    
-    const ficaTax = socialSecurity + medicare + additionalMedicare;
-    
-    // State tax
-    const stateTax = annualSalary * (stateTaxRates[state] || 0);
-    
-    return { 
-      incomeTax: federalTax + stateTax, 
-      socialTax: ficaTax, 
-      socialTaxLabel: "FICA (SS + Medicare)",
-      federalTax,
-      stateTax
-    };
-  };
-
-  const calculateTax = () => {
-    const annualSalary = parseFloat(salary) || 0;
-    
-    const taxResult = country === "UK" 
-      ? calculateUKTax(annualSalary) 
-      : calculateUSTax(annualSalary);
-    
-    const totalDeductions = taxResult.incomeTax + taxResult.socialTax;
-    const netSalary = annualSalary - totalDeductions;
-    
-    return {
-      gross: annualSalary,
-      incomeTax: taxResult.incomeTax,
-      socialTax: taxResult.socialTax,
-      socialTaxLabel: taxResult.socialTaxLabel,
-      federalTax: 'federalTax' in taxResult ? taxResult.federalTax : undefined,
-      stateTax: 'stateTax' in taxResult ? taxResult.stateTax : undefined,
-      totalDeductions,
-      net: netSalary,
-      monthly: netSalary / 12,
-      weekly: netSalary / 52,
-      daily: netSalary / 260
-    };
-  };
-
-  const results = calculateTax();
-
-  const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat(country === "UK" ? 'en-GB' : 'en-US', {
-      style: 'currency',
-      currency: country === "UK" ? 'GBP' : 'USD',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    }).format(value);
-  };
-
-  const currencySymbol = country === "UK" ? "£" : "$";
+  const sym = country === "UK" ? "£" : "$";
+  const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
+  const selectClass = "w-full bg-black/40 border-white/10 text-white rounded-lg";
+  const selectContent = "bg-[#1C1A1A] border-white/10 text-white";
 
   return (
     <>
       <SEO
         title="Salary Calculator - Calculate Take Home Pay After Tax"
         description="Free salary calculator for 2024. Calculate your take-home pay after income tax deductions for UK and US. Get monthly, weekly and daily breakdowns."
-        keywords="salary calculator, take home pay calculator, income tax calculator, net salary calculator, gross to net calculator"
+        keywords="salary calculator, take home pay calculator, income tax calculator, net salary calculator"
         canonicalUrl="https://www.thecalculatorpage.com/finance/salary"
       />
-      <CalculatorLayout
-        title="Salary Calculator"
-        description="Calculate your take-home pay after tax deductions"
-      >
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Input Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Salary Details</CardTitle>
-              <CardDescription>Enter your salary information</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="country">Country</Label>
-                <Select value={country} onValueChange={(v) => setCountry(v as Country)}>
-                  <SelectTrigger id="country">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="UK">🇬🇧 United Kingdom</SelectItem>
-                    <SelectItem value="US">🇺🇸 United States</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="salary">Annual Salary ({currencySymbol})</Label>
-                <Input
-                  id="salary"
-                  type="number"
-                  value={salary}
-                  onChange={(e) => setSalary(e.target.value)}
-                  placeholder="50000"
-                />
-              </div>
+      <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
 
-              <div className="space-y-2">
-                <Label htmlFor="period">Pay Period</Label>
-                <Select value={period} onValueChange={setPeriod}>
-                  <SelectTrigger id="period">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="yearly">Yearly</SelectItem>
-                    <SelectItem value="monthly">Monthly</SelectItem>
-                    <SelectItem value="weekly">Weekly</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {country === "UK" ? (
-                <div className="space-y-2">
-                  <Label htmlFor="taxCode">Tax Code (2024/25)</Label>
-                  <Input
-                    id="taxCode"
-                    type="text"
-                    value={taxCode}
-                    onChange={(e) => setTaxCode(e.target.value)}
-                    placeholder="1257L"
-                  />
-                </div>
-              ) : (
-                <>
-                  <div className="space-y-2">
-                    <Label htmlFor="filingStatus">Filing Status</Label>
-                    <Select value={filingStatus} onValueChange={(v) => setFilingStatus(v as FilingStatus)}>
-                      <SelectTrigger id="filingStatus">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="single">Single</SelectItem>
-                        <SelectItem value="married_joint">Married Filing Jointly</SelectItem>
-                        <SelectItem value="married_separate">Married Filing Separately</SelectItem>
-                        <SelectItem value="head_household">Head of Household</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="state">State</Label>
-                    <Select value={state} onValueChange={setState}>
-                      <SelectTrigger id="state">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="none">No State Tax</SelectItem>
-                        <SelectItem value="CA">California</SelectItem>
-                        <SelectItem value="NY">New York</SelectItem>
-                        <SelectItem value="TX">Texas (No Income Tax)</SelectItem>
-                        <SelectItem value="FL">Florida (No Income Tax)</SelectItem>
-                        <SelectItem value="WA">Washington (No Income Tax)</SelectItem>
-                        <SelectItem value="IL">Illinois</SelectItem>
-                        <SelectItem value="PA">Pennsylvania</SelectItem>
-                        <SelectItem value="OH">Ohio</SelectItem>
-                        <SelectItem value="GA">Georgia</SelectItem>
-                        <SelectItem value="NC">North Carolina</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </>
-              )}
-            </CardContent>
-          </Card>
-
-          {/* Results Card */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Take Home Pay</CardTitle>
-              <CardDescription>Your net income breakdown</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-3">
-                <div className="flex justify-between items-center py-2 border-b">
-                  <span className="text-muted-foreground">Gross Salary</span>
-                  <span className="font-semibold">{formatCurrency(results.gross)}</span>
-                </div>
-                
-                {country === "US" && typeof results.federalTax === 'number' && (
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-muted-foreground">Federal Tax</span>
-                    <span className="text-destructive">-{formatCurrency(results.federalTax)}</span>
-                  </div>
-                )}
-                
-                {country === "US" && typeof results.stateTax === 'number' && results.stateTax > 0 && (
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-muted-foreground">State Tax</span>
-                    <span className="text-destructive">-{formatCurrency(results.stateTax)}</span>
-                  </div>
-                )}
-                
-                {country === "UK" && (
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-muted-foreground">Income Tax</span>
-                    <span className="text-destructive">-{formatCurrency(results.incomeTax)}</span>
-                  </div>
-                )}
-                
-                <div className="flex justify-between items-center py-2 border-b">
-                  <span className="text-muted-foreground">{results.socialTaxLabel}</span>
-                  <span className="text-destructive">-{formatCurrency(results.socialTax)}</span>
-                </div>
-                
-                <div className="flex justify-between items-center py-3 bg-primary/5 px-3 rounded-lg">
-                  <span className="font-semibold text-lg">Net Annual Salary</span>
-                  <span className="font-bold text-lg text-primary">{formatCurrency(results.net)}</span>
-                </div>
-
-                <div className="pt-4 space-y-2 border-t">
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Monthly</span>
-                    <span className="font-medium">{formatCurrency(results.monthly)}</span>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Weekly</span>
-                    <span className="font-medium">{formatCurrency(results.weekly)}</span>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span className="text-muted-foreground">Daily</span>
-                    <span className="font-medium">{formatCurrency(results.daily)}</span>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Breadcrumb */}
+        <div className="max-w-7xl mx-auto px-6 pt-6">
+          <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
+            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
+            <span>/</span>
+            <span className="text-white/60">Salary Calculator</span>
+          </nav>
         </div>
 
-        {/* Info Section */}
-        <Card className="mt-6">
-          <CardHeader>
-            <CardTitle>About {country === "UK" ? "UK" : "US"} Salary Tax Rates</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {country === "UK" ? (
-              <>
-                <p className="text-sm text-muted-foreground">
-                  This calculator uses the UK tax rates for the 2024/25 tax year:
-                </p>
-                <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
-                  <li>Personal Allowance: £12,570 (tax-free)</li>
-                  <li>Basic Rate (20%): £12,571 to £50,270</li>
-                  <li>Higher Rate (40%): £50,271 to £125,140</li>
-                  <li>Additional Rate (45%): Over £125,140</li>
-                  <li>National Insurance: 12% on £12,571-£50,270, then 2% above</li>
-                </ul>
-              </>
-            ) : (
-              <>
-                <p className="text-sm text-muted-foreground">
-                  This calculator uses the US federal tax rates for 2024:
-                </p>
-                <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
-                  <li>Standard Deduction (Single): $14,600</li>
-                  <li>Federal brackets: 10%, 12%, 22%, 24%, 32%, 35%, 37%</li>
-                  <li>Social Security: 6.2% (up to $168,600)</li>
-                  <li>Medicare: 1.45% (+ 0.9% above $200,000)</li>
-                  <li>State taxes vary by location</li>
-                </ul>
-              </>
+        {/* Split-screen hero */}
+        <div className="flex flex-col lg:flex-row min-h-[90vh] max-w-7xl mx-auto px-6 py-12 gap-12 lg:gap-20 items-center">
+
+          {/* LEFT — Typography + live results */}
+          <div className="flex flex-col z-10 lg:w-1/2 select-none">
+            <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
+
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span className="block text-[12vw] lg:text-[100px]" style={{
+                background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+              }}>SALARY</span>
+              <span className="block text-[8vw] lg:text-[65px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                CALCULATOR
+              </span>
+            </h1>
+
+            <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
+              <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+                Calculate your take-home pay after {country === "UK" ? "UK income tax and National Insurance" : "US federal, state tax, and FICA"} deductions. Updates live as you type.
+              </p>
+            </div>
+
+            {/* Live result cards */}
+            {annualSalary > 0 && (
+              <div className="mt-10 space-y-4">
+                {/* Net annual hero */}
+                <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Net Annual Salary</p>
+                  <p className="font-display text-5xl" style={{ color: ACCENT }}>{fmt(net)}</p>
+                  <p className="text-xs text-white/25 font-sans mt-1">After all deductions</p>
+                </div>
+
+                {/* Breakdown grid */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { label: "Monthly", value: fmt(monthly) },
+                    { label: "Weekly",  value: fmt(weekly) },
+                    { label: "Daily",   value: fmt(daily) },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-3">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-sm text-white">{value}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Deduction breakdown */}
+                <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5 space-y-2">
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-3">Deductions</p>
+                  <div className="flex justify-between">
+                    <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Gross</span>
+                    <span className="text-white/60 font-heading text-sm">{fmt(annualSalary)}</span>
+                  </div>
+                  {country === "US" && typeof taxResult.federalTax === "number" && (
+                    <div className="flex justify-between">
+                      <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Federal Tax</span>
+                      <span className="text-red-400 font-heading text-sm">-{fmt(taxResult.federalTax)}</span>
+                    </div>
+                  )}
+                  {country === "US" && typeof taxResult.stateTax === "number" && taxResult.stateTax > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-white/40 text-xs font-heading uppercase tracking-widest">State Tax</span>
+                      <span className="text-red-400 font-heading text-sm">-{fmt(taxResult.stateTax)}</span>
+                    </div>
+                  )}
+                  {country === "UK" && (
+                    <div className="flex justify-between">
+                      <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Income Tax</span>
+                      <span className="text-red-400 font-heading text-sm">-{fmt(taxResult.incomeTax)}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between">
+                    <span className="text-white/40 text-xs font-heading uppercase tracking-widest">{taxResult.socialTaxLabel}</span>
+                    <span className="text-red-400 font-heading text-sm">-{fmt(taxResult.socialTax)}</span>
+                  </div>
+                  <div className="flex justify-between pt-2 border-t border-white/10">
+                    <span className="text-white text-xs font-heading uppercase tracking-widest">Net</span>
+                    <span className="font-heading text-sm" style={{ color: ACCENT }}>{fmt(net)}</span>
+                  </div>
+                </div>
+              </div>
             )}
-            <p className="text-xs text-muted-foreground mt-4">
-              Note: This is a simplified calculation. Actual take-home pay may vary based on pension contributions, 
-              {country === "UK" ? " student loans, tax codes," : " 401(k) contributions, health insurance,"} and other factors. 
-              Consult {country === "UK" ? "HMRC" : "the IRS"} or a tax professional for accurate advice.
-            </p>
-          </CardContent>
-        </Card>
-      </CalculatorLayout>
+          </div>
+
+          {/* RIGHT — Form card */}
+          <div className="w-full lg:w-1/2 z-20 relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-3xl -z-10 pointer-events-none opacity-10" style={{ background: ACCENT }} />
+
+            <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <h3 className="font-display text-3xl uppercase text-white tracking-wide mb-8">Parameters</h3>
+
+              <div className="space-y-5">
+
+                {/* Country toggle */}
+                <div>
+                  <label className={labelClass}>Country</label>
+                  <div className="grid grid-cols-2 gap-2">
+                    {(["UK", "US"] as Country[]).map(c => (
+                      <button key={c} onClick={() => setCountry(c)}
+                        className="py-3 px-4 rounded-lg font-heading text-sm uppercase tracking-widest transition-all border"
+                        style={{
+                          borderColor: country === c ? ACCENT : "rgba(255,255,255,0.08)",
+                          background:  country === c ? `${ACCENT}20` : "transparent",
+                          color:       country === c ? ACCENT : "rgba(255,255,255,0.3)",
+                        }}
+                      >
+                        {c === "UK" ? "🇬🇧 United Kingdom" : "🇺🇸 United States"}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Salary */}
+                <div>
+                  <label className={labelClass}>Annual Salary ({sym})</label>
+                  <div className="relative">
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading">{sym}</span>
+                    <input
+                      type="number" value={salary} onChange={e => setSalary(e.target.value)} placeholder="50,000"
+                      className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all"
+                      onFocus={e => (e.target.style.borderColor = ACCENT)}
+                      onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                    />
+                  </div>
+                </div>
+
+                {/* UK-specific */}
+                {country === "UK" && (
+                  <div>
+                    <label className={labelClass}>Tax Code (2024/25)</label>
+                    <input
+                      type="text" value={taxCode} onChange={e => setTaxCode(e.target.value)} placeholder="1257L"
+                      className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                      onFocus={e => (e.target.style.borderColor = ACCENT)}
+                      onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                    />
+                    <p className="text-[10px] text-white/20 font-sans mt-1">Standard code is 1257L — affects personal allowance</p>
+                  </div>
+                )}
+
+                {/* US-specific */}
+                {country === "US" && (
+                  <>
+                    <div>
+                      <label className={labelClass}>Filing Status</label>
+                      <Select value={filingStatus} onValueChange={v => setFilingStatus(v as FilingStatus)}>
+                        <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                        <SelectContent className={selectContent}>
+                          <SelectItem value="single">Single</SelectItem>
+                          <SelectItem value="married_joint">Married Filing Jointly</SelectItem>
+                          <SelectItem value="married_separate">Married Filing Separately</SelectItem>
+                          <SelectItem value="head_household">Head of Household</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <label className={labelClass}>State</label>
+                      <Select value={state} onValueChange={setState}>
+                        <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                        <SelectContent className={selectContent}>
+                          <SelectItem value="none">No State Tax</SelectItem>
+                          <SelectItem value="CA">California</SelectItem>
+                          <SelectItem value="NY">New York</SelectItem>
+                          <SelectItem value="TX">Texas (No Income Tax)</SelectItem>
+                          <SelectItem value="FL">Florida (No Income Tax)</SelectItem>
+                          <SelectItem value="WA">Washington (No Income Tax)</SelectItem>
+                          <SelectItem value="IL">Illinois</SelectItem>
+                          <SelectItem value="PA">Pennsylvania</SelectItem>
+                          <SelectItem value="OH">Ohio</SelectItem>
+                          <SelectItem value="GA">Georgia</SelectItem>
+                          <SelectItem value="NC">North Carolina</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </>
+                )}
+
+                {/* Info about tax rates */}
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/25 mb-3">
+                    {country === "UK" ? "UK Tax Rates 2024/25" : "US Tax Rates 2024"}
+                  </p>
+                  {country === "UK" ? (
+                    <ul className="text-[10px] text-white/20 font-sans space-y-1">
+                      <li>Personal Allowance: £12,570 (tax-free)</li>
+                      <li>Basic Rate 20%: £12,571–£50,270</li>
+                      <li>Higher Rate 40%: £50,271–£125,140</li>
+                      <li>Additional Rate 45%: Over £125,140</li>
+                      <li>NI: 12% on £12,571–£50,270, then 2%</li>
+                    </ul>
+                  ) : (
+                    <ul className="text-[10px] text-white/20 font-sans space-y-1">
+                      <li>Standard Deduction (Single): $14,600</li>
+                      <li>Federal brackets: 10%, 12%, 22%, 24%, 32%, 35%, 37%</li>
+                      <li>Social Security: 6.2% (up to $168,600)</li>
+                      <li>Medicare: 1.45% (+ 0.9% above $200k)</li>
+                    </ul>
+                  )}
+                  <p className="text-[9px] text-white/15 font-sans mt-3 leading-relaxed">
+                    Simplified calculation. Actual pay may vary based on pension, student loans, and other deductions.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <footer className="bg-black border-t border-white/10 py-8 px-6">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 };

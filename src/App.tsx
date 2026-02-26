@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SEO } from "@/components/SEO";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const App = () => {
@@ -41,8 +40,6 @@ const App = () => {
             <Outlet /> 
           </main>
 
-          {/* 4. High-Authority SEO Footer */}
-          <Footer />
         </div>
       </TooltipProvider>
     </HelmetProvider>

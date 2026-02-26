@@ -1,226 +1,289 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
-import { CalculatorLayout } from "@/components/CalculatorLayout";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
 import { compoundInterestSchema } from "@/lib/validation";
 import { toast } from "sonner";
+import { ArrowRight, PiggyBank } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// ─── Accent colour for Finance category ───────────────────────────────────────
+const ACCENT = "#3B82F6";
 
 const SavingsCalculator = () => {
-  const [initialDeposit, setInitialDeposit] = useState("1000");
-  const [monthlyDeposit, setMonthlyDeposit] = useState("200");
-  const [interestRate, setInterestRate] = useState("3");
-  const [years, setYears] = useState("10");
+  const [initialDeposit,    setInitialDeposit]    = useState("1000");
+  const [monthlyDeposit,    setMonthlyDeposit]    = useState("200");
+  const [interestRate,      setInterestRate]      = useState("3");
+  const [years,             setYears]             = useState("10");
   const [compoundFrequency, setCompoundFrequency] = useState("12");
-  const [currency, setCurrency] = useState<Currency>("USD");
+  const [currency,          setCurrency]          = useState<Currency>("USD");
   const [result, setResult] = useState<{
-    finalBalance: number;
-    totalDeposits: number;
-    totalInterest: number;
+    finalBalance: number; totalDeposits: number; totalInterest: number;
   } | null>(null);
 
   const calculateSavings = () => {
-    const P = parseFloat(initialDeposit);
+    const P   = parseFloat(initialDeposit);
     const PMT = parseFloat(monthlyDeposit);
-    const r = parseFloat(interestRate);
-    const t = parseFloat(years);
-    const n = parseFloat(compoundFrequency);
-
-    // Validate inputs
+    const r   = parseFloat(interestRate);
+    const t   = parseFloat(years);
+    const n   = parseFloat(compoundFrequency);
     try {
-      compoundInterestSchema.parse({
-        principal: P,
-        rate: r,
-        years: t,
-        frequency: n,
-        contribution: PMT
-      });
-    } catch (error: any) {
-      toast.error(error.errors?.[0]?.message || "Invalid input values");
-      return;
-    }
+      compoundInterestSchema.parse({ principal: P, rate: r, years: t, frequency: n, contribution: PMT });
+    } catch (e: any) { toast.error(e.errors?.[0]?.message || "Invalid input values"); return; }
 
-    const rDecimal = r / 100;
-
-    // Future value of initial deposit
-    const futureValueInitial = P * Math.pow(1 + rDecimal / n, n * t);
-
-    // Future value of monthly deposits (annuity)
-    const monthlyRate = rDecimal / 12;
-    const months = t * 12;
-    const futureValueMonthly = PMT * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
-
-    const finalBalance = futureValueInitial + futureValueMonthly;
-    const totalDeposits = P + (PMT * months);
-    const totalInterest = finalBalance - totalDeposits;
+    const rD = r / 100;
+    const futureValueInitial  = P * Math.pow(1 + rD / n, n * t);
+    const monthlyRate         = rD / 12;
+    const months              = t * 12;
+    const futureValueMonthly  = PMT * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+    const finalBalance        = futureValueInitial + futureValueMonthly;
+    const totalDeposits       = P + PMT * months;
 
     setResult({
-      finalBalance: Math.round(finalBalance * 100) / 100,
+      finalBalance:  Math.round(finalBalance  * 100) / 100,
       totalDeposits: Math.round(totalDeposits * 100) / 100,
-      totalInterest: Math.round(totalInterest * 100) / 100,
+      totalInterest: Math.round((finalBalance - totalDeposits) * 100) / 100,
     });
   };
 
+  const sym = currencies[currency].symbol;
+  const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
+  const depositsPct  = result ? (result.totalDeposits  / result.finalBalance) * 100 : 0;
+  const interestPct  = result ? (result.totalInterest  / result.finalBalance) * 100 : 0;
+
   return (
     <>
-      <SEO 
+      <SEO
         title="Savings Calculator - Calculate Your Savings Growth"
-        description="Free savings calculator to plan your savings goals. Calculate how your money grows with compound interest, regular deposits, and different compounding frequencies."
+        description="Free savings calculator to plan your savings goals. See how your money grows with compound interest, regular deposits, and different compounding frequencies."
         keywords="savings calculator, savings account calculator, compound savings calculator, savings goal calculator"
       />
-      <CalculatorLayout
-        title="Savings Calculator"
-        description="Plan your savings goals and see how your money grows over time"
-      >
-      <div className="grid md:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Savings Plan</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <CurrencySelector value={currency} onChange={setCurrency} />
 
-            <div className="space-y-2">
-              <Label htmlFor="initialDeposit">Initial Deposit ({currencies[currency].symbol})</Label>
-              <Input
-                id="initialDeposit"
-                type="number"
-                value={initialDeposit}
-                onChange={(e) => setInitialDeposit(e.target.value)}
-                placeholder="1000"
-              />
+      <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
+
+        {/* Breadcrumb */}
+        <div className="max-w-7xl mx-auto px-6 pt-6">
+          <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
+            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
+            <span>/</span>
+            <span className="text-white/60">Savings Calculator</span>
+          </nav>
+        </div>
+
+        {/* Split-screen hero */}
+        <div className="flex flex-col lg:flex-row min-h-[90vh] max-w-7xl mx-auto px-6 py-12 gap-12 lg:gap-20 items-center">
+
+          {/* LEFT — Typography + results */}
+          <div className="flex flex-col z-10 lg:w-1/2 select-none">
+            <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
+
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span className="block text-[12vw] lg:text-[100px]" style={{
+                background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+              }}>SAVINGS</span>
+              <span className="block text-[8vw] lg:text-[65px] mt-1"
+                style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                CALCULATOR
+              </span>
+            </h1>
+
+            <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
+              <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+                Plan your savings goals and see how your money grows with compound interest and regular deposits over time.
+              </p>
             </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="monthlyDeposit">Monthly Deposit ({currencies[currency].symbol})</Label>
-              <Input
-                id="monthlyDeposit"
-                type="number"
-                value={monthlyDeposit}
-                onChange={(e) => setMonthlyDeposit(e.target.value)}
-                placeholder="200"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="interestRate">Annual Interest Rate (%)</Label>
-              <Input
-                id="interestRate"
-                type="number"
-                step="0.1"
-                value={interestRate}
-                onChange={(e) => setInterestRate(e.target.value)}
-                placeholder="3"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="years">Time Period (Years)</Label>
-              <Input
-                id="years"
-                type="number"
-                value={years}
-                onChange={(e) => setYears(e.target.value)}
-                placeholder="10"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="compoundFrequency">Compound Frequency</Label>
-              <Select value={compoundFrequency} onValueChange={setCompoundFrequency}>
-                <SelectTrigger id="compoundFrequency">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="1">Annually</SelectItem>
-                  <SelectItem value="4">Quarterly</SelectItem>
-                  <SelectItem value="12">Monthly</SelectItem>
-                  <SelectItem value="365">Daily</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-
-            <Button onClick={calculateSavings} className="w-full">
-              Calculate Savings
-            </Button>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-gradient-to-br from-primary/5 to-accent/5">
-          <CardHeader>
-            <CardTitle>Savings Summary</CardTitle>
-          </CardHeader>
-          <CardContent>
-            {result ? (
-              <div className="space-y-6">
-                <div className="p-6 bg-card rounded-lg border-2 border-primary">
-                  <p className="text-sm text-muted-foreground mb-1">Final Balance</p>
-                  <p className="text-5xl font-bold text-primary">
-                    {currencies[currency].symbol}{result.finalBalance.toLocaleString()}
+            {/* Results */}
+            {result && (
+              <div className="mt-10 space-y-4">
+                {/* Final balance hero */}
+                <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Final Balance</p>
+                  <p className="font-display text-5xl" style={{ color: ACCENT }}>
+                    {sym}{result.finalBalance.toLocaleString()}
                   </p>
+                  <p className="text-xs text-white/25 font-sans mt-1">After {years} years</p>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-card rounded-lg">
-                    <span className="text-muted-foreground">Total Deposits</span>
-                    <span className="font-semibold">
-                      {currencies[currency].symbol}{result.totalDeposits.toLocaleString()}
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-card rounded-lg">
-                    <span className="text-muted-foreground">Total Interest</span>
-                    <span className="font-semibold text-accent">
-                      {currencies[currency].symbol}{result.totalInterest.toLocaleString()}
-                    </span>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-card rounded-lg">
-                    <span className="text-muted-foreground">Return on Investment</span>
-                    <span className="font-semibold">
-                      {((result.totalInterest / result.totalDeposits) * 100).toFixed(2)}%
-                    </span>
-                  </div>
+                {/* Stats grid */}
+                <div className="grid grid-cols-3 gap-3">
+                  {[
+                    { label: "Total Deposits", value: `${sym}${result.totalDeposits.toLocaleString()}` },
+                    { label: "Interest Earned", value: `${sym}${result.totalInterest.toLocaleString()}` },
+                    { label: "ROI", value: `${((result.totalInterest / result.totalDeposits) * 100).toFixed(2)}%` },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-base text-white">{value}</p>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="mt-6 p-4 bg-card rounded-lg border">
-                  <p className="text-sm text-muted-foreground mb-2">Savings Breakdown</p>
-                  <div className="flex gap-2 h-8 rounded-full overflow-hidden">
+                {/* Deposits vs Interest bar */}
+                <div className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-3">Savings Breakdown</p>
+                  <div className="flex h-6 rounded-full overflow-hidden gap-0.5">
                     <div
-                      className="bg-primary flex items-center justify-center text-xs font-medium text-primary-foreground"
-                      style={{
-                        width: `${(result.totalDeposits / result.finalBalance) * 100}%`,
-                      }}
+                      className="flex items-center justify-center text-[10px] font-heading text-black rounded-l-full transition-all"
+                      style={{ width: `${depositsPct}%`, background: ACCENT }}
                     >
-                      Deposits
+                      {depositsPct > 15 ? "Deposits" : ""}
                     </div>
                     <div
-                      className="bg-accent flex items-center justify-center text-xs font-medium text-accent-foreground"
-                      style={{
-                        width: `${(result.totalInterest / result.finalBalance) * 100}%`,
-                      }}
+                      className="flex items-center justify-center text-[10px] font-heading text-white rounded-r-full bg-purple-500/70 transition-all"
+                      style={{ width: `${interestPct}%` }}
                     >
-                      Interest
+                      {interestPct > 15 ? "Interest" : ""}
                     </div>
                   </div>
+                  <div className="flex gap-4 mt-2">
+                    <span className="flex items-center gap-1.5 text-[9px] font-heading uppercase tracking-widest text-white/30">
+                      <span className="w-2 h-2 rounded-full" style={{ background: ACCENT }} />
+                      Deposits ({depositsPct.toFixed(0)}%)
+                    </span>
+                    <span className="flex items-center gap-1.5 text-[9px] font-heading uppercase tracking-widest text-white/30">
+                      <span className="w-2 h-2 rounded-full bg-purple-500/70" />
+                      Interest ({interestPct.toFixed(0)}%)
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="text-center py-12 text-muted-foreground">
-                <p>Enter your savings plan details to see projections</p>
               </div>
             )}
-          </CardContent>
-        </Card>
-      </div>
+          </div>
 
-      <FinancialDisclaimer type="investment" className="mt-6" />
-    </CalculatorLayout>
+          {/* RIGHT — Form card */}
+          <div className="w-full lg:w-1/2 z-20 relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-3xl -z-10 pointer-events-none opacity-10" style={{ background: ACCENT }} />
+
+            <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="font-display text-3xl uppercase text-white tracking-wide">Parameters</h3>
+                <PiggyBank className="h-6 w-6" style={{ color: ACCENT }} />
+              </div>
+
+              <div className="space-y-5">
+
+                {/* Currency */}
+                <div>
+                  <label className={labelClass}>Currency</label>
+                  <CurrencySelector value={currency} onChange={setCurrency} />
+                </div>
+
+                {/* Initial + Monthly deposits */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className={labelClass}>Initial Deposit</label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">{sym}</span>
+                      <input type="number" value={initialDeposit} onChange={e => setInitialDeposit(e.target.value)} placeholder="1,000"
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-4 text-white text-lg font-medium placeholder-white/20 focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                    </div>
+                  </div>
+                  <div>
+                    <label className={labelClass}>Monthly Deposit</label>
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">{sym}</span>
+                      <input type="number" value={monthlyDeposit} onChange={e => setMonthlyDeposit(e.target.value)} placeholder="200"
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-4 text-white text-lg font-medium placeholder-white/20 focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Rate + Years */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className={labelClass}>Interest Rate</label>
+                    <div className="relative">
+                      <input type="number" step="0.1" value={interestRate} onChange={e => setInterestRate(e.target.value)} placeholder="3.0"
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">%</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label className={labelClass}>Time Period</label>
+                    <div className="relative">
+                      <input type="number" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">Yrs</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Compound frequency */}
+                <div>
+                  <label className={labelClass}>Compound Frequency</label>
+                  <Select value={compoundFrequency} onValueChange={setCompoundFrequency}>
+                    <SelectTrigger className="w-full bg-black/40 border-white/10 text-white rounded-lg">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent className="bg-[#1C1A1A] border-white/10 text-white">
+                      <SelectItem value="1">Annually</SelectItem>
+                      <SelectItem value="4">Quarterly</SelectItem>
+                      <SelectItem value="12">Monthly</SelectItem>
+                      <SelectItem value="365">Daily</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Result preview */}
+                {result && (
+                  <div className="pt-4 border-t border-white/10 space-y-3">
+                    <div className="flex justify-between items-end pb-3 border-b border-white/10">
+                      <span className="text-white/40 text-sm font-heading uppercase tracking-widest">Final Balance</span>
+                      <span className="text-3xl font-display" style={{ color: ACCENT }}>{sym}{result.finalBalance.toLocaleString()}</span>
+                    </div>
+                    {[
+                      { label: "Total Deposits", value: `${sym}${result.totalDeposits.toLocaleString()}` },
+                      { label: "Interest Earned", value: `${sym}${result.totalInterest.toLocaleString()}`, accent: true },
+                      { label: "ROI", value: `${((result.totalInterest / result.totalDeposits) * 100).toFixed(2)}%`, accent: true },
+                    ].map(({ label, value, accent }) => (
+                      <div key={label} className="flex justify-between items-center">
+                        <span className="text-white/30 text-xs font-heading uppercase tracking-widest">{label}</span>
+                        <span className="font-heading" style={{ color: accent ? ACCENT : "rgba(255,255,255,0.7)" }}>{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Calculate button */}
+                <button
+                  onClick={calculateSavings}
+                  className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
+                  style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = `0 0 20px -5px ${ACCENT}80`)}
+                >
+                  Calculate Savings
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="max-w-7xl mx-auto px-6 pb-16">
+          <FinancialDisclaimer type="investment" className="mt-2" />
+        </div>
+
+        {/* Footer */}
+        <footer className="bg-black border-t border-white/10 py-8 px-6">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+          </div>
+        </footer>
+      </div>
     </>
   );
 };

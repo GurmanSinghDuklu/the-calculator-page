@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { HelpCircle, BookOpen, Calculator, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { HelpCircle, BookOpen, Calculator, CheckCircle, ChevronDown } from "lucide-react";
 
 interface FAQ {
   question: string;
@@ -37,122 +36,108 @@ export const CalculatorStaticContent = ({
   howItWorks,
   formula,
   faqs,
-  tips
+  tips,
 }: CalculatorStaticContentProps) => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
-    <div className="mt-12 space-y-8">
-      {/* What Is Section */}
-      <section className="prose prose-slate dark:prose-invert max-w-none">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-primary" />
-              {whatIs.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground leading-relaxed">
-              {whatIs.description}
-            </p>
-          </CardContent>
-        </Card>
+    <div className="mt-16 space-y-px border-t border-white/8 pt-16">
+
+      {/* ── What Is ── */}
+      <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
+        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+          <BookOpen className="h-4 w-4 shrink-0 text-white/25" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{whatIs.title}</p>
+        </div>
+        <p className="text-zinc-500 text-sm leading-relaxed font-sans">{whatIs.description}</p>
       </section>
 
-      {/* How It Works Section */}
-      <section className="prose prose-slate dark:prose-invert max-w-none">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Calculator className="h-5 w-5 text-primary" />
-              {howItWorks.title}
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-muted-foreground leading-relaxed">
-              {howItWorks.description}
-            </p>
-            {howItWorks.steps && (
-              <ol className="list-decimal list-inside space-y-3">
-                {howItWorks.steps.map((step) => (
-                  <li key={step.step} className="text-foreground">
-                    <strong>{step.title}:</strong>{" "}
-                    <span className="text-muted-foreground">{step.description}</span>
-                  </li>
-                ))}
-              </ol>
-            )}
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Formula Section */}
-      {formula && (
-        <section className="prose prose-slate dark:prose-invert max-w-none">
-          <Card>
-            <CardHeader>
-              <CardTitle>{formula.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="bg-muted p-4 rounded-lg font-mono text-center text-lg">
-                {formula.formula}
+      {/* ── How It Works ── */}
+      <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
+        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+          <Calculator className="h-4 w-4 shrink-0 text-white/25" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{howItWorks.title}</p>
+        </div>
+        <p className="text-zinc-500 text-sm leading-relaxed font-sans mb-5">{howItWorks.description}</p>
+        {howItWorks.steps && (
+          <div className="divide-y divide-white/6">
+            {howItWorks.steps.map((step) => (
+              <div key={step.step} className="flex items-start gap-5 py-3.5">
+                <span className="font-display text-3xl leading-none shrink-0 tabular-nums text-white/10">
+                  {String(step.step).padStart(2, "0")}
+                </span>
+                <div className="pt-0.5">
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/50 mb-0.5">{step.title}</p>
+                  <p className="text-zinc-500 text-sm font-sans">{step.description}</p>
+                </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {formula.explanation}
-              </p>
-            </CardContent>
-          </Card>
-        </section>
-      )}
-
-      {/* Tips Section */}
-      {tips && tips.length > 0 && (
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                Tips & Best Practices
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                {tips.map((tip, index) => (
-                  <li key={index} className="flex items-start gap-2 text-muted-foreground">
-                    <span className="text-primary font-bold">•</span>
-                    {tip}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
-      )}
-
-      {/* FAQ Section */}
-      <section className="prose prose-slate dark:prose-invert max-w-none">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <HelpCircle className="h-5 w-5 text-primary" />
-              Frequently Asked Questions
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </CardContent>
-        </Card>
+            ))}
+          </div>
+        )}
       </section>
+
+      {/* ── Formula ── */}
+      {formula && (
+        <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
+          <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{formula.title}</p>
+          </div>
+          <div className="border-l-2 border-white/15 bg-white/[0.02] px-5 py-4 mb-5 font-mono text-sm text-zinc-400">
+            {formula.formula}
+          </div>
+          <p className="text-zinc-500 text-sm leading-relaxed font-sans">{formula.explanation}</p>
+        </section>
+      )}
+
+      {/* ── Tips ── */}
+      {tips && tips.length > 0 && (
+        <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
+          <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+            <CheckCircle className="h-4 w-4 shrink-0 text-white/25" />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">Tips &amp; Best Practices</p>
+          </div>
+          <ul className="divide-y divide-white/5">
+            {tips.map((tip, i) => (
+              <li key={i} className="flex items-start gap-3 py-3">
+                <span className="text-white/20 text-xs font-heading shrink-0 mt-px">→</span>
+                <p className="text-zinc-500 text-sm font-sans">{tip}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* ── FAQ ── */}
+      <section className="border border-white/8 bg-white/[0.015] px-6 py-6">
+        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+          <HelpCircle className="h-4 w-4 shrink-0 text-white/25" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">Frequently Asked Questions</p>
+        </div>
+        <div className="divide-y divide-white/6">
+          {faqs.map((faq, i) => (
+            <div key={i} className="py-1">
+              <button
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                className="w-full flex items-center justify-between gap-4 py-4 text-left group"
+              >
+                <p className="font-heading text-[10px] uppercase tracking-widest text-white/55 group-hover:text-white/80 transition-colors">
+                  {faq.question}
+                </p>
+                <ChevronDown
+                  className="h-3.5 w-3.5 shrink-0 text-white/20 transition-transform duration-200"
+                  style={{ transform: openFaq === i ? "rotate(180deg)" : "rotate(0deg)" }}
+                />
+              </button>
+              {openFaq === i && (
+                <p className="text-zinc-500 text-sm font-sans leading-relaxed pb-4">
+                  {faq.answer}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 };

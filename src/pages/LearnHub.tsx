@@ -1,111 +1,70 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { NavigationMenu } from "@/components/NavigationMenu";
-import { Logo } from "@/components/Logo";
-import { Home, BookOpen, TrendingUp, Lightbulb, ArrowRight, Lock, MapPin, GraduationCap } from "lucide-react";
+import { Home, Lightbulb, MapPin, GraduationCap, ArrowRight, Lock } from "lucide-react";
 
-import heroImage from "@/assets/blog-savings-growth.jpg";
+import heroImage        from "@/assets/blog-savings-growth.jpg";
 import journeyBudgetImg from "@/assets/journey-budget.jpg";
 import journeyInvestImg from "@/assets/journey-invest.jpg";
 import journeyThriveImg from "@/assets/journey-thrive.jpg";
 
+// ─── Data ─────────────────────────────────────────────────────────────────────
+const cheatCodes = [
+  {
+    title: "The Mortgage Cheat Code",
+    description: "How weekly payments can save you years and thousands in interest on your mortgage.",
+    path: "/blog/mortgage-cheat-code",
+    readTime: "10 min",
+    featured: true,
+    hasPremium: false,
+  },
+  {
+    title: "How to Turn £0 into £1,000,000",
+    description: "The proven strategy using compound interest and DCA investing to build wealth from nothing.",
+    path: "/blog/cheat-code-01",
+    readTime: "12 min",
+    featured: false,
+    hasPremium: true,
+  },
+];
+
+const journeyStages = [
+  { title: "Budget & Track",      description: "Build control and visibility over your cashflow.",                      path: "/learn/financial-journey?stage=budget",     image: journeyBudgetImg, accent: "#F87171", articles: 5 },
+  { title: "Accumulate & Save",   description: "Grow your cushion and start saving effectively.",                      path: "/learn/financial-journey?stage=accumulate",  image: journeyBudgetImg, accent: "#38BDF8", articles: 4 },
+  { title: "Pay Off Debt",        description: "Clear toxic debt using snowball and avalanche strategies.",            path: "/learn/financial-journey?stage=payoff",     image: journeyBudgetImg, accent: "#FBBF24", articles: 4 },
+  { title: "Invest & Grow",       description: "Make your money work with long-term investment strategies.",          path: "/learn/financial-journey?stage=invest",     image: journeyInvestImg, accent: "#34D399", articles: 6 },
+  { title: "Thrive & Protect",    description: "Protect, give, and pass forward wealth through ethical planning.",    path: "/learn/financial-journey?stage=thrive",     image: journeyThriveImg, accent: "#A78BFA", articles: 4 },
+];
+
+const blogArticles = [
+  { title: "Where Your Money Really Goes",          description: "Track spending for 30 days and discover your true spending patterns.",                      path: "/learn/where-money-goes",      category: "Budgeting",  readTime: "15 min" },
+  { title: "50/30/20 Budget Made Personal",         description: "Adapt the classic budgeting rule to your unique lifestyle and goals.",                      path: "/learn/50-30-20-budget",       category: "Budgeting",  readTime: "20 min" },
+  { title: "Building an Emergency Fund That Works", description: "Target 3–6 months' expenses with a practical savings strategy.",                           path: "/learn/emergency-fund",        category: "Saving",     readTime: "30 min" },
+  { title: "Automate Your Finances Like a Pro",     description: "Standing orders, automations and friction reduction for effortless money management.",      path: "/learn/automate-finances",     category: "Automation", readTime: "20 min" },
+];
+
+// ─── Category accent colours for article badges ───────────────────────────────
+const CATEGORY_COLORS: Record<string, string> = {
+  Budgeting:  "#3B82F6",
+  Saving:     "#22C55E",
+  Automation: "#F97316",
+};
+
+// ─── Reusable section header ──────────────────────────────────────────────────
+function SectionHeader({ icon: Icon, title, subtitle }: { icon: React.ElementType; title: string; subtitle: string }) {
+  return (
+    <div className="mb-10">
+      <div className="flex items-center gap-3 mb-3">
+        <Icon className="h-5 w-5 text-white/30" />
+        <p className="font-display text-3xl md:text-4xl text-white tracking-wide uppercase">{title}</p>
+      </div>
+      <p className="text-white/30 text-sm font-sans leading-relaxed max-w-xl pl-8">{subtitle}</p>
+    </div>
+  );
+}
+
+// ─── Component ────────────────────────────────────────────────────────────────
 const LearnHub = () => {
-  const cheatCodes = [
-    {
-      title: "The Mortgage Cheat Code",
-      description: "How weekly payments can save you years and thousands in interest on your mortgage.",
-      path: "/blog/mortgage-cheat-code",
-      readTime: "10 min",
-      featured: true,
-      hasPremium: false,
-    },
-    {
-      title: "How to Turn £0 into £1,000,000",
-      description: "The proven strategy using compound interest and DCA investing to build wealth from nothing.",
-      path: "/blog/cheat-code-01",
-      readTime: "12 min",
-      featured: false,
-      hasPremium: true,
-    },
-  ];
-
-  const journeyStages = [
-    {
-      title: "Budget & Track",
-      description: "Build control and visibility over your cashflow with practical budgeting strategies.",
-      path: "/learn/financial-journey?stage=budget",
-      image: journeyBudgetImg,
-      color: "bg-rose-500",
-      articles: 5,
-    },
-    {
-      title: "Accumulate & Save",
-      description: "Grow your cushion and start saving effectively with proven accumulation methods.",
-      path: "/learn/financial-journey?stage=accumulate",
-      image: journeyBudgetImg,
-      color: "bg-sky-500",
-      articles: 4,
-    },
-    {
-      title: "Pay Off Debt",
-      description: "Clear toxic debt and gain financial freedom using snowball and avalanche strategies.",
-      path: "/learn/financial-journey?stage=payoff",
-      image: journeyBudgetImg,
-      color: "bg-amber-500",
-      articles: 4,
-    },
-    {
-      title: "Invest & Grow",
-      description: "Make your money work with long-term investment strategies and portfolio building.",
-      path: "/learn/financial-journey?stage=invest",
-      image: journeyInvestImg,
-      color: "bg-emerald-500",
-      articles: 6,
-    },
-    {
-      title: "Thrive & Protect",
-      description: "Protect, give, and pass forward wealth through insurance, wills, and ethical investing.",
-      path: "/learn/financial-journey?stage=thrive",
-      image: journeyThriveImg,
-      color: "bg-violet-500",
-      articles: 4,
-    },
-  ];
-
-  const blogArticles = [
-    {
-      title: "Where Your Money Really Goes",
-      description: "Track spending for 30 days and discover your true spending patterns.",
-      path: "/learn/where-money-goes",
-      category: "Budgeting",
-      readTime: "15 min",
-    },
-    {
-      title: "50/30/20 Budget Made Personal",
-      description: "Adapt the classic budgeting rule to your unique lifestyle and goals.",
-      path: "/learn/50-30-20-budget",
-      category: "Budgeting",
-      readTime: "20 min",
-    },
-    {
-      title: "Building an Emergency Fund That Works",
-      description: "Target 3–6 months' expenses with a practical savings strategy.",
-      path: "/learn/emergency-fund",
-      category: "Saving",
-      readTime: "30 min",
-    },
-    {
-      title: "Automate Your Finances Like a Pro",
-      description: "Standing orders, automations and friction reduction for effortless money management.",
-      path: "/learn/automate-finances",
-      category: "Automation",
-      readTime: "20 min",
-    },
-  ];
-
   return (
     <>
       <SEO
@@ -115,234 +74,201 @@ const LearnHub = () => {
         canonicalUrl="https://www.thecalculatorpage.com/learn"
       />
 
-      <div className="min-h-screen bg-background">
-        {/* Navigation Header */}
-        <header className="border-b border-border/50 bg-background/95 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-            <Logo size="md" linkTo="/home" />
+      <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
+
+        {/* ── Sticky header ── */}
+        <header className="sticky top-0 z-50 bg-[#1C1A1A]/90 backdrop-blur-md border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <Link to="/home" className="font-display text-2xl tracking-widest text-white uppercase">
+              Calculator Page
+            </Link>
             <div className="flex items-center gap-4">
-              <Link to="/home">
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-                  <Home className="h-4 w-4 mr-2" />
-                  Home
-                </Button>
+              <Link to="/home" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
+                <Home className="h-4 w-4" /> Home
               </Link>
               <NavigationMenu />
             </div>
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section className="py-20 md:py-28 px-6 border-b border-border">
-          <div className="container mx-auto max-w-4xl text-center">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-12 h-px bg-foreground/20" />
-              <span className="text-[10px] tracking-[0.4em] text-muted-foreground uppercase font-light">
-                Education Hub
-              </span>
-              <div className="w-12 h-px bg-foreground/20" />
-            </div>
-            
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal text-foreground tracking-tight mb-6">
-              Learn & Insights
-            </h1>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Your complete financial education journey. From cheat codes that accelerate wealth building 
-              to comprehensive guides that transform your relationship with money.
+        {/* ── Hero ── */}
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-16 select-none">
+          <div className="absolute w-[700px] h-[500px] rounded-full blur-[160px] opacity-[0.06] pointer-events-none -z-10"
+            style={{ background: "linear-gradient(135deg, #3B82F6, #a78bfa)", top: 0, left: 0 }} />
+
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-8 h-px bg-white/20" />
+            <p className="text-[9px] font-heading uppercase tracking-[0.4em] text-white/25">Education Hub</p>
+            <div className="w-8 h-px bg-white/20" />
+          </div>
+
+          <h1 className="font-display leading-[0.85] tracking-tighter">
+            <span className="block text-[11vw] md:text-[92px]" style={{
+              background: "linear-gradient(135deg, #3B82F6 0%, #a78bfa 100%)",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+              filter: "drop-shadow(0 0 40px #3B82F640)",
+            }}>LEARN &amp;</span>
+            <span className="block text-[11vw] md:text-[92px]" style={{
+              background: "linear-gradient(135deg, #3B82F6 0%, #a78bfa 100%)",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+            }}>INSIGHTS</span>
+          </h1>
+
+          <div className="mt-8 max-w-lg pl-4 border-l-2 border-blue-500/40">
+            <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+              Your complete financial education journey. From cheat codes that accelerate wealth building to comprehensive guides that transform your relationship with money.
             </p>
           </div>
-        </section>
+        </div>
 
-        {/* The Cheat Code Section */}
-        <section className="py-20 px-6 border-b border-border bg-muted/20">
-          <div className="container mx-auto max-w-6xl">
-            <div className="flex items-center gap-4 mb-4">
-              <Lightbulb className="h-6 w-6 text-foreground" />
-              <h2 className="font-serif text-3xl md:text-4xl font-normal text-foreground tracking-tight">
-                The Cheat Code
-              </h2>
-            </div>
-            <p className="text-muted-foreground mb-10 max-w-2xl">
-              Discover the hidden strategies the wealthy use to build and preserve wealth. 
-              No fluff, just actionable insights that can change your financial trajectory.
-            </p>
+        {/* ── The Cheat Code ── */}
+        <div className="bg-[#252323]/40 border-t border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <SectionHeader
+              icon={Lightbulb}
+              title="The Cheat Code"
+              subtitle="Discover the hidden strategies the wealthy use to build and preserve wealth. No fluff, just actionable insights."
+            />
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {cheatCodes.map((article, index) => (
-                <Link key={index} to={article.path} className="group">
-                  <Card className="h-full overflow-hidden border border-border hover:border-foreground/20 transition-all duration-500 bg-card">
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={heroImage}
-                        alt={article.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                      {article.featured && (
-                        <Badge className="absolute top-4 left-4 bg-foreground text-background border-0 text-[10px] tracking-widest uppercase">
-                          Featured
-                        </Badge>
-                      )}
-                      {article.hasPremium && (
-                        <Badge variant="outline" className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-[10px] tracking-widest uppercase">
-                          <Lock className="h-3 w-3 mr-1" />
-                          Premium
-                        </Badge>
-                      )}
+            <div className="grid md:grid-cols-2 gap-6">
+              {cheatCodes.map(article => (
+                <Link key={article.path} to={article.path}
+                  className="group bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300">
+                  {/* Image */}
+                  <div className="relative h-52 overflow-hidden">
+                    <img src={heroImage} alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#252323] via-[#252323]/50 to-transparent" />
+                    {article.featured && (
+                      <div className="absolute top-4 left-4 px-3 py-1 bg-white text-black font-heading text-[9px] uppercase tracking-widest rounded-full">
+                        Featured
+                      </div>
+                    )}
+                    {article.hasPremium && (
+                      <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-black/60 backdrop-blur-sm border border-white/20 font-heading text-[9px] uppercase tracking-widest rounded-full text-white/50">
+                        <Lock className="h-3 w-3" /> Premium
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/25">The Cheat Code</p>
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/25">{article.readTime}</p>
                     </div>
-                    <CardHeader className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
-                          The Cheat Code
-                        </span>
-                        <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                      </div>
-                      <CardTitle className="font-serif text-xl font-normal group-hover:text-muted-foreground transition-colors leading-snug">
-                        {article.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">
-                        {article.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center justify-end pt-2 border-t border-border">
-                        <span className="text-xs font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                          Read <ArrowRight className="h-3 w-3" />
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-
-            <div className="mt-8 text-center">
-              <Link to="/blog">
-                <Button variant="outline" className="border-border hover:bg-accent">
-                  View All Cheat Codes →
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Financial Journey Section */}
-        <section className="py-20 px-6 border-b border-border">
-          <div className="container mx-auto max-w-6xl">
-            <div className="flex items-center gap-4 mb-4">
-              <MapPin className="h-6 w-6 text-foreground" />
-              <h2 className="font-serif text-3xl md:text-4xl font-normal text-foreground tracking-tight">
-                Financial Growth Journey
-              </h2>
-            </div>
-            <p className="text-muted-foreground mb-10 max-w-2xl">
-              Follow a structured path from beginner to confident investor. 
-              Each stage builds on the last, creating a comprehensive financial education.
-            </p>
-
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {journeyStages.map((stage, index) => (
-                <Link key={index} to={stage.path} className="group">
-                  <Card className="h-full overflow-hidden border border-border hover:border-foreground/20 transition-all duration-500 bg-card">
-                    <div className="relative h-32 overflow-hidden">
-                      <img
-                        src={stage.image}
-                        alt={stage.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                      <div className={`absolute top-3 left-3 w-1 h-8 rounded ${stage.color}`} />
+                    <p className="font-display text-xl text-white mb-2 leading-tight group-hover:text-white/70 transition-colors">
+                      {article.title}
+                    </p>
+                    <p className="text-white/35 text-sm font-sans leading-relaxed">{article.description}</p>
+                    <div className="flex justify-end mt-4 pt-4 border-t border-white/10">
+                      <span className="flex items-center gap-1 text-white/30 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
+                        Read <ArrowRight className="h-3 w-3" />
+                      </span>
                     </div>
-                    <CardHeader className="p-4 space-y-2">
-                      <CardTitle className="font-serif text-base font-normal group-hover:text-muted-foreground transition-colors">
-                        {stage.title}
-                      </CardTitle>
-                      <CardDescription className="text-xs leading-relaxed line-clamp-2">
-                        {stage.description}
-                      </CardDescription>
-                      <div className="text-[10px] text-muted-foreground pt-1">
-                        {stage.articles} articles
-                      </div>
-                    </CardHeader>
-                  </Card>
+                  </div>
                 </Link>
               ))}
             </div>
 
             <div className="mt-8 text-center">
-              <Link to="/learn/financial-journey">
-                <Button variant="outline" className="border-border hover:bg-accent">
-                  Start Your Journey →
-                </Button>
+              <Link to="/blog"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-xl font-heading text-[10px] uppercase tracking-widest text-white/40 hover:text-white hover:border-white/30 transition-all">
+                View All Cheat Codes <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Educational Articles Section */}
-        <section className="py-20 px-6 border-b border-border bg-muted/20">
-          <div className="container mx-auto max-w-6xl">
-            <div className="flex items-center gap-4 mb-4">
-              <GraduationCap className="h-6 w-6 text-foreground" />
-              <h2 className="font-serif text-3xl md:text-4xl font-normal text-foreground tracking-tight">
-                Educational Articles
-              </h2>
-            </div>
-            <p className="text-muted-foreground mb-10 max-w-2xl">
-              Deep-dive guides on specific financial topics. 
-              Each article is designed to give you practical knowledge you can apply immediately.
-            </p>
+        {/* ── Financial Journey ── */}
+        <div className="max-w-7xl mx-auto px-6 py-16">
+          <SectionHeader
+            icon={MapPin}
+            title="Financial Growth Journey"
+            subtitle="Follow a structured path from beginner to confident investor. Each stage builds on the last."
+          />
 
-            <div className="grid gap-4 md:grid-cols-2">
-              {blogArticles.map((article, index) => (
-                <Link key={index} to={article.path} className="group">
-                  <Card className="h-full border border-border hover:border-foreground/20 transition-all duration-300 bg-card">
-                    <CardHeader className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <Badge variant="outline" className="text-[10px] tracking-widest uppercase">
-                          {article.category}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                      </div>
-                      <CardTitle className="font-serif text-lg font-normal group-hover:text-muted-foreground transition-colors leading-snug">
-                        {article.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">
-                        {article.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center justify-end pt-2 border-t border-border">
-                        <span className="text-xs font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                          Read <ArrowRight className="h-3 w-3" />
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {journeyStages.map(stage => (
+              <Link key={stage.path} to={stage.path}
+                className="group bg-[#252323]/80 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300">
+                {/* Image */}
+                <div className="relative h-32 overflow-hidden">
+                  <img src={stage.image} alt={stage.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#252323] to-transparent" />
+                  <div className="absolute top-0 left-0 w-1 h-full" style={{ background: stage.accent }} />
+                </div>
+                {/* Content */}
+                <div className="p-4">
+                  <p className="font-display text-base text-white mb-1 group-hover:text-white/70 transition-colors">{stage.title}</p>
+                  <p className="text-[10px] text-white/25 font-sans leading-relaxed line-clamp-2">{stage.description}</p>
+                  <p className="text-[9px] font-heading uppercase tracking-widest mt-2" style={{ color: `${stage.accent}80` }}>
+                    {stage.articles} articles
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/learn/financial-journey"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-xl font-heading text-[10px] uppercase tracking-widest text-white/40 hover:text-white hover:border-white/30 transition-all">
+              Start Your Journey <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+
+        {/* ── Educational Articles ── */}
+        <div className="bg-[#252323]/40 border-t border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-16">
+            <SectionHeader
+              icon={GraduationCap}
+              title="Educational Articles"
+              subtitle="Deep-dive guides on specific financial topics. Practical knowledge you can apply immediately."
+            />
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {blogArticles.map(article => {
+                const color = CATEGORY_COLORS[article.category] || "#3B82F6";
+                return (
+                  <Link key={article.path} to={article.path}
+                    className="group bg-[#252323]/80 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 rounded-full font-heading text-[9px] uppercase tracking-widest border"
+                        style={{ borderColor: `${color}50`, background: `${color}15`, color }}>
+                        {article.category}
+                      </span>
+                      <span className="text-[9px] font-heading uppercase tracking-widest text-white/25">{article.readTime}</span>
+                    </div>
+                    <p className="font-display text-lg text-white mb-2 group-hover:text-white/70 transition-colors leading-tight">
+                      {article.title}
+                    </p>
+                    <p className="text-white/30 text-sm font-sans leading-relaxed">{article.description}</p>
+                    <div className="flex justify-end mt-4 pt-4 border-t border-white/10">
+                      <span className="flex items-center gap-1 text-white/25 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
+                        Read <ArrowRight className="h-3 w-3" />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="mt-8 text-center">
-              <Link to="/learn/financial-journey">
-                <Button variant="outline" className="border-border hover:bg-accent">
-                  Browse All Articles →
-                </Button>
+              <Link to="/learn/financial-journey"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-xl font-heading text-[10px] uppercase tracking-widest text-white/40 hover:text-white hover:border-white/30 transition-all">
+                Browse All Articles <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Footer */}
-        <footer className="border-t border-border bg-background">
-          <div className="container mx-auto px-6 py-12">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <Logo size="sm" linkTo="/home" />
-              <p className="text-muted-foreground text-sm tracking-wide">
-                © 2025 Calculator Page. All content is free to access.
-              </p>
-            </div>
+        <footer className="bg-black border-t border-white/10 py-8 px-6">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page. All content is free to access.</p>
           </div>
         </footer>
       </div>

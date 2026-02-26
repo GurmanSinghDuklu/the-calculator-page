@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-import { ChevronRight, Home } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { Home, ChevronRight } from "lucide-react";
 
 interface BreadcrumbItem {
   label: string;
@@ -20,34 +12,33 @@ interface BreadcrumbsProps {
 
 export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
-    <Breadcrumb className="mb-6">
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link to="/home" className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors">
-              <Home className="h-4 w-4" />
-              <span className="text-sm">Home</span>
+    <nav className="flex items-center gap-1.5 mb-6">
+      {/* Home */}
+      <Link
+        to="/home"
+        className="flex items-center gap-1.5 font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 hover:text-white/50 transition-colors"
+      >
+        <Home className="h-3 w-3 shrink-0" />
+        <span>Home</span>
+      </Link>
+
+      {items.map((item, i) => (
+        <div key={i} className="flex items-center gap-1.5">
+          <ChevronRight className="h-3 w-3 text-white/10 shrink-0" />
+          {item.href ? (
+            <Link
+              to={item.href}
+              className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 hover:text-white/50 transition-colors"
+            >
+              {item.label}
             </Link>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        
-        {items.map((item, index) => (
-          <div key={index} className="flex items-center gap-1.5">
-            <BreadcrumbSeparator>
-              <ChevronRight className="h-4 w-4" />
-            </BreadcrumbSeparator>
-            <BreadcrumbItem>
-              {item.href ? (
-                <BreadcrumbLink asChild>
-                  <Link to={item.href}>{item.label}</Link>
-                </BreadcrumbLink>
-              ) : (
-                <BreadcrumbPage>{item.label}</BreadcrumbPage>
-              )}
-            </BreadcrumbItem>
-          </div>
-        ))}
-      </BreadcrumbList>
-    </Breadcrumb>
+          ) : (
+            <span className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/40">
+              {item.label}
+            </span>
+          )}
+        </div>
+      ))}
+    </nav>
   );
 };

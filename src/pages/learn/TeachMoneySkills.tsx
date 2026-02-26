@@ -1,9 +1,10 @@
 import { SEO } from "@/components/SEO";
 import { ArticleLayout } from "@/components/ArticleLayout";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calculator, Users, BookOpen, MessageCircle } from "lucide-react";
+import { Calculator, Users, BookOpen, MessageCircle, ArrowRight } from "lucide-react";
+
+const ACCENT = "#A78BFA"; // Thrive — violet
+const GREEN  = "#34D399";
 
 export default function TeachMoneySkills() {
   return (
@@ -14,7 +15,7 @@ export default function TeachMoneySkills() {
         keywords="teach kids about money, financial education, money skills for children, financial literacy teaching, sharing money knowledge, money conversations"
         canonicalUrl="/learn/teach-money-skills"
       />
-      
+
       <ArticleLayout
         title="How to Teach Money Skills to Others"
         description="Share and multiply your impact"
@@ -22,120 +23,141 @@ export default function TeachMoneySkills() {
         category="Thrive"
         categoryColor="bg-violet-500/10 text-violet-700 dark:text-violet-300"
       >
+
         <h2>Why Teaching Matters</h2>
         <p>
-          Financial literacy is one of the most valuable gifts you can give. Schools rarely 
-          teach it properly, yet money touches every aspect of life. By sharing what you've 
+          Financial literacy is one of the most valuable gifts you can give. Schools rarely
+          teach it properly, yet money touches every aspect of life. By sharing what you've
           learned, you create ripples that extend far beyond yourself.
         </p>
 
         <h2>Teaching Children About Money</h2>
 
-        <h3>Ages 3-5: Basic Concepts</h3>
-        <ul>
-          <li>Introduce the concept that things cost money</li>
-          <li>Play shop with toy money</li>
-          <li>Let them see you pay for things (cash helps visualize)</li>
-          <li>Introduce waiting—"we're saving up for that"</li>
-        </ul>
-
-        <h3>Ages 6-10: Earning and Saving</h3>
-        
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <BookOpen className="h-5 w-5 text-primary mt-0.5" />
-            <h4 className="font-semibold">The Three Jars System</h4>
-          </div>
-          <p className="text-sm text-muted-foreground mb-4">
-            Give pocket money and have children split it into three jars:
-          </p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>💰 <strong>Spend:</strong> For small treats and wants</li>
-            <li>🏦 <strong>Save:</strong> For bigger goals (toy, game)</li>
-            <li>❤️ <strong>Give:</strong> For charity or gifts</li>
-          </ul>
+        {/* ── Four age stages — left bar stacked ── */}
+        <div className="not-prose border border-white/8 divide-y divide-white/6 my-8">
+          {[
+            {
+              stage: "Ages 3–5",   badge: "Basic Concepts",
+              items: ["Introduce the concept that things cost money", "Play shop with toy money", "Let them see you pay for things (cash helps visualize)", "Introduce waiting — 'we're saving up for that'"],
+            },
+            {
+              stage: "Ages 6–10",  badge: "Earning & Saving",
+              items: ["Connect money to effort — earn through chores", "Let them make small buying decisions (and mistakes)", "Open a children's savings account", "Match their savings to encourage the habit"],
+            },
+            {
+              stage: "Ages 11–15", badge: "Real-World Skills",
+              items: ["Explain needs vs wants in household context", "Show them how household bills work", "Introduce compound interest with simple examples", "Let them manage a budget for school supplies"],
+            },
+            {
+              stage: "Ages 16–18", badge: "Independence",
+              items: ["Help them open a current account and debit card", "Explain credit, debt, and credit scores", "Discuss student loans and their reality", "Introduce investing concepts — consider a Junior ISA"],
+            },
+          ].map(({ stage, badge, items }) => (
+            <div key={stage} className="flex gap-0 bg-black hover:bg-white/[0.015] transition-colors">
+              <div className="w-1 shrink-0" style={{ background: ACCENT }} />
+              <div className="flex-1 px-6 py-5">
+                <div className="flex items-center gap-3 mb-3">
+                  <p className="font-display text-xl leading-none" style={{ color: ACCENT }}>{stage}</p>
+                  <p className="text-[9px] font-heading uppercase tracking-widest text-white/25">{badge}</p>
+                </div>
+                <ul className="space-y-1.5">
+                  {items.map(i => (
+                    <li key={i} className="flex items-start gap-2 text-xs text-zinc-500 font-sans">
+                      <span style={{ color: ACCENT }} className="shrink-0 mt-px">→</span> {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
 
-        <ul>
-          <li>Connect money to effort—earn through chores</li>
-          <li>Let them make small buying decisions (and mistakes)</li>
-          <li>Open a children's savings account</li>
-          <li>Match their savings to encourage the habit</li>
-        </ul>
-
-        <h3>Ages 11-15: Real-World Skills</h3>
-        <ul>
-          <li>Explain needs vs wants in household context</li>
-          <li>Show them how household bills work</li>
-          <li>Introduce compound interest with simple examples</li>
-          <li>Discuss advertising and how it manipulates</li>
-          <li>Let them manage a budget for school supplies or activities</li>
-        </ul>
-
-        <h3>Ages 16-18: Preparing for Independence</h3>
-        <ul>
-          <li>Help them open a current account and debit card</li>
-          <li>Explain credit, debt, and credit scores</li>
-          <li>Discuss student loans and their reality</li>
-          <li>Introduce investing concepts (you could open a Junior ISA)</li>
-          <li>Teach basic budgeting with their own income</li>
-        </ul>
+        {/* ── Three jars — flush box ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/6">
+            <BookOpen className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>The Three Jars System (Ages 6–10)</p>
+          </div>
+          <p className="text-zinc-500 text-sm mb-5">Give pocket money and have children split it into three jars:</p>
+          <div className="divide-y divide-white/6">
+            {[
+              { emoji: "💰", label: "Spend", note: "For small treats and wants — immediate gratification managed." },
+              { emoji: "🏦", label: "Save",  note: "For bigger goals like a toy or game — patience and planning." },
+              { emoji: "❤️", label: "Give",  note: "For charity or gifts — empathy and generosity." },
+            ].map(({ emoji, label, note }) => (
+              <div key={label} className="flex items-center gap-5 py-3.5">
+                <span className="text-xl shrink-0">{emoji}</span>
+                <div className="w-16 shrink-0">
+                  <p className="font-heading text-[10px] uppercase tracking-widest" style={{ color: ACCENT }}>{label}</p>
+                </div>
+                <p className="text-zinc-500 text-sm font-sans">{note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
 
         <h2>Teaching Partners and Spouses</h2>
 
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <MessageCircle className="h-5 w-5 text-primary mt-0.5" />
-            <h4 className="font-semibold">Starting Money Conversations</h4>
+        {/* ── Money conversations — left border ── */}
+        <div className="not-prose border-l-2 pl-6 py-1 my-8" style={{ borderColor: ACCENT }}>
+          <div className="flex items-center gap-3 mb-4">
+            <MessageCircle className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Starting Money Conversations</p>
           </div>
-          <p className="text-sm text-muted-foreground mb-4">
-            Money is a top cause of relationship conflict. Approach it as a team:
-          </p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>• Schedule regular "money dates" (monthly reviews)</li>
-            <li>• Share openly about your money history and beliefs</li>
-            <li>• Focus on shared goals, not blame</li>
-            <li>• Respect different money personalities</li>
-            <li>• Make decisions together on major purchases</li>
+          <p className="text-zinc-500 text-sm mb-4">Money is a top cause of relationship conflict. Approach it as a team:</p>
+          <ul className="space-y-2">
+            {[
+              "Schedule regular 'money dates' (monthly reviews)",
+              "Share openly about your money history and beliefs",
+              "Focus on shared goals, not blame",
+              "Respect different money personalities",
+              "Make decisions together on major purchases",
+            ].map(i => (
+              <li key={i} className="flex items-start gap-2 text-sm font-sans text-zinc-500">
+                <span style={{ color: ACCENT }} className="shrink-0 mt-px">→</span> {i}
+              </li>
+            ))}
           </ul>
         </div>
 
         <h3>When One Partner Knows More</h3>
         <ul>
-          <li>Teach without condescending—share the journey, not lectures</li>
+          <li>Teach without condescending — share the journey, not lectures</li>
           <li>Start with their interests (saving for a holiday, home)</li>
           <li>Involve them in decisions, even if you lead</li>
           <li>Ensure both know how to manage finances if something happens to you</li>
         </ul>
 
-        <h2>Teaching Friends and Family</h2>
+        <h2>When Asked for Help</h2>
 
-        <h3>Lead by Example</h3>
-        <ul>
-          <li>Be open about your financial journey (appropriately)</li>
-          <li>Share successes without being preachy</li>
-          <li>Offer resources rather than unsolicited advice</li>
-        </ul>
-
-        <h3>When Asked for Help</h3>
-        
-        <div className="not-prose bg-violet-500/10 border border-violet-500/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <Users className="h-5 w-5 text-violet-600 mt-0.5" />
-            <h4 className="font-semibold text-violet-700 dark:text-violet-300">Helping Others Start</h4>
+        {/* ── Helping others start — flush box numbered ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/6">
+            <Users className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Helping Others Start</p>
           </div>
-          <ol className="space-y-2 text-sm text-muted-foreground">
-            <li>1. <strong>Listen first:</strong> Understand their situation and goals</li>
-            <li>2. <strong>Start small:</strong> One action at a time, not a complete overhaul</li>
-            <li>3. <strong>Focus on wins:</strong> Quick wins build confidence</li>
-            <li>4. <strong>Recommend resources:</strong> Books, podcasts, this site!</li>
-            <li>5. <strong>Be patient:</strong> Change takes time</li>
-          </ol>
+          <div className="divide-y divide-white/6">
+            {[
+              { label: "Listen first",        note: "Understand their situation and goals before offering any advice." },
+              { label: "Start small",         note: "One action at a time, not a complete financial overhaul." },
+              { label: "Focus on wins",       note: "Quick wins build confidence and create momentum." },
+              { label: "Recommend resources", note: "Books, podcasts, this site — not just your opinion." },
+              { label: "Be patient",          note: "Change takes time. Long-held habits don't shift overnight." },
+            ].map(({ label, note }, i) => (
+              <div key={label} className="flex items-start gap-5 py-3.5">
+                <span className="font-display text-2xl leading-none shrink-0 tabular-nums" style={{ color: ACCENT, opacity: 0.25 }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pt-0.5">
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/55 mb-0.5">{label}</p>
+                  <p className="text-zinc-500 text-sm font-sans">{note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <h2>Teaching in Your Community</h2>
-
-        <h3>Ways to Give Back</h3>
         <ul>
           <li><strong>Volunteer:</strong> With financial literacy charities (MyBnk, Money Charity)</li>
           <li><strong>Workplace:</strong> Offer to run a lunch-and-learn on pensions or budgeting</li>
@@ -146,33 +168,21 @@ export default function TeachMoneySkills() {
 
         <h2>Recommended Resources to Share</h2>
 
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <h4 className="font-semibold mb-4">For Different Audiences</h4>
-          <div className="space-y-4 text-sm">
-            <div>
-              <p className="font-medium">For Children</p>
-              <p className="text-muted-foreground">
-                "Money Monsters" by John Donvan, GoHenry app, Rooster Money
-              </p>
-            </div>
-            <div>
-              <p className="font-medium">For Beginners</p>
-              <p className="text-muted-foreground">
-                "The Richest Man in Babylon," MoneySavingExpert, this Financial Journey
-              </p>
-            </div>
-            <div>
-              <p className="font-medium">For Intermediate</p>
-              <p className="text-muted-foreground">
-                "I Will Teach You to Be Rich," "Smarter Investing" by Tim Hale, Monevator blog
-              </p>
-            </div>
-            <div>
-              <p className="font-medium">For Advanced</p>
-              <p className="text-muted-foreground">
-                "The Psychology of Money," "A Random Walk Down Wall Street"
-              </p>
-            </div>
+        {/* ── Resources by audience — flush box ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20 pb-4 mb-4 border-b border-white/6">For Different Audiences</p>
+          <div className="divide-y divide-white/6">
+            {[
+              { audience: "For Children",    recs: "Money Monsters (John Donvan), GoHenry app, Rooster Money" },
+              { audience: "For Beginners",   recs: "The Richest Man in Babylon, MoneySavingExpert, this Financial Journey" },
+              { audience: "For Intermediate",recs: "I Will Teach You to Be Rich, Smarter Investing (Tim Hale), Monevator blog" },
+              { audience: "For Advanced",    recs: "The Psychology of Money, A Random Walk Down Wall Street" },
+            ].map(({ audience, recs }) => (
+              <div key={audience} className="py-3.5 flex items-start gap-5">
+                <p className="font-heading text-[9px] uppercase tracking-widest text-white/25 shrink-0 w-28">{audience}</p>
+                <p className="text-zinc-500 text-sm font-sans">{recs}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -182,13 +192,13 @@ export default function TeachMoneySkills() {
           <li><strong>Shaming:</strong> Never mock past mistakes</li>
           <li><strong>One-size-fits-all:</strong> Different people need different approaches</li>
           <li><strong>Ignoring emotions:</strong> Money is emotional, not just logical</li>
-          <li><strong>Giving up:</strong> Change happens slowly, be patient</li>
+          <li><strong>Giving up:</strong> Change happens slowly — be patient</li>
         </ul>
 
         <h2>The Ripple Effect</h2>
         <p>
-          When you teach someone about money, they'll teach others. A child who learns good 
-          money habits will pass them to their children. A colleague who learns about pensions 
+          When you teach someone about money, they'll teach others. A child who learns good
+          money habits will pass them to their children. A colleague who learns about pensions
           will share with their family. Your impact multiplies.
         </p>
 
@@ -197,45 +207,59 @@ export default function TeachMoneySkills() {
           <li>Identify one person you could help with money skills</li>
           <li>If you have children, choose one age-appropriate money lesson to start</li>
           <li>Schedule a money date with your partner if applicable</li>
-          <li>Consider volunteering with a financial literacy organization</li>
+          <li>Consider volunteering with a financial literacy organisation</li>
           <li>Share this Financial Journey with someone who might benefit</li>
         </ol>
 
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <p className="text-sm font-medium mb-2">💡 Pro Tip</p>
-          <p className="text-sm text-muted-foreground">
-            The best way to teach is to keep learning yourself. Stay curious, keep reading, 
-            and remember that you don't need to know everything—just enough to help someone 
-            take their next step.
+        {/* ── Pull-quote ── */}
+        <div className="not-prose border-y border-white/10 py-8 my-10">
+          <p className="font-display text-3xl md:text-4xl text-white/70 leading-tight tracking-wide">
+            "The best way to teach is to keep learning yourself. You don't need to know everything — just enough to help someone take their next step."
+          </p>
+          <p className="text-[10px] font-heading uppercase tracking-[0.2em] mt-4" style={{ color: `${ACCENT}70` }}>
+            Stay curious. Share freely. Watch the ripple spread.
           </p>
         </div>
 
-        <div className="not-prose bg-gradient-to-r from-emerald-500/10 to-violet-500/10 border border-emerald-500/20 rounded-lg p-6 my-8">
-          <h3 className="text-lg font-semibold mb-2">🎉 Congratulations!</h3>
-          <p className="text-sm text-muted-foreground">
-            If you've completed this entire Financial Growth Journey, you've gained a solid 
-            foundation in personal finance. You understand budgeting, saving, debt management, 
-            investing, and wealth protection. Now go share that knowledge with others!
+        {/* ── Congratulations — editorial celebration card ── */}
+        <div className="not-prose border border-white/10 bg-white/[0.015] px-7 py-7 my-10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-[100px] opacity-[0.06] pointer-events-none"
+            style={{ background: `radial-gradient(circle, ${GREEN}, ${ACCENT})`, transform: "translate(30%, -30%)" }} />
+          <p className="font-display text-4xl uppercase tracking-widest mb-1" style={{
+            background: `linear-gradient(135deg, ${GREEN}, ${ACCENT})`,
+            WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+          }}>Congratulations</p>
+          <p className="font-heading text-[10px] uppercase tracking-[0.25em] text-white/20 mb-4">Financial Growth Journey Complete</p>
+          <p className="text-zinc-500 text-sm leading-relaxed">
+            If you've completed this entire Financial Growth Journey, you've gained a solid
+            foundation in personal finance. You understand budgeting, saving, debt management,
+            investing, and wealth protection. Now go share that knowledge with others.
           </p>
         </div>
 
-        <Card className="not-prose bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 p-6 my-8">
-          <div className="flex items-start gap-4">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <Calculator className="h-6 w-6 text-primary" />
+        {/* ── CTA card — stark ── */}
+        <div className="not-prose border border-white/10 bg-white/[0.015] p-7 my-10">
+          <div className="flex items-start gap-6">
+            <div className="shrink-0 border border-white/10 p-3" style={{ background: `${ACCENT}10` }}>
+              <Calculator className="h-5 w-5" style={{ color: ACCENT }} />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-2">Explore More Calculators</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Share our calculators with others to help them with their financial planning. 
+              <p className="font-display text-2xl uppercase tracking-widest text-white mb-2">Explore More Calculators</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-5">
+                Share our calculators with others to help them with their financial planning.
                 From budgeting to retirement, there's a tool for every step of the journey.
               </p>
-              <Link to="/home">
-                <Button>View All Calculators →</Button>
+              <Link to="/home"
+                className="group inline-flex items-center gap-3 font-heading text-[10px] uppercase tracking-[0.18em] py-3 px-5 border transition-all"
+                style={{ color: ACCENT, borderColor: `${ACCENT}50`, background: `${ACCENT}08` }}
+                onMouseEnter={e => { e.currentTarget.style.background = `${ACCENT}18`; e.currentTarget.style.borderColor = ACCENT; }}
+                onMouseLeave={e => { e.currentTarget.style.background = `${ACCENT}08`; e.currentTarget.style.borderColor = `${ACCENT}50`; }}>
+                View All Calculators <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-        </Card>
+        </div>
+
       </ArticleLayout>
     </>
   );

@@ -7,6 +7,9 @@ import Welcome from '../pages/Welcome';
 import LearnHub from '../pages/LearnHub';
 import Formulas from '../pages/Formulas';
 import NotFound from '../pages/NotFound';
+import CategoryProperty from '../pages/categories/CategoryProperty';
+import CategoryFinance from '../pages/categories/CategoryFinance';
+import CategoryEveryday from '../pages/categories/CategoryEveryday';
 
 // Finance Calculators
 import CompoundInterest from '../pages/finance/CompoundInterest';
@@ -94,7 +97,7 @@ export const routes: RouteObject[] = [
       { path: 'home', element: <Index /> },
       { path: 'learn', element: <LearnHub /> },
       { path: 'formulas', element: <Formulas /> },
-      
+
       // Finance Routes
       { path: 'finance/compound-interest', element: <CompoundInterest /> },
       { path: 'finance/mortgage', element: <MortgageCalculator /> },
@@ -118,6 +121,9 @@ export const routes: RouteObject[] = [
       { path: 'finance/weekly-mortgage', element: <WeeklyMortgageCalculator /> },
 
       // Everyday & Converter Routes
+      { path: 'categories/property', element: <CategoryProperty /> },
+      { path: 'categories/finance', element: <CategoryFinance /> },
+      { path: 'categories/everyday', element: <CategoryEveryday /> },
       { path: 'misc/age', element: <AgeCalculator /> },
       { path: 'misc/discount', element: <DiscountCalculator /> },
       { path: 'misc/percentage', element: <PercentageCalculator /> },

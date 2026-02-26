@@ -1,9 +1,10 @@
 import { SEO } from "@/components/SEO";
 import { ArticleLayout } from "@/components/ArticleLayout";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calculator, ClipboardList, AlertTriangle, TrendingDown } from "lucide-react";
+import { Calculator, ClipboardList, AlertTriangle, TrendingDown, ArrowRight } from "lucide-react";
+
+const ACCENT = "#F59E0B"; // Pay Off — amber
+const RED    = "#F87171";
 
 export default function DebtLandscape() {
   return (
@@ -14,33 +15,32 @@ export default function DebtLandscape() {
         keywords="debt inventory, debt prioritization, good debt vs bad debt, debt management UK, debt freedom, debt list, paying off debt"
         canonicalUrl="/learn/debt-landscape"
       />
-      
+
       <ArticleLayout
         title="Understanding Your Debt Landscape"
         description="List, categorise and prioritise debts"
         readTime="30 min"
         category="Pay Off"
         categoryColor="bg-amber-500/10 text-amber-700 dark:text-amber-300"
-        nextArticle={{
-          title: "Snowball vs Avalanche",
-          path: "/learn/snowball-avalanche"
-        }}
+        nextArticle={{ title: "Snowball vs Avalanche", path: "/learn/snowball-avalanche" }}
       >
+
         <h2>Why You Need a Complete Picture</h2>
         <p>
-          You can't navigate out of debt without a map. Most people have a vague sense of what 
-          they owe, but rarely know the exact totals, interest rates, and minimum payments. This 
+          You can't navigate out of debt without a map. Most people have a vague sense of what
+          they owe, but rarely know the exact totals, interest rates, and minimum payments. This
           knowledge gap keeps them stuck.
         </p>
 
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <ClipboardList className="h-5 w-5 text-primary mt-0.5" />
-            <h4 className="font-semibold">The Debt Inventory</h4>
+        {/* ── Debt inventory callout — left border ── */}
+        <div className="not-prose border-l-2 pl-6 py-1 my-8" style={{ borderColor: ACCENT }}>
+          <div className="flex items-center gap-3 mb-3">
+            <ClipboardList className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>The Debt Inventory</p>
           </div>
-          <p className="text-sm text-muted-foreground">
-            Today, you'll create a complete inventory of every debt you have. This might feel 
-            uncomfortable, but knowledge is power. You can't solve a problem you haven't fully 
+          <p className="text-zinc-500 text-sm leading-relaxed">
+            Today, you'll create a complete inventory of every debt you have. This might feel
+            uncomfortable, but knowledge is power. You can't solve a problem you haven't fully
             acknowledged.
           </p>
         </div>
@@ -48,57 +48,50 @@ export default function DebtLandscape() {
         <h2>Gathering Your Information</h2>
         <p>For each debt, you need to know:</p>
         <ul>
-          <li><strong>Creditor name</strong> - Who do you owe?</li>
-          <li><strong>Current balance</strong> - How much do you owe?</li>
-          <li><strong>Interest rate (APR)</strong> - What does it cost you?</li>
-          <li><strong>Minimum payment</strong> - What must you pay monthly?</li>
-          <li><strong>Payment due date</strong> - When is it due?</li>
-          <li><strong>Type of debt</strong> - Credit card, loan, overdraft, etc.</li>
+          <li><strong>Creditor name</strong> — Who do you owe?</li>
+          <li><strong>Current balance</strong> — How much do you owe?</li>
+          <li><strong>Interest rate (APR)</strong> — What does it cost you?</li>
+          <li><strong>Minimum payment</strong> — What must you pay monthly?</li>
+          <li><strong>Payment due date</strong> — When is it due?</li>
+          <li><strong>Type of debt</strong> — Credit card, loan, overdraft, etc.</li>
         </ul>
 
         <h2>Common Debt Types</h2>
 
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <h4 className="font-semibold mb-4">Debt Inventory Template</h4>
+        {/* ── Debt inventory table — editorial ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20 pb-4 mb-4 border-b border-white/6">
+            Debt Inventory Template
+          </p>
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-sm font-sans">
               <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-2 pr-4">Creditor</th>
-                  <th className="text-right py-2 px-4">Balance</th>
-                  <th className="text-right py-2 px-4">APR</th>
-                  <th className="text-right py-2 px-4">Min Payment</th>
-                  <th className="text-right py-2 pl-4">Due Date</th>
+                <tr className="border-b border-white/8">
+                  {["Creditor", "Balance", "APR", "Min Payment", "Due Date"].map((h, i) => (
+                    <th key={h} className={`pb-3 text-[9px] font-heading uppercase tracking-widest text-white/20 ${i === 0 ? "text-left" : "text-right"}`}>{h}</th>
+                  ))}
                 </tr>
               </thead>
-              <tbody className="text-muted-foreground">
-                <tr className="border-b border-border/50">
-                  <td className="py-2 pr-4">Credit Card A</td>
-                  <td className="text-right py-2 px-4">£3,500</td>
-                  <td className="text-right py-2 px-4">22.9%</td>
-                  <td className="text-right py-2 px-4">£85</td>
-                  <td className="text-right py-2 pl-4">15th</td>
-                </tr>
-                <tr className="border-b border-border/50">
-                  <td className="py-2 pr-4">Overdraft</td>
-                  <td className="text-right py-2 px-4">£1,200</td>
-                  <td className="text-right py-2 px-4">39.9%</td>
-                  <td className="text-right py-2 px-4">Interest only</td>
-                  <td className="text-right py-2 pl-4">Ongoing</td>
-                </tr>
-                <tr className="border-b border-border/50">
-                  <td className="py-2 pr-4">Car Loan</td>
-                  <td className="text-right py-2 px-4">£8,000</td>
-                  <td className="text-right py-2 px-4">7.9%</td>
-                  <td className="text-right py-2 px-4">£220</td>
-                  <td className="text-right py-2 pl-4">1st</td>
-                </tr>
-                <tr>
-                  <td className="py-2 pr-4 font-medium">TOTAL</td>
-                  <td className="text-right py-2 px-4 font-medium">£12,700</td>
-                  <td className="text-right py-2 px-4">—</td>
-                  <td className="text-right py-2 px-4 font-medium">£305+</td>
-                  <td className="text-right py-2 pl-4">—</td>
+              <tbody className="divide-y divide-white/5">
+                {[
+                  { creditor: "Credit Card A", balance: "£3,500", apr: "22.9%", min: "£85",       due: "15th"    },
+                  { creditor: "Overdraft",      balance: "£1,200", apr: "39.9%", min: "Int. only", due: "Ongoing" },
+                  { creditor: "Car Loan",       balance: "£8,000", apr: "7.9%",  min: "£220",      due: "1st"     },
+                ].map(({ creditor, balance, apr, min, due }) => (
+                  <tr key={creditor}>
+                    <td className="py-3.5 text-zinc-400">{creditor}</td>
+                    <td className="py-3.5 text-right font-heading text-sm" style={{ color: ACCENT }}>{balance}</td>
+                    <td className="py-3.5 text-right text-zinc-500 text-xs">{apr}</td>
+                    <td className="py-3.5 text-right text-zinc-500">{min}</td>
+                    <td className="py-3.5 text-right text-zinc-600 text-xs">{due}</td>
+                  </tr>
+                ))}
+                <tr className="border-t border-white/10">
+                  <td className="py-3.5 font-heading text-[10px] uppercase tracking-widest text-white/40">Total</td>
+                  <td className="py-3.5 text-right font-heading text-sm text-white/70">£12,700</td>
+                  <td className="py-3.5 text-right text-zinc-700">—</td>
+                  <td className="py-3.5 text-right font-heading text-sm text-white/70">£305+</td>
+                  <td className="py-3.5 text-right text-zinc-700">—</td>
                 </tr>
               </tbody>
             </table>
@@ -123,49 +116,66 @@ export default function DebtLandscape() {
         </ul>
 
         <h3>"Toxic" Debt (Prioritize Elimination)</h3>
-        <div className="not-prose bg-destructive/10 border border-destructive/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="h-5 w-5 text-destructive mt-0.5" />
-            <div>
-              <p className="font-medium text-destructive mb-2">High-Priority Debt</p>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• <strong>Overdrafts:</strong> Often 35-40% APR, disguised as convenience</li>
-                <li>• <strong>Store cards:</strong> Typically 25-30% APR</li>
-                <li>• <strong>Payday loans:</strong> Can exceed 1,000% APR</li>
-                <li>• <strong>Catalogue credit:</strong> High rates, minimum payments trap</li>
-                <li>• <strong>Credit cards (carrying balance):</strong> 18-30% typical</li>
-              </ul>
+
+        {/* ── Toxic debt — red left border ── */}
+        <div className="not-prose border-l-2 pl-5 py-1 my-6 flex items-start gap-4" style={{ borderColor: RED }}>
+          <AlertTriangle className="h-4 w-4 shrink-0 mt-1" style={{ color: RED }} />
+          <div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] mb-3" style={{ color: RED }}>High-Priority Debt</p>
+            <div className="space-y-2">
+              {[
+                ["Overdrafts",                    "Often 35–40% APR, disguised as convenience"],
+                ["Store cards",                   "Typically 25–30% APR"],
+                ["Payday loans",                  "Can exceed 1,000% APR"],
+                ["Catalogue credit",              "High rates, minimum payments trap"],
+                ["Credit cards (carrying balance)","18–30% typical"],
+              ].map(([type, note]) => (
+                <p key={type} className="text-sm font-sans text-zinc-500">
+                  <strong className="text-zinc-300">{type}:</strong> {note}
+                </p>
+              ))}
             </div>
           </div>
         </div>
 
         <h2>The True Cost of Minimum Payments</h2>
-        <p>
-          Minimum payments are designed to keep you in debt. Credit card companies love them.
-        </p>
+        <p>Minimum payments are designed to keep you in debt. Credit card companies love them.</p>
 
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <TrendingDown className="h-5 w-5 text-destructive mt-0.5" />
-            <h4 className="font-semibold">Example: £3,000 Credit Card at 22% APR</h4>
-          </div>
-          <div className="space-y-2 text-sm text-muted-foreground">
-            <p><strong>Minimum payments only (2% or £5):</strong></p>
-            <ul className="space-y-1">
-              <li>• Time to pay off: 27 years</li>
-              <li>• Total interest paid: £4,400</li>
-              <li>• Total repaid: £7,400</li>
-            </ul>
-            <p className="mt-4"><strong>Fixed £100/month payments:</strong></p>
-            <ul className="space-y-1">
-              <li>• Time to pay off: 3 years</li>
-              <li>• Total interest paid: £600</li>
-              <li>• Total repaid: £3,600</li>
-            </ul>
-            <p className="mt-4 font-medium text-foreground">
-              Difference: £3,800 saved, 24 years faster
+        {/* ── Min payment comparison — flush two-col ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/6">
+            <TrendingDown className="h-4 w-4 shrink-0" style={{ color: RED }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">
+              Example: £3,000 Credit Card at 22% APR
             </p>
           </div>
+          <div className="grid md:grid-cols-2 gap-px bg-white/8">
+            <div className="bg-black px-5 py-4">
+              <p className="font-heading text-[10px] uppercase tracking-widest text-white/30 mb-3">Minimum Payments Only</p>
+              <div className="space-y-2">
+                {[["Time to pay off", "27 years"], ["Total interest", "£4,400"], ["Total repaid", "£7,400"]].map(([k, v]) => (
+                  <div key={k} className="flex justify-between">
+                    <span className="text-zinc-600 text-xs font-sans">{k}</span>
+                    <span className="font-heading text-xs" style={{ color: RED }}>{v}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-black px-5 py-4">
+              <p className="font-heading text-[10px] uppercase tracking-widest text-white/30 mb-3">Fixed £100/month</p>
+              <div className="space-y-2">
+                {[["Time to pay off", "3 years"], ["Total interest", "£600"], ["Total repaid", "£3,600"]].map(([k, v]) => (
+                  <div key={k} className="flex justify-between">
+                    <span className="text-zinc-600 text-xs font-sans">{k}</span>
+                    <span className="font-heading text-xs" style={{ color: ACCENT }}>{v}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <p className="font-heading text-xs uppercase tracking-widest mt-4 pt-4 border-t border-white/6" style={{ color: ACCENT }}>
+            Difference: £3,800 saved — 24 years faster
+          </p>
         </div>
 
         <h2>Prioritization Frameworks</h2>
@@ -179,8 +189,8 @@ export default function DebtLandscape() {
 
         <h3>By Emotional Weight</h3>
         <p>
-          Some debts feel worse than others (money owed to family, payday loans with shame 
-          attached). Consider tackling these for mental freedom.
+          Some debts feel worse than others (money owed to family, payday loans with shame
+          attached). Consider tackling these first for mental freedom.
         </p>
 
         <h2>Quick Wins Before Deep Strategy</h2>
@@ -188,7 +198,7 @@ export default function DebtLandscape() {
           <li><strong>Balance transfer:</strong> Move high-rate credit cards to 0% offers</li>
           <li><strong>Consolidation:</strong> Combine multiple debts into one lower-rate loan</li>
           <li><strong>Overdraft switch:</strong> Move to a bank offering arranged overdraft at lower rates</li>
-          <li><strong>Negotiate:</strong> Call creditors—they sometimes reduce rates or offer hardship plans</li>
+          <li><strong>Negotiate:</strong> Call creditors — they sometimes reduce rates or offer hardship plans</li>
         </ol>
 
         <h2>Action Steps</h2>
@@ -201,31 +211,39 @@ export default function DebtLandscape() {
           <li>Read the next article on Snowball vs Avalanche strategies</li>
         </ol>
 
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <p className="text-sm font-medium mb-2">💡 Pro Tip</p>
-          <p className="text-sm text-muted-foreground">
-            Update your debt inventory monthly. Watching balances decrease is incredibly 
-            motivating, and it keeps you connected to your progress.
+        {/* ── Pull-quote ── */}
+        <div className="not-prose border-y border-white/10 py-8 my-10">
+          <p className="font-display text-3xl md:text-4xl text-white/70 leading-tight tracking-wide">
+            "Update your debt inventory monthly. Watching balances decrease is incredibly motivating."
+          </p>
+          <p className="text-[10px] font-heading uppercase tracking-[0.2em] mt-4" style={{ color: `${ACCENT}70` }}>
+            Stay connected to your progress
           </p>
         </div>
 
-        <Card className="not-prose bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 p-6 my-8">
-          <div className="flex items-start gap-4">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <Calculator className="h-6 w-6 text-primary" />
+        {/* ── CTA card — stark ── */}
+        <div className="not-prose border border-white/10 bg-white/[0.015] p-7 my-10">
+          <div className="flex items-start gap-6">
+            <div className="shrink-0 border border-white/10 p-3" style={{ background: `${ACCENT}10` }}>
+              <Calculator className="h-5 w-5" style={{ color: ACCENT }} />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-2">Put It Into Practice</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Use our Credit Card Payoff Calculator to see exactly how long it will take to 
+              <p className="font-display text-2xl uppercase tracking-widest text-white mb-2">Put It Into Practice</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-5">
+                Use our Credit Card Payoff Calculator to see exactly how long it will take to
                 become debt-free and how much you'll pay in interest.
               </p>
-              <Link to="/finance/credit-card-payoff">
-                <Button>Try Credit Card Payoff Calculator →</Button>
+              <Link to="/finance/credit-card-payoff"
+                className="group inline-flex items-center gap-3 font-heading text-[10px] uppercase tracking-[0.18em] py-3 px-5 border transition-all"
+                style={{ color: ACCENT, borderColor: `${ACCENT}50`, background: `${ACCENT}08` }}
+                onMouseEnter={e => { e.currentTarget.style.background = `${ACCENT}18`; e.currentTarget.style.borderColor = ACCENT; }}
+                onMouseLeave={e => { e.currentTarget.style.background = `${ACCENT}08`; e.currentTarget.style.borderColor = `${ACCENT}50`; }}>
+                Try Credit Card Payoff Calculator <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-        </Card>
+        </div>
+
       </ArticleLayout>
     </>
   );

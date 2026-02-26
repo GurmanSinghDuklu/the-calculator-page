@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { NavigationMenu } from "@/components/NavigationMenu";
 import { Logo } from "@/components/Logo";
 
@@ -13,42 +12,35 @@ interface CalculatorLayoutProps {
 
 export const CalculatorLayout = ({ children, title, description }: CalculatorLayoutProps) => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/50 bg-background/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Logo size="sm" linkTo="/home" />
-            <div className="flex items-center gap-4">
-              <Link to="/home">
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  className="gap-2 text-muted-foreground hover:text-foreground"
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                  <span className="hidden sm:inline">Back</span>
-                </Button>
-              </Link>
-              <NavigationMenu />
-            </div>
+    <div className="min-h-screen bg-black text-white font-sans">
+
+      {/* ── Sticky header ── */}
+      <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/8">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Logo size="sm" linkTo="/home" />
+          <div className="flex items-center gap-4">
+            <Link to="/home"
+              className="flex items-center gap-2 text-white/25 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden sm:inline">Back</span>
+            </Link>
+            <NavigationMenu />
           </div>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto px-6 py-16 max-w-4xl">
-        <div className="mb-10">
-          <h1 className="font-serif text-4xl md:text-5xl font-normal mb-4 text-foreground tracking-tight">
+      {/* ── Main content ── */}
+      <main className="max-w-4xl mx-auto px-6 py-16">
+        <div className="mb-12 border-b border-white/8 pb-10">
+          <h1 className="font-display text-5xl md:text-6xl leading-[0.9] tracking-tight text-white mb-4">
             {title}
           </h1>
-          <p className="text-lg text-muted-foreground">{description}</p>
+          <p className="text-zinc-500 text-lg font-sans leading-relaxed">{description}</p>
         </div>
 
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       </main>
+
     </div>
   );
 };

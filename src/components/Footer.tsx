@@ -1,160 +1,180 @@
 import { Link } from "react-router-dom";
-import { Mail, Twitter, Linkedin, Facebook, ShieldCheck, Calculator } from "lucide-react";
+import { Mail, Twitter, Linkedin, ShieldCheck, Calculator } from "lucide-react";
 import Logo from "./Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted/30 border-t border-border mt-16">
-      <div className="container mx-auto px-4 py-12">
-        
-        {/* --- SEO METHODOLOGY SECTION --- */}
-        <div className="mb-12 border-b border-border pb-12">
-          <div className="max-w-4xl">
-            <h3 className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-              <Calculator className="h-5 w-5 text-primary" />
-              How Our Calculators Work
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              At <strong>The Calculator Page</strong>, we bridge the gap between complex financial mathematics and everyday usability. 
-              Our suite of tools is engineered using industry-standard models and verified against real-world financial benchmarks 
-              to ensure precision.
+    <footer className="bg-black border-t border-white/8 mt-16">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+
+        {/* ── How Our Calculators Work ── */}
+        <div className="mb-14 pb-14 border-b border-white/8">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-4">
+              <Calculator className="h-4 w-4 text-white/20 shrink-0" />
+              <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">How Our Calculators Work</p>
+            </div>
+            <p className="text-zinc-600 text-sm leading-relaxed mb-8">
+              At <strong className="text-zinc-400">The Calculator Page</strong>, we bridge the gap between complex financial
+              mathematics and everyday usability. Our tools use industry-standard models verified against real-world
+              financial benchmarks to ensure precision.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex gap-4 p-4 rounded-xl bg-background/50 border border-border/50">
-                <div className="mt-1">
-                  <ShieldCheck className="h-5 w-5 text-primary" />
+            <div className="grid md:grid-cols-2 gap-px bg-white/8 border border-white/8">
+              <div className="bg-black px-5 py-5">
+                <div className="flex items-center gap-3 mb-2">
+                  <ShieldCheck className="h-4 w-4 text-white/20 shrink-0" />
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/40">Privacy-First Architecture</p>
                 </div>
-                <div>
-                  <h4 className="text-sm font-semibold mb-1">Privacy-First Architecture</h4>
-                  <p className="text-xs text-muted-foreground">
-                    Your financial data never touches our servers. All processing happens <strong>client-side</strong> 
-                    in your browser, ensuring 100% data sovereignty.
-                  </p>
-                </div>
+                <p className="text-zinc-600 text-xs font-sans leading-relaxed">
+                  Your financial data never touches our servers. All processing happens{" "}
+                  <strong className="text-zinc-500">client-side</strong> in your browser, ensuring 100% data sovereignty.
+                </p>
               </div>
-              <div className="flex gap-4 p-4 rounded-xl bg-background/50 border border-border/50">
-                <div className="mt-1">
-                  <Calculator className="h-5 w-5 text-primary" />
+              <div className="bg-black px-5 py-5">
+                <div className="flex items-center gap-3 mb-2">
+                  <Calculator className="h-4 w-4 text-white/20 shrink-0" />
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/40">Mathematical Transparency</p>
                 </div>
-                <div>
-                  <h4 className="text-sm font-semibold mb-1">Mathematical Transparency</h4>
-                  <p className="text-xs text-muted-foreground">
-                    We believe in "White Box" math. Our formulas are transparently explained on every page, 
-                    helping you understand the <em>why</em> behind the numbers.
-                  </p>
-                </div>
+                <p className="text-zinc-600 text-xs font-sans leading-relaxed">
+                  We believe in "White Box" math. Our formulas are transparently explained on every page,
+                  helping you understand the <em>why</em> behind the numbers.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* --- MAIN NAVIGATION GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          
-          {/* Column 1: Categories */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground text-lg">Categories</h3>
-            <div className="space-y-3">
+        {/* ── Main nav grid ── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+
+          {/* Categories */}
+          <div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">Categories</p>
+            <div className="space-y-5">
               <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Finance</h4>
-                <ul className="space-y-1">
-                  <li><Link to="/finance/compound-interest" className="text-sm text-muted-foreground hover:text-primary transition-colors">Compound Interest</Link></li>
-                  <li><Link to="/finance/mortgage" className="text-sm text-muted-foreground hover:text-primary transition-colors">Mortgage</Link></li>
-                  <li><Link to="/finance/loan" className="text-sm text-muted-foreground hover:text-primary transition-colors">Loan</Link></li>
-                  <li><Link to="/finance/salary" className="text-sm text-muted-foreground hover:text-primary transition-colors">Salary</Link></li>
-                  <li><Link to="/finance/retirement" className="text-sm text-muted-foreground hover:text-primary transition-colors">Retirement</Link></li>
+                <p className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 mb-3">Finance</p>
+                <ul className="space-y-2">
+                  {[
+                    ["/finance/compound-interest", "Compound Interest"],
+                    ["/finance/mortgage",           "Mortgage"],
+                    ["/finance/loan",               "Loan"],
+                    ["/finance/salary",             "Salary"],
+                    ["/finance/retirement",         "Retirement"],
+                  ].map(([to, label]) => (
+                    <li key={to}><Link to={to} className="text-zinc-500 hover:text-white transition-colors text-sm font-sans">{label}</Link></li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Everyday</h4>
-                <ul className="space-y-1">
-                  <li><Link to="/misc/percentage-of" className="text-sm text-muted-foreground hover:text-primary transition-colors">Percentage Of</Link></li>
-                  <li><Link to="/misc/percentage-change" className="text-sm text-muted-foreground hover:text-primary transition-colors">Percentage Change</Link></li>
-                  <li><Link to="/misc/discount" className="text-sm text-muted-foreground hover:text-primary transition-colors">Discount</Link></li>
-                  <li><Link to="/misc/age" className="text-sm text-muted-foreground hover:text-primary transition-colors">Age</Link></li>
+                <p className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 mb-3">Everyday</p>
+                <ul className="space-y-2">
+                  {[
+                    ["/misc/percentage-of",     "Percentage Of"],
+                    ["/misc/percentage-change", "Percentage Change"],
+                    ["/misc/discount",          "Discount"],
+                    ["/misc/age",               "Age"],
+                  ].map(([to, label]) => (
+                    <li key={to}><Link to={to} className="text-zinc-500 hover:text-white transition-colors text-sm font-sans">{label}</Link></li>
+                  ))}
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Resources */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground text-lg">Resources</h3>
-            <div className="space-y-3">
+          {/* Resources */}
+          <div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">Resources</p>
+            <div className="space-y-5">
               <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Learn Hub</h4>
-                <ul className="space-y-1">
-                  <li><Link to="/learn" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Articles</Link></li>
-                  <li><Link to="/learn/financial-journey" className="text-sm text-muted-foreground hover:text-primary transition-colors">Financial Journey</Link></li>
-                  <li><Link to="/learn/50-30-20-budget" className="text-sm text-muted-foreground hover:text-primary transition-colors">50/30/20 Budget</Link></li>
-                  <li><Link to="/learn/emergency-fund" className="text-sm text-muted-foreground hover:text-primary transition-colors">Emergency Fund</Link></li>
+                <p className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 mb-3">Learn Hub</p>
+                <ul className="space-y-2">
+                  {[
+                    ["/learn",                   "All Articles"],
+                    ["/learn/financial-journey", "Financial Journey"],
+                    ["/learn/50-30-20-budget",   "50/30/20 Budget"],
+                    ["/learn/emergency-fund",    "Emergency Fund"],
+                  ].map(([to, label]) => (
+                    <li key={to}><Link to={to} className="text-zinc-500 hover:text-white transition-colors text-sm font-sans">{label}</Link></li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Tools</h4>
-                <ul className="space-y-1">
-                  <li><Link to="/formulas" className="text-sm text-muted-foreground hover:text-primary transition-colors">Formula Directory</Link></li>
-                  <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
+                <p className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 mb-3">Tools</p>
+                <ul className="space-y-2">
+                  {[
+                    ["/formulas", "Formula Directory"],
+                    ["/blog",     "Blog"],
+                  ].map(([to, label]) => (
+                    <li key={to}><Link to={to} className="text-zinc-500 hover:text-white transition-colors text-sm font-sans">{label}</Link></li>
+                  ))}
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Column 3: Legal & About */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground text-lg">Legal & About</h3>
+          {/* Legal & About */}
+          <div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">Legal &amp; About</p>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookie Policy</Link></li>
-              <li><Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Use</Link></li>
-              <li><Link to="/disclaimer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Disclaimer</Link></li>
+              {[
+                ["/about",      "About Us"],
+                ["/privacy",    "Privacy Policy"],
+                ["/cookies",    "Cookie Policy"],
+                ["/terms",      "Terms of Use"],
+                ["/disclaimer", "Disclaimer"],
+              ].map(([to, label]) => (
+                <li key={to}><Link to={to} className="text-zinc-500 hover:text-white transition-colors text-sm font-sans">{label}</Link></li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact & Social */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground text-lg">Contact & Social</h3>
-            <div className="space-y-3">
-              <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Get in Touch</h4>
-                <a href="mailto:thecalculatorpage@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail className="h-4 w-4" />
-                  thecalculatorpage@gmail.com
+          {/* Contact */}
+          <div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-5">Contact</p>
+            <div className="space-y-5">
+              <a
+                href="mailto:thecalculatorpage@gmail.com"
+                className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-sm font-sans"
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                thecalculatorpage@gmail.com
+              </a>
+              <div className="flex gap-2">
+                <a
+                  href="https://twitter.com/thecalcpage"
+                  target="_blank" rel="noopener noreferrer"
+                  className="border border-white/8 p-2.5 text-white/25 hover:text-white hover:border-white/20 transition-all"
+                >
+                  <Twitter className="h-4 w-4" />
                 </a>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-muted-foreground mb-2 underline underline-offset-4 decoration-primary/30">Follow Us</h4>
-                <div className="flex gap-3">
-                  <a href="https://twitter.com/thecalcpage" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-background border border-border hover:bg-primary/10 hover:text-primary transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a href="https://linkedin.com/company/thecalculatorpage" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-background border border-border hover:bg-primary/10 hover:text-primary transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </div>
+                <a
+                  href="https://linkedin.com/company/thecalculatorpage"
+                  target="_blank" rel="noopener noreferrer"
+                  className="border border-white/8 p-2.5 text-white/25 hover:text-white hover:border-white/20 transition-all"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* --- BOTTOM BAR --- */}
-        <div className="border-t border-border pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <Logo size="sm" />
-              <span className="text-xs text-muted-foreground">
-                © {currentYear} The Calculator Page. All rights reserved.
-              </span>
-            </div>
-            <p className="text-[10px] md:text-xs text-muted-foreground text-center md:text-right max-w-md italic">
-              *All calculations are for informational purposes only. Results are not guaranteed and may vary based on institutional terms.
-            </p>
+        {/* ── Bottom bar ── */}
+        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="flex items-end gap-6">
+            <Logo size="sm" />
+            <span className="text-zinc-700 text-xs font-sans pb-0.5">
+              © {currentYear} The Calculator Page. All rights reserved.
+            </span>
           </div>
+          <p className="text-zinc-800 text-[10px] font-sans italic max-w-sm text-left md:text-right leading-relaxed">
+            *All calculations are for informational purposes only. Results are not guaranteed and may vary
+            based on institutional terms.
+          </p>
         </div>
+
       </div>
     </footer>
   );

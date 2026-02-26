@@ -1,9 +1,9 @@
 import { SEO } from "@/components/SEO";
 import { ArticleLayout } from "@/components/ArticleLayout";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Calculator, Shield, TrendingUp, AlertTriangle } from "lucide-react";
+import { Calculator, Shield, TrendingUp, AlertTriangle, ArrowRight } from "lucide-react";
+
+const ACCENT = "#F59E0B"; // Pay Off — amber
 
 export default function CreditScores() {
   return (
@@ -14,45 +14,42 @@ export default function CreditScores() {
         keywords="credit score UK, improve credit score, credit rating, Experian, Equifax, credit repair, borrowing tips UK, credit file"
         canonicalUrl="/learn/credit-scores"
       />
-      
+
       <ArticleLayout
         title="Credit Scores and Borrowing Wisely"
         description="Build or repair credit health"
         readTime="20 min"
         category="Pay Off"
         categoryColor="bg-amber-500/10 text-amber-700 dark:text-amber-300"
-        nextArticle={{
-          title: "What to Do Before You Invest",
-          path: "/learn/before-you-invest"
-        }}
+        nextArticle={{ title: "What to Do Before You Invest", path: "/learn/before-you-invest" }}
       >
+
         <h2>What Is a Credit Score?</h2>
         <p>
-          Your credit score is a number that represents how risky you are to lend to. Higher scores 
-          mean you're seen as more reliable, which gets you better interest rates and more lending 
-          options. Lower scores mean higher rates or rejection.
+          Your credit score is a number that represents how risky you are to lend to. Higher scores
+          mean you're seen as more reliable, which gets you better interest rates and more lending
+          options. Lower scores mean higher rates or outright rejection.
         </p>
 
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <h4 className="font-semibold mb-4">UK Credit Reference Agencies</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="p-4 bg-background rounded-lg border border-border">
-              <p className="font-medium mb-1">Experian</p>
-              <p className="text-muted-foreground">Score: 0-999</p>
-              <p className="text-xs text-muted-foreground mt-2">Free via MoneySavingExpert Credit Club</p>
-            </div>
-            <div className="p-4 bg-background rounded-lg border border-border">
-              <p className="font-medium mb-1">Equifax</p>
-              <p className="text-muted-foreground">Score: 0-1000</p>
-              <p className="text-xs text-muted-foreground mt-2">Free via ClearScore</p>
-            </div>
-            <div className="p-4 bg-background rounded-lg border border-border">
-              <p className="font-medium mb-1">TransUnion</p>
-              <p className="text-muted-foreground">Score: 0-710</p>
-              <p className="text-xs text-muted-foreground mt-2">Free via Credit Karma</p>
-            </div>
+        {/* ── Three agencies — flush grid ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20 pb-4 mb-4 border-b border-white/6">
+            UK Credit Reference Agencies
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/8">
+            {[
+              { name: "Experian",   range: "0 – 999",  via: "Free via MSE Credit Club" },
+              { name: "Equifax",    range: "0 – 1000", via: "Free via ClearScore"      },
+              { name: "TransUnion", range: "0 – 710",  via: "Free via Credit Karma"    },
+            ].map(({ name, range, via }) => (
+              <div key={name} className="bg-black px-5 py-4 hover:bg-white/[0.02] transition-colors">
+                <p className="font-heading text-[10px] uppercase tracking-widest text-white/70 mb-1">{name}</p>
+                <p className="font-display text-2xl" style={{ color: ACCENT }}>{range}</p>
+                <p className="text-zinc-600 text-xs font-sans mt-2">{via}</p>
+              </div>
+            ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-4">
+          <p className="text-zinc-700 text-xs font-sans mt-4 pt-4 border-t border-white/6">
             Different lenders use different agencies. Check all three for a complete picture.
           </p>
         </div>
@@ -77,7 +74,7 @@ export default function CreditScores() {
         <ul>
           <li>Older accounts help your score</li>
           <li>Don't close old credit cards unnecessarily</li>
-          <li>Time heals—negative marks fade after 6 years</li>
+          <li>Time heals — negative marks fade after 6 years</li>
         </ul>
 
         <h3>Credit Mix</h3>
@@ -89,44 +86,65 @@ export default function CreditScores() {
         <h3>Hard Searches</h3>
         <ul>
           <li>Each credit application leaves a "hard search" mark</li>
-          <li>Too many applications in short time looks desperate</li>
+          <li>Too many applications in a short time looks desperate</li>
           <li>Use eligibility checkers (soft searches) first</li>
         </ul>
 
         <h2>Building Credit from Scratch</h2>
-        
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
-            <h4 className="font-semibold">Steps for Credit Newbies</h4>
+
+        {/* ── Steps — left border + numbered ── */}
+        <div className="not-prose border-l-2 pl-6 py-1 my-8" style={{ borderColor: ACCENT }}>
+          <div className="flex items-center gap-3 mb-5">
+            <TrendingUp className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Steps for Credit Newbies</p>
           </div>
-          <ol className="space-y-2 text-sm text-muted-foreground">
-            <li>1. <strong>Register on the electoral roll</strong> at your current address</li>
-            <li>2. <strong>Get a credit builder card</strong> (Aqua, Vanquis, Capital One)</li>
-            <li>3. <strong>Use it for small purchases</strong> (£20-50/month)</li>
-            <li>4. <strong>Pay in full every month</strong> (set up Direct Debit)</li>
-            <li>5. <strong>Wait 3-6 months</strong> and check score improvement</li>
-            <li>6. <strong>Don't apply for more credit</strong> until score improves</li>
-          </ol>
+          <div className="space-y-0 divide-y divide-white/6">
+            {[
+              ["Register on the electoral roll",  "At your current address — this alone can add points."],
+              ["Get a credit builder card",       "Aqua, Vanquis, or Capital One are designed for this."],
+              ["Use it for small purchases",      "£20–50/month is enough to build history."],
+              ["Pay in full every month",         "Set up a Direct Debit so you never miss."],
+              ["Wait 3–6 months",                 "Then check your score — improvement should show."],
+              ["Don't apply for more credit",     "Until your score improves from the first card."],
+            ].map(([label, desc], i) => (
+              <div key={label} className="flex items-start gap-5 py-3.5">
+                <span className="font-display text-3xl leading-none shrink-0 tabular-nums" style={{ color: ACCENT, opacity: 0.25 }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="pt-0.5">
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/60 mb-0.5">{label}</p>
+                  <p className="text-zinc-500 text-sm font-sans">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <h2>Repairing Damaged Credit</h2>
 
-        <div className="not-prose bg-amber-500/10 border border-amber-500/20 rounded-lg p-6 my-6">
-          <div className="flex items-start gap-3">
-            <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5" />
-            <div>
-              <p className="font-medium text-amber-700 dark:text-amber-300 mb-2">If You Have Bad Credit</p>
-              <ol className="text-sm text-muted-foreground space-y-2">
-                <li>1. <strong>Get your free credit reports</strong> from all three agencies</li>
-                <li>2. <strong>Check for errors</strong> and dispute any mistakes</li>
-                <li>3. <strong>Ensure you're on the electoral roll</strong></li>
-                <li>4. <strong>Pay all current bills on time</strong> without fail</li>
-                <li>5. <strong>Reduce credit utilization</strong> below 30%</li>
-                <li>6. <strong>Don't apply for new credit</strong> for 6-12 months</li>
-                <li>7. <strong>Consider a credit builder card</strong> if you can get one</li>
-                <li>8. <strong>Wait</strong> - negative marks disappear after 6 years</li>
-              </ol>
+        {/* ── Repair steps — amber left border ── */}
+        <div className="not-prose border-l-2 pl-5 py-1 my-8 flex items-start gap-4" style={{ borderColor: `${ACCENT}80` }}>
+          <AlertTriangle className="h-4 w-4 shrink-0 mt-1" style={{ color: ACCENT }} />
+          <div className="flex-1">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] mb-4" style={{ color: ACCENT }}>If You Have Bad Credit</p>
+            <div className="space-y-2.5">
+              {[
+                ["Get your free credit reports",      "From all three agencies — look for errors."],
+                ["Check for errors",                  "Dispute any mistakes you find."],
+                ["Ensure you're on the electoral roll","If not, register immediately."],
+                ["Pay all current bills on time",     "Without fail, going forward."],
+                ["Reduce credit utilization",         "Get below 30% on all cards."],
+                ["Don't apply for new credit",        "For 6–12 months minimum."],
+                ["Consider a credit builder card",    "If you can get approved for one."],
+                ["Wait",                              "Negative marks disappear after 6 years."],
+              ].map(([label, desc], i) => (
+                <div key={label} className="flex items-start gap-4">
+                  <span className="font-heading text-[10px] text-white/20 shrink-0 mt-0.5 tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                  <p className="text-zinc-500 text-sm font-sans">
+                    <strong className="text-zinc-300">{label}</strong> — {desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -142,38 +160,68 @@ export default function CreditScores() {
           <li>What happens if my income drops?</li>
         </ul>
 
-        <h3>Good Reasons to Borrow</h3>
-        <ul>
-          <li>Mortgage for a home you can afford</li>
-          <li>Consolidating high-rate debt to a lower rate</li>
-          <li>Essential car for work (if public transport isn't viable)</li>
-          <li>Education that increases earning potential</li>
-        </ul>
-
-        <h3>Bad Reasons to Borrow</h3>
-        <ul>
-          <li>Holidays or experiences</li>
-          <li>Keeping up with others' lifestyles</li>
-          <li>Consumer goods that depreciate</li>
-          <li>To gamble or speculate</li>
-          <li>Because you can</li>
-        </ul>
+        {/* ── Good vs bad reasons — two-col flush grid ── */}
+        <div className="not-prose grid md:grid-cols-2 gap-px bg-white/8 border border-white/8 my-8">
+          <div className="bg-black px-5 py-5">
+            <p className="font-heading text-[10px] uppercase tracking-widest mb-4" style={{ color: ACCENT }}>Good Reasons to Borrow</p>
+            <ul className="space-y-2">
+              {[
+                "Mortgage for a home you can afford",
+                "Consolidating high-rate debt to a lower rate",
+                "Essential car for work (if transit isn't viable)",
+                "Education that increases earning potential",
+              ].map(item => (
+                <li key={item} className="flex items-start gap-2 text-xs text-zinc-500 font-sans">
+                  <span style={{ color: ACCENT }} className="shrink-0 mt-px">✓</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-black px-5 py-5">
+            <p className="font-heading text-[10px] uppercase tracking-widest text-red-400 mb-4">Bad Reasons to Borrow</p>
+            <ul className="space-y-2">
+              {[
+                "Holidays or experiences",
+                "Keeping up with others' lifestyles",
+                "Consumer goods that depreciate",
+                "To gamble or speculate",
+                "Because you can",
+              ].map(item => (
+                <li key={item} className="flex items-start gap-2 text-xs text-zinc-500 font-sans">
+                  <span className="text-red-500 shrink-0 mt-px">✗</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         <h2>Smart Credit Card Strategies</h2>
-        
-        <div className="not-prose bg-muted/50 p-6 rounded-lg my-6">
-          <div className="flex items-start gap-3 mb-4">
-            <Shield className="h-5 w-5 text-primary mt-0.5" />
-            <h4 className="font-semibold">Using Credit Cards Wisely</h4>
+
+        {/* ── Credit card dos/don'ts — flush box ── */}
+        <div className="not-prose border border-white/8 bg-white/[0.015] px-6 py-5 my-8">
+          <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
+            <Shield className="h-4 w-4 shrink-0" style={{ color: ACCENT }} />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em]" style={{ color: ACCENT }}>Using Credit Cards Wisely</p>
           </div>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>✓ <strong>Pay in full every month</strong> - treat it like a debit card</li>
-            <li>✓ <strong>Use for protection</strong> - Section 75 covers purchases £100-30,000</li>
-            <li>✓ <strong>Collect rewards</strong> - cashback or points (only if paying in full)</li>
-            <li>✓ <strong>Set up Direct Debit</strong> for full balance to avoid accidents</li>
-            <li>✗ <strong>Never withdraw cash</strong> - instant interest, fees apply</li>
-            <li>✗ <strong>Don't pay just minimums</strong> - unless in financial distress</li>
-          </ul>
+          <div className="space-y-2.5">
+            {[
+              { good: true,  text: "Pay in full every month",        note: "Treat it like a debit card" },
+              { good: true,  text: "Use for Section 75 protection",  note: "Covers purchases £100–£30,000" },
+              { good: true,  text: "Collect rewards",                note: "Cashback or points — only if paying in full" },
+              { good: true,  text: "Set up Direct Debit",            note: "For full balance to avoid accidents" },
+              { good: false, text: "Never withdraw cash",            note: "Instant interest + fees apply" },
+              { good: false, text: "Don't pay just minimums",        note: "Unless in genuine financial distress" },
+            ].map(({ good, text, note }) => (
+              <div key={text} className="flex items-start gap-3">
+                <span className={`shrink-0 mt-0.5 text-xs font-heading ${good ? "" : "text-red-500"}`} style={good ? { color: ACCENT } : {}}>
+                  {good ? "✓" : "✗"}
+                </span>
+                <p className="text-sm font-sans text-zinc-500">
+                  <strong className="text-zinc-300">{text}</strong> — {note}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         <h2>Action Steps</h2>
@@ -186,32 +234,39 @@ export default function CreditScores() {
           <li>Before any new credit, use eligibility checkers first</li>
         </ol>
 
-        <div className="not-prose bg-primary/5 border border-primary/20 rounded-lg p-6 my-6">
-          <p className="text-sm font-medium mb-2">💡 Pro Tip</p>
-          <p className="text-sm text-muted-foreground">
-            Your credit score matters most when you're about to borrow. If you're not planning to 
-            get a mortgage or loan soon, don't obsess over the number. Focus on good habits—the 
-            score will follow.
+        {/* ── Pull-quote ── */}
+        <div className="not-prose border-y border-white/10 py-8 my-10">
+          <p className="font-display text-3xl md:text-4xl text-white/70 leading-tight tracking-wide">
+            "Your credit score matters most when you're about to borrow. Focus on good habits — the score will follow."
+          </p>
+          <p className="text-[10px] font-heading uppercase tracking-[0.2em] mt-4" style={{ color: `${ACCENT}70` }}>
+            Don't obsess over the number
           </p>
         </div>
 
-        <Card className="not-prose bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20 p-6 my-8">
-          <div className="flex items-start gap-4">
-            <div className="bg-primary/10 p-3 rounded-lg">
-              <Calculator className="h-6 w-6 text-primary" />
+        {/* ── CTA card — stark ── */}
+        <div className="not-prose border border-white/10 bg-white/[0.015] p-7 my-10">
+          <div className="flex items-start gap-6">
+            <div className="shrink-0 border border-white/10 p-3" style={{ background: `${ACCENT}10` }}>
+              <Calculator className="h-5 w-5" style={{ color: ACCENT }} />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold mb-2">Put It Into Practice</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Use our Loan Calculator to compare the true cost of different loan offers and see 
+              <p className="font-display text-2xl uppercase tracking-widest text-white mb-2">Put It Into Practice</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-5">
+                Use our Loan Calculator to compare the true cost of different loan offers and see
                 how interest rates affect your total repayment.
               </p>
-              <Link to="/finance/loan">
-                <Button>Try Loan Calculator →</Button>
+              <Link to="/finance/loan"
+                className="group inline-flex items-center gap-3 font-heading text-[10px] uppercase tracking-[0.18em] py-3 px-5 border transition-all"
+                style={{ color: ACCENT, borderColor: `${ACCENT}50`, background: `${ACCENT}08` }}
+                onMouseEnter={e => { e.currentTarget.style.background = `${ACCENT}18`; e.currentTarget.style.borderColor = ACCENT; }}
+                onMouseLeave={e => { e.currentTarget.style.background = `${ACCENT}08`; e.currentTarget.style.borderColor = `${ACCENT}50`; }}>
+                Try Loan Calculator <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-        </Card>
+        </div>
+
       </ArticleLayout>
     </>
   );

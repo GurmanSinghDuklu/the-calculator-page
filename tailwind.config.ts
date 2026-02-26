@@ -14,20 +14,41 @@ export default {
     },
     extend: {
       fontFamily: {
+        // Updated with new design fonts
+        display: ['"Bebas Neue"', 'sans-serif'],
+        heading: ['"Oswald"', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
         mono: ['monospace'],
         bubbly: ['Fredoka', 'system-ui', 'sans-serif'],
       },
       colors: {
+        // Integrated new dark mode palette
+        dark: {
+          bg: '#1C1A1A',
+          card: '#252323',
+          border: '#333333',
+          text: '#EAEAEA',
+          muted: '#9CA3AF'
+        },
+        // Integrated new accent palette
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          blue: '#3B82F6',
+          green: '#22C55E',
+          cyan: '#06B6D4',
+          yellow: '#EAB308',
+          red: '#EF4444',
+          orange: '#F97316'
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          // FIX: Use a hex code here so Framer Motion can animate it correctly
-          DEFAULT: "#EAB308", 
+          DEFAULT: "#EAB308",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -41,10 +62,6 @@ export default {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -65,7 +82,6 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         brand: {
-          // FIX: If you animate these, use hex codes instead of hsl variables
           gold: "#EAB308",
           "gold-light": "#FEF9C3",
           "gold-muted": "rgba(234, 179, 8, 0.2)",

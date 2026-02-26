@@ -1,9 +1,49 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calculator, Shield, Zap, Users, CheckCircle2 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { NavigationMenu } from "@/components/NavigationMenu";
 import Footer from "@/components/Footer";
+
+// ─── Accent ───────────────────────────────────────────────────────────────────
+const ACCENT = "#3B82F6";
+
+const VALUES = [
+  {
+    icon: Calculator,
+    title: "Mathematical Precision",
+    body: "Every calculator is built using standardised industry formulas, verified against financial standards used by major institutions.",
+  },
+  {
+    icon: Shield,
+    title: "Privacy First",
+    body: "Your data never leaves your device. All calculations are performed locally in your browser for maximum privacy and speed.",
+  },
+  {
+    icon: Zap,
+    title: "Real-Time Results",
+    body: "Reactive state management provides instant results as you type, enabling 'what-if' scenario testing in real-time.",
+  },
+  {
+    icon: Users,
+    title: "Free For Everyone",
+    body: "No subscriptions, no paywalls, no hidden fees. Our core calculators will always be free to use for everyone.",
+  },
+];
+
+const PROCESS = [
+  {
+    label: "Formula Verification",
+    body: "Every calculator is vetted against financial standards used by major institutions like Nationwide and leading banks.",
+  },
+  {
+    label: "Client-Side Processing",
+    body: "Your data never leaves your device. Calculations are performed locally in your browser for maximum privacy and speed.",
+  },
+  {
+    label: "Real-Time Validation",
+    body: "We use reactive state management to provide instant results as you type, allowing for 'what-if' scenario testing in real-time.",
+  },
+];
 
 const About = () => {
   return (
@@ -15,129 +55,101 @@ const About = () => {
         canonicalUrl="https://thecalculatorpage.lovable.app/about"
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
         <NavigationMenu />
 
-        <main className="container mx-auto px-4 py-8 max-w-4xl">
-          <Link to="/home" className="inline-flex items-center text-muted-foreground hover:text-primary mb-6">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
+        <main className="max-w-4xl mx-auto px-6 py-12">
+
+          {/* Back link */}
+          <Link to="/home"
+            className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest mb-12">
+            <ArrowLeft className="h-3 w-3" /> Back to Home
           </Link>
 
-          <article className="prose prose-slate dark:prose-invert max-w-none">
-            <h1 className="text-4xl font-bold text-foreground mb-6">About The Calculator Page</h1>
-            
-            <p className="text-lg text-muted-foreground mb-8">
-              We believe everyone deserves access to powerful financial tools without complexity, cost, or compromise on privacy. 
-              The Calculator Page is your trusted companion for making informed financial decisions.
+          {/* ── Hero title ── */}
+          <div className="mb-16 select-none">
+            <div className="absolute w-[500px] h-[400px] rounded-full blur-[140px] opacity-[0.06] pointer-events-none -z-10"
+              style={{ background: ACCENT }} />
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span className="block text-[11vw] md:text-[82px]" style={{
+                background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+              }}>ABOUT</span>
+              <span className="block text-[8vw] md:text-[62px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                THE CALCULATOR PAGE
+              </span>
+            </h1>
+            <div className="mt-8 max-w-xl pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
+              <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
+                We believe everyone deserves access to powerful financial tools without complexity, cost, or compromise on privacy.
+                The Calculator Page is your trusted companion for making informed financial decisions.
+              </p>
+            </div>
+          </div>
+
+          {/* ── Mission ── */}
+          <section className="mb-16">
+            <p className="text-[9px] font-heading uppercase tracking-widest mb-4" style={{ color: ACCENT }}>Our Mission</p>
+            <p className="text-white/50 text-base font-sans leading-relaxed max-w-2xl">
+              To democratise financial literacy by providing free, accurate, and easy-to-use calculators that empower
+              individuals to understand and optimise their financial decisions. Whether you're planning a mortgage,
+              calculating compound interest, or simply splitting a bill, we're here to help.
+            </p>
+          </section>
+
+          {/* ── Values grid ── */}
+          <section className="mb-16">
+            <p className="text-[9px] font-heading uppercase tracking-widest mb-8" style={{ color: ACCENT }}>What We Stand For</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {VALUES.map(({ icon: Icon, title, body }) => (
+                <div key={title} className="bg-[#252323]/80 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style={{ background: `${ACCENT}15` }}>
+                    <Icon className="h-5 w-5" style={{ color: ACCENT }} />
+                  </div>
+                  <p className="font-heading text-sm uppercase tracking-widest text-white mb-2">{title}</p>
+                  <p className="text-white/35 text-sm font-sans leading-relaxed">{body}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Transparency ── */}
+          <section className="mb-16">
+            <p className="text-[9px] font-heading uppercase tracking-widest mb-4" style={{ color: ACCENT }}>Transparency in Calculation</p>
+            <p className="text-white/50 text-base font-sans leading-relaxed mb-8 max-w-2xl">
+              At The Calculator Page, we prioritise mathematical precision and financial transparency. Our tools
+              are built using standardised industry formulas — including the <span className="text-white/70">Standard Annuity Formula</span> for
+              mortgages and <span className="text-white/70">Compound Interest Algorithms</span> — to ensure accuracy down to the sixth decimal place.
             </p>
 
-            {/* Mission Section */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Our Mission</h2>
-              <p className="text-muted-foreground mb-4">
-                To democratize financial literacy by providing free, accurate, and easy-to-use calculators that empower 
-                individuals to understand and optimize their financial decisions. Whether you're planning a mortgage, 
-                calculating compound interest, or simply splitting a bill, we're here to help.
-              </p>
-            </section>
-
-            {/* Values Grid */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-foreground mb-6">What We Stand For</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                <Card className="bg-muted/30">
-                  <CardContent className="p-6">
-                    <Calculator className="h-8 w-8 text-primary mb-3" />
-                    <h3 className="font-semibold text-foreground mb-2">Mathematical Precision</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Every calculator is built using standardized industry formulas, verified against financial 
-                      standards used by major institutions.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-muted/30">
-                  <CardContent className="p-6">
-                    <Shield className="h-8 w-8 text-primary mb-3" />
-                    <h3 className="font-semibold text-foreground mb-2">Privacy First</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Your data never leaves your device. All calculations are performed locally in your browser 
-                      for maximum privacy and speed.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-muted/30">
-                  <CardContent className="p-6">
-                    <Zap className="h-8 w-8 text-primary mb-3" />
-                    <h3 className="font-semibold text-foreground mb-2">Real-Time Results</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Reactive state management provides instant results as you type, enabling "what-if" 
-                      scenario testing in real-time.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="bg-muted/30">
-                  <CardContent className="p-6">
-                    <Users className="h-8 w-8 text-primary mb-3" />
-                    <h3 className="font-semibold text-foreground mb-2">Free For Everyone</h3>
-                    <p className="text-sm text-muted-foreground">
-                      No subscriptions, no paywalls, no hidden fees. Our core calculators will always be 
-                      free to use for everyone.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </section>
-
-            {/* How It Works */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Transparency in Calculation</h2>
-              <p className="text-muted-foreground mb-4">
-                At The Calculator Page, we prioritize mathematical precision and financial transparency. Our tools 
-                are built using standardized industry formulas (such as the <strong>Standard Annuity Formula</strong> for 
-                mortgages and <strong>Compound Interest Algorithms</strong>) to ensure accuracy down to the sixth decimal place.
-              </p>
-              
-              <h3 className="text-xl font-semibold text-foreground mb-4">Our Process</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+            <p className="text-[9px] font-heading uppercase tracking-widest mb-6 text-white/30">Our Process</p>
+            <div className="space-y-4">
+              {PROCESS.map(({ label, body }) => (
+                <div key={label} className="flex items-start gap-4 bg-[#252323]/50 border border-white/10 rounded-xl p-5">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5" style={{ color: ACCENT }} />
                   <div>
-                    <span className="font-medium text-foreground">Formula Verification:</span>
-                    <span className="text-muted-foreground"> Every calculator is vetted against financial standards used by major institutions like Nationwide and leading banks.</span>
+                    <span className="font-heading text-xs uppercase tracking-widest text-white">{label}: </span>
+                    <span className="text-white/40 text-sm font-sans">{body}</span>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">Client-Side Processing:</span>
-                    <span className="text-muted-foreground"> Your data never leaves your device. Calculations are performed locally in your browser for maximum privacy and speed.</span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <span className="font-medium text-foreground">Real-Time Validation:</span>
-                    <span className="text-muted-foreground"> We use reactive state management to provide instant results as you type, allowing for "what-if" scenario testing in real-time.</span>
-                  </div>
-                </div>
-              </div>
-            </section>
+              ))}
+            </div>
+          </section>
 
-            {/* Contact */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Get in Touch</h2>
-              <p className="text-muted-foreground mb-4">
-                Have a question, suggestion, or found a bug? We'd love to hear from you.
-              </p>
-              <p className="text-muted-foreground">
-                Email us at: <a href="mailto:thecalculatorpage@gmail.com" className="text-primary hover:underline">thecalculatorpage@gmail.com</a>
-              </p>
-            </section>
-          </article>
+          {/* ── Contact ── */}
+          <section className="mb-8">
+            <p className="text-[9px] font-heading uppercase tracking-widest mb-4" style={{ color: ACCENT }}>Get in Touch</p>
+            <p className="text-white/50 text-base font-sans leading-relaxed mb-3">
+              Have a question, suggestion, or found a bug? We'd love to hear from you.
+            </p>
+            <a href="mailto:thecalculatorpage@gmail.com"
+              className="font-heading text-sm uppercase tracking-widest transition-colors hover:opacity-80"
+              style={{ color: ACCENT }}>
+              thecalculatorpage@gmail.com
+            </a>
+          </section>
+
         </main>
 
         <Footer />

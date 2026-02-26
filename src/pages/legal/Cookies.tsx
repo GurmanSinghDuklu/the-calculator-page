@@ -1,9 +1,38 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Cookie } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { NavigationMenu } from "@/components/NavigationMenu";
 import Footer from "@/components/Footer";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+const ACCENT = "#3B82F6";
+
+const labelClass = "text-[9px] font-heading uppercase tracking-widest mb-6 block";
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="mb-12">
+      <p className={labelClass} style={{ color: ACCENT }}>{title}</p>
+      {children}
+    </section>
+  );
+}
+
+function Prose({ children }: { children: React.ReactNode }) {
+  return <p className="text-white/40 text-sm font-sans leading-relaxed">{children}</p>;
+}
+
+function List({ items }: { items: { label: string; desc: string }[] }) {
+  return (
+    <ul className="space-y-3 mt-3">
+      {items.map(({ label, desc }) => (
+        <li key={label} className="flex gap-2 text-sm font-sans">
+          <span className="text-white/70 shrink-0">·</span>
+          <span><span className="text-white/70">{label}:</span> <span className="text-white/35">{desc}</span></span>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 const Cookies = () => {
   return (
@@ -15,138 +44,153 @@ const Cookies = () => {
         canonicalUrl="https://thecalculatorpage.lovable.app/cookies"
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
         <NavigationMenu />
 
-        <main className="container mx-auto px-4 py-8 max-w-4xl">
-          <Link to="/home" className="inline-flex items-center text-muted-foreground hover:text-primary mb-6">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
+        <main className="max-w-4xl mx-auto px-6 py-12">
+
+          {/* Back */}
+          <Link to="/home"
+            className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest mb-12">
+            <ArrowLeft className="h-3 w-3" /> Back to Home
           </Link>
 
-          <article className="prose prose-slate dark:prose-invert max-w-none">
-            <h1 className="text-4xl font-bold text-foreground mb-2">Cookie Policy</h1>
-            <p className="text-muted-foreground mb-8">Last updated: January 2025</p>
+          {/* Hero title */}
+          <div className="mb-16 select-none">
+            <div className="absolute w-[400px] h-[300px] rounded-full blur-[120px] opacity-[0.05] pointer-events-none -z-10"
+              style={{ background: ACCENT }} />
+            <h1 className="font-display leading-[0.85] tracking-tighter">
+              <span className="block text-[12vw] md:text-[95px]" style={{
+                background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+                filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
+              }}>COOKIE</span>
+              <span className="block text-[7vw] md:text-[55px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
+                POLICY
+              </span>
+            </h1>
+            <p className="mt-6 text-white/20 font-heading text-[10px] uppercase tracking-widest">Last updated: January 2025</p>
+          </div>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">What Are Cookies?</h2>
-              <p className="text-muted-foreground mb-4">
-                Cookies are small text files that are stored on your device when you visit a website. They are widely 
-                used to make websites work more efficiently and to provide information to website owners.
-              </p>
-            </section>
+          {/* What are cookies */}
+          <Section title="What Are Cookies?">
+            <Prose>
+              Cookies are small text files stored on your device when you visit a website. They are widely
+              used to make websites work more efficiently and to provide information to website owners.
+            </Prose>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Our Cookie Use</h2>
-              <p className="text-muted-foreground mb-4">
-                The Calculator Page uses minimal cookies. We believe in privacy-first design, so we limit cookie usage 
-                to only what's necessary for basic analytics and site functionality.
-              </p>
-            </section>
+          {/* Our cookie use */}
+          <Section title="Our Cookie Use">
+            <Prose>
+              The Calculator Page uses minimal cookies. We believe in privacy-first design, so we limit cookie usage
+              to only what's necessary for basic analytics and site functionality.
+            </Prose>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Types of Cookies We Use</h2>
-              
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Cookie Type</TableHead>
-                      <TableHead>Purpose</TableHead>
-                      <TableHead>Duration</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow>
-                      <TableCell className="font-medium">Essential</TableCell>
-                      <TableCell>Required for the website to function properly (e.g., remembering preferences)</TableCell>
-                      <TableCell>Session</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Analytics</TableCell>
-                      <TableCell>Help us understand how visitors interact with our website (anonymized)</TableCell>
-                      <TableCell>Up to 12 months</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell className="font-medium">Preferences</TableCell>
-                      <TableCell>Remember your settings like dark mode or currency preferences</TableCell>
-                      <TableCell>Up to 12 months</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </div>
-            </section>
+          {/* Types table */}
+          <Section title="Types of Cookies We Use">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm font-sans">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    {["Cookie Type", "Purpose", "Duration"].map(h => (
+                      <th key={h} className="text-left pb-3 pr-6 text-[9px] font-heading uppercase tracking-widest text-white/25">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { type: "Essential",   purpose: "Required for the website to function properly (e.g., remembering preferences)", duration: "Session" },
+                    { type: "Analytics",   purpose: "Help us understand how visitors interact with our website (anonymised)",         duration: "Up to 12 months" },
+                    { type: "Preferences", purpose: "Remember your settings like dark mode or currency preferences",                  duration: "Up to 12 months" },
+                  ].map(({ type, purpose, duration }) => (
+                    <tr key={type} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-4 pr-6 font-heading text-xs uppercase tracking-widest text-white/60 whitespace-nowrap">{type}</td>
+                      <td className="py-4 pr-6 text-white/35 leading-relaxed">{purpose}</td>
+                      <td className="py-4 text-white/35 whitespace-nowrap">{duration}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">What We Don't Use Cookies For</h2>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li><strong>Advertising:</strong> We do not use advertising cookies or show personalized ads</li>
-                <li><strong>Cross-site tracking:</strong> We do not track you across other websites</li>
-                <li><strong>Personal data collection:</strong> Our cookies contain no personal information</li>
-                <li><strong>Selling data:</strong> We never sell cookie data to third parties</li>
-              </ul>
-            </section>
+          {/* What we don't use */}
+          <Section title="What We Don't Use Cookies For">
+            <List items={[
+              { label: "Advertising",           desc: "We do not use advertising cookies or show personalised ads" },
+              { label: "Cross-site tracking",   desc: "We do not track you across other websites" },
+              { label: "Personal data",         desc: "Our cookies contain no personal information" },
+              { label: "Selling data",          desc: "We never sell cookie data to third parties" },
+            ]} />
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Third-Party Cookies</h2>
-              <p className="text-muted-foreground mb-4">
-                We may use the following third-party services that set their own cookies:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li><strong>Analytics providers:</strong> To help us understand site usage patterns (anonymized data only)</li>
-              </ul>
-              <p className="text-muted-foreground mt-4">
-                These third parties have their own privacy policies governing their use of cookies.
-              </p>
-            </section>
+          {/* Third-party */}
+          <Section title="Third-Party Cookies">
+            <Prose>
+              We may use the following third-party services that set their own cookies:
+            </Prose>
+            <List items={[
+              { label: "Analytics providers", desc: "To help us understand site usage patterns (anonymised data only)" },
+            ]} />
+            <p className="text-white/30 text-sm font-sans mt-4">
+              These third parties have their own privacy policies governing their use of cookies.
+            </p>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Managing Cookies</h2>
-              <p className="text-muted-foreground mb-4">
-                You have full control over cookies. You can:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li><strong>Block all cookies:</strong> Through your browser settings (note: this may affect site functionality)</li>
-                <li><strong>Delete existing cookies:</strong> Clear your browser's cookie storage at any time</li>
-                <li><strong>Block third-party cookies:</strong> Most browsers allow you to block cookies from third-party sites</li>
-              </ul>
-              
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">How to Manage Cookies in Popular Browsers</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies</li>
-                <li><strong>Firefox:</strong> Settings → Privacy & Security → Cookies and Site Data</li>
-                <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
-                <li><strong>Edge:</strong> Settings → Privacy, Search, and Services → Cookies</li>
-              </ul>
-            </section>
+          {/* Managing cookies */}
+          <Section title="Managing Cookies">
+            <Prose>You have full control over cookies. You can:</Prose>
+            <List items={[
+              { label: "Block all cookies",        desc: "Through your browser settings (note: this may affect site functionality)" },
+              { label: "Delete existing cookies",  desc: "Clear your browser's cookie storage at any time" },
+              { label: "Block third-party cookies",desc: "Most browsers allow you to block cookies from third-party sites" },
+            ]} />
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Calculator Functionality Without Cookies</h2>
-              <p className="text-muted-foreground">
-                All our calculators work fully without cookies. Blocking cookies will not prevent you from using any 
-                calculator on our site. The only features that may be affected are preference persistence (like 
-                remembering your preferred currency) and site analytics.
-              </p>
-            </section>
+            <p className="text-[9px] font-heading uppercase tracking-widest text-white/25 mt-8 mb-4">How to Manage Cookies in Popular Browsers</p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                { browser: "Chrome",  path: "Settings → Privacy and Security → Cookies" },
+                { browser: "Firefox", path: "Settings → Privacy & Security → Cookies and Site Data" },
+                { browser: "Safari",  path: "Preferences → Privacy → Manage Website Data" },
+                { browser: "Edge",    path: "Settings → Privacy, Search, and Services → Cookies" },
+              ].map(({ browser, path }) => (
+                <div key={browser} className="bg-[#252323]/80 border border-white/10 rounded-xl p-4">
+                  <p className="font-heading text-xs uppercase tracking-widest text-white/60 mb-1">{browser}</p>
+                  <p className="text-white/30 text-xs font-sans">{path}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Changes to This Policy</h2>
-              <p className="text-muted-foreground">
-                We may update this Cookie Policy from time to time. Any changes will be posted on this page with an 
-                updated revision date.
-              </p>
-            </section>
+          {/* Calculators without cookies */}
+          <Section title="Calculator Functionality Without Cookies">
+            <Prose>
+              All our calculators work fully without cookies. Blocking cookies will not prevent you from using any
+              calculator on our site. The only features that may be affected are preference persistence (like
+              remembering your preferred currency) and site analytics.
+            </Prose>
+          </Section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-foreground mb-4">Contact Us</h2>
-              <p className="text-muted-foreground">
-                If you have any questions about our use of cookies, please contact us at:{" "}
-                <a href="mailto:thecalculatorpage@gmail.com" className="text-primary hover:underline">
-                  thecalculatorpage@gmail.com
-                </a>
-              </p>
-            </section>
-          </article>
+          {/* Changes */}
+          <Section title="Changes to This Policy">
+            <Prose>
+              We may update this Cookie Policy from time to time. Any changes will be posted on this page with an
+              updated revision date.
+            </Prose>
+          </Section>
+
+          {/* Contact */}
+          <Section title="Contact Us">
+            <Prose>If you have any questions about our use of cookies, please contact us at:</Prose>
+            <a href="mailto:thecalculatorpage@gmail.com"
+              className="mt-3 inline-block font-heading text-sm uppercase tracking-widest transition-colors hover:opacity-70"
+              style={{ color: ACCENT }}>
+              thecalculatorpage@gmail.com
+            </a>
+          </Section>
+
         </main>
 
         <Footer />
