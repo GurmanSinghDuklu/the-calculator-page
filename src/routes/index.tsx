@@ -1,9 +1,8 @@
-import { RouteObject } from 'react-router-dom';
+import { RouteObject, Navigate } from 'react-router-dom';
 import App from '../App';
 
 // Main & Hubs
 import Index from '../pages/Index';
-import Welcome from '../pages/Welcome';
 import LearnHub from '../pages/LearnHub';
 import Formulas from '../pages/Formulas';
 import NotFound from '../pages/NotFound';
@@ -53,7 +52,7 @@ import AutomateFinances from '../pages/learn/AutomateFinances';
 import EmergencyFund from '../pages/learn/EmergencyFund';
 import CalculatorFormulasGuide from '../pages/learn/CalculatorFormulasGuide';
 
-// --- NEW LEARN HUB IMPORTS ---
+// New Learn Hub
 import BeforeYouInvest from '../pages/learn/BeforeYouInvest';
 import BudgetIrregularCosts from '../pages/learn/BudgetIrregularCosts';
 import BuildPortfolio from '../pages/learn/BuildPortfolio';
@@ -93,7 +92,7 @@ export const routes: RouteObject[] = [
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Welcome /> },
+      { index: true, element: <Navigate to="/home" replace /> },
       { path: 'home', element: <Index /> },
       { path: 'learn', element: <LearnHub /> },
       { path: 'formulas', element: <Formulas /> },
