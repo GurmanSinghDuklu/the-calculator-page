@@ -46,7 +46,7 @@ const BlogIndex = () => {
         {/* Navigation Header */}
         <header className="border-b border-border/50 bg-background/95 backdrop-blur-sm sticky top-0 z-50">
           <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-            <Link to="/home" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="flex flex-col">
                 <span className="font-serif text-xl md:text-2xl font-normal text-foreground tracking-tight leading-none">
                   Calculator
@@ -57,7 +57,7 @@ const BlogIndex = () => {
               </div>
             </Link>
             <div className="flex items-center gap-4">
-              <Link to="/home">
+              <Link to="/">
                 <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
                   <Home className="h-4 w-4 mr-2" />
                   Home

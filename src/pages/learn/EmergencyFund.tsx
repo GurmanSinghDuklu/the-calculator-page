@@ -20,6 +20,7 @@ export default function EmergencyFund() {
       />
 
       <ArticleLayout
+        publishDate="2025-01-22"
         title="Building an Emergency Fund That Works"
         description="Your financial safety net: why you need it and how to build it"
         readTime="30–60 min"

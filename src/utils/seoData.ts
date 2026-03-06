@@ -1,133 +1,158 @@
 // SEO metadata for all calculator pages
 export const seoData = {
   '/finance/apy': {
-    title: 'APY Calculator - Calculate Annual Percentage Yield',
-    description: 'Free APY calculator to find your effective annual percentage yield based on nominal interest rate and compounding frequency.',
-    keywords: 'apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate calculator'
+    title: 'APY Calculator - Annual Percentage Yield Calculator',
+    description: 'Convert nominal interest rate to APY (Annual Percentage Yield). See the real return on savings accounts, ISAs, and investments with different compounding frequencies.',
+    keywords: 'apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate, savings account interest, ISA interest calculator'
   },
   '/finance/car-loan': {
-    title: 'Car Loan Calculator - Calculate Auto Loan Payments',
-    description: 'Free car loan calculator to estimate your monthly auto loan payment. Include balloon payment, interest rate, and loan term.',
-    keywords: 'car loan calculator, auto loan calculator, vehicle loan calculator, car payment calculator'
+    title: 'Car Loan Calculator - Monthly Auto Finance Payment',
+    description: 'Calculate monthly car finance payments, total interest, and balloon payment options. Enter loan amount, interest rate, and term to see a full car finance cost breakdown.',
+    keywords: 'car loan calculator, auto loan calculator, vehicle finance calculator, car payment calculator, PCP calculator, balloon payment'
   },
   '/finance/cashback': {
-    title: 'Cashback Calculator - Calculate Credit Card Rewards',
-    description: 'Calculate your cashback rewards and credit card earnings. Compare different cashback percentages and spending amounts.',
-    keywords: 'cashback calculator, credit card rewards calculator, cash back calculator'
+    title: 'Cashback Calculator - Credit Card Rewards Estimator',
+    description: 'Calculate annual cashback earnings from credit card spending. Compare cashback rates across categories to find the most rewarding card for your spending habits.',
+    keywords: 'cashback calculator, credit card rewards calculator, cash back calculator, best cashback card UK'
   },
   '/finance/credit-card-payoff': {
     title: 'Credit Card Payoff Calculator - Pay Off Debt Faster',
-    description: 'Free credit card payoff calculator to see how long it takes to pay off credit card debt and calculate total interest paid.',
-    keywords: 'credit card payoff calculator, debt payoff calculator, credit card debt calculator, pay off credit card'
+    description: 'Calculate exactly how long it takes to pay off credit card debt at your current payment rate. See how increasing monthly payments saves you hundreds in interest charges.',
+    keywords: 'credit card payoff calculator, debt payoff calculator, credit card debt calculator, pay off credit card, minimum payment calculator'
   },
   '/finance/multi-card-payoff': {
-    title: 'Multi-Card Credit Card Payoff Calculator | Snowball & Avalanche Strategies',
-    description: 'Pay off multiple credit cards faster with snowball or avalanche debt strategies. Compare methods, see detailed schedules, and optimize your debt payoff plan.',
-    keywords: 'multi-card payoff, debt snowball, debt avalanche, credit card debt strategy, multiple credit cards, debt payoff calculator'
+    title: 'Multi-Card Payoff Calculator - Debt Snowball vs Avalanche',
+    description: 'Compare debt snowball vs avalanche strategies across multiple credit cards. See which method gets you debt-free fastest and how much total interest each strategy saves.',
+    keywords: 'multi-card payoff, debt snowball calculator, debt avalanche calculator, multiple credit cards, debt payoff strategy, debt free calculator'
   },
   '/finance/future-house-value': {
-    title: 'Future House Value Calculator - Property Appreciation',
-    description: 'Calculate the future value of your property based on appreciation rate. Estimate your home value growth over time.',
-    keywords: 'house value calculator, home appreciation calculator, property value calculator, real estate calculator'
+    title: 'Future House Value Calculator - UK Property Appreciation Estimate',
+    description: 'Estimate how much your UK property will be worth in 5, 10, or 20 years based on an annual appreciation rate. Plan equity growth and net worth over time.',
+    keywords: 'house value calculator, home appreciation calculator, property value forecast, UK house price calculator, property investment calculator'
   },
   '/finance/how-long-to-save': {
-    title: 'How Long To Save Calculator - Reach Your Savings Goal',
-    description: 'Calculate how long it takes to reach your savings goal with regular deposits and interest. Plan your financial future.',
-    keywords: 'savings goal calculator, how long to save calculator, savings timeline calculator'
+    title: 'How Long to Save Calculator - Time to Reach Your Goal',
+    description: 'Find out exactly how many months or years it will take to reach a savings target. Enter your goal, monthly deposit, and interest rate for a precise savings timeline.',
+    keywords: 'savings goal calculator, how long to save, savings timeline, time to save calculator, savings target calculator'
   },
   '/finance/how-much-to-save': {
-    title: 'How Much To Save Calculator - Monthly Savings Target',
-    description: 'Calculate how much you need to save monthly to reach your financial goal. Plan your savings strategy.',
-    keywords: 'monthly savings calculator, savings target calculator, how much to save'
+    title: 'How Much to Save Per Month - Monthly Savings Target Calculator',
+    description: 'Calculate the exact monthly savings amount needed to hit a financial goal by a specific date. Accounts for compound interest earned on your existing balance.',
+    keywords: 'monthly savings calculator, how much to save, savings target calculator, savings goal planner, financial goal calculator'
   },
   '/finance/irr': {
-    title: 'IRR Calculator - Internal Rate of Return Calculator',
-    description: 'Free IRR calculator to find the internal rate of return for your investment cash flows. Calculate annualized returns.',
-    keywords: 'irr calculator, internal rate of return calculator, investment return calculator'
+    title: 'IRR Calculator - Internal Rate of Return',
+    description: 'Calculate the Internal Rate of Return (IRR) for an investment with irregular cash flows. Enter up to 20 cash flow values to find the annualised investment return rate.',
+    keywords: 'irr calculator, internal rate of return, investment return calculator, cash flow calculator, annualised return, investment analysis'
   },
   '/finance/mortgage-overpayment': {
-    title: 'Mortgage Overpayment Calculator - Save on Interest',
-    description: 'Calculate how much you save by making mortgage overpayments. See how extra payments reduce your mortgage term.',
-    keywords: 'mortgage overpayment calculator, extra mortgage payment calculator, pay off mortgage early'
+    title: 'Mortgage Overpayment Calculator - Save Interest & Clear Early',
+    description: 'See exactly how much interest you save and how many years you cut from your mortgage by making regular overpayments. Enter any overpayment amount to compare scenarios.',
+    keywords: 'mortgage overpayment calculator, extra mortgage payment, pay off mortgage early, reduce mortgage term, overpayment interest saving'
   },
   '/finance/simple-interest': {
-    title: 'Simple Interest Calculator - Calculate Interest Earned',
-    description: 'Free simple interest calculator to calculate interest on loans and investments. Find interest amount and total value.',
-    keywords: 'simple interest calculator, simple interest formula, calculate simple interest'
+    title: 'Simple Interest Calculator - Interest on Loans & Savings',
+    description: 'Calculate simple interest on any loan or savings amount. Enter principal, annual rate, and time period to see interest earned or charged, plus the total value.',
+    keywords: 'simple interest calculator, simple interest formula, calculate interest, loan interest calculator, interest earned calculator'
+  },
+  '/finance/salary': {
+    title: 'UK Salary Calculator 2025/26 - Take-Home Pay After Tax',
+    description: 'Calculate UK take-home pay after income tax and National Insurance for 2025/26. Supports all tax bands, student loan plans, pension contributions, and Scottish tax rates.',
+    keywords: 'UK salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary UK, 2025 tax calculator, Scottish income tax'
+  },
+  '/finance/budget': {
+    title: 'Budget Calculator - Monthly Personal Budget Planner',
+    description: 'Build a monthly budget by entering income and expenses by category. See your surplus or deficit at a glance, and how your spending aligns with the 50/30/20 rule.',
+    keywords: 'budget calculator, monthly budget planner, personal budget tool, 50 30 20 budget, expense tracker, UK budget planner, household budget'
+  },
+  '/finance/weekly-mortgage': {
+    title: 'Weekly Mortgage Calculator - Weekly vs Monthly Repayments',
+    description: 'Calculate weekly mortgage repayments and compare total interest paid vs monthly payments. Weekly payments reduce your balance faster, saving interest over the term.',
+    keywords: 'weekly mortgage calculator, weekly repayment calculator, biweekly mortgage, weekly vs monthly mortgage, accelerated mortgage repayment'
   },
   '/misc/age': {
-    title: 'Age Calculator - Calculate Your Exact Age',
-    description: 'Free age calculator to find your exact age in years, months, and days. Calculate age from date of birth.',
-    keywords: 'age calculator, calculate age, how old am i, age calculator from date of birth'
+    title: 'Age Calculator - Exact Age from Date of Birth',
+    description: 'Calculate your precise age in years, months, weeks, and days from any date of birth. Also shows how many days until your next birthday.',
+    keywords: 'age calculator, calculate age, how old am I, age from date of birth, exact age, days until birthday, birthday calculator'
   },
   '/misc/date': {
-    title: 'Date Calculator - Add, Subtract & Compare Dates',
-    description: 'Free date calculator to add or subtract days, weeks, months from any date. Calculate the difference between two dates.',
-    keywords: 'date calculator, date difference calculator, add days to date, subtract dates'
+    title: 'Date Calculator - Days Between Dates & Date Arithmetic',
+    description: 'Calculate the exact number of days, weeks, months, and years between two dates. Add or subtract any number of days from a date to find a future or past date.',
+    keywords: 'date calculator, days between dates, date difference calculator, add days to date, how many days until, date duration calculator'
   },
   '/misc/discount': {
-    title: 'Discount Calculator - Calculate Sale Price & Savings',
-    description: 'Free discount calculator to find sale prices and savings. Calculate percentage discounts instantly.',
-    keywords: 'discount calculator, sale price calculator, percentage off calculator, discount percentage calculator'
+    title: 'Discount Calculator - Final Price After Any Percentage Off',
+    description: 'Calculate the final sale price after any percentage discount, the amount saved, and the original price from a discounted price. Works for any percentage off.',
+    keywords: 'discount calculator, sale price calculator, percentage off calculator, how much is 20% off, original price from sale price, markdown calculator'
   },
   '/misc/tip': {
-    title: 'Tip Calculator - Calculate Tips & Split Bills',
-    description: 'Free tip calculator to calculate tips, split bills, and find tip percentages. Perfect for restaurants and group dining.',
-    keywords: 'tip calculator, tipping calculator, tip percentage calculator, split bill calculator'
-  },
-  '/finance/compound-interest': {
-    title: 'Compound Interest Calculator - Investment Growth Calculator',
-    description: 'Free compound interest calculator to calculate investment growth. See how your money grows with compound interest over time.',
-    keywords: 'compound interest calculator, investment calculator, compound interest formula, interest calculator'
-  },
-  '/finance/loan': {
-    title: 'Loan Calculator - Calculate Monthly Loan Payments',
-    description: 'Free loan calculator to calculate monthly payments, total interest, and loan amortization. Compare different loan terms.',
-    keywords: 'loan calculator, loan payment calculator, personal loan calculator, loan amortization calculator'
-  },
-  '/finance/mortgage': {
-    title: 'Mortgage Calculator - Calculate Monthly Mortgage Payment',
-    description: 'Free mortgage calculator to estimate monthly payments, total interest, and amortization schedule. Plan your home purchase.',
-    keywords: 'mortgage calculator, home loan calculator, mortgage payment calculator, home mortgage calculator'
-  },
-  '/finance/retirement': {
-    title: 'Retirement Calculator - Plan Your Retirement Savings',
-    description: 'Free retirement calculator to plan your retirement savings and income needs. Calculate how much you need to retire comfortably.',
-    keywords: 'retirement calculator, retirement planning calculator, retirement savings calculator, pension calculator'
-  },
-  '/finance/savings': {
-    title: 'Savings Calculator - Calculate Savings Growth',
-    description: 'Free savings calculator to calculate how your savings grow with regular deposits and interest. Plan your financial goals.',
-    keywords: 'savings calculator, savings account calculator, savings growth calculator, compound savings calculator'
-  },
-  '/converters/universal': {
-    title: 'Universal Unit Converter - Convert All Units Online',
-    description: 'Free universal unit converter for length, weight, temperature, volume, energy, pressure, time, and data storage conversions.',
-    keywords: 'unit converter, universal converter, measurement converter, metric converter, conversion calculator'
-  },
-  '/converters/temperature': {
-    title: 'Temperature Converter - Celsius, Fahrenheit, Kelvin',
-    description: 'Free temperature converter to convert between Celsius, Fahrenheit, and Kelvin. Instant temperature conversions.',
-    keywords: 'temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin converter, temperature conversion'
-  },
-  '/converters/length': {
-    title: 'Length Converter - Convert Feet, Meters, Inches & More',
-    description: 'Free length converter to convert between feet, meters, inches, centimeters, kilometers, miles and more. Instant conversions.',
-    keywords: 'length converter, distance converter, feet to meters, inches to cm, length conversion calculator'
-  },
-  '/converters/weight': {
-    title: 'Weight Converter - Convert Pounds, Kilograms & More',
-    description: 'Free weight converter to convert between pounds, kilograms, ounces, grams and more. Instant weight conversions.',
-    keywords: 'weight converter, mass converter, pounds to kg, kg to pounds, weight conversion calculator'
+    title: 'Tip Calculator - Restaurant Tip & Bill Split',
+    description: 'Calculate tip amounts for any bill and split the total between any number of people. Choose a tip percentage or enter a custom amount and see the exact cost per person.',
+    keywords: 'tip calculator, restaurant tip, how much to tip, split bill calculator, tip per person, tipping guide UK'
   },
   '/misc/percentage': {
-    title: 'Percentage Calculator - Calculate Percentages Online',
-    description: 'Free percentage calculator to calculate percentages, percentage increases, decreases, and differences. Fast and accurate.',
-    keywords: 'percentage calculator, percent calculator, calculate percentage, percentage increase calculator, percentage change calculator'
+    title: 'Percentage Calculator - Three Calculations in One',
+    description: 'Three percentage calculators in one: find what X% of a number is, calculate what percentage one number is of another, and find the original value from a percentage result.',
+    keywords: 'percentage calculator, what is 20% of 150, percentage of a number, how to calculate percentage, percent calculator, percentage finder'
+  },
+  '/misc/percentage-of': {
+    title: 'Percentage Of Calculator - What Is X% of a Number?',
+    description: 'Calculate exactly what value any percentage represents of a total. Enter any percentage and any number to get the result instantly. Useful for discounts, VAT, tax, and tips.',
+    keywords: 'percentage of calculator, what is X percent of Y, percent of a number, percentage value, what is 15% of 200'
+  },
+  '/misc/percentage-change': {
+    title: 'Percentage Change Calculator - Increase & Decrease',
+    description: 'Calculate the percentage increase or decrease between any two values. Shows the absolute change and direction. Useful for price changes, growth rates, and statistics.',
+    keywords: 'percentage change calculator, percentage increase, percentage decrease, percent change formula, growth rate calculator, price change percentage'
+  },
+  '/finance/compound-interest': {
+    title: 'Compound Interest Calculator - Investment Growth Visualiser',
+    description: 'See how money grows with compound interest over any time period. Model monthly contributions, different compounding frequencies, and tax-free wrappers like ISAs.',
+    keywords: 'compound interest calculator, investment growth, compound interest formula, how does compound interest work, ISA growth calculator, savings calculator UK'
+  },
+  '/finance/loan': {
+    title: 'Loan Calculator - Monthly Repayment & Full Amortisation',
+    description: 'Calculate monthly repayments on any personal loan with a full amortisation schedule. Compare different loan amounts, rates, and terms to find the most affordable option.',
+    keywords: 'loan calculator, loan repayment calculator, personal loan UK, amortisation calculator, monthly repayment, total interest paid'
+  },
+  '/finance/mortgage': {
+    title: 'Mortgage Calculator - Monthly Payment & Total Mortgage Cost',
+    description: 'Calculate monthly mortgage repayments including principal, interest, property tax, and insurance. See the full amortisation breakdown and total cost of any mortgage.',
+    keywords: 'mortgage calculator, mortgage repayment calculator, monthly mortgage payment, UK mortgage calculator, how much can I borrow, first time buyer mortgage'
+  },
+  '/finance/retirement': {
+    title: 'Retirement Calculator - How Much Do You Need to Retire?',
+    description: 'Calculate your pension pot target and model whether current contributions will get you there. Adjust retirement age, contributions, and drawdown to plan your future income.',
+    keywords: 'retirement calculator, pension calculator UK, how much to retire, retirement savings calculator, pension pot calculator, FIRE calculator, drawdown calculator'
+  },
+  '/finance/savings': {
+    title: 'Savings Calculator - Project Your Savings Balance Over Time',
+    description: 'See how regular monthly savings deposits grow with compound interest. Adjust deposit amount, interest rate, and time period to find what it takes to hit your savings target.',
+    keywords: 'savings calculator, savings account calculator, monthly savings projection, ISA calculator, compound savings, savings pot calculator UK'
+  },
+  '/converters/universal': {
+    title: 'Universal Unit Converter - All Units in One Place',
+    description: 'Convert any unit instantly: length, weight, temperature, volume, area, speed, energy, pressure, and data storage. Covers metric, imperial, and specialist units.',
+    keywords: 'unit converter, measurement converter, metric to imperial, universal converter, convert units online, all unit conversion'
+  },
+  '/converters/temperature': {
+    title: 'Temperature Converter - Celsius, Fahrenheit & Kelvin',
+    description: 'Convert instantly between Celsius, Fahrenheit, and Kelvin. Shows the conversion formula so you understand how to do it manually. Includes common reference temperatures.',
+    keywords: 'temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin to celsius, temperature conversion formula, body temperature, oven temperature'
+  },
+  '/converters/length': {
+    title: 'Length Converter - Metres, Feet, Inches, Miles & More',
+    description: 'Convert between metric and imperial length units: metres, feet, inches, centimetres, kilometres, miles, yards, and nautical miles. Instant results with formula shown.',
+    keywords: 'length converter, metres to feet, feet to metres, inches to cm, km to miles, distance converter, length units'
+  },
+  '/converters/weight': {
+    title: 'Weight Converter - Kilograms, Pounds, Stones & More',
+    description: 'Convert between kilograms, pounds, stones, grams, ounces, and metric tonnes. Useful for recipes, gym tracking, luggage limits, and body weight tracking.',
+    keywords: 'weight converter, kg to pounds, pounds to kg, stones to kg, grams to ounces, mass converter, weight conversion UK'
   },
   '/finance/stamp-duty': {
-    title: 'UK Stamp Duty Calculator - Calculate SDLT Tax',
-    description: 'Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland.',
-    keywords: 'stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty, buy to let stamp duty, property tax calculator'
+    title: 'UK Stamp Duty Calculator 2025 - SDLT England & N. Ireland',
+    description: 'Calculate Stamp Duty Land Tax (SDLT) for any UK property purchase. Covers first-time buyer relief, standard rates, second home surcharge, and buy-to-let properties.',
+    keywords: 'stamp duty calculator 2025, SDLT calculator, UK stamp duty, first time buyer stamp duty relief, buy to let stamp duty, second home surcharge, property tax England'
   }
 };

@@ -18,6 +18,7 @@ export default function InvestingBasics() {
       />
 
       <ArticleLayout
+        publishDate="2025-03-26"
         title="Basics of Investing: Stocks, Bonds & ETFs"
         description="Core primer for new investors"
         readTime="30–45 min"

@@ -132,11 +132,11 @@ export default function FinancialJourney() {
         {/* ── Sticky header ── */}
         <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/8">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link to="/home" className="font-display text-2xl tracking-widest text-white uppercase">
+            <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">
               Calculator Page
             </Link>
             <div className="flex items-center gap-4">
-              <Link to="/home"
+              <Link to="/"
                 className="flex items-center gap-2 text-white/25 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
                 <ArrowLeft className="h-4 w-4" /> Back
               </Link>

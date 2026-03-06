@@ -19,6 +19,7 @@ export default function InflationGuide() {
       />
 
       <ArticleLayout
+        publishDate="2025-06-11"
         title="Inflation: The Silent Thief"
         description="Understand real returns and protecting buying power"
         readTime="15 min"

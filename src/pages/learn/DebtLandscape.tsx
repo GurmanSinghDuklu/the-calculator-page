@@ -17,6 +17,7 @@ export default function DebtLandscape() {
       />
 
       <ArticleLayout
+        publishDate="2025-02-19"
         title="Understanding Your Debt Landscape"
         description="List, categorise and prioritise debts"
         readTime="30 min"

@@ -100,7 +100,7 @@ const SalaryCalculator = () => {
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-6 pt-6">
           <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
-            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
             <span>/</span>

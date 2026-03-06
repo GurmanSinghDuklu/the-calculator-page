@@ -10,11 +10,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  ssgOptions: {
-    script: "async",
-    formatting: "minify",
-    crittersOptions: {
-      reduceInlineStyles: false,
-    },
-  },
-});
+} as any);

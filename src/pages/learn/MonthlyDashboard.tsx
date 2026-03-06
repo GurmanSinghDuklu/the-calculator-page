@@ -16,6 +16,7 @@ export default function MonthlyDashboard() {
       />
 
       <ArticleLayout
+        publishDate="2025-02-05"
         title="Your Monthly Financial Dashboard"
         description="Monthly KPI review and adjustments"
         readTime="20 min"

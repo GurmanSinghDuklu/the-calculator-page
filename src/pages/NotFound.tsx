@@ -74,7 +74,7 @@ const NotFound = () => {
 
           {/* Return home button */}
           <Link
-            to="/home"
+            to="/"
             replace
             className="group inline-flex items-center gap-2 px-8 py-4 font-heading text-xs uppercase tracking-widest text-black rounded-lg transition-all duration-300 hover:-translate-y-0.5"
             style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}

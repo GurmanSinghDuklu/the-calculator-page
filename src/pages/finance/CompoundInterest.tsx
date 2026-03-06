@@ -10,8 +10,7 @@ import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// ─── Accent colour for Finance category ───────────────────────────────────────
-const ACCENT = "#3B82F6"; // accent-blue
+const ACCENT = "#3B82F6";
 
 const CompoundInterest = () => {
   const [principal, setPrincipal] = useState("10000");
@@ -22,7 +21,7 @@ const CompoundInterest = () => {
   const [extraMonth, setExtraMonth] = useState("1");
   const [extraYear, setExtraYear] = useState("1");
   const [currency, setCurrency] = useState<Currency>("USD");
-  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(true); // advanced by default
   const [result, setResult] = useState<{
     futureValue: number;
     totalContributions: number;
@@ -93,13 +92,22 @@ const CompoundInterest = () => {
 
   const sym = currencies[currency].symbol;
 
+  // ── Advanced view (default) ──
   if (showAdvanced) {
     return (
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
-        <SEO title="Compound Interest Calculator" description="Calculate the future value of your investments." structuredData={[structuredData, breadcrumbStructuredData]} faqSchema={faqSchema} />
+        <SEO
+          title="Compound Interest Calculator"
+          description="Calculate the future value of your investments."
+          structuredData={[structuredData, breadcrumbStructuredData]}
+          faqSchema={faqSchema}
+        />
         <div className="max-w-5xl mx-auto px-6 py-20">
-          <button onClick={() => setShowAdvanced(false)} className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors mb-12">
-            ← Back to Calculator
+          <button
+            onClick={() => setShowAdvanced(false)}
+            className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors mb-12"
+          >
+            ← Switch to Simple Mode
           </button>
           <AdvancedCompoundCalculator />
         </div>
@@ -107,6 +115,7 @@ const CompoundInterest = () => {
     );
   }
 
+  // ── Simple view ──
   return (
     <>
       <SEO
@@ -121,7 +130,7 @@ const CompoundInterest = () => {
         {/* ── Breadcrumb ── */}
         <div className="max-w-7xl mx-auto px-6 pt-6">
           <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
-            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
             <span>/</span>
@@ -135,7 +144,6 @@ const CompoundInterest = () => {
           {/* LEFT — Typography */}
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
 
-            {/* Glow */}
             <div
               className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10"
               style={{ background: ACCENT, top: "10%", left: "0" }}
@@ -168,7 +176,7 @@ const CompoundInterest = () => {
               </p>
             </div>
 
-            {/* Advanced mode toggle */}
+            {/* Switch to advanced */}
             <button
               onClick={() => setShowAdvanced(true)}
               className="mt-8 self-start flex items-center gap-2 font-heading text-xs uppercase tracking-widest transition-colors"
@@ -181,7 +189,6 @@ const CompoundInterest = () => {
 
           {/* RIGHT — Form card */}
           <div className="w-full lg:w-1/2 z-20 relative">
-            {/* Card glow */}
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-3xl -z-10 pointer-events-none opacity-10"
               style={{ background: ACCENT }}
@@ -189,7 +196,6 @@ const CompoundInterest = () => {
 
             <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
 
-              {/* Card header */}
               <div className="flex items-center justify-between mb-8">
                 <h3 className="font-display text-3xl uppercase text-white tracking-wide">Parameters</h3>
                 <TrendingUp className="h-6 w-6" style={{ color: ACCENT }} />
@@ -217,7 +223,6 @@ const CompoundInterest = () => {
                       value={principal}
                       onChange={(e) => setPrincipal(e.target.value)}
                       className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-4 text-white text-lg font-medium placeholder-white/20 focus:outline-none transition-all"
-                      style={{ "--tw-ring-color": ACCENT } as React.CSSProperties}
                       onFocus={e => e.target.style.borderColor = ACCENT}
                       onBlur={e => e.target.style.borderColor = "rgba(255,255,255,0.1)"}
                       placeholder="10,000"
@@ -377,7 +382,7 @@ const CompoundInterest = () => {
           </div>
         </div>
 
-        {/* ── Static content + disclaimer below the fold ── */}
+        {/* ── Static content + disclaimer ── */}
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <FinancialDisclaimer type="investment" className="mt-6" />
           <CalculatorStaticContent

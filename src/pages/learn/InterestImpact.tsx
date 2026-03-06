@@ -18,6 +18,7 @@ export default function InterestImpact() {
       />
 
       <ArticleLayout
+        publishDate="2025-03-19"
         title="How Interest Eats Your Wealth"
         description="Reverse compounding visual guide"
         readTime="15 min"

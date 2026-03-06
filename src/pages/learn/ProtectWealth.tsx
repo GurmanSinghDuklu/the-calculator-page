@@ -18,6 +18,7 @@ export default function ProtectWealth() {
       />
 
       <ArticleLayout
+        publishDate="2025-05-28"
         title="Protecting Your Wealth (Insurance & Wills)"
         description="Risk management and family protection"
         readTime="20–30 min"

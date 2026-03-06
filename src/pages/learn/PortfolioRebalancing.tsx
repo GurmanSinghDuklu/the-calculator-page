@@ -16,6 +16,7 @@ export default function PortfolioRebalancing() {
       />
 
       <ArticleLayout
+        publishDate="2025-05-07"
         title="How to Rebalance and Review Your Portfolio"
         description="Discipline and management best practices"
         readTime="20 min"

@@ -20,6 +20,7 @@ export default function SnowballAvalanche() {
       />
 
       <ArticleLayout
+        publishDate="2025-02-26"
         title="Snowball vs Avalanche"
         description="Two payoff strategies with worked examples"
         readTime="20–40 min"

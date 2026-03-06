@@ -20,6 +20,7 @@ export default function AutomateFinances() {
       />
 
       <ArticleLayout
+        publishDate="2025-01-29"
         title="Automate Your Finances Like a Pro"
         description="Build a money system that works while you sleep"
         readTime="20 min"

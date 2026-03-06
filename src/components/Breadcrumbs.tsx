@@ -15,7 +15,7 @@ export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
     <nav className="flex items-center gap-1.5 mb-6">
       {/* Home */}
       <Link
-        to="/home"
+        to="/"
         className="flex items-center gap-1.5 font-heading text-[9px] uppercase tracking-[0.2em] text-white/20 hover:text-white/50 transition-colors"
       >
         <Home className="h-3 w-3 shrink-0" />

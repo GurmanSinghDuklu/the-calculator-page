@@ -1,16 +1,53 @@
 User-agent: *
 Allow: /
 
-# Private/Utility Pages
+# AI / LLM Crawlers - explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: GeminiProBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Private/Utility Pages (not useful for indexing)
+User-agent: *
 Disallow: /blog/cheat-code-01-payment
 Disallow: /blog/cheat-code-01-unlocked
 
-# Technical/Source Files (Optional but recommended)
+# Technical/Source Files
 Disallow: /src/
 Disallow: /node_modules/
 
-# Optimize Crawl Budget
-Crawl-delay: 1
+# The Calculator Page - AI-readable summary
+# See: https://www.thecalculatorpage.com/llms.txt
 
-# The "Source of Truth"
 Sitemap: https://www.thecalculatorpage.com/sitemap.xml

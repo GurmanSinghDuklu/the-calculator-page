@@ -50,7 +50,7 @@ const Cookies = () => {
         <main className="max-w-4xl mx-auto px-6 py-12">
 
           {/* Back */}
-          <Link to="/home"
+          <Link to="/"
             className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest mb-12">
             <ArrowLeft className="h-3 w-3" /> Back to Home
           </Link>

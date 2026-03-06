@@ -19,6 +19,7 @@ export default function FiftyThirtyTwentyBudget() {
       />
 
       <ArticleLayout
+        publishDate="2025-01-15"
         title="The 50/30/20 Budget Made Personal"
         description="Adapt the classic rule to your real life and income"
         readTime="20 min"

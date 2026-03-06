@@ -16,6 +16,7 @@ export default function First1000() {
       />
 
       <ArticleLayout
+        publishDate="2025-03-05"
         title="Your First £1,000: Turning Saving Into a Habit"
         description="Gamified habit-building approach"
         readTime="10–20 min"

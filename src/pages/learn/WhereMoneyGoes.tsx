@@ -19,6 +19,7 @@ export default function WhereMoneyGoes() {
       />
 
       <ArticleLayout
+        publishDate="2025-01-08"
         title="Where Your Money Really Goes"
         description="The foundation of financial control starts with awareness"
         readTime="15–30 min"

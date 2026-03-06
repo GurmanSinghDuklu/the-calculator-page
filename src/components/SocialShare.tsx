@@ -10,7 +10,7 @@ interface SocialShareProps {
 
 export const SocialShare = ({ url, title, description }: SocialShareProps) => {
   const { toast } = useToast();
-  const shareUrl = url || window.location.href;
+  const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedTitle = encodeURIComponent(title);
   const encodedDescription = encodeURIComponent(description || "");

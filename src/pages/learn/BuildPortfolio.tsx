@@ -29,6 +29,7 @@ export default function BuildPortfolio() {
       />
 
       <ArticleLayout
+        publishDate="2025-04-09"
         title="How to Build a Balanced Portfolio"
         description="Sample portfolios by risk profile"
         readTime="30 min"

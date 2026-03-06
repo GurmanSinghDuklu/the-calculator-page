@@ -18,6 +18,7 @@ export default function BeforeYouInvest() {
       />
 
       <ArticleLayout
+        publishDate="2025-04-02"
         title="What to Do Before You Invest"
         description="Risk tolerance, goals and timelines checklist"
         readTime="20–30 min"

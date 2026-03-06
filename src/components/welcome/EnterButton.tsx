@@ -10,7 +10,7 @@ const EnterButton = () => {
       transition={{ duration: 0.8, delay: 2.2, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link
-        to="/home"
+        to="/"
         className="group relative inline-flex items-center justify-center"
       >
         {/* Outer glow ring */}

@@ -17,6 +17,7 @@ export default function BudgetIrregularCosts() {
       />
 
       <ArticleLayout
+        publishDate="2025-02-12"
         title="Budgeting for Unexpected Costs"
         description="Plan for irregular and unexpected expenses"
         readTime="15 min"

@@ -17,6 +17,7 @@ export default function InvestingVsTrading() {
       />
 
       <ArticleLayout
+        publishDate="2025-04-16"
         title="Long-Term Investing vs Trading"
         description="Psychology and behaviour guidance"
         readTime="20 min"

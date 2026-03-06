@@ -16,6 +16,7 @@ export default function ChooseSavingsAccount() {
       />
 
       <ArticleLayout
+        publishDate="2025-03-12"
         title="How to Choose the Right Savings Account (UK)"
         description="ISA vs regular saving — where to park cash"
         readTime="20 min"

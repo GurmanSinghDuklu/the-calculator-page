@@ -86,7 +86,7 @@ export default function CreditCardPayoff() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`${window.location.origin}/finance/credit-card-payoff`}
+        canonicalUrl={`https://www.thecalculatorpage.com/finance/credit-card-payoff`}
         faqSchema={creditCardStaticContent.faqs}
         howToSchema={{
           name: "How to Calculate Credit Card Payoff Time",
@@ -99,7 +99,7 @@ export default function CreditCardPayoff() {
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-6 pt-6">
           <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
-            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
             <span>/</span>

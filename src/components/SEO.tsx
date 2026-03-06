@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Head } from 'vite-react-ssg';
 
 interface SEOProps {
   title: string;
@@ -86,7 +86,7 @@ const SEO = ({
   }
 
   return (
-    <Helmet>
+    <Head>
       {/* Standard Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -106,12 +106,12 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={cleanCanonical} />
-      <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+      <meta property="og:image" content={`${siteUrl}/og-image.svg`} />
       
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+      <meta name="twitter:image" content={`${siteUrl}/og-image.svg`} />
 
       {/* Injecting Structured Data */}
       {allSchemas.map((schema, index) => (
@@ -119,7 +119,7 @@ const SEO = ({
           {JSON.stringify(schema)}
         </script>
       ))}
-    </Helmet>
+    </Head>
   );
 };
 

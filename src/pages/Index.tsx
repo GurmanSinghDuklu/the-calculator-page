@@ -48,13 +48,14 @@ const Index = () => {
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
       <SEO
-        title="The Calculator Page - Professional Financial Tools"
-        description="50+ free calculators: compound interest, mortgage, retirement, and unit converters."
+        title="The Calculator Page - Free UK Financial Calculators"
+        description="Free UK financial calculators for mortgages, compound interest, salary, retirement, and more. No signup required. Instant results."
+        canonicalUrl="https://www.thecalculatorpage.com"
       />
 
       <header className="border-b border-dark-border bg-dark-bg/90 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Logo size="sm" linkTo="/home" />
+          <Logo size="sm" linkTo="/" />
           <div className="flex items-center gap-8">
             <NavigationMenu />
             <a className="hidden md:flex font-heading text-sm font-bold uppercase tracking-widest color-cycle transition-colors" href="mailto:thecalculatorpage@gmail.com">
@@ -82,7 +83,7 @@ const Index = () => {
           </h1>
           <p className="mt-8 font-heading text-xl text-gray-400 uppercase tracking-widest">& Unit Converters</p>
 
-          {/* Search Logic Integrated into New UI */}
+          {/* Search */}
           <div className="max-w-xl mx-auto mt-16 relative group">
             <Input
               type="text"
@@ -122,7 +123,7 @@ const Index = () => {
           <Link to="/categories/property" className="group block">
             <div className="border-b border-white/10 pb-6 mb-8 flex justify-between items-end">
               <h2 className="font-display text-5xl text-white">Property</h2>
-              <ArrowLeft className="h-10 w-10 text-accent-blue group-hover:rotate-[135deg] transition-transform duration-500" />
+              <ArrowLeft className="h-10 w-10 text-accent-red group-hover:rotate-[135deg] transition-transform duration-500" />
             </div>
           </Link>
 
@@ -130,7 +131,7 @@ const Index = () => {
           <Link to="/categories/finance" className="group block">
             <div className="border-b border-white/10 pb-6 mb-8 flex justify-between items-end">
               <h2 className="font-display text-5xl text-white">Finance</h2>
-              <ArrowLeft className="h-10 w-10 text-accent-green group-hover:rotate-[135deg] transition-transform duration-500" />
+              <ArrowLeft className="h-10 w-10 text-accent-blue group-hover:rotate-[135deg] transition-transform duration-500" />
             </div>
           </Link>
 
@@ -170,7 +171,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       {/* Footer */}
       <footer className="bg-black text-white pt-20 border-t border-dark-border mt-auto">
         <div className="max-w-7xl mx-auto px-6 pb-8">

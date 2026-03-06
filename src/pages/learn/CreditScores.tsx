@@ -16,6 +16,7 @@ export default function CreditScores() {
       />
 
       <ArticleLayout
+        publishDate="2025-06-04"
         title="Credit Scores and Borrowing Wisely"
         description="Build or repair credit health"
         readTime="20 min"

@@ -17,6 +17,7 @@ export default function TeachMoneySkills() {
       />
 
       <ArticleLayout
+        publishDate="2025-06-18"
         title="How to Teach Money Skills to Others"
         description="Share and multiply your impact"
         readTime="15–25 min"
@@ -249,7 +250,7 @@ export default function TeachMoneySkills() {
                 Share our calculators with others to help them with their financial planning.
                 From budgeting to retirement, there's a tool for every step of the journey.
               </p>
-              <Link to="/home"
+              <Link to="/"
                 className="group inline-flex items-center gap-3 font-heading text-[10px] uppercase tracking-[0.18em] py-3 px-5 border transition-all"
                 style={{ color: ACCENT, borderColor: `${ACCENT}50`, background: `${ACCENT}08` }}
                 onMouseEnter={e => { e.currentTarget.style.background = `${ACCENT}18`; e.currentTarget.style.borderColor = ACCENT; }}

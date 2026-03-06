@@ -17,6 +17,7 @@ export default function FinancialFreedom() {
       />
 
       <ArticleLayout
+        publishDate="2025-05-21"
         title="Financial Freedom: Defining Your End Goal"
         description="Personalised freedom vs FIRE models"
         readTime="30 min"

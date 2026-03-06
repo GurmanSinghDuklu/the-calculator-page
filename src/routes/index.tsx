@@ -92,8 +92,8 @@ export const routes: RouteObject[] = [
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <Navigate to="/home" replace /> },
-      { path: 'home', element: <Index /> },
+      { index: true, element: <Index /> },
+      { path: 'home', element: <Navigate to="/" replace /> },
       { path: 'learn', element: <LearnHub /> },
       { path: 'formulas', element: <Formulas /> },
 

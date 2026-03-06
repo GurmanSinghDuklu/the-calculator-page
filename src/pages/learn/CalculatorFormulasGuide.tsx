@@ -49,6 +49,7 @@ function ExMono({ children }: { children: React.ReactNode }) {
 export default function CalculatorFormulasGuide() {
   return (
     <ArticleLayout
+        publishDate="2025-07-01"
       title="Complete Guide to Calculator Formulas: Understanding the Math Behind Your Money"
       description="Master the essential mathematical formulas used in financial calculators. Learn how compound interest, loan payments, mortgages, and retirement calculations work."
       readTime="12 min read"

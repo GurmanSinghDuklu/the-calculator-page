@@ -16,6 +16,7 @@ export default function EthicalInvesting() {
       />
 
       <ArticleLayout
+        publishDate="2025-04-23"
         title="Giving Back and Ethical Investing"
         description="Purpose-driven wealth allocation"
         readTime="20 min"

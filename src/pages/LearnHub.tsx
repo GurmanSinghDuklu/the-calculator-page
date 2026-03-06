@@ -79,11 +79,11 @@ const LearnHub = () => {
         {/* ── Sticky header ── */}
         <header className="sticky top-0 z-50 bg-[#1C1A1A]/90 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link to="/home" className="font-display text-2xl tracking-widest text-white uppercase">
+            <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">
               Calculator Page
             </Link>
             <div className="flex items-center gap-4">
-              <Link to="/home" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
+              <Link to="/" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
                 <Home className="h-4 w-4" /> Home
               </Link>
               <NavigationMenu />

@@ -18,6 +18,7 @@ export default function TaxEfficientAccounts() {
       />
 
       <ArticleLayout
+        publishDate="2025-05-14"
         title="Tax-Efficient Accounts (ISAs, SIPPs)"
         description="UK-specific tax wrappers explained"
         readTime="25 min"

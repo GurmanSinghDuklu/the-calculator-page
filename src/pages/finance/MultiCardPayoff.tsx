@@ -197,14 +197,14 @@ export default function MultiCardPayoff() {
   return (
     <>
       <SEO title={seo.title} description={seo.description} keywords={seo.keywords}
-        canonicalUrl={`${window.location.origin}/finance/multi-card-payoff`} />
+        canonicalUrl={`https://www.thecalculatorpage.com/finance/multi-card-payoff`} />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
 
         {/* Breadcrumb */}
         <div className="max-w-5xl mx-auto px-6 pt-6">
           <nav className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30">
-            <Link to="/home" className="hover:text-white transition-colors">Home</Link>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>
             <span>/</span>

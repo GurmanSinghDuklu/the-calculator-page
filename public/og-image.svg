@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1C1A1A"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Accent glow -->
+  <ellipse cx="600" cy="315" rx="500" ry="250" fill="#22C55E" fill-opacity="0.04"/>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="180" width="4" height="270" fill="#22C55E"/>
+
+  <!-- Main wordmark -->
+  <text x="110" y="270" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" letter-spacing="-2" fill="#ffffff">THE</text>
+  <text x="110" y="360" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" letter-spacing="-2" fill="#22C55E">CALCULATOR</text>
+  <text x="110" y="440" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" letter-spacing="-2" fill="none" stroke="#ffffff" stroke-width="2">PAGE</text>
+
+  <!-- Tagline -->
+  <text x="110" y="490" font-family="Arial, sans-serif" font-size="22" letter-spacing="4" fill="#ffffff" fill-opacity="0.4" font-weight="400">FREE UK FINANCIAL CALCULATORS</text>
+
+  <!-- Right side — calculator list -->
+  <text x="820" y="240" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">MORTGAGE</text>
+  <text x="820" y="275" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">COMPOUND INTEREST</text>
+  <text x="820" y="310" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">SALARY</text>
+  <text x="820" y="345" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">RETIREMENT</text>
+  <text x="820" y="380" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">STAMP DUTY</text>
+  <text x="820" y="415" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" fill-opacity="0.3" letter-spacing="2">+ 40 MORE</text>
+
+  <!-- URL -->
+  <text x="600" y="590" font-family="Arial, sans-serif" font-size="18" fill="#22C55E" fill-opacity="0.6" letter-spacing="3" text-anchor="middle">thecalculatorpage.com</text>
+</svg>

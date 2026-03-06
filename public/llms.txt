@@ -1,0 +1,53 @@
+# The Calculator Page
+> Free, accurate financial and everyday calculators for UK users and beyond.
+
+The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calculators and unit converters covering personal finance, mortgages, investments, and everyday maths. All tools are browser-based, require no login, and are designed for the UK market but usable globally.
+
+## Key Calculators
+
+- [Compound Interest Calculator](https://www.thecalculatorpage.com/finance/compound-interest): Calculate how investments grow over time with compound interest. Supports monthly/annual compounding and regular contributions.
+- [UK Salary Calculator](https://www.thecalculatorpage.com/finance/salary): Calculate take-home pay after UK income tax and National Insurance deductions.
+- [Mortgage Calculator](https://www.thecalculatorpage.com/finance/mortgage): Calculate monthly mortgage repayments based on loan amount, interest rate, and term.
+- [Retirement Calculator](https://www.thecalculatorpage.com/finance/retirement): Plan retirement income, estimate pension pot size, and model drawdown scenarios.
+- [Mortgage Overpayment Calculator](https://www.thecalculatorpage.com/finance/mortgage-overpayment): See how overpaying your mortgage reduces interest and shortens the term.
+- [Stamp Duty Calculator](https://www.thecalculatorpage.com/finance/stamp-duty): Calculate UK Stamp Duty Land Tax (SDLT) for property purchases.
+- [Savings Calculator](https://www.thecalculatorpage.com/finance/savings): Project savings growth with regular deposits and interest.
+- [Loan Calculator](https://www.thecalculatorpage.com/finance/loan): Calculate monthly repayments and total interest on personal loans.
+- [APY Calculator](https://www.thecalculatorpage.com/finance/apy): Convert APR to Annual Percentage Yield.
+- [Budget Calculator](https://www.thecalculatorpage.com/finance/budget): Build and track a monthly budget.
+- [Car Loan Calculator](https://www.thecalculatorpage.com/finance/car-loan): Calculate car finance repayments.
+- [Simple Interest Calculator](https://www.thecalculatorpage.com/finance/simple-interest): Calculate simple interest on savings or loans.
+- [Credit Card Payoff Calculator](https://www.thecalculatorpage.com/finance/credit-card-payoff): Plan how to pay off credit card debt.
+- [IRR Calculator](https://www.thecalculatorpage.com/finance/irr): Calculate the Internal Rate of Return on investments.
+- [Percentage Calculator](https://www.thecalculatorpage.com/misc/percentage): Calculate percentages, percentage of a number, and percentage change.
+- [Age Calculator](https://www.thecalculatorpage.com/misc/age): Calculate exact age from a date of birth.
+- [Discount Calculator](https://www.thecalculatorpage.com/misc/discount): Calculate sale prices and savings from discounts.
+- [Tip Calculator](https://www.thecalculatorpage.com/misc/tip): Calculate tips and split bills.
+
+## Unit Converters
+
+- [Length Converter](https://www.thecalculatorpage.com/converters/length)
+- [Weight Converter](https://www.thecalculatorpage.com/converters/weight)
+- [Temperature Converter](https://www.thecalculatorpage.com/converters/temperature)
+
+## Learn Hub (Financial Education Articles)
+
+- [Financial Journey Guide](https://www.thecalculatorpage.com/learn/financial-journey)
+- [50/30/20 Budget Rule](https://www.thecalculatorpage.com/learn/50-30-20-budget)
+- [How to Build an Emergency Fund](https://www.thecalculatorpage.com/learn/emergency-fund)
+- [Investing Basics](https://www.thecalculatorpage.com/learn/investing-basics)
+- [Understanding Compound Interest](https://www.thecalculatorpage.com/learn/interest-impact)
+- [Debt Snowball vs Avalanche](https://www.thecalculatorpage.com/learn/snowball-avalanche)
+- [Inflation Explained](https://www.thecalculatorpage.com/learn/inflation-guide)
+- [How to Choose a Savings Account](https://www.thecalculatorpage.com/learn/choose-savings-account)
+- [Credit Scores Explained](https://www.thecalculatorpage.com/learn/credit-scores)
+- [Tax-Efficient Accounts (ISA, SIPP)](https://www.thecalculatorpage.com/learn/tax-efficient-accounts)
+- [Formula Directory](https://www.thecalculatorpage.com/formulas)
+
+## About
+
+- Website: https://www.thecalculatorpage.com
+- Contact: thecalculatorpage@gmail.com
+- Sitemap: https://www.thecalculatorpage.com/sitemap.xml
+- Focus: UK personal finance, mortgages, investments, everyday calculations
+- Audience: UK adults managing personal finances, first-time buyers, investors, savers
