@@ -59,6 +59,14 @@ function calculateUSTax(annualSalary: number, filingStatus: FilingStatus, state:
 
 // ─── Component ────────────────────────────────────────────────────────────────
 const SalaryCalculator = () => {
+  // SEO Configuration
+  const faqSchema = [
+    { question: "How is UK income tax calculated?", answer: "UK income tax is calculated in bands: personal allowance (£0-£12,570 tax-free), basic rate (20%), higher rate (40%), and additional rate (45%). National Insurance is calculated separately on earnings above £12,570." },
+    { question: "What is National Insurance?", answer: "National Insurance (NI) is a social security contribution in the UK. Employees pay 8% on earnings between £12,570-£50,270, then 2% on amounts above. It funds State Pension and benefits." },
+    { question: "How does US federal income tax work?", answer: "US federal tax uses progressive tax brackets. You pay different rates on different portions of income. Standard deductions reduce taxable income, and credits can reduce tax owed." },
+    { question: "What are FICA taxes?", answer: "FICA (Federal Insurance Contributions Act) includes Social Security (6.2%) and Medicare (1.45%). Employers also match these amounts for a total of 15.3%." },
+    { question: "How much should I contribute to a pension?", answer: "Financial experts recommend saving 10-15% of gross income for retirement. Many employers match contributions up to 3-6%, so contribute at least enough to get the full match." }
+  ];
   const [salary,        setSalary]        = useState("50000");
   const [country,       setCountry]       = useState<Country>("UK");
   const [taxCode,       setTaxCode]       = useState("1257L");
@@ -89,10 +97,11 @@ const SalaryCalculator = () => {
   return (
     <>
       <SEO
-        title="Salary Calculator - Calculate Take Home Pay After Tax"
-        description="Free salary calculator for 2024. Calculate your take-home pay after income tax deductions for UK and US. Get monthly, weekly and daily breakdowns."
-        keywords="salary calculator, take home pay calculator, income tax calculator, net salary calculator"
+        title="Salary Calculator - UK & US Take-Home Pay After Tax"
+        description="Calculate your take-home salary after income tax, national insurance, Social Security, Medicare, and state taxes. Supports UK, US, and multi-state tax calculations with pension contributions."
+        keywords="salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary, US income tax calculator, FICA calculator, state tax, federal tax, paycheck calculator, net pay"
         canonicalUrl="https://www.thecalculatorpage.com/finance/salary"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

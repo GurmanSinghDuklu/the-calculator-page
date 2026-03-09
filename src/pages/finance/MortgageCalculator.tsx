@@ -84,9 +84,9 @@ const MortgageCalculator = () => {
   return (
     <>
       <SEO
-        title="Mortgage Calculator - Calculate Monthly Mortgage Payments"
-        description="Free mortgage calculator to estimate your monthly payment including principal, interest, property tax, and home insurance."
-        keywords="mortgage calculator, mortgage payment calculator, home loan calculator, monthly mortgage payment"
+        title="Mortgage Calculator - Monthly Payment, Tax & Insurance Included"
+        description="Free mortgage calculator including property tax, home insurance, and PMI. Calculate monthly mortgage payments, total cost, and see full amortisation schedules for any UK or US loan."
+        keywords="mortgage calculator, mortgage payment calculator, home loan calculator, monthly mortgage payment, UK mortgage calculator, US mortgage calculator, FHA calculator, PMI calculator"
         faqSchema={faqSchema}
       />
 
