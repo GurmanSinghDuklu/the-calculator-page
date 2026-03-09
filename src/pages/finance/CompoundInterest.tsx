@@ -87,7 +87,10 @@ const CompoundInterest = () => {
   };
 
   const faqSchema = [
-    { question: "What is compound interest?", answer: "Interest calculated on the principal and the accumulated interest." }
+    { question: "What is compound interest?", answer: "Interest calculated on the principal and the accumulated interest." },
+    { question: "What's the difference between daily and monthly compounding?", answer: "Daily compounding applies interest 365 times per year, while monthly compounds 12 times. Daily compounding results in slightly higher returns over time." },
+    { question: "Which compounding frequency is best?", answer: "More frequent compounding (daily vs yearly) generates slightly more interest over time. However, the practical difference becomes smaller as the time period decreases. Choose based on your account type." },
+    { question: "How to calculate daily compound interest?", answer: "Use the formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency (365 for daily), and t is time in years. Our calculator does this automatically." }
   ];
 
   const sym = currencies[currency].symbol;
@@ -97,8 +100,8 @@ const CompoundInterest = () => {
     return (
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
         <SEO
-          title="Compound Interest Calculator"
-          description="Calculate the future value of your investments."
+          title="Compound Interest Calculator - Daily, Monthly, Yearly Compounding"
+          description="Free compound interest calculator with daily, monthly, quarterly, and yearly compounding. Calculate investment growth and see how your savings grow over time with the power of compound interest."
           structuredData={[structuredData, breadcrumbStructuredData]}
           faqSchema={faqSchema}
         />
@@ -119,8 +122,8 @@ const CompoundInterest = () => {
   return (
     <>
       <SEO
-        title="Compound Interest Calculator"
-        description="Calculate the future value of your investments."
+        title="Compound Interest Calculator - Daily, Monthly, Yearly Compounding"
+        description="Free compound interest calculator with daily, monthly, quarterly, and yearly compounding. Calculate investment growth and see how your savings grow over time with the power of compound interest."
         structuredData={[structuredData, breadcrumbStructuredData]}
         faqSchema={faqSchema}
       />
@@ -167,6 +170,17 @@ const CompoundInterest = () => {
                 style={{ WebkitTextStroke: "1px rgba(255,255,255,0.25)", color: "transparent" }}
               >
                 INTEREST
+              </span>
+              <span
+                className="block text-[8vw] lg:text-[70px] mt-1"
+                style={{
+                  background: `linear-gradient(135deg, #a78bfa 0%, ${ACCENT} 100%)`,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                CALCULATOR
               </span>
             </h1>
 
@@ -396,6 +410,51 @@ const CompoundInterest = () => {
             }}
             faqs={faqSchema}
           />
+
+          {/* ── Compounding Frequency Guide ── */}
+          <section className="mt-20 pt-20 border-t border-white/10">
+            <h2 className="text-3xl font-display font-bold mb-12 text-white">Compounding Frequency Guide</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-white">Daily Compound Interest Calculator</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Daily compounding applies interest 365 times per year. This is the most common frequency for savings accounts and money market accounts. It generates the highest returns compared to monthly or annual compounding.
+                </p>
+                <p className="text-sm text-gray-500">Best for: High-yield savings accounts, money market accounts</p>
+              </article>
+
+              <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-white">Monthly Compound Interest Calculator</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Monthly compounding applies interest 12 times per year. This is the standard frequency for most savings accounts and certificates of deposit (CDs). It offers a good balance between frequency and simplicity.
+                </p>
+                <p className="text-sm text-gray-500">Best for: Traditional savings accounts, some bonds</p>
+              </article>
+
+              <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-white">Quarterly Compound Interest Calculator</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Quarterly compounding applies interest 4 times per year. Some bonds and investment accounts use this frequency. It provides moderate growth between monthly and annual compounding.
+                </p>
+                <p className="text-sm text-gray-500">Best for: Some bonds, certain investment accounts</p>
+              </article>
+
+              <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
+                <h3 className="text-xl font-bold mb-4 text-white">Yearly Compound Interest Calculator</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Annual or yearly compounding applies interest once per year. While simpler to track, it generates the least amount of interest compared to more frequent compounding methods over the same period.
+                </p>
+                <p className="text-sm text-gray-500">Best for: Bonds, some traditional savings products</p>
+              </article>
+            </div>
+
+            <div className="mt-12 p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl">
+              <h3 className="text-lg font-bold text-white mb-3">💡 Pro Tip</h3>
+              <p className="text-gray-400">
+                The more frequently interest compounds, the more you earn. For example, $10,000 at 5% annual interest will grow to $12,762.82 annually, $12,834.27 monthly, $12,863.56 daily, but $12,833.01 quarterly. Use our calculator to compare different frequencies for your specific situation.
+              </p>
+            </div>
+          </section>
         </div>
 
         {/* Footer */}
