@@ -71,39 +71,39 @@ export const seoData = {
     keywords: 'weekly mortgage calculator, weekly repayment calculator, biweekly mortgage, weekly vs monthly mortgage, accelerated mortgage repayment'
   },
   '/misc/age': {
-    title: 'Age Calculator - Exact Age from Date of Birth',
-    description: 'Calculate your precise age in years, months, weeks, and days from any date of birth. Also shows how many days until your next birthday.',
-    keywords: 'age calculator, calculate age, how old am I, age from date of birth, exact age, days until birthday, birthday calculator'
+    title: 'Age Calculator - Years, Months, Days & Birthday Countdown',
+    description: 'Calculate your exact age in years, months, weeks, and days from any date of birth. See your birthday countdown, total days alive, and age statistics with detailed breakdown.',
+    keywords: 'age calculator, calculate age, how old am I, age from date of birth, exact age, days until birthday, birthday countdown calculator, age in days'
   },
   '/misc/date': {
     title: 'Date Calculator - Days Between Dates & Date Arithmetic',
-    description: 'Calculate the exact number of days, weeks, months, and years between two dates. Add or subtract any number of days from a date to find a future or past date.',
-    keywords: 'date calculator, days between dates, date difference calculator, add days to date, how many days until, date duration calculator'
+    description: 'Calculate the exact number of days, weeks, months, and years between two dates. Add or subtract days, months, or years from any date for project planning and scheduling.',
+    keywords: 'date calculator, days between dates, date difference calculator, add days to date, how many days until, date duration calculator, date arithmetic, project timeline'
   },
   '/misc/discount': {
-    title: 'Discount Calculator - Final Price After Any Percentage Off',
-    description: 'Calculate the final sale price after any percentage discount, the amount saved, and the original price from a discounted price. Works for any percentage off.',
-    keywords: 'discount calculator, sale price calculator, percentage off calculator, how much is 20% off, original price from sale price, markdown calculator'
+    title: 'Discount Calculator - Sale Price & Savings Calculator',
+    description: 'Calculate final sale price after percentage discount, total amount saved, and find original price from discounted value. Useful for shopping, retail pricing, and bulk discounts.',
+    keywords: 'discount calculator, sale price calculator, percentage off calculator, how much is 20% off, savings calculator, markdown calculator, coupon discount, bulk discount'
   },
   '/misc/tip': {
-    title: 'Tip Calculator - Restaurant Tip & Bill Split',
-    description: 'Calculate tip amounts for any bill and split the total between any number of people. Choose a tip percentage or enter a custom amount and see the exact cost per person.',
-    keywords: 'tip calculator, restaurant tip, how much to tip, split bill calculator, tip per person, tipping guide UK'
+    title: 'Tip Calculator - Restaurant Gratuity & Bill Splitter',
+    description: 'Calculate tip amounts at any percentage and split the total bill among any number of people. See exact per-person cost and compare different tip percentages instantly.',
+    keywords: 'tip calculator, restaurant tip calculator, how much to tip, split bill calculator, tip per person, tipping percentage, gratuity calculator, bill splitter'
   },
   '/misc/percentage': {
-    title: 'Percentage Calculator - Find X% of Any Number',
-    description: 'Three percentage calculators in one: what is X% of Y, what percentage is X of Y, and find the original value from a percentage. Fast and easy percentage calculations.',
-    keywords: 'percentage calculator, what is 20% of 150, percentage of a number, percentage finder, percent of total, calculate percentage, percentage math'
+    title: 'Percentage Calculator - Three Calculations in One Tool',
+    description: 'Fast percentage calculator: find what X% of Y is, calculate what percent X is of Y, and find original value from percentage. Perfect for math, discounts, taxes, and tips.',
+    keywords: 'percentage calculator, what is 20% of 150, percentage of a number, percentage finder, percent of total, calculate percentage, percentage math, percentage converter'
   },
   '/misc/percentage-of': {
-    title: 'Percentage Of Calculator - What Is X% of a Number?',
-    description: 'Calculate exactly what value any percentage represents of a total. Enter any percentage and any number to get the result instantly. Useful for discounts, VAT, tax, and tips.',
-    keywords: 'percentage of calculator, what is X percent of Y, percent of a number, percentage value, what is 15% of 200'
+    title: 'Percentage Of Calculator - What Is X Percent of Any Number?',
+    description: 'Instantly calculate what value any percentage represents of a total number. Useful for finding discounts, VAT amounts, tax calculations, and tip calculations in real-time.',
+    keywords: 'percentage of calculator, what is X percent of Y, percent of a number, percentage value, VAT calculator, tax calculator, what is 15% of 200, percentage computation'
   },
   '/misc/percentage-change': {
-    title: 'Percentage Change Calculator - Increase & Decrease',
-    description: 'Calculate the percentage increase or decrease between any two values. Shows the absolute change and direction. Useful for price changes, growth rates, and statistics.',
-    keywords: 'percentage change calculator, percentage increase, percentage decrease, percent change formula, growth rate calculator, price change percentage'
+    title: 'Percentage Change Calculator - Growth & Decline Rates',
+    description: 'Calculate percentage increase or decrease between any two values with absolute change shown. Perfect for analyzing price changes, salary growth, investment returns, and trends.',
+    keywords: 'percentage change calculator, percentage increase, percentage decrease, percent change formula, growth rate calculator, price change, salary increase calculator, return on investment'
   },
   '/finance/compound-interest': {
     title: 'Compound Interest Calculator - Daily, Monthly, Yearly Compounding',
@@ -131,24 +131,24 @@ export const seoData = {
     keywords: 'savings calculator, savings account calculator, monthly savings projection, ISA calculator, compound savings calculator, savings goal calculator, investment growth, savings pot UK, savings plan'
   },
   '/converters/universal': {
-    title: 'Universal Unit Converter - All Units in One Place',
-    description: 'Convert any unit instantly: length, weight, temperature, volume, area, speed, energy, pressure, and data storage. Covers metric, imperial, and specialist units.',
-    keywords: 'unit converter, measurement converter, metric to imperial, universal converter, convert units online, all unit conversion'
+    title: 'Universal Unit Converter - Convert Any Measurement Instantly',
+    description: 'Convert any unit instantly: length, weight, temperature, volume, area, speed, energy, pressure, and data storage. All metric, imperial, and specialist conversions in one free tool.',
+    keywords: 'unit converter, measurement converter, metric to imperial, universal converter, convert units online, all unit conversion, measurement conversion, length converter, weight converter'
   },
   '/converters/temperature': {
-    title: 'Temperature Converter - Celsius, Fahrenheit & Kelvin',
-    description: 'Convert instantly between Celsius, Fahrenheit, and Kelvin. Shows the conversion formula so you understand how to do it manually. Includes common reference temperatures.',
-    keywords: 'temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin to celsius, temperature conversion formula, body temperature, oven temperature'
+    title: 'Temperature Converter - Celsius, Fahrenheit & Kelvin Conversions',
+    description: 'Convert instantly between Celsius, Fahrenheit, and Kelvin with formulas. See common reference temperatures, oven settings, body temperature, and scientific temperature scales.',
+    keywords: 'temperature converter, celsius to fahrenheit, fahrenheit to celsius, kelvin to celsius, temperature conversion formula, C to F, F to C, body temperature, oven temperature, weather'
   },
   '/converters/length': {
-    title: 'Length Converter - Metres, Feet, Inches, Miles & More',
-    description: 'Convert between metric and imperial length units: metres, feet, inches, centimetres, kilometres, miles, yards, and nautical miles. Instant results with formula shown.',
-    keywords: 'length converter, metres to feet, feet to metres, inches to cm, km to miles, distance converter, length units'
+    title: 'Length Converter - Metric, Imperial & Nautical Unit Conversion',
+    description: 'Convert between metric and imperial length units: metres, feet, inches, centimetres, kilometres, miles, yards, and nautical miles with instant results and formulas.',
+    keywords: 'length converter, metres to feet, feet to metres, inches to cm, km to miles, distance converter, length units, m to ft, cm to inches, mile to km, conversion formula'
   },
   '/converters/weight': {
-    title: 'Weight Converter - Kilograms, Pounds, Stones & More',
-    description: 'Convert between kilograms, pounds, stones, grams, ounces, and metric tonnes. Useful for recipes, gym tracking, luggage limits, and body weight tracking.',
-    keywords: 'weight converter, kg to pounds, pounds to kg, stones to kg, grams to ounces, mass converter, weight conversion UK'
+    title: 'Weight Converter - Kg, Pounds, Stones, Grams & Ounces',
+    description: 'Convert between kilograms, pounds, stones, grams, ounces, and metric tonnes. Perfect for recipes, fitness tracking, luggage limits, shopping, and international weight conversions.',
+    keywords: 'weight converter, kg to pounds, pounds to kg, stones to kg, grams to ounces, mass converter, weight conversion UK, lbs to kg, kilos to pounds, ounces to grams, weight units'
   },
   '/finance/stamp-duty': {
     title: 'UK Stamp Duty Calculator 2025 - SDLT England & N. Ireland',
