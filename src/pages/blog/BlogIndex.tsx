@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { NavigationMenu } from "@/components/NavigationMenu";
@@ -42,26 +40,28 @@ const BlogIndex = () => {
         canonicalUrl="https://www.thecalculatorpage.com/blog"
       />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-black text-white">
         {/* Navigation Header */}
-        <header className="border-b border-border/50 bg-background/95 backdrop-blur-sm sticky top-0 z-50">
-          <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="flex flex-col">
-                <span className="font-serif text-xl md:text-2xl font-normal text-foreground tracking-tight leading-none">
-                  Calculator
-                </span>
-                <span className="text-base md:text-lg tracking-[0.08em] text-foreground uppercase font-serif font-bold">
-                  PAGE
-                </span>
-              </div>
+        <header className="border-b border-white/8 bg-black/95 backdrop-blur-md sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-1 group">
+              <span className="font-display text-lg font-bold tracking-widest text-white group-hover:text-white/80 transition-colors">
+                THE
+              </span>
+              <span className="font-display text-lg font-bold tracking-widest text-green-500 group-hover:text-green-400 transition-colors">
+                CALC
+              </span>
+              <span className="font-display text-lg font-bold tracking-widest text-white group-hover:text-white/80 transition-colors">
+                PAGE
+              </span>
             </Link>
             <div className="flex items-center gap-4">
-              <Link to="/">
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-                  <Home className="h-4 w-4 mr-2" />
-                  Home
-                </Button>
+              <Link
+                to="/"
+                className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors"
+              >
+                <Home className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Home</span>
               </Link>
               <NavigationMenu />
             </div>
@@ -70,89 +70,87 @@ const BlogIndex = () => {
 
         {/* Hero Section */}
         <section className="py-20 md:py-28 px-6">
-          <div className="container mx-auto max-w-4xl text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-12 h-px bg-foreground/20" />
-              <span className="text-[10px] tracking-[0.4em] text-muted-foreground uppercase font-light">
+              <div className="w-12 h-px bg-white/20" />
+              <span className="text-[10px] tracking-[0.3em] text-white/30 uppercase font-heading">
                 Financial Insights
               </span>
-              <div className="w-12 h-px bg-foreground/20" />
+              <div className="w-12 h-px bg-white/20" />
             </div>
-            
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal text-foreground tracking-tight mb-6">
+
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-normal text-white tracking-tight mb-6">
               The Cheat Code
             </h1>
-            
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Learn the strategies the wealthy use to build and preserve wealth. 
+
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+              Learn the strategies the wealthy use to build and preserve wealth.
               No fluff, just actionable insights.
             </p>
           </div>
         </section>
 
         {/* Articles Grid */}
-        <section className="container mx-auto px-6 pb-20">
+        <section className="max-w-7xl mx-auto px-6 pb-20">
           <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
             {articles.map((article, index) => (
               <Link key={index} to={article.path} className="group">
-                <Card className="h-full overflow-hidden border border-border hover:border-foreground/20 transition-all duration-500 bg-card">
+                <div className="h-full overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 bg-white/[0.015]">
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                     {article.featured && (
-                      <Badge className="absolute top-4 left-4 bg-foreground text-background border-0 text-[10px] tracking-widest uppercase">
+                      <Badge className="absolute top-4 left-4 bg-white text-black border-0 text-[10px] tracking-widest uppercase font-heading">
                         Featured
                       </Badge>
                     )}
                     {article.hasPremium && (
-                      <Badge variant="outline" className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-[10px] tracking-widest uppercase">
+                      <Badge variant="outline" className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm text-[10px] tracking-widest uppercase font-heading text-white border-white/20">
                         <Lock className="h-3 w-3 mr-1" />
                         Premium
                       </Badge>
                     )}
                   </div>
-                  <CardHeader className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[10px] tracking-[0.2em] text-white/40 uppercase font-heading">
                         {article.category}
                       </span>
-                      <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                      <span className="text-xs text-white/40 font-heading">{article.readTime}</span>
                     </div>
-                    <CardTitle className="font-serif text-xl font-normal group-hover:text-muted-foreground transition-colors leading-snug">
-                      {article.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm leading-relaxed">
-                      {article.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-between pt-2 border-t border-border">
-                      <span className="text-xs text-muted-foreground">{article.publishDate}</span>
-                      <span className="text-xs font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <div>
+                      <h3 className="font-display text-xl font-normal group-hover:text-white/70 transition-colors leading-snug text-white mb-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-sm text-zinc-400 leading-relaxed">
+                        {article.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between pt-4 border-t border-white/8">
+                      <span className="text-xs text-white/25 font-heading">{article.publishDate}</span>
+                      <span className="text-xs font-heading text-white flex items-center gap-1 group-hover:gap-2 transition-all">
                         Read <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
 
           {/* Coming Soon */}
           <div className="mt-16 text-center">
-            <Card className="max-w-xl mx-auto border border-dashed border-border bg-transparent">
-              <CardHeader className="space-y-2">
-                <CardTitle className="font-serif text-xl font-normal">More Articles Coming Soon</CardTitle>
-                <CardDescription className="text-sm">
-                  We're working on more in-depth guides covering advanced investing strategies,
-                  tax optimization, and building passive income streams.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <div className="max-w-xl mx-auto border border-dashed border-white/10 bg-white/[0.015] p-6">
+              <h3 className="font-display text-xl font-normal text-white mb-2">More Articles Coming Soon</h3>
+              <p className="text-sm text-zinc-400">
+                We're working on more in-depth guides covering advanced investing strategies,
+                tax optimization, and building passive income streams.
+              </p>
+            </div>
           </div>
         </section>
       </div>
