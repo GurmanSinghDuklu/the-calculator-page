@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Facebook, Twitter, Linkedin, Link2, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -30,55 +29,45 @@ export const SocialShare = ({ url, title, description }: SocialShareProps) => {
     email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`,
   };
 
+  const ButtonComponent = ({ icon: Icon, label, onClick }: { icon: any; label: string; onClick: () => void }) => (
+    <button
+      onClick={onClick}
+      className="inline-flex items-center gap-2 font-heading text-[10px] uppercase tracking-[0.18em] py-2 px-4 border border-white/20 text-white/60 hover:border-white hover:text-white transition-all"
+    >
+      <Icon className="h-4 w-4" />
+      {label}
+    </button>
+  );
+
   return (
     <div className="flex flex-col gap-3">
-      <h3 className="text-sm tracking-wide uppercase text-muted-foreground">Share this article</h3>
+      <h3 className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">Share this article</h3>
       <div className="flex flex-wrap gap-2">
-        <Button
-          variant="outline"
-          size="sm"
+        <ButtonComponent
+          icon={Twitter}
+          label="Twitter"
           onClick={() => window.open(shareLinks.twitter, "_blank")}
-          className="gap-2"
-        >
-          <Twitter className="h-4 w-4" />
-          Twitter
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
+        />
+        <ButtonComponent
+          icon={Facebook}
+          label="Facebook"
           onClick={() => window.open(shareLinks.facebook, "_blank")}
-          className="gap-2"
-        >
-          <Facebook className="h-4 w-4" />
-          Facebook
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
+        />
+        <ButtonComponent
+          icon={Linkedin}
+          label="LinkedIn"
           onClick={() => window.open(shareLinks.linkedin, "_blank")}
-          className="gap-2"
-        >
-          <Linkedin className="h-4 w-4" />
-          LinkedIn
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
+        />
+        <ButtonComponent
+          icon={Mail}
+          label="Email"
           onClick={() => window.open(shareLinks.email, "_blank")}
-          className="gap-2"
-        >
-          <Mail className="h-4 w-4" />
-          Email
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
+        />
+        <ButtonComponent
+          icon={Link2}
+          label="Copy Link"
           onClick={copyToClipboard}
-          className="gap-2"
-        >
-          <Link2 className="h-4 w-4" />
-          Copy Link
-        </Button>
+        />
       </div>
     </div>
   );
