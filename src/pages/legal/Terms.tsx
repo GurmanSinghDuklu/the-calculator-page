@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import { NavigationMenu } from "@/components/NavigationMenu";
+import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const ACCENT = "#3B82F6";
@@ -46,7 +46,7 @@ const Terms = () => {
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
-        <NavigationMenu />
+        <Navbar />
 
         <main className="max-w-4xl mx-auto px-6 py-12">
 

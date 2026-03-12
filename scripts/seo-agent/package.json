@@ -1,0 +1,30 @@
+{
+  "name": "seo-agent",
+  "version": "1.0.0",
+  "description": "Autonomous SEO optimization agent for The Calculator Page",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx index.ts",
+    "dev": "tsx watch index.ts",
+    "build": "tsc --noEmit"
+  },
+  "keywords": [
+    "seo",
+    "automation",
+    "claude"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "dotenv": "^16.6.1",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/node-cron": "^3.0.8",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}

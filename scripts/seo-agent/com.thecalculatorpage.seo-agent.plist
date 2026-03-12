@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Label for the launchd job -->
+	<key>Label</key>
+	<string>com.thecalculatorpage.seo-agent</string>
+
+	<!-- Program to execute -->
+	<key>ProgramArguments</key>
+	<array>
+		<string>npx</string>
+		<string>tsx</string>
+		<string>scripts/seo-agent/index.ts</string>
+	</array>
+
+	<!-- Working directory (project root) -->
+	<key>WorkingDirectory</key>
+	<string>/Users/mandeepduklu/Downloads/thecalculatorpage-main</string>
+
+	<!-- Run daily at 3:00 AM -->
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Hour</key>
+		<integer>3</integer>
+		<key>Minute</key>
+		<integer>0</integer>
+	</dict>
+
+	<!-- Standard output and error -->
+	<key>StandardOutPath</key>
+	<string>/tmp/seo-agent.out</string>
+
+	<key>StandardErrorPath</key>
+	<string>/tmp/seo-agent.err</string>
+
+	<!-- Keep job running continuously -->
+	<key>KeepAlive</key>
+	<false/>
+
+	<!-- Automatically restart on failure -->
+	<key>RunAtLoad</key>
+	<false/>
+
+	<!-- Environment variables -->
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+		<key>ANTHROPIC_API_KEY</key>
+		<string>sk-ant-</string>
+	</dict>
+
+	<!-- Remove the job if it fails too many times -->
+	<key>ExitTimeOut</key>
+	<integer>3600</integer>
+
+</dict>
+</plist>

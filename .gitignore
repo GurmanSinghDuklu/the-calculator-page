@@ -26,3 +26,4 @@ dist-ssr
 scripts/service-account.json
 .vercel
 .env*.local
+scripts/seo-agent/.env
