@@ -6,6 +6,7 @@
  */
 
 import { config } from 'dotenv';
+import { execSync } from 'child_process';
 import { getCompetitorAnalysis, generateKeywordGaps } from './agents/competitor-analyzer.js';
 import { optimizeAllPages } from './agents/seo-optimizer.js';
 import { pingSearchEngines } from './agents/site-pinger.js';
@@ -87,6 +88,21 @@ async function runSEOAgent() {
 
     // Save the report
     logger.saveReport();
+
+    // Phase 5: Commit and push changes to git
+    logger.info('📦 Phase 5: Committing & Pushing Changes');
+    try {
+      const date = new Date().toISOString().split('T')[0];
+      const workingDir = process.env.SITE_ROOT_PATH
+        ? new URL(process.env.SITE_ROOT_PATH, import.meta.url).pathname
+        : '/Users/mandeepduklu/Downloads/thecalculatorpage-main';
+      execSync('git add src/data/seo-data.json public/sitemap.xml', { cwd: workingDir, stdio: 'inherit' });
+      execSync(`git commit -m "chore: automated SEO update ${date}"`, { cwd: workingDir, stdio: 'inherit' });
+      execSync('git push origin main', { cwd: workingDir, stdio: 'inherit' });
+      logger.info('✓ Changes pushed to GitHub');
+    } catch (gitError) {
+      logger.warn('Git push failed (no changes or network issue)', { error: gitError });
+    }
 
   } catch (error) {
     logger.error('Fatal error in SEO Agent', { error });
