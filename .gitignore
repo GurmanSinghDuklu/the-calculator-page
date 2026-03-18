@@ -27,3 +27,4 @@ scripts/service-account.json
 .vercel
 .env*.local
 scripts/seo-agent/.env
+scripts/seo-agent/com.thecalculatorpage.seo-agent.plist

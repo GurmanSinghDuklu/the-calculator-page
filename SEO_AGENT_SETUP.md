@@ -46,7 +46,7 @@ cp .env.example .env
 
 Edit `.env` and add your Anthropic API key:
 ```env
-ANTHROPIC_API_KEY=sk-ant-YOUR_KEY_HERE
+ANTHROPIC_API_KEY=sk-ant-YOUR_ANTHROPIC_API_KEY_HERE
 ```
 
 Get your key from: https://console.anthropic.com/api/keys

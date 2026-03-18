@@ -48,7 +48,7 @@
 		<key>PATH</key>
 		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
 		<key>ANTHROPIC_API_KEY</key>
-		<string>sk-ant-</string>
+		<string>YOUR_ANTHROPIC_API_KEY_HERE</string>
 	</dict>
 
 	<!-- Remove the job if it fails too many times -->

@@ -44,7 +44,7 @@ cp .env.example .env
 
 Then edit `.env`:
 ```env
-ANTHROPIC_API_KEY=sk-ant-YOUR_KEY_HERE
+ANTHROPIC_API_KEY=sk-ant-YOUR_ANTHROPIC_API_KEY_HERE
 BING_WEBMASTER_API_KEY=YOUR_BING_API_KEY  # Optional
 ```
 
