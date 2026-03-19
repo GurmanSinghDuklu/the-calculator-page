@@ -75,6 +75,13 @@ const PercentageCalculator = () => {
     { key: "change",       label: "% Change",     sub: "Increase or decrease" },
   ];
 
+  const faqSchema = [
+    { question: "How do I calculate a percentage of a number?", answer: "Multiply the number by the percentage and divide by 100. For example, 15% of 200 = 200 × 15 / 100 = 30." },
+    { question: "How do I find what percentage one number is of another?", answer: "Divide the part by the whole and multiply by 100. For example, 30 is what percent of 200? 30 / 200 × 100 = 15%." },
+    { question: "How do I calculate a percentage increase?", answer: "Percentage increase = ((New Value - Old Value) / Old Value) × 100. For example, from £80 to £100 is a 25% increase." },
+    { question: "How do I add a percentage to a number?", answer: "New Value = Original Value × (1 + Percentage / 100). To add 20% to £50: £50 × 1.20 = £60." }
+  ];
+
   return (
     <>
       <SEO
@@ -82,6 +89,7 @@ const PercentageCalculator = () => {
         description="Free online percentage calculator. Calculate percentage of a number, percentage increase, percentage decrease, and find what percent one number is of another."
         keywords="percentage calculator, percent calculator, percentage increase calculator"
         structuredData={[structuredData, breadcrumbStructuredData]}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

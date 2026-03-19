@@ -52,6 +52,13 @@ const PercentageOfCalculator = () => {
 
   const inputClass = "bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-xl font-medium text-center focus:outline-none transition-all";
 
+  const faqSchema = [
+    { question: "What does 'percentage of' mean?", answer: "Percentage of means finding a portion of a whole expressed as a fraction of 100. '15% of 200' means 15 hundredths of 200, which equals 30." },
+    { question: "How do I find the percentage of a total?", answer: "Multiply the total by the percentage and divide by 100. For example, 30% of £450 = 450 × 30 / 100 = £135." },
+    { question: "How do percentages apply to VAT calculations?", answer: "To find the VAT amount, multiply the price by the VAT rate (e.g. 20%). To find the pre-VAT price from a VAT-inclusive price, divide by 1.20 for 20% VAT." },
+    { question: "How do I calculate a percentage of a budget?", answer: "Divide the category spend by the total budget and multiply by 100. For example, spending £300 of a £1,500 budget on food is 300 / 1500 × 100 = 20%." }
+  ];
+
   return (
     <>
       <SEO
@@ -59,6 +66,7 @@ const PercentageOfCalculator = () => {
         description="Instantly calculate what percentage of any number is. Simple, fast percentage calculator."
         keywords="percentage of calculator, what is percent of, calculate percentage, percentage calculator, math calculator"
         canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-of"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

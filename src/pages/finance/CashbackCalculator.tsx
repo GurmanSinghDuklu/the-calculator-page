@@ -66,6 +66,13 @@ export default function CashbackCalculator() {
   const sym = currencies[currency].symbol;
   const seo = seoData["/finance/cashback"];
 
+  const faqSchema = [
+    { question: "How does cashback work?", answer: "Cashback rewards give you a percentage of your spending back as cash. For example, a 2% cashback card returns £2 for every £100 spent. Rewards are usually paid monthly or annually." },
+    { question: "Is cashback worth it?", answer: "Yes, if you pay your balance in full each month. If you carry a balance, the interest charges typically outweigh any cashback earned. Always clear the full balance to benefit." },
+    { question: "What is a good cashback rate?", answer: "Cashback rates typically range from 0.5% to 5%. Premium cards with annual fees may offer higher rates. Calculate whether the cashback earned exceeds any annual fee." },
+    { question: "How do I calculate my annual cashback earnings?", answer: "Multiply your total annual spending by the cashback percentage. For example, £12,000 spent at 1.5% cashback earns £180 per year." }
+  ];
+
   const categories = [
     { label: "Groceries",         spend: groceries,  setSpend: setGroceries,  rate: groceriesRate, setRate: setGroceriesRate },
     { label: "Gas / Fuel",        spend: gas,        setSpend: setGas,        rate: gasRate,       setRate: setGasRate },
@@ -80,6 +87,7 @@ export default function CashbackCalculator() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/cashback`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

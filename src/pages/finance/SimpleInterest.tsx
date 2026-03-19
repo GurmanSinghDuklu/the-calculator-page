@@ -29,12 +29,20 @@ const SimpleInterest = () => {
   const principalPct = result ? (parseFloat(principal) / result.totalAmount) * 100 : 0;
   const interestPct  = result ? (result.interest       / result.totalAmount) * 100 : 0;
 
+  const faqSchema = [
+    { question: "What is the simple interest formula?", answer: "Simple interest is calculated as: Interest = Principal × Rate × Time. For example, £1,000 at 5% for 3 years earns £150 in simple interest." },
+    { question: "What is the difference between simple and compound interest?", answer: "Simple interest is calculated only on the principal amount. Compound interest is calculated on the principal plus any accumulated interest, resulting in faster growth over time." },
+    { question: "When is simple interest used?", answer: "Simple interest is commonly used for short-term loans, car loans, and some personal loans. It is also used in savings bonds and treasury bills." },
+    { question: "How do I calculate the total amount with simple interest?", answer: "Total Amount = Principal + (Principal × Rate × Time). So £1,000 at 5% for 2 years gives a total of £1,100." }
+  ];
+
   return (
     <>
       <SEO
         title="Simple Interest Calculator - Calculate Interest Earned"
         description="Free simple interest calculator to calculate interest on loans and investments. Find interest amount and total value."
         keywords="simple interest calculator, simple interest formula, calculate simple interest"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

@@ -33,6 +33,13 @@ export default function FutureHouseValue() {
   const seo = seoData["/finance/future-house-value"];
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "How do you calculate future house value?", answer: "Future value = Current value × (1 + annual growth rate)^years. For example, a £300,000 home growing at 3% per year will be worth approximately £402,000 in 10 years." },
+    { question: "What is the average UK house price growth rate?", answer: "UK house prices have historically grown at roughly 3-5% per year on average, though this varies significantly by region and economic conditions. Past performance does not guarantee future returns." },
+    { question: "Does house price inflation beat savings account interest?", answer: "Over the long term, UK property has often outperformed savings rates, but it varies by location and period. Property also comes with costs like mortgage interest, maintenance, and stamp duty." },
+    { question: "Why is predicting future house prices difficult?", answer: "House prices are affected by interest rates, supply and demand, economic conditions, government policy, and local factors. Future value calculators provide estimates, not guarantees." }
+  ];
+
   return (
     <>
       <SEO
@@ -40,6 +47,7 @@ export default function FutureHouseValue() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/future-house-value`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

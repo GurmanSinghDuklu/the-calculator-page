@@ -69,6 +69,13 @@ export default function MortgageOverpayment() {
 
   const result = mode === "regular" ? regularResult : lumpResult;
 
+  const faqSchema = [
+    { question: "How do mortgage overpayments work?", answer: "Overpaying your mortgage means paying more than your required monthly amount. The extra payment reduces your outstanding balance, lowering the total interest you pay and shortening your mortgage term." },
+    { question: "How much can I overpay on my mortgage?", answer: "Most lenders allow overpayments of up to 10% of your outstanding balance per year without penalty. Check your mortgage terms before overpaying to avoid early repayment charges." },
+    { question: "Is it worth overpaying my mortgage?", answer: "Yes, in most cases. Overpaying reduces your loan balance faster, saving you significant interest over the life of the mortgage. Even small regular overpayments can save thousands of pounds." },
+    { question: "Does overpaying reduce my monthly payment or my term?", answer: "This depends on your lender. Some reduce your term (keeping payments the same), others reduce your monthly payment. Reducing the term saves more interest overall." }
+  ];
+
   return (
     <>
       <SEO
@@ -76,6 +83,7 @@ export default function MortgageOverpayment() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/mortgage-overpayment`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

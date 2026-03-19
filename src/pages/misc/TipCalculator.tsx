@@ -37,12 +37,20 @@ const TipCalculator = () => {
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
   const people = parseInt(numPeople);
 
+  const faqSchema = [
+    { question: "How much should I tip at a restaurant?", answer: "In the UK, tipping 10-15% for good service is standard. In the US, 15-20% is expected. Check your bill first as some restaurants add a service charge automatically." },
+    { question: "Should I tip on the pre-tax or post-tax amount?", answer: "In the UK, tipping on the pre-tax total is common. In the US, most people tip on the pre-tax amount, though some tip on the full bill. Either is acceptable." },
+    { question: "How do I split a bill equally?", answer: "Divide the total bill (including tip) by the number of people. Use a tip calculator to include the tip before splitting so everyone pays their fair share including gratuity." },
+    { question: "Do I have to tip in the UK?", answer: "Tipping is not legally required in the UK, but it is customary to tip for good service in restaurants, taxis, and hair salons. A 10% tip is widely considered standard." }
+  ];
+
   return (
     <>
       <SEO
         title="Tip Calculator - Calculate Tips & Split Bills"
         description="Free tip calculator to calculate restaurant tips and split bills. Choose from preset tip percentages or customize your own."
         keywords="tip calculator, tip calculator restaurant, calculate tip, split bill calculator, gratuity calculator"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

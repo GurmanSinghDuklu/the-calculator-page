@@ -52,6 +52,13 @@ export default function IrrCalculator() {
   const seo = seoData["/finance/irr"];
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "What is IRR (Internal Rate of Return)?", answer: "IRR is the discount rate that makes the net present value (NPV) of all cash flows from an investment equal to zero. It represents the expected annual rate of return on an investment." },
+    { question: "How is IRR used in investment decisions?", answer: "If an investment's IRR exceeds the required rate of return or cost of capital, it is considered financially attractive. Investors compare IRR across projects to prioritise the best opportunities." },
+    { question: "What is a good IRR?", answer: "A good IRR depends on the asset class and risk level. For real estate, 8-12% is often considered strong. For private equity, 15-25% is typical. It must exceed your cost of capital to add value." },
+    { question: "What is the difference between IRR and ROI?", answer: "ROI measures total return as a percentage of the original investment, without accounting for time. IRR accounts for the timing and magnitude of cash flows, making it a more precise measure for multi-period investments." }
+  ];
+
   return (
     <>
       <SEO
@@ -59,6 +66,7 @@ export default function IrrCalculator() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/irr`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

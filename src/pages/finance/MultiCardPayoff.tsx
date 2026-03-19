@@ -194,10 +194,17 @@ export default function MultiCardPayoff() {
   const chartData = result?.schedule.slice(0, 200).map(s => ({ month: s.month, balance: s.totalBalance })) || [];
   const seo = seoData["/finance/multi-card-payoff"];
 
+  const faqSchema = [
+    { question: "What is the best strategy to pay off multiple credit cards?", answer: "Two popular strategies are the avalanche method (pay highest interest first to save the most money) and the snowball method (pay smallest balance first for psychological wins). The avalanche method saves more in interest." },
+    { question: "Should I consolidate my credit card debt?", answer: "Debt consolidation can simplify payments and reduce interest if you qualify for a lower rate. Compare the consolidation loan rate to your existing card rates before deciding." },
+    { question: "How long will it take to pay off my credit cards?", answer: "It depends on your balances, interest rates, and monthly payments. Use a multi-card payoff calculator to see exact timelines and total interest under different payment strategies." },
+    { question: "What happens if I only make minimum payments?", answer: "Minimum payments extend your repayment timeline significantly and result in paying much more interest overall. Even small additional payments make a large difference to the total cost." }
+  ];
+
   return (
     <>
       <SEO title={seo.title} description={seo.description} keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/multi-card-payoff`} />
+        canonicalUrl={`https://www.thecalculatorpage.com/finance/multi-card-payoff`} faqSchema={faqSchema} />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
 

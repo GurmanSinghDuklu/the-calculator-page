@@ -39,12 +39,20 @@ const AgeCalculator = () => {
   // date input dark styling via inline + onFocus trick
   const dateInputClass = "w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all [color-scheme:dark]";
 
+  const faqSchema = [
+    { question: "How do I calculate my exact age?", answer: "Subtract your birth date from today's date. Account for whether the anniversary month and day have passed this year to determine if you have had your birthday yet." },
+    { question: "How many days old am I?", answer: "Multiply your age in years by 365 and add the days since your last birthday. Our age calculator accounts for leap years to give you an accurate day count." },
+    { question: "What is the difference between chronological age and biological age?", answer: "Chronological age is the number of years since birth. Biological age reflects your body's health and fitness level, which may be younger or older than your chronological age." },
+    { question: "How do I calculate age from a date of birth?", answer: "Subtract the birth year from the current year, then adjust by -1 if the birthday has not yet occurred this year. For example, born in 1990, current year 2026: age is 35 if birthday has passed, or 35 if not yet." }
+  ];
+
   return (
     <>
       <SEO
         title="Age Calculator - Calculate Your Exact Age"
         description="Free age calculator to find your exact age in years, months, and days. Calculate age from date of birth."
         keywords="age calculator, calculate age, how old am i, age calculator from date of birth"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

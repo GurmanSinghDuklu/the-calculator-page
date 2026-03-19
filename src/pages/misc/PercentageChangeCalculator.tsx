@@ -56,6 +56,13 @@ const PercentageChangeCalculator = () => {
 
   const inputClass = "bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-xl font-medium text-center focus:outline-none transition-all w-28";
 
+  const faqSchema = [
+    { question: "How do I calculate percentage change?", answer: "Percentage Change = ((New Value - Old Value) / |Old Value|) × 100. A positive result is an increase; a negative result is a decrease." },
+    { question: "What is the difference between percentage change and percentage difference?", answer: "Percentage change measures how a value has changed from a starting point. Percentage difference compares two values without implying direction, using the average as the base." },
+    { question: "How do I calculate a percentage decrease?", answer: "Percentage Decrease = ((Old Value - New Value) / Old Value) × 100. For example, from £200 to £150 is a 25% decrease." },
+    { question: "Can percentage change be more than 100%?", answer: "Yes. If a value doubles, that is a 100% increase. If it triples, that is a 200% increase. Percentage change has no upper limit for increases." }
+  ];
+
   return (
     <>
       <SEO
@@ -63,6 +70,7 @@ const PercentageChangeCalculator = () => {
         description="Calculate percentage increase or decrease instantly. What is X% increase or decrease of Y?"
         keywords="percentage increase calculator, percentage decrease calculator, calculate percentage change, percent increase, percent decrease"
         canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-change"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

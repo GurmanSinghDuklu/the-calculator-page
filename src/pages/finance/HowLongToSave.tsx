@@ -47,6 +47,13 @@ export default function HowLongToSave() {
   const selectClass = "w-full bg-black/40 border-white/10 text-white rounded-lg";
   const selectContentClass = "bg-[#1C1A1A] border-white/10 text-white";
 
+  const faqSchema = [
+    { question: "How do I calculate how long it will take to save a target amount?", answer: "Divide your savings goal by your monthly contribution to estimate months needed (without interest). With interest, use the future value formula to get a more accurate timeline." },
+    { question: "How does compound interest affect my savings timeline?", answer: "Compound interest accelerates your savings by earning interest on your interest. The higher the rate and the more frequently it compounds, the shorter your saving timeline will be." },
+    { question: "What savings rate is realistic?", answer: "Typical savings account rates in the UK range from 2-6% AER. ISAs and fixed-rate bonds often offer higher rates. Shop around to maximise your return." },
+    { question: "Is it better to save a lump sum or monthly?", answer: "Both are effective. Regular monthly contributions benefit from pound-cost averaging and are easier to sustain. A lump sum starts compounding immediately. A mix of both is often optimal." }
+  ];
+
   return (
     <>
       <SEO
@@ -54,6 +61,7 @@ export default function HowLongToSave() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/how-long-to-save`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

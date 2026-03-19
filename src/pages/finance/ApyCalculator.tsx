@@ -31,12 +31,20 @@ export default function ApyCalculator() {
 
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "What is APY?", answer: "APY stands for Annual Percentage Yield. It represents the real rate of return on an investment, taking into account the effect of compounding interest over a year." },
+    { question: "What is the difference between APY and APR?", answer: "APR (Annual Percentage Rate) is the simple annual interest rate without compounding. APY factors in compounding, so it is always higher than or equal to APR." },
+    { question: "How is APY calculated?", answer: "APY = (1 + r/n)^n - 1, where r is the annual interest rate and n is the number of compounding periods per year." },
+    { question: "Why does APY matter for savings accounts?", answer: "APY tells you exactly how much interest you will earn in a year. Comparing APY across accounts gives a true like-for-like comparison of returns." }
+  ];
+
   return (
     <>
       <SEO
         title="APY Calculator - Calculate Annual Percentage Yield"
         description="Free APY calculator to find your effective annual percentage yield based on nominal interest rate and compounding frequency."
         keywords="apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate calculator"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

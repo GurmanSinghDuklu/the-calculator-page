@@ -52,12 +52,20 @@ const SavingsCalculator = () => {
   const depositsPct  = result ? (result.totalDeposits  / result.finalBalance) * 100 : 0;
   const interestPct  = result ? (result.totalInterest  / result.finalBalance) * 100 : 0;
 
+  const faqSchema = [
+    { question: "How do I calculate savings growth?", answer: "Savings growth is calculated using compound interest. Multiply your principal by (1 + interest rate / compounding periods) raised to the power of total compounding periods." },
+    { question: "How often should savings compound?", answer: "Most savings accounts compound monthly or daily. The more frequently interest compounds, the faster your savings grow due to interest being earned on interest." },
+    { question: "How much should I save each month?", answer: "A common guideline is to save at least 20% of your income. Use a savings calculator to set a specific goal and work backwards to find the monthly deposit needed." },
+    { question: "What is the difference between APR and APY for savings?", answer: "APR is the nominal annual rate, while APY (Annual Percentage Yield) reflects the actual return after compounding. APY is always equal to or higher than APR." }
+  ];
+
   return (
     <>
       <SEO
         title="Savings Calculator - Calculate Your Savings Growth"
         description="Free savings calculator to plan your savings goals. See how your money grows with compound interest, regular deposits, and different compounding frequencies."
         keywords="savings calculator, savings account calculator, compound savings calculator, savings goal calculator"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

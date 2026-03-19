@@ -128,12 +128,20 @@ const DateCalculator = () => {
     );
   }
 
+  const faqSchema = [
+    { question: "How do I calculate the number of days between two dates?", answer: "Subtract the earlier date from the later date. Most calculators automatically handle months of different lengths and leap years to give an accurate count." },
+    { question: "How many working days are between two dates?", answer: "Subtract weekends and public holidays from the total day count. A date calculator can do this automatically if you specify your country's public holiday schedule." },
+    { question: "How do I add or subtract days from a date?", answer: "Start with your date, add or subtract the number of days, and roll over months and years as needed. For example, 30 days after 15 January 2026 is 14 February 2026." },
+    { question: "What is the difference between calendar days and business days?", answer: "Calendar days count every day including weekends and holidays. Business days count only Monday to Friday, excluding public holidays. The distinction matters for deadlines and contracts." }
+  ];
+
   return (
     <>
       <SEO
         title="Date Calculator - Add, Subtract & Compare Dates"
         description="Free date calculator to add or subtract days, weeks, months from any date. Calculate the difference between two dates."
         keywords="date calculator, date difference calculator, add days to date, subtract dates"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

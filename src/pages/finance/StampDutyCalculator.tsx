@@ -118,6 +118,13 @@ const StampDutyCalculator = () => {
 
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "What is Stamp Duty Land Tax (SDLT)?", answer: "Stamp Duty Land Tax is a tax paid when buying property or land in England and Northern Ireland. The amount depends on the purchase price and whether you are a first-time buyer." },
+    { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £425,000. Between £425,001 and £625,000 they pay 5%. Properties above £625,000 do not qualify for first-time buyer relief." },
+    { question: "When do I pay stamp duty?", answer: "Stamp duty must be paid within 14 days of completing your property purchase. Your solicitor or conveyancer usually handles the payment on your behalf." },
+    { question: "Do I pay stamp duty on a second home?", answer: "Yes, there is a 3% surcharge on top of standard stamp duty rates for second homes and buy-to-let properties in England and Northern Ireland." }
+  ];
+
   return (
     <>
       <SEO
@@ -125,6 +132,7 @@ const StampDutyCalculator = () => {
         description="Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland."
         keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
         canonicalUrl="https://www.thecalculatorpage.com/finance/stamp-duty"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

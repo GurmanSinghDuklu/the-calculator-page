@@ -25,12 +25,20 @@ const DiscountCalculator = () => {
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
   const savingsPct = result ? ((result.savings / parseFloat(originalPrice)) * 100).toFixed(1) : "0";
 
+  const faqSchema = [
+    { question: "How do I calculate a percentage discount?", answer: "Discount Amount = Original Price × (Discount % / 100). Discounted Price = Original Price - Discount Amount. For example, 20% off £50 = £10 discount, final price £40." },
+    { question: "What is the difference between a discount and a sale price?", answer: "The discount is the amount saved, while the sale price is what you actually pay. Sale Price = Original Price × (1 - Discount Rate). Both terms are related but describe different things." },
+    { question: "How do stacked discounts work?", answer: "Stacked discounts apply sequentially, not additively. A 20% discount followed by a 10% discount gives 28% off total, not 30%, because the second discount applies to the already-reduced price." },
+    { question: "How do I calculate the original price from a discounted price?", answer: "Original Price = Discounted Price / (1 - Discount Rate). For example, if you paid £80 after a 20% discount, the original price was £80 / 0.8 = £100." }
+  ];
+
   return (
     <>
       <SEO
         title="Discount Calculator - Calculate Sale Price & Savings"
         description="Free discount calculator to find sale prices and savings. Calculate percentage discounts instantly."
         keywords="discount calculator, sale price calculator, percentage off calculator, discount percentage calculator"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

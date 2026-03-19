@@ -52,6 +52,13 @@ const WeeklyMortgageCalculator = () => {
   const symbol = currencySymbols[currency] || "£";
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "Does paying my mortgage weekly save money?", answer: "Yes. Making weekly payments means you make the equivalent of 13 monthly payments per year instead of 12. This reduces your principal faster, saving interest and shortening your mortgage term." },
+    { question: "How do I calculate weekly mortgage payments?", answer: "Divide your annual mortgage payment by 52 to get the weekly amount. Some lenders offer true weekly payment schedules that further accelerate payoff." },
+    { question: "What is the difference between bi-weekly and weekly mortgage payments?", answer: "Bi-weekly payments are made every two weeks (26 half-payments = 13 full payments per year). Weekly payments are made 52 times a year. Both save interest compared to monthly payments." },
+    { question: "Will my lender accept weekly mortgage payments?", answer: "Not all lenders accept weekly payments. Check with your lender or mortgage provider to confirm they support this payment frequency before switching." }
+  ];
+
   const calculate = () => {
     const P    = parseFloat(mortgageAmount.replace(/,/g, ""));
     const rate = parseFloat(interestRate);
@@ -90,6 +97,7 @@ const WeeklyMortgageCalculator = () => {
         description="Calculate how switching to weekly mortgage payments can save you thousands in interest and years off your mortgage."
         keywords="weekly mortgage payments, mortgage calculator UK, pay off mortgage faster, mortgage interest savings"
         canonicalUrl="https://www.thecalculatorpage.com/finance/weekly-mortgage"
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

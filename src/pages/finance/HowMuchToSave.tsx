@@ -48,6 +48,13 @@ export default function HowMuchToSave() {
   const selectClass = "w-full bg-black/40 border-white/10 text-white rounded-lg";
   const selectContentClass = "bg-[#1C1A1A] border-white/10 text-white";
 
+  const faqSchema = [
+    { question: "How much should I save for a house deposit?", answer: "Most mortgage lenders require a minimum deposit of 5-10% of the property price. A 20% deposit or more gives you access to better mortgage rates and lower monthly payments." },
+    { question: "How do I calculate how much I need to save?", answer: "Subtract your current savings from your target amount, then divide by the number of months you have to save. This gives your required monthly saving amount." },
+    { question: "What is a good savings goal?", answer: "A good savings goal is specific, measurable, and time-bound. Common goals include an emergency fund (3-6 months of expenses), a house deposit, or a retirement pot." },
+    { question: "How can I save money faster?", answer: "Increase income or reduce expenses, automate regular transfers to savings, take advantage of high-interest savings accounts or ISAs, and avoid unnecessary debt." }
+  ];
+
   return (
     <>
       <SEO
@@ -55,6 +62,7 @@ export default function HowMuchToSave() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/how-much-to-save`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

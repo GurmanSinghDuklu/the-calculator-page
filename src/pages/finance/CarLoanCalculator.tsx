@@ -43,6 +43,13 @@ export default function CarLoanCalculator() {
   const seo = seoData["/finance/car-loan"];
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
+  const faqSchema = [
+    { question: "How is a car loan monthly payment calculated?", answer: "Monthly payment = [P × r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount, r is the monthly interest rate, and n is the number of months." },
+    { question: "What is a good interest rate for a car loan?", answer: "A good car loan rate depends on your credit score and the lender. In the UK, rates typically range from 4% to 14% APR. The better your credit score, the lower the rate." },
+    { question: "Should I put a deposit down on a car loan?", answer: "Yes, a larger deposit reduces the loan amount, lowering your monthly payments and total interest paid. Most lenders recommend at least 10-20% deposit." },
+    { question: "What is the total cost of a car loan?", answer: "Total cost = total monthly payments + any fees - deposit. Use a car loan calculator to compare different terms and interest rates to find the most affordable option." }
+  ];
+
   return (
     <>
       <SEO
@@ -50,6 +57,7 @@ export default function CarLoanCalculator() {
         description={seo.description}
         keywords={seo.keywords}
         canonicalUrl={`https://www.thecalculatorpage.com/finance/car-loan`}
+        faqSchema={faqSchema}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
