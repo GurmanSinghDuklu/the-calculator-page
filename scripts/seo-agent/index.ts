@@ -14,6 +14,7 @@ import { writeSEOData, readSEOData, getOptimizedPageCount } from './utils/seo-da
 import { updateSitemapDates } from './utils/sitemap-updater.js';
 import { logger } from './utils/logger.js';
 import { getPageCount } from './config.js';
+import { sendWeeklyReport } from './utils/email-reporter.js';
 
 // Load environment variables
 config();
@@ -102,6 +103,17 @@ async function runSEOAgent() {
       logger.info('✓ Changes pushed to GitHub');
     } catch (gitError) {
       logger.warn('Git push failed (no changes or network issue)', { error: gitError });
+    }
+
+    // Phase 6: Send weekly email report (Sundays only)
+    if (new Date().getDay() === 0) {
+      logger.info('📧 Phase 6: Sending Weekly Email Report');
+      try {
+        await sendWeeklyReport();
+        logger.info('✓ Weekly report emailed');
+      } catch (emailError) {
+        logger.warn('Weekly email failed — check EMAIL_USER and EMAIL_APP_PASSWORD in .env', { error: emailError });
+      }
     }
 
   } catch (error) {
