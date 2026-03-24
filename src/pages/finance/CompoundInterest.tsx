@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 const ACCENT = "#3B82F6";
 
@@ -373,6 +374,11 @@ const CompoundInterest = () => {
                       <span className="text-white/30 text-xs font-heading uppercase tracking-widest">Interest Earned</span>
                       <span className="font-heading" style={{ color: ACCENT }}>{sym}{result.totalInterest.toLocaleString()}</span>
                     </div>
+                    <CopyButton accentColor={ACCENT} results={[
+                      { label: "Future Value", value: `${sym}${result.futureValue.toLocaleString()}` },
+                      { label: "Total Contributions", value: `${sym}${result.totalContributions.toLocaleString()}` },
+                      { label: "Interest Earned", value: `${sym}${result.totalInterest.toLocaleString()}` },
+                    ]} />
                   </div>
                 )}
 

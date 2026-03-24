@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -111,6 +112,11 @@ const DiscountCalculator = () => {
                     🎉 You're saving {savingsPct}% on this purchase!
                   </p>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Final Price", value: `${sym}${result.finalPrice.toLocaleString()}` },
+                  { label: "You Save", value: `${sym}${result.savings.toLocaleString()}` },
+                  { label: "Discount", value: `${discountPercent}% OFF` },
+                ]} />
               </div>
             )}
           </div>

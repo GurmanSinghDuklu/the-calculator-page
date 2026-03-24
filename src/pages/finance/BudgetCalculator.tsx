@@ -4,6 +4,7 @@ import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { Plus, Trash2, ArrowRight, Wallet } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ──────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -297,6 +298,12 @@ export default function BudgetCalculator() {
                   </ResponsiveContainer>
                 </div>
               </div>
+
+              <CopyButton accentColor={ACCENT} results={[
+                { label: "Total Income", value: `£${totalIncome.toFixed(2)}` },
+                { label: "Total Expenses", value: `£${totalExpenses.toFixed(2)}` },
+                { label: "Remaining Balance", value: `${remainingBalance >= 0 ? "+" : ""}£${remainingBalance.toFixed(2)}` },
+              ]} />
 
               {expenseCategories.length > 0 && (
                 <div className="bg-[#252323]/80 border border-white/10 rounded-2xl p-6 md:p-8">

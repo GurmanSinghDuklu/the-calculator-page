@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, Percent } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -114,6 +115,11 @@ export default function ApyCalculator() {
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">Compounding</p>
                   <p className="font-display text-xl text-white capitalize">{FREQ_LABELS[compounding]}</p>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "APY", value: `${(result.apy * 100).toFixed(4)}%` },
+                  { label: "Nominal Rate (APR)", value: `${nominalRate}%` },
+                  { label: "Compounding", value: FREQ_LABELS[compounding] },
+                ]} />
               </div>
             )}
           </div>

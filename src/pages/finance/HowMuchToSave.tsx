@@ -5,6 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, Target } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -149,6 +150,11 @@ export default function HowMuchToSave() {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: `${frequencyLabel} Contribution`, value: `${sym}${result.periodicContribution.toFixed(2)}` },
+                  { label: "Total Contributions", value: `${sym}${result.totalContributions.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "Interest Earned", value: `${sym}${result.totalInterest.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                ]} />
               </div>
             )}
           </div>

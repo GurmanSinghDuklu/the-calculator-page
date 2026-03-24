@@ -7,6 +7,7 @@ import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
 import { ArrowRight, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -206,6 +207,11 @@ const LoanCalculator = () => {
                     </span>
                   </div>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Monthly Payment", value: `${sym}${result.monthlyPayment.toLocaleString()}` },
+                  { label: "Total Payment", value: `${sym}${result.totalPayment.toLocaleString()}` },
+                  { label: "Total Interest", value: `${sym}${result.totalInterest.toLocaleString()}` },
+                ]} />
               </div>
             )}
           </div>

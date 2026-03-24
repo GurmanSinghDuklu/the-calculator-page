@@ -5,6 +5,7 @@ import { CurrencySelector, Currency } from "@/components/CurrencySelector";
 import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -184,6 +185,12 @@ const WeeklyMortgageCalculator = () => {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Interest Saved", value: `${symbol}${fmt0(result.interestSaved)}` },
+                  { label: "Time Saved", value: `${result.yearsSaved > 0 ? `${result.yearsSaved} yrs ` : ""}${result.monthsSaved > 0 ? `${result.monthsSaved} mo` : ""}` },
+                  { label: "Weekly Payment", value: `${symbol}${fmt(result.weeklySimple)}` },
+                  { label: "Monthly Payment", value: `${symbol}${fmt(result.monthlyPayment)}` },
+                ]} />
               </div>
             )}
           </div>

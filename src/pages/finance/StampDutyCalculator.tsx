@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -208,18 +209,25 @@ const StampDutyCalculator = () => {
 
             {/* Summary stats if result exists */}
             {result && price > 0 && (
-              <div className="mt-8 grid grid-cols-2 gap-3">
-                {[
-                  { label: "Stamp Duty",    value: formatCurrency(result.totalTax) },
+              <div className="mt-8 space-y-3">
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { label: "Stamp Duty",    value: formatCurrency(result.totalTax) },
+                    { label: "Effective Rate", value: `${result.effectiveRate.toFixed(2)}%` },
+                    { label: "Property Price", value: formatCurrency(price) },
+                    { label: "Total Cost",     value: formatCurrency(price + result.totalTax) },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-lg text-white">{value}</p>
+                    </div>
+                  ))}
+                </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Stamp Duty", value: formatCurrency(result.totalTax) },
                   { label: "Effective Rate", value: `${result.effectiveRate.toFixed(2)}%` },
-                  { label: "Property Price", value: formatCurrency(price) },
-                  { label: "Total Cost",     value: formatCurrency(price + result.totalTax) },
-                ].map(({ label, value }) => (
-                  <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
-                    <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
-                    <p className="font-display text-lg text-white">{value}</p>
-                  </div>
-                ))}
+                  { label: "Total Cost", value: formatCurrency(price + result.totalTax) },
+                ]} />
               </div>
             )}
           </div>

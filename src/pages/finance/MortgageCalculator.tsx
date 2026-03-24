@@ -7,6 +7,7 @@ import { mortgageSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { Home, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316"; // accent-orange
@@ -143,18 +144,26 @@ const MortgageCalculator = () => {
 
             {/* Quick stats if result exists */}
             {result && (
-              <div className="mt-10 grid grid-cols-2 gap-4">
-                {[
-                  { label: "Loan Amount",     value: `${sym}${result.loanAmount.toLocaleString()}` },
-                  { label: "Total Interest",  value: `${sym}${result.totalInterest.toLocaleString()}` },
-                  { label: "Total Payment",   value: `${sym}${result.totalPayment.toLocaleString()}` },
-                  { label: "Down Payment",    value: `${downPct}%` },
-                ].map(({ label, value }) => (
-                  <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
-                    <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
-                    <p className="font-display text-xl text-white">{value}</p>
-                  </div>
-                ))}
+              <div className="mt-10 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "Loan Amount",     value: `${sym}${result.loanAmount.toLocaleString()}` },
+                    { label: "Total Interest",  value: `${sym}${result.totalInterest.toLocaleString()}` },
+                    { label: "Total Payment",   value: `${sym}${result.totalPayment.toLocaleString()}` },
+                    { label: "Down Payment",    value: `${downPct}%` },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-xl text-white">{value}</p>
+                    </div>
+                  ))}
+                </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Monthly Payment", value: `${sym}${result.monthlyPayment.toLocaleString()}` },
+                  { label: "Total Payment", value: `${sym}${result.totalPayment.toLocaleString()}` },
+                  { label: "Total Interest", value: `${sym}${result.totalInterest.toLocaleString()}` },
+                  { label: "Loan Amount", value: `${sym}${result.loanAmount.toLocaleString()}` },
+                ]} />
               </div>
             )}
           </div>

@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -141,6 +142,11 @@ const PercentageOfCalculator = () => {
                 <p className="text-white/25 font-sans text-sm mt-4">
                   {percentage}% of {number} = {result.toLocaleString(undefined, { maximumFractionDigits: 6 })}
                 </p>
+                <div className="flex justify-center mt-4">
+                  <CopyButton accentColor={ACCENT} results={[
+                    { label: `${percentage}% of ${number}`, value: result.toLocaleString(undefined, { maximumFractionDigits: 6 }) },
+                  ]} />
+                </div>
               </div>
             )}
 

@@ -4,6 +4,7 @@ import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, CreditCard } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -142,18 +143,25 @@ export default function CashbackCalculator() {
 
             {/* Result stats on left */}
             {result && (
-              <div className="mt-10 grid grid-cols-2 gap-4">
-                {[
-                  { label: "Total Spending",        value: `${sym}${result.totalSpending.toFixed(2)}` },
-                  { label: "Total Cashback",        value: `${sym}${result.totalCashback.toFixed(2)}` },
-                  { label: "Net Cashback",          value: `${sym}${result.netCashback.toFixed(2)}` },
-                  { label: "Effective Rate",        value: `${result.netRate.toFixed(2)}%` },
-                ].map(({ label, value }) => (
-                  <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
-                    <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
-                    <p className="font-display text-xl text-white">{value}</p>
-                  </div>
-                ))}
+              <div className="mt-10 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "Total Spending",        value: `${sym}${result.totalSpending.toFixed(2)}` },
+                    { label: "Total Cashback",        value: `${sym}${result.totalCashback.toFixed(2)}` },
+                    { label: "Net Cashback",          value: `${sym}${result.netCashback.toFixed(2)}` },
+                    { label: "Effective Rate",        value: `${result.netRate.toFixed(2)}%` },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-xl text-white">{value}</p>
+                    </div>
+                  ))}
+                </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Net Cashback", value: `${sym}${result.netCashback.toFixed(2)}` },
+                  { label: "Total Cashback", value: `${sym}${result.totalCashback.toFixed(2)}` },
+                  { label: "Effective Rate", value: `${result.netRate.toFixed(2)}%` },
+                ]} />
               </div>
             )}
           </div>

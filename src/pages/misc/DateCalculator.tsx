@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -86,6 +87,9 @@ const DateCalculator = () => {
           </p>
           <p className="text-xs text-white/25 font-sans mt-2">{addResult}</p>
         </div>
+        <CopyButton accentColor={ACCENT} results={[
+          { label: "Result Date", value: addResult },
+        ]} />
       </div>
     );
   }
@@ -109,6 +113,12 @@ const DateCalculator = () => {
             </div>
           ))}
         </div>
+        <CopyButton accentColor={ACCENT} results={[
+          { label: "Days Between", value: diffResult.days.toLocaleString() },
+          { label: "Weeks", value: diffResult.weeks.toLocaleString() },
+          { label: "Months", value: diffResult.months.toLocaleString() },
+          { label: "Years", value: diffResult.years.toLocaleString() },
+        ]} />
       </div>
     );
   }
@@ -124,6 +134,9 @@ const DateCalculator = () => {
             {fromTodayResult >= 0 ? `${Math.abs(fromTodayResult)} days from today` : `${Math.abs(fromTodayResult)} days ago`}
           </p>
         </div>
+        <CopyButton accentColor={ACCENT} results={[
+          { label: fromTodayResult >= 0 ? "Days Until" : "Days Since", value: `${Math.abs(fromTodayResult)} days` },
+        ]} />
       </div>
     );
   }

@@ -6,6 +6,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Plus, Trash2, Download, Target } from "lucide-react";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -375,6 +376,12 @@ export default function MultiCardPayoff() {
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
+
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Months to Pay Off", value: `${result.months}` },
+                  { label: "Total Interest", value: `£${result.totalInterestAll.toLocaleString(undefined, { maximumFractionDigits: 2 })}` },
+                  { label: "Total Paid", value: `£${result.totalPaidAll.toLocaleString(undefined, { maximumFractionDigits: 2 })}` },
+                ]} />
 
                 {/* Action buttons */}
                 <div className="flex gap-3 mt-5">

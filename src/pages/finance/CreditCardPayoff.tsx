@@ -7,6 +7,7 @@ import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
 import { ArrowRight, CreditCard } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -178,6 +179,12 @@ export default function CreditCardPayoff() {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Months to Pay Off", value: `${Math.ceil(result.monthsToPayoff)}` },
+                  { label: "Time to Pay Off", value: `${(result.monthsToPayoff / 12).toFixed(1)} years` },
+                  { label: "Total Interest", value: `${sym}${result.totalInterest.toFixed(2)}` },
+                  { label: "Total Paid", value: `${sym}${result.totalPaid.toFixed(2)}` },
+                ]} />
               </div>
             )}
           </div>

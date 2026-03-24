@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, Percent } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -136,6 +137,11 @@ const SimpleInterest = () => {
                     </span>
                   </div>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Total Amount", value: `${sym}${result.totalAmount.toLocaleString()}` },
+                  { label: "Interest Earned", value: `${sym}${result.interest.toLocaleString()}` },
+                  { label: "Principal", value: `${sym}${parseFloat(principal).toLocaleString()}` },
+                ]} />
               </div>
             )}
           </div>

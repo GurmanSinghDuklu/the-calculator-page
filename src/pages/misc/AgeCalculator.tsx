@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -120,6 +121,11 @@ const AgeCalculator = () => {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Age", value: `${result.years} years, ${result.months} months, ${result.days} days` },
+                  { label: "Total Months", value: `${result.totalMonths.toLocaleString()} months` },
+                  { label: "Total Days", value: `${result.totalDays.toLocaleString()} days` },
+                ]} />
               </div>
             )}
           </div>

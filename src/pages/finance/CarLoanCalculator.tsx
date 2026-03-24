@@ -4,6 +4,7 @@ import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, Car } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -123,18 +124,25 @@ export default function CarLoanCalculator() {
 
             {/* Result stats on left */}
             {result && (
-              <div className="mt-10 grid grid-cols-2 gap-4">
-                {[
+              <div className="mt-10 space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { label: "Monthly Payment", value: `${sym}${result.monthlyPayment.toFixed(2)}` },
+                    { label: "Balloon Payment", value: `${sym}${result.balloonPayment.toFixed(2)}` },
+                    { label: "Total Payment",   value: `${sym}${result.totalPayment.toFixed(2)}` },
+                    { label: "Total Interest",  value: `${sym}${result.totalInterest.toFixed(2)}` },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
+                      <p className="font-display text-xl text-white">{value}</p>
+                    </div>
+                  ))}
+                </div>
+                <CopyButton accentColor={ACCENT} results={[
                   { label: "Monthly Payment", value: `${sym}${result.monthlyPayment.toFixed(2)}` },
-                  { label: "Balloon Payment", value: `${sym}${result.balloonPayment.toFixed(2)}` },
-                  { label: "Total Payment",   value: `${sym}${result.totalPayment.toFixed(2)}` },
-                  { label: "Total Interest",  value: `${sym}${result.totalInterest.toFixed(2)}` },
-                ].map(({ label, value }) => (
-                  <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
-                    <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
-                    <p className="font-display text-xl text-white">{value}</p>
-                  </div>
-                ))}
+                  { label: "Total Payment", value: `${sym}${result.totalPayment.toFixed(2)}` },
+                  { label: "Total Interest", value: `${sym}${result.totalInterest.toFixed(2)}` },
+                ]} />
               </div>
             )}
           </div>

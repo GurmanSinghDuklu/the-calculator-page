@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, UtensilsCrossed } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -126,6 +127,14 @@ const TipCalculator = () => {
                     </p>
                   </div>
                 )}
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Total Amount", value: `${sym}${result.totalAmount.toLocaleString()}` },
+                  { label: `Tip (${tipPercent}%)`, value: `${sym}${result.tipAmount.toLocaleString()}` },
+                  ...(people > 1 ? [
+                    { label: "Per Person Total", value: `${sym}${result.perPerson.toLocaleString()}` },
+                    { label: "Tip Per Person", value: `${sym}${result.tipPerPerson.toLocaleString()}` },
+                  ] : []),
+                ]} />
               </div>
             )}
           </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, Percent } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E"; // accent-green
@@ -230,6 +231,9 @@ const PercentageCalculator = () => {
                       <p className="text-xs text-white/25 font-sans mt-2">
                         {percentOf.percent}% of {percentOf.number} = {percentOfResult}
                       </p>
+                      <CopyButton accentColor={ACCENT} results={[
+                        { label: `${percentOf.percent}% of ${percentOf.number}`, value: percentOfResult.toLocaleString() },
+                      ]} />
                     </div>
                   )}
 
@@ -285,6 +289,9 @@ const PercentageCalculator = () => {
                       <p className="text-xs text-white/25 font-sans mt-2">
                         {whatPercent.number1} is {whatPercentResult}% of {whatPercent.number2}
                       </p>
+                      <CopyButton accentColor={ACCENT} results={[
+                        { label: `${whatPercent.number1} is what % of ${whatPercent.number2}`, value: `${whatPercentResult}%` },
+                      ]} />
                     </div>
                   )}
 
@@ -347,6 +354,11 @@ const PercentageCalculator = () => {
                       <p className="text-xs text-white/25 font-sans mt-2">
                         From {percentChange.from} to {percentChange.to}
                       </p>
+                      <CopyButton accentColor={ACCENT} results={[
+                        { label: "Percentage Change", value: `${percentChangeResult >= 0 ? "+" : ""}${percentChangeResult}%` },
+                        { label: "From", value: percentChange.from },
+                        { label: "To", value: percentChange.to },
+                      ]} />
                     </div>
                   )}
 

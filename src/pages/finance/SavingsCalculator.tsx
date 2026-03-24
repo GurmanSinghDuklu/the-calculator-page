@@ -7,6 +7,7 @@ import { compoundInterestSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -160,6 +161,12 @@ const SavingsCalculator = () => {
                     </span>
                   </div>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Final Balance", value: `${sym}${result.finalBalance.toLocaleString()}` },
+                  { label: "Total Deposits", value: `${sym}${result.totalDeposits.toLocaleString()}` },
+                  { label: "Interest Earned", value: `${sym}${result.totalInterest.toLocaleString()}` },
+                  { label: "ROI", value: `${((result.totalInterest / result.totalDeposits) * 100).toFixed(2)}%` },
+                ]} />
               </div>
             )}
           </div>

@@ -4,6 +4,7 @@ import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -137,6 +138,11 @@ export default function FutureHouseValue() {
                 <p className="text-xs text-white/20 font-sans leading-relaxed">
                   A property worth {sym}{parseFloat(currentValue).toLocaleString(undefined, { maximumFractionDigits: 0 })} today will be worth {sym}{result.futureValue.toLocaleString(undefined, { maximumFractionDigits: 0 })} in {years} years at {growthRate}% annual growth.
                 </p>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Future Value", value: `${sym}${result.futureValue.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "Total Appreciation", value: `${sym}${result.totalGain.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "Total Gain", value: `${result.totalGainPercent.toFixed(2)}%` },
+                ]} />
               </div>
             )}
           </div>

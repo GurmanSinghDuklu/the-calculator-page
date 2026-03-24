@@ -7,6 +7,7 @@ import { retirementSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -287,6 +288,13 @@ export default function RetirementCalculator() {
                   </table>
                 </div>
               </Section>
+
+              <CopyButton accentColor={ACCENT} results={[
+                { label: "Retirement Pot", value: fmt(results.retirementPot) },
+                { label: "Real Value (Today's £)", value: fmt(results.realPot) },
+                { label: "Total Annual Income", value: fmt(results.totalAnnualIncome) },
+                { label: "Total Contributions", value: fmt(results.totalContributions) },
+              ]} />
 
               {/* Notes */}
               <div className="bg-white/[0.02] border border-white/10 rounded-xl p-5">

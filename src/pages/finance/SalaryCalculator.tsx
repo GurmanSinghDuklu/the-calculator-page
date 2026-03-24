@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -199,6 +200,12 @@ const SalaryCalculator = () => {
                     <span className="font-heading text-sm" style={{ color: ACCENT }}>{fmt(net)}</span>
                   </div>
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Net Annual Salary", value: fmt(net) },
+                  { label: "Monthly Take-Home", value: fmt(monthly) },
+                  { label: "Weekly Take-Home", value: fmt(weekly) },
+                  { label: "Daily Take-Home", value: fmt(daily) },
+                ]} />
               </div>
             )}
           </div>

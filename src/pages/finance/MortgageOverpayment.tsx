@@ -4,6 +4,7 @@ import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { ArrowRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
+import { CopyButton } from "@/components/CopyButton";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -172,6 +173,12 @@ export default function MortgageOverpayment() {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Interest Saved", value: `${sym}${regularResult.interestSaved.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "Time Saved", value: `${regularResult.timeSaved.toFixed(1)} yrs` },
+                  { label: "New Monthly Payment", value: `${sym}${regularResult.newPayment.toFixed(2)}` },
+                  { label: "New Term", value: `${regularResult.newTerm.toFixed(1)} yrs` },
+                ]} />
               </div>
             )}
 
@@ -199,6 +206,12 @@ export default function MortgageOverpayment() {
                     </div>
                   ))}
                 </div>
+                <CopyButton accentColor={ACCENT} results={[
+                  { label: "Interest Saved", value: `${sym}${lumpResult.interestSaved.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "Time Saved", value: `${lumpResult.timeSaved.toFixed(1)} yrs` },
+                  { label: "Balance After Lump Sum", value: `${sym}${lumpResult.outstandingAfter.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+                  { label: "New Term", value: `${lumpResult.newTerm.toFixed(1)} yrs` },
+                ]} />
               </div>
             )}
           </div>
