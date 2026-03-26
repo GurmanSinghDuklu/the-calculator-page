@@ -6,6 +6,7 @@ import { CurrencySelector, Currency, currencies } from "@/components/CurrencySel
 import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -312,6 +313,8 @@ export default function HowLongToSave() {
             </div>
           </div>
         </div>
+
+        <FinancialDisclosure variant="general" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

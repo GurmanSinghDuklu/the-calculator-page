@@ -6,6 +6,7 @@ import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lu
 import { toast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -315,6 +316,8 @@ const WeeklyMortgageCalculator = () => {
 
           <FinancialDisclaimer className="mt-4" />
         </div>
+
+        <FinancialDisclosure variant="mortgage" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

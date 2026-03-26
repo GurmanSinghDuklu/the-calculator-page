@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -290,6 +291,8 @@ const SavingsCalculator = () => {
         <div className="max-w-7xl mx-auto px-6 pb-16">
           <FinancialDisclaimer type="investment" className="mt-2" />
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

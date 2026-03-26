@@ -5,6 +5,7 @@ import { Plus, Trash2, ArrowRight, Wallet } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from "recharts";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ──────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -328,6 +329,8 @@ export default function BudgetCalculator() {
 
           <div className="pt-4"><CalculatorStaticContent {...budgetStaticContent} /></div>
         </div>
+
+        <FinancialDisclosure variant="general" />
 
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-5xl mx-auto flex justify-between items-center">

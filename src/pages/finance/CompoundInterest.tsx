@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 const ACCENT = "#3B82F6";
 
@@ -462,6 +463,8 @@ const CompoundInterest = () => {
             </div>
           </section>
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

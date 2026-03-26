@@ -4,6 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, Percent } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -209,6 +210,8 @@ export default function ApyCalculator() {
             </div>
           </div>
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, ChevronDown, ChevronUp, Info } from "lucide-react";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 const ACCENT = "#F97316";
 
@@ -653,6 +654,8 @@ export default function MortgageCostComparison() {
             </div>
           </div>
         </section>
+
+        <FinancialDisclosure variant="mortgage" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

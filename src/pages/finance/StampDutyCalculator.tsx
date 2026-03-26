@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -365,6 +366,8 @@ const StampDutyCalculator = () => {
             </p>
           </div>
         </div>
+
+        <FinancialDisclosure variant="mortgage" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

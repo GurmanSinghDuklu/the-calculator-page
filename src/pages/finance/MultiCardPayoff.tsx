@@ -7,6 +7,7 @@ import { Plus, Trash2, Download, Target } from "lucide-react";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -429,6 +430,8 @@ export default function MultiCardPayoff() {
             </>
           )}
         </div>
+
+        <FinancialDisclosure variant="general" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

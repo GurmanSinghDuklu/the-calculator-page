@@ -4,6 +4,7 @@ import { seoData } from "@/utils/seoData";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 const ACCENT = "#3B82F6";
 
@@ -276,6 +277,8 @@ export default function IrrCalculator() {
             </div>
           </div>
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">
