@@ -1,9 +1,9 @@
 // SEO metadata for all calculator pages
 export const seoData = {
   '/finance/mortgage-cost-comparison': {
-    title: 'Mortgage Cost Comparison Calculator | True Cost of a Deal',
-    description: 'Compare mortgage deals on their true cost — monthly payments, product fees, valuation, legal costs, and remaining balance over the exact deal term. Built for UK mortgage advisors.',
-    keywords: 'mortgage cost comparison, mortgage deal comparison, true cost mortgage, mortgage advisor tool, cost effective mortgage, product fee mortgage, mortgage comparison UK'
+    title: 'Mortgage Cost Comparison Calculator | True Cost of a Deal UK',
+    description: 'Compare mortgage deals on their true cost — monthly payments, product fees, valuation, legal costs, and remaining balance over the exact deal term. Built for UK mortgage advisors and brokers.',
+    keywords: 'mortgage cost comparison calculator, compare mortgage deals UK, true cost mortgage calculator, mortgage calculator with fees, mortgage arrangement fee calculator, remortgage comparison calculator, mortgage deal comparison tool, mortgage advisor calculator, mortgage broker tool, total mortgage cost calculator, APRC mortgage calculator, mortgage product fee calculator, remortgage savings calculator, cost effective mortgage UK, mortgage fee to balance calculator'
   },
   '/finance/apy': {
     title: 'APY Calculator - Convert APR to Annual Percentage Yield',

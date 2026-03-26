@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Dashboard | The Calculator Page</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0f0f0f; color: #e5e5e5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.5; }
+    a { color: #22C55E; text-decoration: none; }
+    .header { background: #1C1A1A; border-bottom: 1px solid #2a2a2a; padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-mark { font-size: 22px; font-weight: 900; letter-spacing: -1px; }
+    .logo-mark span { color: #22C55E; }
+    .header-meta { font-size: 12px; color: #666; }
+    .badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; }
+    .badge-green { background: #052e16; color: #22C55E; border: 1px solid #166534; }
+    .badge-yellow { background: #422006; color: #f59e0b; border: 1px solid #78350f; }
+    .badge-red { background: #3b0a0a; color: #ef4444; border: 1px solid #7f1d1d; }
+    .badge-blue { background: #0c1a2e; color: #60a5fa; border: 1px solid #1e3a5f; }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 32px; }
+    .section-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+    .card { background: #1C1A1A; border: 1px solid #2a2a2a; border-radius: 10px; padding: 20px; }
+    .stat-value { font-size: 36px; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 12px; color: #888; }
+    .stat-change { font-size: 12px; margin-top: 8px; }
+    .up { color: #22C55E; }
+    .down { color: #ef4444; }
+    .neutral { color: #888; }
+    .card-title { font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 1px; color: #555; text-transform: uppercase; padding: 8px 12px; border-bottom: 1px solid #2a2a2a; }
+    td { padding: 10px 12px; border-bottom: 1px solid #1a1a1a; font-size: 13px; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #222; }
+    .progress-bar { height: 6px; background: #2a2a2a; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+    .progress-fill { height: 100%; border-radius: 3px; background: #22C55E; }
+    .progress-fill.amber { background: #f59e0b; }
+    .progress-fill.red { background: #ef4444; }
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .timeline-item { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #1a1a1a; align-items: flex-start; }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-icon { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .timeline-icon.green { background: #052e16; }
+    .timeline-icon.yellow { background: #422006; }
+    .timeline-icon.blue { background: #0c1a2e; }
+    .timeline-icon.red { background: #3b0a0a; }
+    .timeline-content { flex: 1; }
+    .timeline-title { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
+    .timeline-desc { font-size: 12px; color: #666; }
+    .timeline-time { font-size: 11px; color: #444; white-space: nowrap; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+    .pill-green { background: #052e16; color: #22C55E; }
+    .pill-yellow { background: #422006; color: #f59e0b; }
+    .pill-red { background: #3b0a0a; color: #ef4444; }
+    .pill-blue { background: #0c1a2e; color: #60a5fa; }
+    .pill-gray { background: #1f1f1f; color: #888; }
+    .warning-box { background: #1a1400; border: 1px solid #3d2e00; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
+    .warning-box .icon { font-size: 16px; }
+    .warning-box .text { font-size: 12px; color: #d97706; line-height: 1.5; }
+    .fix-box { background: #051a0a; border: 1px solid #064e1e; border-radius: 8px; padding: 12px 16px; margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
+    .fix-box .text { font-size: 12px; color: #4ade80; line-height: 1.5; }
+    .schema-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1a1a1a; }
+    .schema-row:last-child { border-bottom: none; }
+    .keyword-chip { display: inline-flex; align-items: center; gap: 6px; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px; padding: 4px 10px; margin: 3px; font-size: 12px; }
+    .competitor-bar { display: flex; flex-direction: column; gap: 8px; }
+    .comp-row { display: flex; align-items: center; gap: 12px; }
+    .comp-name { width: 180px; font-size: 12px; color: #aaa; flex-shrink: 0; }
+    .comp-bar-wrap { flex: 1; height: 8px; background: #2a2a2a; border-radius: 4px; overflow: hidden; }
+    .comp-bar-fill { height: 100%; border-radius: 4px; }
+    .comp-score { width: 36px; text-align: right; font-size: 12px; font-weight: 600; }
+    @media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2,1fr); } .grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .grid-4, .grid-2 { grid-template-columns: 1fr; } .container { padding: 16px; } }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">
+    <div class="logo-mark">THE <span>CALC</span> PAGE</div>
+    <span style="color:#2a2a2a">|</span>
+    <span style="color:#555; font-size:13px;">SEO Intelligence Dashboard</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span class="badge badge-green"><span class="dot"></span> Agent Active</span>
+    <span class="header-meta">Last run: 12 Mar 2026 · Next: Tonight 3:00 AM</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Alert: Issues to fix -->
+  <div class="section-title">Action Required</div>
+  <div style="margin-bottom:32px;">
+    <div class="warning-box">
+      <span class="icon">⚠️</span>
+      <div class="text"><strong>Google Indexing API not active</strong> — <code>jsonwebtoken</code> package missing. New pages aren't being submitted to Google automatically. Fix: <code>cd scripts/seo-agent && npm install jsonwebtoken</code></div>
+    </div>
+    <div class="warning-box">
+      <span class="icon">⚠️</span>
+      <div class="text"><strong>Bing pinging disabled</strong> — <code>BING_WEBMASTER_API_KEY</code> not set in <code>.env</code>. Bing/Edge search is not being notified of updates.</div>
+    </div>
+    <div class="fix-box">
+      <span class="icon">✅</span>
+      <div class="text"><strong>Organization schema + logo added today</strong> — Google can now identify your brand in search results. Logo and WebSite schema with SearchAction live.</div>
+    </div>
+  </div>
+
+  <!-- KPI Stats -->
+  <div class="section-title">7-Day Overview · Mar 12–19, 2026</div>
+  <div class="grid-4">
+    <div class="card">
+      <div class="stat-value" style="color:#22C55E;">70</div>
+      <div class="stat-label">Pages Optimised</div>
+      <div class="stat-change up">↑ 70 new this week (first full run)</div>
+    </div>
+    <div class="card">
+      <div class="stat-value">1</div>
+      <div class="stat-label">Agent Runs</div>
+      <div class="stat-change neutral">12 Mar 2026 · 4 min 57 sec runtime</div>
+    </div>
+    <div class="card">
+      <div class="stat-value" style="color:#f59e0b;">2</div>
+      <div class="stat-label">Warnings</div>
+      <div class="stat-change neutral">Google + Bing pinging disabled</div>
+    </div>
+    <div class="card">
+      <div class="stat-value" style="color:#22C55E;">0</div>
+      <div class="stat-label">Errors</div>
+      <div class="stat-change up">Clean run — no failures</div>
+    </div>
+  </div>
+
+  <!-- Git Activity + Schema Health -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Git Activity (Last 7 Days) <span class="pill pill-green">3 commits</span></div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon green">📦</div>
+          <div class="timeline-content">
+            <div class="timeline-title">feat: Auto git push after nightly SEO run</div>
+            <div class="timeline-desc">Agent now commits + pushes seo-data.json and sitemap automatically each night</div>
+          </div>
+          <div class="timeline-time">18 Mar</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon green">🔒</div>
+          <div class="timeline-content">
+            <div class="timeline-title">API key secured — .gitignore updated</div>
+            <div class="timeline-desc">plist + .env excluded from git; placeholders committed instead</div>
+          </div>
+          <div class="timeline-time">18 Mar</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon blue">🚀</div>
+          <div class="timeline-content">
+            <div class="timeline-title">feat: Autonomous SEO system deployed</div>
+            <div class="timeline-desc">70 pages optimised · sitemap updated · launchd scheduled at 3 AM</div>
+          </div>
+          <div class="timeline-time">12 Mar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Structured Data / Schema Health</div>
+      <div class="schema-row">
+        <span>Organization + Logo</span>
+        <span class="pill pill-green">✓ Live today</span>
+      </div>
+      <div class="schema-row">
+        <span>WebSite + SearchAction (Sitelinks)</span>
+        <span class="pill pill-green">✓ Live today</span>
+      </div>
+      <div class="schema-row">
+        <span>SoftwareApplication (Calculators)</span>
+        <span class="pill pill-green">✓ Active</span>
+      </div>
+      <div class="schema-row">
+        <span>FAQPage (Compound Interest)</span>
+        <span class="pill pill-green">✓ Active</span>
+      </div>
+      <div class="schema-row">
+        <span>BreadcrumbList</span>
+        <span class="pill pill-green">✓ Active</span>
+      </div>
+      <div class="schema-row">
+        <span>Article (Learn pages)</span>
+        <span class="pill pill-green">✓ Active</span>
+      </div>
+      <div class="schema-row">
+        <span>FAQPage (all calculator pages)</span>
+        <span class="pill pill-yellow">Partial — 1 page</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crawlability -->
+  <div class="section-title">Crawlability & Indexing</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Sitemap Status</div>
+      <div class="schema-row"><span>sitemap.xml present</span><span class="pill pill-green">✓</span></div>
+      <div class="schema-row"><span>URLs indexed</span><span style="font-weight:600">69</span></div>
+      <div class="schema-row"><span>Last updated</span><span>12 Mar 2026</span></div>
+      <div class="schema-row"><span>Priority range</span><span>0.7 – 1.0</span></div>
+      <div class="schema-row"><span>Submitted to Google</span><span class="pill pill-red">✗ Blocked</span></div>
+      <div class="schema-row"><span>Submitted to Bing</span><span class="pill pill-red">✗ No key</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">robots.txt Policy</div>
+      <div class="schema-row"><span>Googlebot</span><span class="pill pill-green">✓ Allowed</span></div>
+      <div class="schema-row"><span>Bingbot</span><span class="pill pill-green">✓ Allowed</span></div>
+      <div class="schema-row"><span>ClaudeBot / GPTBot</span><span class="pill pill-green">✓ Allowed</span></div>
+      <div class="schema-row"><span>PerplexityBot</span><span class="pill pill-green">✓ Allowed</span></div>
+      <div class="schema-row"><span>/src/ + /node_modules/</span><span class="pill pill-gray">Blocked</span></div>
+      <div class="schema-row"><span>Sitemap referenced</span><span class="pill pill-green">✓</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Technical SEO</div>
+      <div class="schema-row"><span>Canonical tags</span><span class="pill pill-green">✓ Per page</span></div>
+      <div class="schema-row"><span>OG / Twitter cards</span><span class="pill pill-green">✓ Active</span></div>
+      <div class="schema-row"><span>Logo in search results</span><span class="pill pill-green">✓ Added today</span></div>
+      <div class="schema-row"><span>Google verification</span><span class="pill pill-green">✓ Verified</span></div>
+      <div class="schema-row"><span>Bing verification</span><span class="pill pill-yellow">File present</span></div>
+      <div class="schema-row"><span>RSS feed</span><span class="pill pill-green">✓ rss.xml</span></div>
+    </div>
+  </div>
+
+  <!-- Keywords -->
+  <div class="section-title">Top Keywords Optimised This Week</div>
+  <div class="card" style="margin-bottom:32px;">
+    <div class="card-title">Finance Calculator Keywords <span style="color:#555;font-size:11px;">from seo-data.json · 70 pages</span></div>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;color:#555;margin-bottom:8px;">HIGH PRIORITY — Finance</div>
+      <div>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> compound interest calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> mortgage calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> loan calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> ROI calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> retirement calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> savings calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> investment calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> CAGR calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> debt payoff calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> net worth calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> APR to APY calculator</span>
+        <span class="keyword-chip"><span style="color:#22C55E;">●</span> amortization calculator</span>
+      </div>
+    </div>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;color:#555;margin-bottom:8px;">CONVERTERS & MISC</div>
+      <div>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> BMI calculator</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> percentage calculator</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> age calculator</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> length converter</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> weight converter</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> temperature converter</span>
+        <span class="keyword-chip"><span style="color:#60a5fa;">●</span> days between calculator</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;color:#555;margin-bottom:8px;">LEARN / EDUCATIONAL</div>
+      <div>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> compound interest formula</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> 50/30/20 budget rule</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> ROI formula</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> ETF investing guide</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> portfolio diversification</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> forex trading guide</span>
+        <span class="keyword-chip"><span style="color:#a78bfa;">●</span> financial freedom</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competitor Comparison -->
+  <div class="section-title">Competitor Landscape</div>
+  <div class="grid-2" style="margin-bottom:32px;">
+    <div class="card">
+      <div class="card-title">Domain Authority Estimate <span style="font-size:11px;color:#555;">(based on known metrics)</span></div>
+      <div class="competitor-bar">
+        <div class="comp-row">
+          <div class="comp-name" style="color:#22C55E;font-weight:600;">thecalculatorpage.com</div>
+          <div class="comp-bar-wrap"><div class="comp-bar-fill" style="width:22%;background:#22C55E;"></div></div>
+          <div class="comp-score" style="color:#22C55E;">~22</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-name">thecalculatorsite.com</div>
+          <div class="comp-bar-wrap"><div class="comp-bar-fill" style="width:72%;background:#ef4444;"></div></div>
+          <div class="comp-score" style="color:#ef4444;">~72</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-name">omnicalculator.com</div>
+          <div class="comp-bar-wrap"><div class="comp-bar-fill" style="width:78%;background:#f59e0b;"></div></div>
+          <div class="comp-score" style="color:#f59e0b;">~78</div>
+        </div>
+        <div class="comp-row">
+          <div class="comp-name">calculator.net</div>
+          <div class="comp-bar-wrap"><div class="comp-bar-fill" style="width:65%;background:#f59e0b;"></div></div>
+          <div class="comp-score" style="color:#f59e0b;">~65</div>
+        </div>
+      </div>
+      <div style="margin-top:16px;font-size:11px;color:#444;line-height:1.6;">DA is a long-term metric. Our focus is on on-page signals and content depth where we can move fast.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Our Edge vs thecalculatorsite.com</div>
+      <table>
+        <tr><th>Signal</th><th>Us</th><th>Them</th></tr>
+        <tr><td>AI-optimised meta (daily)</td><td class="up">✓</td><td class="neutral">✗</td></tr>
+        <tr><td>Organization schema + logo</td><td class="up">✓ New</td><td class="neutral">Unknown</td></tr>
+        <tr><td>FAQPage schema</td><td class="up">✓</td><td class="neutral">Partial</td></tr>
+        <tr><td>SoftwareApplication schema</td><td class="up">✓</td><td class="neutral">Unknown</td></tr>
+        <tr><td>SearchAction (sitelinks box)</td><td class="up">✓ New</td><td class="neutral">Unknown</td></tr>
+        <tr><td>AI bot access (llms.txt)</td><td class="up">✓</td><td class="neutral">✗</td></tr>
+        <tr><td>RSS feed</td><td class="up">✓</td><td class="neutral">✗</td></tr>
+        <tr><td>Learn hub (25 guides)</td><td class="up">✓</td><td class="neutral">Limited</td></tr>
+        <tr><td>Domain age / backlinks</td><td class="down">Newer</td><td class="up">Strong</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Next Steps -->
+  <div class="section-title">Recommended Next Steps to Outrank Competitors</div>
+  <div class="card">
+    <table>
+      <tr><th>#</th><th>Action</th><th>Impact</th><th>Effort</th><th>Status</th></tr>
+      <tr>
+        <td style="color:#555;">1</td>
+        <td>Install <code>jsonwebtoken</code> to enable Google Indexing API pinging</td>
+        <td><span class="pill pill-green">High</span></td>
+        <td><span class="pill pill-green">Low</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">2</td>
+        <td>Add Bing Webmaster API key to <code>.env</code></td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-green">Low</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">3</td>
+        <td>Expand FAQPage schema to all finance calculator pages (not just compound interest)</td>
+        <td><span class="pill pill-green">High</span></td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">4</td>
+        <td>Build backlinks — submit to UK finance directories and tool roundups</td>
+        <td><span class="pill pill-green">High</span></td>
+        <td><span class="pill pill-red">High</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">5</td>
+        <td>Add HowTo schema to key calculator learn pages</td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">6</td>
+        <td>Organization + logo schema added to index.html</td>
+        <td><span class="pill pill-green">High</span></td>
+        <td><span class="pill pill-green">Done</span></td>
+        <td><span class="pill pill-green">✓ Complete</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">7</td>
+        <td>WebSite SearchAction schema (enables Google sitelinks search box)</td>
+        <td><span class="pill pill-green">High</span></td>
+        <td><span class="pill pill-green">Done</span></td>
+        <td><span class="pill pill-green">✓ Complete</span></td>
+      </tr>
+      <tr>
+        <td style="color:#555;">8</td>
+        <td>Enable competitor live analysis (fix empty competitor cache)</td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-blue">Medium</span></td>
+        <td><span class="pill pill-yellow">To Do</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-top:32px;text-align:center;font-size:11px;color:#333;">
+    The Calc Page · SEO Dashboard · Auto-generated · Data from <code>scripts/seo-agent/reports/</code>
+  </div>
+</div>
+</body>
+</html>

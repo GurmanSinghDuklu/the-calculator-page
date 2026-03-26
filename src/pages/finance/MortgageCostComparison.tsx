@@ -135,15 +135,7 @@ function DealCard({
     >
       {/* Deal header */}
       <div className="px-6 pt-5 pb-4 border-b border-white/5">
-        <div className="flex items-center justify-between">
-          <h2 className="font-display text-2xl uppercase text-white tracking-wide">{deal.label}</h2>
-          <span
-            className="text-[10px] font-heading uppercase tracking-widest px-2 py-1 rounded"
-            style={{ background: `${accent}20`, color: accent }}
-          >
-            {index === 0 ? "2-Year Fixed" : "5-Year Fixed"}
-          </span>
-        </div>
+        <h2 className="font-display text-2xl uppercase text-white tracking-wide">{deal.label}</h2>
       </div>
 
       <div className="p-6 space-y-4">
@@ -363,9 +355,9 @@ export default function MortgageCostComparison() {
   return (
     <>
       <SEO
-        title="Mortgage Cost Comparison Calculator | True Cost of a Mortgage Deal"
-        description="Compare mortgage deals side by side on true cost. Calculate total payments, interest, fees, and remaining balance over each deal term. Built for UK mortgage advisors."
-        keywords="mortgage cost comparison, mortgage deal comparison, true cost mortgage calculator, mortgage advisor tool, cost effective mortgage, product fee mortgage"
+        title="Mortgage Cost Comparison Calculator | True Cost of a Deal UK"
+        description="Compare mortgage deals on their true cost — monthly payments, product fees, valuation, legal costs, and remaining balance over the exact deal term. Built for UK mortgage advisors and brokers."
+        keywords="mortgage cost comparison calculator, compare mortgage deals UK, true cost mortgage calculator, mortgage calculator with fees, mortgage arrangement fee calculator, remortgage comparison calculator, mortgage deal comparison tool, mortgage advisor calculator, mortgage broker tool, total mortgage cost calculator, APRC mortgage calculator, mortgage product fee calculator, remortgage savings calculator, cost effective mortgage UK, mortgage fee to balance calculator"
         canonicalUrl="https://www.thecalculatorpage.com/finance/mortgage-cost-comparison"
         faqSchema={faqSchema}
       />
@@ -412,6 +404,9 @@ export default function MortgageCostComparison() {
 
             <div className="max-w-md">
               <div className="pl-4 border-l-2" style={{ borderColor: `${ACCENT}50` }}>
+                <p className="text-[10px] font-heading uppercase tracking-[0.25em] mb-3" style={{ color: `${ACCENT}80` }}>
+                  Designed by mortgage advisors · Built for the mortgage industry
+                </p>
                 <p className="text-gray-400 text-sm leading-relaxed font-sans">
                   Compare mortgage deals on their true cost — including payments over the deal term, product fees, valuation, legal costs, and remaining balance. See whether adding a fee to the mortgage actually costs you more.
                 </p>
@@ -658,13 +653,6 @@ export default function MortgageCostComparison() {
             </div>
           </div>
         </section>
-
-        {/* Attribution */}
-        <div className="max-w-7xl mx-auto px-6 pb-14 text-center">
-          <p className="text-[11px] font-heading uppercase tracking-[0.25em] text-white/20">
-            Designed by mortgage advisors · Built for the mortgage industry
-          </p>
-        </div>
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">
