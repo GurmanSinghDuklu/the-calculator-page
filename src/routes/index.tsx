@@ -25,6 +25,7 @@ import FutureHouseValue from '../pages/finance/FutureHouseValue';
 import HowLongToSave from '../pages/finance/HowLongToSave';
 import HowMuchToSave from '../pages/finance/HowMuchToSave';
 import IrrCalculator from '../pages/finance/IrrCalculator';
+import MortgageCostComparison from '../pages/finance/MortgageCostComparison';
 import MortgageOverpayment from '../pages/finance/MortgageOverpayment';
 import MultiCardPayoff from '../pages/finance/MultiCardPayoff';
 import SalaryCalculator from '../pages/finance/SalaryCalculator';
@@ -118,6 +119,7 @@ export const routes: RouteObject[] = [
       { path: 'finance/simple-interest', element: <SimpleInterest /> },
       { path: 'finance/stamp-duty', element: <StampDutyCalculator /> },
       { path: 'finance/weekly-mortgage', element: <WeeklyMortgageCalculator /> },
+      { path: 'finance/mortgage-cost-comparison', element: <MortgageCostComparison /> },
 
       // Everyday & Converter Routes
       { path: 'categories/property', element: <CategoryProperty /> },

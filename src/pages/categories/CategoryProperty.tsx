@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Home, Building, TrendingUp, DollarSign, Percent, Calculator } from "lucide-react";
+import { ArrowUpRight, Home, Building, TrendingUp, DollarSign, GitCompare } from "lucide-react";
 
 const tools = [
   {
@@ -27,6 +27,13 @@ const tools = [
     description: "See how much interest you can save by overpaying your mortgage.",
     icon: DollarSign,
     path: "/finance/mortgage-overpayment",
+  },
+  {
+    title: "Cost Comparison",
+    description: "Compare mortgage deals on true cost — payments, fees, and remaining balance over the deal term.",
+    icon: GitCompare,
+    path: "/finance/mortgage-cost-comparison",
+    badge: "New",
   },
 ];
 

@@ -1,5 +1,10 @@
 // SEO metadata for all calculator pages
 export const seoData = {
+  '/finance/mortgage-cost-comparison': {
+    title: 'Mortgage Cost Comparison Calculator | True Cost of a Deal',
+    description: 'Compare mortgage deals on their true cost — monthly payments, product fees, valuation, legal costs, and remaining balance over the exact deal term. Built for UK mortgage advisors.',
+    keywords: 'mortgage cost comparison, mortgage deal comparison, true cost mortgage, mortgage advisor tool, cost effective mortgage, product fee mortgage, mortgage comparison UK'
+  },
   '/finance/apy': {
     title: 'APY Calculator - Convert APR to Annual Percentage Yield',
     description: 'Convert any interest rate to APY (Annual Percentage Yield). Compare effective annual rates across different compounding frequencies to find the best savings accounts and investments.',
