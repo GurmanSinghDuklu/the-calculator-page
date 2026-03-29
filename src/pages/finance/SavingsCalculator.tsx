@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { compoundInterestSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
@@ -289,8 +289,9 @@ const SavingsCalculator = () => {
 
         {/* Disclaimer */}
         <div className="max-w-7xl mx-auto px-6 pb-16">
-          <FinancialDisclaimer type="investment" className="mt-2" />
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         <FinancialDisclosure variant="investment" />
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { retirementSchema } from "@/lib/validation";
 import { toast } from "sonner";
@@ -312,7 +312,6 @@ export default function RetirementCalculator() {
           )}
 
           {/* Disclaimer + static content */}
-          <FinancialDisclaimer type="retirement" className="mt-2" />
           <CalculatorStaticContent
             whatIs={{ title: "What is Retirement Planning?", description: "Retirement planning determines your income goals and the actions needed to achieve them. In the UK, retirement income typically comes from the State Pension, workplace pensions, and personal savings. Starting early and contributing consistently are key." }}
             howItWorks={{
@@ -341,6 +340,8 @@ export default function RetirementCalculator() {
             faqs={faqSchema}
           />
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         <FinancialDisclosure variant="investment" />
 

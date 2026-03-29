@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CurrencySelector, Currency } from "@/components/CurrencySelector";
 import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
@@ -314,8 +314,9 @@ const WeeklyMortgageCalculator = () => {
             </div>
           </div>
 
-          <FinancialDisclaimer className="mt-4" />
         </div>
+
+        <FinancialDisclosure variant="mortgage" />
 
         <FinancialDisclosure variant="mortgage" />
 

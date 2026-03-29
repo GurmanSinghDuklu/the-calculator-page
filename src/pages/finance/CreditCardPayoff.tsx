@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
 import { ArrowRight, CreditCard } from "lucide-react";
@@ -306,9 +306,10 @@ export default function CreditCardPayoff() {
 
         {/* Static content + disclaimer below the fold */}
         <div className="max-w-7xl mx-auto px-6 pb-20">
-          <FinancialDisclaimer type="loan" className="mt-6" />
           <CalculatorStaticContent {...creditCardStaticContent} />
         </div>
+
+        <FinancialDisclosure variant="general" />
 
         <FinancialDisclosure variant="general" />
 

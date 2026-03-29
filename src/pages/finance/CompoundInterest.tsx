@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { AdvancedCompoundCalculator } from "@/components/AdvancedCompoundCalculator";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -405,7 +405,6 @@ const CompoundInterest = () => {
 
         {/* ── Static content + disclaimer ── */}
         <div className="max-w-7xl mx-auto px-6 pb-20">
-          <FinancialDisclaimer type="investment" className="mt-6" />
           <CalculatorStaticContent
             whatIs={{
               title: "What is Compound Interest?",
@@ -463,6 +462,8 @@ const CompoundInterest = () => {
             </div>
           </section>
         </div>
+
+        <FinancialDisclosure variant="investment" />
 
         <FinancialDisclosure variant="investment" />
 

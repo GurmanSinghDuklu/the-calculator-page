@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
-import { FinancialDisclaimer } from "@/components/FinancialDisclaimer";
+import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { mortgageSchema } from "@/lib/validation";
 import { toast } from "sonner";
@@ -343,7 +343,6 @@ const MortgageCalculator = () => {
 
         {/* Static content below the fold */}
         <div className="max-w-7xl mx-auto px-6 pb-20">
-          <FinancialDisclaimer type="loan" className="mt-6" />
           <CalculatorStaticContent
             whatIs={{
               title: "What is a Mortgage?",
@@ -374,6 +373,8 @@ const MortgageCalculator = () => {
             faqs={faqSchema}
           />
         </div>
+
+        <FinancialDisclosure variant="mortgage" />
 
         <FinancialDisclosure variant="mortgage" />
 
