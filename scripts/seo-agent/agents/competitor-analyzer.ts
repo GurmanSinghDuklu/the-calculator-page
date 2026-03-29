@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { COMPETITORS, CALC_CATEGORIES_FOR_ANALYSIS } from '../config.js';
+import { COMPETITORS } from '../config.js';
 import { logger } from '../utils/logger.js';
 
 const COMPETITOR_CACHE_PATH = join(process.cwd(), 'data/competitor-cache.json');
@@ -33,6 +33,9 @@ function isCacheFresh(): boolean {
 
   try {
     const cache: CompetitorCache = JSON.parse(readFileSync(COMPETITOR_CACHE_PATH, 'utf-8'));
+
+    // Empty cache counts as stale
+    if (Object.keys(cache).length === 0) return false;
 
     // Check if any entry is older than TTL
     const now = new Date();
@@ -101,9 +104,8 @@ Format your response as valid JSON with these exact keys:
 
     try {
       const response = await client.messages.create({
-        model: 'claude-opus-4-6',
-        max_tokens: 2000,
-        thinking: { type: 'adaptive' },
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1500,
         messages: [
           {
             role: 'user',
@@ -150,6 +152,12 @@ Format your response as valid JSON with these exact keys:
       });
     } catch (error) {
       logger.error(`Failed to analyze competitor: ${competitor.domain}`, { error });
+    }
+
+    // Always pause between competitors to stay within rate limits (2 min)
+    if (COMPETITORS.indexOf(competitor) < COMPETITORS.length - 1) {
+      logger.info('Waiting 2 minutes before next competitor (rate limit)...');
+      await new Promise(r => setTimeout(r, 120_000));
     }
   }
 
