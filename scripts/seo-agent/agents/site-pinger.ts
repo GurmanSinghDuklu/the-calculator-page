@@ -1,10 +1,12 @@
 import { google } from 'googleapis';
 import { existsSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { logger } from '../utils/logger.js';
 import { getSitemapURLs } from '../utils/sitemap-updater.js';
 
-const SERVICE_ACCOUNT_PATH = join(process.cwd(), 'scripts/service-account.json');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SERVICE_ACCOUNT_PATH = join(__dirname, '../../service-account.json');
 
 /**
  * Ping all URLs to Google and Bing indexing APIs
