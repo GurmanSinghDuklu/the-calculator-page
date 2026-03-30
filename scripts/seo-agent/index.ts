@@ -7,7 +7,7 @@
 
 import { config } from 'dotenv';
 import { execSync } from 'child_process';
-import { getCompetitorAnalysis, generateKeywordGaps } from './agents/competitor-analyzer.js';
+import { getCompetitorAnalysis, generateKeywordGaps, type CompetitorCache } from './agents/competitor-analyzer.js';
 import { optimizeAllPages } from './agents/seo-optimizer.js';
 import { pingSearchEngines } from './agents/site-pinger.js';
 import { writeSEOData, readSEOData, getOptimizedPageCount } from './utils/seo-data-manager.js';
@@ -27,20 +27,24 @@ async function runSEOAgent() {
     logger.info('🚀 Starting SEO Agent...');
     logger.info(`Total pages to optimize: ${getPageCount()}`);
 
-    // Phase 1: Analyze competitors (cached)
+    // Phase 1: Analyze competitors (cached, non-blocking)
     logger.info('📊 Phase 1: Competitor Analysis');
-    const competitorData = await getCompetitorAnalysis();
-    const keywordGaps = await generateKeywordGaps(competitorData);
-
-    logger.setReportMetrics({
-      competitorAnalysis: {
-        fetchedAt: new Date().toISOString(),
-        competitors: Object.keys(competitorData),
-        cachedFromDays: 0
-      }
-    });
-
-    logger.info(`Found ${keywordGaps.opportunities.length} keyword opportunities`);
+    let competitorData: CompetitorCache = {};
+    let keywordGaps = { opportunities: [] as unknown[] };
+    try {
+      competitorData = await getCompetitorAnalysis();
+      keywordGaps = await generateKeywordGaps(competitorData);
+      logger.setReportMetrics({
+        competitorAnalysis: {
+          fetchedAt: new Date().toISOString(),
+          competitors: Object.keys(competitorData),
+          cachedFromDays: 0
+        }
+      });
+      logger.info(`Found ${keywordGaps.opportunities.length} keyword opportunities`);
+    } catch (competitorError) {
+      logger.warn('Competitor analysis failed — continuing without it', { error: competitorError });
+    }
 
     // Phase 2: Generate optimized SEO for all pages
     logger.info('✨ Phase 2: SEO Optimization');

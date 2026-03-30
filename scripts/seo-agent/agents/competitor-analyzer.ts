@@ -1,10 +1,13 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { COMPETITORS } from '../config.js';
 import { logger } from '../utils/logger.js';
 
-const COMPETITOR_CACHE_PATH = join(process.cwd(), 'data/competitor-cache.json');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const COMPETITOR_CACHE_PATH = join(__dirname, '../data/competitor-cache.json');
 const CACHE_TTL_DAYS = 7;
 
 export interface CompetitorAnalysis {
