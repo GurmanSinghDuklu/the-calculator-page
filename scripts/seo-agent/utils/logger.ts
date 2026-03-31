@@ -1,5 +1,8 @@
 import { writeFileSync, mkdirSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export interface LogEntry {
   timestamp: string;
@@ -116,4 +119,4 @@ class Logger {
   }
 }
 
-export const logger = new Logger(join(process.cwd(), 'reports'));
+export const logger = new Logger(join(__dirname, '../../reports'));

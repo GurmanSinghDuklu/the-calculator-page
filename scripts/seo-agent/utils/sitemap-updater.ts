@@ -1,8 +1,10 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { logger } from './logger.js';
 
-const SITEMAP_PATH = join(process.env.SITE_ROOT_PATH || '../../', 'public/sitemap.xml');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SITEMAP_PATH = join(__dirname, '../../../public/sitemap.xml');
 
 /**
  * Update all lastmod dates in sitemap.xml to today

@@ -1,6 +1,9 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { logger } from './logger.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export interface SEOData {
   title: string;
@@ -14,7 +17,7 @@ export interface SEODataStore {
   [pageKey: string]: SEOData;
 }
 
-const SEO_DATA_FILE = join(process.env.SITE_ROOT_PATH || '../../', 'src/data/seo-data.json');
+const SEO_DATA_FILE = join(__dirname, '../../../src/data/seo-data.json');
 
 /**
  * Read the current SEO data file

@@ -5,6 +5,11 @@
  * Runs all phases: competitor analysis → SEO optimization → indexing pings
  */
 
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = join(__dirname, '../..');
+
 import { config } from 'dotenv';
 import { execSync } from 'child_process';
 import { getCompetitorAnalysis, generateKeywordGaps, type CompetitorCache } from './agents/competitor-analyzer.js';
@@ -98,9 +103,7 @@ async function runSEOAgent() {
     logger.info('📦 Phase 5: Committing & Pushing Changes');
     try {
       const date = new Date().toISOString().split('T')[0];
-      const workingDir = process.env.SITE_ROOT_PATH
-        ? new URL(process.env.SITE_ROOT_PATH, import.meta.url).pathname
-        : '/Users/mandeepduklu/Downloads/thecalculatorpage-main';
+      const workingDir = PROJECT_ROOT;
       execSync('git add src/data/seo-data.json public/sitemap.xml', { cwd: workingDir, stdio: 'inherit' });
       execSync(`git commit -m "chore: automated SEO update ${date}"`, { cwd: workingDir, stdio: 'inherit' });
       execSync('git push origin main', { cwd: workingDir, stdio: 'inherit' });
