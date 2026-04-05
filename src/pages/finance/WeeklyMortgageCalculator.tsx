@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { CurrencySelector, Currency } from "@/components/CurrencySelector";
 import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -316,7 +318,42 @@ const WeeklyMortgageCalculator = () => {
 
         </div>
 
-        <FinancialDisclosure variant="mortgage" />
+                <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Is a Weekly Mortgage Payment?",
+              description: "A weekly mortgage payment splits your monthly payment into weekly instalments. The key benefit is not just convenience — because there are 52 weeks in a year but only 12 months, you effectively make the equivalent of 13 monthly payments per year instead of 12. This extra payment goes entirely toward reducing your principal, which can save thousands in interest and years off your mortgage term without significantly impacting your weekly budget."
+            }}
+            howItWorks={{
+              title: "How Weekly Payments Save You Money",
+              description: "By paying weekly instead of monthly, you make 52 payments per year. The annual total is higher than 12 monthly payments because 52 weeks equals 13 four-week periods. This extra month of payments each year accelerates your mortgage payoff.",
+              steps: [
+                { step: 1, title: "Enter Your Mortgage Details", description: "Input your loan amount, annual interest rate, and mortgage term in years." },
+                { step: 2, title: "Compare Payment Frequencies", description: "The calculator shows your weekly, bi-weekly, and monthly payment amounts side by side so you can compare." },
+                { step: 3, title: "See Your Savings", description: "Review how many years you will save, total interest saved, and the new payoff date for each payment frequency." }
+              ]
+            }}
+            formula={{
+              title: "Weekly Payment Formula",
+              formula: "Weekly payment = Monthly payment × 12 / 52",
+              explanation: "The weekly payment is your monthly payment multiplied by 12 (annual total) divided by 52 (weeks per year). However, the savings come from the fact that 52 weekly payments total more than 12 monthly payments. Annual weekly total = weekly × 52 = monthly × 12/52 × 52 = monthly × 12. But because payments are applied more frequently, interest accrues on a lower balance throughout the month, creating additional savings."
+            }}
+            faqs={[
+              { question: "Does paying weekly really save money?", answer: "Yes. Making weekly payments means you make the equivalent of 13 monthly payments per year instead of 12. On a £200,000 mortgage at 5% over 25 years, this can save approximately £20,000 in interest and pay off your mortgage 3-4 years early." },
+              { question: "How do I switch to weekly payments?", answer: "Contact your mortgage lender to ask about weekly payment options. Not all lenders offer weekly direct debits. An alternative is to make your normal monthly payment plus 1/12th extra each month, which achieves the same annual overpayment." },
+              { question: "What is the difference between weekly and bi-weekly payments?", answer: "Weekly payments are made every 7 days (52 per year). Bi-weekly payments are made every 14 days (26 per year, equivalent to 13 half-payments). Both save money compared to monthly payments, but weekly payments apply slightly more frequently, keeping the running balance lower." },
+              { question: "Will my lender accept weekly payments?", answer: "Not all UK lenders accept weekly payment schedules. Check with your lender first. If they do not offer weekly payments, you can achieve similar results by overpaying your monthly payment by approximately 8.3% (one-twelfth extra)." }
+            ]}
+            tips={[
+              "If your lender does not accept weekly payments, add 1/12th of your monthly payment as an overpayment each month for the same effect",
+              "Align weekly payments with your pay cycle — if you are paid weekly, this matches your cash flow naturally",
+              "The savings are largest on high-balance, long-term mortgages — the earlier you start, the more you save",
+              "Combine weekly payments with additional overpayments for maximum impact on reducing your term"
+            ]}
+          />
+        </div>
+
+<FinancialDisclosure variant="mortgage" />
 
         <FinancialDisclosure variant="mortgage" />
 

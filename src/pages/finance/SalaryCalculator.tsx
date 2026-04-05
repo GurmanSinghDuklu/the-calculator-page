@@ -4,6 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -335,7 +336,44 @@ const SalaryCalculator = () => {
           </div>
         </div>
 
-        <FinancialDisclosure variant="general" />
+                <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Is a Salary Calculator?",
+              description: "A salary calculator converts your gross annual salary into your actual take-home pay after all deductions. For UK workers, this includes income tax across multiple bands (personal allowance, basic rate at 20%, higher rate at 40%, and additional rate at 45%), National Insurance contributions (Class 1), student loan repayments, and pension contributions. Understanding your net pay is essential for budgeting accurately and evaluating job offers."
+            }}
+            howItWorks={{
+              title: "How UK Salary Tax Is Calculated",
+              description: "UK income tax is calculated progressively using tax bands. You only pay the higher rate on income above each threshold, not on your entire salary. National Insurance is calculated separately at 8% on earnings between £12,570 and £50,270, then 2% above that.",
+              steps: [
+                { step: 1, title: "Enter Your Gross Salary", description: "Input your annual gross salary before any deductions. Include bonuses or overtime if they are regular." },
+                { step: 2, title: "Select Your Country", description: "Choose UK or US. Tax bands, rates, and deduction types differ significantly between countries." },
+                { step: 3, title: "Add Pension Contributions", description: "Enter your monthly pension contribution if applicable. Workplace pensions reduce your taxable income, giving you tax relief." },
+                { step: 4, title: "Review Your Breakdown", description: "See your monthly and annual take-home pay, plus a detailed breakdown of income tax, NI, and other deductions." }
+              ]
+            }}
+            formula={{
+              title: "UK Income Tax Formula (2025/26)",
+              formula: "Tax = 0% × £12,570 + 20% × (£50,270 - £12,570) + 40% × (£125,140 - £50,270) + 45% × (income - £125,140)",
+              explanation: "The personal allowance of £12,570 is tax-free. The basic rate of 20% applies to income from £12,571 to £50,270. The higher rate of 40% applies from £50,271 to £125,140. The additional rate of 45% applies to income above £125,140. Note: the personal allowance reduces by £1 for every £2 earned above £100,000."
+            }}
+            faqs={[
+              { question: "How is UK income tax calculated?", answer: "UK income tax is progressive — you pay different rates on different portions of your income. The first £12,570 is tax-free (personal allowance), then 20% basic rate up to £50,270, 40% higher rate up to £125,140, and 45% additional rate above that." },
+              { question: "What is National Insurance?", answer: "National Insurance is a separate contribution paid by UK employees. Class 1 NI is 8% on earnings between £12,570 and £50,270, then 2% on earnings above £50,270. It funds the state pension, NHS, and benefits system." },
+              { question: "Does pension reduce my tax?", answer: "Yes. Workplace pension contributions are deducted from your gross salary before tax is calculated, reducing your taxable income. This gives you tax relief at your marginal rate — 20% for basic rate taxpayers, 40% for higher rate." },
+              { question: "What is the personal allowance taper?", answer: "If you earn over £100,000, your personal allowance reduces by £1 for every £2 above £100,000. This creates an effective 60% tax rate on income between £100,000 and £125,140. This is an important consideration for salary negotiations." }
+            ]}
+            tips={[
+              "Salary sacrifice into your pension to reduce tax — particularly effective if you are near a tax band threshold",
+              "Use your full ISA allowance (£20,000) to shelter savings and investment returns from tax",
+              "If you earn between £100,000 and £125,140, pension contributions can eliminate the 60% effective rate",
+              "Remember to factor in employer pension contributions when comparing job offers — they are part of your total compensation",
+              "Check your tax code on your payslip — an incorrect code means you could be over or underpaying tax"
+            ]}
+          />
+        </div>
+
+<FinancialDisclosure variant="general" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

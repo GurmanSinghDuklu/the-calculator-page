@@ -6,6 +6,7 @@ import { ArrowRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -377,7 +378,43 @@ export default function MortgageOverpayment() {
           </div>
         </div>
 
-        <FinancialDisclosure variant="mortgage" />
+                <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Are Mortgage Overpayments?",
+              description: "Mortgage overpayments are extra payments you make on top of your required monthly payment. The additional money goes directly toward reducing your outstanding loan balance, which means less interest accrues in future months. Over the life of a typical 25-year mortgage, even modest regular overpayments can save tens of thousands of pounds in interest and knock years off your term. Most UK lenders allow you to overpay up to 10% of your outstanding balance per year without early repayment charges."
+            }}
+            howItWorks={{
+              title: "How Mortgage Overpayments Save You Money",
+              description: "When you overpay, the extra goes straight to reducing your capital balance. Since interest is calculated on the remaining balance, a lower balance means less interest each month — creating a snowball effect where more of each future payment goes toward capital.",
+              steps: [
+                { step: 1, title: "Enter Your Mortgage Details", description: "Input your current balance, interest rate, remaining term, and monthly payment amount." },
+                { step: 2, title: "Set Your Overpayment Amount", description: "Enter how much extra you want to pay each month. Even £50-£100 per month can make a significant difference over 20+ years." },
+                { step: 3, title: "Compare the Results", description: "See how many years and months you will save, the total interest saved, and your new payoff date compared to making standard payments." }
+              ]
+            }}
+            formula={{
+              title: "Impact Calculation",
+              formula: "Interest saved = Total interest (standard) - Total interest (with overpayment)",
+              explanation: "Each month, interest is calculated as: Monthly interest = Outstanding balance × (Annual rate / 12). When you overpay, the outstanding balance drops faster, so less interest accrues each subsequent month. For example, on a £200,000 mortgage at 5% over 25 years, overpaying by £200/month saves approximately £45,000 in interest and clears the mortgage 7 years early."
+            }}
+            faqs={[
+              { question: "How do mortgage overpayments work?", answer: "Overpaying your mortgage means paying more than your required monthly payment. The extra goes directly to reducing your loan balance, which reduces future interest charges. This creates a compounding effect where each month less interest accrues, so more of your standard payment goes toward capital reduction." },
+              { question: "How much can I overpay without penalty?", answer: "Most UK lenders allow overpayments of up to 10% of your outstanding balance per year without early repayment charges. Check your mortgage terms — some products have different limits. If you are on a tracker or SVR, there are usually no overpayment limits at all." },
+              { question: "Is it worth overpaying my mortgage?", answer: "Yes, in most cases. If your mortgage rate is higher than the interest rate on your savings, overpaying your mortgage gives a better effective return. The savings are also tax-free. However, always keep an emergency fund first and check whether your pension offers employer matching." },
+              { question: "Should I overpay or save?", answer: "Compare your mortgage rate against your savings rate after tax. If your mortgage is at 5% and your savings earn 4% before tax (3.2% after basic rate tax), overpaying the mortgage gives a better return. However, ensure you have 3-6 months expenses saved as an emergency fund before making overpayments." }
+            ]}
+            tips={[
+              "Always maintain an emergency fund of 3-6 months expenses before making mortgage overpayments",
+              "Check your lender allows overpayments — most allow 10% per year without penalty",
+              "Consider overpaying at the start of your mortgage when the balance is highest for maximum impact",
+              "If you get a pay rise or bonus, directing even part of it to overpayments makes a big difference",
+              "Some lenders let you choose between reducing your term or reducing future payments — reducing the term usually saves more interest"
+            ]}
+          />
+        </div>
+
+<FinancialDisclosure variant="mortgage" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

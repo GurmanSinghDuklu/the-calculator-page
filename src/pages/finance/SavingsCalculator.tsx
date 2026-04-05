@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
@@ -289,6 +290,43 @@ const SavingsCalculator = () => {
 
         {/* Disclaimer */}
         <div className="max-w-7xl mx-auto px-6 pb-16">
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Is a Savings Calculator?",
+              description: "A savings calculator estimates how your money will grow over time based on your initial deposit, regular contributions, interest rate, and compounding frequency. It accounts for the power of compound interest — where you earn interest on your interest — giving you a realistic projection of your savings trajectory. Unlike simple interest calculations, compound interest means your returns accelerate over time, making early and consistent saving particularly powerful."
+            }}
+            howItWorks={{
+              title: "How the Savings Calculator Works",
+              description: "Our calculator uses the compound interest formula to project your savings growth. It factors in your starting balance, monthly contributions, the annual interest rate, and how often interest compounds (daily, monthly, quarterly, or annually).",
+              steps: [
+                { step: 1, title: "Enter Your Starting Balance", description: "Input the amount you already have saved. Even starting with zero is fine — regular contributions matter most over time." },
+                { step: 2, title: "Set Monthly Contributions", description: "Enter how much you plan to save each month. The 50/30/20 rule suggests putting 20% of take-home pay toward savings and debt repayment." },
+                { step: 3, title: "Choose Interest Rate & Term", description: "Enter the annual interest rate (AER) for your savings account and how many years you plan to save. UK savings accounts currently offer 3-5% AER for easy access and up to 5.5% for fixed-rate bonds." },
+                { step: 4, title: "Review Your Projection", description: "See your projected final balance, total deposits made, and total interest earned. Compare different scenarios by adjusting the rate or contribution amount." }
+              ]
+            }}
+            formula={{
+              title: "Savings Growth Formula",
+              formula: "FV = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)]",
+              explanation: "Where FV is future value, P is the initial principal, r is the annual interest rate (as a decimal), n is the number of times interest compounds per year, t is time in years, and PMT is the regular monthly payment. This formula combines the growth of a lump sum with the growth of a regular payment stream, both compounded at the same frequency."
+            }}
+            faqs={[
+              { question: "How much should I save each month?", answer: "A common guideline is to save at least 20% of your income. Use the 50/30/20 rule: 50% on needs, 30% on wants, 20% on savings and debt. Start with what you can afford and increase gradually." },
+              { question: "What is a good savings interest rate in the UK?", answer: "As of 2026, competitive UK savings rates range from 3-5% AER for easy access accounts and up to 5.5% for fixed-rate bonds. Cash ISAs offer tax-free interest up to your annual ISA allowance of £20,000." },
+              { question: "How often should savings compound?", answer: "Most savings accounts compound monthly or daily. The more frequently interest compounds, the faster your money grows. Daily compounding earns slightly more than monthly, though the practical difference is small for most balances." },
+              { question: "What is the difference between APR and AER?", answer: "APR (Annual Percentage Rate) is the simple annual rate without compounding. AER (Annual Equivalent Rate) includes the effect of compounding and shows the actual return you will earn. For savings, always compare AER figures." }
+            ]}
+            tips={[
+              "Set up a standing order on payday so savings happen automatically before you spend",
+              "Use a Cash ISA to shelter interest from tax — you get £20,000 per tax year",
+              "Keep 3-6 months of expenses in an easy access account as an emergency fund",
+              "For longer-term goals (5+ years), consider investing rather than saving — historically, investments have outpaced savings rates",
+              "Review your savings rate annually and switch accounts if a better AER is available"
+            ]}
+          />
         </div>
 
         <FinancialDisclosure variant="investment" />

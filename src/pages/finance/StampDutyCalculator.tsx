@@ -4,6 +4,7 @@ import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucid
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -367,7 +368,43 @@ const StampDutyCalculator = () => {
           </div>
         </div>
 
-        <FinancialDisclosure variant="mortgage" />
+                <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Is Stamp Duty Land Tax?",
+              description: "Stamp Duty Land Tax (SDLT) is a tax paid when purchasing property or land in England and Northern Ireland above a certain threshold. The tax is calculated in bands — you only pay the higher rate on the portion of the price within each band, not on the entire purchase price. Scotland has its own Land and Buildings Transaction Tax (LBTT), and Wales has Land Transaction Tax (LTT). SDLT rates differ for first-time buyers, home movers, additional properties, and non-UK residents."
+            }}
+            howItWorks={{
+              title: "How Stamp Duty Is Calculated",
+              description: "SDLT uses a progressive band system similar to income tax. Each band has a different rate, and you only pay that rate on the portion of the price falling within that band.",
+              steps: [
+                { step: 1, title: "Enter the Property Price", description: "Input the full purchase price of the property. SDLT is calculated on the total consideration including any fixtures or fittings included in the price." },
+                { step: 2, title: "Select Your Buyer Type", description: "Choose whether you are a first-time buyer, home mover, or purchasing an additional property. First-time buyers benefit from significant relief." },
+                { step: 3, title: "Review the Breakdown", description: "See exactly how much SDLT is due at each band, the total tax, and the effective rate as a percentage of the purchase price." }
+              ]
+            }}
+            formula={{
+              title: "SDLT Bands (England & Northern Ireland 2025/26)",
+              formula: "£0-£250,000: 0% | £250,001-£925,000: 5% | £925,001-£1,500,000: 10% | £1,500,001+: 12%",
+              explanation: "First-time buyers pay 0% up to £425,000 and 5% on the portion from £425,001 to £625,000 (no relief if price exceeds £625,000). Additional properties incur a 3% surcharge on top of standard rates. Non-UK residents pay an additional 2% surcharge. For example, a £350,000 home costs £5,000 in SDLT for home movers (5% on £100,000 above £250,000) but £0 for first-time buyers."
+            }}
+            faqs={[
+              { question: "What is Stamp Duty Land Tax?", answer: "SDLT is a tax charged on property purchases in England and Northern Ireland. It applies to residential properties above £250,000 (or £425,000 for first-time buyers). The tax is paid by the buyer and must be submitted to HMRC within 14 days of completion." },
+              { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £425,000. For properties between £425,001 and £625,000, they pay 5% only on the amount above £425,000. If the property exceeds £625,000, first-time buyer relief does not apply and standard rates are used." },
+              { question: "When do I pay stamp duty?", answer: "Stamp duty must be paid within 14 days of completing your property purchase. Your solicitor or conveyancer typically handles the SDLT return and payment on your behalf as part of the conveyancing process." },
+              { question: "Do I pay extra stamp duty on a second home?", answer: "Yes. There is a 3% surcharge on top of standard SDLT rates for additional residential properties. This applies to buy-to-let investments, holiday homes, and any property where you already own another residential property." }
+            ]}
+            tips={[
+              "If you are a first-time buyer, check you qualify — you must never have owned property anywhere in the world",
+              "Budget for stamp duty separately from your deposit — it is due on completion day and cannot be added to your mortgage",
+              "Consider the additional 3% surcharge before purchasing buy-to-let property — it significantly increases upfront costs",
+              "If buying jointly and one partner already owns property, the 3% surcharge applies to the entire purchase",
+              "Your solicitor should file the SDLT return within 14 days — late filing attracts penalties and interest"
+            ]}
+          />
+        </div>
+
+<FinancialDisclosure variant="mortgage" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

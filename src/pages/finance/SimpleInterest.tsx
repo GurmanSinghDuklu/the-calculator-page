@@ -5,6 +5,7 @@ import { ArrowRight, Percent } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -241,7 +242,43 @@ const SimpleInterest = () => {
           </div>
         </div>
 
-        <FinancialDisclosure variant="general" />
+                <div className="max-w-7xl mx-auto px-6">
+          <CalculatorStaticContent
+            whatIs={{
+              title: "What Is Simple Interest?",
+              description: "Simple interest is calculated only on the original principal amount — it does not compound. This makes it straightforward to calculate and commonly used for short-term loans, car finance, Treasury bills, and some personal loans. Unlike compound interest where you earn interest on interest, simple interest remains constant each period, making total costs more predictable but also meaning your money grows more slowly if saving."
+            }}
+            howItWorks={{
+              title: "How Simple Interest Is Calculated",
+              description: "Simple interest multiplies the principal by the rate and time period. The interest amount stays the same each year because it is always calculated on the original amount, never on accumulated interest.",
+              steps: [
+                { step: 1, title: "Enter the Principal", description: "Input the initial amount borrowed or invested. This is the base on which all interest will be calculated." },
+                { step: 2, title: "Set the Annual Rate", description: "Enter the annual interest rate as a percentage. For loans, this is the cost of borrowing. For investments, this is your return." },
+                { step: 3, title: "Choose the Time Period", description: "Enter the number of years. Simple interest grows linearly, so doubling the time doubles the interest — unlike compound interest which accelerates." },
+                { step: 4, title: "Review the Results", description: "See the total interest earned or paid, and the final amount. Compare with compound interest to understand the difference." }
+              ]
+            }}
+            formula={{
+              title: "Simple Interest Formula",
+              formula: "I = P × r × t",
+              explanation: "Where I is the interest earned, P is the principal (initial amount), r is the annual interest rate expressed as a decimal (e.g., 5% = 0.05), and t is the time in years. The total amount is A = P + I. For example, £10,000 at 5% for 3 years = £10,000 × 0.05 × 3 = £1,500 interest, giving a total of £11,500."
+            }}
+            faqs={[
+              { question: "What is the simple interest formula?", answer: "The formula is I = P × r × t, where I is interest, P is principal, r is the annual rate as a decimal, and t is time in years. Total amount = Principal + Interest. It is the most straightforward interest calculation." },
+              { question: "What is the difference between simple and compound interest?", answer: "Simple interest is calculated only on the original principal. Compound interest is calculated on the principal plus all previously accumulated interest. Over time, compound interest produces significantly higher returns because you earn interest on your interest." },
+              { question: "When is simple interest used?", answer: "Simple interest is commonly used for short-term personal loans, car finance agreements, Treasury bills, some bonds, and hire purchase agreements. It is also used in some savings accounts, though most UK savings accounts use compound interest." },
+              { question: "Is simple interest better for borrowers or savers?", answer: "Simple interest benefits borrowers because you pay less total interest compared to compound interest over the same period. For savers, compound interest is better because your returns grow faster over time. This is why most savings accounts compound." }
+            ]}
+            tips={[
+              "When comparing loans, check whether interest is simple or compound — compound interest costs more over the same period",
+              "Simple interest is ideal for short-term borrowing where the difference from compound interest is minimal",
+              "For savings, always prefer compound interest accounts — the difference grows significantly over longer periods",
+              "Convert between simple and compound rates using: effective rate = (1 + r/n)^n - 1"
+            ]}
+          />
+        </div>
+
+<FinancialDisclosure variant="general" />
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">

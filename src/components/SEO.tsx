@@ -156,12 +156,12 @@ const SEO = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={cleanCanonical} />
-      <meta property="og:image" content={`${siteUrl}/og-image.svg`} />
+      <meta property="og:image" content={`${siteUrl}/og-image.png`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={finalDescription} />
-      <meta name="twitter:image" content={`${siteUrl}/og-image.svg`} />
+      <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
 
       {/* Injecting Structured Data */}
       {allSchemas.map((schema, index) => (

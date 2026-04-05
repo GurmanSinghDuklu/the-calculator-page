@@ -73,6 +73,7 @@ import ProtectWealth from '../pages/learn/ProtectWealth';
 import SnowballAvalanche from '../pages/learn/SnowballAvalanche';
 import TaxEfficientAccounts from '../pages/learn/TaxEfficientAccounts';
 import TeachMoneySkills from '../pages/learn/TeachMoneySkills';
+import UkFinanceStats from '../pages/learn/UkFinanceStats';
 
 // Legal Pages
 import About from '../pages/legal/About';
@@ -162,6 +163,7 @@ export const routes: RouteObject[] = [
       { path: 'learn/snowball-avalanche', element: <SnowballAvalanche /> },
       { path: 'learn/tax-efficient-accounts', element: <TaxEfficientAccounts /> },
       { path: 'learn/teach-money-skills', element: <TeachMoneySkills /> },
+      { path: 'learn/uk-finance-statistics', element: <UkFinanceStats /> },
 
       // Legal Routes
       { path: 'about', element: <About /> },

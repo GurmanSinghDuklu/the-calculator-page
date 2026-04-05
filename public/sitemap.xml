@@ -384,6 +384,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.thecalculatorpage.com/learn/uk-finance-statistics</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
   <!-- Blog -->
   <url>
