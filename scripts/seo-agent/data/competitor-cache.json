@@ -1,1 +1,82 @@
-{}
+{
+  "www.thecalculatorsite.com": {
+    "domain": "www.thecalculatorsite.com",
+    "keywordPatterns": [
+      "[Calculator Name] - [Compounding Period / Feature Detail]  (e.g., 'Compound Interest Calculator - Daily, Monthly, Yearly Compounding')",
+      "[Calculator Name] With [Key Feature]  (e.g., 'Amortization Calculator With Extra Payments', 'Loan Calculator With Extra Payments')",
+      "[Calculator Name], [Synonym / Alt Name]  (e.g., 'Mortgage Repayment Calculator, Home Loan Calculator')",
+      "[Keyword] Calculator for [Use Cases]  (e.g., 'Interest Rate Calculator for Savings, Loans or Credit')",
+      "[Unit1] Converter: [Unit2] to [Unit3] & More  (e.g., 'Temperature Converter: Fahrenheit to Celsius & More')",
+      "[Unit1] and [Unit2] Converter - The Calculator Site  (e.g., 'Length Converter and Distance Converter - The Calculator Site')",
+      "[Adjective] [Category] Calculators from The Calculator Site  (e.g., 'Math Calculators from The Calculator Site')",
+      "[Calculator Name] (Expanded Acronym) and [Related Metric]  (e.g., 'BMR Calculator (Basal Metabolic Rate) and Daily Calories')",
+      "[Abbreviation] Calculator - Calculate Your [Metric]  (e.g., 'IRR Calculator - Calculate Your Rate of Return')",
+      "[Tool Name] - [Playful/Engaging Hook]  (e.g., 'Age Calculator 📅 (How Old Am I?)')"
+    ],
+    "descriptionFormulas": [
+      "Use this [tool name] to [action verb] [metric/value] [use-case context].  (e.g., 'Use this mortgage calculator tool to work out monthly and total costs of a capital repayment or interest only mortgage')",
+      "Use our [adjective] [tool name] to [action verb] [benefit].  (e.g., 'Use our free compound interest calculator to evaluate how your savings or investments might grow over time')",
+      "Use this [tool name] to convert instantly between [unit list].  (e.g., 'Use this liquid volume converter to convert instantly between barrels, cubic feet, gallons, liters, pints...')",
+      "[Action verb] your [metric] in [units] based upon [input].  (e.g., 'Calculate your age in years, months, weeks and days based upon your date of birth')",
+      "[Action verb] the [metric] you're receiving on your [financial product] using this [tool name].  (e.g., 'Find out what interest rate, APY or APR you're receiving on your savings or investment')",
+      "Learn about [topic] and how to use it to calculate [outcome].  (used on formula/article companion pages)"
+    ],
+    "strongKeywords": [
+      "compound interest calculator",
+      "daily compound interest calculator",
+      "mortgage calculator",
+      "loan calculator",
+      "savings calculator",
+      "amortization calculator",
+      "interest rate calculator",
+      "percentage calculator",
+      "BMI calculator",
+      "BMR calculator",
+      "age calculator",
+      "hourly to salary calculator",
+      "salary to hourly calculator",
+      "length converter",
+      "temperature converter",
+      "weight converter",
+      "volume converter",
+      "free online calculator",
+      "metric and imperial",
+      "monthly repayment",
+      "future value",
+      "extra payments",
+      "retirement calculator",
+      "investment calculator",
+      "ROI calculator"
+    ],
+    "schemaTypes": [
+      "FAQPage — used on calculator pages with Q&A sections (e.g., 'frequently asked questions about our daily compounding calculator')",
+      "WebApplication / SoftwareApplication — for interactive calculator tools (standard for this tool type)",
+      "Article / BlogPosting — on companion formula and educational articles (e.g., 'Compound Interest Formula With Examples')",
+      "BreadcrumbList — evidenced by structured category navigation (Finance > Calculators > Compound Interest)",
+      "HowTo — on formula/step-by-step guide pages explaining how to calculate manually"
+    ],
+    "contentDepth": "high",
+    "titlePatterns": [
+      "[Calculator Name] - [Compounding Period / Feature Detail]  (e.g., 'Compound Interest Calculator - Daily, Monthly, Yearly Compounding')",
+      "[Calculator Name] With [Key Feature]  (e.g., 'Amortization Calculator With Extra Payments', 'Loan Calculator With Extra Payments')",
+      "[Calculator Name], [Synonym / Alt Name]  (e.g., 'Mortgage Repayment Calculator, Home Loan Calculator')",
+      "[Keyword] Calculator for [Use Cases]  (e.g., 'Interest Rate Calculator for Savings, Loans or Credit')",
+      "[Unit1] Converter: [Unit2] to [Unit3] & More  (e.g., 'Temperature Converter: Fahrenheit to Celsius & More')",
+      "[Unit1] and [Unit2] Converter - The Calculator Site  (e.g., 'Length Converter and Distance Converter - The Calculator Site')",
+      "[Adjective] [Category] Calculators from The Calculator Site  (e.g., 'Math Calculators from The Calculator Site')",
+      "[Calculator Name] (Expanded Acronym) and [Related Metric]  (e.g., 'BMR Calculator (Basal Metabolic Rate) and Daily Calories')",
+      "[Abbreviation] Calculator - Calculate Your [Metric]  (e.g., 'IRR Calculator - Calculate Your Rate of Return')",
+      "[Tool Name] - [Playful/Engaging Hook]  (e.g., 'Age Calculator 📅 (How Old Am I?)')"
+    ],
+    "internalLinking": [
+      "Persistent global nav sidebar groups all tools by category (Finance, Math, Conversions, Cooking, Health, Construction, Misc) — present on every single page",
+      "Each calculator page features a 'Related Calculators' section linking to same-category tools (e.g., compound interest links to savings, CAGR, simple interest)",
+      "Category hub pages (/finance/, /math/, /conversions/) act as topical silos aggregating all calculators per vertical",
+      "Formula/article companion pages (e.g., /compound-interest-formula) link back to the primary calculator, creating hub-and-spoke content clusters",
+      "Cross-category contextual links within body copy (e.g., weight converter body text links to water weight calculator and cooking converter)",
+      "Homepage spotlights top-traffic flagship tools (compound interest, loan, percentage) with direct CTAs, concentrating link equity",
+      "Breadcrumb navigation reinforces category hierarchy (Home > Finance > Calculators > [Tool Name]) for crawlability and UX"
+    ],
+    "analyzedAt": "2026-03-31T23:35:02.507Z"
+  }
+}

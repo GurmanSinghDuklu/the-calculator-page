@@ -1,0 +1,133 @@
+{
+  "date": "2026-03-29",
+  "startTime": "2026-03-29T08:40:57.293Z",
+  "status": "failed",
+  "totalPages": 0,
+  "pagesOptimized": 0,
+  "errors": [
+    "Failed to analyze competitor: www.thecalculatorsite.com",
+    "Failed to analyze competitor: omnicalculator.com",
+    "Failed to analyze competitor: calculator.net",
+    "Fatal error in SEO Agent"
+  ],
+  "warnings": [],
+  "competitorAnalysis": {
+    "fetchedAt": "",
+    "competitors": [],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": false,
+  "googlePinged": false,
+  "bingPinged": false,
+  "logs": [
+    {
+      "timestamp": "2026-03-29T08:40:57.345Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.345Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.345Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.345Z",
+      "level": "info",
+      "message": "Refreshing competitor analysis (cache expired)"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.345Z",
+      "level": "info",
+      "message": "Analyzing competitor: www.thecalculatorsite.com"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.585Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: www.thecalculatorsite.com",
+      "data": {
+        "error": {
+          "status": 401,
+          "headers": {},
+          "requestID": "req_011CZX59w7ijNnvzLwZorxvM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "authentication_error",
+              "message": "invalid x-api-key"
+            },
+            "request_id": "req_011CZX59w7ijNnvzLwZorxvM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.585Z",
+      "level": "info",
+      "message": "Analyzing competitor: omnicalculator.com"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.714Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: omnicalculator.com",
+      "data": {
+        "error": {
+          "status": 401,
+          "headers": {},
+          "requestID": "req_011CZX59wkvJLSn4brqH8Sia",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "authentication_error",
+              "message": "invalid x-api-key"
+            },
+            "request_id": "req_011CZX59wkvJLSn4brqH8Sia"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.714Z",
+      "level": "info",
+      "message": "Analyzing competitor: calculator.net"
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.912Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: calculator.net",
+      "data": {
+        "error": {
+          "status": 401,
+          "headers": {},
+          "requestID": "req_011CZX59xPNHphA9TRak7Tt6",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "authentication_error",
+              "message": "invalid x-api-key"
+            },
+            "request_id": "req_011CZX59xPNHphA9TRak7Tt6"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-29T08:40:57.913Z",
+      "level": "error",
+      "message": "Fatal error in SEO Agent",
+      "data": {
+        "error": {
+          "errno": -2,
+          "code": "ENOENT",
+          "syscall": "open",
+          "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/data/competitor-cache.json"
+        }
+      }
+    }
+  ],
+  "endTime": "2026-03-29T08:40:57.914Z"
+}

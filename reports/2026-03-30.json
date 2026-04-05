@@ -1,0 +1,119 @@
+{
+  "date": "2026-03-30",
+  "startTime": "2026-03-30T02:03:00.247Z",
+  "status": "failed",
+  "totalPages": 0,
+  "pagesOptimized": 0,
+  "errors": [
+    "Failed to analyze competitor: www.thecalculatorsite.com",
+    "Failed to analyze competitor: omnicalculator.com",
+    "Failed to analyze competitor: calculator.net",
+    "Fatal error in SEO Agent"
+  ],
+  "warnings": [],
+  "competitorAnalysis": {
+    "fetchedAt": "",
+    "competitors": [],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": false,
+  "googlePinged": false,
+  "bingPinged": false,
+  "logs": [
+    {
+      "timestamp": "2026-03-30T02:06:51.469Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-03-30T02:06:51.469Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-03-30T02:06:51.469Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-03-30T02:06:51.469Z",
+      "level": "info",
+      "message": "Refreshing competitor analysis (cache expired)"
+    },
+    {
+      "timestamp": "2026-03-30T02:06:51.470Z",
+      "level": "info",
+      "message": "Analyzing competitor: www.thecalculatorsite.com"
+    },
+    {
+      "timestamp": "2026-03-30T02:56:56.710Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: www.thecalculatorsite.com",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-03-30T02:56:56.711Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-03-30T07:51:41.030Z",
+      "level": "info",
+      "message": "Analyzing competitor: omnicalculator.com"
+    },
+    {
+      "timestamp": "2026-03-30T08:18:29.077Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: omnicalculator.com",
+      "data": {
+        "error": {
+          "status": 429,
+          "headers": {},
+          "requestID": "req_011CZYwFSaEg7xhcbqdaEKRp",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "rate_limit_error",
+              "message": "This request would exceed your organization's rate limit of 30,000 input tokens per minute (org: e3363df7-2307-41e6-ade8-a4480457154f, model: claude-sonnet-4-6). For details, refer to: https://docs.claude.com/en/api/rate-limits. You can see the response headers for current usage. Please reduce the prompt length or the maximum tokens requested, or try again later. You may also contact sales at https://claude.com/contact-sales to discuss your options for a rate limit increase."
+            },
+            "request_id": "req_011CZYwFSaEg7xhcbqdaEKRp"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-30T08:18:29.078Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-03-30T08:35:27.767Z",
+      "level": "info",
+      "message": "Analyzing competitor: calculator.net"
+    },
+    {
+      "timestamp": "2026-03-30T08:46:42.483Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: calculator.net",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-03-30T08:46:42.485Z",
+      "level": "error",
+      "message": "Fatal error in SEO Agent",
+      "data": {
+        "error": {
+          "errno": -2,
+          "code": "ENOENT",
+          "syscall": "open",
+          "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/data/competitor-cache.json"
+        }
+      }
+    }
+  ],
+  "endTime": "2026-03-30T08:46:42.486Z"
+}
