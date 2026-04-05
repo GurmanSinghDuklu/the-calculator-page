@@ -11,7 +11,7 @@ export default function TeachMoneySkills() {
     <>
       <SEO
         title="How to Teach Money Skills to Others - Share Your Knowledge"
-        description="Learn how to pass on financial literacy to children, partners, friends, and community. Practical strategies for teaching money skills at every age and stage."
+        description="Pass on financial literacy to children, partners and communities. Age-appropriate money skills and tips."
         keywords="teach kids about money, financial education, money skills for children, financial literacy teaching, sharing money knowledge, money conversations"
         canonicalUrl="/learn/teach-money-skills"
       />

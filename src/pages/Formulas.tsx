@@ -209,8 +209,8 @@ export default function Formulas() {
   return (
     <>
       <SEO
-        title="Calculator Formulas & Mathematical Reference Guide"
-        description="Complete reference guide of all calculator formulas and mathematical equations. Learn the math behind compound interest, mortgage payments, loan calculations, and more."
+        title="Calculator Formulas Guide"
+        description="Reference guide to all calculator formulas: compound interest, mortgage, loan and savings with explanations."
         keywords="calculator formulas, mathematical formulas, compound interest formula, mortgage formula, loan payment formula, financial calculations"
       />
 

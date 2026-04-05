@@ -68,7 +68,7 @@ const LearnHub = () => {
   return (
     <>
       <SEO
-        title="Learn & Insights - Financial Education Hub | Calculator Page"
+        title="Learn - Financial Education Hub"
         description="Master personal finance with our comprehensive guides, cheat codes, and educational content. From budgeting basics to wealth building strategies."
         keywords="financial education, money management, budgeting guide, investment strategies, wealth building, personal finance"
         canonicalUrl="https://www.thecalculatorpage.com/learn"

@@ -99,8 +99,8 @@ const SalaryCalculator = () => {
   return (
     <>
       <SEO
-        title="Salary Calculator - UK & US Take-Home Pay After Tax"
-        description="Calculate your take-home salary after income tax, national insurance, Social Security, Medicare, and state taxes. Supports UK, US, and multi-state tax calculations with pension contributions."
+        title="Salary Calculator UK & US"
+        description="Calculate take-home pay after income tax, national insurance and state taxes. Supports UK and US with pension contributions."
         keywords="salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary, US income tax calculator, FICA calculator, state tax, federal tax, paycheck calculator, net pay"
         canonicalUrl="https://www.thecalculatorpage.com/finance/salary"
         faqSchema={faqSchema}

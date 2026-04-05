@@ -10,7 +10,7 @@ export default function First1000() {
     <>
       <SEO
         title="Your First £1,000: Turning Saving Into a Habit"
-        description="A gamified approach to saving your first £1,000. Build lasting savings habits with milestones, challenges, and psychological tricks that make saving feel rewarding."
+        description="Gamified approach to saving your first £1,000. Progressive challenges from £100 to your first milestone."
         keywords="save first 1000, saving habits, savings challenge, money saving tips UK, building savings habit, savings milestones"
         canonicalUrl="/learn/first-1000"
       />

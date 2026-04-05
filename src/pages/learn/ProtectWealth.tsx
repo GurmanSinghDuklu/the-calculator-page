@@ -12,7 +12,7 @@ export default function ProtectWealth() {
     <>
       <SEO
         title="Protecting Your Wealth: Insurance & Wills - UK Guide"
-        description="Essential guide to protecting your wealth and family through insurance, wills, and estate planning. Learn what coverage you need and how to prepare for the unexpected."
+        description="Protect wealth through insurance, wills and estate planning. Secure your financial future."
         keywords="life insurance UK, income protection, will writing, estate planning, wealth protection, critical illness cover, family protection UK"
         canonicalUrl="/learn/protect-wealth"
       />

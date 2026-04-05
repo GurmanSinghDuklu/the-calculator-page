@@ -86,8 +86,8 @@ const PercentageCalculator = () => {
   return (
     <>
       <SEO
-        title="Percentage Calculator - Calculate Percentages, Increase & Decrease"
-        description="Free online percentage calculator. Calculate percentage of a number, percentage increase, percentage decrease, and find what percent one number is of another."
+        title="Percentage Calculator - Free"
+        description="Free percentage calculator. Calculate percentage of a number, increase, decrease and tips. Instant results."
         keywords="percentage calculator, percent calculator, percentage increase calculator"
         structuredData={[structuredData, breadcrumbStructuredData]}
         faqSchema={faqSchema}

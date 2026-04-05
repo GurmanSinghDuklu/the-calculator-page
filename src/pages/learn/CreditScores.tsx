@@ -10,7 +10,7 @@ export default function CreditScores() {
     <>
       <SEO
         title="Credit Scores and Borrowing Wisely - Build or Repair Your Credit"
-        description="Understand UK credit scores, how they work, and practical strategies to build or repair your credit. Learn to borrow wisely and improve your financial options."
+        description="UK credit scores: how they work and strategies to build or repair credit for mortgages and loans."
         keywords="credit score UK, improve credit score, credit rating, Experian, Equifax, credit repair, borrowing tips UK, credit file"
         canonicalUrl="/learn/credit-scores"
       />

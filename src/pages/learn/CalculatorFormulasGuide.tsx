@@ -51,7 +51,7 @@ export default function CalculatorFormulasGuide() {
     <ArticleLayout
         publishDate="2025-07-01"
       title="Complete Guide to Calculator Formulas: Understanding the Math Behind Your Money"
-      description="Master the essential mathematical formulas used in financial calculators. Learn how compound interest, loan payments, mortgages, and retirement calculations work."
+      description="Essential financial formulas: compound interest, mortgage amortization, annuity and present value explained."
       readTime="12 min read"
       category="Financial Education"
       categoryColor="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"

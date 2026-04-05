@@ -356,8 +356,8 @@ export default function MortgageCostComparison() {
   return (
     <>
       <SEO
-        title="Mortgage Cost Comparison Calculator | True Cost of a Deal UK"
-        description="Compare mortgage deals on their true cost — monthly payments, product fees, valuation, legal costs, and remaining balance over the exact deal term. Built for UK mortgage advisors and brokers."
+        title="Mortgage Cost Comparison UK"
+        description="Compare mortgage deals by true cost: payments, fees, valuation and remaining balance. Built for UK advisors and brokers."
         keywords="mortgage cost comparison calculator, compare mortgage deals UK, true cost mortgage calculator, mortgage calculator with fees, mortgage arrangement fee calculator, remortgage comparison calculator, mortgage deal comparison tool, mortgage advisor calculator, mortgage broker tool, total mortgage cost calculator, APRC mortgage calculator, mortgage product fee calculator, remortgage savings calculator, cost effective mortgage UK, mortgage fee to balance calculator"
         canonicalUrl="https://www.thecalculatorpage.com/finance/mortgage-cost-comparison"
         faqSchema={faqSchema}

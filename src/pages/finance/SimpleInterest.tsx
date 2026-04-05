@@ -41,7 +41,7 @@ const SimpleInterest = () => {
   return (
     <>
       <SEO
-        title="Simple Interest Calculator - Calculate Interest Earned"
+        title="Simple Interest Calculator UK"
         description="Free simple interest calculator to calculate interest on loans and investments. Find interest amount and total value."
         keywords="simple interest calculator, simple interest formula, calculate simple interest"
         faqSchema={faqSchema}

@@ -13,7 +13,7 @@ export default function WhereMoneyGoes() {
     <>
       <SEO
         title="Where Your Money Really Goes - Track Your Spending"
-        description="Learn how to track your spending for 30 days and categorize expenses to understand where your money really goes. Essential first step in financial literacy."
+        description="Track spending for 30 days and categorize expenses. Understand where your money goes to take control."
         keywords="track spending, categorize expenses, money tracking, spending awareness, budget tracking, financial habits"
         canonicalUrl="/learn/where-money-goes"
       />

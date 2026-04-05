@@ -43,7 +43,7 @@ export default function ApyCalculator() {
   return (
     <>
       <SEO
-        title="APY Calculator - Calculate Annual Percentage Yield"
+        title="APY Calculator - Free"
         description="Free APY calculator to find your effective annual percentage yield based on nominal interest rate and compounding frequency."
         keywords="apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate calculator"
         faqSchema={faqSchema}

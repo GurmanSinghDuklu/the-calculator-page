@@ -36,7 +36,7 @@ const DiscountCalculator = () => {
   return (
     <>
       <SEO
-        title="Discount Calculator - Calculate Sale Price & Savings"
+        title="Discount Calculator - Free"
         description="Free discount calculator to find sale prices and savings. Calculate percentage discounts instantly."
         keywords="discount calculator, sale price calculator, percentage off calculator, discount percentage calculator"
         faqSchema={faqSchema}

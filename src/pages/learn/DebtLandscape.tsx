@@ -11,7 +11,7 @@ export default function DebtLandscape() {
     <>
       <SEO
         title="Understanding Your Debt Landscape - List, Categorize and Prioritize"
-        description="Take control of your debt by creating a complete inventory. Learn how to categorize good vs bad debt, prioritize repayment, and create your debt freedom roadmap."
+        description="Take control of debt: create an inventory, categorize, prioritize and strategically tackle debts."
         keywords="debt inventory, debt prioritization, good debt vs bad debt, debt management UK, debt freedom, debt list, paying off debt"
         canonicalUrl="/learn/debt-landscape"
       />

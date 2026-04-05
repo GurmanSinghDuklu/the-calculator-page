@@ -113,7 +113,7 @@ export default function BudgetCalculator() {
 
   return (
     <>
-      <SEO title="Budget Calculator - Monthly Income & Expense Tracker"
+      <SEO title="Budget Calculator - Free"
         description="Free budget calculator to track your monthly income and expenses. Categorize spending, add custom expenses, and see your remaining balance."
         keywords="budget calculator, monthly budget, income tracker, expense tracker, financial planning"
         faqSchema={budgetStaticContent.faqs}

@@ -12,7 +12,7 @@ export default function InterestImpact() {
     <>
       <SEO
         title="How Interest Eats Your Wealth - The Reverse Compounding Effect"
-        description="Visualize how compound interest works against you when you're in debt. Understand the true cost of borrowing and why paying off debt is like guaranteed returns."
+        description="How compound interest works against you in debt. The true cost of borrowing and why minimum payments trap you."
         keywords="compound interest debt, interest on loans, debt interest calculator, true cost of borrowing, reverse compounding, debt visualisation UK"
         canonicalUrl="/learn/interest-impact"
       />

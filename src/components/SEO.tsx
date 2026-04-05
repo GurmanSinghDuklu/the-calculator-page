@@ -83,7 +83,11 @@ const SEO = ({
   // FIX: Force removal of trailing slash to match sitemap and avoid duplicate errors
   const cleanCanonical = resolvedCanonical.replace(/\/$/, "");
 
-  const fullTitle = `${finalTitle} | The Calculator Page`;
+  // Keep full title under 60 chars for SERPs. Use short brand suffix on inner pages.
+  const isHomepage = location.pathname === '/';
+  const fullTitle = isHomepage
+    ? finalTitle
+    : `${finalTitle} | CalcPage`;
 
   // Author schema for E-E-A-T (YMYL financial content)
   const authorSchema = {

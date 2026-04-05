@@ -8,7 +8,7 @@ const Welcome = () => {
   return (
     <div className="min-h-screen bg-dark-bg flex flex-col items-center justify-center relative overflow-hidden">
       <SEO
-        title="Calculator Page - Professional Financial Calculators & Tools"
+        title="Free Financial Calculators UK"
         description="Free professional calculators for finance, budgeting, retirement planning, and unit conversions. Calculate compound interest, mortgages, and more."
         keywords="calculator, financial calculator, compound interest, mortgage calculator, retirement calculator"
         canonicalUrl="https://www.thecalculatorpage.com/"

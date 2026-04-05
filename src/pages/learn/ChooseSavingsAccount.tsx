@@ -10,7 +10,7 @@ export default function ChooseSavingsAccount() {
     <>
       <SEO
         title="How to Choose the Right Savings Account (UK) - ISA vs Regular Savings"
-        description="Compare UK savings accounts including Cash ISAs, easy access, notice accounts, and fixed-rate bonds. Find the best place to park your cash with our comprehensive guide."
+        description="Compare UK savings: Cash ISAs, easy access, notice accounts and fixed-rate bonds. Find the right one for you."
         keywords="UK savings account, Cash ISA, best savings rates, easy access savings, fixed rate bonds, FSCS protection, savings comparison UK"
         canonicalUrl="/learn/choose-savings-account"
       />

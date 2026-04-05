@@ -63,7 +63,7 @@ const PercentageOfCalculator = () => {
   return (
     <>
       <SEO
-        title="Percentage Of Calculator - What is X% of Y? | Free Online Tool"
+        title="What is X% of Y? Calculator"
         description="Instantly calculate what percentage of any number is. Simple, fast percentage calculator."
         keywords="percentage of calculator, what is percent of, calculate percentage, percentage calculator, math calculator"
         canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-of"

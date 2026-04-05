@@ -13,7 +13,7 @@ export default function InflationGuide() {
     <>
       <SEO
         title="Inflation: The Silent Thief - Protecting Your Money's Buying Power"
-        description="Understand how inflation erodes your savings and learn strategies to protect your money's purchasing power. Real returns, inflation hedges, and practical UK-focused advice."
+        description="How inflation erodes savings and strategies to protect your purchasing power. Real examples and actionable steps."
         keywords="inflation UK, real returns, purchasing power, inflation protection, CPI, savings vs inflation, beating inflation"
         canonicalUrl="/learn/inflation-guide"
       />

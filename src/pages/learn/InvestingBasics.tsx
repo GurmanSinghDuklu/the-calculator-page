@@ -12,7 +12,7 @@ export default function InvestingBasics() {
     <>
       <SEO
         title="Basics of Investing: Stocks, Bonds & ETFs - A Beginner's Guide"
-        description="Understand the fundamental building blocks of investing: stocks, bonds, and ETFs. A clear, jargon-free introduction for UK investors starting their investment journey."
+        description="Investing fundamentals: stocks, bonds and ETFs. What each offers, their risks and how to get started."
         keywords="investing basics UK, stocks for beginners, what are bonds, ETF explained, index funds UK, beginner investing, investment types"
         canonicalUrl="/learn/investing-basics"
       />

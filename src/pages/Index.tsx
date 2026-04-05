@@ -48,7 +48,7 @@ const Index = () => {
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
       <SEO
-        title="The Calculator Page - Free UK Financial Calculators"
+        title="Free UK Financial Calculators"
         description="Free UK financial calculators for mortgages, compound interest, salary, retirement, and more. No signup required. Instant results."
         canonicalUrl="https://www.thecalculatorpage.com"
       />

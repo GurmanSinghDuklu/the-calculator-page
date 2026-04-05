@@ -11,7 +11,7 @@ export default function InvestingVsTrading() {
     <>
       <SEO
         title="Long-Term Investing vs Trading - Psychology and Strategy"
-        description="Understand the crucial difference between investing and trading. Learn why long-term investing wins for most people and how to master the psychology of staying the course."
+        description="The difference between investing and trading. Why long-term beats speculation and how psychology affects decisions."
         keywords="investing vs trading, long term investing, buy and hold, trading psychology, investment strategy, patient investing UK"
         canonicalUrl="/learn/investing-vs-trading"
       />

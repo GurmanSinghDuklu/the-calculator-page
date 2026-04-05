@@ -14,7 +14,7 @@ export default function SnowballAvalanche() {
     <>
       <SEO
         title="Snowball vs Avalanche: Debt Payoff Strategies Compared"
-        description="Compare the debt snowball and avalanche methods with worked examples. Find which debt payoff strategy works best for your personality and financial situation."
+        description="Compare debt snowball vs avalanche methods with worked examples. Find the strategy that fits your situation."
         keywords="debt snowball, debt avalanche, debt payoff strategy, debt repayment methods, paying off debt UK, debt free strategies"
         canonicalUrl="/learn/snowball-avalanche"
       />

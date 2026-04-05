@@ -12,7 +12,7 @@ export default function BeforeYouInvest() {
     <>
       <SEO
         title="What to Do Before You Invest - Pre-Investment Checklist"
-        description="A comprehensive checklist of what you need in place before investing. Cover emergency funds, debt, risk tolerance, goals, and timelines before putting money in the market."
+        description="Checklist before investing: emergency funds, debt payoff, pension matching and more."
         keywords="before investing checklist, investment readiness, risk tolerance, investment goals, emergency fund before investing, investment timeline UK"
         canonicalUrl="/learn/before-you-invest"
       />

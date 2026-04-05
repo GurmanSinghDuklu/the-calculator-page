@@ -89,7 +89,7 @@ const CompoundInterest = () => {
   };
 
   const faqSchema = [
-    { question: "What is compound interest?", answer: "Interest calculated on the principal and the accumulated interest." },
+    { question: "What is compound interest?", answer: "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest which only applies to the original amount, compound interest grows exponentially over time. This is why Albert Einstein reportedly called it the eighth wonder of the world — small amounts can grow significantly when left to compound over years." },
     { question: "What's the difference between daily and monthly compounding?", answer: "Daily compounding applies interest 365 times per year, while monthly compounds 12 times. Daily compounding results in slightly higher returns over time." },
     { question: "Which compounding frequency is best?", answer: "More frequent compounding (daily vs yearly) generates slightly more interest over time. However, the practical difference becomes smaller as the time period decreases. Choose based on your account type." },
     { question: "How to calculate daily compound interest?", answer: "Use the formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency (365 for daily), and t is time in years. Our calculator does this automatically." }
@@ -102,8 +102,8 @@ const CompoundInterest = () => {
     return (
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
         <SEO
-          title="Compound Interest Calculator - Daily, Monthly, Yearly Compounding"
-          description="Free compound interest calculator with daily, monthly, quarterly, and yearly compounding. Calculate investment growth and see how your savings grow over time with the power of compound interest."
+          title="Compound Interest Calculator UK"
+          description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
           structuredData={[structuredData, breadcrumbStructuredData]}
           faqSchema={faqSchema}
         />
@@ -124,8 +124,8 @@ const CompoundInterest = () => {
   return (
     <>
       <SEO
-        title="Compound Interest Calculator - Daily, Monthly, Yearly Compounding"
-        description="Free compound interest calculator with daily, monthly, quarterly, and yearly compounding. Calculate investment growth and see how your savings grow over time with the power of compound interest."
+        title="Compound Interest Calculator UK"
+        description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
         structuredData={[structuredData, breadcrumbStructuredData]}
         faqSchema={faqSchema}
       />

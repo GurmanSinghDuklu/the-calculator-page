@@ -10,7 +10,7 @@ export default function MonthlyDashboard() {
     <>
       <SEO
         title="Your Monthly Financial Dashboard - Review and Adjust Your Finances"
-        description="Learn how to conduct monthly financial reviews with key KPIs and adjustments. Track your progress and stay on top of your money with a personal finance dashboard."
+        description="Monthly financial reviews: track net worth, savings rate, spending trends and debt reduction progress."
         keywords="monthly financial review, money dashboard, financial KPIs, budget review, money tracking, personal finance metrics UK"
         canonicalUrl="/learn/monthly-dashboard"
       />

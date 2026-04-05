@@ -2,6 +2,7 @@ import React from "react";
 import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
+import { AuthorByline } from "@/components/AuthorByline";
 
 interface ArticleLayoutProps {
   title: string;
@@ -35,7 +36,7 @@ export function ArticleLayout({
         "@type": "Article",
         headline: title,
         description,
-        author: { "@type": "Organization", name: "The Calculator Page", url: "https://www.thecalculatorpage.com" },
+        author: { "@type": "Person", name: "Mandeep Singh Duklu", jobTitle: "Financial Coach & Calculator Developer" },
         publisher: { "@type": "Organization", name: "The Calculator Page", url: "https://www.thecalculatorpage.com" },
         datePublished: publishDate,
         dateModified: "2026-03-06",
@@ -77,6 +78,8 @@ export function ArticleLayout({
           <p className="text-lg text-zinc-400 leading-relaxed font-sans">
             {description}
           </p>
+
+          <AuthorByline />
         </header>
 
         {/* ── Article body — all text forced white ── */}

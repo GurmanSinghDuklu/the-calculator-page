@@ -23,7 +23,7 @@ export default function BuildPortfolio() {
     <>
       <SEO
         title="How to Build a Balanced Portfolio - Sample Portfolios by Risk Profile"
-        description="Learn how to construct a diversified investment portfolio tailored to your risk tolerance. Includes sample portfolios from conservative to aggressive with specific ETF examples."
+        description="Build a diversified portfolio for your risk profile. Sample allocations from cautious to adventurous."
         keywords="build investment portfolio, portfolio allocation, asset allocation UK, diversified portfolio, risk-based investing, sample portfolios, investment strategy"
         canonicalUrl="/learn/build-portfolio"
       />

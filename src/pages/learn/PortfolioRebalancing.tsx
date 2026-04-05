@@ -10,7 +10,7 @@ export default function PortfolioRebalancing() {
     <>
       <SEO
         title="How to Rebalance and Review Your Portfolio - Best Practices"
-        description="Learn when and how to rebalance your investment portfolio. Practical guidance on maintaining your target allocation, reviewing performance, and staying disciplined."
+        description="When and how to rebalance your portfolio. Frequency, thresholds and tax-efficient strategies for UK investors."
         keywords="portfolio rebalancing, investment review, asset allocation maintenance, rebalancing strategy, portfolio management UK, investment discipline"
         canonicalUrl="/learn/portfolio-rebalancing"
       />

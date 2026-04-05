@@ -11,7 +11,7 @@ export default function BudgetIrregularCosts() {
     <>
       <SEO
         title="Budgeting for Unexpected Costs - Plan for Irregular Expenses"
-        description="Learn how to plan for irregular and unexpected expenses. Build a buffer for annual costs, emergencies, and surprise bills with practical budgeting strategies."
+        description="Plan for irregular expenses: annual bills, seasonal costs and emergencies without breaking your budget."
         keywords="irregular expenses, unexpected costs, budget planning, annual expenses, sinking funds, emergency budget, financial planning UK"
         canonicalUrl="/learn/budget-irregular-costs"
       />
