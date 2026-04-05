@@ -52,7 +52,7 @@ const About = () => {
         title="About Us - The Calculator Page"
         description="Learn about The Calculator Page - our mission to provide free, accurate, and privacy-focused financial calculators and tools for everyone."
         keywords="about us, calculator page, financial tools, free calculators, mission"
-        canonicalUrl="https://thecalculatorpage.lovable.app/about"
+        canonicalUrl="https://www.thecalculatorpage.com/about"
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">

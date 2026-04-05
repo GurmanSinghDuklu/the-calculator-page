@@ -43,7 +43,7 @@ const Disclaimer = () => {
         title="Disclaimer - The Calculator Page"
         description="Important disclaimer about the use of calculators on The Calculator Page. Results are for informational purposes only."
         keywords="disclaimer, financial disclaimer, calculator accuracy, legal notice"
-        canonicalUrl="https://thecalculatorpage.lovable.app/disclaimer"
+        canonicalUrl="https://www.thecalculatorpage.com/disclaimer"
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">

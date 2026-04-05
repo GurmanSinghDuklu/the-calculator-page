@@ -1,4 +1,5 @@
 import { Head } from 'vite-react-ssg';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title: string;
@@ -42,6 +43,7 @@ const SEO = ({
   articleSchema
 }: SEOProps) => {
   const siteUrl = 'https://www.thecalculatorpage.com';
+  const location = useLocation();
 
   // Start with provided values
   let finalTitle = title;
@@ -67,12 +69,29 @@ const SEO = ({
     }
   } 
   
+  // Auto-generate canonical from current route if not explicitly provided
+  // This prevents ALL pages defaulting to the homepage canonical
+  const autoCanonical = location.pathname === '/'
+    ? siteUrl
+    : `${siteUrl}${location.pathname}`;
+
+  // Resolve canonical: use explicit if absolute, prepend siteUrl if relative, else auto-generate
+  const resolvedCanonical = canonicalUrl
+    ? (canonicalUrl.startsWith('http') ? canonicalUrl : `${siteUrl}${canonicalUrl}`)
+    : autoCanonical;
+
   // FIX: Force removal of trailing slash to match sitemap and avoid duplicate errors
-  const cleanCanonical = canonicalUrl
-    ? canonicalUrl.replace(/\/$/, "")
-    : siteUrl;
+  const cleanCanonical = resolvedCanonical.replace(/\/$/, "");
 
   const fullTitle = `${finalTitle} | The Calculator Page`;
+
+  // Author schema for E-E-A-T (YMYL financial content)
+  const authorSchema = {
+    "@type": "Person",
+    "name": "Mandeep Singh Duklu",
+    "jobTitle": "Financial Coach & Calculator Developer",
+    "description": "CeMAP qualified mortgage adviser with 25+ years in UK financial services including Lloyds Banking Group private banking."
+  };
 
   // Base Schema
   const baseSchema = {
@@ -81,6 +100,7 @@ const SEO = ({
     "name": finalTitle,
     "description": finalDescription,
     "url": cleanCanonical,
+    "author": authorSchema,
   };
 
   // Combine all schemas into an array
