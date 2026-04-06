@@ -19,6 +19,12 @@ The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calcul
 - [Simple Interest Calculator](https://www.thecalculatorpage.com/finance/simple-interest): Calculate simple interest on savings or loans.
 - [Credit Card Payoff Calculator](https://www.thecalculatorpage.com/finance/credit-card-payoff): Plan how to pay off credit card debt.
 - [IRR Calculator](https://www.thecalculatorpage.com/finance/irr): Calculate the Internal Rate of Return on investments.
+- [VAT Calculator UK](https://www.thecalculatorpage.com/finance/vat-calculator): Add or remove UK VAT at 20%, 5% or 0%. Instant results for invoices and tax returns.
+- [ISA Calculator UK](https://www.thecalculatorpage.com/finance/isa-calculator): Compare Cash ISA, Stocks & Shares ISA and Lifetime ISA returns. Includes LISA government bonus.
+- [Capital Gains Tax Calculator UK](https://www.thecalculatorpage.com/finance/capital-gains-tax): Work out CGT on shares, property and other assets with 2024/25 rates and annual exempt amount.
+- [Inheritance Tax Calculator UK](https://www.thecalculatorpage.com/finance/inheritance-tax): Estimate IHT on your estate including nil rate band, residence nil rate band and spouse exemption.
+- [Days From Today Calculator](https://www.thecalculatorpage.com/misc/days-from-today): Find exact dates for 30, 60, 90 or any number of days from today or in the past.
+- [Working Days Calculator UK](https://www.thecalculatorpage.com/misc/working-days): Count business days between dates excluding weekends and UK bank holidays.
 - [Percentage Calculator](https://www.thecalculatorpage.com/misc/percentage): Calculate percentages, percentage of a number, and percentage change.
 - [Age Calculator](https://www.thecalculatorpage.com/misc/age): Calculate exact age from a date of birth.
 - [Discount Calculator](https://www.thecalculatorpage.com/misc/discount): Calculate sale prices and savings from discounts.
@@ -29,6 +35,7 @@ The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calcul
 - [Length Converter](https://www.thecalculatorpage.com/converters/length)
 - [Weight Converter](https://www.thecalculatorpage.com/converters/weight)
 - [Temperature Converter](https://www.thecalculatorpage.com/converters/temperature)
+- [Stone to KG Converter](https://www.thecalculatorpage.com/converters/stone-to-kg): Convert between stone, pounds and kilograms instantly.
 
 ## Learn Hub (Financial Education Articles)
 

@@ -32,6 +32,10 @@ import SalaryCalculator from '../pages/finance/SalaryCalculator';
 import SimpleInterest from '../pages/finance/SimpleInterest';
 import StampDutyCalculator from '../pages/finance/StampDutyCalculator';
 import WeeklyMortgageCalculator from '../pages/finance/WeeklyMortgageCalculator';
+import VatCalculator from '../pages/finance/VatCalculator';
+import IsaCalculator from '../pages/finance/IsaCalculator';
+import CapitalGainsTaxCalculator from '../pages/finance/CapitalGainsTaxCalculator';
+import InheritanceTaxCalculator from '../pages/finance/InheritanceTaxCalculator';
 
 // Everyday Calculators & Converters
 import AgeCalculator from '../pages/misc/AgeCalculator';
@@ -40,10 +44,13 @@ import PercentageCalculator from '../pages/misc/PercentageCalculator';
 import PercentageOfCalculator from '../pages/misc/PercentageOfCalculator';
 import PercentageChangeCalculator from '../pages/misc/PercentageChangeCalculator';
 import TipCalculator from '../pages/misc/TipCalculator';
+import DaysFromTodayCalculator from '../pages/misc/DaysFromTodayCalculator';
+import WorkingDaysCalculator from '../pages/misc/WorkingDaysCalculator';
 import LengthConverter from '../pages/converters/LengthConverter';
 import WeightConverter from '../pages/converters/WeightConverter';
 import TemperatureConverter from '../pages/converters/TemperatureConverter';
 import UniversalConverter from '../pages/converters/UniversalConverter';
+import StoneConverter from '../pages/converters/StoneConverter';
 
 // Learn Articles (Existing)
 import FinancialJourney from '../pages/learn/FinancialJourney';
@@ -121,6 +128,10 @@ export const routes: RouteObject[] = [
       { path: 'finance/stamp-duty', element: <StampDutyCalculator /> },
       { path: 'finance/weekly-mortgage', element: <WeeklyMortgageCalculator /> },
       { path: 'finance/mortgage-cost-comparison', element: <MortgageCostComparison /> },
+      { path: 'finance/vat-calculator', element: <VatCalculator /> },
+      { path: 'finance/isa-calculator', element: <IsaCalculator /> },
+      { path: 'finance/capital-gains-tax', element: <CapitalGainsTaxCalculator /> },
+      { path: 'finance/inheritance-tax', element: <InheritanceTaxCalculator /> },
 
       // Everyday & Converter Routes
       { path: 'categories/property', element: <CategoryProperty /> },
@@ -132,10 +143,13 @@ export const routes: RouteObject[] = [
       { path: 'misc/percentage-of', element: <PercentageOfCalculator /> },
       { path: 'misc/percentage-change', element: <PercentageChangeCalculator /> },
       { path: 'misc/tip', element: <TipCalculator /> },
+      { path: 'misc/days-from-today', element: <DaysFromTodayCalculator /> },
+      { path: 'misc/working-days', element: <WorkingDaysCalculator /> },
       { path: 'converters/length', element: <LengthConverter /> },
       { path: 'converters/weight', element: <WeightConverter /> },
       { path: 'converters/temperature', element: <TemperatureConverter /> },
       { path: 'converters/universal', element: <UniversalConverter /> },
+      { path: 'converters/stone-to-kg', element: <StoneConverter /> },
 
       // Learning Hub Routes
       { path: 'learn/financial-journey', element: <FinancialJourney /> },
