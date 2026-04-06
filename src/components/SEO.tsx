@@ -92,9 +92,9 @@ const SEO = ({
   // Author schema for E-E-A-T (YMYL financial content)
   const authorSchema = {
     "@type": "Person",
-    "name": "Mandeep Singh Duklu",
+    "name": "Mandeep Singh",
     "jobTitle": "Financial Coach & Calculator Developer",
-    "description": "CeMAP qualified mortgage adviser with 25+ years in UK financial services including Lloyds Banking Group private banking."
+    "description": "Financial coach and calculator developer with 25+ years in UK financial services."
   };
 
   // Base Schema

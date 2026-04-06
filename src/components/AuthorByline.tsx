@@ -6,9 +6,9 @@ export function AuthorByline() {
       </div>
       <div>
         <p className="text-xs text-white/50 font-sans">
-          <span className="text-white/70">Mandeep Singh Duklu</span>{" "}
+          <span className="text-white/70">Mandeep Singh</span>{" "}
           <span className="text-white/30">·</span>{" "}
-          CeMAP Qualified · 25+ Years UK Financial Services
+          25+ Years UK Financial Services
         </p>
       </div>
     </div>

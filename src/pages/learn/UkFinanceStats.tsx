@@ -29,7 +29,7 @@ export default function UkFinanceStats() {
         type="article"
         articleSchema={{
           headline: "UK Personal Finance Statistics 2026 — 50+ Key Facts",
-          author: "Mandeep Singh Duklu",
+          author: "Mandeep Singh",
           datePublished: "2026-04-05",
           dateModified: "2026-04-05",
         }}
@@ -179,7 +179,7 @@ export default function UkFinanceStats() {
           All statistics are sourced from official UK government bodies, the Bank of England, the Office for
           National Statistics (ONS), the Financial Conduct Authority (FCA), and established industry sources.
           Where exact 2026 figures are not yet published, we use the most recent available data and note the
-          source year. This page is reviewed and updated quarterly by Mandeep Singh Duklu, CeMAP qualified
+          source year. This page is reviewed and updated quarterly by Mandeep Singh, 25+ years UK financial services
           mortgage adviser with 25+ years in UK financial services.
         </p>
         <p>
