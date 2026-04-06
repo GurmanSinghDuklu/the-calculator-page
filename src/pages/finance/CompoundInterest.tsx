@@ -89,10 +89,10 @@ const CompoundInterest = () => {
   };
 
   const faqSchema = [
-    { question: "What is compound interest?", answer: "Compound interest is interest calculated on both the initial principal and the accumulated interest from previous periods. Unlike simple interest which only applies to the original amount, compound interest grows exponentially over time. This is why Albert Einstein reportedly called it the eighth wonder of the world — small amounts can grow significantly when left to compound over years." },
-    { question: "What's the difference between daily and monthly compounding?", answer: "Daily compounding applies interest 365 times per year, while monthly compounds 12 times. Daily compounding results in slightly higher returns over time." },
-    { question: "Which compounding frequency is best?", answer: "More frequent compounding (daily vs yearly) generates slightly more interest over time. However, the practical difference becomes smaller as the time period decreases. Choose based on your account type." },
-    { question: "How to calculate daily compound interest?", answer: "Use the formula: A = P(1 + r/n)^(nt), where P is principal, r is annual rate, n is compounding frequency (365 for daily), and t is time in years. Our calculator does this automatically." }
+    { question: "What is compound interest?", answer: "It's interest that builds on itself. You earn interest on your original deposit, then next time round you earn interest on that interest too. So the longer you leave money alone, the faster it actually grows — not in a straight line but in a curve that steepens over time. A simple example: £10,000 at 5% for 20 years grows to around £26,500 with compounding. Leave it for 30 years and it becomes over £43,000. Same rate, just more time." },
+    { question: "What's the difference between daily and monthly compounding?", answer: "Both work the same way, just at different speeds. Daily compounding recalculates interest every single day (365 times a year), while monthly does it 12 times. In practice the difference is smaller than people expect — on £10,000 at 5% over 10 years, daily compounding gives you roughly £16,487 versus £16,470 monthly. It matters more at higher balances and longer time horizons, but honestly the rate you get and how much you save regularly matter far more than the compounding frequency." },
+    { question: "Which compounding frequency gives the best return?", answer: "More frequent is better — daily beats monthly beats quarterly beats annually. But here's the honest truth: the gap between them is usually tiny compared to the gap between saving consistently and not saving at all. If your bank offers 4.5% compounding monthly versus 4.4% compounding daily elsewhere, the 4.5% account still wins. Focus on the rate and your regular contributions first." },
+    { question: "How do I calculate compound interest manually?", answer: "The formula is A = P(1 + r/n)^(nt). P is your starting amount, r is the annual interest rate as a decimal (5% = 0.05), n is how many times it compounds per year, and t is years. So £5,000 at 4% compounding monthly for 10 years: A = 5000 × (1 + 0.04/12)^(12×10) = £7,444. That's £2,444 in interest on £5,000 — just by leaving it there. The calculator above does all of this for you." }
   ];
 
   const sym = currencies[currency].symbol;
@@ -477,57 +477,79 @@ const CompoundInterest = () => {
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <CalculatorStaticContent
             whatIs={{
-              title: "What is Compound Interest?",
-              description: "Compound interest is the interest calculated on the initial principal and also on the accumulated interest from previous periods."
+              title: "What actually is compound interest?",
+              description: "Think of it like a snowball rolling downhill. You start with a small ball — your original deposit. As it rolls, it picks up more snow. That extra snow then picks up even more snow. Each time, it's growing on a bigger base than before. That's compound interest in a nutshell: you earn interest, and then your interest earns interest too.\n\nHere's a real example to make it click. Say you put £5,000 into a savings account paying 5% a year. After year one you have £5,250. In year two, you earn 5% on £5,250 — not £5,000 — so you end up with £5,512. The extra £12 might not feel exciting. But over 20 years that same £5,000 becomes around £13,266. You put in five grand and got back over eight grand in interest, without adding another penny."
             }}
             howItWorks={{
-              title: "How to Use This Calculator",
-              description: "Enter your initial investment, interest rate, and time period to see how your money grows."
+              title: "How to get the most out of this calculator",
+              description: "It's pretty straightforward — fill in what you know and adjust the bits you're not sure about to see what difference they make.",
+              steps: [
+                { step: 1, title: "Start with your opening balance", description: "Put in whatever you're starting with. Even if it's zero, that's fine — regular contributions do the heavy lifting over time." },
+                { step: 2, title: "Add a monthly contribution if you have one", description: "This is often where the magic really happens. Saving £200 a month consistently will usually outpace a large lump sum that you never add to." },
+                { step: 3, title: "Set the interest rate", description: "Use the AER (Annual Equivalent Rate) from your account — that's the figure that already accounts for compounding. Most UK savings accounts show this clearly." },
+                { step: 4, title: "Choose your time horizon and compounding frequency", description: "How long are you leaving the money? And how often does interest get added? Monthly is the most common for UK savings accounts." },
+                { step: 5, title: "Hit calculate and explore", description: "Try changing the rate by 1% or adding £50 more per month. You'll quickly see which inputs have the biggest impact on your final number." }
+              ]
+            }}
+            formula={{
+              title: "The formula behind the calculator",
+              formula: "A = P(1 + r/n)^(nt)",
+              explanation: "A is the final amount, P is your starting balance, r is the annual interest rate as a decimal (so 5% becomes 0.05), n is how many times interest compounds per year, and t is the number of years. For a pot with regular contributions, the calculator layers in an annuity formula on top of this. You don't need to understand the maths — but it helps to know it's the same formula used by every major UK bank and financial institution."
             }}
             faqs={faqSchema}
+            tips={[
+              "Start as early as you possibly can — time is your biggest advantage with compound interest",
+              "Always compare AER figures when shopping for savings accounts, not the headline rate",
+              "Reinvest any interest rather than withdrawing it — that's the whole point of compounding",
+              "Use a Cash ISA to protect your interest from tax if you're approaching or above the Personal Savings Allowance",
+              "Regular monthly contributions often matter more than getting the 'perfect' interest rate"
+            ]}
           />
 
           {/* ── Compounding Frequency Guide ── */}
           <section className="mt-20 pt-20 border-t border-white/10">
-            <h2 className="text-3xl font-display font-bold mb-12 text-white">Compounding Frequency Guide</h2>
+            <h2 className="text-3xl font-display font-bold mb-4 text-white">Does compounding frequency actually matter?</h2>
+            <p className="text-gray-400 mb-12 leading-relaxed max-w-3xl">
+              Short answer: yes, but less than you'd think. More frequent compounding is always better — daily beats monthly beats quarterly beats annually. The difference is just smaller than most people expect. Here's how each one works in practice.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
-                <h3 className="text-xl font-bold mb-4 text-white">Daily Compound Interest Calculator</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">Daily compounding</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Daily compounding applies interest 365 times per year. This is the most common frequency for savings accounts and money market accounts. It generates the highest returns compared to monthly or annual compounding.
+                  Interest gets calculated and added to your balance every single day. That means tomorrow you earn a tiny bit more than today, because your balance is slightly higher. Over years, this adds up — but the honest truth is the difference versus monthly compounding on a typical savings pot is usually just a few pounds a year.
                 </p>
-                <p className="text-sm text-gray-500">Best for: High-yield savings accounts, money market accounts</p>
+                <p className="text-sm text-gray-500">Common in: some high-interest current accounts, certain cash ISAs</p>
               </article>
 
               <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
-                <h3 className="text-xl font-bold mb-4 text-white">Monthly Compound Interest Calculator</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">Monthly compounding</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Monthly compounding applies interest 12 times per year. This is the standard frequency for most savings accounts and certificates of deposit (CDs). It offers a good balance between frequency and simplicity.
+                  This is the most common setup for UK savings accounts. Interest is added once a month, and from that point you're earning on a slightly larger balance. It's straightforward to track and understand — your monthly statement shows exactly what came in. For most savers, this is perfectly fine.
                 </p>
-                <p className="text-sm text-gray-500">Best for: Traditional savings accounts, some bonds</p>
+                <p className="text-sm text-gray-500">Common in: easy access savings, fixed-rate bonds, ISAs</p>
               </article>
 
               <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
-                <h3 className="text-xl font-bold mb-4 text-white">Quarterly Compound Interest Calculator</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">Quarterly compounding</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Quarterly compounding applies interest 4 times per year. Some bonds and investment accounts use this frequency. It provides moderate growth between monthly and annual compounding.
+                  Interest gets added four times a year — usually at the end of March, June, September and December. You'll see this on some NS&I products and certain savings bonds. It's less common for everyday savings accounts, but the maths works the same way.
                 </p>
-                <p className="text-sm text-gray-500">Best for: Some bonds, certain investment accounts</p>
+                <p className="text-sm text-gray-500">Common in: some NS&I products, certain corporate bonds</p>
               </article>
 
               <article className="bg-white/5 border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-colors">
-                <h3 className="text-xl font-bold mb-4 text-white">Yearly Compound Interest Calculator</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">Annual compounding</h3>
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Annual or yearly compounding applies interest once per year. While simpler to track, it generates the least amount of interest compared to more frequent compounding methods over the same period.
+                  Interest is added just once a year. This is the least favourable for savers — you're waiting a full year before your interest starts earning anything itself. You'll see this with some premium bonds and older-style savings accounts. When comparing products, always look at the AER, which adjusts for this.
                 </p>
-                <p className="text-sm text-gray-500">Best for: Bonds, some traditional savings products</p>
+                <p className="text-sm text-gray-500">Common in: some bonds, older savings products</p>
               </article>
             </div>
 
             <div className="mt-12 p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl">
-              <h3 className="text-lg font-bold text-white mb-3">💡 Pro Tip</h3>
+              <h3 className="text-lg font-bold text-white mb-3">The thing most people get wrong</h3>
               <p className="text-gray-400">
-                The more frequently interest compounds, the more you earn. For example, $10,000 at 5% annual interest will grow to $12,762.82 annually, $12,834.27 monthly, $12,863.56 daily, but $12,833.01 quarterly. Use our calculator to compare different frequencies for your specific situation.
+                People often obsess over whether to pick daily or monthly compounding when they should be thinking about the rate. A 4.5% account compounding monthly will always beat a 4.0% account compounding daily. The frequency matters at the margins — the rate and how much you save consistently are what genuinely move the needle. Use the calculator above to run the comparison for your actual numbers.
               </p>
             </div>
           </section>

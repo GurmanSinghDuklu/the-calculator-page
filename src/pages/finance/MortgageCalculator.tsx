@@ -76,11 +76,11 @@ const MortgageCalculator = () => {
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
 
   const faqSchema = [
-    { question: "How much house can I afford?", answer: "Financial experts recommend spending no more than 28-30% of your gross monthly income on housing costs, including mortgage payment, property taxes, and insurance." },
-    { question: "What is the difference between APR and interest rate?", answer: "The interest rate is the cost of borrowing the principal loan amount. APR includes the interest rate plus other costs like mortgage insurance, closing costs, and lender fees." },
-    { question: "Should I choose a 15-year or 30-year mortgage?", answer: "A 15-year mortgage has higher monthly payments but lower total interest costs. A 30-year mortgage has lower monthly payments but you pay significantly more in interest over time." },
-    { question: "How much down payment do I need?", answer: "While 20% down is traditional and helps avoid PMI, many loans allow lower down payments. FHA loans require as little as 3.5%." },
-    { question: "What factors affect mortgage interest rates?", answer: "Rates depend on your credit score, down payment size, loan type, loan term, property type, and current market conditions." }
+    { question: "How much can I actually borrow?", answer: "Most UK lenders will offer somewhere between 4 and 4.5 times your annual income — so if you earn £50,000, you're looking at a maximum loan of roughly £200,000–£225,000. Some lenders stretch to 5x or even 5.5x for higher earners or certain professions. But here's the thing: borrowing the maximum isn't always wise. A good rule of thumb is keeping your total monthly housing costs (mortgage, insurance, any service charge) below 30–35% of your take-home pay. Use the calculator to work backwards from a monthly payment you're comfortable with." },
+    { question: "What's the difference between the interest rate and the APRC?", answer: "The interest rate is what you're charged on the loan itself. The APRC (Annual Percentage Rate of Charge) is the bigger number — it includes the interest rate plus fees, arrangement costs, and any other charges rolled up over the full term. Always compare APRC figures when comparing mortgage deals, not just the headline rate. A deal with a flashy low rate but high fees can end up costing more overall, especially if you're only fixing for 2–5 years." },
+    { question: "Should I go for a longer or shorter mortgage term?", answer: "It's a genuine trade-off. A 25-year term on £200,000 at 5% gives you monthly payments of around £1,169 and total interest of about £150,000. Stretch that to 35 years and your monthly drops to £1,005 — but you pay closer to £221,000 in interest. The shorter term is cheaper overall but tighter month to month. Many people start with a longer term to keep payments manageable, then overpay when they can. That's a sensible approach — you get the breathing room without being locked in." },
+    { question: "How much deposit do I need?", answer: "The minimum is usually 5% of the purchase price (95% LTV mortgages), but the rates get meaningfully better at 10%, then again at 15%, and again at 25%+. With a 5% deposit you'll pay a noticeably higher interest rate than someone putting down 25%, which adds up to a lot of extra money over a 25-year term. If you can save a bit longer to reach a lower LTV tier, it's often worth it. First-time buyers should also check whether the Lifetime ISA (LISA) applies — the government adds a 25% bonus on savings up to £4,000 per year." },
+    { question: "What actually affects my mortgage rate?", answer: "Several things. Your loan-to-value (LTV) ratio is the biggest one — the more equity or deposit you have, the better rate you'll access. Your credit history matters too, particularly whether you have any missed payments, defaults or CCJs in the last 6 years. The type of mortgage (fixed vs tracker), the term length, and which lender you choose all play a role. The wider economy matters as well — rates follow the Bank of England base rate broadly, though individual lender pricing varies. A mortgage broker can often access deals not available directly from lenders, especially if your situation is slightly unusual." }
   ];
 
   return (
@@ -345,30 +345,30 @@ const MortgageCalculator = () => {
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <CalculatorStaticContent
             whatIs={{
-              title: "What is a Mortgage?",
-              description: "A mortgage is a loan used to purchase real estate, where the property itself serves as collateral. The borrower makes regular payments over a set period (typically 15 or 30 years) that include both principal and interest."
+              title: "What does a mortgage calculator actually tell you?",
+              description: "A mortgage calculator takes three numbers — how much you're borrowing, the interest rate, and how long you're spreading the repayments — and works out what you'll pay each month. That's it. But knowing that monthly number is genuinely useful before you commit to anything.\n\nHere's the thing most people miss: the calculator shows you what the mortgage costs, not necessarily what you can afford. Those are different questions. A lender might approve you for £300,000, but if the monthly payments leave you nothing for groceries, that's not the right mortgage. Use the calculator to find a payment you're comfortable with first, then work backwards to the loan amount."
             }}
             howItWorks={{
-              title: "How to Calculate Your Mortgage Payment",
-              description: "This calculator uses the standard amortization formula to determine your monthly payment, then adds estimated property taxes and insurance.",
+              title: "How to use this calculator",
+              description: "Put in the numbers you actually know, not the numbers you hope for. The result is only as useful as the inputs.",
               steps: [
-                { step: 1, title: "Enter the Home Price", description: "Input the purchase price of the home you're considering." },
-                { step: 2, title: "Specify Your Down Payment", description: "Enter the amount you'll pay upfront. A larger down payment means a smaller loan." },
-                { step: 3, title: "Set the Interest Rate", description: "Input your expected mortgage interest rate." },
-                { step: 4, title: "Choose Your Loan Term", description: "Select the length of your mortgage — 15 or 30 years are most common." },
-                { step: 5, title: "Add Tax and Insurance", description: "Enter annual estimates for property taxes and homeowner's insurance." }
+                { step: 1, title: "Property price and deposit", description: "Enter the property price and how much deposit you have. The difference is your loan amount (LTV). Getting this right matters — your rate changes at key deposit thresholds like 10%, 15% and 25%." },
+                { step: 2, title: "Interest rate", description: "Use the actual rate from a real mortgage offer or quote, not a guess. If you don't have one yet, use the current average for your LTV bracket as a starting point — but know it'll shift." },
+                { step: 3, title: "Mortgage term", description: "How many years are you planning to repay over? Most UK mortgages run 25–35 years. A longer term reduces your monthly payment but increases total interest paid significantly." },
+                { step: 4, title: "Read the total, not just the monthly", description: "Scroll down past the monthly figure and look at the total interest over the full term. That number is often a shock — and a useful reminder that overpaying when you can makes a real difference." }
               ]
             }}
             formula={{
-              title: "The Mortgage Payment Formula",
+              title: "The formula lenders use",
               formula: "M = P × [r(1+r)^n] / [(1+r)^n - 1]",
-              explanation: "Where M is the monthly payment, P is the principal, r is the monthly interest rate, and n is the total number of payments."
+              explanation: "M is your monthly payment, P is the loan amount, r is the monthly interest rate (annual rate divided by 12), and n is the total number of monthly payments. So a £200,000 mortgage at 4.5% over 25 years: monthly rate = 0.045/12 = 0.00375, n = 300 payments, giving a monthly payment of £1,111. The maths is fiddly but the calculator handles all of it instantly."
             }}
             tips={[
-              "Get pre-approved before house hunting to know your true budget",
-              "Compare rates from at least 3–5 lenders — even 0.25% can save thousands",
-              "Consider bi-weekly payments to pay off your mortgage faster",
-              "Build an emergency fund of 3–6 months of housing costs before buying"
+              "Run the numbers before you find a property you love — it keeps emotions out of the budget conversation",
+              "Compare the total interest cost of a 25-year versus 30-year term, not just the monthly payment difference",
+              "Even overpaying £100 a month on a typical UK mortgage can cut years off the term and save tens of thousands",
+              "A mortgage broker can often access deals not available direct from lenders — worth the conversation especially for first-time buyers",
+              "Factor in all the other costs too: stamp duty, solicitor fees, survey, buildings insurance, and any service charges"
             ]}
             faqs={faqSchema}
           />

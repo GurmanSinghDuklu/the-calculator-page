@@ -53,11 +53,11 @@ interface RetirementResults {
 }
 
 const faqSchema = [
-  { question: "How much do I need to retire comfortably in the UK?", answer: "The PLSA suggests about £31,000/year for a moderate retirement, or £43,000 for a comfortable one. This varies by location, lifestyle, and whether you own your home." },
-  { question: "What is the 4% withdrawal rule?", answer: "The 4% rule suggests you can withdraw 4% of your retirement pot annually without running out over 30 years. Some advisors now suggest 3–3.5% given current market conditions." },
-  { question: "How much State Pension will I get?", answer: "The full new State Pension is £11,502/year (2024/25). You need 35 qualifying NI years. Check your forecast at gov.uk." },
-  { question: "What age can I access my pension in the UK?", answer: "Private pensions are accessible from age 55 (rising to 57 in 2028). State Pension age is 66, rising to 67 between 2026–2028." },
-  { question: "Should I increase my pension contributions?", answer: "At minimum, contribute enough to get the full employer match — it's free money. Beyond that, more contributions mean a larger pot and more retirement income." },
+  { question: "How much do I actually need to retire in the UK?", answer: "The Pensions and Lifetime Savings Association (PLSA) puts it at around £14,400/year for a minimum standard, £31,300 for moderate, and £43,100 for comfortable — those are for a single person outside London. But honestly, the right number for you depends on whether you own your home outright, what your health looks like, and what kind of life you want. Someone who loves walking and gardening needs a very different pot to someone who wants to travel six months a year. Start with the PLSA figures as a rough anchor, then adjust for your actual situation." },
+  { question: "What's the 4% rule and should I use it?", answer: "The 4% rule is a rough guideline that says if you withdraw 4% of your pension pot in year one, then adjust for inflation each year after, your money should last 30 years. So a £500,000 pot gives you about £20,000 a year. It's a useful starting point but not a guarantee — it was based on US market data from a specific period, and some advisors now suggest 3–3.5% is more prudent for UK retirees given current conditions. The calculator lets you change this rate so you can see the impact of being more or less conservative." },
+  { question: "How much State Pension will I get?", answer: "The full new State Pension is £11,502 a year (2024/25 tax year). To get the full amount you need 35 qualifying National Insurance years. You need at least 10 years to get anything at all. The important thing is to check your actual forecast — go to gov.uk/check-state-pension and log in with your Government Gateway account. It takes five minutes and tells you exactly where you stand, including whether there are gaps worth filling. Buying missing NI years can be one of the best financial decisions you ever make." },
+  { question: "When can I access my pension?", answer: "Private and workplace pensions can currently be accessed from age 55, though this is rising to 57 in April 2028 — so if you're in your 40s now, plan for 57. The State Pension kicks in at 66 and is rising to 67 between 2026 and 2028. Taking your pension early reduces what you'll draw each year from it, so it's worth thinking hard before accessing it before State Pension age unless you really need to. You don't have to take everything at once either — many people draw a flexible income in phases." },
+  { question: "Is it worth increasing my pension contributions?", answer: "Almost always yes, for two reasons. First, if your employer matches your contributions and you're not maxing that out, you're literally leaving free money on the table — even a 3% employer match on a £40,000 salary is £1,200 a year going into your pot for nothing. Second, pension contributions get tax relief. A basic rate taxpayer effectively pays £80 to put £100 into their pension. A higher rate taxpayer pays just £60. That's an instant return before your investments have done anything. Even a small increase now — say 1% of salary — makes a meaningful difference over decades." },
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -313,29 +313,32 @@ export default function RetirementCalculator() {
 
           {/* Disclaimer + static content */}
           <CalculatorStaticContent
-            whatIs={{ title: "What is Retirement Planning?", description: "Retirement planning determines your income goals and the actions needed to achieve them. In the UK, retirement income typically comes from the State Pension, workplace pensions, and personal savings. Starting early and contributing consistently are key." }}
+            whatIs={{
+              title: "What is this calculator actually showing you?",
+              description: "It's giving you a projection — a best guess of what your pension pot might look like by the time you retire, and how much annual income that could support. It's not a guarantee and it's not financial advice. But it's a genuinely useful reality check.\n\nThe UK pension system has three main layers. The State Pension (up to £11,502/year) is the foundation, paid from age 66. On top of that most people have workplace pensions — money you and your employer both put in, invested over decades. Then there's anything else you've saved personally, whether ISAs, property, or other investments. This calculator focuses on the workplace and personal pension piece and adds the State Pension on top."
+            }}
             howItWorks={{
-              title: "How to Use This Retirement Calculator",
-              description: "This calculator projects your retirement pot based on current savings, contributions, expected growth, and the UK State Pension.",
+              title: "How to get a useful number out of this",
+              description: "The golden rule: be honest with your inputs. An optimistic growth rate and low inflation assumption will give you a big number that feels good but might not materialise.",
               steps: [
-                { step: 1, title: "Enter Your Current Details",   description: "Input your age, target retirement age, current pension pot, and gross annual salary." },
-                { step: 2, title: "Set Contribution Rates",       description: "Enter employee and employer contribution percentages." },
-                { step: 3, title: "Adjust Growth and Inflation",  description: "Set expected investment growth rate and inflation rate." },
-                { step: 4, title: "Include State Pension",        description: "Enter your expected State Pension amount from gov.uk." },
-                { step: 5, title: "Choose Withdrawal Rate",       description: "The 4% rule is a common starting point for sustainable income." },
+                { step: 1, title: "Your age and target retirement age", description: "These two numbers determine your runway. The longer it is, the more powerful compounding becomes. Even 5 extra years of contributions can add significantly to your final pot." },
+                { step: 2, title: "What you've already got", description: "Include your current pension pot value. If you have multiple old workplace pensions you've lost track of, check the government's Pension Tracing Service — you might have more than you think." },
+                { step: 3, title: "Your contributions", description: "Enter both your own contribution percentage and your employer's. If you're not sure, check your payslip or your pension provider's portal. This is often the biggest lever you can pull." },
+                { step: 4, title: "Growth rate and inflation", description: "We'd suggest using 5% real growth as a conservative baseline for a diversified pension — that's roughly what a balanced fund has returned historically after charges. Set inflation around 2.5% to see your pot's buying power in today's money." },
+                { step: 5, title: "State Pension and withdrawal rate", description: "Get your actual State Pension forecast from gov.uk — don't guess. For withdrawal rate, 4% is the standard starting point, but the calculator lets you adjust this." }
               ]
             }}
             formula={{
-              title: "The Retirement Calculation",
+              title: "How the projection is calculated",
               formula: "FV = PV × (1+r)^n + PMT × [(1+r)^n - 1] / r",
-              explanation: "FV is the future retirement pot, PV is the current pot, r is the annual growth rate, n is years until retirement, PMT is annual contribution. Real value adjusts for inflation. Annual income = FV × withdrawal rate + State Pension.",
+              explanation: "FV is your projected retirement pot, PV is your current pot, r is the annual growth rate, n is years until retirement, and PMT is your annual contribution. The result is then adjusted for inflation to show you what that pot is worth in today's money. Annual income = pot × withdrawal rate + State Pension. It's the same underlying maths used by pension providers and financial planners — just made transparent."
             }}
             tips={[
-              "Take full advantage of employer matching — it's free money for your retirement",
-              "Use salary sacrifice if available — it reduces tax and National Insurance",
-              "Review your pension investments regularly to match your risk tolerance",
-              "Consider consolidating old workplace pensions to simplify management",
-              "Check your State Pension forecast at gov.uk and fill any NI gaps",
+              "If your employer offers any matching and you're not getting the full amount, increase your contributions today — it's the closest thing to free money in personal finance",
+              "Salary sacrifice reduces your taxable income and your National Insurance — it's almost always better than paying into a pension post-tax",
+              "Don't ignore old pensions from previous jobs. The average UK worker has 11 employers in their lifetime — you may have forgotten pots sitting doing nothing",
+              "Check your State Pension forecast at gov.uk/check-state-pension. If you have gaps, buying extra years can give incredible value — especially in the decade before retirement",
+              "Reassess every time your income increases. When you get a pay rise, bumping your pension contribution even slightly means your lifestyle doesn't inflate as fast as your earnings"
             ]}
             faqs={faqSchema}
           />
