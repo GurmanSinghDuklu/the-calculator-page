@@ -45,6 +45,42 @@ const tools = [
     icon: Calculator,
     path: "/finance/irr",
   },
+  {
+    title: "VAT Calculator",
+    description: "Add or remove 20% UK VAT from any price instantly. Shows net, VAT amount, and gross.",
+    icon: Percent,
+    path: "/finance/vat-calculator",
+  },
+  {
+    title: "ISA Calculator",
+    description: "Project ISA growth with annual allowance top-ups and compound interest over time.",
+    icon: PiggyBank,
+    path: "/finance/isa-calculator",
+  },
+  {
+    title: "Capital Gains Tax",
+    description: "Estimate CGT on property, shares, and other assets with UK allowances and rates.",
+    icon: Calculator,
+    path: "/finance/capital-gains-tax",
+  },
+  {
+    title: "Inheritance Tax",
+    description: "Calculate potential IHT liability with nil-rate band, RNRB, and spouse exemptions.",
+    icon: Calculator,
+    path: "/finance/inheritance-tax",
+  },
+  {
+    title: "Credit Card Payoff",
+    description: "See how long it takes to pay off your credit card and how much interest you'll pay.",
+    icon: CreditCard,
+    path: "/finance/credit-card-payoff",
+  },
+  {
+    title: "Cashback Calculator",
+    description: "Calculate annual cashback earnings from credit card rewards and spending categories.",
+    icon: RefreshCw,
+    path: "/finance/cashback",
+  },
 ];
 
 const CategoryFinance = () => {

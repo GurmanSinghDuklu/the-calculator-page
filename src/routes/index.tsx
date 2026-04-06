@@ -51,6 +51,12 @@ import BmiCalculator from '../pages/misc/BmiCalculator';
 import CalorieCalculator from '../pages/misc/CalorieCalculator';
 import DaysBetweenDatesCalculator from '../pages/misc/DaysBetweenDatesCalculator';
 import HoursCalculator from '../pages/misc/HoursCalculator';
+import MonthsBetweenDatesCalculator from '../pages/misc/MonthsBetweenDatesCalculator';
+import SquareFootageCalculator from '../pages/misc/SquareFootageCalculator';
+import GravelCalculator from '../pages/misc/GravelCalculator';
+import CubicYardsCalculator from '../pages/misc/CubicYardsCalculator';
+import MulchCalculator from '../pages/misc/MulchCalculator';
+import ConcreteCalculator from '../pages/misc/ConcreteCalculator';
 import LengthConverter from '../pages/converters/LengthConverter';
 import WeightConverter from '../pages/converters/WeightConverter';
 import TemperatureConverter from '../pages/converters/TemperatureConverter';
@@ -62,6 +68,12 @@ import KmToMiles from '../pages/converters/KmToMiles';
 import GallonsToLitres from '../pages/converters/GallonsToLitres';
 import MlToOz from '../pages/converters/MlToOz';
 import GramsToTablespoons from '../pages/converters/GramsToTablespoons';
+import LbsToKg from '../pages/converters/LbsToKg';
+import MetresToFeet from '../pages/converters/MetresToFeet';
+import InchesToCm from '../pages/converters/InchesToCm';
+import FahrenheitToCelsius from '../pages/converters/FahrenheitToCelsius';
+import OuncesToGrams from '../pages/converters/OuncesToGrams';
+import TeaspoonsToMl from '../pages/converters/TeaspoonsToMl';
 
 // Learn Articles (Existing)
 import FinancialJourney from '../pages/learn/FinancialJourney';
@@ -160,6 +172,12 @@ export const routes: RouteObject[] = [
       { path: 'misc/calorie-calculator', element: <CalorieCalculator /> },
       { path: 'misc/days-between-dates', element: <DaysBetweenDatesCalculator /> },
       { path: 'misc/hours-calculator', element: <HoursCalculator /> },
+      { path: 'misc/months-between-dates', element: <MonthsBetweenDatesCalculator /> },
+      { path: 'misc/square-footage', element: <SquareFootageCalculator /> },
+      { path: 'misc/gravel-calculator', element: <GravelCalculator /> },
+      { path: 'misc/cubic-yards', element: <CubicYardsCalculator /> },
+      { path: 'misc/mulch-calculator', element: <MulchCalculator /> },
+      { path: 'misc/concrete-calculator', element: <ConcreteCalculator /> },
 
       // Programmatic "X days from today" pages — targets high-volume keywords
       ...[7,10,14,15,20,21,25,28,30,35,40,45,50,55,60,70,75,80,90,100,120,130,150,160,180,200,210,240,250,270,300,330,365].map(n => ({
@@ -177,6 +195,12 @@ export const routes: RouteObject[] = [
       { path: 'converters/gallons-to-litres', element: <GallonsToLitres /> },
       { path: 'converters/ml-to-oz', element: <MlToOz /> },
       { path: 'converters/grams-to-tablespoons', element: <GramsToTablespoons /> },
+      { path: 'converters/lbs-to-kg', element: <LbsToKg /> },
+      { path: 'converters/metres-to-feet', element: <MetresToFeet /> },
+      { path: 'converters/inches-to-cm', element: <InchesToCm /> },
+      { path: 'converters/fahrenheit-to-celsius', element: <FahrenheitToCelsius /> },
+      { path: 'converters/ounces-to-grams', element: <OuncesToGrams /> },
+      { path: 'converters/teaspoons-to-ml', element: <TeaspoonsToMl /> },
 
       // Learning Hub Routes
       { path: 'learn/financial-journey', element: <FinancialJourney /> },

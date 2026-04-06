@@ -33,17 +33,49 @@ const Index = () => {
     { title: "Car Loan Calculator", path: "/finance/car-loan" },
     { title: "Loan Calculator", path: "/finance/loan" },
     { title: "Savings Calculator", path: "/finance/savings" },
-    { title: "Simple Interest", path: "/finance/simple-interest" }
+    { title: "Simple Interest", path: "/finance/simple-interest" },
+    { title: "VAT Calculator", path: "/finance/vat-calculator" },
+    { title: "ISA Calculator", path: "/finance/isa-calculator" },
+    { title: "Capital Gains Tax", path: "/finance/capital-gains-tax" },
+    { title: "Inheritance Tax", path: "/finance/inheritance-tax" },
   ];
 
   const miscCalculators = [
     { title: "Percentage Calculator", path: "/misc/percentage" },
     { title: "Age Calculator", path: "/misc/age" },
     { title: "Discount Calculator", path: "/misc/discount" },
-    { title: "Tip Calculator", path: "/misc/tip" }
+    { title: "Tip Calculator", path: "/misc/tip" },
+    { title: "BMI Calculator", path: "/misc/bmi-calculator" },
+    { title: "Calorie Calculator", path: "/misc/calorie-calculator" },
+    { title: "Days From Today", path: "/misc/days-from-today" },
+    { title: "Days Between Dates", path: "/misc/days-between-dates" },
+    { title: "Months Between Dates", path: "/misc/months-between-dates" },
+    { title: "Hours Calculator", path: "/misc/hours-calculator" },
+    { title: "Working Days Calculator", path: "/misc/working-days" },
+    { title: "Square Footage Calculator", path: "/misc/square-footage" },
+    { title: "Cubic Yards Calculator", path: "/misc/cubic-yards" },
+    { title: "Gravel Calculator", path: "/misc/gravel-calculator" },
+    { title: "Mulch Calculator", path: "/misc/mulch-calculator" },
+    { title: "Concrete Calculator", path: "/misc/concrete-calculator" },
   ];
 
-  const allCalculators = [...financeCalculators, ...homeCalculators, ...miscCalculators];
+  const converterCalculators = [
+    { title: "KM to Miles", path: "/converters/km-to-miles" },
+    { title: "Gallons to Litres", path: "/converters/gallons-to-litres" },
+    { title: "ML to Oz", path: "/converters/ml-to-oz" },
+    { title: "CM to Inches", path: "/converters/cm-to-inches" },
+    { title: "Inches to CM", path: "/converters/inches-to-cm" },
+    { title: "Metres to Feet", path: "/converters/metres-to-feet" },
+    { title: "LBS to KG", path: "/converters/lbs-to-kg" },
+    { title: "Stone to KG", path: "/converters/stone-to-kg" },
+    { title: "Fahrenheit to Celsius", path: "/converters/fahrenheit-to-celsius" },
+    { title: "Cups to Grams", path: "/converters/cups-to-grams" },
+    { title: "Grams to Tablespoons", path: "/converters/grams-to-tablespoons" },
+    { title: "Ounces to Grams", path: "/converters/ounces-to-grams" },
+    { title: "Teaspoons to ML", path: "/converters/teaspoons-to-ml" },
+  ];
+
+  const allCalculators = [...financeCalculators, ...homeCalculators, ...miscCalculators, ...converterCalculators];
 
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
@@ -128,7 +160,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-green inline-block" />
-                  70+ Free Calculators
+                  130+ Free Calculators
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/50">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-blue inline-block" />
@@ -183,7 +215,7 @@ const Index = () => {
           <span className="text-xs font-heading uppercase tracking-widest text-white/30">All Calculators</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Property Section */}
           <div className="group border border-dark-border hover:border-accent-red/40 transition-colors duration-300 p-6">
@@ -242,7 +274,7 @@ const Index = () => {
               <div className="h-px bg-accent-yellow/20 mt-3 group-hover:bg-accent-yellow/60 transition-colors" />
             </Link>
             <ul className="space-y-1.5">
-              {miscCalculators.map(calc => (
+              {miscCalculators.slice(0, 8).map(calc => (
                 <li key={calc.path}>
                   <Link to={calc.path} className="flex items-center justify-between py-2 px-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all rounded group/item">
                     <span className="font-heading uppercase tracking-wide text-xs">{calc.title}</span>
@@ -250,6 +282,37 @@ const Index = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/categories/everyday" className="flex items-center gap-1 py-2 px-3 text-xs text-accent-yellow/60 hover:text-accent-yellow transition-colors font-heading uppercase tracking-widest">
+                  View all <ChevronRight className="h-3 w-3" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Converters Section */}
+          <div className="group border border-dark-border hover:border-accent-green/40 transition-colors duration-300 p-6">
+            <Link to="/categories/everyday" className="block mb-5">
+              <div className="flex justify-between items-center">
+                <h2 className="font-display text-4xl text-white group-hover:text-accent-green transition-colors duration-300">Converters</h2>
+                <ArrowRight className="h-6 w-6 text-accent-green opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              <div className="h-px bg-accent-green/20 mt-3 group-hover:bg-accent-green/60 transition-colors" />
+            </Link>
+            <ul className="space-y-1.5">
+              {converterCalculators.slice(0, 8).map(calc => (
+                <li key={calc.path}>
+                  <Link to={calc.path} className="flex items-center justify-between py-2 px-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all rounded group/item">
+                    <span className="font-heading uppercase tracking-wide text-xs">{calc.title}</span>
+                    <ChevronRight className="h-3.5 w-3.5 opacity-0 group-hover/item:opacity-100 transition-opacity text-accent-green" />
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/categories/everyday" className="flex items-center gap-1 py-2 px-3 text-xs text-accent-green/60 hover:text-accent-green transition-colors font-heading uppercase tracking-widest">
+                  View all <ChevronRight className="h-3 w-3" />
+                </Link>
+              </li>
             </ul>
           </div>
 
