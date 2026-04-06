@@ -1,0 +1,504 @@
+{
+  "date": "2026-04-06",
+  "startTime": "2026-04-06T02:10:21.493Z",
+  "status": "success",
+  "totalPages": 70,
+  "pagesOptimized": 69,
+  "errors": [
+    "Failed to generate SEO for page amortization"
+  ],
+  "warnings": [
+    "Google ping failed for https://www.thecalculatorpage.com/learn: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+  ],
+  "competitorAnalysis": {
+    "fetchedAt": "2026-04-06T02:10:22.789Z",
+    "competitors": [
+      "www.thecalculatorsite.com"
+    ],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": true,
+  "googlePinged": true,
+  "bingPinged": true,
+  "logs": [
+    {
+      "timestamp": "2026-04-06T02:10:22.788Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.788Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.788Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.789Z",
+      "level": "info",
+      "message": "Using cached competitor analysis"
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.789Z",
+      "level": "info",
+      "message": "Generated keyword gap analysis",
+      "data": {
+        "totalCompetitorKeywords": 25
+      }
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.789Z",
+      "level": "info",
+      "message": "Found 10 keyword opportunities"
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.789Z",
+      "level": "info",
+      "message": "✨ Phase 2: SEO Optimization"
+    },
+    {
+      "timestamp": "2026-04-06T02:10:22.789Z",
+      "level": "info",
+      "message": "Optimizing 70 pages for SEO..."
+    },
+    {
+      "timestamp": "2026-04-06T02:25:43.954Z",
+      "level": "info",
+      "message": "✓ Optimized: home"
+    },
+    {
+      "timestamp": "2026-04-06T02:48:11.284Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-hub"
+    },
+    {
+      "timestamp": "2026-04-06T03:05:46.460Z",
+      "level": "info",
+      "message": "✓ Optimized: formulas"
+    },
+    {
+      "timestamp": "2026-04-06T03:37:26.462Z",
+      "level": "info",
+      "message": "✓ Optimized: finance-category"
+    },
+    {
+      "timestamp": "2026-04-06T03:52:39.958Z",
+      "level": "info",
+      "message": "✓ Optimized: misc-category"
+    },
+    {
+      "timestamp": "2026-04-06T04:09:11.370Z",
+      "level": "info",
+      "message": "✓ Optimized: compound-interest"
+    },
+    {
+      "timestamp": "2026-04-06T04:24:39.121Z",
+      "level": "info",
+      "message": "✓ Optimized: mortgage"
+    },
+    {
+      "timestamp": "2026-04-06T04:40:43.926Z",
+      "level": "info",
+      "message": "✓ Optimized: loan"
+    },
+    {
+      "timestamp": "2026-04-06T04:57:43.801Z",
+      "level": "info",
+      "message": "✓ Optimized: savings"
+    },
+    {
+      "timestamp": "2026-04-06T05:15:34.952Z",
+      "level": "info",
+      "message": "✓ Optimized: roi"
+    },
+    {
+      "timestamp": "2026-04-06T05:31:29.119Z",
+      "level": "info",
+      "message": "✓ Optimized: retirement"
+    },
+    {
+      "timestamp": "2026-04-06T05:47:34.971Z",
+      "level": "info",
+      "message": "✓ Optimized: investment"
+    },
+    {
+      "timestamp": "2026-04-06T06:02:57.719Z",
+      "level": "info",
+      "message": "✓ Optimized: simple-interest"
+    },
+    {
+      "timestamp": "2026-04-06T06:34:23.757Z",
+      "level": "info",
+      "message": "✓ Optimized: apr-apy"
+    },
+    {
+      "timestamp": "2026-04-06T06:50:56.938Z",
+      "level": "info",
+      "message": "✓ Optimized: break-even"
+    },
+    {
+      "timestamp": "2026-04-06T07:06:09.690Z",
+      "level": "info",
+      "message": "✓ Optimized: future-value"
+    },
+    {
+      "timestamp": "2026-04-06T07:21:15.817Z",
+      "level": "info",
+      "message": "✓ Optimized: present-value"
+    },
+    {
+      "timestamp": "2026-04-06T07:37:45.876Z",
+      "level": "info",
+      "message": "✓ Optimized: annuity"
+    },
+    {
+      "timestamp": "2026-04-06T08:28:48.816Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page amortization",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-06T08:28:52.999Z",
+      "level": "info",
+      "message": "✓ Optimized: debt-payoff"
+    },
+    {
+      "timestamp": "2026-04-06T08:45:54.950Z",
+      "level": "info",
+      "message": "✓ Optimized: net-worth"
+    },
+    {
+      "timestamp": "2026-04-06T08:54:59.839Z",
+      "level": "info",
+      "message": "✓ Optimized: tip"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:05.445Z",
+      "level": "info",
+      "message": "✓ Optimized: gratuity"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:08.747Z",
+      "level": "info",
+      "message": "✓ Optimized: cagr"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:12.533Z",
+      "level": "info",
+      "message": "✓ Optimized: lumpsum"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:17.124Z",
+      "level": "info",
+      "message": "✓ Optimized: percentage"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:20.418Z",
+      "level": "info",
+      "message": "✓ Optimized: days-between"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:23.592Z",
+      "level": "info",
+      "message": "✓ Optimized: bmi"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:26.927Z",
+      "level": "info",
+      "message": "✓ Optimized: age"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:30.253Z",
+      "level": "info",
+      "message": "✓ Optimized: average"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:35.169Z",
+      "level": "info",
+      "message": "✓ Optimized: even-odd"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:38.749Z",
+      "level": "info",
+      "message": "✓ Optimized: length-converter"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:43.050Z",
+      "level": "info",
+      "message": "✓ Optimized: weight-converter"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:46.430Z",
+      "level": "info",
+      "message": "✓ Optimized: temperature-converter"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:49.838Z",
+      "level": "info",
+      "message": "✓ Optimized: volume-converter"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:54.730Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-50-30-20"
+    },
+    {
+      "timestamp": "2026-04-06T08:55:58.764Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-compound-interest"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:02.610Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-simple-interest"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:06.089Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-mortgage"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:09.520Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-roi"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:14.503Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-amortization"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:17.766Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-savings"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:21.251Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-retirement"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:24.728Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-investment"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:28.375Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-debt"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:32.919Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-budgeting"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:36.301Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-credit"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:39.577Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-insurance"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:42.696Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-taxes"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:46.230Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-stocks"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:50.605Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-bonds"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:54.225Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-mutual-funds"
+    },
+    {
+      "timestamp": "2026-04-06T08:56:57.803Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-crypto"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:01.189Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-real-estate"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:05.074Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-etf"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:09.375Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-inflation"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:12.956Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-forex"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:16.849Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-options"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:20.676Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-diversification"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:23.921Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-financial-freedom"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:29.039Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-index"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:33.234Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-mortgage-cheat"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:38.970Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-early-payoff"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:42.488Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-compound-growth"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:46.195Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-financial-tips"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:50.845Z",
+      "level": "info",
+      "message": "✓ Optimized: about"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:54.532Z",
+      "level": "info",
+      "message": "✓ Optimized: privacy"
+    },
+    {
+      "timestamp": "2026-04-06T08:57:58.013Z",
+      "level": "info",
+      "message": "✓ Optimized: cookies"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:01.812Z",
+      "level": "info",
+      "message": "✓ Optimized: terms"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.482Z",
+      "level": "info",
+      "message": "✓ Optimized: disclaimer"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.482Z",
+      "level": "info",
+      "message": "SEO optimization complete",
+      "data": {
+        "optimized": 69
+      }
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.485Z",
+      "level": "info",
+      "message": "Optimized 69 pages"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.486Z",
+      "level": "info",
+      "message": "SEO data file updated",
+      "data": {
+        "pages": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.487Z",
+      "level": "info",
+      "message": "🔧 Phase 3: Technical SEO Updates"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.488Z",
+      "level": "info",
+      "message": "Sitemap updated with fresh dates",
+      "data": {
+        "date": "2026-04-06",
+        "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/public/sitemap.xml"
+      }
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.488Z",
+      "level": "info",
+      "message": "📡 Phase 4: Notifying Search Engines"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.489Z",
+      "level": "info",
+      "message": "Preparing to ping 71 URLs to search engines"
+    },
+    {
+      "timestamp": "2026-04-06T08:58:05.658Z",
+      "level": "info",
+      "message": "✓ Authenticated with Google Indexing API"
+    },
+    {
+      "timestamp": "2026-04-06T09:03:03.314Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-06T09:03:55.944Z",
+      "level": "info",
+      "message": "Google pinging complete",
+      "data": {
+        "successCount": 70,
+        "errorCount": 1,
+        "total": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-06T09:03:57.456Z",
+      "level": "info",
+      "message": "✓ Bing batch submitted",
+      "data": {
+        "count": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-06T09:03:57.456Z",
+      "level": "info",
+      "message": "Bing pinging complete",
+      "data": {
+        "successCount": 71,
+        "total": 71
+      }
+    }
+  ],
+  "endTime": "2026-04-06T09:03:57.459Z"
+}
