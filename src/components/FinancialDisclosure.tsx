@@ -36,12 +36,12 @@ export function FinancialDisclosure({ variant }: FinancialDisclosureProps) {
     <div className="max-w-7xl mx-auto px-6 pb-10">
       <AuthorByline />
       <div className="border border-white/[0.06] rounded-xl px-6 py-5 bg-white/[0.015]">
-        <p className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/20 mb-3">
+        <p className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/40 mb-3">
           Important Information
         </p>
         <div className="space-y-2">
           {lines.map((line, i) => (
-            <p key={i} className="text-[11px] text-white/25 font-sans leading-relaxed">
+            <p key={i} className="text-[11px] text-white/45 font-sans leading-relaxed">
               {line}
             </p>
           ))}

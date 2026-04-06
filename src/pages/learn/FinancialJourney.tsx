@@ -167,19 +167,19 @@ export default function FinancialJourney() {
 
           <div className="mt-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-lg border-l-2 border-blue-500/25 pl-5">
-              <p className="text-zinc-500 text-base leading-relaxed font-sans font-light">
+              <p className="text-zinc-300 text-base leading-relaxed font-sans font-light">
                 Follow the path from beginner to confident investor. Tick off each topic as you complete it — your progress is saved automatically.
               </p>
             </div>
 
             {/* Overall progress — editorial box, no rounding */}
             <div className="border border-white/8 bg-white/[0.02] p-5 min-w-[220px]">
-              <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20 mb-4">Overall Progress</p>
+              <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/45 mb-4">Overall Progress</p>
               <div className="flex items-end gap-3 mb-4">
                 <p className="font-display text-5xl text-white leading-none">
-                  {overallPct}<span className="text-2xl text-white/20">%</span>
+                  {overallPct}<span className="text-2xl text-white/40">%</span>
                 </p>
-                <p className="text-zinc-700 text-xs font-sans mb-1">{overall.done} / {overall.total} done</p>
+                <p className="text-zinc-400 text-xs font-sans mb-1">{overall.done} / {overall.total} done</p>
               </div>
               <div className="h-px bg-white/5 overflow-hidden">
                 <div className="h-px transition-all duration-700"
@@ -205,11 +205,11 @@ export default function FinancialJourney() {
 
           <div className="ml-auto flex gap-2">
             <button onClick={() => window.print()}
-              className="flex items-center gap-2 px-4 py-2 border border-white/8 font-heading text-[10px] uppercase tracking-widest text-white/25 hover:text-white hover:border-white/25 transition-all">
+              className="flex items-center gap-2 px-4 py-2 border border-white/8 font-heading text-[10px] uppercase tracking-widest text-white/50 hover:text-white hover:border-white/30 transition-all">
               <Printer className="h-3 w-3" /> Print
             </button>
             <button onClick={resetAll}
-              className="flex items-center gap-2 px-4 py-2 border border-white/8 font-heading text-[10px] uppercase tracking-widest text-white/25 hover:text-white hover:border-white/25 transition-all">
+              className="flex items-center gap-2 px-4 py-2 border border-white/8 font-heading text-[10px] uppercase tracking-widest text-white/50 hover:text-white hover:border-white/30 transition-all">
               <RotateCcw className="h-3 w-3" /> Reset
             </button>
           </div>
@@ -237,13 +237,13 @@ export default function FinancialJourney() {
 
                     <div className="absolute bottom-4 left-5">
                       <p className="font-display text-3xl text-white tracking-wide">{cat.title}</p>
-                      <p className="text-[11px] text-white/30 font-sans mt-0.5">{cat.description}</p>
+                      <p className="text-[11px] text-white/60 font-sans mt-0.5">{cat.description}</p>
                     </div>
 
                     {/* Progress badge */}
                     <div className="absolute top-3 right-3 bg-black/80 border border-white/8 px-3 py-1.5 text-right">
                       <p className="font-display text-xl leading-none" style={{ color: cat.accent }}>{prog.pct}%</p>
-                      <p className="text-[9px] text-white/20 font-heading uppercase tracking-widest">{prog.done}/{prog.total}</p>
+                      <p className="text-[9px] text-white/45 font-heading uppercase tracking-widest">{prog.done}/{prog.total}</p>
                     </div>
 
                     {/* Accent bar */}
@@ -268,18 +268,18 @@ export default function FinancialJourney() {
                         </button>
                         <div className="flex-1 min-w-0">
                           <Link to={it.path} onClick={e => e.stopPropagation()}>
-                            <p className={`text-xs font-heading uppercase tracking-wider transition-colors leading-tight ${isComplete(it.id) ? "line-through text-white/15" : "text-white/55 hover:text-white"}`}>
+                            <p className={`text-xs font-heading uppercase tracking-wider transition-colors leading-tight ${isComplete(it.id) ? "line-through text-white/25" : "text-white/80 hover:text-white"}`}>
                               {it.title}
                             </p>
                           </Link>
-                          <p className="text-[10px] text-zinc-700 font-sans mt-0.5 leading-snug">{it.desc}</p>
-                          <p className="text-[9px] font-heading uppercase tracking-widest mt-1" style={{ color: `${cat.accent}50` }}>⏱ {it.est}</p>
+                          <p className="text-[10px] text-zinc-400 font-sans mt-0.5 leading-snug">{it.desc}</p>
+                          <p className="text-[9px] font-heading uppercase tracking-widest mt-1" style={{ color: `${cat.accent}CC` }}>⏱ {it.est}</p>
                         </div>
                       </div>
                     ))}
 
                     {visibleItems.length === 0 && (
-                      <p className="text-[10px] text-white/15 font-sans py-3">No items match this filter.</p>
+                      <p className="text-[10px] text-white/40 font-sans py-3">No items match this filter.</p>
                     )}
                   </div>
 
@@ -287,12 +287,12 @@ export default function FinancialJourney() {
                   <div className="px-5 pb-5 flex gap-2 pt-3 border-t border-white/5">
                     <button
                       onClick={() => { const m = { ...progressMap }; cat.items.forEach(it => { m[it.id] = true; }); setProgressMap(m); }}
-                      className="px-3 py-1.5 border border-white/8 font-heading text-[9px] uppercase tracking-widest text-white/20 hover:text-white hover:border-white/20 transition-all">
+                      className="px-3 py-1.5 border border-white/8 font-heading text-[9px] uppercase tracking-widest text-white/45 hover:text-white hover:border-white/30 transition-all">
                       Complete All
                     </button>
                     <button
                       onClick={() => { const m = { ...progressMap }; cat.items.forEach(it => { delete m[it.id]; }); setProgressMap(m); }}
-                      className="px-3 py-1.5 border border-white/8 font-heading text-[9px] uppercase tracking-widest text-white/20 hover:text-white hover:border-white/20 transition-all">
+                      className="px-3 py-1.5 border border-white/8 font-heading text-[9px] uppercase tracking-widest text-white/45 hover:text-white hover:border-white/30 transition-all">
                       Reset
                     </button>
                   </div>
@@ -304,8 +304,8 @@ export default function FinancialJourney() {
           {/* ── Badges footer — flush editorial box ── */}
           <div className="border-x border-b border-white/6 bg-white/[0.01] px-6 py-6">
             <div className="flex items-center gap-3 mb-5">
-              <Trophy className="h-4 w-4 text-white/15" />
-              <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20">Badges Earned</p>
+              <Trophy className="h-4 w-4 text-white/40" />
+              <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/50">Badges Earned</p>
             </div>
             <div className="flex flex-wrap gap-2 mb-5">
               {BADGES.map(({ threshold, label, color }) => {
@@ -323,7 +323,7 @@ export default function FinancialJourney() {
                 );
               })}
             </div>
-            <p className="text-[10px] text-zinc-700 font-sans">
+            <p className="text-[10px] text-zinc-400 font-sans">
               Use the Print button to create a printable checklist you can tick on paper.
             </p>
           </div>
@@ -333,7 +333,7 @@ export default function FinancialJourney() {
         <footer className="bg-black border-t border-white/8 py-8 px-6">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
             <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
-            <p className="text-[10px] text-zinc-700 font-heading uppercase tracking-widest">© 2026 The Calculator Page.</p>
+            <p className="text-[10px] text-zinc-400 font-heading uppercase tracking-widest">© 2026 The Calculator Page.</p>
           </div>
         </footer>
       </div>

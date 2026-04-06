@@ -46,29 +46,29 @@ export const CalculatorStaticContent = ({
       {/* ── What Is ── */}
       <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
         <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
-          <BookOpen className="h-4 w-4 shrink-0 text-white/25" />
-          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{whatIs.title}</p>
+          <BookOpen className="h-4 w-4 shrink-0 text-white/45" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65">{whatIs.title}</p>
         </div>
-        <p className="text-zinc-500 text-sm leading-relaxed font-sans">{whatIs.description}</p>
+        <p className="text-zinc-300 text-sm leading-relaxed font-sans">{whatIs.description}</p>
       </section>
 
       {/* ── How It Works ── */}
       <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
         <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
-          <Calculator className="h-4 w-4 shrink-0 text-white/25" />
-          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{howItWorks.title}</p>
+          <Calculator className="h-4 w-4 shrink-0 text-white/45" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65">{howItWorks.title}</p>
         </div>
-        <p className="text-zinc-500 text-sm leading-relaxed font-sans mb-5">{howItWorks.description}</p>
+        <p className="text-zinc-300 text-sm leading-relaxed font-sans mb-5">{howItWorks.description}</p>
         {howItWorks.steps && (
           <div className="divide-y divide-white/6">
             {howItWorks.steps.map((step) => (
               <div key={step.step} className="flex items-start gap-5 py-3.5">
-                <span className="font-display text-3xl leading-none shrink-0 tabular-nums text-white/10">
+                <span className="font-display text-3xl leading-none shrink-0 tabular-nums text-white/20">
                   {String(step.step).padStart(2, "0")}
                 </span>
                 <div className="pt-0.5">
-                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/50 mb-0.5">{step.title}</p>
-                  <p className="text-zinc-500 text-sm font-sans">{step.description}</p>
+                  <p className="font-heading text-[10px] uppercase tracking-widest text-white/75 mb-0.5">{step.title}</p>
+                  <p className="text-zinc-300 text-sm font-sans">{step.description}</p>
                 </div>
               </div>
             ))}
@@ -80,12 +80,12 @@ export const CalculatorStaticContent = ({
       {formula && (
         <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
           <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
-            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">{formula.title}</p>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65">{formula.title}</p>
           </div>
-          <div className="border-l-2 border-white/15 bg-white/[0.02] px-5 py-4 mb-5 font-mono text-sm text-zinc-400">
+          <div className="border-l-2 border-white/20 bg-white/[0.03] px-5 py-4 mb-5 font-mono text-sm text-zinc-200">
             {formula.formula}
           </div>
-          <p className="text-zinc-500 text-sm leading-relaxed font-sans">{formula.explanation}</p>
+          <p className="text-zinc-300 text-sm leading-relaxed font-sans">{formula.explanation}</p>
         </section>
       )}
 
@@ -93,14 +93,14 @@ export const CalculatorStaticContent = ({
       {tips && tips.length > 0 && (
         <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
           <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
-            <CheckCircle className="h-4 w-4 shrink-0 text-white/25" />
-            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">Tips &amp; Best Practices</p>
+            <CheckCircle className="h-4 w-4 shrink-0 text-white/45" />
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65">Tips &amp; Best Practices</p>
           </div>
           <ul className="divide-y divide-white/5">
             {tips.map((tip, i) => (
               <li key={i} className="flex items-start gap-3 py-3">
-                <span className="text-white/20 text-xs font-heading shrink-0 mt-px">→</span>
-                <p className="text-zinc-500 text-sm font-sans">{tip}</p>
+                <span className="text-white/40 text-xs font-heading shrink-0 mt-px">→</span>
+                <p className="text-zinc-300 text-sm font-sans">{tip}</p>
               </li>
             ))}
           </ul>
@@ -110,8 +110,8 @@ export const CalculatorStaticContent = ({
       {/* ── FAQ ── */}
       <section className="border border-white/8 bg-white/[0.015] px-6 py-6">
         <div className="flex items-center gap-3 mb-4 pb-4 border-b border-white/6">
-          <HelpCircle className="h-4 w-4 shrink-0 text-white/25" />
-          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">Frequently Asked Questions</p>
+          <HelpCircle className="h-4 w-4 shrink-0 text-white/45" />
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65">Frequently Asked Questions</p>
         </div>
         <div className="divide-y divide-white/6">
           {faqs.map((faq, i) => (
@@ -120,16 +120,16 @@ export const CalculatorStaticContent = ({
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 className="w-full flex items-center justify-between gap-4 py-4 text-left group"
               >
-                <p className="font-heading text-[10px] uppercase tracking-widest text-white/55 group-hover:text-white/80 transition-colors">
+                <p className="font-heading text-[10px] uppercase tracking-widest text-white/75 group-hover:text-white transition-colors">
                   {faq.question}
                 </p>
                 <ChevronDown
-                  className="h-3.5 w-3.5 shrink-0 text-white/20 transition-transform duration-200"
+                  className="h-3.5 w-3.5 shrink-0 text-white/35 transition-transform duration-200"
                   style={{ transform: openFaq === i ? "rotate(180deg)" : "rotate(0deg)" }}
                 />
               </button>
               {openFaq === i && (
-                <p className="text-zinc-500 text-sm font-sans leading-relaxed pb-4">
+                <p className="text-zinc-300 text-sm font-sans leading-relaxed pb-4">
                   {faq.answer}
                 </p>
               )}

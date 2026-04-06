@@ -58,7 +58,7 @@ function SectionHeader({ icon: Icon, title, subtitle }: { icon: React.ElementTyp
         <Icon className="h-5 w-5 text-white/30" />
         <p className="font-display text-3xl md:text-4xl text-white tracking-wide uppercase">{title}</p>
       </div>
-      <p className="text-white/30 text-sm font-sans leading-relaxed max-w-xl pl-8">{subtitle}</p>
+      <p className="text-white/60 text-sm font-sans leading-relaxed max-w-xl pl-8">{subtitle}</p>
     </div>
   );
 }
@@ -154,15 +154,15 @@ const LearnHub = () => {
                   {/* Content */}
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/25">The Cheat Code</p>
-                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/25">{article.readTime}</p>
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/50">The Cheat Code</p>
+                      <p className="text-[9px] font-heading uppercase tracking-widest text-white/50">{article.readTime}</p>
                     </div>
                     <p className="font-display text-xl text-white mb-2 leading-tight group-hover:text-white/70 transition-colors">
                       {article.title}
                     </p>
-                    <p className="text-white/35 text-sm font-sans leading-relaxed">{article.description}</p>
+                    <p className="text-white/65 text-sm font-sans leading-relaxed">{article.description}</p>
                     <div className="flex justify-end mt-4 pt-4 border-t border-white/10">
-                      <span className="flex items-center gap-1 text-white/30 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
+                      <span className="flex items-center gap-1 text-white/55 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
                         Read <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>
@@ -202,8 +202,8 @@ const LearnHub = () => {
                 {/* Content */}
                 <div className="p-4">
                   <p className="font-display text-base text-white mb-1 group-hover:text-white/70 transition-colors">{stage.title}</p>
-                  <p className="text-[10px] text-white/25 font-sans leading-relaxed line-clamp-2">{stage.description}</p>
-                  <p className="text-[9px] font-heading uppercase tracking-widest mt-2" style={{ color: `${stage.accent}80` }}>
+                  <p className="text-[10px] text-white/60 font-sans leading-relaxed line-clamp-2">{stage.description}</p>
+                  <p className="text-[9px] font-heading uppercase tracking-widest mt-2" style={{ color: `${stage.accent}CC` }}>
                     {stage.articles} articles
                   </p>
                 </div>
@@ -239,14 +239,14 @@ const LearnHub = () => {
                         style={{ borderColor: `${color}50`, background: `${color}15`, color }}>
                         {article.category}
                       </span>
-                      <span className="text-[9px] font-heading uppercase tracking-widest text-white/25">{article.readTime}</span>
+                      <span className="text-[9px] font-heading uppercase tracking-widest text-white/50">{article.readTime}</span>
                     </div>
                     <p className="font-display text-lg text-white mb-2 group-hover:text-white/70 transition-colors leading-tight">
                       {article.title}
                     </p>
-                    <p className="text-white/30 text-sm font-sans leading-relaxed">{article.description}</p>
+                    <p className="text-white/65 text-sm font-sans leading-relaxed">{article.description}</p>
                     <div className="flex justify-end mt-4 pt-4 border-t border-white/10">
-                      <span className="flex items-center gap-1 text-white/25 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
+                      <span className="flex items-center gap-1 text-white/55 font-heading text-[10px] uppercase tracking-widest group-hover:text-white group-hover:gap-2 transition-all">
                         Read <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>
