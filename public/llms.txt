@@ -25,6 +25,8 @@ The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calcul
 - [Inheritance Tax Calculator UK](https://www.thecalculatorpage.com/finance/inheritance-tax): Estimate IHT on your estate including nil rate band, residence nil rate band and spouse exemption.
 - [Days From Today Calculator](https://www.thecalculatorpage.com/misc/days-from-today): Find exact dates for 30, 60, 90 or any number of days from today or in the past.
 - [Working Days Calculator UK](https://www.thecalculatorpage.com/misc/working-days): Count business days between dates excluding weekends and UK bank holidays.
+- [BMI Calculator UK](https://www.thecalculatorpage.com/misc/bmi-calculator): Free BMI calculator using NHS categories. Supports stone+lbs and metric.
+- [Calorie Calculator](https://www.thecalculatorpage.com/misc/calorie-calculator): Find daily calorie needs using Mifflin-St Jeor. Shows BMR, TDEE, weight loss and gain targets.
 - [Percentage Calculator](https://www.thecalculatorpage.com/misc/percentage): Calculate percentages, percentage of a number, and percentage change.
 - [Age Calculator](https://www.thecalculatorpage.com/misc/age): Calculate exact age from a date of birth.
 - [Discount Calculator](https://www.thecalculatorpage.com/misc/discount): Calculate sale prices and savings from discounts.
@@ -36,6 +38,8 @@ The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calcul
 - [Weight Converter](https://www.thecalculatorpage.com/converters/weight)
 - [Temperature Converter](https://www.thecalculatorpage.com/converters/temperature)
 - [Stone to KG Converter](https://www.thecalculatorpage.com/converters/stone-to-kg): Convert between stone, pounds and kilograms instantly.
+- [Cups to Grams Converter](https://www.thecalculatorpage.com/converters/cups-to-grams): Convert cups to grams for baking. Flour, sugar, butter and more with ingredient-specific weights.
+- [CM to Inches Converter](https://www.thecalculatorpage.com/converters/cm-to-inches): Convert centimetres to inches and back. Includes feet+inches breakdown for heights.
 
 ## Learn Hub (Financial Education Articles)
 
