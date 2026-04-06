@@ -55,6 +55,16 @@ The Calculator Page (https://www.thecalculatorpage.com) provides 40+ free calcul
 - [Tax-Efficient Accounts (ISA, SIPP)](https://www.thecalculatorpage.com/learn/tax-efficient-accounts)
 - [Formula Directory](https://www.thecalculatorpage.com/formulas)
 
+## Unit Converters (New)
+- [KM to Miles Converter](https://www.thecalculatorpage.com/converters/km-to-miles) — Convert kilometres to miles and vice versa with UK speed limit references
+- [Gallons to Litres Converter](https://www.thecalculatorpage.com/converters/gallons-to-litres) — UK and US gallon conversions with fuel economy context
+- [ML to Oz Converter](https://www.thecalculatorpage.com/converters/ml-to-oz) — Millilitres to fluid ounces (UK and US) for drinks, medicine, and cooking
+- [Grams to Tablespoons Converter](https://www.thecalculatorpage.com/converters/grams-to-tablespoons) — Ingredient-specific baking conversions (flour, sugar, butter, etc.)
+
+## Time Calculators (New)
+- [Days Between Dates Calculator](https://www.thecalculatorpage.com/misc/days-between-dates) — Calculate calendar days, working days, and weeks between any two dates
+- [Hours Calculator](https://www.thecalculatorpage.com/misc/hours-calculator) — Calculate hours between times, add/subtract hours, convert hours to days/weeks
+
 ## About
 
 - Website: https://www.thecalculatorpage.com

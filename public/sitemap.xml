@@ -711,4 +711,44 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- New Converters — Wave 4 -->
+  <url>
+    <loc>https://www.thecalculatorpage.com/converters/km-to-miles</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecalculatorpage.com/converters/gallons-to-litres</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecalculatorpage.com/converters/ml-to-oz</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecalculatorpage.com/converters/grams-to-tablespoons</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- New Misc Calculators — Wave 4 -->
+  <url>
+    <loc>https://www.thecalculatorpage.com/misc/days-between-dates</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.thecalculatorpage.com/misc/hours-calculator</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

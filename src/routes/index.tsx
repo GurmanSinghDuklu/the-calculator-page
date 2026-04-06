@@ -49,6 +49,8 @@ import WorkingDaysCalculator from '../pages/misc/WorkingDaysCalculator';
 import DaysFromTodayPage from '../pages/misc/DaysFromTodayPage';
 import BmiCalculator from '../pages/misc/BmiCalculator';
 import CalorieCalculator from '../pages/misc/CalorieCalculator';
+import DaysBetweenDatesCalculator from '../pages/misc/DaysBetweenDatesCalculator';
+import HoursCalculator from '../pages/misc/HoursCalculator';
 import LengthConverter from '../pages/converters/LengthConverter';
 import WeightConverter from '../pages/converters/WeightConverter';
 import TemperatureConverter from '../pages/converters/TemperatureConverter';
@@ -56,6 +58,10 @@ import UniversalConverter from '../pages/converters/UniversalConverter';
 import StoneConverter from '../pages/converters/StoneConverter';
 import CupsToGrams from '../pages/converters/CupsToGrams';
 import CmToInches from '../pages/converters/CmToInches';
+import KmToMiles from '../pages/converters/KmToMiles';
+import GallonsToLitres from '../pages/converters/GallonsToLitres';
+import MlToOz from '../pages/converters/MlToOz';
+import GramsToTablespoons from '../pages/converters/GramsToTablespoons';
 
 // Learn Articles (Existing)
 import FinancialJourney from '../pages/learn/FinancialJourney';
@@ -152,6 +158,8 @@ export const routes: RouteObject[] = [
       { path: 'misc/working-days', element: <WorkingDaysCalculator /> },
       { path: 'misc/bmi-calculator', element: <BmiCalculator /> },
       { path: 'misc/calorie-calculator', element: <CalorieCalculator /> },
+      { path: 'misc/days-between-dates', element: <DaysBetweenDatesCalculator /> },
+      { path: 'misc/hours-calculator', element: <HoursCalculator /> },
 
       // Programmatic "X days from today" pages — targets high-volume keywords
       ...[7,10,14,15,20,21,25,28,30,35,40,45,50,55,60,70,75,80,90,100,120,130,150,160,180,200,210,240,250,270,300,330,365].map(n => ({
@@ -165,6 +173,10 @@ export const routes: RouteObject[] = [
       { path: 'converters/stone-to-kg', element: <StoneConverter /> },
       { path: 'converters/cups-to-grams', element: <CupsToGrams /> },
       { path: 'converters/cm-to-inches', element: <CmToInches /> },
+      { path: 'converters/km-to-miles', element: <KmToMiles /> },
+      { path: 'converters/gallons-to-litres', element: <GallonsToLitres /> },
+      { path: 'converters/ml-to-oz', element: <MlToOz /> },
+      { path: 'converters/grams-to-tablespoons', element: <GramsToTablespoons /> },
 
       // Learning Hub Routes
       { path: 'learn/financial-journey', element: <FinancialJourney /> },
