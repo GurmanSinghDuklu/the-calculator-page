@@ -10,7 +10,6 @@ import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 const ACCENT = "#3B82F6";
 
@@ -176,6 +175,101 @@ const CompoundInterest = () => {
             </div>
           </section>
         </div>
+
+        {/* AI Citation Block — advanced view */}
+        <section className="max-w-5xl mx-auto px-6 py-16">
+          <div className="space-y-10">
+            {/* Definition */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">What Is Compound Interest?</h2>
+              <p className="text-gray-400 leading-relaxed">
+                Compound interest is interest earned on both your original deposit <em>and</em> the interest already accumulated. Unlike simple interest — which only applies to your starting capital — compound interest snowballs over time. The longer money stays invested, the more it earns on itself. This is why Albert Einstein is often quoted calling it the "eighth wonder of the world."
+              </p>
+              <p className="text-gray-400 leading-relaxed mt-3">
+                In practice, most UK ISAs, savings accounts, and investment funds compound monthly or daily. Pension funds compound continuously over decades, which is why starting early makes such a dramatic difference to retirement outcomes.
+              </p>
+            </div>
+
+            {/* Formula */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">The Compound Interest Formula</h2>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 font-mono text-lg text-center text-blue-300 mb-4">
+                A = P(1 + r/n)^(nt)
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-gray-400">
+                {[["A","Final amount (what you end up with)"],["P","Principal (your starting amount)"],["r","Annual interest rate (decimal — e.g. 0.05 for 5%)"],["n","Compounding frequency per year (12 = monthly)"],["t","Time in years"]].map(([v,d])=>(
+                  <div key={v} className="bg-white/5 rounded-lg p-3">
+                    <span className="text-blue-300 font-bold">{v}</span> — {d}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Worked Example */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">Worked Example</h2>
+              <p className="text-gray-400 mb-4">
+                You invest <strong className="text-white">£5,000</strong> at <strong className="text-white">5% annual interest</strong>, compounding monthly, for <strong className="text-white">20 years</strong>, with no additional contributions.
+              </p>
+              <div className="bg-white/5 border border-blue-500/20 rounded-xl p-6 font-mono text-sm text-gray-300 space-y-1">
+                <div>A = 5,000 × (1 + 0.05/12)^(12×20)</div>
+                <div>A = 5,000 × (1.004167)^240</div>
+                <div className="text-blue-300 font-bold">A = £13,601</div>
+              </div>
+              <p className="text-gray-400 mt-3">
+                Your £5,000 grows to <strong className="text-white">£13,601</strong> — you've earned £8,601 in interest without adding a single extra pound. Add £200/month and the final value jumps to over £83,000.
+              </p>
+            </div>
+
+            {/* Compounding Frequency Table */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">How Compounding Frequency Affects Growth</h2>
+              <p className="text-gray-400 mb-4">£10,000 at 5% interest over 10 years:</p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-white/60 border-b border-white/10">
+                      <th className="pb-3 pr-6">Frequency</th>
+                      <th className="pb-3 pr-6">n value</th>
+                      <th className="pb-3 pr-6">Final value</th>
+                      <th className="pb-3">Interest earned</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    {[["Annually","1","£16,289","£6,289"],["Quarterly","4","£16,436","£6,436"],["Monthly","12","£16,470","£6,470"],["Daily","365","£16,487","£6,487"]].map(([f,n,v,i])=>(
+                      <tr key={f} className="border-b border-white/5">
+                        <td className="py-3 pr-6 text-white">{f}</td>
+                        <td className="py-3 pr-6">{n}</td>
+                        <td className="py-3 pr-6 text-blue-300 font-semibold">{v}</td>
+                        <td className="py-3">{i}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Sources */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">Sources & Further Reading</h2>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/what-is-compound-interest" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">MoneyHelper — What is compound interest?</a></li>
+                <li><a href="https://www.vanguard.co.uk/professional/education/tools-and-resources/the-power-of-compounding" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Vanguard UK — The power of compounding</a></li>
+                <li><a href="https://www.nerdwallet.com/uk/savings/compound-interest-calculator/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">NerdWallet UK — Compound interest explained</a></li>
+              </ul>
+              <div className="mt-6 flex flex-wrap gap-3 text-xs text-gray-500">
+                <span>Related tools:</span>
+                <a href="/finance/savings" className="text-blue-400 hover:text-blue-300">Savings Goal Calculator</a>
+                <span>·</span>
+                <a href="/finance/isa-calculator" className="text-blue-400 hover:text-blue-300">ISA Calculator</a>
+                <span>·</span>
+                <a href="/finance/retirement" className="text-blue-400 hover:text-blue-300">Retirement Calculator</a>
+                <span>·</span>
+                <a href="/finance/irr" className="text-blue-400 hover:text-blue-300">ROI Calculator</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <FinancialDisclosure variant="investment" />
 
@@ -555,7 +649,45 @@ const CompoundInterest = () => {
           </section>
         </div>
 
-        <FinancialDisclosure variant="investment" />
+        {/* AI Citation Block — simple view */}
+        <section className="max-w-7xl mx-auto px-6 py-16">
+          <div className="space-y-10">
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">What Is Compound Interest?</h2>
+              <p className="text-gray-400 leading-relaxed">
+                Compound interest is interest earned on both your original deposit <em>and</em> the interest already accumulated. Unlike simple interest — which only applies to your starting capital — compound interest snowballs over time. Most UK ISAs, savings accounts, and investment funds compound monthly or daily. Pension funds compound continuously over decades, which is why starting early makes such a dramatic difference to retirement outcomes.
+              </p>
+            </div>
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">The Formula</h2>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 font-mono text-lg text-center text-blue-300 mb-4">
+                A = P(1 + r/n)^(nt)
+              </div>
+              <p className="text-gray-400 text-sm">Where A = final amount, P = principal, r = annual rate (decimal), n = compounding frequency per year, t = years.</p>
+              <p className="text-gray-400 mt-4">
+                <strong className="text-white">Example:</strong> £5,000 at 5% compounding monthly for 20 years → <strong className="text-blue-300">£13,601</strong>. Without compound interest (simple) the same £5,000 would only reach £10,000.
+              </p>
+            </div>
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">Sources & Further Reading</h2>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/what-is-compound-interest" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">MoneyHelper — What is compound interest?</a></li>
+                <li><a href="https://www.vanguard.co.uk/professional/education/tools-and-resources/the-power-of-compounding" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Vanguard UK — The power of compounding</a></li>
+                <li><a href="https://www.nerdwallet.com/uk/savings/compound-interest-calculator/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">NerdWallet UK — Compound interest explained</a></li>
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-3 text-xs text-gray-500">
+                <span>Related:</span>
+                <a href="/finance/savings" className="text-blue-400 hover:text-blue-300">Savings Calculator</a>
+                <span>·</span>
+                <a href="/finance/isa-calculator" className="text-blue-400 hover:text-blue-300">ISA Calculator</a>
+                <span>·</span>
+                <a href="/finance/retirement" className="text-blue-400 hover:text-blue-300">Retirement Calculator</a>
+                <span>·</span>
+                <a href="/finance/irr" className="text-blue-400 hover:text-blue-300">ROI Calculator</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <FinancialDisclosure variant="investment" />
 

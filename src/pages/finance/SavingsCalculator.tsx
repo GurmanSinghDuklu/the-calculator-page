@@ -9,7 +9,6 @@ import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -329,7 +328,97 @@ const SavingsCalculator = () => {
           />
         </div>
 
-        <FinancialDisclosure variant="investment" />
+        {/* AI Citation Block */}
+        <section className="max-w-7xl mx-auto px-6 py-16">
+          <div className="space-y-10">
+            {/* Definition */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">How Savings Interest Works</h2>
+              <p className="text-gray-400 leading-relaxed">
+                When you deposit money in a savings account, the bank pays you interest — a percentage of your balance for lending them the money. Most UK savings accounts quote an <strong className="text-white">AER (Annual Equivalent Rate)</strong>, which accounts for compounding. A 4.5% AER compounding monthly means you earn slightly more than 4.5% in real terms because interest earned in January starts earning interest in February.
+              </p>
+              <p className="text-gray-400 mt-3 leading-relaxed">
+                The UK personal savings allowance lets basic rate taxpayers earn up to £1,000 in interest tax-free per year (£500 for higher rate). Cash ISAs shelter all interest entirely — no limit.
+              </p>
+            </div>
+
+            {/* Formula */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">The Savings Formula</h2>
+              <div className="bg-white/5 border border-white/10 rounded-xl p-6 font-mono text-lg text-center text-blue-300 mb-4">
+                FV = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) − 1) / (r/n)]
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-gray-400">
+                {[["FV","Future value (total savings)"],["P","Initial deposit"],["r","Annual interest rate (decimal)"],["n","Compounding periods per year"],["t","Years"],["PMT","Regular contribution per period"]].map(([v,d])=>(
+                  <div key={v} className="bg-white/5 rounded-lg p-3">
+                    <span className="text-blue-300 font-bold">{v}</span> — {d}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Worked Example */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">Worked Example</h2>
+              <p className="text-gray-400 mb-4">
+                You open a Cash ISA with <strong className="text-white">£2,000</strong>, add <strong className="text-white">£200/month</strong>, at <strong className="text-white">4.5% AER</strong> compounding monthly, over <strong className="text-white">5 years</strong>.
+              </p>
+              <div className="bg-white/5 border border-blue-500/20 rounded-xl p-6 text-sm text-gray-300 space-y-2">
+                <div>Starting deposit: £2,000</div>
+                <div>Total contributions: £200 × 60 months = £12,000</div>
+                <div>Total invested: £14,000</div>
+                <div className="text-blue-300 font-bold text-base">Final balance: ~£15,540</div>
+                <div>Interest earned: ~£1,540</div>
+              </div>
+              <p className="text-gray-400 mt-3 text-sm">Over 10 years the same plan yields ~£33,700 — more than doubling your total contributions of £26,000.</p>
+            </div>
+
+            {/* UK Savings Rate Benchmarks */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">UK Savings Rate Benchmarks (2025)</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-white/60 border-b border-white/10">
+                      <th className="pb-3 pr-6">Account Type</th>
+                      <th className="pb-3 pr-6">Typical AER</th>
+                      <th className="pb-3">Tax on interest?</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-400">
+                    {[["Easy Access","3.5–5.0%","Yes (PSA applies)"],["Fixed Rate Bond (1-yr)","4.0–5.2%","Yes (PSA applies)"],["Cash ISA","3.5–5.0%","No"],["Lifetime ISA","up to 6.25% (with bonus)","No"],["Premium Bonds","~4.4% (prize equiv.)","No"]].map(([t,r,x])=>(
+                      <tr key={t} className="border-b border-white/5">
+                        <td className="py-3 pr-6 text-white">{t}</td>
+                        <td className="py-3 pr-6 text-blue-300 font-semibold">{r}</td>
+                        <td className="py-3">{x}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Sources */}
+            <div>
+              <h2 className="font-display text-3xl uppercase text-white mb-4">Sources & Further Reading</h2>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li><a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/compare-savings-accounts" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">MoneyHelper — Compare savings accounts</a></li>
+                <li><a href="https://www.vanguard.co.uk/professional/education/tools-and-resources/the-power-of-compounding" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">Vanguard UK — The power of compounding</a></li>
+                <li><a href="https://www.nerdwallet.com/uk/savings/savings-calculator/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">NerdWallet UK — Savings calculator guide</a></li>
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-3 text-xs text-gray-500">
+                <span>Related:</span>
+                <a href="/finance/compound-interest" className="text-blue-400 hover:text-blue-300">Compound Interest Calculator</a>
+                <span>·</span>
+                <a href="/finance/isa-calculator" className="text-blue-400 hover:text-blue-300">ISA Calculator</a>
+                <span>·</span>
+                <a href="/finance/retirement" className="text-blue-400 hover:text-blue-300">Retirement Calculator</a>
+                <span>·</span>
+                <a href="/finance/irr" className="text-blue-400 hover:text-blue-300">ROI Calculator</a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <FinancialDisclosure variant="investment" />
 
