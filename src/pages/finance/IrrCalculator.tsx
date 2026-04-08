@@ -278,6 +278,129 @@ export default function IrrCalculator() {
           </div>
         </div>
 
+        {/* ── Deep Educational Content (AI citation target) ── */}
+        <div className="max-w-7xl mx-auto px-6 pb-20 space-y-0">
+
+          {/* Definition */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">What Is ROI?</p>
+            <p className="text-zinc-300 text-sm leading-relaxed max-w-3xl">
+              Return on Investment (ROI) is a financial ratio that measures the profitability of an investment relative to its cost. It expresses how much you gained (or lost) as a percentage of what you originally put in. ROI is one of the most widely used metrics in finance — from evaluating stock picks to assessing whether a business expansion paid off.
+            </p>
+            <p className="text-zinc-300 text-sm leading-relaxed max-w-3xl mt-3">
+              A positive ROI means the investment returned more than it cost. A negative ROI means you lost money. Because ROI doesn't account for time, longer investments with high ROI may actually be less efficient than shorter ones — which is why <strong className="text-white/80">annualised ROI</strong> (also called CAGR) is the more useful figure when comparing investments of different lengths.
+            </p>
+          </section>
+
+          {/* Formula + worked example */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">The ROI Formula — Explained</p>
+            <div className="bg-black/40 border border-white/10 rounded-lg px-6 py-4 font-mono text-sm text-zinc-200 mb-6 max-w-xl">
+              ROI = (Gain ÷ Amount Invested) × 100<br />
+              Annualised ROI = (Return ÷ Invested)^(1÷Years) − 1
+            </div>
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/50 mb-3">Worked Example</p>
+            <div className="bg-white/[0.03] border border-white/10 rounded-xl p-6 max-w-2xl space-y-3 text-sm text-zinc-300">
+              <p>You invest <strong className="text-white">£10,000</strong> in a stocks and shares ISA. Five years later your portfolio is worth <strong className="text-white">£15,000</strong>.</p>
+              <div className="border-t border-white/10 pt-3 space-y-1">
+                <p>Gain = £15,000 − £10,000 = <strong className="text-white">£5,000</strong></p>
+                <p>ROI = (£5,000 ÷ £10,000) × 100 = <strong className="text-white">50%</strong></p>
+                <p>Annualised ROI = (15,000 ÷ 10,000)^(1÷5) − 1 = <strong className="text-white">8.45% per year</strong></p>
+              </div>
+              <p className="text-zinc-400 text-xs mt-2">That 8.45% annual figure is what you should compare against other investments — not the headline 50%, which sounds impressive but took 5 years to achieve.</p>
+            </div>
+          </section>
+
+          {/* What is a good ROI */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">What Is a Good ROI?</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              {[
+                { asset: "UK Stocks (FTSE All-Share)", roi: "~7–8% annualised", note: "Historical long-run average, before inflation" },
+                { asset: "Global Equities (MSCI World)", roi: "~8–10% annualised", note: "Historical average; past performance ≠ future results" },
+                { asset: "UK Residential Property", roi: "~4–8% total return", note: "Capital growth + rental yield combined" },
+                { asset: "UK Savings Accounts", roi: "3–5% AER", note: "As of 2026; risk-free but below long-run equity returns" },
+                { asset: "Cash ISA", roi: "3.5–5% AER", note: "Tax-free; compare AER not headline rate" },
+                { asset: "UK Gilts (10yr)", roi: "~4% yield", note: "Government bonds; low risk, fixed return" },
+              ].map(row => (
+                <div key={row.asset} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
+                  <p className="text-[10px] font-heading uppercase tracking-widest text-white/40 mb-1">{row.asset}</p>
+                  <p className="text-white font-medium text-sm mb-1">{row.roi}</p>
+                  <p className="text-zinc-500 text-xs">{row.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-zinc-400 text-xs mt-2">Sources: <a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-accounts-explained" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">MoneyHelper</a>, <a href="https://www.vanguard.co.uk/professional/en/insights/research/capital-markets-model-faqs" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">Vanguard UK</a>, <a href="https://www.nerdwallet.com/uk/investing/roi-calculator/" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">NerdWallet UK</a></p>
+          </section>
+
+          {/* ROI vs CAGR vs IRR */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">ROI vs CAGR vs IRR — What's the Difference?</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-zinc-300">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-3 pr-6 text-[10px] font-heading uppercase tracking-widest text-white/40">Metric</th>
+                    <th className="text-left py-3 pr-6 text-[10px] font-heading uppercase tracking-widest text-white/40">What it measures</th>
+                    <th className="text-left py-3 text-[10px] font-heading uppercase tracking-widest text-white/40">When to use it</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-6 font-medium text-white">ROI</td>
+                    <td className="py-3 pr-6">Total percentage gain over the full investment period</td>
+                    <td className="py-3 text-zinc-400">Comparing total return on a single investment</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-6 font-medium text-white">CAGR / Annualised ROI</td>
+                    <td className="py-3 pr-6">The smoothed annual growth rate over multiple years</td>
+                    <td className="py-3 text-zinc-400">Comparing investments of different durations</td>
+                  </tr>
+                  <tr className="border-b border-white/5">
+                    <td className="py-3 pr-6 font-medium text-white">IRR</td>
+                    <td className="py-3 pr-6">The discount rate that makes NPV of cash flows zero</td>
+                    <td className="py-3 text-zinc-400">Complex projects with multiple cash flows over time</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-6">Frequently Asked Questions</p>
+            <div className="space-y-6 max-w-3xl">
+              {[
+                { q: "What is a good ROI?", a: "For UK equity investments, a long-run annualised ROI of 7–10% is generally considered good. UK savings accounts currently offer 3–5% AER. Anything above 10% per year consistently is exceptional — and often comes with higher risk." },
+                { q: "What's the difference between ROI and profit?", a: "Profit is the raw pound gain (Return − Cost). ROI expresses that profit as a percentage of the original investment, making it easier to compare two different-sized investments. A £500 profit on a £1,000 investment (50% ROI) is far more impressive than £500 profit on a £100,000 investment (0.5% ROI)." },
+                { q: "Why does annualised ROI matter?", a: "A 50% total ROI over 5 years sounds great — but it works out to only 8.45% per year, which is roughly in line with the long-run FTSE return. Annualised ROI lets you compare investments of different lengths on equal footing." },
+                { q: "Does ROI account for inflation?", a: "No. A nominal ROI of 5% when inflation is 4% means your real return is closer to 1%. To get real ROI, subtract the inflation rate from your annualised ROI. For long-term planning, always consider both." },
+                { q: "Is ROI the same as IRR?", a: "No. ROI is a simple ratio (gain / cost). IRR (Internal Rate of Return) is a more complex measure used for projects with multiple cash flows over time — it finds the discount rate that makes the net present value of those cash flows zero. For simple buy/sell investments, ROI (or annualised ROI) is the right tool." },
+              ].map(({ q, a }) => (
+                <div key={q} className="border-b border-white/5 pb-6 last:border-0 last:pb-0">
+                  <p className="text-white font-medium text-sm mb-2">{q}</p>
+                  <p className="text-zinc-400 text-sm leading-relaxed">{a}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Internal links */}
+          <section className="border border-white/8 bg-white/[0.015] px-8 py-8">
+            <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">Related Calculators</p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { label: "Compound Interest Calculator", path: "/finance/compound-interest" },
+                { label: "Savings Calculator", path: "/finance/savings" },
+                { label: "ISA Calculator", path: "/finance/isa-calculator" },
+                { label: "Retirement Calculator", path: "/finance/retirement" },
+              ].map(link => (
+                <a key={link.path} href={link.path} className="px-4 py-2 rounded-lg text-xs font-heading uppercase tracking-wider text-white/60 border border-white/10 hover:border-white/30 hover:text-white transition-all">{link.label}</a>
+              ))}
+            </div>
+          </section>
+        </div>
+
         <FinancialDisclosure variant="investment" />
 
         {/* Footer */}
