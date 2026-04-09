@@ -6,13 +6,13 @@
   },
   "home": {
     "title": "The Calculator Page - Free Online Calculators",
-    "description": "Access a wide collection of free online calculators for math, finance, health, and everyday needs. Fast, accurate, and easy-to-use tools.",
+    "description": "Access a wide collection of free online calculators for math, finance, health, and more. Get fast, accurate results for everyday calculations.",
     "keywords": "online calculator,free calculator,math calculator,finance calculator,calculation tools,calculator page"
   },
   "learn-hub": {
-    "title": "Learn Hub - Free Math & Calculator Tutorials",
-    "description": "Explore our Learn Hub for easy-to-follow tutorials, guides, and tips to master calculators and math concepts. Build your skills for free.",
-    "keywords": "learn hub,calculator tutorials,math guides,free learning,calculator tips,math education"
+    "title": "Learn Hub - Free Math & Calculator Guides",
+    "description": "Explore our learning hub with free tutorials, guides, and educational resources to master math concepts and calculator techniques.",
+    "keywords": "learn math,calculator guides,math tutorials,educational resources,free learning hub"
   },
   "formulas": {
     "title": "Math Formulas & Calculator Reference Guide",
@@ -20,94 +20,94 @@
     "keywords": "math formulas,calculator formulas,formula reference,science formulas,calculation guide,formula calculator"
   },
   "finance-category": {
-    "title": "Finance Calculators – Free Online Financial Tools",
-    "description": "Use free finance calculators for loans, mortgages, investments, and savings. Get instant results to make smarter financial decisions.",
+    "title": "Finance Calculators - Free Online Financial Tools",
+    "description": "Free online finance calculators for loans, mortgages, investments, and savings. Make smarter financial decisions with easy-to-use tools.",
     "keywords": "finance calculators,financial tools,loan calculator,mortgage calculator,investment calculator,savings calculator"
   },
   "misc-category": {
-    "title": "Everyday Calculators - Free Online Tools",
-    "description": "Access free everyday calculators for quick math, unit conversions, percentages, and more. Simple tools to solve daily calculation needs instantly.",
-    "keywords": "everyday calculators,online calculators,free calculators,daily math tools,quick calculations,general calculators"
+    "title": "Everyday Calculators – Free Online Tools | CalcPage",
+    "description": "Explore our collection of free everyday calculators for quick math, unit conversions, percentages, and more. Simple tools for daily life calculations.",
+    "keywords": "everyday calculators,online calculators,free calculators,daily math tools,quick calculation,general purpose calculator"
   },
   "compound-interest": {
     "title": "Compound Interest Calculator | Free Online Tool",
-    "description": "Calculate compound interest instantly with our free online calculator. See how your savings and investments grow over time with detailed breakdowns.",
-    "keywords": "compound interest calculator,interest calculator,investment calculator,savings calculator,compound growth calculator"
+    "description": "Calculate compound interest instantly with our free calculator. See how your savings and investments grow over time with detailed breakdowns.",
+    "keywords": "compound interest calculator,interest calculator,investment calculator,savings calculator,compound growth"
   },
   "mortgage": {
     "title": "Free Mortgage Calculator | Estimate Monthly Payments",
-    "description": "Calculate your monthly mortgage payments, total interest, and amortization schedule. Plan your home purchase with our free mortgage calculator.",
-    "keywords": "mortgage calculator,monthly mortgage payment,home loan calculator,amortization schedule,mortgage interest calculator"
+    "description": "Calculate your monthly mortgage payments, total interest, and amortization schedule. Free online mortgage calculator for home buyers and refinancing.",
+    "keywords": "mortgage calculator,monthly payment calculator,home loan calculator,amortization schedule,mortgage interest calculator"
   },
   "loan": {
-    "title": "Free Loan Calculator - Monthly Payment & Interest",
-    "description": "Calculate your loan payments, total interest, and amortization schedule instantly. Plan smarter with our free online loan calculator.",
-    "keywords": "loan calculator,loan payment calculator,interest calculator,amortization calculator,monthly payment calculator"
+    "title": "Free Loan Calculator | Calculate Payments Instantly",
+    "description": "Calculate your monthly loan payments, total interest, and amortization schedule instantly. Free online loan calculator for any loan type.",
+    "keywords": "loan calculator,monthly payment calculator,loan amortization calculator,interest calculator,loan payment estimator"
   },
   "savings": {
-    "title": "Savings Calculator - Calculate Your Future Savings",
-    "description": "Use our free Savings Calculator to estimate how your money grows over time with compound interest. Plan your financial future with ease.",
+    "title": "Savings Calculator – Calculate Your Future Savings",
+    "description": "Use our free Savings Calculator to estimate how your money grows over time with compound interest. Plan your financial goals with ease.",
     "keywords": "savings calculator,compound interest calculator,savings growth,money savings tool,financial planning calculator"
   },
   "roi": {
-    "title": "ROI Calculator – Calculate Your Return on Investment",
-    "description": "Free ROI Calculator to measure your return on investment. Quickly evaluate profitability, compare opportunities, and make smarter financial decisions.",
-    "keywords": "ROI calculator,return on investment calculator,investment return calculator,profitability calculator,ROI formula"
+    "title": "ROI Calculator - Calculate Your Return on Investment",
+    "description": "Free ROI Calculator to measure your return on investment. Quickly evaluate profitability, compare investments, and make smarter financial decisions.",
+    "keywords": "ROI calculator,return on investment calculator,investment calculator,profitability calculator,ROI formula"
   },
   "retirement": {
-    "title": "Retirement Calculator – Plan Your Future Savings",
-    "description": "Use our free Retirement Calculator to estimate how much you need to save, plan your retirement age, and secure your financial future with confidence.",
-    "keywords": "retirement calculator,retirement planning,retirement savings calculator,financial planning,retirement fund estimator"
+    "title": "Free Retirement Calculator | Plan Your Future Savings",
+    "description": "Estimate how much you need to retire comfortably. Calculate savings goals, investment growth, and monthly contributions with our free retirement calculator.",
+    "keywords": "retirement calculator,retirement planning,retirement savings calculator,investment growth,retirement fund estimator,savings goal calculator"
   },
   "investment": {
     "title": "Investment Calculator - Calculate Returns & Growth",
-    "description": "Free investment calculator to estimate your portfolio growth, compound interest, and future returns. Plan smarter investments today.",
-    "keywords": "investment calculator,compound interest calculator,investment return calculator,portfolio growth,investment planning"
+    "description": "Free investment calculator to estimate your portfolio growth, compound returns, and future value. Plan smarter investments with accurate projections.",
+    "keywords": "investment calculator,compound interest calculator,investment return calculator,portfolio growth calculator,future value calculator"
   },
   "simple-interest": {
-    "title": "Simple Interest Calculator | Free Online Finance Tool",
+    "title": "Simple Interest Calculator | Free Online Tool",
     "description": "Calculate simple interest quickly and accurately. Enter principal, rate, and time to instantly find interest earned and total amount.",
-    "keywords": "simple interest calculator,interest calculator,simple interest formula,finance calculator,calculate simple interest,interest rate calculator"
+    "keywords": "simple interest calculator,interest calculator,simple interest formula,calculate simple interest,finance calculator,interest rate calculator"
   },
   "apr-apy": {
-    "title": "APR to APY Calculator | Convert Rates Instantly",
+    "title": "APR to APY Calculator – Convert Rates Instantly",
     "description": "Easily convert APR to APY with our free calculator. Compare interest rates, understand compounding effects, and make smarter financial decisions.",
     "keywords": "APR to APY calculator,convert APR to APY,annual percentage yield,interest rate converter,compound interest calculator,APR vs APY"
   },
   "break-even": {
     "title": "Break Even Calculator | Free Break Even Analysis Tool",
     "description": "Calculate your break even point instantly. Determine fixed costs, variable costs, and pricing needed to cover expenses and start profiting.",
-    "keywords": "break even calculator,break even analysis,break even point,fixed costs calculator,profitability calculator,business calculator"
+    "keywords": "break even calculator,break even analysis,break even point,fixed costs calculator,business profitability,cost analysis tool"
   },
   "future-value": {
-    "title": "Future Value Calculator | Calculate Investment Growth",
-    "description": "Calculate the future value of your investments with our free Future Value Calculator. Estimate compound interest and plan your financial growth easily.",
-    "keywords": "future value calculator,investment growth calculator,compound interest calculator,future value of money,financial planning calculator"
+    "title": "Future Value Calculator | Free Investment Growth Tool",
+    "description": "Calculate the future value of your investments and savings. Estimate growth with compound interest, deposits, and custom time periods instantly.",
+    "keywords": "future value calculator,compound interest calculator,investment growth calculator,future value of money,savings calculator,FV calculator"
   },
   "present-value": {
     "title": "Present Value Calculator | Free PV Calculator Online",
-    "description": "Calculate present value of future cash flows instantly. Free PV calculator with discount rate, compounding options, and detailed breakdowns for smart investing.",
-    "keywords": "present value calculator,PV calculator,discount rate calculator,time value of money,future cash flow calculator,present value formula"
+    "description": "Calculate the present value of future cash flows with our free Present Value Calculator. Discount future money to today's value instantly.",
+    "keywords": "present value calculator,PV calculator,time value of money,discount rate calculator,future cash flow,present value formula"
   },
   "annuity": {
-    "title": "Free Annuity Calculator | Calculate Annuity Payments",
-    "description": "Calculate annuity payments, future value, and present value with our free annuity calculator. Plan your retirement income and investment strategy instantly.",
-    "keywords": "annuity calculator,annuity payment calculator,future value annuity,present value annuity,retirement annuity calculator,annuity formula"
+    "title": "Annuity Calculator – Free Annuity Payment Tool",
+    "description": "Calculate annuity payments, future value, and present value instantly. Plan your retirement income with our free online annuity calculator.",
+    "keywords": "annuity calculator,annuity payment calculator,future value annuity,present value annuity,retirement annuity calculator"
   },
   "amortization": {
     "title": "Free Amortization Calculator | Loan Payment Schedule",
-    "description": "Calculate your loan amortization schedule with monthly payment breakdowns. See principal, interest, and remaining balance for any loan term instantly.",
+    "description": "Calculate your loan amortization schedule instantly. View monthly payments, interest breakdowns, and payoff timelines for mortgages and loans.",
     "keywords": "amortization calculator,loan amortization schedule,mortgage payment calculator,loan payoff calculator,amortization schedule"
   },
   "debt-payoff": {
-    "title": "Debt Payoff Calculator – Free Debt Repayment Plan",
-    "description": "Calculate your debt payoff date, total interest paid, and create a custom repayment plan. Explore snowball and avalanche strategies to become debt-free faster.",
-    "keywords": "debt payoff calculator,debt repayment plan,debt snowball calculator,debt avalanche,pay off debt faster,debt free calculator"
+    "title": "Debt Payoff Calculator – Plan Your Debt-Free Date",
+    "description": "Calculate how fast you can pay off debt with extra payments. See total interest saved, payoff timelines, and create a custom debt elimination plan.",
+    "keywords": "debt payoff calculator,debt repayment plan,pay off debt faster,debt free calculator,loan payoff calculator"
   },
   "net-worth": {
     "title": "Net Worth Calculator - Calculate Your Total Net Worth",
-    "description": "Free net worth calculator to track your total assets and liabilities. Get a clear snapshot of your financial health and wealth in seconds.",
-    "keywords": "net worth calculator,calculate net worth,assets and liabilities calculator,financial health tool,wealth calculator,personal finance calculator"
+    "description": "Calculate your net worth instantly by entering your assets and liabilities. Track your financial health and monitor your wealth-building progress over time.",
+    "keywords": "net worth calculator,calculate net worth,assets and liabilities calculator,financial health tracker,wealth calculator,personal finance calculator"
   },
   "tip": {
     "title": "Tip Calculator - Calculate Tips Quickly & Easily",
@@ -120,39 +120,39 @@
     "keywords": "gratuity calculator,gratuity calculation,gratuity amount calculator,gratuity online calculator,employee gratuity"
   },
   "cagr": {
-    "title": "CAGR Calculator - Free Compound Growth Rate Tool",
-    "description": "Calculate Compound Annual Growth Rate (CAGR) instantly. Measure investment growth, compare returns, and analyze performance over any time period.",
-    "keywords": "CAGR calculator,compound annual growth rate,investment growth calculator,CAGR formula,annualized return calculator,growth rate tool"
+    "title": "CAGR Calculator - Compound Annual Growth Rate",
+    "description": "Calculate your compound annual growth rate (CAGR) instantly. Free online CAGR calculator to measure investment growth over time with accurate results.",
+    "keywords": "CAGR calculator,compound annual growth rate,investment growth calculator,CAGR formula,annual return calculator,growth rate calculator"
   },
   "lumpsum": {
-    "title": "Lump Sum Calculator – Investment Growth Tool",
-    "description": "Calculate how your lump sum investment grows over time with compound interest. Free online tool for smart financial planning and returns.",
+    "title": "Lump Sum Calculator – Investment Growth Estimator",
+    "description": "Calculate how your lump sum investment grows over time with compound interest. Get instant projections for smarter financial planning.",
     "keywords": "lump sum calculator,lump sum investment calculator,compound interest calculator,one-time investment calculator,investment growth calculator"
   },
   "percentage": {
-    "title": "Percentage Calculator - Quick & Easy Calculations",
-    "description": "Calculate percentages instantly with our free Percentage Calculator. Find percentage of a number, increase, decrease, and difference with ease.",
-    "keywords": "percentage calculator,percent calculator,calculate percentage,percentage formula,percentage change calculator,percent of number"
+    "title": "Percentage Calculator - Quick & Free Online Tool",
+    "description": "Calculate percentages instantly with our free online Percentage Calculator. Find percentage of, increase, decrease, and difference with ease.",
+    "keywords": "percentage calculator,percent calculator,calculate percentage,percentage increase calculator,percentage difference,percent converter"
   },
   "days-between": {
     "title": "Days Between Calculator - Count Days Between Dates",
-    "description": "Calculate the exact number of days between two dates instantly. Free online tool for date differences, planning, and tracking durations.",
-    "keywords": "days between calculator,date difference calculator,count days between dates,day counter,date duration calculator"
+    "description": "Quickly calculate the exact number of days between two dates. Free online tool for planning, tracking deadlines, and date difference calculations.",
+    "keywords": "days between dates calculator,date difference calculator,count days between two dates,day counter,date duration calculator"
   },
   "bmi": {
     "title": "BMI Calculator - Calculate Your Body Mass Index Free",
-    "description": "Calculate your Body Mass Index (BMI) instantly with our free BMI calculator. Find out if you're underweight, normal, overweight, or obese.",
-    "keywords": "BMI calculator,body mass index calculator,BMI checker,calculate BMI,weight calculator,health calculator"
+    "description": "Calculate your Body Mass Index (BMI) instantly with our free BMI calculator. Determine your weight category and assess your health status easily.",
+    "keywords": "BMI calculator,body mass index calculator,BMI checker,weight category calculator,health calculator,BMI chart"
   },
   "age": {
     "title": "Age Calculator - Calculate Your Exact Age Online",
-    "description": "Free online age calculator to find your exact age in years, months, days, hours, and minutes. Calculate age between any two dates instantly.",
-    "keywords": "age calculator,calculate my age,date of birth calculator,age in days,how old am I,age difference calculator"
+    "description": "Calculate your exact age in years, months, days, hours, and minutes. Free online age calculator with birthday countdown and date difference tools.",
+    "keywords": "age calculator,calculate my age,date of birth calculator,age in days,birthday calculator,how old am I"
   },
   "average": {
-    "title": "Average Calculator - Quick & Easy Mean Computation",
-    "description": "Calculate the average of any set of numbers instantly. Free online average calculator for students, teachers, and professionals. Fast and accurate results.",
-    "keywords": "average calculator,mean calculator,calculate average,number average,average finder,arithmetic mean"
+    "title": "Average Calculator - Calculate Mean Quickly & Free",
+    "description": "Calculate the average of any set of numbers instantly. Free online average calculator with step-by-step solutions for math, school, and data analysis.",
+    "keywords": "average calculator,mean calculator,calculate average,number average,average finder,math calculator"
   },
   "even-odd": {
     "title": "Even Odd Calculator - Check If a Number Is Even or Odd",
@@ -160,29 +160,29 @@
     "keywords": "even odd calculator,even or odd checker,number parity calculator,even odd number tool,integer parity checker"
   },
   "length-converter": {
-    "title": "Length Converter - Convert Units of Length Instantly",
-    "description": "Easily convert between meters, feet, inches, kilometers, miles, and more with our free online length converter. Fast and accurate results.",
-    "keywords": "length converter,unit conversion,meters to feet,length calculator,distance converter,measurement converter"
+    "title": "Length Converter - Convert Units Instantly Free",
+    "description": "Convert between meters, feet, inches, kilometers, miles and more with our free online length converter. Fast, accurate, and easy to use.",
+    "keywords": "length converter,unit converter,meters to feet,length conversion,distance converter,measurement converter"
   },
   "weight-converter": {
-    "title": "Weight Converter - Convert kg, lbs, oz & More Free",
-    "description": "Easily convert between kilograms, pounds, ounces, grams, and stones with our free weight converter. Get instant, accurate results every time.",
-    "keywords": "weight converter,kg to lbs,pounds to kilograms,weight conversion calculator,mass converter,oz to grams"
+    "title": "Weight Converter - Free Online Unit Calculator",
+    "description": "Instantly convert between pounds, kilograms, ounces, grams, and more with our free weight converter. Fast, accurate, and easy to use.",
+    "keywords": "weight converter,kg to lbs,pound to kilogram,weight unit calculator,mass converter,online weight conversion"
   },
   "temperature-converter": {
     "title": "Temperature Converter - Free Online Unit Conversion",
-    "description": "Convert temperatures between Celsius, Fahrenheit, and Kelvin instantly. Free online temperature converter with accurate results and simple interface.",
-    "keywords": "temperature converter,Celsius to Fahrenheit,Kelvin converter,temperature conversion calculator,unit converter"
+    "description": "Instantly convert temperatures between Celsius, Fahrenheit, and Kelvin. Free online temperature converter with accurate results and simple interface.",
+    "keywords": "temperature converter,Celsius to Fahrenheit,Fahrenheit to Celsius,Kelvin converter,temperature conversion calculator,unit converter"
   },
   "volume-converter": {
     "title": "Volume Converter - Free Online Unit Conversion Tool",
-    "description": "Convert between liters, gallons, cups, milliliters, and more with our free Volume Converter. Get instant, accurate volume unit conversions online.",
-    "keywords": "volume converter,unit conversion,liters to gallons,volume calculator,metric volume conversion,liquid measurement converter"
+    "description": "Convert between liters, gallons, cups, milliliters, and more with our free online volume converter. Get instant, accurate results.",
+    "keywords": "volume converter,unit conversion,liters to gallons,volume calculator,liquid measurement converter,metric volume conversion"
   },
   "learn-50-30-20": {
     "title": "50/30/20 Budget Rule Guide | Learn Smart Budgeting",
-    "description": "Learn how the 50/30/20 budget rule works to manage your income. Allocate needs, wants, and savings effectively for better financial health.",
-    "keywords": "50/30/20 budget rule,budget calculator,personal finance,budgeting guide,money management,savings plan"
+    "description": "Learn how the 50/30/20 budget rule works to split your income into needs, wants, and savings. Master this simple strategy to manage your money effectively.",
+    "keywords": "50/30/20 budget rule,budget calculator,personal finance,money management,budgeting strategy,income allocation"
   },
   "learn-compound-interest": {
     "title": "What is Compound Interest? | Learn the Basics",
@@ -191,58 +191,58 @@
   },
   "learn-simple-interest": {
     "title": "Simple Interest Formula - Learn How to Calculate",
-    "description": "Learn the simple interest formula (I = P × R × T) with clear explanations, examples, and step-by-step calculations to master interest computations.",
-    "keywords": "simple interest formula,simple interest calculation,interest rate formula,I=PRT formula,simple interest examples,calculate simple interest"
+    "description": "Learn the simple interest formula (I = P × R × T) with clear examples and step-by-step explanations. Master interest calculations quickly and easily.",
+    "keywords": "simple interest formula,how to calculate simple interest,simple interest equation,interest rate formula,simple interest examples,I=PRT formula"
   },
   "learn-mortgage": {
-    "title": "Mortgage Guide | The Calculator Page",
-    "description": "Learn how mortgages work, understand key terms, and make smarter home financing decisions with our comprehensive mortgage guide.",
-    "keywords": "mortgage guide,home loan basics,mortgage calculator,mortgage terms explained,home buying guide,mortgage tips"
+    "title": "Mortgage Guide - Learn How Mortgages Work",
+    "description": "Understand mortgage basics, interest rates, loan types, and repayment strategies. Learn how to calculate your monthly payments and save thousands.",
+    "keywords": "mortgage guide,mortgage calculator,home loan basics,mortgage rates,monthly mortgage payment,mortgage types"
   },
   "learn-roi": {
-    "title": "ROI Formula - Learn Return on Investment Basics",
-    "description": "Master the ROI formula to calculate return on investment. Learn step-by-step how to measure profitability and make smarter financial decisions.",
-    "keywords": "ROI formula,return on investment formula,how to calculate ROI,ROI calculation,investment return,profitability formula"
+    "title": "ROI Formula – How to Calculate Return on Investment",
+    "description": "Learn the ROI formula step by step. Understand how to calculate return on investment to measure profitability and make smarter financial decisions.",
+    "keywords": "ROI formula,return on investment formula,how to calculate ROI,ROI calculation,investment return,ROI percentage"
   },
   "learn-amortization": {
-    "title": "Amortization Explained | The Calculator Page",
-    "description": "Learn how amortization works, how loan payments are split between principal and interest, and how to build an amortization schedule.",
-    "keywords": "amortization explained,amortization schedule,loan amortization,how amortization works,mortgage amortization,loan repayment"
+    "title": "Amortization Explained | Learn How It Works",
+    "description": "Learn how amortization works, how loan payments are split between principal and interest, and how to build an amortization schedule step by step.",
+    "keywords": "amortization explained,amortization schedule,loan amortization,amortization calculator,principal and interest,loan repayment"
   },
   "learn-savings": {
-    "title": "Savings Guide | Learn to Grow Your Money Faster",
-    "description": "Learn smart savings strategies, compound interest basics, and tips to maximize your savings. Use our free calculators to plan your financial goals.",
-    "keywords": "savings guide,how to save money,compound interest,savings calculator,savings tips,financial planning"
+    "title": "Savings Guide - Tips & Strategies | Calculator Page",
+    "description": "Learn proven savings strategies and tips to grow your wealth. Use our free savings calculators to plan your financial goals effectively.",
+    "keywords": "savings guide,savings tips,savings calculator,money saving strategies,financial planning,wealth building"
   },
   "learn-retirement": {
-    "title": "Retirement Planning Guide & Calculator | Learn",
-    "description": "Learn essential retirement planning strategies. Calculate savings goals, estimate income needs, and build a secure financial future with our free tools.",
-    "keywords": "retirement planning,retirement calculator,retirement savings,financial planning,retirement income,retirement guide"
+    "title": "Retirement Planning Guide | The Calculator Page",
+    "description": "Learn essential retirement planning strategies, savings goals, and investment tips to secure your financial future with our comprehensive guide.",
+    "keywords": "retirement planning,retirement savings,retirement calculator,financial planning,retirement guide,investment strategy"
   },
   "learn-investment": {
-    "title": "Investment Guide | The Calculator Page",
-    "description": "Learn how to grow your wealth with our comprehensive investment guide. Understand key strategies, compound interest, and portfolio basics.",
-    "keywords": "investment guide,investing basics,compound interest,portfolio strategy,investment calculator,wealth building"
+    "title": "Investment Guide | Learn Smart Investing Strategies",
+    "description": "Learn essential investment strategies, portfolio diversification, and wealth-building tips. Your complete guide to making informed investment decisions.",
+    "keywords": "investment guide,investing strategies,portfolio diversification,wealth building,investment tips,financial planning"
   },
   "learn-debt": {
     "title": "Debt Management Guide | The Calculator Page",
-    "description": "Learn effective debt management strategies including snowball, avalanche methods, and budgeting tips to pay off debt faster and achieve financial freedom.",
-    "keywords": "debt management,debt payoff strategies,debt snowball,debt avalanche,debt reduction,financial planning"
+    "description": "Learn effective debt management strategies including snowball, avalanche methods and budgeting tips to pay off debt faster and achieve financial freedom.",
+    "keywords": "debt management,debt repayment strategies,debt snowball,debt avalanche,pay off debt,debt calculator"
   },
   "learn-budgeting": {
     "title": "Budgeting Tips | The Calculator Page",
-    "description": "Learn essential budgeting tips to take control of your finances. Discover practical strategies to save money, reduce expenses, and reach your financial goals.",
-    "keywords": "budgeting tips,budget calculator,money management,personal finance,saving strategies,expense tracking"
+    "description": "Learn essential budgeting tips to manage your money effectively. Practical strategies, tools, and calculators to take control of your finances.",
+    "keywords": "budgeting tips,budget calculator,money management,personal finance,budgeting strategies,expense tracking"
   },
   "learn-credit": {
-    "title": "Credit Score Guide | Learn How Scores Work",
-    "description": "Understand how credit scores are calculated, what factors impact your rating, and actionable tips to improve your credit score quickly.",
-    "keywords": "credit score guide,how credit scores work,improve credit score,credit score factors,credit rating tips,credit score calculator"
+    "title": "Credit Score Guide | TheCalculatorPage.com",
+    "description": "Learn how credit scores work, what factors affect your rating, and how to improve your score with our comprehensive credit score guide.",
+    "keywords": "credit score guide,how credit scores work,improve credit score,credit score factors,credit rating,credit score calculator"
   },
   "learn-insurance": {
     "title": "Insurance Guide | The Calculator Page",
-    "description": "Learn about insurance types, coverage options, and how to calculate premiums. Make informed decisions to protect your finances and assets.",
-    "keywords": "insurance guide,insurance calculator,insurance coverage,premium calculator,insurance types,insurance basics"
+    "description": "Learn about insurance types, coverage options, and how to calculate premiums. Make informed decisions to protect your assets and save money.",
+    "keywords": "insurance guide,insurance calculator,insurance coverage,premium calculator,insurance types,insurance planning"
   },
   "learn-taxes": {
     "title": "Tax Planning Guide | Free Tax Calculator & Tips",
@@ -251,43 +251,43 @@
   },
   "learn-stocks": {
     "title": "Stock Investing Guide | The Calculator Page",
-    "description": "Learn the fundamentals of stock investing, key strategies, and how to analyze stocks to build long-term wealth with confidence.",
-    "keywords": "stock investing guide,how to invest in stocks,stock market basics,stock analysis,investing for beginners,stock portfolio"
+    "description": "Learn stock investing fundamentals, strategies, and tips to grow your portfolio. Free guide with calculators to help you make smarter investment decisions.",
+    "keywords": "stock investing guide,stock market basics,investing for beginners,stock calculator,investment strategies,portfolio growth"
   },
   "learn-bonds": {
     "title": "Bonds Investment Guide | The Calculator Page",
-    "description": "Learn how bonds work, types of bonds, yields, and risks. Master fixed-income investing with our comprehensive bonds guide and calculators.",
-    "keywords": "bonds investment guide,bond yields,fixed-income investing,bond calculator,bond types,bond risks"
+    "description": "Learn how bonds work, types of bonds, and strategies for fixed-income investing. Master bond yields, pricing, and portfolio diversification.",
+    "keywords": "bonds investment guide,bond yields,fixed-income investing,bond types,bond calculator,bond pricing"
   },
   "learn-mutual-funds": {
-    "title": "Mutual Funds Guide | Learn to Invest Wisely",
-    "description": "Learn how mutual funds work, types of funds, fees, and strategies to grow your wealth. Your complete guide to smart mutual fund investing.",
-    "keywords": "mutual funds guide,mutual fund investing,types of mutual funds,mutual fund fees,investment guide,fund calculator"
+    "title": "Mutual Funds Guide | Learn Investing Basics",
+    "description": "Learn how mutual funds work, types of funds, fees, and strategies to grow your wealth. A beginner-friendly guide to smart mutual fund investing.",
+    "keywords": "mutual funds guide,mutual fund investing,types of mutual funds,mutual fund fees,investment strategies,fund calculator"
   },
   "learn-crypto": {
     "title": "Cryptocurrency Guide | The Calculator Page",
-    "description": "Learn the fundamentals of cryptocurrency, blockchain technology, and digital assets. Your complete beginner-friendly crypto guide with practical insights.",
-    "keywords": "cryptocurrency guide,crypto basics,blockchain explained,digital currency,cryptocurrency for beginners,crypto learning"
+    "description": "Learn cryptocurrency basics, blockchain technology, and digital asset investing with our comprehensive beginner-friendly crypto guide.",
+    "keywords": "cryptocurrency guide,crypto basics,blockchain explained,digital currency,crypto investing,bitcoin guide"
   },
   "learn-real-estate": {
-    "title": "Real Estate Guide | Property Calculator & Tips",
-    "description": "Learn essential real estate concepts, property valuation methods, and mortgage calculations to make smarter buying and selling decisions.",
-    "keywords": "real estate guide,property calculator,mortgage calculation,home buying tips,real estate investing,property valuation"
+    "title": "Real Estate Guide | Calculator & Investment Tips",
+    "description": "Learn real estate fundamentals with our comprehensive guide. Calculate mortgage payments, ROI, and make smarter property investment decisions.",
+    "keywords": "real estate guide,real estate calculator,mortgage calculator,property investment,real estate ROI,home buying guide"
   },
   "learn-etf": {
     "title": "ETF Investing Guide | The Calculator Page",
     "description": "Learn the fundamentals of ETF investing, including how ETFs work, types of ETFs, and strategies to build a diversified portfolio for long-term growth.",
-    "keywords": "ETF investing guide,exchange traded funds,ETF strategies,passive investing,diversified portfolio,index funds"
+    "keywords": "ETF investing guide,exchange traded funds,ETF basics,ETF portfolio strategy,index fund investing,diversified investing"
   },
   "learn-inflation": {
-    "title": "Understanding Inflation | The Calculator Page",
-    "description": "Learn how inflation impacts your money and purchasing power. Understand CPI, inflation rates, and how to calculate real value over time.",
-    "keywords": "inflation calculator,understanding inflation,CPI,purchasing power,inflation rate,cost of living"
+    "title": "Understanding Inflation Calculator & Guide",
+    "description": "Learn how inflation impacts your money and purchasing power. Use our inflation calculator to measure real value changes over time.",
+    "keywords": "inflation calculator,understanding inflation,purchasing power,inflation rate,cost of living,inflation guide"
   },
   "learn-forex": {
     "title": "Forex Trading Guide | The Calculator Page",
-    "description": "Learn forex trading fundamentals, currency pairs, strategies, and risk management. Master the foreign exchange market with our comprehensive guide.",
-    "keywords": "forex trading guide,currency trading,forex for beginners,foreign exchange,forex strategies,currency pairs"
+    "description": "Learn forex trading fundamentals, currency pairs, strategies, and risk management. Free guide with tools to help you trade smarter.",
+    "keywords": "forex trading guide,currency trading,forex strategies,forex for beginners,currency pairs,forex risk management"
   },
   "learn-options": {
     "title": "Options Trading Guide | The Calculator Page",
@@ -296,38 +296,38 @@
   },
   "learn-diversification": {
     "title": "Portfolio Diversification Guide & Calculator",
-    "description": "Learn how portfolio diversification reduces investment risk. Understand asset allocation strategies to build a balanced, resilient portfolio.",
-    "keywords": "portfolio diversification,asset allocation,investment risk management,diversified portfolio,portfolio strategy,risk reduction"
+    "description": "Learn how portfolio diversification reduces investment risk. Explore strategies, asset allocation tips, and tools to build a balanced portfolio.",
+    "keywords": "portfolio diversification,asset allocation,investment risk management,diversified portfolio,investment strategy,risk reduction"
   },
   "learn-financial-freedom": {
     "title": "Path to Financial Freedom | Learn & Calculate",
-    "description": "Discover your path to financial freedom with actionable strategies, calculators, and tips to build wealth and achieve financial independence.",
+    "description": "Discover your path to financial freedom with actionable strategies, budgeting tips, and calculators to help you achieve financial independence faster.",
     "keywords": "financial freedom,financial independence,wealth building,financial planning,money management,financial calculator"
   },
   "blog-index": {
     "title": "Calculator Blog - Tips, Guides & Math Resources",
-    "description": "Explore our calculator blog for practical guides, math tips, and expert insights to help you solve everyday calculations with ease.",
-    "keywords": "calculator blog,math tips,calculation guides,online calculator resources,math blog"
+    "description": "Explore our calculator blog for practical tips, how-to guides, and expert insights to simplify your everyday math and financial calculations.",
+    "keywords": "calculator blog,math tips,calculation guides,online calculator resources,math blog,calculator tutorials"
   },
   "blog-mortgage-cheat": {
     "title": "Mortgage Cheat Code: Save Thousands on Your Loan",
-    "description": "Discover the mortgage cheat code that can save you thousands in interest. Learn proven strategies to pay off your home loan faster with our free calculator tool",
-    "keywords": "mortgage cheat code,mortgage calculator,pay off mortgage faster,mortgage tips,save on mortgage interest,home loan strategies"
+    "description": "Discover the mortgage cheat code that can save you thousands in interest. Learn simple strategies to pay off your home loan faster using our free calculator.",
+    "keywords": "mortgage cheat code,mortgage calculator,pay off mortgage faster,mortgage tips,save on mortgage interest,home loan strategy"
   },
   "blog-early-payoff": {
     "title": "Early Payoff Calculator Blog | Tips & Guides",
-    "description": "Learn how to pay off loans faster with our Early Payoff Calculator blog. Expert tips, strategies, and guides to save money on interest and become debt-free.",
-    "keywords": "early payoff calculator,loan payoff strategies,pay off debt faster,early loan payoff,debt free tips"
+    "description": "Learn how to pay off loans faster with our Early Payoff Calculator blog. Get strategies, tips, and insights to save money on interest and become debt-free.",
+    "keywords": "early payoff calculator,loan payoff strategies,pay off debt faster,extra payment calculator,loan interest savings,debt free tips"
   },
   "blog-compound-growth": {
     "title": "Compound Interest Growth Calculator & Guide",
-    "description": "Learn how compound interest grows your money over time. Use our free calculator to visualize exponential growth and maximize your investment returns.",
-    "keywords": "compound interest calculator,compound interest growth,interest rate calculator,investment growth,compound interest formula,savings calculator"
+    "description": "Learn how compound interest growth works and calculate your investment returns over time. See how compounding can multiply your savings.",
+    "keywords": "compound interest growth,compound interest calculator,investment growth,compounding returns,savings calculator,interest rate"
   },
   "blog-financial-tips": {
-    "title": "Financial Tips | The Calculator Page Blog",
-    "description": "Discover essential financial tips and calculator tools to manage your budget, savings, and investments smarter. Practical advice for every financial goal.",
-    "keywords": "financial tips,money management,budget calculator,savings tips,financial planning,calculator tools"
+    "title": "Financial Tips Calculator Page - Smart Money Guide",
+    "description": "Discover expert financial tips and calculator tools to manage your budget, savings, and investments. Make smarter money decisions today.",
+    "keywords": "financial tips,money calculator,budget tips,savings calculator,personal finance,financial planning"
   },
   "about": {
     "title": "About The Calculator Page | Free Legal Calculators",
@@ -336,22 +336,22 @@
   },
   "privacy": {
     "title": "Privacy Policy | The Calculator Page",
-    "description": "Read our privacy policy to understand how The Calculator Page collects, uses, and protects your personal data while using our free online calculators.",
-    "keywords": "privacy policy,data protection,calculator privacy,user data policy,online calculator security"
+    "description": "Read our privacy policy to understand how The Calculator Page collects, uses, and protects your personal data when using our free online calculators.",
+    "keywords": "privacy policy,data protection,calculator page privacy,user data policy,online calculator privacy"
   },
   "cookies": {
-    "title": "Cookie Policy | The Calculator Page",
-    "description": "Learn how The Calculator Page uses cookies to enhance your experience. Read our transparent cookie policy for details on data usage and preferences.",
-    "keywords": "cookie policy,calculator page cookies,data privacy,cookie preferences,website cookies"
+    "title": "Cookie Policy - The Calculator Page",
+    "description": "Learn how The Calculator Page uses cookies to enhance your experience. Review our transparent cookie policy and manage your preferences.",
+    "keywords": "cookie policy,calculator page cookies,privacy,cookie preferences,data transparency"
   },
   "terms": {
     "title": "Terms of Service | The Calculator Page",
-    "description": "Review the Terms of Service for The Calculator Page. Understand usage guidelines and policies for our free online calculator tools.",
-    "keywords": "terms of service,calculator terms,usage policy,legal terms,calculator page policies"
+    "description": "Review the Terms of Service for The Calculator Page. Understand your rights and responsibilities when using our free online calculator tools.",
+    "keywords": "terms of service,calculator terms,usage policy,legal terms,the calculator page"
   },
   "disclaimer": {
-    "title": "Disclaimer | The Calculator Page",
-    "description": "Read our disclaimer for The Calculator Page. Understand the terms, limitations, and accuracy of our free online calculator tools.",
-    "keywords": "disclaimer,calculator disclaimer,legal notice,terms of use,calculator accuracy,the calculator page"
+    "title": "Disclaimer - The Calculator Page",
+    "description": "Read the disclaimer for The Calculator Page. Understand our terms, limitations of liability, and how our free online calculators should be used.",
+    "keywords": "disclaimer,terms of use,calculator disclaimer,legal notice,liability,the calculator page"
   }
 }
