@@ -29,6 +29,17 @@ const BlogIndex = () => {
       featured: false,
       hasPremium: true,
     },
+    {
+      title: "You're Losing $147,000 by Investing Monthly Instead of Weekly",
+      description: "Same investment. Same market. One small change in frequency can cost you $147,000 over 30 years. Here's the math — and how to fix it.",
+      path: "/blog/weekly-vs-monthly-investing",
+      category: "The Cheat Code",
+      readTime: "5 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
   ];
 
   return (
