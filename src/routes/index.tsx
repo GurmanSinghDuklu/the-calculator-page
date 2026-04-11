@@ -119,6 +119,7 @@ import CheatCode01 from '../pages/blog/CheatCode01';
 import CheatCode01Payment from '../pages/blog/CheatCode01Payment';
 import CheatCode01Unlocked from '../pages/blog/CheatCode01Unlocked';
 import WeeklyVsMonthly from '../pages/blog/WeeklyVsMonthly';
+import AppLanding from '../pages/AppLanding';
 
 export const routes: RouteObject[] = [
   {
@@ -245,6 +246,7 @@ export const routes: RouteObject[] = [
       { path: 'blog/cheat-code-01-payment', element: <CheatCode01Payment /> },
       { path: 'blog/cheat-code-01-unlocked', element: <CheatCode01Unlocked /> },
       { path: 'blog/weekly-vs-monthly-investing', element: <WeeklyVsMonthly /> },
+      { path: 'app', element: <AppLanding /> },
 
       { path: '*', element: <NotFound /> },
     ],

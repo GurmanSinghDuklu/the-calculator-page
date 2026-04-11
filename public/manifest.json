@@ -1,0 +1,64 @@
+{
+  "name": "The Calculator App — Free Online Calculators",
+  "short_name": "Calculator App",
+  "description": "Free online calculator app for finance, mortgage, savings, percentage, and everyday calculations. No download needed — works on any device.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C1A1A",
+  "theme_color": "#1C1A1A",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en-GB",
+  "categories": ["finance", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "The Calculator App — Home Screen"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Compound Interest Calculator",
+      "short_name": "Compound Interest",
+      "description": "Calculate compound interest with monthly contributions",
+      "url": "/finance/compound-interest",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Mortgage Calculator",
+      "short_name": "Mortgage",
+      "description": "UK mortgage repayment calculator",
+      "url": "/finance/mortgage",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Percentage Calculator",
+      "short_name": "Percentage",
+      "description": "Percentage increase, decrease and difference",
+      "url": "/misc/percentage",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "UK Salary Calculator",
+      "short_name": "Salary",
+      "description": "Take-home pay after tax and National Insurance",
+      "url": "/finance/salary",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    }
+  ]
+}
