@@ -80,8 +80,9 @@ const Index = () => {
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
       <SEO
-        title="Free UK Financial Calculators"
-        description="Free UK financial calculators for mortgages, compound interest, salary, retirement, and more. No signup required. Instant results."
+        title="The Calculator App — 130+ Free UK Calculators Online"
+        description="The Calculator App. Free online calculators for finance, mortgage, salary, compound interest, savings, percentage, BMI and more. No download. Works on iPhone and Android."
+        keywords="the calculator app, free calculator app, online calculator app, uk calculators, mortgage calculator, compound interest calculator, salary calculator"
         canonicalUrl="https://www.thecalculatorpage.com"
       />
 

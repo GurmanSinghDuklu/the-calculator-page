@@ -1,0 +1,1801 @@
+{
+  "date": "2026-04-10",
+  "startTime": "2026-04-10T02:03:01.148Z",
+  "status": "success",
+  "totalPages": 70,
+  "pagesOptimized": 0,
+  "errors": [
+    "Failed to analyze competitor: www.thecalculatorsite.com",
+    "Failed to analyze competitor: omnicalculator.com",
+    "Failed to analyze competitor: calculator.net",
+    "Failed to generate SEO for page home",
+    "Failed to generate SEO for page learn-hub",
+    "Failed to generate SEO for page formulas",
+    "Failed to generate SEO for page finance-category",
+    "Failed to generate SEO for page misc-category",
+    "Failed to generate SEO for page compound-interest",
+    "Failed to generate SEO for page mortgage",
+    "Failed to generate SEO for page loan",
+    "Failed to generate SEO for page savings",
+    "Failed to generate SEO for page roi",
+    "Failed to generate SEO for page retirement",
+    "Failed to generate SEO for page investment",
+    "Failed to generate SEO for page simple-interest",
+    "Failed to generate SEO for page apr-apy",
+    "Failed to generate SEO for page break-even",
+    "Failed to generate SEO for page future-value",
+    "Failed to generate SEO for page present-value",
+    "Failed to generate SEO for page annuity",
+    "Failed to generate SEO for page amortization",
+    "Failed to generate SEO for page debt-payoff",
+    "Failed to generate SEO for page net-worth",
+    "Failed to generate SEO for page tip",
+    "Failed to generate SEO for page gratuity",
+    "Failed to generate SEO for page cagr",
+    "Failed to generate SEO for page lumpsum",
+    "Failed to generate SEO for page percentage",
+    "Failed to generate SEO for page days-between",
+    "Failed to generate SEO for page bmi",
+    "Failed to generate SEO for page age",
+    "Failed to generate SEO for page average",
+    "Failed to generate SEO for page even-odd",
+    "Failed to generate SEO for page length-converter",
+    "Failed to generate SEO for page weight-converter",
+    "Failed to generate SEO for page temperature-converter",
+    "Failed to generate SEO for page volume-converter",
+    "Failed to generate SEO for page learn-50-30-20",
+    "Failed to generate SEO for page learn-compound-interest",
+    "Failed to generate SEO for page learn-simple-interest",
+    "Failed to generate SEO for page learn-mortgage",
+    "Failed to generate SEO for page learn-roi",
+    "Failed to generate SEO for page learn-amortization",
+    "Failed to generate SEO for page learn-savings",
+    "Failed to generate SEO for page learn-retirement",
+    "Failed to generate SEO for page learn-investment",
+    "Failed to generate SEO for page learn-debt",
+    "Failed to generate SEO for page learn-budgeting",
+    "Failed to generate SEO for page learn-credit",
+    "Failed to generate SEO for page learn-insurance",
+    "Failed to generate SEO for page learn-taxes",
+    "Failed to generate SEO for page learn-stocks",
+    "Failed to generate SEO for page learn-bonds",
+    "Failed to generate SEO for page learn-mutual-funds",
+    "Failed to generate SEO for page learn-crypto",
+    "Failed to generate SEO for page learn-real-estate",
+    "Failed to generate SEO for page learn-etf",
+    "Failed to generate SEO for page learn-inflation",
+    "Failed to generate SEO for page learn-forex",
+    "Failed to generate SEO for page learn-options",
+    "Failed to generate SEO for page learn-diversification",
+    "Failed to generate SEO for page learn-financial-freedom",
+    "Failed to generate SEO for page blog-index",
+    "Failed to generate SEO for page blog-mortgage-cheat",
+    "Failed to generate SEO for page blog-early-payoff",
+    "Failed to generate SEO for page blog-compound-growth",
+    "Failed to generate SEO for page blog-financial-tips",
+    "Failed to generate SEO for page about",
+    "Failed to generate SEO for page privacy",
+    "Failed to generate SEO for page cookies",
+    "Failed to generate SEO for page terms",
+    "Failed to generate SEO for page disclaimer"
+  ],
+  "warnings": [
+    "Google ping failed for https://www.thecalculatorpage.com/categories/finance: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/salary: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/apy: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/cashback: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/irr: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/age: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/financial-journey: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/interest-impact: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/calculator-formulas-guide: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/inflation-guide: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/portfolio-rebalancing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/cups-to-grams: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/10: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/21: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/250: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/lbs-to-kg: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/ounces-to-grams: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/concrete-calculator: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+  ],
+  "competitorAnalysis": {
+    "fetchedAt": "2026-04-10T13:17:02.019Z",
+    "competitors": [],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": true,
+  "googlePinged": true,
+  "bingPinged": true,
+  "logs": [
+    {
+      "timestamp": "2026-04-10T02:03:02.362Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-04-10T02:03:02.362Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-04-10T02:03:02.362Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-04-10T02:03:02.363Z",
+      "level": "info",
+      "message": "Refreshing competitor analysis (cache expired)"
+    },
+    {
+      "timestamp": "2026-04-10T02:03:02.363Z",
+      "level": "info",
+      "message": "Analyzing competitor: www.thecalculatorsite.com"
+    },
+    {
+      "timestamp": "2026-04-10T02:50:09.725Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: www.thecalculatorsite.com",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-10T02:50:09.726Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-04-10T07:55:17.277Z",
+      "level": "info",
+      "message": "Analyzing competitor: omnicalculator.com"
+    },
+    {
+      "timestamp": "2026-04-10T08:11:30.224Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: omnicalculator.com",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZukceTzHAGTeJHZq5Rkb",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZukceTzHAGTeJHZq5Rkb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T08:11:30.224Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-04-10T13:17:01.608Z",
+      "level": "info",
+      "message": "Analyzing competitor: calculator.net"
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.013Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: calculator.net",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9ux15fbgijYzJ2y4bB",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9ux15fbgijYzJ2y4bB"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.018Z",
+      "level": "info",
+      "message": "Competitor analysis cached"
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.019Z",
+      "level": "info",
+      "message": "Generated keyword gap analysis",
+      "data": {
+        "totalCompetitorKeywords": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.019Z",
+      "level": "info",
+      "message": "Found 0 keyword opportunities"
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.019Z",
+      "level": "info",
+      "message": "✨ Phase 2: SEO Optimization"
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.021Z",
+      "level": "info",
+      "message": "Optimizing 70 pages for SEO..."
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.161Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page home",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9uyNgGAHwBPMjan9Mz",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9uyNgGAHwBPMjan9Mz"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.356Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-hub",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9uyyPtQfzxcwUMwWBn",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9uyyPtQfzxcwUMwWBn"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.551Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page formulas",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v15sdsb9straDqqKn",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v15sdsb9straDqqKn"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.724Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page finance-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v1dNFGpnkbxmM4b2t",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v1dNFGpnkbxmM4b2t"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:02.853Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page misc-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v2MGbaXc6ymRMwP5g",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v2MGbaXc6ymRMwP5g"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:04.006Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v7ED2eqfNJstobnGT",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v7ED2eqfNJstobnGT"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:04.144Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v7runqC4vQJDbrWiS",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v7runqC4vQJDbrWiS"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:04.308Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page loan",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v8UNLFa6dnTtknqV3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v8UNLFa6dnTtknqV3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:04.486Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v9LTmc5nWo5TNhJX1",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v9LTmc5nWo5TNhJX1"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:17:04.614Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZv9v9theP9sQDFsdomxa",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZv9v9theP9sQDFsdomxa"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:22.548Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEfU4GxuaFydnqnm8e",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEfU4GxuaFydnqnm8e"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:22.882Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEgpR6fsYHiNEkuXea",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEgpR6fsYHiNEkuXea"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:23.067Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEhhW5sHVEaRh3NoAi",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEhhW5sHVEaRh3NoAi"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:23.197Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page apr-apy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEiJTkRKAvycrafKRi",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEiJTkRKAvycrafKRi"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:23.324Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page break-even",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEipy3C3X24mfc1Cxe",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEipy3C3X24mfc1Cxe"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:24.462Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page future-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEohADgeGAbeFB4wC8",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEohADgeGAbeFB4wC8"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:24.593Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page present-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEpFebPpomu8LpCv35",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEpFebPpomu8LpCv35"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:24.742Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page annuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEppdUynFkcHE7c49C",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEppdUynFkcHE7c49C"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:24.953Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBEqUKiAiQmeFDmfhyi",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBEqUKiAiQmeFDmfhyi"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:34:25.088Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page debt-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvBErLuYSCtQCYvmv4tv",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvBErLuYSCtQCYvmv4tv"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:47.128Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page net-worth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC78KUvri44VqKoiccc",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC78KUvri44VqKoiccc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:47.629Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page tip",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7AUi4ky58XoW9wvjM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7AUi4ky58XoW9wvjM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:47.875Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page gratuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7B4gjbLoVs6WVkNXJ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7B4gjbLoVs6WVkNXJ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:48.028Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cagr",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7CAf7ibXPrLKnDBSM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7CAf7ibXPrLKnDBSM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:48.224Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page lumpsum",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7CvJitR48u5tjP5uQ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7CvJitR48u5tjP5uQ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:49.520Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page percentage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7J5N1X4Y2dQ7nbySo",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7J5N1X4Y2dQ7nbySo"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:49.736Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page days-between",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7KNzZXCGgRVey7AJm",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7KNzZXCGgRVey7AJm"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:49.873Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page bmi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7L3vi3EXrRfbJ1CFb",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7L3vi3EXrRfbJ1CFb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:50.011Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page age",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7LetikmxTiuwg9hYq",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7LetikmxTiuwg9hYq"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:50.271Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page average",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7Mi98zaoxsWzwUKb6",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7Mi98zaoxsWzwUKb6"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:51.613Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page even-odd",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7TNhzDYbW2f8PdrDG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7TNhzDYbW2f8PdrDG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:51.758Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page length-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7U5sH7VqZYrKJ7rac",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7U5sH7VqZYrKJ7rac"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:51.934Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page weight-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7UkZGABRcDCPh2yqU",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7UkZGABRcDCPh2yqU"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:52.099Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page temperature-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7VVCkBtCSUbqigfYq",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7VVCkBtCSUbqigfYq"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:52.236Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page volume-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7WAPXdm8N9wGVwFpG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7WAPXdm8N9wGVwFpG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:53.402Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-50-30-20",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7b54iEdwBwVQZwNiz",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7b54iEdwBwVQZwNiz"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:53.542Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7bj1AzTq2WqCp9pAx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7bj1AzTq2WqCp9pAx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:53.678Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7cKxxSjepUzdeydd1",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7cKxxSjepUzdeydd1"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:53.915Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7d3dV7yFZzuy7qWQC",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7d3dV7yFZzuy7qWQC"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T13:45:54.052Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvC7dvTcsDwHwSNGSMmb",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvC7dvTcsDwHwSNGSMmb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:17.262Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSY682y8CEY1HHrvJe",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSY682y8CEY1HHrvJe"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:17.435Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSYonLg49Zd1H4tfgK",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSYonLg49Zd1H4tfgK"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:17.601Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSZRVGCyDMLDssiRi3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSZRVGCyDMLDssiRi3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:17.828Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSaQmT48DG1Q8e2bb9",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSaQmT48DG1Q8e2bb9"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:17.963Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-debt",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSb4iFgV7pBkkDD8s5",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSb4iFgV7pBkkDD8s5"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:19.120Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-budgeting",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSfx9beKnNUnP4fhaF",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSfx9beKnNUnP4fhaF"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:19.258Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-credit",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSgb6M8C4KpiNLeMTC",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSgb6M8C4KpiNLeMTC"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:19.427Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-insurance",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDShDo85WCmz1mda4bS",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDShDo85WCmz1mda4bS"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:19.566Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-taxes",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDShvxMhu9SzaktL3bx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDShvxMhu9SzaktL3bx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:19.702Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-stocks",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSiVgz3PZWFfY4EZwW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSiVgz3PZWFfY4EZwW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:20.845Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-bonds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSoQsBW7jFoPcTSTVk",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSoQsBW7jFoPcTSTVk"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:20.997Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mutual-funds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSozb2eLFt8Ydb4nQx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSozb2eLFt8Ydb4nQx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:21.129Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-crypto",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSpcnx2kfK6r4Ja9f1",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSpcnx2kfK6r4Ja9f1"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:03:21.265Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-real-estate",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvDSqBmd44v4Vb8yBXGJ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvDSqBmd44v4Vb8yBXGJ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:11.362Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-etf",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEesJiX7XJVKw2WNnGF",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEesJiX7XJVKw2WNnGF"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:12.501Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-inflation",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEexR3bzzftFxmoz9nC",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEexR3bzzftFxmoz9nC"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:12.640Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-forex",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEexzmiMHaohmHR4E5y",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEexzmiMHaohmHR4E5y"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:12.773Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-options",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEeyaVmwVgVENLqGfMr",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEeyaVmwVgVENLqGfMr"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:14.276Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-diversification",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEf5hMVGmufLrQcrpZ7",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEf5hMVGmufLrQcrpZ7"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:19:14.412Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-financial-freedom",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvEf6aviKiaECN1dktRF",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvEf6aviKiaECN1dktRF"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:42.311Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-index",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqVMHru5otLKsmnDex",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqVMHru5otLKsmnDex"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:42.492Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-mortgage-cheat",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqWZDwBU6M1wgvWTtM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqWZDwBU6M1wgvWTtM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:42.631Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-early-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqX8SnAxCLLFiEEoKN",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqX8SnAxCLLFiEEoKN"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:42.766Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-compound-growth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqXjfDqgzGB3bHr7s7",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqXjfDqgzGB3bHr7s7"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:42.944Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-financial-tips",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqYP79ZPXfMMCFzdbW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqYP79ZPXfMMCFzdbW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.085Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page about",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqdMzvtPMNjnoJbjci",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqdMzvtPMNjnoJbjci"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.228Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page privacy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqdyhmZzJgChtcCCk2",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqdyhmZzJgChtcCCk2"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.353Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cookies",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqeZRnBHVspzWNzsYs",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqeZRnBHVspzWNzsYs"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.549Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page terms",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqfDNZEus1aSFCvy6S",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqfDNZEus1aSFCvy6S"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.685Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page disclaimer",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZvFqfv3H8Th17GSG3EL6",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZvFqfv3H8Th17GSG3EL6"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.685Z",
+      "level": "info",
+      "message": "SEO optimization complete",
+      "data": {
+        "optimized": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.689Z",
+      "level": "info",
+      "message": "Optimized 0 pages"
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.691Z",
+      "level": "info",
+      "message": "SEO data file updated",
+      "data": {
+        "pages": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.691Z",
+      "level": "info",
+      "message": "🔧 Phase 3: Technical SEO Updates"
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.696Z",
+      "level": "info",
+      "message": "Sitemap updated with fresh dates",
+      "data": {
+        "date": "2026-04-10",
+        "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/public/sitemap.xml"
+      }
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.696Z",
+      "level": "info",
+      "message": "📡 Phase 4: Notifying Search Engines"
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.698Z",
+      "level": "info",
+      "message": "Preparing to ping 133 URLs to search engines"
+    },
+    {
+      "timestamp": "2026-04-10T14:34:44.874Z",
+      "level": "info",
+      "message": "✓ Authenticated with Google Indexing API"
+    },
+    {
+      "timestamp": "2026-04-10T14:46:46.990Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/categories/finance: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T15:03:41.921Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/salary: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T15:21:27.655Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/apy: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T16:03:24.905Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/cashback: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE"
+    },
+    {
+      "timestamp": "2026-04-10T16:21:24.792Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/irr: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T17:06:21.163Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/age: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-10T18:07:51.839Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/financial-journey: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE"
+    },
+    {
+      "timestamp": "2026-04-10T18:23:30.766Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/interest-impact: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T18:50:46.692Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/calculator-formulas-guide: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T18:59:11.828Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/inflation-guide: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T19:16:50.926Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/portfolio-rebalancing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: write EPIPE"
+    },
+    {
+      "timestamp": "2026-04-10T20:24:21.136Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/cups-to-grams: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-10T21:08:32.879Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/10: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-10T21:24:08.670Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/21: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T22:26:18.716Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/250: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-10T23:09:54.225Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/lbs-to-kg: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-10T23:27:22.904Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/ounces-to-grams: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T23:51:26.684Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/concrete-calculator: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-10T23:51:27.691Z",
+      "level": "info",
+      "message": "Google pinging complete",
+      "data": {
+        "successCount": 115,
+        "errorCount": 18,
+        "total": 133
+      }
+    },
+    {
+      "timestamp": "2026-04-10T23:51:28.873Z",
+      "level": "info",
+      "message": "✓ Bing batch submitted",
+      "data": {
+        "count": 133
+      }
+    },
+    {
+      "timestamp": "2026-04-10T23:51:28.874Z",
+      "level": "info",
+      "message": "Bing pinging complete",
+      "data": {
+        "successCount": 133,
+        "total": 133
+      }
+    }
+  ],
+  "endTime": "2026-04-10T23:51:28.878Z"
+}

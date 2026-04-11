@@ -120,6 +120,11 @@ import CheatCode01Payment from '../pages/blog/CheatCode01Payment';
 import CheatCode01Unlocked from '../pages/blog/CheatCode01Unlocked';
 import WeeklyVsMonthly from '../pages/blog/WeeklyVsMonthly';
 import AppLanding from '../pages/AppLanding';
+import MortgageCalculatorApp from '../pages/app/MortgageCalculatorApp';
+import CompoundInterestApp from '../pages/app/CompoundInterestApp';
+import SalaryCalculatorApp from '../pages/app/SalaryCalculatorApp';
+import SavingsCalculatorApp from '../pages/app/SavingsCalculatorApp';
+import PercentageCalculatorApp from '../pages/app/PercentageCalculatorApp';
 
 export const routes: RouteObject[] = [
   {
@@ -247,6 +252,11 @@ export const routes: RouteObject[] = [
       { path: 'blog/cheat-code-01-unlocked', element: <CheatCode01Unlocked /> },
       { path: 'blog/weekly-vs-monthly-investing', element: <WeeklyVsMonthly /> },
       { path: 'app', element: <AppLanding /> },
+      { path: 'app/mortgage-calculator-app', element: <MortgageCalculatorApp /> },
+      { path: 'app/compound-interest-app', element: <CompoundInterestApp /> },
+      { path: 'app/salary-calculator-app', element: <SalaryCalculatorApp /> },
+      { path: 'app/savings-calculator-app', element: <SavingsCalculatorApp /> },
+      { path: 'app/percentage-calculator-app', element: <PercentageCalculatorApp /> },
 
       { path: '*', element: <NotFound /> },
     ],

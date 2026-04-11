@@ -1,0 +1,637 @@
+{
+  "date": "2026-04-07",
+  "startTime": "2026-04-07T02:05:02.096Z",
+  "status": "success",
+  "totalPages": 70,
+  "pagesOptimized": 53,
+  "errors": [
+    "Failed to generate SEO for page break-even",
+    "Failed to generate SEO for page amortization",
+    "Failed to generate SEO for page gratuity",
+    "Failed to generate SEO for page lumpsum",
+    "Failed to generate SEO for page days-between",
+    "Failed to generate SEO for page age",
+    "Failed to generate SEO for page average",
+    "Failed to generate SEO for page weight-converter",
+    "Failed to generate SEO for page temperature-converter",
+    "Failed to generate SEO for page learn-50-30-20",
+    "Failed to generate SEO for page learn-compound-interest",
+    "Failed to generate SEO for page learn-roi",
+    "Failed to generate SEO for page learn-stocks",
+    "Failed to generate SEO for page learn-mutual-funds",
+    "Failed to generate SEO for page learn-forex",
+    "Failed to generate SEO for page blog-early-payoff",
+    "Failed to generate SEO for page about"
+  ],
+  "warnings": [
+    "Invalid SEO data for blog-mortgage-cheat:",
+    "Google ping failed for https://www.thecalculatorpage.com/categories/finance: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/budget: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/mortgage-cost-comparison: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/weekly-mortgage: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/credit-card-payoff: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/finance/irr: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/ethical-investing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/learn/investing-vs-trading: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/blog/mortgage-cheat-code: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorpage.com/about: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/cm-to-inches: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+  ],
+  "competitorAnalysis": {
+    "fetchedAt": "2026-04-07T02:05:03.342Z",
+    "competitors": [
+      "www.thecalculatorsite.com"
+    ],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": true,
+  "googlePinged": true,
+  "bingPinged": true,
+  "logs": [
+    {
+      "timestamp": "2026-04-07T02:05:03.341Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.341Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.341Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.342Z",
+      "level": "info",
+      "message": "Using cached competitor analysis"
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.342Z",
+      "level": "info",
+      "message": "Generated keyword gap analysis",
+      "data": {
+        "totalCompetitorKeywords": 25
+      }
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.342Z",
+      "level": "info",
+      "message": "Found 10 keyword opportunities"
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.342Z",
+      "level": "info",
+      "message": "✨ Phase 2: SEO Optimization"
+    },
+    {
+      "timestamp": "2026-04-07T02:05:03.343Z",
+      "level": "info",
+      "message": "Optimizing 70 pages for SEO..."
+    },
+    {
+      "timestamp": "2026-04-07T02:21:51.284Z",
+      "level": "info",
+      "message": "✓ Optimized: home"
+    },
+    {
+      "timestamp": "2026-04-07T02:37:03.008Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-hub"
+    },
+    {
+      "timestamp": "2026-04-07T02:54:12.955Z",
+      "level": "info",
+      "message": "✓ Optimized: formulas"
+    },
+    {
+      "timestamp": "2026-04-07T03:11:05.655Z",
+      "level": "info",
+      "message": "✓ Optimized: finance-category"
+    },
+    {
+      "timestamp": "2026-04-07T03:27:52.804Z",
+      "level": "info",
+      "message": "✓ Optimized: misc-category"
+    },
+    {
+      "timestamp": "2026-04-07T03:45:05.188Z",
+      "level": "info",
+      "message": "✓ Optimized: compound-interest"
+    },
+    {
+      "timestamp": "2026-04-07T04:01:29.014Z",
+      "level": "info",
+      "message": "✓ Optimized: mortgage"
+    },
+    {
+      "timestamp": "2026-04-07T04:18:06.722Z",
+      "level": "info",
+      "message": "✓ Optimized: loan"
+    },
+    {
+      "timestamp": "2026-04-07T04:34:03.656Z",
+      "level": "info",
+      "message": "✓ Optimized: savings"
+    },
+    {
+      "timestamp": "2026-04-07T04:50:34.893Z",
+      "level": "info",
+      "message": "✓ Optimized: roi"
+    },
+    {
+      "timestamp": "2026-04-07T04:53:43.123Z",
+      "level": "info",
+      "message": "✓ Optimized: retirement"
+    },
+    {
+      "timestamp": "2026-04-07T05:10:49.482Z",
+      "level": "info",
+      "message": "✓ Optimized: investment"
+    },
+    {
+      "timestamp": "2026-04-07T05:29:44.497Z",
+      "level": "info",
+      "message": "✓ Optimized: simple-interest"
+    },
+    {
+      "timestamp": "2026-04-07T05:45:46.033Z",
+      "level": "info",
+      "message": "✓ Optimized: apr-apy"
+    },
+    {
+      "timestamp": "2026-04-07T06:35:28.690Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page break-even",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T06:53:27.416Z",
+      "level": "info",
+      "message": "✓ Optimized: future-value"
+    },
+    {
+      "timestamp": "2026-04-07T07:08:37.610Z",
+      "level": "info",
+      "message": "✓ Optimized: present-value"
+    },
+    {
+      "timestamp": "2026-04-07T07:31:29.792Z",
+      "level": "info",
+      "message": "✓ Optimized: annuity"
+    },
+    {
+      "timestamp": "2026-04-07T08:14:25.490Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page amortization",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T08:14:32.520Z",
+      "level": "info",
+      "message": "✓ Optimized: debt-payoff"
+    },
+    {
+      "timestamp": "2026-04-07T08:14:37.629Z",
+      "level": "info",
+      "message": "✓ Optimized: net-worth"
+    },
+    {
+      "timestamp": "2026-04-07T08:30:39.287Z",
+      "level": "info",
+      "message": "✓ Optimized: tip"
+    },
+    {
+      "timestamp": "2026-04-07T09:15:25.376Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page gratuity",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T09:15:29.420Z",
+      "level": "info",
+      "message": "✓ Optimized: cagr"
+    },
+    {
+      "timestamp": "2026-04-07T10:05:33.130Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page lumpsum",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T10:16:29.812Z",
+      "level": "info",
+      "message": "✓ Optimized: percentage"
+    },
+    {
+      "timestamp": "2026-04-07T11:05:19.967Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page days-between",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T11:17:30.278Z",
+      "level": "info",
+      "message": "✓ Optimized: bmi"
+    },
+    {
+      "timestamp": "2026-04-07T12:07:32.515Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page age",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T12:52:13.568Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page average",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T13:06:44.914Z",
+      "level": "info",
+      "message": "✓ Optimized: even-odd"
+    },
+    {
+      "timestamp": "2026-04-07T13:19:30.582Z",
+      "level": "info",
+      "message": "✓ Optimized: length-converter"
+    },
+    {
+      "timestamp": "2026-04-07T14:07:20.665Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page weight-converter",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T14:53:42.342Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page temperature-converter",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T14:53:46.700Z",
+      "level": "info",
+      "message": "✓ Optimized: volume-converter"
+    },
+    {
+      "timestamp": "2026-04-07T16:11:52.566Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-50-30-20",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T16:55:55.595Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-compound-interest",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T16:55:59.542Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-simple-interest"
+    },
+    {
+      "timestamp": "2026-04-07T17:13:32.488Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-mortgage"
+    },
+    {
+      "timestamp": "2026-04-07T18:13:14.178Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-roi",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T18:24:29.335Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-amortization"
+    },
+    {
+      "timestamp": "2026-04-07T18:24:33.605Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-savings"
+    },
+    {
+      "timestamp": "2026-04-07T18:40:50.836Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-retirement"
+    },
+    {
+      "timestamp": "2026-04-07T18:56:46.331Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-investment"
+    },
+    {
+      "timestamp": "2026-04-07T19:13:55.563Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-debt"
+    },
+    {
+      "timestamp": "2026-04-07T19:42:05.494Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-budgeting"
+    },
+    {
+      "timestamp": "2026-04-07T19:58:57.942Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-credit"
+    },
+    {
+      "timestamp": "2026-04-07T20:26:32.253Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-insurance"
+    },
+    {
+      "timestamp": "2026-04-07T20:58:03.006Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-taxes"
+    },
+    {
+      "timestamp": "2026-04-07T21:44:11.532Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-stocks",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T21:59:47.201Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-bonds"
+    },
+    {
+      "timestamp": "2026-04-07T22:44:37.364Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mutual-funds",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-07T23:00:47.497Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-crypto"
+    },
+    {
+      "timestamp": "2026-04-07T23:15:47.508Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-real-estate"
+    },
+    {
+      "timestamp": "2026-04-07T23:15:51.264Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-etf"
+    },
+    {
+      "timestamp": "2026-04-07T23:29:29.549Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-inflation"
+    },
+    {
+      "timestamp": "2026-04-08T00:21:00.237Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-forex",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-08T00:21:04.469Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-options"
+    },
+    {
+      "timestamp": "2026-04-08T00:37:30.096Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-diversification"
+    },
+    {
+      "timestamp": "2026-04-08T00:52:40.067Z",
+      "level": "info",
+      "message": "✓ Optimized: learn-financial-freedom"
+    },
+    {
+      "timestamp": "2026-04-08T01:09:22.441Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-index"
+    },
+    {
+      "timestamp": "2026-04-08T01:25:58.160Z",
+      "level": "warn",
+      "message": "Invalid SEO data for blog-mortgage-cheat:",
+      "data": [
+        "Description length 162 is outside recommended range (80-160)"
+      ]
+    },
+    {
+      "timestamp": "2026-04-08T01:25:58.161Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-mortgage-cheat"
+    },
+    {
+      "timestamp": "2026-04-08T02:13:42.457Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-early-payoff",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-08T02:45:05.326Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-compound-growth"
+    },
+    {
+      "timestamp": "2026-04-08T03:19:51.160Z",
+      "level": "info",
+      "message": "✓ Optimized: blog-financial-tips"
+    },
+    {
+      "timestamp": "2026-04-08T04:09:18.423Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page about",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-04-08T04:09:22.111Z",
+      "level": "info",
+      "message": "✓ Optimized: privacy"
+    },
+    {
+      "timestamp": "2026-04-08T04:26:52.099Z",
+      "level": "info",
+      "message": "✓ Optimized: cookies"
+    },
+    {
+      "timestamp": "2026-04-08T04:43:43.588Z",
+      "level": "info",
+      "message": "✓ Optimized: terms"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.024Z",
+      "level": "info",
+      "message": "✓ Optimized: disclaimer"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.025Z",
+      "level": "info",
+      "message": "SEO optimization complete",
+      "data": {
+        "optimized": 53
+      }
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.029Z",
+      "level": "info",
+      "message": "Optimized 53 pages"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.032Z",
+      "level": "info",
+      "message": "SEO data file updated",
+      "data": {
+        "pages": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.033Z",
+      "level": "info",
+      "message": "🔧 Phase 3: Technical SEO Updates"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.035Z",
+      "level": "info",
+      "message": "Sitemap updated with fresh dates",
+      "data": {
+        "date": "2026-04-08",
+        "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/public/sitemap.xml"
+      }
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.036Z",
+      "level": "info",
+      "message": "📡 Phase 4: Notifying Search Engines"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.036Z",
+      "level": "info",
+      "message": "Preparing to ping 133 URLs to search engines"
+    },
+    {
+      "timestamp": "2026-04-08T04:59:54.289Z",
+      "level": "info",
+      "message": "✓ Authenticated with Google Indexing API"
+    },
+    {
+      "timestamp": "2026-04-08T05:15:41.526Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/categories/finance: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T06:06:51.090Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/budget: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-08T06:40:41.506Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/mortgage-cost-comparison: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T07:17:36.553Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/weekly-mortgage: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-08T07:47:58.855Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/credit-card-payoff: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T08:05:27.560Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/finance/irr: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T09:33:43.646Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/ethical-investing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T10:07:16.713Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/learn/investing-vs-trading: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T10:50:07.096Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/blog/mortgage-cheat-code: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-08T11:05:53.636Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/about: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-04-08T11:37:46.293Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/cm-to-inches: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-04-08T11:38:51.366Z",
+      "level": "info",
+      "message": "Google pinging complete",
+      "data": {
+        "successCount": 122,
+        "errorCount": 11,
+        "total": 133
+      }
+    },
+    {
+      "timestamp": "2026-04-08T11:38:52.911Z",
+      "level": "info",
+      "message": "✓ Bing batch submitted",
+      "data": {
+        "count": 133
+      }
+    },
+    {
+      "timestamp": "2026-04-08T11:38:52.911Z",
+      "level": "info",
+      "message": "Bing pinging complete",
+      "data": {
+        "successCount": 133,
+        "total": 133
+      }
+    }
+  ],
+  "endTime": "2026-04-08T11:38:52.913Z"
+}
