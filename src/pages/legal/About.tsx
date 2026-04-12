@@ -77,7 +77,7 @@ const About = () => {
                 filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
               }}>ABOUT</span>
               <span className="block text-[8vw] md:text-[62px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
-                THE CALCULATOR PAGE
+                THE CALCULATOR APP
               </span>
             </h1>
             <div className="mt-8 max-w-xl pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
