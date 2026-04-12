@@ -81,8 +81,8 @@ const CompoundInterest = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thecalculatorpage.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Finance", "item": "https://www.thecalculatorpage.com/finance" },
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thecalculatorapp.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Finance", "item": "https://www.thecalculatorapp.org/finance" },
       { "@type": "ListItem", "position": 3, "name": "Compound Interest" }
     ]
   };

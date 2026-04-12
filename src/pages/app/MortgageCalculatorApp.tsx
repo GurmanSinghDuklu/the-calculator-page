@@ -26,7 +26,7 @@ export default function MortgageCalculatorApp() {
         title="Mortgage Calculator App — Free UK Mortgage App | The Calculator App"
         description="Free mortgage calculator app for UK users. No download needed. Works on iPhone and Android. Calculate monthly repayments, overpayments, Stamp Duty, and more."
         keywords="mortgage calculator app, free mortgage calculator app, uk mortgage calculator app, mortgage app iphone, mortgage app android, best mortgage calculator app uk"
-        canonicalUrl="https://www.thecalculatorpage.com/app/mortgage-calculator-app"
+        canonicalUrl="https://www.thecalculatorapp.org/app/mortgage-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -36,7 +36,7 @@ export default function MortgageCalculatorApp() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

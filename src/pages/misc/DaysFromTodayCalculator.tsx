@@ -111,7 +111,7 @@ const DaysFromTodayCalculator = () => {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

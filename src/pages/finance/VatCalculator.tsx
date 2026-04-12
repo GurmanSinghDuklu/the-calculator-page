@@ -71,7 +71,7 @@ const VatCalculator = () => {
         title="VAT Calculator UK"
         description="Free UK VAT calculator. Add or remove VAT at 20%, 5% or 0%. Instant results for invoices, expenses and tax returns."
         keywords="VAT calculator, VAT calculator UK, add VAT, remove VAT, 20% VAT, value added tax calculator"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/vat-calculator"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/vat-calculator"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -82,7 +82,7 @@ const VatCalculator = () => {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

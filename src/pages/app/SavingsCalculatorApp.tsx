@@ -26,7 +26,7 @@ export default function SavingsCalculatorApp() {
         title="Savings Calculator App — Free UK Savings App | The Calculator App"
         description="Free UK savings calculator app. No download. Works on iPhone and Android. Calculate savings growth with AER, regular contributions, and Cash ISA projections."
         keywords="savings calculator app, free savings calculator app, uk savings app, savings app iphone, savings app android, isa calculator app, savings interest calculator app"
-        canonicalUrl="https://www.thecalculatorpage.com/app/savings-calculator-app"
+        canonicalUrl="https://www.thecalculatorapp.org/app/savings-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -36,7 +36,7 @@ export default function SavingsCalculatorApp() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

@@ -85,7 +85,7 @@ export default function MortgageOverpayment() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/mortgage-overpayment`}
+        canonicalUrl={`https://www.thecalculatorapp.org/finance/mortgage-overpayment`}
         faqSchema={faqSchema}
       
         structuredData={{
@@ -96,7 +96,7 @@ export default function MortgageOverpayment() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

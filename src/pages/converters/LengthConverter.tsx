@@ -45,7 +45,7 @@ const LengthConverter = () => {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/converters/length`}
+        canonicalUrl={`https://www.thecalculatorapp.org/converters/length`}
       
         structuredData={{
           "@context": "https://schema.org",
@@ -55,7 +55,7 @@ const LengthConverter = () => {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

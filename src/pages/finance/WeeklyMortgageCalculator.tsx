@@ -100,7 +100,7 @@ const WeeklyMortgageCalculator = () => {
         title="Weekly Mortgage Calculator UK"
         description="Calculate how switching to weekly mortgage payments can save you thousands in interest and years off your mortgage."
         keywords="weekly mortgage payments, mortgage calculator UK, pay off mortgage faster, mortgage interest savings"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/weekly-mortgage"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/weekly-mortgage"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -111,7 +111,7 @@ const WeeklyMortgageCalculator = () => {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

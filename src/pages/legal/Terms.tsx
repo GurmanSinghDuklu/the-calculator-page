@@ -42,7 +42,7 @@ const Terms = () => {
         title="Terms of Use - The Calculator App"
         description="Terms and conditions for using The Calculator App. Learn about acceptable use, intellectual property, and service availability."
         keywords="terms of use, terms and conditions, legal, acceptable use"
-        canonicalUrl="https://www.thecalculatorpage.com/terms"
+        canonicalUrl="https://www.thecalculatorapp.org/terms"
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">

@@ -85,7 +85,7 @@ export default function FourOOneKCalculator() {
         title="401(k) Calculator — Retirement Savings Calculator | The Calculator App"
         description="Free 401(k) calculator. See how your retirement savings grow with employer matching, compound interest, and annual raises. Plan your US retirement in 60 seconds."
         keywords="401k calculator, 401(k) calculator, retirement savings calculator, employer match calculator, 401k growth calculator, retirement planning calculator"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/401k-calculator"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/401k-calculator"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -94,7 +94,7 @@ export default function FourOOneKCalculator() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://www.thecalculatorpage.com/finance/401k-calculator"
+          "url": "https://www.thecalculatorapp.org/finance/401k-calculator"
         }}
       />
 

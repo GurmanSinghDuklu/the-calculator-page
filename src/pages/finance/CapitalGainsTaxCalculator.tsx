@@ -104,7 +104,7 @@ const CapitalGainsTaxCalculator = () => {
         title="Capital Gains Tax Calculator UK"
         description="Free UK capital gains tax calculator. Work out CGT on shares, property and other assets. Includes 2024/25 annual exempt amount and tax rates."
         keywords="capital gains tax calculator, CGT calculator UK, capital gains tax, CGT on shares, CGT on property, annual exempt amount"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/capital-gains-tax"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/capital-gains-tax"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -115,7 +115,7 @@ const CapitalGainsTaxCalculator = () => {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

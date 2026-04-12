@@ -113,7 +113,7 @@ export default function UsSalesTaxCalculator() {
         title="US Sales Tax Calculator — All 50 States | The Calculator App"
         description="Free US sales tax calculator for all 50 states. Add or extract sales tax instantly. See state and local tax rates for California, Texas, New York, Florida, and more."
         keywords="sales tax calculator, us sales tax calculator, sales tax by state, california sales tax calculator, texas sales tax calculator, new york sales tax calculator"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/us-sales-tax-calculator"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/us-sales-tax-calculator"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -122,7 +122,7 @@ export default function UsSalesTaxCalculator() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://www.thecalculatorpage.com/finance/us-sales-tax-calculator"
+          "url": "https://www.thecalculatorapp.org/finance/us-sales-tax-calculator"
         }}
       />
 

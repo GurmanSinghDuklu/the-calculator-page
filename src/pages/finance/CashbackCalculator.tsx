@@ -88,7 +88,7 @@ export default function CashbackCalculator() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/cashback`}
+        canonicalUrl={`https://www.thecalculatorapp.org/finance/cashback`}
         faqSchema={faqSchema}
       
         structuredData={{
@@ -99,7 +99,7 @@ export default function CashbackCalculator() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

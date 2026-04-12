@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://www.thecalculatorpage.com</loc>
+    <loc>https://www.thecalculatorapp.org</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,37 +11,37 @@
 
   <!-- App Landing Pages -->
   <url>
-    <loc>https://www.thecalculatorpage.com/app</loc>
+    <loc>https://www.thecalculatorapp.org/app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/app/mortgage-calculator-app</loc>
+    <loc>https://www.thecalculatorapp.org/app/mortgage-calculator-app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/app/compound-interest-app</loc>
+    <loc>https://www.thecalculatorapp.org/app/compound-interest-app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/app/salary-calculator-app</loc>
+    <loc>https://www.thecalculatorapp.org/app/salary-calculator-app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/app/savings-calculator-app</loc>
+    <loc>https://www.thecalculatorapp.org/app/savings-calculator-app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/app/percentage-calculator-app</loc>
+    <loc>https://www.thecalculatorapp.org/app/percentage-calculator-app</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -49,19 +49,19 @@
 
   <!-- Category Pages -->
   <url>
-    <loc>https://www.thecalculatorpage.com/categories/finance</loc>
+    <loc>https://www.thecalculatorapp.org/categories/finance</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/categories/property</loc>
+    <loc>https://www.thecalculatorapp.org/categories/property</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/categories/everyday</loc>
+    <loc>https://www.thecalculatorapp.org/categories/everyday</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -69,151 +69,151 @@
 
   <!-- Finance Calculators -->
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/compound-interest</loc>
+    <loc>https://www.thecalculatorapp.org/finance/compound-interest</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/mortgage</loc>
+    <loc>https://www.thecalculatorapp.org/finance/mortgage</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/salary</loc>
+    <loc>https://www.thecalculatorapp.org/finance/salary</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/retirement</loc>
+    <loc>https://www.thecalculatorapp.org/finance/retirement</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/savings</loc>
+    <loc>https://www.thecalculatorapp.org/finance/savings</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/loan</loc>
+    <loc>https://www.thecalculatorapp.org/finance/loan</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/apy</loc>
+    <loc>https://www.thecalculatorapp.org/finance/apy</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/budget</loc>
+    <loc>https://www.thecalculatorapp.org/finance/budget</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/car-loan</loc>
+    <loc>https://www.thecalculatorapp.org/finance/car-loan</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/simple-interest</loc>
+    <loc>https://www.thecalculatorapp.org/finance/simple-interest</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/stamp-duty</loc>
+    <loc>https://www.thecalculatorapp.org/finance/stamp-duty</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/mortgage-cost-comparison</loc>
+    <loc>https://www.thecalculatorapp.org/finance/mortgage-cost-comparison</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/vat-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/finance/vat-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/isa-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/finance/isa-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/capital-gains-tax</loc>
+    <loc>https://www.thecalculatorapp.org/finance/capital-gains-tax</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/inheritance-tax</loc>
+    <loc>https://www.thecalculatorapp.org/finance/inheritance-tax</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/weekly-mortgage</loc>
+    <loc>https://www.thecalculatorapp.org/finance/weekly-mortgage</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/mortgage-overpayment</loc>
+    <loc>https://www.thecalculatorapp.org/finance/mortgage-overpayment</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/future-house-value</loc>
+    <loc>https://www.thecalculatorapp.org/finance/future-house-value</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/cashback</loc>
+    <loc>https://www.thecalculatorapp.org/finance/cashback</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/credit-card-payoff</loc>
+    <loc>https://www.thecalculatorapp.org/finance/credit-card-payoff</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/how-long-to-save</loc>
+    <loc>https://www.thecalculatorapp.org/finance/how-long-to-save</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/how-much-to-save</loc>
+    <loc>https://www.thecalculatorapp.org/finance/how-much-to-save</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/irr</loc>
+    <loc>https://www.thecalculatorapp.org/finance/irr</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/finance/multi-card-payoff</loc>
+    <loc>https://www.thecalculatorapp.org/finance/multi-card-payoff</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -221,55 +221,55 @@
 
   <!-- Everyday / Misc Calculators -->
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/percentage</loc>
+    <loc>https://www.thecalculatorapp.org/misc/percentage</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/percentage-of</loc>
+    <loc>https://www.thecalculatorapp.org/misc/percentage-of</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/percentage-change</loc>
+    <loc>https://www.thecalculatorapp.org/misc/percentage-change</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/age</loc>
+    <loc>https://www.thecalculatorapp.org/misc/age</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/discount</loc>
+    <loc>https://www.thecalculatorapp.org/misc/discount</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/tip</loc>
+    <loc>https://www.thecalculatorapp.org/misc/tip</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/working-days</loc>
+    <loc>https://www.thecalculatorapp.org/misc/working-days</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/date</loc>
+    <loc>https://www.thecalculatorapp.org/misc/date</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -277,31 +277,31 @@
 
   <!-- Unit Converters -->
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/length</loc>
+    <loc>https://www.thecalculatorapp.org/converters/length</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/weight</loc>
+    <loc>https://www.thecalculatorapp.org/converters/weight</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/temperature</loc>
+    <loc>https://www.thecalculatorapp.org/converters/temperature</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/universal</loc>
+    <loc>https://www.thecalculatorapp.org/converters/universal</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/stone-to-kg</loc>
+    <loc>https://www.thecalculatorapp.org/converters/stone-to-kg</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -309,163 +309,163 @@
 
   <!-- Learn Hub -->
   <url>
-    <loc>https://www.thecalculatorpage.com/learn</loc>
+    <loc>https://www.thecalculatorapp.org/learn</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/financial-journey</loc>
+    <loc>https://www.thecalculatorapp.org/learn/financial-journey</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/50-30-20-budget</loc>
+    <loc>https://www.thecalculatorapp.org/learn/50-30-20-budget</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/emergency-fund</loc>
+    <loc>https://www.thecalculatorapp.org/learn/emergency-fund</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/investing-basics</loc>
+    <loc>https://www.thecalculatorapp.org/learn/investing-basics</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/interest-impact</loc>
+    <loc>https://www.thecalculatorapp.org/learn/interest-impact</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/debt-landscape</loc>
+    <loc>https://www.thecalculatorapp.org/learn/debt-landscape</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/snowball-avalanche</loc>
+    <loc>https://www.thecalculatorapp.org/learn/snowball-avalanche</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/first-1000</loc>
+    <loc>https://www.thecalculatorapp.org/learn/first-1000</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/automate-finances</loc>
+    <loc>https://www.thecalculatorapp.org/learn/automate-finances</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/before-you-invest</loc>
+    <loc>https://www.thecalculatorapp.org/learn/before-you-invest</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/budget-irregular-costs</loc>
+    <loc>https://www.thecalculatorapp.org/learn/budget-irregular-costs</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/build-portfolio</loc>
+    <loc>https://www.thecalculatorapp.org/learn/build-portfolio</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/calculator-formulas-guide</loc>
+    <loc>https://www.thecalculatorapp.org/learn/calculator-formulas-guide</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/choose-savings-account</loc>
+    <loc>https://www.thecalculatorapp.org/learn/choose-savings-account</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/credit-scores</loc>
+    <loc>https://www.thecalculatorapp.org/learn/credit-scores</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/ethical-investing</loc>
+    <loc>https://www.thecalculatorapp.org/learn/ethical-investing</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/financial-freedom</loc>
+    <loc>https://www.thecalculatorapp.org/learn/financial-freedom</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/inflation-guide</loc>
+    <loc>https://www.thecalculatorapp.org/learn/inflation-guide</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/investing-vs-trading</loc>
+    <loc>https://www.thecalculatorapp.org/learn/investing-vs-trading</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/monthly-dashboard</loc>
+    <loc>https://www.thecalculatorapp.org/learn/monthly-dashboard</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/portfolio-rebalancing</loc>
+    <loc>https://www.thecalculatorapp.org/learn/portfolio-rebalancing</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/protect-wealth</loc>
+    <loc>https://www.thecalculatorapp.org/learn/protect-wealth</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/tax-efficient-accounts</loc>
+    <loc>https://www.thecalculatorapp.org/learn/tax-efficient-accounts</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/teach-money-skills</loc>
+    <loc>https://www.thecalculatorapp.org/learn/teach-money-skills</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/where-money-goes</loc>
+    <loc>https://www.thecalculatorapp.org/learn/where-money-goes</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/learn/uk-finance-statistics</loc>
+    <loc>https://www.thecalculatorapp.org/learn/uk-finance-statistics</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>quarterly</changefreq>
     <priority>0.9</priority>
@@ -473,13 +473,13 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://www.thecalculatorpage.com/blog</loc>
+    <loc>https://www.thecalculatorapp.org/blog</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/blog/mortgage-cheat-code</loc>
+    <loc>https://www.thecalculatorapp.org/blog/mortgage-cheat-code</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -487,7 +487,7 @@
 
   <!-- Tools -->
   <url>
-    <loc>https://www.thecalculatorpage.com/formulas</loc>
+    <loc>https://www.thecalculatorapp.org/formulas</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -495,255 +495,255 @@
 
   <!-- Legal / About -->
   <url>
-    <loc>https://www.thecalculatorpage.com/about</loc>
+    <loc>https://www.thecalculatorapp.org/about</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/privacy</loc>
+    <loc>https://www.thecalculatorapp.org/privacy</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/cookies</loc>
+    <loc>https://www.thecalculatorapp.org/cookies</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/terms</loc>
+    <loc>https://www.thecalculatorapp.org/terms</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/disclaimer</loc>
+    <loc>https://www.thecalculatorapp.org/disclaimer</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/bmi-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/bmi-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/calorie-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/calorie-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/cups-to-grams</loc>
+    <loc>https://www.thecalculatorapp.org/converters/cups-to-grams</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/cm-to-inches</loc>
+    <loc>https://www.thecalculatorapp.org/converters/cm-to-inches</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/7</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/7</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/10</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/10</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/14</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/14</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/15</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/15</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/20</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/20</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/21</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/21</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/25</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/25</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/28</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/28</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/30</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/30</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/35</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/35</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/40</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/40</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/45</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/45</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/50</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/50</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/55</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/55</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/60</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/60</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/70</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/70</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/75</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/75</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/80</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/80</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/90</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/90</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/100</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/100</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/120</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/120</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/130</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/130</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/150</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/150</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/160</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/160</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/180</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/180</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/200</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/200</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/210</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/210</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/240</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/240</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/250</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/250</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/270</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/270</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/300</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/300</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/330</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/330</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-from-today/365</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-from-today/365</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -751,25 +751,25 @@
 
   <!-- New Converters — Wave 4 -->
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/km-to-miles</loc>
+    <loc>https://www.thecalculatorapp.org/converters/km-to-miles</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/gallons-to-litres</loc>
+    <loc>https://www.thecalculatorapp.org/converters/gallons-to-litres</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/ml-to-oz</loc>
+    <loc>https://www.thecalculatorapp.org/converters/ml-to-oz</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/grams-to-tablespoons</loc>
+    <loc>https://www.thecalculatorapp.org/converters/grams-to-tablespoons</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -777,13 +777,13 @@
 
   <!-- New Misc Calculators — Wave 4 -->
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/days-between-dates</loc>
+    <loc>https://www.thecalculatorapp.org/misc/days-between-dates</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/hours-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/hours-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -791,37 +791,37 @@
 
   <!-- Wave 5 — Converters -->
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/lbs-to-kg</loc>
+    <loc>https://www.thecalculatorapp.org/converters/lbs-to-kg</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/metres-to-feet</loc>
+    <loc>https://www.thecalculatorapp.org/converters/metres-to-feet</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/inches-to-cm</loc>
+    <loc>https://www.thecalculatorapp.org/converters/inches-to-cm</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/fahrenheit-to-celsius</loc>
+    <loc>https://www.thecalculatorapp.org/converters/fahrenheit-to-celsius</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/ounces-to-grams</loc>
+    <loc>https://www.thecalculatorapp.org/converters/ounces-to-grams</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/converters/teaspoons-to-ml</loc>
+    <loc>https://www.thecalculatorapp.org/converters/teaspoons-to-ml</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -829,37 +829,37 @@
 
   <!-- Wave 5 — Construction & Time -->
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/months-between-dates</loc>
+    <loc>https://www.thecalculatorapp.org/misc/months-between-dates</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/square-footage</loc>
+    <loc>https://www.thecalculatorapp.org/misc/square-footage</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/gravel-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/gravel-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/cubic-yards</loc>
+    <loc>https://www.thecalculatorapp.org/misc/cubic-yards</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/mulch-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/mulch-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thecalculatorpage.com/misc/concrete-calculator</loc>
+    <loc>https://www.thecalculatorapp.org/misc/concrete-calculator</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -37,7 +37,7 @@ export function ArticleLayout({
         headline: title,
         description,
         author: { "@type": "Person", name: "Mandeep Singh", jobTitle: "Financial Coach & Calculator Developer" },
-        publisher: { "@type": "Organization", name: "The Calculator App", url: "https://www.thecalculatorpage.com" },
+        publisher: { "@type": "Organization", name: "The Calculator App", url: "https://www.thecalculatorapp.org" },
         datePublished: publishDate,
         dateModified: "2026-03-06",
       }

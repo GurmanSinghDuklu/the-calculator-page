@@ -42,7 +42,7 @@ const SEO = ({
   howToSchema,
   articleSchema
 }: SEOProps) => {
-  const siteUrl = 'https://www.thecalculatorpage.com';
+  const siteUrl = 'https://www.thecalculatorapp.org';
   const location = useLocation();
 
   // Start with provided values

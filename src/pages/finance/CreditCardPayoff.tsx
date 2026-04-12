@@ -88,7 +88,7 @@ export default function CreditCardPayoff() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/credit-card-payoff`}
+        canonicalUrl={`https://www.thecalculatorapp.org/finance/credit-card-payoff`}
         faqSchema={creditCardStaticContent.faqs}
         howToSchema={{
           name: "How to Calculate Credit Card Payoff Time",
@@ -102,7 +102,7 @@ export default function CreditCardPayoff() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

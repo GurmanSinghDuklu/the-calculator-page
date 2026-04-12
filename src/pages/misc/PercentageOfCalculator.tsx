@@ -66,7 +66,7 @@ const PercentageOfCalculator = () => {
         title="What is X% of Y? Calculator"
         description="Instantly calculate what percentage of any number is. Simple, fast percentage calculator."
         keywords="percentage of calculator, what is percent of, calculate percentage, percentage calculator, math calculator"
-        canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-of"
+        canonicalUrl="https://www.thecalculatorapp.org/misc/percentage-of"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -77,7 +77,7 @@ const PercentageOfCalculator = () => {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

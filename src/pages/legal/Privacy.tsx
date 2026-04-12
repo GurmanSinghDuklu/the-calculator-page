@@ -42,7 +42,7 @@ const Privacy = () => {
         title="Privacy Policy - The Calculator App"
         description="Learn how The Calculator App protects your privacy. We don't collect, store, or sell your personal data."
         keywords="privacy policy, data protection, GDPR, CCPA, privacy"
-        canonicalUrl="https://www.thecalculatorpage.com/privacy"
+        canonicalUrl="https://www.thecalculatorapp.org/privacy"
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">

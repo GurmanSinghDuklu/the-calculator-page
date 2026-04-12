@@ -110,7 +110,7 @@ const InheritanceTaxCalculator = () => {
         title="Inheritance Tax Calculator UK"
         description="Free UK inheritance tax calculator. Work out IHT on your estate including nil rate band, residence nil rate band and spouse exemption."
         keywords="inheritance tax calculator, IHT calculator UK, inheritance tax, nil rate band, estate tax calculator, IHT threshold"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/inheritance-tax"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/inheritance-tax"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -121,7 +121,7 @@ const InheritanceTaxCalculator = () => {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

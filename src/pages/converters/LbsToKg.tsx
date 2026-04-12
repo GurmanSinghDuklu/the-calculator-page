@@ -57,7 +57,7 @@ const LbsToKg = () => {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-emerald-500/30">

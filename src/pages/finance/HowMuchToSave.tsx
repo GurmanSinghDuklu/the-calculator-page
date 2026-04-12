@@ -63,7 +63,7 @@ export default function HowMuchToSave() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/how-much-to-save`}
+        canonicalUrl={`https://www.thecalculatorapp.org/finance/how-much-to-save`}
         faqSchema={faqSchema}
       
         structuredData={{
@@ -74,7 +74,7 @@ export default function HowMuchToSave() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

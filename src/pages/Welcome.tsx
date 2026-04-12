@@ -11,7 +11,7 @@ const Welcome = () => {
         title="Free Financial Calculators UK"
         description="Free professional calculators for finance, budgeting, retirement planning, and unit conversions. Calculate compound interest, mortgages, and more."
         keywords="calculator, financial calculator, compound interest, mortgage calculator, retirement calculator"
-        canonicalUrl="https://www.thecalculatorpage.com/"
+        canonicalUrl="https://www.thecalculatorapp.org/"
       />
 
       {/* Ambient glow blobs */}

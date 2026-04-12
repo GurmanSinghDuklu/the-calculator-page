@@ -134,7 +134,7 @@ const StampDutyCalculator = () => {
         title="UK Stamp Duty Calculator - Calculate SDLT Tax"
         description="Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland."
         keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/stamp-duty"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/stamp-duty"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -145,7 +145,7 @@ const StampDutyCalculator = () => {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

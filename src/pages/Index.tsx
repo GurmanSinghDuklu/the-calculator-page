@@ -83,7 +83,7 @@ const Index = () => {
         title="The Calculator App — 130+ Free UK Calculators Online"
         description="The Calculator App. Free online calculators for finance, mortgage, salary, compound interest, savings, percentage, BMI and more. No download. Works on iPhone and Android."
         keywords="the calculator app, free calculator app, online calculator app, uk calculators, mortgage calculator, compound interest calculator, salary calculator"
-        canonicalUrl="https://www.thecalculatorpage.com"
+        canonicalUrl="https://www.thecalculatorapp.org"
       />
 
       <header className="border-b border-dark-border bg-dark-bg/90 backdrop-blur-sm sticky top-0 z-50">

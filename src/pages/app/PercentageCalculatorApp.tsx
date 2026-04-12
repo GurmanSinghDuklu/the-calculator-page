@@ -26,7 +26,7 @@ export default function PercentageCalculatorApp() {
         title="Percentage Calculator App — Free Online % Calculator | The Calculator App"
         description="Free percentage calculator app. No download needed. Works on iPhone and Android. Calculate percentage of a number, percentage increase, decrease, and difference instantly."
         keywords="percentage calculator app, free percentage calculator app, percent calculator app, percentage app iphone, percentage app android, percentage increase calculator app, discount calculator app"
-        canonicalUrl="https://www.thecalculatorpage.com/app/percentage-calculator-app"
+        canonicalUrl="https://www.thecalculatorapp.org/app/percentage-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -36,7 +36,7 @@ export default function PercentageCalculatorApp() {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

@@ -70,7 +70,7 @@ const PercentageChangeCalculator = () => {
         title="Percentage Change Calculator"
         description="Calculate percentage increase or decrease instantly. What is X% increase or decrease of Y?"
         keywords="percentage increase calculator, percentage decrease calculator, calculate percentage change, percent increase, percent decrease"
-        canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-change"
+        canonicalUrl="https://www.thecalculatorapp.org/misc/percentage-change"
         faqSchema={faqSchema}
       
         structuredData={{
@@ -81,7 +81,7 @@ const PercentageChangeCalculator = () => {
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

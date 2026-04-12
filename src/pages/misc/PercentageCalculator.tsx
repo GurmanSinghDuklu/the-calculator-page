@@ -20,9 +20,9 @@ const breadcrumbStructuredData = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thecalculatorpage.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Everyday Calculators", "item": "https://www.thecalculatorpage.com/#misc" },
-    { "@type": "ListItem", "position": 3, "name": "Percentage Calculator", "item": "https://www.thecalculatorpage.com/misc/percentage" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thecalculatorapp.org/" },
+    { "@type": "ListItem", "position": 2, "name": "Everyday Calculators", "item": "https://www.thecalculatorapp.org/#misc" },
+    { "@type": "ListItem", "position": 3, "name": "Percentage Calculator", "item": "https://www.thecalculatorapp.org/misc/percentage" }
   ]
 };
 

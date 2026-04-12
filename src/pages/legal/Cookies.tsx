@@ -41,7 +41,7 @@ const Cookies = () => {
         title="Cookie Policy - The Calculator App"
         description="Learn about how The Calculator App uses cookies. We use minimal cookies solely for analytics and improving user experience."
         keywords="cookie policy, cookies, tracking, analytics, privacy"
-        canonicalUrl="https://www.thecalculatorpage.com/cookies"
+        canonicalUrl="https://www.thecalculatorapp.org/cookies"
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">

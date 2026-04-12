@@ -26,7 +26,7 @@ export default function SalaryCalculatorApp() {
         title="Salary Calculator App UK — Free Take-Home Pay App | The Calculator App"
         description="Free UK salary calculator app. No download needed. Works on iPhone and Android. Calculate take-home pay after Income Tax, National Insurance, student loan and pension deductions."
         keywords="salary calculator app, uk salary calculator app, take home pay app, salary calculator app uk, free salary calculator app, salary app iphone, salary app android, paye calculator app"
-        canonicalUrl="https://www.thecalculatorpage.com/app/salary-calculator-app"
+        canonicalUrl="https://www.thecalculatorapp.org/app/salary-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -36,7 +36,7 @@ export default function SalaryCalculatorApp() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

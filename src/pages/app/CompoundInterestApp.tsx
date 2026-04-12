@@ -26,7 +26,7 @@ export default function CompoundInterestApp() {
         title="Compound Interest Calculator App — Free | The Calculator App"
         description="Free compound interest calculator app. No download needed. Works on iPhone and Android. Model weekly vs monthly investing, lump sums, and 30-year growth projections."
         keywords="compound interest calculator app, compound interest app, free compound interest app, investment calculator app, compound interest app uk, compound interest app iphone, compound interest app android"
-        canonicalUrl="https://www.thecalculatorpage.com/app/compound-interest-app"
+        canonicalUrl="https://www.thecalculatorapp.org/app/compound-interest-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -36,7 +36,7 @@ export default function CompoundInterestApp() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

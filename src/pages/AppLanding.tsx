@@ -33,7 +33,7 @@ const AppLanding = () => {
         title="The Calculator App — Free Online Calculator App for iPhone & Android"
         description="The best free calculator app — no download needed. 130+ calculators for finance, mortgage, savings, percentage, BMI, and more. Add to homescreen for a full app experience on iOS and Android."
         keywords="calculator app, free calculator app, online calculator app, calculator app no download, best calculator app, calculator app iphone, calculator app android, calculator app uk, the calculator app"
-        canonicalUrl="https://www.thecalculatorpage.com/app"
+        canonicalUrl="https://www.thecalculatorapp.org/app"
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
@@ -119,7 +119,7 @@ const AppLanding = () => {
                 <h3 className="text-white font-display text-xl uppercase">iPhone / Safari</h3>
               </div>
               <ol className="space-y-3 text-sm text-zinc-400">
-                <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">01</span>Open <strong className="text-white">thecalculatorpage.com</strong> in Safari</li>
+                <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">01</span>Open <strong className="text-white">thecalculatorapp.org</strong> in Safari</li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">02</span>Tap the <strong className="text-white">Share button</strong> (box with arrow at bottom of screen)</li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">03</span>Scroll down and tap <strong className="text-white">"Add to Home Screen"</strong></li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">04</span>Tap <strong className="text-white">Add</strong> — the app icon appears on your homescreen</li>
@@ -135,7 +135,7 @@ const AppLanding = () => {
                 <h3 className="text-white font-display text-xl uppercase">Android / Chrome</h3>
               </div>
               <ol className="space-y-3 text-sm text-zinc-400">
-                <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">01</span>Open <strong className="text-white">thecalculatorpage.com</strong> in Chrome</li>
+                <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">01</span>Open <strong className="text-white">thecalculatorapp.org</strong> in Chrome</li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">02</span>Tap the <strong className="text-white">three-dot menu</strong> (top right)</li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">03</span>Tap <strong className="text-white">"Add to Home screen"</strong></li>
                 <li className="flex gap-3"><span className="text-white/30 font-mono text-xs mt-0.5">04</span>Tap <strong className="text-white">Add</strong> — it installs as a PWA app</li>

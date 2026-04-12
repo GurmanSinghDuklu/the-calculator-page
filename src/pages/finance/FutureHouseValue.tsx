@@ -48,7 +48,7 @@ export default function FutureHouseValue() {
         title={seo.title}
         description={seo.description}
         keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/future-house-value`}
+        canonicalUrl={`https://www.thecalculatorapp.org/finance/future-house-value`}
         faqSchema={faqSchema}
       
         structuredData={{
@@ -59,7 +59,7 @@ export default function FutureHouseValue() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
-          "url": "https://www.thecalculatorpage.com"
+          "url": "https://www.thecalculatorapp.org"
         }}
       />
 

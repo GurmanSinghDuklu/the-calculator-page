@@ -86,7 +86,7 @@ export default function UsSalaryCalculator() {
         title="US Salary Calculator — Federal Tax, FICA & State Tax 2025 | The Calculator App"
         description="Free US salary calculator for 2025. Calculate take-home pay after federal income tax, Social Security, Medicare, and state tax. All 50 states supported."
         keywords="us salary calculator, salary calculator usa, take home pay calculator usa, federal tax calculator, paycheck calculator, net pay calculator us, salary after tax us"
-        canonicalUrl="https://www.thecalculatorpage.com/finance/us-salary-calculator"
+        canonicalUrl="https://www.thecalculatorapp.org/finance/us-salary-calculator"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
         structuredData={{
           "@context": "https://schema.org",
@@ -95,7 +95,7 @@ export default function UsSalaryCalculator() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Any",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://www.thecalculatorpage.com/finance/us-salary-calculator"
+          "url": "https://www.thecalculatorapp.org/finance/us-salary-calculator"
         }}
       />
 
