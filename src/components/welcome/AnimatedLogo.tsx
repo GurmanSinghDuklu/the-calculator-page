@@ -57,7 +57,7 @@ const AnimatedLogoIcon = () => {
 const AnimatedLogo = () => {
   const theText = "The";
   const calculatorText = "Calculator";
-  const pageText = "Page";
+  const pageText = "App";
 
   const letterVariants = {
     hidden: { opacity: 0, y: 80, rotateX: -90 },

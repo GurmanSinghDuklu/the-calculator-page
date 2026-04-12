@@ -42,7 +42,7 @@ export default function PercentageCalculatorApp() {
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
         <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center border-b border-white/8">
-          <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
+          <Logo linkTo="/" size="sm" />
           <div className="flex items-center gap-6 text-xs font-heading uppercase tracking-widest text-white/40">
             <Link to="/app" className="hover:text-white transition-colors">App Home</Link>
             <Link to="/misc/percentage" className="hover:text-white transition-colors flex items-center gap-1">Open Calculator <ArrowRight className="h-3 w-3" /></Link>
@@ -125,7 +125,7 @@ export default function PercentageCalculatorApp() {
 
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
+            <Logo linkTo="/" size="sm" />
             <p className="text-xs text-white/20 uppercase tracking-widest">© 2026 The Calculator App.</p>
           </div>
         </footer>

@@ -329,7 +329,7 @@ const Index = () => {
             <div className="flex flex-col gap-1">
               <span className="font-display text-6xl tracking-tighter text-accent-blue">THE</span>
               <span className="font-display text-6xl tracking-tighter text-accent-green">CALC</span>
-              <span className="font-display text-6xl tracking-tighter text-outline">PAGE</span>
+              <span className="font-display text-6xl tracking-tighter text-outline">APP</span>
             </div>
 
             {/* Categories */}

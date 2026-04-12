@@ -453,7 +453,7 @@ const SavingsCalculator = () => {
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</span>
+            <Logo size="sm" />
             <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator App.</p>
           </div>
         </footer>

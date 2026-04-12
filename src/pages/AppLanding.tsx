@@ -40,7 +40,7 @@ const AppLanding = () => {
 
         {/* Nav */}
         <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
+          <Logo linkTo="/" size="sm" />
           <Link to="/" className="text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white transition-colors flex items-center gap-2">
             All Calculators <ArrowRight className="h-3 w-3" />
           </Link>
@@ -210,7 +210,7 @@ const AppLanding = () => {
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
+            <Logo linkTo="/" size="sm" />
             <nav className="flex gap-6 text-xs font-heading uppercase tracking-widest text-white/30">
               <Link to="/" className="hover:text-white transition-colors">Home</Link>
               <Link to="/categories/finance" className="hover:text-white transition-colors">Finance</Link>

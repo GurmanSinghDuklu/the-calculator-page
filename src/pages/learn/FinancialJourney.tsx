@@ -132,9 +132,7 @@ export default function FinancialJourney() {
         {/* ── Sticky header ── */}
         <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/8">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">
-              Calculator App
-            </Link>
+            <Logo linkTo="/" size="sm" />
             <div className="flex items-center gap-4">
               <Link to="/"
                 className="flex items-center gap-2 text-white/25 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
@@ -332,7 +330,7 @@ export default function FinancialJourney() {
         {/* Footer */}
         <footer className="bg-black border-t border-white/8 py-8 px-6">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
-            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</span>
+            <Logo size="sm" />
             <p className="text-[10px] text-zinc-400 font-heading uppercase tracking-widest">© 2026 The Calculator App.</p>
           </div>
         </footer>
