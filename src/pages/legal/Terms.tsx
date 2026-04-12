@@ -40,7 +40,7 @@ const Terms = () => {
     <>
       <SEO
         title="Terms of Use - The Calculator Page"
-        description="Terms and conditions for using The Calculator Page. Learn about acceptable use, intellectual property, and service availability."
+        description="Terms and conditions for using The Calculator App. Learn about acceptable use, intellectual property, and service availability."
         keywords="terms of use, terms and conditions, legal, acceptable use"
         canonicalUrl="https://www.thecalculatorpage.com/terms"
       />

@@ -1,7 +1,7 @@
 {
-  "name": "The Calculator App — Free Online Calculators",
+  "name": "The Calculator App",
   "short_name": "Calculator App",
-  "description": "Free online calculator app for finance, mortgage, savings, percentage, and everyday calculations. No download needed — works on any device.",
+  "description": "The Calculator App — 130+ free calculators for finance, mortgage, salary, savings, percentage, and everyday calculations. No download needed. Works on iPhone and Android.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#1C1A1A",

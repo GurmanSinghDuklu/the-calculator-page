@@ -89,7 +89,7 @@ const NotFound = () => {
 
         {/* Corner branding */}
         <div className="absolute bottom-8 right-8">
-          <p className="text-[9px] font-heading uppercase tracking-[0.3em] text-white/10">Calculator Page</p>
+          <p className="text-[9px] font-heading uppercase tracking-[0.3em] text-white/10">Calculator App</p>
         </div>
       </div>
     </>

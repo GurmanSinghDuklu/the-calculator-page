@@ -18,7 +18,7 @@ export const Logo = ({ size = "md", linkTo = "/", className = "" }: LogoProps) =
       <span className={`${scale.the} text-white tracking-[0.3em] uppercase`}>The</span>
       <span className={`${scale.calc} tracking-tight uppercase`}
         style={{ color: "#22C55E" }}>Calc</span>
-      <span className={`${scale.page} text-white tracking-tight uppercase`}>Page</span>
+      <span className={`${scale.page} text-white tracking-tight uppercase`}>App</span>
     </div>
   );
 

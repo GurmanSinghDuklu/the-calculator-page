@@ -634,7 +634,7 @@ const CalorieCalculator = () => {
               Calculator Page
             </span>
             <p className="text-xs text-gray-500 uppercase tracking-widest">
-              &copy; 2026 The Calculator Page.
+              &copy; 2026 The Calculator App.
             </p>
           </div>
         </footer>

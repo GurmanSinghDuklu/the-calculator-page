@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 import { ArrowRight, Home, Smartphone } from "lucide-react";
 
 const faqs = [
-  { q: "Is there a free mortgage calculator app?", a: "Yes. The Calculator Page is a free mortgage calculator app that works on iPhone and Android with no download required. Open it in Safari or Chrome, add to your homescreen, and it runs like a native app." },
+  { q: "Is there a free mortgage calculator app?", a: "Yes. The Calculator App is a free mortgage calculator app that works on iPhone and Android with no download required. Open it in Safari or Chrome, add to your homescreen, and it runs like a native app." },
   { q: "What is the best mortgage calculator app in the UK?", a: "The best UK mortgage calculator app is one built specifically for UK mortgages — with SDLT (Stamp Duty), overpayment modelling, and weekly vs monthly payment comparison. The Calculator App covers all of these in one free tool." },
   { q: "Does the mortgage calculator app work offline?", a: "Yes. Once loaded, the mortgage calculator works without an internet connection on iOS and Android. It uses PWA caching to store the app locally on your device." },
   { q: "Can I calculate mortgage overpayments in the app?", a: "Yes. The Calculator App includes a dedicated Mortgage Overpayment Calculator that shows how much interest you save and how many years you cut by making extra payments." },
@@ -135,7 +135,7 @@ export default function MortgageCalculatorApp() {
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
-            <p className="text-xs text-white/20 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+            <p className="text-xs text-white/20 uppercase tracking-widest">© 2026 The Calculator App.</p>
           </div>
         </footer>
       </div>

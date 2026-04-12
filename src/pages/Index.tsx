@@ -110,7 +110,7 @@ const Index = () => {
 
             {/* Left: Title block */}
             <div className="flex-1">
-              <p className="text-white/40 text-xs font-sans uppercase tracking-[0.3em] mb-3">Calculator Page</p>
+              <p className="text-white/40 text-xs font-sans uppercase tracking-[0.3em] mb-3">Calculator App</p>
               <h1 className="font-display leading-[0.82] tracking-tighter select-none">
                 <div className="flex gap-[0.3vw]">
                   {["C", "A", "L", "C", "U", "L", "A", "T", "O", "R"].map((letter, i) => (
@@ -395,7 +395,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator App.</p>
             <p className="text-[10px] text-gray-600 max-w-sm text-center md:text-right">*All calculations are for informational purposes only.</p>
           </div>
         </div>

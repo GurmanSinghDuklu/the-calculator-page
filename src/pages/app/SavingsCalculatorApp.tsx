@@ -138,7 +138,7 @@ export default function SavingsCalculatorApp() {
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</Link>
-            <p className="text-xs text-white/20 uppercase tracking-widest">© 2026 The Calculator Page.</p>
+            <p className="text-xs text-white/20 uppercase tracking-widest">© 2026 The Calculator App.</p>
           </div>
         </footer>
       </div>

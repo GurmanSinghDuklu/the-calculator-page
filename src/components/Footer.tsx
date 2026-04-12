@@ -21,7 +21,7 @@ const Footer = () => {
               <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40">How Our Calculators Work</p>
             </div>
             <p className="text-zinc-600 text-sm leading-relaxed mb-8">
-              At <strong className="text-zinc-400">The Calculator Page</strong>, we bridge the gap between complex financial
+              At <strong className="text-zinc-400">The Calculator App</strong>, we bridge the gap between complex financial
               mathematics and everyday usability. Our tools use industry-standard models verified against real-world
               financial benchmarks to ensure precision.
             </p>
@@ -181,7 +181,7 @@ const Footer = () => {
           <div className="flex items-end gap-6">
             <Logo size="sm" />
             <span className="text-zinc-700 text-xs font-sans pb-0.5">
-              © {currentYear} The Calculator Page. All rights reserved.
+              © {currentYear} The Calculator App. All rights reserved.
             </span>
           </div>
           <p className="text-zinc-800 text-[10px] font-sans italic max-w-sm text-left md:text-right leading-relaxed">

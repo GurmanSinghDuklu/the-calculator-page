@@ -267,8 +267,8 @@ const LearnHub = () => {
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 py-8 px-6">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator Page</span>
-            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator Page. All content is free to access.</p>
+            <span className="font-display text-2xl tracking-widest text-white uppercase">Calculator App</span>
+            <p className="text-xs text-gray-500 uppercase tracking-widest">© 2026 The Calculator App. All content is free to access.</p>
           </div>
         </footer>
       </div>
