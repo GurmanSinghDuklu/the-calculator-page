@@ -36,6 +36,9 @@ import VatCalculator from '../pages/finance/VatCalculator';
 import IsaCalculator from '../pages/finance/IsaCalculator';
 import CapitalGainsTaxCalculator from '../pages/finance/CapitalGainsTaxCalculator';
 import InheritanceTaxCalculator from '../pages/finance/InheritanceTaxCalculator';
+import FourOOneKCalculator from '../pages/finance/FourOOneKCalculator';
+import UsSalesTaxCalculator from '../pages/finance/UsSalesTaxCalculator';
+import UsSalaryCalculator from '../pages/finance/UsSalaryCalculator';
 
 // Everyday Calculators & Converters
 import AgeCalculator from '../pages/misc/AgeCalculator';
@@ -162,6 +165,9 @@ export const routes: RouteObject[] = [
       { path: 'finance/isa-calculator', element: <IsaCalculator /> },
       { path: 'finance/capital-gains-tax', element: <CapitalGainsTaxCalculator /> },
       { path: 'finance/inheritance-tax', element: <InheritanceTaxCalculator /> },
+      { path: 'finance/401k-calculator', element: <FourOOneKCalculator /> },
+      { path: 'finance/us-sales-tax-calculator', element: <UsSalesTaxCalculator /> },
+      { path: 'finance/us-salary-calculator', element: <UsSalaryCalculator /> },
 
       // Everyday & Converter Routes
       { path: 'categories/property', element: <CategoryProperty /> },
