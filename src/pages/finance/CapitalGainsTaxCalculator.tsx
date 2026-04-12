@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { TrendingUp, Calculator, ArrowRight, BarChart3, Home, Briefcase } from "lucide-react";

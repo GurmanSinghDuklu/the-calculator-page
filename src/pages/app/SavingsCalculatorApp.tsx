@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, PiggyBank, Smartphone } from "lucide-react";

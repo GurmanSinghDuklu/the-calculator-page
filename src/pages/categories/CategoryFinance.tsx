@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, TrendingUp, Percent, CreditCard, Wallet, PiggyBank, BarChart3, RefreshCw, Calculator } from "lucide-react";

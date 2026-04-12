@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";

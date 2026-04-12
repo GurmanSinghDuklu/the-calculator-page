@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Home, Building, TrendingUp, DollarSign, GitCompare } from "lucide-react";

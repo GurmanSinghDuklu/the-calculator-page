@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, RotateCcw, Printer, Trophy, CheckCircle2 } from "lucide-react";

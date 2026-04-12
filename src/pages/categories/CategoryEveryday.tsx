@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Percent, Calendar, Tag, Coffee, Clock, Activity, Scale, Thermometer, Ruler, FlaskConical, Square, Construction, Shovel } from "lucide-react";
