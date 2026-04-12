@@ -117,7 +117,18 @@ export default function BudgetCalculator() {
         description="Free budget calculator to track your monthly income and expenses. Categorize spending, add custom expenses, and see your remaining balance."
         keywords="budget calculator, monthly budget, income tracker, expense tracker, financial planning"
         faqSchema={budgetStaticContent.faqs}
-        howToSchema={{ name: "How to Create a Monthly Budget", steps: budgetStaticContent.howItWorks.steps?.map(s => ({ name: s.title, text: s.description })) || [] }} />
+        howToSchema={{ name: "How to Create a Monthly Budget", steps: budgetStaticContent.howItWorks.steps?.map(s => ({ name: s.title, text: s.description })) || [] }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Budget Planner",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
+      />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
 

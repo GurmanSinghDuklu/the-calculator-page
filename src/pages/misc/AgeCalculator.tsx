@@ -54,6 +54,17 @@ const AgeCalculator = () => {
         description="Free age calculator to find your exact age in years, months, and days. Calculate age from date of birth."
         keywords="age calculator, calculate age, how old am i, age calculator from date of birth"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

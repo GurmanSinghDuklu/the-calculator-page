@@ -79,6 +79,17 @@ const StoneConverter = () => {
         description="Convert between stone, pounds and kilograms instantly. Includes quick reference table for common UK weights."
         keywords="stone to kg, kg to stone, stone to kilograms, weight converter UK, stone and pounds to kg"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

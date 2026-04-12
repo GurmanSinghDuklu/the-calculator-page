@@ -84,6 +84,17 @@ const MlToOz = () => {
         description="Convert millilitres to fluid ounces and back. Supports UK and US fl oz with a quick reference table for common drink and cooking volumes."
         keywords="ml to oz, millilitres to ounces, oz to ml, fluid ounces to ml, ml to fl oz, uk fluid ounces"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-sky-500/30">

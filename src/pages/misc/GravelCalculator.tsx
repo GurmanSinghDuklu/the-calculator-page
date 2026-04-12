@@ -73,6 +73,17 @@ const GravelCalculator = () => {
         description="Calculate how much gravel you need in tonnes, cubic metres, and bags. Enter area dimensions and depth for paths, driveways, and drainage."
         keywords="gravel calculator, how much gravel, gravel tonnes calculator, driveway gravel calculator, gravel bags"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-amber-900/30">
         <div className="max-w-7xl mx-auto px-6 pt-6">

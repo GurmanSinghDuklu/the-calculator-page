@@ -1,0 +1,2065 @@
+{
+  "date": "2026-04-12",
+  "startTime": "2026-04-12T02:07:29.921Z",
+  "status": "success",
+  "totalPages": 70,
+  "pagesOptimized": 0,
+  "errors": [
+    "Failed to analyze competitor: www.thecalculatorsite.com",
+    "Failed to analyze competitor: omnicalculator.com",
+    "Failed to analyze competitor: calculator.net",
+    "Failed to generate SEO for page home",
+    "Failed to generate SEO for page learn-hub",
+    "Failed to generate SEO for page formulas",
+    "Failed to generate SEO for page finance-category",
+    "Failed to generate SEO for page misc-category",
+    "Failed to generate SEO for page compound-interest",
+    "Failed to generate SEO for page mortgage",
+    "Failed to generate SEO for page loan",
+    "Failed to generate SEO for page savings",
+    "Failed to generate SEO for page roi",
+    "Failed to generate SEO for page retirement",
+    "Failed to generate SEO for page investment",
+    "Failed to generate SEO for page simple-interest",
+    "Failed to generate SEO for page apr-apy",
+    "Failed to generate SEO for page break-even",
+    "Failed to generate SEO for page future-value",
+    "Failed to generate SEO for page present-value",
+    "Failed to generate SEO for page annuity",
+    "Failed to generate SEO for page amortization",
+    "Failed to generate SEO for page debt-payoff",
+    "Failed to generate SEO for page net-worth",
+    "Failed to generate SEO for page tip",
+    "Failed to generate SEO for page gratuity",
+    "Failed to generate SEO for page cagr",
+    "Failed to generate SEO for page lumpsum",
+    "Failed to generate SEO for page percentage",
+    "Failed to generate SEO for page days-between",
+    "Failed to generate SEO for page bmi",
+    "Failed to generate SEO for page age",
+    "Failed to generate SEO for page average",
+    "Failed to generate SEO for page even-odd",
+    "Failed to generate SEO for page length-converter",
+    "Failed to generate SEO for page weight-converter",
+    "Failed to generate SEO for page temperature-converter",
+    "Failed to generate SEO for page volume-converter",
+    "Failed to generate SEO for page learn-50-30-20",
+    "Failed to generate SEO for page learn-compound-interest",
+    "Failed to generate SEO for page learn-simple-interest",
+    "Failed to generate SEO for page learn-mortgage",
+    "Failed to generate SEO for page learn-roi",
+    "Failed to generate SEO for page learn-amortization",
+    "Failed to generate SEO for page learn-savings",
+    "Failed to generate SEO for page learn-retirement",
+    "Failed to generate SEO for page learn-investment",
+    "Failed to generate SEO for page learn-debt",
+    "Failed to generate SEO for page learn-budgeting",
+    "Failed to generate SEO for page learn-credit",
+    "Failed to generate SEO for page learn-insurance",
+    "Failed to generate SEO for page learn-taxes",
+    "Failed to generate SEO for page learn-stocks",
+    "Failed to generate SEO for page learn-bonds",
+    "Failed to generate SEO for page learn-mutual-funds",
+    "Failed to generate SEO for page learn-crypto",
+    "Failed to generate SEO for page learn-real-estate",
+    "Failed to generate SEO for page learn-etf",
+    "Failed to generate SEO for page learn-inflation",
+    "Failed to generate SEO for page learn-forex",
+    "Failed to generate SEO for page learn-options",
+    "Failed to generate SEO for page learn-diversification",
+    "Failed to generate SEO for page learn-financial-freedom",
+    "Failed to generate SEO for page blog-index",
+    "Failed to generate SEO for page blog-mortgage-cheat",
+    "Failed to generate SEO for page blog-early-payoff",
+    "Failed to generate SEO for page blog-compound-growth",
+    "Failed to generate SEO for page blog-financial-tips",
+    "Failed to generate SEO for page about",
+    "Failed to generate SEO for page privacy",
+    "Failed to generate SEO for page cookies",
+    "Failed to generate SEO for page terms",
+    "Failed to generate SEO for page disclaimer"
+  ],
+  "warnings": [
+    "Google ping failed for https://www.thecalculatorpage.com/formulas: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/about: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/cookies: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/terms: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/disclaimer: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/bmi-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/calorie-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/cups-to-grams: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/cm-to-inches: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/7: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/10: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/14: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/15: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/20: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/21: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/25: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/28: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/30: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/35: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/40: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/45: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/50: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/55: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/60: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/70: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/75: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/80: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/90: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/100: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/120: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/130: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/150: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/160: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/180: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/200: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/210: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/240: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/250: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/270: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/300: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/330: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/365: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/km-to-miles: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/gallons-to-litres: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/ml-to-oz: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/grams-to-tablespoons: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/days-between-dates: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/hours-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/lbs-to-kg: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/metres-to-feet: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/inches-to-cm: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/fahrenheit-to-celsius: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/ounces-to-grams: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/converters/teaspoons-to-ml: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/months-between-dates: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/square-footage: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/gravel-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/cubic-yards: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/mulch-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'.",
+    "Google ping failed for https://www.thecalculatorpage.com/misc/concrete-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+  ],
+  "competitorAnalysis": {
+    "fetchedAt": "2026-04-12T05:33:33.512Z",
+    "competitors": [],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": true,
+  "googlePinged": true,
+  "bingPinged": true,
+  "logs": [
+    {
+      "timestamp": "2026-04-12T02:14:06.157Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-04-12T02:14:06.158Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-04-12T02:14:06.158Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-04-12T02:14:06.159Z",
+      "level": "info",
+      "message": "Refreshing competitor analysis (cache expired)"
+    },
+    {
+      "timestamp": "2026-04-12T02:14:06.159Z",
+      "level": "info",
+      "message": "Analyzing competitor: www.thecalculatorsite.com"
+    },
+    {
+      "timestamp": "2026-04-12T02:14:09.663Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: www.thecalculatorsite.com",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZy4yzmJxDWvjgLPaEbC2",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZy4yzmJxDWvjgLPaEbC2"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T02:14:09.664Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-04-12T02:30:06.716Z",
+      "level": "info",
+      "message": "Analyzing competitor: omnicalculator.com"
+    },
+    {
+      "timestamp": "2026-04-12T02:30:06.924Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: omnicalculator.com",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZy6CZta2rzS67zpvESyL",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZy6CZta2rzS67zpvESyL"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T02:30:06.924Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.223Z",
+      "level": "info",
+      "message": "Analyzing competitor: calculator.net"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.504Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: calculator.net",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBuUecrgsG5mvvAC6T",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBuUecrgsG5mvvAC6T"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.511Z",
+      "level": "info",
+      "message": "Competitor analysis cached"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.512Z",
+      "level": "info",
+      "message": "Generated keyword gap analysis",
+      "data": {
+        "totalCompetitorKeywords": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.512Z",
+      "level": "info",
+      "message": "Found 0 keyword opportunities"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.513Z",
+      "level": "info",
+      "message": "✨ Phase 2: SEO Optimization"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.514Z",
+      "level": "info",
+      "message": "Optimizing 70 pages for SEO..."
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.648Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page home",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBvH28qxkkUxD55Syt",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBvH28qxkkUxD55Syt"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.796Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-hub",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBvwDDVq2Rgsi2mTjh",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBvwDDVq2Rgsi2mTjh"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:33.926Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page formulas",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBwUhn1YhnsEBhF42T",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBwUhn1YhnsEBhF42T"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:34.132Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page finance-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBx5fa5xaCKnHZ89tq",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBx5fa5xaCKnHZ89tq"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:34.350Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page misc-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLBxwWQSrjZAPgxgCD9",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLBxwWQSrjZAPgxgCD9"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:35.580Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLC4T9ayXdEnP3zixx6",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLC4T9ayXdEnP3zixx6"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:35.711Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLC575rxB6A78MEvHMu",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLC575rxB6A78MEvHMu"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:35.875Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page loan",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLC5gp1tMdnWu5nwZdQ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLC5gp1tMdnWu5nwZdQ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:36.021Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLC6PyQGUhKYWt1i6jZ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLC6PyQGUhKYWt1i6jZ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:36.149Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLC6zSfmUx7KMvrcQ6c",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLC6zSfmUx7KMvrcQ6c"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:37.287Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCBqtqcThwPJF1eDbm",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCBqtqcThwPJF1eDbm"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:37.662Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCCpw3w6eTDCa225hT",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCCpw3w6eTDCa225hT"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:37.800Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCE27gMaX5p1YPTp9N",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCE27gMaX5p1YPTp9N"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:37.921Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page apr-apy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCEbM7aQJkUs6TfB5J",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCEbM7aQJkUs6TfB5J"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:38.058Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page break-even",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCF7qm4ga3K1eWpKJ1",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCF7qm4ga3K1eWpKJ1"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:39.229Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page future-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCL22N2qSAiCa44bRY",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCL22N2qSAiCa44bRY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:39.351Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page present-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCLhhQ29PQVuHNvgrx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCLhhQ29PQVuHNvgrx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:39.480Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page annuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCMDxJPN66vDZ8mvaK",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCMDxJPN66vDZ8mvaK"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:39.614Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCMnwGmq9vd84wnkrq",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCMnwGmq9vd84wnkrq"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:39.748Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page debt-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCNMfjy8N95tepNyCW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCNMfjy8N95tepNyCW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:40.887Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page net-worth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCTCNUh7TNYAH38TN2",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCTCNUh7TNYAH38TN2"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:41.109Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page tip",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCTsZ2cFJnb4kYXYQ8",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCTsZ2cFJnb4kYXYQ8"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:41.236Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page gratuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCUk9FRwmUhLYhhwUw",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCUk9FRwmUhLYhhwUw"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:41.363Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cagr",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCVHt56MuD9HR5DRbs",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCVHt56MuD9HR5DRbs"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:41.554Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page lumpsum",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCVzJMJ1wZ3QAbvD1c",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCVzJMJ1wZ3QAbvD1c"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:42.696Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page percentage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCaxh9i5W4xyrnfouB",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCaxh9i5W4xyrnfouB"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:42.829Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page days-between",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCbXvjWK4JMdUt47JE",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCbXvjWK4JMdUt47JE"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:42.967Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page bmi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCc7ecU1s3wAYrMKqR",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCc7ecU1s3wAYrMKqR"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:43.102Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page age",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCcgszWvMEbq8sxDTG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCcgszWvMEbq8sxDTG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:43.267Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page average",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCdJLURbRZRhpx8oJs",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCdJLURbRZRhpx8oJs"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:44.416Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page even-odd",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCiHj94hQ5E71SGmMz",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCiHj94hQ5E71SGmMz"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:44.555Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page length-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCitSYXpJwgCxjW9az",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCitSYXpJwgCxjW9az"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:44.743Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page weight-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCje67mQz2wzm22XHZ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCje67mQz2wzm22XHZ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:44.898Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page temperature-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCkJmXNtdyNN4VVe1p",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCkJmXNtdyNN4VVe1p"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:45.087Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page volume-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCm7Pj7nfaasqZYjtG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCm7Pj7nfaasqZYjtG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:46.218Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-50-30-20",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCr3Z8QBotZfjLFEdx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCr3Z8QBotZfjLFEdx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:46.377Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCrdGzYcB1oggFoZHK",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCrdGzYcB1oggFoZHK"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:46.503Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCsFj8QhxcG2Fn57Gd",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCsFj8QhxcG2Fn57Gd"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:46.664Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCsrSmC8UAWrdooM2d",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCsrSmC8UAWrdooM2d"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:46.970Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCtoVjWj4rL6vob2MY",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCtoVjWj4rL6vob2MY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:48.107Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCz6z9yCx7bd2AaXkp",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCz6z9yCx7bd2AaXkp"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:48.269Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLCzkgKKih68NwyuFJT",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLCzkgKKih68NwyuFJT"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:48.444Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD1Qcf2cTAefWhK7P7",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD1Qcf2cTAefWhK7P7"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:48.569Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD273EUYPxJxxhYUMH",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD273EUYPxJxxhYUMH"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:48.700Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-debt",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD2eHHjjdHdfZ6T2Mg",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD2eHHjjdHdfZ6T2Mg"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:49.921Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-budgeting",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD7rZVkkscXBYN1SqM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD7rZVkkscXBYN1SqM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:50.138Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-credit",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD8kdxZLTT8jqvCakN",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD8kdxZLTT8jqvCakN"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:50.311Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-insurance",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLD9PqMibaEe4ENbr4t",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLD9PqMibaEe4ENbr4t"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:50.475Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-taxes",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDA8yh8iwxumfDRkd3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDA8yh8iwxumfDRkd3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:50.652Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-stocks",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDAngBitXgY6ZzqAZW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDAngBitXgY6ZzqAZW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:51.883Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-bonds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDFzTU1NLYatWxuaxi",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDFzTU1NLYatWxuaxi"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:52.052Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mutual-funds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDGp4w2pDhzXuyGFvk",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDGp4w2pDhzXuyGFvk"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:52.231Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-crypto",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDHXjKJtcfpF8Y95vB",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDHXjKJtcfpF8Y95vB"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:52.407Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-real-estate",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDJLbXShQ8FbXUF7zG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDJLbXShQ8FbXUF7zG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:52.582Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-etf",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDK5zk5AhFEWD7sRAW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDK5zk5AhFEWD7sRAW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:53.870Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-inflation",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDQWvCzQ4ChYuDnGEw",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDQWvCzQ4ChYuDnGEw"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:54.226Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-forex",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDRMXEqncHrmgxFMep",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDRMXEqncHrmgxFMep"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:54.405Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-options",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDSpq1a7rKunyFrXqt",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDSpq1a7rKunyFrXqt"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:54.580Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-diversification",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDTcCuzntzTUNMksSN",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDTcCuzntzTUNMksSN"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:54.758Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-financial-freedom",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDUQ5g6JJBfZSNfTsu",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDUQ5g6JJBfZSNfTsu"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:56.059Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-index",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDZeqmEwXErFhx9aYj",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDZeqmEwXErFhx9aYj"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:56.233Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-mortgage-cheat",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDafcScuaBYyKh6pi1",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDafcScuaBYyKh6pi1"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:56.366Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-early-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDbRG3dEy6FxXZRZif",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDbRG3dEy6FxXZRZif"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:56.536Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-compound-growth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDc2DueZJbFcLkYyKU",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDc2DueZJbFcLkYyKU"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:56.687Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-financial-tips",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDcieNMu8FrEJpbezx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDcieNMu8FrEJpbezx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:57.821Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page about",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDheJfibxBe9hc1AEp",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDheJfibxBe9hc1AEp"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:57.965Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page privacy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDiDY4X8cEiZvPyznU",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDiDY4X8cEiZvPyznU"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.095Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cookies",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDipzyAB368XZQXonL",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDipzyAB368XZQXonL"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.226Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page terms",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDjNjpRh5jy8N5KGUM",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDjNjpRh5jy8N5KGUM"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.357Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page disclaimer",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CZyLDjxDbQwshRa53BHRh",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CZyLDjxDbQwshRa53BHRh"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.358Z",
+      "level": "info",
+      "message": "SEO optimization complete",
+      "data": {
+        "optimized": 0
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.361Z",
+      "level": "info",
+      "message": "Optimized 0 pages"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.362Z",
+      "level": "info",
+      "message": "SEO data file updated",
+      "data": {
+        "pages": 71
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.362Z",
+      "level": "info",
+      "message": "🔧 Phase 3: Technical SEO Updates"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.365Z",
+      "level": "info",
+      "message": "Sitemap updated with fresh dates",
+      "data": {
+        "date": "2026-04-12",
+        "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/public/sitemap.xml"
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.365Z",
+      "level": "info",
+      "message": "📡 Phase 4: Notifying Search Engines"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.367Z",
+      "level": "info",
+      "message": "Preparing to ping 139 URLs to search engines"
+    },
+    {
+      "timestamp": "2026-04-12T05:33:58.514Z",
+      "level": "info",
+      "message": "✓ Authenticated with Google Indexing API"
+    },
+    {
+      "timestamp": "2026-04-12T05:35:33.329Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/formulas: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:34.365Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/about: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:36.533Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/cookies: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:37.578Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/terms: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:38.601Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/disclaimer: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:39.634Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/bmi-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:40.668Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/calorie-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:41.709Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/cups-to-grams: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:42.743Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/cm-to-inches: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:43.778Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/7: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:44.812Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/10: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:45.845Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/14: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:46.878Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/15: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:47.911Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/20: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:48.949Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/21: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:49.980Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/25: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:51.010Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/28: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:52.126Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/30: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:53.181Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/35: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:54.229Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/40: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:55.333Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/45: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:56.398Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/50: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:57.466Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/55: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:58.502Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/60: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:35:59.548Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/70: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:00.590Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/75: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:01.618Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/80: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:02.647Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/90: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:03.674Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/100: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:04.715Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/120: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:05.755Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/130: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:06.847Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/150: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:07.877Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/160: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:08.905Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/180: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:09.935Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/200: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:10.976Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/210: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:12.011Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/240: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:13.041Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/250: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:14.070Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/270: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:15.100Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/300: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:16.148Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/330: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:17.176Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-from-today/365: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:18.201Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/km-to-miles: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:19.238Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/gallons-to-litres: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:20.263Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/ml-to-oz: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:21.303Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/grams-to-tablespoons: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:22.373Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/days-between-dates: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:23.430Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/hours-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:24.492Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/lbs-to-kg: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:25.564Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/metres-to-feet: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:26.629Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/inches-to-cm: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:27.698Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/fahrenheit-to-celsius: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:28.730Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/ounces-to-grams: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:29.768Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/converters/teaspoons-to-ml: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:30.817Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/months-between-dates: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:31.854Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/square-footage: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:32.881Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/gravel-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:33.909Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/cubic-yards: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:34.936Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/mulch-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:35.965Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorpage.com/misc/concrete-calculator: Quota exceeded for quota metric 'Publish requests' and limit 'Publish requests per day' of service 'indexing.googleapis.com' for consumer 'project_number:1019871544766'."
+    },
+    {
+      "timestamp": "2026-04-12T05:36:36.967Z",
+      "level": "info",
+      "message": "Google pinging complete",
+      "data": {
+        "successCount": 79,
+        "errorCount": 60,
+        "total": 139
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:36:37.725Z",
+      "level": "info",
+      "message": "✓ Bing batch submitted",
+      "data": {
+        "count": 139
+      }
+    },
+    {
+      "timestamp": "2026-04-12T05:36:37.725Z",
+      "level": "info",
+      "message": "Bing pinging complete",
+      "data": {
+        "successCount": 139,
+        "total": 139
+      }
+    }
+  ],
+  "endTime": "2026-04-12T05:36:37.727Z"
+}

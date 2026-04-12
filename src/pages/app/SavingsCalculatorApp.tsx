@@ -28,6 +28,16 @@ export default function SavingsCalculatorApp() {
         keywords="savings calculator app, free savings calculator app, uk savings app, savings app iphone, savings app android, isa calculator app, savings interest calculator app"
         canonicalUrl="https://www.thecalculatorpage.com/app/savings-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Savings Calculator App",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">

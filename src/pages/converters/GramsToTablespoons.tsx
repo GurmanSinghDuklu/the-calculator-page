@@ -72,6 +72,17 @@ const GramsToTablespoons = () => {
         description="Convert grams to tablespoons for baking ingredients. Flour, sugar, butter, honey and more with accurate UK metric tablespoon measurements."
         keywords="grams to tablespoons, tablespoons to grams, how many grams in a tablespoon, tbsp to grams, tablespoon converter"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

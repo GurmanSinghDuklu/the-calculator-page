@@ -48,6 +48,17 @@ const LbsToKg = () => {
         description="Convert pounds to kilograms and back. Includes stone and pounds breakdown for UK users, with a quick reference table."
         keywords="lbs to kg, pounds to kg, kg to lbs, lbs to kilograms, weight converter"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-emerald-500/30">
         <div className="max-w-7xl mx-auto px-6 pt-6">

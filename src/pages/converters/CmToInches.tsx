@@ -74,6 +74,17 @@ const CmToInches = () => {
         description="Convert centimetres to inches and back. Includes feet and inches breakdown for heights, plus a quick reference table for 150 cm to 200 cm."
         keywords="cm to inches, inches to cm, height converter, centimetres to inches, cm to feet and inches, height in cm"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-violet-500/30">

@@ -112,6 +112,17 @@ const InheritanceTaxCalculator = () => {
         keywords="inheritance tax calculator, IHT calculator UK, inheritance tax, nil rate band, estate tax calculator, IHT threshold"
         canonicalUrl="https://www.thecalculatorpage.com/finance/inheritance-tax"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Inheritance Tax Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-purple-500/30">

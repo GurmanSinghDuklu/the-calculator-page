@@ -102,6 +102,17 @@ const DaysFromTodayCalculator = () => {
         description="Find the exact date that is any number of days from today. Quick buttons for 30, 60, 90 days. Shows day of week and week breakdown."
         keywords="days from today, date calculator, 30 days from today, 90 days from today, days from now, date from today"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

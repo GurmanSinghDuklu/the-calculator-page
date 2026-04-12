@@ -51,6 +51,17 @@ const MonthsBetweenDatesCalculator = () => {
         description="Calculate months between two dates, including years and months breakdown, total weeks, and total days. Useful for contracts and tenancies."
         keywords="months between dates, date difference months, how many months between, months calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-teal-500/30">
         <div className="max-w-7xl mx-auto px-6 pt-6">

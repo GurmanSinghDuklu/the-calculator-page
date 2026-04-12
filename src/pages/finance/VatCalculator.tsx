@@ -73,6 +73,17 @@ const VatCalculator = () => {
         keywords="VAT calculator, VAT calculator UK, add VAT, remove VAT, 20% VAT, value added tax calculator"
         canonicalUrl="https://www.thecalculatorpage.com/finance/vat-calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "VAT Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

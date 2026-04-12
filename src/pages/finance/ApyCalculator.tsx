@@ -47,6 +47,17 @@ export default function ApyCalculator() {
         description="Free APY calculator to find your effective annual percentage yield based on nominal interest rate and compounding frequency."
         keywords="apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "APY Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

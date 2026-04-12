@@ -48,6 +48,17 @@ const MetresToFeet = () => {
         description="Convert metres to feet and inches and back. Includes height reference table from 1.50m to 2.00m with feet and inches equivalents."
         keywords="metres to feet, meters to feet, feet to metres, height converter, m to ft"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-indigo-500/30">
         <div className="max-w-7xl mx-auto px-6 pt-6">

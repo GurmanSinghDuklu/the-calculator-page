@@ -142,6 +142,17 @@ const IsaCalculator = () => {
         description="Free UK ISA calculator. Compare Cash ISA, Stocks & Shares ISA and Lifetime ISA returns. See your tax-free growth and LISA government bonus."
         keywords="ISA calculator, ISA calculator UK, cash ISA, stocks and shares ISA, lifetime ISA calculator, LISA calculator, ISA allowance"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "ISA Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

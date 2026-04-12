@@ -72,6 +72,17 @@ const PercentageChangeCalculator = () => {
         keywords="percentage increase calculator, percentage decrease calculator, calculate percentage change, percent increase, percent decrease"
         canonicalUrl="https://www.thecalculatorpage.com/misc/percentage-change"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

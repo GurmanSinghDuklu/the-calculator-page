@@ -206,7 +206,18 @@ export default function MultiCardPayoff() {
   return (
     <>
       <SEO title={seo.title} description={seo.description} keywords={seo.keywords}
-        canonicalUrl={`https://www.thecalculatorpage.com/finance/multi-card-payoff`} faqSchema={faqSchema} />
+        canonicalUrl={`https://www.thecalculatorpage.com/finance/multi-card-payoff`} faqSchema={faqSchema} 
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Multi-Card Payoff Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
+      />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
 

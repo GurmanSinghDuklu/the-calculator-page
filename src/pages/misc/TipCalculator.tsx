@@ -52,6 +52,17 @@ const TipCalculator = () => {
         description="Free tip calculator to calculate restaurant tips and split bills. Choose from preset tip percentages or customize your own."
         keywords="tip calculator, tip calculator restaurant, calculate tip, split bill calculator, gratuity calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

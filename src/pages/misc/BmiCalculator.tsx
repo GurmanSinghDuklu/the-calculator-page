@@ -92,6 +92,17 @@ const BmiCalculator = () => {
         description="Free BMI calculator using NHS weight categories. Enter height and weight in metric or imperial. Instant body mass index result."
         keywords="BMI calculator, BMI calculator UK, body mass index, NHS BMI, am I overweight, healthy weight calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

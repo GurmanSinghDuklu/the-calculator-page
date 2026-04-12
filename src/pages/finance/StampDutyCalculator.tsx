@@ -136,6 +136,17 @@ const StampDutyCalculator = () => {
         keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
         canonicalUrl="https://www.thecalculatorpage.com/finance/stamp-duty"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Stamp Duty Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

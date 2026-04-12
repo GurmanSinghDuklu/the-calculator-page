@@ -28,6 +28,16 @@ export default function CompoundInterestApp() {
         keywords="compound interest calculator app, compound interest app, free compound interest app, investment calculator app, compound interest app uk, compound interest app iphone, compound interest app android"
         canonicalUrl="https://www.thecalculatorpage.com/app/compound-interest-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Compound Interest Calculator App",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">

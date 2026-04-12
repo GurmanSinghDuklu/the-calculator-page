@@ -28,6 +28,16 @@ export default function MortgageCalculatorApp() {
         keywords="mortgage calculator app, free mortgage calculator app, uk mortgage calculator app, mortgage app iphone, mortgage app android, best mortgage calculator app uk"
         canonicalUrl="https://www.thecalculatorpage.com/app/mortgage-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Mortgage Calculator App",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">

@@ -102,6 +102,17 @@ const WeeklyMortgageCalculator = () => {
         keywords="weekly mortgage payments, mortgage calculator UK, pay off mortgage faster, mortgage interest savings"
         canonicalUrl="https://www.thecalculatorpage.com/finance/weekly-mortgage"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Weekly Mortgage Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

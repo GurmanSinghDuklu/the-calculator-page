@@ -28,6 +28,16 @@ export default function PercentageCalculatorApp() {
         keywords="percentage calculator app, free percentage calculator app, percent calculator app, percentage app iphone, percentage app android, percentage increase calculator app, discount calculator app"
         canonicalUrl="https://www.thecalculatorpage.com/app/percentage-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Percentage Calculator App",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">

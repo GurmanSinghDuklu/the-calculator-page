@@ -130,6 +130,17 @@ const HoursCalculator = () => {
         description="Calculate hours between two times, add or subtract hours, and convert hours to minutes, days and weeks. Handles overnight shifts."
         keywords="hours calculator, hours between times, time duration calculator, how many hours between, add hours to time"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-purple-500/30">

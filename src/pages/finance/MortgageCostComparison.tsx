@@ -361,6 +361,17 @@ export default function MortgageCostComparison() {
         keywords="mortgage cost comparison calculator, compare mortgage deals UK, true cost mortgage calculator, mortgage calculator with fees, mortgage arrangement fee calculator, remortgage comparison calculator, mortgage deal comparison tool, mortgage advisor calculator, mortgage broker tool, total mortgage cost calculator, APRC mortgage calculator, mortgage product fee calculator, remortgage savings calculator, cost effective mortgage UK, mortgage fee to balance calculator"
         canonicalUrl="https://www.thecalculatorpage.com/finance/mortgage-cost-comparison"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Mortgage Cost Comparison Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-orange-500/30">

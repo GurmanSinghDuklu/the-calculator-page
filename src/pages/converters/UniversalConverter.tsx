@@ -236,6 +236,17 @@ function UniversalConverter({ showLayout = true }: { showLayout?: boolean } = {}
         title="Unit Converter - Free"
         description="Free universal unit converter for length, weight, temperature, volume, energy, pressure, time, data storage, and data rate."
         keywords="unit converter, universal converter, length converter, weight converter, temperature converter, volume converter, pressure converter, energy converter"
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

@@ -134,6 +134,17 @@ const CalorieCalculator = () => {
         description="Free calorie calculator. Find your daily calorie needs based on age, height, weight and activity level. Uses the Mifflin-St Jeor equation."
         keywords="calorie calculator, TDEE calculator, daily calorie needs, BMR calculator, how many calories do I need, calorie intake calculator"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-green-500/30">

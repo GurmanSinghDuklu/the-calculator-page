@@ -71,6 +71,17 @@ const GallonsToLitres = () => {
         description="Convert UK imperial gallons and US gallons to litres and back. Quick reference table, fuel economy context, and common volume conversions."
         keywords="gallons to litres, litres to gallons, uk gallons to litres, us gallons to litres"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

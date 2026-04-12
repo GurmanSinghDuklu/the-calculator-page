@@ -64,6 +64,17 @@ const MulchCalculator = () => {
         description="Calculate how many bags of mulch you need for your garden. Enter area and depth to get litres, cubic metres, and bag count for 50L or 100L bags."
         keywords="mulch calculator, how much mulch, garden mulch calculator, bark mulch calculator, mulch bags"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-lime-700/30">
         <div className="max-w-7xl mx-auto px-6 pt-6">

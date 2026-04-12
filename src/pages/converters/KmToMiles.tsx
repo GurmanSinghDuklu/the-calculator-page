@@ -86,6 +86,17 @@ const KmToMiles = () => {
         description="Convert kilometres to miles and back. Includes UK speed limits, marathon and running distances, plus a quick reference table."
         keywords="km to miles, kilometres to miles, miles to km, km to miles converter"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-violet-500/30">

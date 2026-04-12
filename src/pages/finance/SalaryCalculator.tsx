@@ -105,6 +105,17 @@ const SalaryCalculator = () => {
         keywords="salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary, US income tax calculator, FICA calculator, state tax, federal tax, paycheck calculator, net pay"
         canonicalUrl="https://www.thecalculatorpage.com/finance/salary"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "UK Salary Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">

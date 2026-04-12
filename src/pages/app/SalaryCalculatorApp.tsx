@@ -28,6 +28,16 @@ export default function SalaryCalculatorApp() {
         keywords="salary calculator app, uk salary calculator app, take home pay app, salary calculator app uk, free salary calculator app, salary app iphone, salary app android, paye calculator app"
         canonicalUrl="https://www.thecalculatorpage.com/app/salary-calculator-app"
         faqSchema={faqs.map(f => ({ question: f.q, answer: f.a }))}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "UK Salary Calculator App",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">

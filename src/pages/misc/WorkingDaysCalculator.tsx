@@ -134,6 +134,17 @@ const WorkingDaysCalculator = () => {
         description="Free UK working days calculator. Count business days between dates excluding weekends and bank holidays. Add working days to find deadline dates."
         keywords="working days calculator, business days calculator UK, working days between dates, bank holidays UK 2026"
         faqSchema={faqSchema}
+      
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Age Calculator",
+          "alternateName": "The Calculator App",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+          "url": "https://www.thecalculatorpage.com"
+        }}
       />
 
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-blue-500/30">
