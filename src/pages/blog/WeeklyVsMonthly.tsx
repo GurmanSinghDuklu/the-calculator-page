@@ -6,7 +6,7 @@ const WeeklyVsMonthly = () => {
   return (
     <>
       <SEO
-        title="You're Losing $147,000 by Investing Monthly Instead of Weekly | The Calculator Page"
+        title="You're Losing $147,000 by Investing Monthly Instead of Weekly | The Calculator App"
         description="Same investment. Same market. One small change in frequency can cost you $147,000 over 30 years. Here's the math — and how to fix it."
         keywords="weekly investing, monthly investing, compound interest frequency, investment strategy, dollar cost averaging, wealth building"
         canonicalUrl="https://www.thecalculatorpage.com/blog/weekly-vs-monthly-investing"

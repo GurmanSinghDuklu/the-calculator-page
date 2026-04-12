@@ -38,7 +38,7 @@ export const BlogLayout = ({
   heroImage,
   children,
   hasPaidSection = false,
-  author = "Calculator Page",
+  author = "Calculator App",
   relatedArticles = [],
 }: BlogLayoutProps) => {
   return (

@@ -38,8 +38,8 @@ const Cookies = () => {
   return (
     <>
       <SEO
-        title="Cookie Policy - The Calculator Page"
-        description="Learn about how The Calculator Page uses cookies. We use minimal cookies solely for analytics and improving user experience."
+        title="Cookie Policy - The Calculator App"
+        description="Learn about how The Calculator App uses cookies. We use minimal cookies solely for analytics and improving user experience."
         keywords="cookie policy, cookies, tracking, analytics, privacy"
         canonicalUrl="https://www.thecalculatorpage.com/cookies"
       />
@@ -83,7 +83,7 @@ const Cookies = () => {
           {/* Our cookie use */}
           <Section title="Our Cookie Use">
             <Prose>
-              The Calculator Page uses minimal cookies. We believe in privacy-first design, so we limit cookie usage
+              The Calculator App uses minimal cookies. We believe in privacy-first design, so we limit cookie usage
               to only what's necessary for basic analytics and site functionality.
             </Prose>
           </Section>

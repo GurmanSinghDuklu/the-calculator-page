@@ -80,7 +80,7 @@ const LearnHub = () => {
         <header className="sticky top-0 z-50 bg-[#1C1A1A]/90 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">
-              Calculator Page
+              Calculator App
             </Link>
             <div className="flex items-center gap-4">
               <Link to="/" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">

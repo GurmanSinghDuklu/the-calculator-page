@@ -39,7 +39,7 @@ const Terms = () => {
   return (
     <>
       <SEO
-        title="Terms of Use - The Calculator Page"
+        title="Terms of Use - The Calculator App"
         description="Terms and conditions for using The Calculator App. Learn about acceptable use, intellectual property, and service availability."
         keywords="terms of use, terms and conditions, legal, acceptable use"
         canonicalUrl="https://www.thecalculatorpage.com/terms"
@@ -76,7 +76,7 @@ const Terms = () => {
           {/* Sections */}
           <Section title="Agreement to Terms">
             <Prose>
-              By accessing and using The Calculator Page ("the Website"), you agree to be bound by these Terms of Use.
+              By accessing and using The Calculator App ("the Website"), you agree to be bound by these Terms of Use.
               If you do not agree to these terms, please do not use our website.
             </Prose>
           </Section>
@@ -102,7 +102,7 @@ const Terms = () => {
           </Section>
 
           <Section title="Intellectual Property">
-            <Prose>All content on The Calculator Page, including but not limited to:</Prose>
+            <Prose>All content on The Calculator App, including but not limited to:</Prose>
             <List items={[
               "Text, graphics, logos, and images",
               "Calculator designs and user interfaces",
@@ -110,7 +110,7 @@ const Terms = () => {
               "Educational content and guides",
             ]} />
             <p className="text-white/25 text-xs font-sans mt-4 leading-relaxed">
-              …is the property of The Calculator Page or its licensors and is protected by copyright and other
+              …is the property of The Calculator App or its licensors and is protected by copyright and other
               intellectual property laws. You may not reproduce, distribute, modify, or create derivative works
               without our express written permission.
             </p>
@@ -136,7 +136,7 @@ const Terms = () => {
           </Section>
 
           <Section title="Limitation of Liability">
-            <Prose>To the fullest extent permitted by law, The Calculator Page and its operators shall not be liable for:</Prose>
+            <Prose>To the fullest extent permitted by law, The Calculator App and its operators shall not be liable for:</Prose>
             <List items={[
               "Any indirect, incidental, special, consequential, or punitive damages",
               "Any loss of profits, data, use, goodwill, or other intangible losses",
@@ -147,7 +147,7 @@ const Terms = () => {
 
           <Section title="Indemnification">
             <Prose>
-              You agree to indemnify and hold harmless The Calculator Page and its operators from any claims,
+              You agree to indemnify and hold harmless The Calculator App and its operators from any claims,
               damages, losses, liabilities, and expenses (including legal fees) arising from your use of the
               Website or violation of these Terms.
             </Prose>

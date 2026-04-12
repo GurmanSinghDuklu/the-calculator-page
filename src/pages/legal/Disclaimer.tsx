@@ -40,7 +40,7 @@ const Disclaimer = () => {
   return (
     <>
       <SEO
-        title="Disclaimer - The Calculator Page"
+        title="Disclaimer - The Calculator App"
         description="Important disclaimer about the use of calculators on The Calculator App. Results are for informational purposes only."
         keywords="disclaimer, financial disclaimer, calculator accuracy, legal notice"
         canonicalUrl="https://www.thecalculatorpage.com/disclaimer"
@@ -88,7 +88,7 @@ const Disclaimer = () => {
           {/* General information */}
           <Section title="General Information Only">
             <Prose>
-              The information and calculator tools provided on The Calculator Page are intended for general
+              The information and calculator tools provided on The Calculator App are intended for general
               informational and educational purposes only. They are not intended to be, and should not be construed as:
             </Prose>
             <List items={[
@@ -115,7 +115,7 @@ const Disclaimer = () => {
           {/* No professional relationship */}
           <Section title="No Professional Relationship">
             <Prose>
-              Use of The Calculator Page does not create a professional-client relationship of any kind.
+              Use of The Calculator App does not create a professional-client relationship of any kind.
               We do not provide personalised advice, and our tools cannot account for your unique financial
               situation, goals, or circumstances.
             </Prose>
@@ -136,7 +136,7 @@ const Disclaimer = () => {
           {/* No warranty */}
           <Section title="No Warranty">
             <Prose>
-              The Calculator Page provides its tools and content "as is" and "as available" without any
+              The Calculator App provides its tools and content "as is" and "as available" without any
               warranties, express or implied. We do not warrant that:
             </Prose>
             <List items={[
@@ -150,7 +150,7 @@ const Disclaimer = () => {
           {/* Limitation of liability */}
           <Section title="Limitation of Liability">
             <Prose>
-              To the maximum extent permitted by applicable law, The Calculator Page and its operators
+              To the maximum extent permitted by applicable law, The Calculator App and its operators
               shall not be liable for any direct, indirect, incidental, consequential, special, or
               exemplary damages arising from your use of or reliance on any calculator results or
               content on this website. This includes, but is not limited to, damages for loss of

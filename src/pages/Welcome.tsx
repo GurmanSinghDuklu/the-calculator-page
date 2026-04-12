@@ -104,7 +104,7 @@ const Welcome = () => {
         className="absolute bottom-8 right-8 hidden md:block"
       >
         <p className="text-[9px] font-heading uppercase tracking-[0.3em] text-white/15">
-          Calculator Page
+          Calculator App
         </p>
       </motion.div>
 

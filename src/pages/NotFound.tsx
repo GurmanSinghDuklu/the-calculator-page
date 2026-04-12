@@ -16,7 +16,7 @@ const NotFound = () => {
     <>
       <SEO
         title="404 Page Not Found"
-        description="The page you are looking for could not be found. Return to Calculator Page homepage for free online calculators."
+        description="The page you are looking for could not be found. Return to Calculator App homepage for free online calculators."
         keywords="404, page not found"
       />
 

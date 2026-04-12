@@ -10,7 +10,7 @@ const App = () => {
         <ScrollToTop />
 
         <SEO
-          title="The Calculator Page - Professional Financial Tools"
+          title="The Calculator App - Professional Financial Tools"
           description="Expert financial calculators, mortgage advice tools, and unit converters."
         />
 

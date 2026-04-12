@@ -49,8 +49,8 @@ const About = () => {
   return (
     <>
       <SEO
-        title="About Us - The Calculator Page"
-        description="Learn about The Calculator Page - our mission to provide free, accurate, and privacy-focused financial calculators and tools for everyone."
+        title="About Us - The Calculator App"
+        description="Learn about The Calculator App - our mission to provide free, accurate, and privacy-focused financial calculators and tools for everyone."
         keywords="about us, calculator page, financial tools, free calculators, mission"
         canonicalUrl="https://www.thecalculatorpage.com/about"
       />
@@ -83,7 +83,7 @@ const About = () => {
             <div className="mt-8 max-w-xl pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
                 We believe everyone deserves access to powerful financial tools without complexity, cost, or compromise on privacy.
-                The Calculator Page is your trusted companion for making informed financial decisions.
+                The Calculator App is your trusted companion for making informed financial decisions.
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ const About = () => {
           <section className="mb-16">
             <p className="text-[9px] font-heading uppercase tracking-widest mb-4" style={{ color: ACCENT }}>Transparency in Calculation</p>
             <p className="text-white/50 text-base font-sans leading-relaxed mb-8 max-w-2xl">
-              At The Calculator Page, we prioritise mathematical precision and financial transparency. Our tools
+              At The Calculator App, we prioritise mathematical precision and financial transparency. Our tools
               are built using standardised industry formulas — including the <span className="text-white/70">Standard Annuity Formula</span> for
               mortgages and <span className="text-white/70">Compound Interest Algorithms</span> — to ensure accuracy down to the sixth decimal place.
             </p>

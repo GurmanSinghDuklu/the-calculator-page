@@ -133,7 +133,7 @@ export default function FinancialJourney() {
         <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/8">
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <Link to="/" className="font-display text-2xl tracking-widest text-white uppercase">
-              Calculator Page
+              Calculator App
             </Link>
             <div className="flex items-center gap-4">
               <Link to="/"

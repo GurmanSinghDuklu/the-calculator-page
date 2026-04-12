@@ -39,8 +39,8 @@ const Privacy = () => {
   return (
     <>
       <SEO
-        title="Privacy Policy - The Calculator Page"
-        description="Learn how The Calculator Page protects your privacy. We don't collect, store, or sell your personal data."
+        title="Privacy Policy - The Calculator App"
+        description="Learn how The Calculator App protects your privacy. We don't collect, store, or sell your personal data."
         keywords="privacy policy, data protection, GDPR, CCPA, privacy"
         canonicalUrl="https://www.thecalculatorpage.com/privacy"
       />
@@ -77,7 +77,7 @@ const Privacy = () => {
           <div className="mb-12 p-5 rounded-2xl border border-blue-500/20 bg-blue-500/5">
             <p className="text-white/60 text-sm font-sans leading-relaxed">
               <span className="text-white/80 font-heading text-xs uppercase tracking-widest">Our commitment: </span>
-              The Calculator Page does not store, collect, or sell any personal data entered into our calculators.
+              The Calculator App does not store, collect, or sell any personal data entered into our calculators.
               All calculations are performed entirely within your browser — your financial information never leaves your device.
             </p>
           </div>
