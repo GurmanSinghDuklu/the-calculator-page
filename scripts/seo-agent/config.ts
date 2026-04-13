@@ -21,7 +21,7 @@ export const COMPETITORS = [
   }
 ];
 
-export const SITE_URL = 'https://www.thecalculatorpage.com';
+export const SITE_URL = 'https://www.thecalculatorapp.org';
 
 /**
  * All 70 pages organized by category

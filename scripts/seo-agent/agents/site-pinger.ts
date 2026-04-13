@@ -87,7 +87,7 @@ async function pingGoogle(urls: string[]): Promise<boolean> {
  */
 async function pingBing(urls: string[]): Promise<boolean> {
   const bingApiKey = process.env.BING_WEBMASTER_API_KEY;
-  const siteUrl = process.env.SITE_URL ?? 'https://www.thecalculatorpage.com';
+  const siteUrl = process.env.SITE_URL ?? 'https://www.thecalculatorapp.org';
 
   if (!bingApiKey) {
     logger.warn('BING_WEBMASTER_API_KEY not set — Bing pinging skipped');

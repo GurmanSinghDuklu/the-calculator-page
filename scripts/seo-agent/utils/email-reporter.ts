@@ -3,7 +3,7 @@ import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 
 const REPORTS_DIR = join(import.meta.dirname, '../reports');
-const SITE_URL = 'https://www.thecalculatorpage.com';
+const SITE_URL = 'https://www.thecalculatorapp.org';
 
 interface WeeklyActivity {
   reportsRan: string[];
@@ -215,7 +215,7 @@ export function buildWeeklyEmailHTML(extraActivities: string[] = []): string {
         <!-- Footer -->
         <tr>
           <td style="padding:20px 32px;text-align:center;">
-            <p style="font-size:11px;color:#333;margin:0;">The Calculator Page · Automated Weekly SEO Report · thecalculatorpage.com</p>
+            <p style="font-size:11px;color:#333;margin:0;">The Calculator Page · Automated Weekly SEO Report · thecalculatorapp.org</p>
             <p style="font-size:10px;color:#222;margin:6px 0 0;">Sent every Sunday at 8:00 AM</p>
           </td>
         </tr>

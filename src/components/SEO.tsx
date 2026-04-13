@@ -87,14 +87,25 @@ const SEO = ({
   const isHomepage = location.pathname === '/';
   const fullTitle = isHomepage
     ? finalTitle
-    : `${finalTitle} | CalcPage`;
+    : `${finalTitle} | The Calculator App`;
 
   // Author schema for E-E-A-T (YMYL financial content)
   const authorSchema = {
     "@type": "Person",
     "name": "Mandeep Singh",
     "jobTitle": "Financial Coach & Calculator Developer",
-    "description": "Financial coach and calculator developer with 25+ years in UK financial services."
+    "description": "Financial coach and calculator developer with 25+ years in UK financial services. Specialist in mortgage planning, salary optimisation, and investment strategy.",
+    "url": `${siteUrl}/about`,
+    "worksFor": {
+      "@type": "Organization",
+      "name": "The Calculator App",
+      "url": siteUrl
+    },
+    "knowsAbout": [
+      "Mortgage Calculators", "UK Tax", "PAYE", "National Insurance", "ISA",
+      "Compound Interest", "Retirement Planning", "401k", "US Federal Tax",
+      "Stamp Duty Land Tax", "Capital Gains Tax", "Inheritance Tax"
+    ]
   };
 
   // Base Schema
@@ -135,6 +146,41 @@ const SEO = ({
     });
   }
 
+  if (howToSchema) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": howToSchema.name,
+      "description": finalDescription,
+      "totalTime": howToSchema.estimatedTime || "PT1M",
+      "tool": [{ "@type": "HowToTool", "name": "The Calculator App" }],
+      "step": howToSchema.steps.map((step, i) => ({
+        "@type": "HowToStep",
+        "position": i + 1,
+        "name": step.name,
+        "text": step.text,
+        "url": `${cleanCanonical}#step-${i + 1}`
+      }))
+    });
+  }
+
+  if (articleSchema) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": articleSchema.headline,
+      "author": { "@type": "Person", "name": articleSchema.author },
+      "datePublished": articleSchema.datePublished,
+      "dateModified": articleSchema.dateModified || articleSchema.datePublished,
+      "image": articleSchema.image || `${siteUrl}/og-image.png`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Calculator App",
+        "logo": { "@type": "ImageObject", "url": `${siteUrl}/logo.svg` }
+      }
+    });
+  }
+
   return (
     <Head>
       {/* Standard Meta Tags */}
@@ -152,13 +198,18 @@ const SEO = ({
       <link rel="apple-touch-icon" href="/favicon.png" />
 
       {/* Social Meta Tags */}
+      <meta property="og:site_name" content="The Calculator App" />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={cleanCanonical} />
       <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content="en_GB" />
 
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@thecalculatorapp" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />

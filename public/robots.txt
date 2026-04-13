@@ -48,6 +48,6 @@ Disallow: /src/
 Disallow: /node_modules/
 
 # The Calculator Page - AI-readable summary
-# See: https://www.thecalculatorpage.com/llms.txt
+# See: https://www.thecalculatorapp.org/llms.txt
 
-Sitemap: https://www.thecalculatorpage.com/sitemap.xml
+Sitemap: https://www.thecalculatorapp.org/sitemap.xml
