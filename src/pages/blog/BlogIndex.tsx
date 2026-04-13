@@ -40,6 +40,116 @@ const BlogIndex = () => {
       featured: false,
       hasPremium: false,
     },
+    {
+      title: "How Much Can I Borrow? UK Mortgage Affordability Explained",
+      description: "Lenders use income multiples, stress tests, and affordability checks. Here's exactly how they calculate your maximum mortgage — and how to improve it.",
+      path: "/blog/how-much-can-i-borrow-mortgage-uk",
+      category: "Mortgage",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "Fixed vs Tracker Mortgage — Which Is Right for You?",
+      description: "Fixed gives certainty. Tracker gives flexibility. The right choice depends on your situation, your risk tolerance, and what rates are doing.",
+      path: "/blog/fixed-vs-tracker-mortgage",
+      category: "Mortgage",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "What Is LTV and Why Does It Determine Your Mortgage Rate?",
+      description: "Loan-to-value ratio is the single most important number in your mortgage application. Here's what it is, how it's calculated, and how to improve it.",
+      path: "/blog/what-is-ltv-mortgage",
+      category: "Mortgage",
+      readTime: "3 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "How to Pay Off Your Mortgage Early — The Numbers That Actually Work",
+      description: "You don't need to overpay by thousands to cut years off your mortgage. Small, consistent overpayments compound dramatically.",
+      path: "/blog/pay-off-mortgage-early",
+      category: "Mortgage",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "Stamp Duty UK 2025 — What You Actually Pay and When",
+      description: "Stamp duty rates changed in April 2025. First-time buyer thresholds dropped. Here's exactly what you owe, how it's calculated, and what changed.",
+      path: "/blog/stamp-duty-uk-2025",
+      category: "Mortgage",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "First-Time Buyer UK 2025 — The Numbers You Need Before You Apply",
+      description: "Deposit, affordability, stamp duty relief, LISAs, schemes. Everything a first-time buyer needs to know in 2025 — with the actual numbers.",
+      path: "/blog/first-time-buyer-uk-2025",
+      category: "Mortgage",
+      readTime: "5 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "What Happens to Your Mortgage When Interest Rates Rise?",
+      description: "Rising rates hit tracker and variable mortgages immediately. Fixed rates protect you — until the fix ends. Here's what rate rises mean for your payment.",
+      path: "/blog/mortgage-interest-rates",
+      category: "Mortgage",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "UK Income Tax Brackets 2025/26 — Exactly How Much You Keep",
+      description: "Frozen thresholds mean more people are paying 40% tax. Here's how the bands work — and how to see your real take-home.",
+      path: "/blog/uk-tax-brackets-2025",
+      category: "Salary & Tax",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "What Is the Personal Allowance and Who Loses It?",
+      description: "The UK personal allowance is £12,570 in 2025/26. But earn over £100,000 and it starts disappearing — creating an effective 60% tax rate.",
+      path: "/blog/personal-allowance-uk",
+      category: "Salary & Tax",
+      readTime: "3 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
+    {
+      title: "National Insurance 2025/26 — Rates, Thresholds and What You Actually Pay",
+      description: "NI rates for 2025/26: 8% up to £50,270, 2% above. Here's how NI is calculated, what it means for your take-home, and what it pays for.",
+      path: "/blog/national-insurance-2025",
+      category: "Salary & Tax",
+      readTime: "4 min",
+      publishDate: "April 2026",
+      image: heroImage,
+      featured: false,
+      hasPremium: false,
+    },
   ];
 
   return (
@@ -128,16 +238,6 @@ const BlogIndex = () => {
             ))}
           </div>
 
-          {/* Coming Soon */}
-          <div className="mt-16 text-center">
-            <div className="max-w-xl mx-auto border border-dashed border-white/10 bg-white/[0.015] p-6">
-              <h3 className="font-display text-xl font-normal text-white mb-2">More Articles Coming Soon</h3>
-              <p className="text-sm text-zinc-400">
-                We're working on more in-depth guides covering advanced investing strategies,
-                tax optimization, and building passive income streams.
-              </p>
-            </div>
-          </div>
         </section>
       </div>
     </>

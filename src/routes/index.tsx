@@ -117,6 +117,16 @@ import Terms from '../pages/legal/Terms';
 
 // Blog & Cheat Codes
 import BlogIndex from '../pages/blog/BlogIndex';
+import HowMuchCanIBorrow from '../pages/blog/HowMuchCanIBorrow';
+import FixedVsTracker from '../pages/blog/FixedVsTracker';
+import WhatIsLTV from '../pages/blog/WhatIsLTV';
+import PayOffMortgageEarly from '../pages/blog/PayOffMortgageEarly';
+import StampDuty2025 from '../pages/blog/StampDuty2025';
+import FirstTimeBuyerGuide from '../pages/blog/FirstTimeBuyerGuide';
+import UkTaxBrackets2025 from '../pages/blog/UkTaxBrackets2025';
+import PersonalAllowanceUK from '../pages/blog/PersonalAllowanceUK';
+import NationalInsurance2025 from '../pages/blog/NationalInsurance2025';
+import MortgageAndInterestRates from '../pages/blog/MortgageAndInterestRates';
 import MortgageCheatCode from '../pages/blog/MortgageCheatCode';
 import CheatCode01 from '../pages/blog/CheatCode01';
 import CheatCode01Payment from '../pages/blog/CheatCode01Payment';
@@ -257,6 +267,16 @@ export const routes: RouteObject[] = [
       { path: 'blog/cheat-code-01-payment', element: <CheatCode01Payment /> },
       { path: 'blog/cheat-code-01-unlocked', element: <CheatCode01Unlocked /> },
       { path: 'blog/weekly-vs-monthly-investing', element: <WeeklyVsMonthly /> },
+      { path: 'blog/how-much-can-i-borrow-mortgage-uk', element: <HowMuchCanIBorrow /> },
+      { path: 'blog/fixed-vs-tracker-mortgage', element: <FixedVsTracker /> },
+      { path: 'blog/what-is-ltv-mortgage', element: <WhatIsLTV /> },
+      { path: 'blog/pay-off-mortgage-early', element: <PayOffMortgageEarly /> },
+      { path: 'blog/stamp-duty-uk-2025', element: <StampDuty2025 /> },
+      { path: 'blog/first-time-buyer-uk-2025', element: <FirstTimeBuyerGuide /> },
+      { path: 'blog/uk-tax-brackets-2025', element: <UkTaxBrackets2025 /> },
+      { path: 'blog/personal-allowance-uk', element: <PersonalAllowanceUK /> },
+      { path: 'blog/national-insurance-2025', element: <NationalInsurance2025 /> },
+      { path: 'blog/mortgage-interest-rates', element: <MortgageAndInterestRates /> },
       { path: 'app', element: <AppLanding /> },
       { path: 'app/mortgage-calculator-app', element: <MortgageCalculatorApp /> },
       { path: 'app/compound-interest-app', element: <CompoundInterestApp /> },
