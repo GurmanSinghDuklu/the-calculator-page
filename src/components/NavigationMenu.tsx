@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
-  Home, TrendingUp, DollarSign, PiggyBank, Percent, Calendar,
-  Ruler, Thermometer, Weight, GraduationCap, BookOpen, Building2,
-  Landmark, Calculator, Heart, ArrowRight, X, ChevronDown
+  Home, TrendingUp, DollarSign,
+  Ruler, GraduationCap, BookOpen,
+  Calculator, ArrowRight, X
 } from "lucide-react";
 
 // ─── All calculator data ──────────────────────────────────────────────────────
@@ -218,12 +218,6 @@ const SECTIONS = [
   }
 ];
 
-const BADGE_STYLES: Record<string, string> = {
-  Popular: "bg-white/10 text-white/60",
-  New: "bg-green-400/20 text-green-400",
-  UK: "bg-blue-400/15 text-blue-400",
-  US: "bg-purple-400/15 text-purple-400",
-};
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
@@ -240,7 +234,7 @@ export const NavigationMenu = () => {
           aria-label="Open navigation menu"
           className="flex items-center gap-3 group"
         >
-          <span className="hidden sm:inline font-heading text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 group-hover:text-white transition-colors">
+          <span className="hidden sm:inline font-heading text-[10px] font-bold uppercase tracking-[0.2em] text-white/55 group-hover:text-white transition-colors">
             All Tools
           </span>
           <div className="w-9 h-9 border border-white/15 flex flex-col items-center justify-center gap-[5px] group-hover:border-white/40 transition-all">
@@ -258,12 +252,12 @@ export const NavigationMenu = () => {
         {/* ── Header ── */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-white/8 shrink-0">
           <div>
-            <p className="font-heading text-[9px] uppercase tracking-[0.35em] text-white/30 mb-1">The Calculator App</p>
+            <p className="font-heading text-[9px] uppercase tracking-[0.35em] text-white/55 mb-1">The Calculator App</p>
             <h2 className="font-display text-3xl uppercase text-white tracking-tight leading-none">All Calculators</h2>
           </div>
           <button
             onClick={() => setOpen(false)}
-            className="w-8 h-8 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-all"
+            className="w-8 h-8 border border-white/10 flex items-center justify-center text-white/65 hover:text-white hover:border-white/30 transition-all"
           >
             <X className="h-3.5 w-3.5" />
           </button>
@@ -318,8 +312,8 @@ export const NavigationMenu = () => {
                   onClick={() => setOpen(false)}
                   className="w-full text-left px-4 py-3 flex items-center gap-3 hover:bg-white/[0.03] border-r-2 border-transparent transition-all group"
                 >
-                  <Icon className="h-3.5 w-3.5 shrink-0 text-white/25 group-hover:text-white/60 transition-colors" />
-                  <span className="font-heading text-[9px] uppercase tracking-[0.15em] text-white/30 group-hover:text-white/70 transition-colors">
+                  <Icon className="h-3.5 w-3.5 shrink-0 text-white/50 group-hover:text-white/60 transition-colors" />
+                  <span className="font-heading text-[9px] uppercase tracking-[0.15em] text-white/55 group-hover:text-white/70 transition-colors">
                     {item.label}
                   </span>
                 </Link>
@@ -335,7 +329,7 @@ export const NavigationMenu = () => {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-px h-8" style={{ backgroundColor: current.color }} />
                 <div>
-                  <p className="font-heading text-[9px] uppercase tracking-[0.3em] text-white/30">Category</p>
+                  <p className="font-heading text-[9px] uppercase tracking-[0.3em] text-white/55">Category</p>
                   <h3 className="font-display text-2xl uppercase text-white leading-none tracking-tight">{current.label}</h3>
                 </div>
               </div>
@@ -358,17 +352,10 @@ export const NavigationMenu = () => {
                           onClick={() => setOpen(false)}
                           className="flex items-center justify-between px-3 py-2.5 hover:bg-white/[0.04] group transition-all rounded-sm"
                         >
-                          <span className="text-xs text-white/50 group-hover:text-white transition-colors font-sans">
+                          <span className="text-xs text-white/80 group-hover:text-white transition-colors font-sans">
                             {item.title}
                           </span>
-                          <div className="flex items-center gap-2">
-                            {item.badge && (
-                              <span className={`text-[8px] font-heading uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${BADGE_STYLES[item.badge] || ""}`}>
-                                {item.badge}
-                              </span>
-                            )}
-                            <ArrowRight className="h-2.5 w-2.5 text-white/0 group-hover:text-white/40 transition-all -translate-x-1 group-hover:translate-x-0" />
-                          </div>
+                          <ArrowRight className="h-2.5 w-2.5 text-white/0 group-hover:text-white/65 transition-all -translate-x-1 group-hover:translate-x-0" />
                         </Link>
                       ))}
                     </div>
@@ -378,13 +365,13 @@ export const NavigationMenu = () => {
 
               {/* Count */}
               <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
-                <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20">
+                <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/45">
                   {current.groups.reduce((acc, g) => acc + g.items.length, 0)} calculators in this category
                 </p>
                 <Link
                   to="/"
                   onClick={() => setOpen(false)}
-                  className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/30 hover:text-white transition-colors flex items-center gap-1.5"
+                  className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/55 hover:text-white transition-colors flex items-center gap-1.5"
                 >
                   View all <ArrowRight className="h-2.5 w-2.5" />
                 </Link>
@@ -396,7 +383,7 @@ export const NavigationMenu = () => {
 
         {/* ── Footer ── */}
         <div className="shrink-0 border-t border-white/8 px-6 py-4 flex items-center justify-between bg-black/40">
-          <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/20">130+ free calculators</p>
+          <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/45">130+ free calculators</p>
           <div className="flex items-center gap-4">
             {[
               { label: "About", path: "/about" },
@@ -406,7 +393,7 @@ export const NavigationMenu = () => {
                 key={l.path}
                 to={l.path}
                 onClick={() => setOpen(false)}
-                className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/20 hover:text-white/50 transition-colors"
+                className="text-[9px] font-heading uppercase tracking-[0.2em] text-white/45 hover:text-white/50 transition-colors"
               >
                 {l.label}
               </Link>
