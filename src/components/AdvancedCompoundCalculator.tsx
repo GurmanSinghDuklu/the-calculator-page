@@ -53,13 +53,17 @@ const lcm = (...nums: number[]) => nums.reduce((acc, n) => lcm2(acc, n));
 function compoundFlexible(params: {
   initial: number; years: number; annualRate: number; compounding: FrequencyType;
   dcaAmount: number; dcaEvery: FrequencyType; annualLumpSum: number; annualLumpMonth: number;
-  monthlyLumpSums: MonthlyLumpSum[]; contributionTiming: "start" | "end";
+  annualLumpFromYear: number; annualLumpToYear: number;
+  monthlyLumpSums: MonthlyLumpSum[]; monthlyLumpFromYear: number; monthlyLumpToYear: number;
+  contributionTiming: "start" | "end";
 }): CalculationResult {
   const {
     initial, years, annualRate, compounding,
     dcaAmount = 0, dcaEvery = "monthly",
     annualLumpSum = 0, annualLumpMonth = 1,
-    monthlyLumpSums = [], contributionTiming = "end",
+    annualLumpFromYear = 1, annualLumpToYear,
+    monthlyLumpSums = [], monthlyLumpFromYear = 1, monthlyLumpToYear,
+    contributionTiming = "end",
   } = params;
 
   const compPerYear   = FREQ[compounding];
@@ -69,6 +73,8 @@ function compoundFlexible(params: {
   const stepRate      = annualRate / stepsPerYear;
   const dcaEverySteps = Math.round(stepsPerYear / dcaPerYear);
   const stepsPerMonth = Math.round(stepsPerYear / 12);
+  const annualToYear  = annualLumpToYear  ?? years;
+  const monthlyToYear = monthlyLumpToYear ?? years;
 
   let balance     = Number(initial) || 0;
   let totalContrib  = Number(initial) || 0;
@@ -76,13 +82,16 @@ function compoundFlexible(params: {
   const schedule: CalculationResult["schedule"] = [];
 
   for (let s = 1; s <= totalSteps; s++) {
+    const currentYear        = Math.ceil(s / stepsPerYear);
     const isDcaStep          = dcaAmount > 0 && s % dcaEverySteps === 0;
     const currentMonth       = Math.ceil((s % stepsPerYear || stepsPerYear) / stepsPerMonth);
     const isFirstStepOfMonth = s % stepsPerMonth === 1 || stepsPerMonth === 1;
-    const isAnnualLumpStep   = annualLumpSum > 0 && currentMonth === annualLumpMonth && isFirstStepOfMonth && s > stepsPerMonth;
+    const inAnnualRange      = currentYear >= annualLumpFromYear && currentYear <= annualToYear;
+    const isAnnualLumpStep   = annualLumpSum > 0 && currentMonth === annualLumpMonth && isFirstStepOfMonth && s > stepsPerMonth && inAnnualRange;
+    const inMonthlyRange     = currentYear >= monthlyLumpFromYear && currentYear <= monthlyToYear;
 
     let monthlyLumpAmount = 0;
-    if (isFirstStepOfMonth) {
+    if (isFirstStepOfMonth && inMonthlyRange) {
       const monthLump = monthlyLumpSums.find(m => m.month === currentMonth && m.enabled);
       if (monthLump) monthlyLumpAmount = monthLump.amount;
     }
@@ -167,11 +176,15 @@ export const AdvancedCompoundCalculator = () => {
   const [selectedMarket,   setSelectedMarket]   = useState<keyof typeof MARKET_RETURNS>("sp500");
   const [dcaAmount,        setDcaAmount]        = useState("500");
   const [dcaEvery,         setDcaEvery]         = useState<FrequencyType>("monthly");
-  const [annualLumpSum,    setAnnualLumpSum]    = useState("0");
-  const [annualLumpMonth,  setAnnualLumpMonth]  = useState(1);
-  const [monthlyLumpSums,  setMonthlyLumpSums]  = useState<MonthlyLumpSum[]>(
+  const [annualLumpSum,       setAnnualLumpSum]       = useState("0");
+  const [annualLumpMonth,     setAnnualLumpMonth]     = useState(1);
+  const [annualLumpFromYear,  setAnnualLumpFromYear]  = useState(1);
+  const [annualLumpToYear,    setAnnualLumpToYear]    = useState<number | null>(null);
+  const [monthlyLumpSums,     setMonthlyLumpSums]     = useState<MonthlyLumpSum[]>(
     MONTH_NAMES.map((_, i) => ({ month: i + 1, amount: 0, enabled: false }))
   );
+  const [monthlyLumpFromYear, setMonthlyLumpFromYear] = useState(1);
+  const [monthlyLumpToYear,   setMonthlyLumpToYear]   = useState<number | null>(null);
   const [showMonthlyLumps,    setShowMonthlyLumps]    = useState(false);
   const [platformFee,         setPlatformFee]         = useState("");
   const [fundFee,             setFundFee]             = useState("");
@@ -186,16 +199,21 @@ export const AdvancedCompoundCalculator = () => {
   const calculate = () => {
     const effectiveRate = useMarketReturns ? MARKET_RETURNS[selectedMarket].rate : parseFloat(rate) || 0;
     const netRate = effectiveRate - (parseFloat(platformFee) || 0) - (parseFloat(fundFee) || 0);
+    const totalYears = parseFloat(years) || 0;
     const res = compoundFlexible({
       initial: parseFloat(initial) || 0,
-      years: parseFloat(years) || 0,
+      years: totalYears,
       annualRate: netRate / 100,
       compounding,
       dcaAmount: parseFloat(dcaAmount) || 0,
       dcaEvery,
       annualLumpSum: parseFloat(annualLumpSum) || 0,
       annualLumpMonth,
+      annualLumpFromYear,
+      annualLumpToYear: annualLumpToYear ?? totalYears,
       monthlyLumpSums,
+      monthlyLumpFromYear,
+      monthlyLumpToYear: monthlyLumpToYear ?? totalYears,
       contributionTiming: timing,
     });
     setResult(res);
@@ -209,6 +227,8 @@ export const AdvancedCompoundCalculator = () => {
     setInitial("10000"); setYears("20"); setRate("8"); setCompounding("weekly");
     setTiming("end"); setDcaAmount("500"); setDcaEvery("monthly");
     setAnnualLumpSum("2000"); setAnnualLumpMonth(12);
+    setAnnualLumpFromYear(1); setAnnualLumpToYear(null);
+    setMonthlyLumpFromYear(1); setMonthlyLumpToYear(null);
     setPlatformFee("0.25"); setFundFee("0.15"); setUseMarketReturns(false);
     setMonthlyLumpSums(MONTH_NAMES.map((_, i) => ({ month: i + 1, amount: 0, enabled: false })));
     setTimeout(calculate, 100);
@@ -403,8 +423,8 @@ export const AdvancedCompoundCalculator = () => {
 
         {/* Annual Lump Sum */}
         <SectionDivider title="Annual Lump Sum" />
-        <p className="text-white/20 text-xs font-sans -mt-2 mb-4">Bonus, tax refund, or yearly extra investment</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <p className="text-white/20 text-xs font-sans -mt-2 mb-4">Bonus, tax refund, or yearly extra investment — set which years it applies</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
           <DarkInput label={`Annual Lump Sum (${sym})`} type="number" min="0" step="100" value={annualLumpSum} onChange={e => setAnnualLumpSum(e.target.value)} placeholder="0" />
           <div>
             <label className={labelClass}>Month to Add</label>
@@ -419,18 +439,48 @@ export const AdvancedCompoundCalculator = () => {
           </div>
           <div className="flex items-end">
             <button
-              onClick={() => setAnnualLumpSum("0")}
+              onClick={() => { setAnnualLumpSum("0"); setAnnualLumpFromYear(1); setAnnualLumpToYear(null); }}
               className="w-full py-3 border border-white/10 font-heading text-xs uppercase tracking-widest text-white/40 hover:text-white hover:border-white/30 transition-colors rounded-lg"
             >
               Clear
             </button>
           </div>
         </div>
+        {/* Year range for annual lump sum */}
+        {(() => {
+          const totalYrs = parseInt(years) || 20;
+          const yearOptions = Array.from({ length: totalYrs }, (_, i) => i + 1);
+          return (
+            <div className="grid grid-cols-2 gap-3 p-4 bg-black/20 border border-white/5 rounded-lg">
+              <div>
+                <label className={labelClass}>From Year</label>
+                <Select value={annualLumpFromYear.toString()} onValueChange={v => { const y = parseInt(v); setAnnualLumpFromYear(y); if (annualLumpToYear !== null && annualLumpToYear < y) setAnnualLumpToYear(y); }}>
+                  <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                  <SelectContent className={selectContentClass}>
+                    {yearOptions.map(y => <SelectItem key={y} value={y.toString()}>Year {y}</SelectItem>)}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <label className={labelClass}>To Year</label>
+                <Select value={(annualLumpToYear ?? totalYrs).toString()} onValueChange={v => setAnnualLumpToYear(parseInt(v))}>
+                  <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                  <SelectContent className={selectContentClass}>
+                    {yearOptions.filter(y => y >= annualLumpFromYear).map(y => <SelectItem key={y} value={y.toString()}>Year {y}</SelectItem>)}
+                  </SelectContent>
+                </Select>
+              </div>
+              <p className="col-span-2 text-white/20 text-xs font-sans">
+                Lump sum added every {MONTH_NAMES[annualLumpMonth - 1]} from Year {annualLumpFromYear} to Year {annualLumpToYear ?? totalYrs} of your {totalYrs}-year investment period
+              </p>
+            </div>
+          );
+        })()}
 
         {/* Monthly Lump Sums */}
         <SectionDivider title="Specific Monthly Lump Sums" />
         <div className="flex items-center justify-between mb-4">
-          <p className="text-white/20 text-xs font-sans">Add extra investments for specific months each year</p>
+          <p className="text-white/20 text-xs font-sans">Add extra investments for specific months — set which years they apply</p>
           <button
             onClick={() => setShowMonthlyLumps(!showMonthlyLumps)}
             className="flex items-center gap-1 font-heading text-xs uppercase tracking-widest transition-colors"
@@ -442,32 +492,64 @@ export const AdvancedCompoundCalculator = () => {
         </div>
 
         {showMonthlyLumps && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 p-4 bg-black/30 border border-white/10 rounded-lg mb-4">
-            {MONTH_NAMES.map((name, i) => (
-              <div key={i} className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Checkbox
-                    id={`month-${i}`}
-                    checked={monthlyLumpSums[i]?.enabled || false}
-                    onCheckedChange={checked => updateMonthlyLump(i + 1, "enabled", !!checked)}
-                    className="border-white/20"
-                  />
-                  <label htmlFor={`month-${i}`} className="text-xs font-heading uppercase tracking-wide text-white/50">{name}</label>
+          <>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 p-4 bg-black/30 border border-white/10 rounded-lg mb-3">
+              {MONTH_NAMES.map((name, i) => (
+                <div key={i} className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <Checkbox
+                      id={`month-${i}`}
+                      checked={monthlyLumpSums[i]?.enabled || false}
+                      onCheckedChange={checked => updateMonthlyLump(i + 1, "enabled", !!checked)}
+                      className="border-white/20"
+                    />
+                    <label htmlFor={`month-${i}`} className="text-xs font-heading uppercase tracking-wide text-white/50">{name}</label>
+                  </div>
+                  {monthlyLumpSums[i]?.enabled && (
+                    <input
+                      type="number" min="0" step="100"
+                      value={monthlyLumpSums[i]?.amount || ""}
+                      onChange={e => updateMonthlyLump(i + 1, "amount", parseFloat(e.target.value) || 0)}
+                      placeholder="Amount"
+                      className="w-full bg-black/40 border border-white/10 rounded px-3 py-2 text-white text-sm focus:outline-none"
+                      onFocus={e => (e.target.style.borderColor = ACCENT)}
+                      onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
+                    />
+                  )}
                 </div>
-                {monthlyLumpSums[i]?.enabled && (
-                  <input
-                    type="number" min="0" step="100"
-                    value={monthlyLumpSums[i]?.amount || ""}
-                    onChange={e => updateMonthlyLump(i + 1, "amount", parseFloat(e.target.value) || 0)}
-                    placeholder="Amount"
-                    className="w-full bg-black/40 border border-white/10 rounded px-3 py-2 text-white text-sm focus:outline-none"
-                    onFocus={e => (e.target.style.borderColor = ACCENT)}
-                    onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
-                  />
-                )}
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+            {/* Year range for monthly lump sums */}
+            {(() => {
+              const totalYrs = parseInt(years) || 20;
+              const yearOptions = Array.from({ length: totalYrs }, (_, i) => i + 1);
+              return (
+                <div className="grid grid-cols-2 gap-3 p-4 bg-black/20 border border-white/5 rounded-lg mb-4">
+                  <div>
+                    <label className={labelClass}>Apply From Year</label>
+                    <Select value={monthlyLumpFromYear.toString()} onValueChange={v => { const y = parseInt(v); setMonthlyLumpFromYear(y); if (monthlyLumpToYear !== null && monthlyLumpToYear < y) setMonthlyLumpToYear(y); }}>
+                      <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                      <SelectContent className={selectContentClass}>
+                        {yearOptions.map(y => <SelectItem key={y} value={y.toString()}>Year {y}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div>
+                    <label className={labelClass}>Apply To Year</label>
+                    <Select value={(monthlyLumpToYear ?? totalYrs).toString()} onValueChange={v => setMonthlyLumpToYear(parseInt(v))}>
+                      <SelectTrigger className={selectClass}><SelectValue /></SelectTrigger>
+                      <SelectContent className={selectContentClass}>
+                        {yearOptions.filter(y => y >= monthlyLumpFromYear).map(y => <SelectItem key={y} value={y.toString()}>Year {y}</SelectItem>)}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <p className="col-span-2 text-white/20 text-xs font-sans">
+                    Selected monthly lump sums apply from Year {monthlyLumpFromYear} to Year {monthlyLumpToYear ?? totalYrs} of your {totalYrs}-year investment period
+                  </p>
+                </div>
+              );
+            })()}
+          </>
         )}
 
         {/* Action buttons */}
