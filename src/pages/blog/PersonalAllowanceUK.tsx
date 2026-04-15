@@ -26,6 +26,7 @@ export default function PersonalAllowanceUK() {
         publishDate="April 2026"
         readTime="3 min"
         heroImage="/og-image.png"
+        directAnswer="The UK personal allowance is £12,570 for 2025/26 — the amount you can earn before paying any income tax. If your income exceeds £100,000, you lose £1 of personal allowance for every £2 earned above that threshold. The allowance disappears entirely at £125,140, creating an effective marginal tax rate of 60% on income in that range."
         hasPaidSection={false}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See exactly how the personal allowance affects your take-home pay.", url: "/finance/salary" },

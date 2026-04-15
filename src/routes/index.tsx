@@ -127,6 +127,11 @@ import UkTaxBrackets2025 from '../pages/blog/UkTaxBrackets2025';
 import PersonalAllowanceUK from '../pages/blog/PersonalAllowanceUK';
 import NationalInsurance2025 from '../pages/blog/NationalInsurance2025';
 import MortgageAndInterestRates from '../pages/blog/MortgageAndInterestRates';
+import HowLongToPayOffMortgage from '../pages/blog/HowLongToPayOffMortgage';
+import WhatIsAGoodSalaryUK from '../pages/blog/WhatIsAGoodSalaryUK';
+import HowMuchShouldISavePerMonth from '../pages/blog/HowMuchShouldISavePerMonth';
+import WhatIsAnISA from '../pages/blog/WhatIsAnISA';
+import HowMuchDoINeedToRetire from '../pages/blog/HowMuchDoINeedToRetire';
 import MortgageCheatCode from '../pages/blog/MortgageCheatCode';
 import CheatCode01 from '../pages/blog/CheatCode01';
 import CheatCode01Payment from '../pages/blog/CheatCode01Payment';
@@ -277,6 +282,11 @@ export const routes: RouteObject[] = [
       { path: 'blog/personal-allowance-uk', element: <PersonalAllowanceUK /> },
       { path: 'blog/national-insurance-2025', element: <NationalInsurance2025 /> },
       { path: 'blog/mortgage-interest-rates', element: <MortgageAndInterestRates /> },
+      { path: 'blog/how-long-to-pay-off-mortgage', element: <HowLongToPayOffMortgage /> },
+      { path: 'blog/what-is-a-good-salary-uk', element: <WhatIsAGoodSalaryUK /> },
+      { path: 'blog/how-much-should-i-save-per-month', element: <HowMuchShouldISavePerMonth /> },
+      { path: 'blog/what-is-an-isa', element: <WhatIsAnISA /> },
+      { path: 'blog/how-much-do-i-need-to-retire', element: <HowMuchDoINeedToRetire /> },
       { path: 'app', element: <AppLanding /> },
       { path: 'app/mortgage-calculator-app', element: <MortgageCalculatorApp /> },
       { path: 'app/compound-interest-app', element: <CompoundInterestApp /> },

@@ -27,6 +27,8 @@ interface BlogLayoutProps {
   hasPaidSection?: boolean;
   author?: string;
   relatedArticles?: RelatedArticle[];
+  /** 1–2 sentence direct answer to the post's primary question — AI Mode lifts this verbatim */
+  directAnswer?: string;
 }
 
 export const BlogLayout = ({
@@ -40,6 +42,7 @@ export const BlogLayout = ({
   hasPaidSection = false,
   author = "Calculator App",
   relatedArticles = [],
+  directAnswer,
 }: BlogLayoutProps) => {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -54,6 +57,7 @@ export const BlogLayout = ({
           dateModified: publishDate,
           image: heroImage,
         }}
+        speakableSelectors={[".speakable-answer", "h1", ".article-summary"]}
       />
 
       <ScrollToTop />
@@ -109,6 +113,13 @@ export const BlogLayout = ({
 
       {/* ── Article body ── */}
       <div className="max-w-3xl mx-auto px-6 py-16">
+        {/* Direct answer block — AI Mode lifts this passage verbatim */}
+        {directAnswer && (
+          <div className="speakable-answer mb-10 p-5 border-l-2 border-white/30 bg-white/[0.03]">
+            <p className="text-[10px] font-heading uppercase tracking-widest text-white/30 mb-2">Quick Answer</p>
+            <p className="text-white text-base leading-relaxed font-sans">{directAnswer}</p>
+          </div>
+        )}
         <article
           className="
             mb-12

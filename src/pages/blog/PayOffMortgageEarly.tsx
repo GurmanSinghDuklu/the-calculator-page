@@ -26,6 +26,7 @@ export default function PayOffMortgageEarly() {
         publishDate="April 2026"
         readTime="4 min"
         heroImage="/og-image.png"
+        directAnswer="Yes, overpaying your mortgage saves significant money by reducing the outstanding balance earlier, which means less interest is charged on every future payment. On a £200,000 mortgage at 4.5%, overpaying £200 per month saves roughly £26,000 in interest and cuts 5 years from a 25-year term."
         hasPaidSection={false}
         relatedArticles={[
           { title: "Mortgage Overpayment Calculator", description: "See exactly how much interest you save and how many years you cut.", url: "/finance/mortgage-overpayment" },

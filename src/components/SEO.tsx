@@ -27,6 +27,8 @@ interface SEOProps {
     dateModified?: string;
     image?: string;
   };
+  /** CSS selectors or xPath for speakable passages — signals AI/voice assistants which text to surface */
+  speakableSelectors?: string[];
 }
 
 const SEO = ({
@@ -40,7 +42,8 @@ const SEO = ({
   calculatorSchema,
   faqSchema,
   howToSchema,
-  articleSchema
+  articleSchema,
+  speakableSelectors
 }: SEOProps) => {
   const siteUrl = 'https://www.thecalculatorapp.org';
   const location = useLocation();
@@ -161,6 +164,18 @@ const SEO = ({
         "text": step.text,
         "url": `${cleanCanonical}#step-${i + 1}`
       }))
+    });
+  }
+
+  if (speakableSelectors && speakableSelectors.length > 0) {
+    allSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": speakableSelectors
+      },
+      "url": cleanCanonical
     });
   }
 

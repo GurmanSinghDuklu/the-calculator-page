@@ -26,6 +26,7 @@ export default function UkTaxBrackets2025() {
         publishDate="April 2026"
         readTime="4 min"
         heroImage="/og-image.png"
+        directAnswer="The UK income tax bands for 2025/26 are: 0% on the first £12,570 (personal allowance), 20% from £12,571 to £50,270, 40% from £50,271 to £125,140, and 45% above £125,140. These thresholds have been frozen since 2021, meaning wage rises push more people into the 40% bracket each year — a process called fiscal drag."
         hasPaidSection={false}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "Your exact take-home after income tax, NI, student loan and pension.", url: "/finance/salary" },
