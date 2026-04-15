@@ -52,10 +52,10 @@ export const BlogLayout = ({
         type="article"
         articleSchema={{
           headline: title,
-          author,
-          datePublished: publishDate,
-          dateModified: publishDate,
-          image: heroImage,
+          author: "Mandeep Singh",
+          datePublished: "2026-04-13",
+          dateModified: "2026-04-15",
+          image: "https://www.thecalculatorapp.org/og-image.png",
         }}
         speakableSelectors={[".speakable-answer", "h1", ".article-summary"]}
       />

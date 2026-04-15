@@ -1,59 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Calculator Page Blog</title>
+    <title>The Calculator App Blog</title>
     <link>https://www.thecalculatorapp.org/blog</link>
-    <description>Financial literacy articles, calculator guides, and money management tips</description>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Jan 2025 00:00:00 GMT</lastBuildDate>
+    <description>Financial guides, mortgage help, tax explained and savings strategy for UK and US readers.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 15 Apr 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://www.thecalculatorapp.org/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>The Millionaire's Cheat Code: Why Timing the Market Is a Losing Game</title>
-      <link>https://www.thecalculatorapp.org/blog/cheat-code-01</link>
-      <description>Discover the investment strategy that wealthy investors use to build wealth consistently, regardless of market conditions.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/blog/cheat-code-01</guid>
+      <title>How Much Do I Need to Retire in the UK?</title>
+      <link>https://www.thecalculatorapp.org/blog/how-much-do-i-need-to-retire</link>
+      <description>A moderate retirement costs £31,300/year. With the State Pension offset, you need around £495,000. Here is how to calculate your exact target.</description>
+      <pubDate>Tue, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/how-much-do-i-need-to-retire</guid>
     </item>
-    
     <item>
-      <title>Your Complete Financial Journey: From Budgeting to Building Wealth</title>
-      <link>https://www.thecalculatorapp.org/learn/financial-journey</link>
-      <description>A comprehensive guide to achieving financial independence through five key stages.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/learn/financial-journey</guid>
+      <title>What Is an ISA? Types, Allowances and Which One to Use</title>
+      <link>https://www.thecalculatorapp.org/blog/what-is-an-isa</link>
+      <description>20,000 per year sheltered from tax. Cash ISA, Stocks and Shares ISA, and Lifetime ISA explained with exactly which is right for your goal.</description>
+      <pubDate>Tue, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/what-is-an-isa</guid>
     </item>
-    
     <item>
-      <title>The 50/30/20 Budget Rule: A Simple Framework for Financial Success</title>
-      <link>https://www.thecalculatorapp.org/learn/fifty-thirty-twenty-budget</link>
-      <description>Learn how to allocate your income effectively using the popular 50/30/20 budgeting method.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/learn/fifty-thirty-twenty-budget</guid>
+      <title>How Much Should I Save Each Month in the UK?</title>
+      <link>https://www.thecalculatorapp.org/blog/how-much-should-i-save-per-month</link>
+      <description>The benchmark is 20% of take-home pay. Here is the priority order, the numbers for UK salaries, and why starting now beats starting bigger later.</description>
+      <pubDate>Tue, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/how-much-should-i-save-per-month</guid>
     </item>
-    
     <item>
-      <title>Building Your Emergency Fund: A Complete Guide</title>
-      <link>https://www.thecalculatorapp.org/learn/emergency-fund</link>
-      <description>Step-by-step guide to building an emergency fund that protects your financial future.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/learn/emergency-fund</guid>
+      <title>What Is a Good Salary in the UK in 2025?</title>
+      <link>https://www.thecalculatorapp.org/blog/what-is-a-good-salary-uk</link>
+      <description>The UK median salary is 37,000. Above 50,270 you are in the top 25% of earners. Here is what different salaries actually give you after tax.</description>
+      <pubDate>Tue, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/what-is-a-good-salary-uk</guid>
     </item>
-    
     <item>
-      <title>Automate Your Finances: Set It and Forget It</title>
-      <link>https://www.thecalculatorapp.org/learn/automate-finances</link>
-      <description>Discover how to automate your finances to save time and build wealth effortlessly.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/learn/automate-finances</guid>
+      <title>How Long Does It Take to Pay Off a Mortgage?</title>
+      <link>https://www.thecalculatorapp.org/blog/how-long-to-pay-off-mortgage</link>
+      <description>The standard UK mortgage term is 25 years. Overpaying 200 per month cuts 5 years and saves 26,000. Here is the full breakdown.</description>
+      <pubDate>Tue, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/how-long-to-pay-off-mortgage</guid>
     </item>
-    
     <item>
-      <title>Where Does Your Money Actually Go?</title>
-      <link>https://www.thecalculatorapp.org/learn/where-money-goes</link>
-      <description>Track and understand your spending patterns to take control of your finances.</description>
-      <pubDate>Thu, 01 Jan 2025 00:00:00 GMT</pubDate>
-      <guid>https://www.thecalculatorapp.org/learn/where-money-goes</guid>
+      <title>National Insurance 2025/26 - Rates, Thresholds and What You Actually Pay</title>
+      <link>https://www.thecalculatorapp.org/blog/national-insurance-2025</link>
+      <description>NI rates for 2025/26: 8% up to 50,270, 2% above. How NI is calculated, what it means for your take-home, and what it pays for.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/national-insurance-2025</guid>
+    </item>
+    <item>
+      <title>What Is the Personal Allowance and Who Loses It?</title>
+      <link>https://www.thecalculatorapp.org/blog/personal-allowance-uk</link>
+      <description>The UK personal allowance is 12,570 in 2025/26. Earn over 100,000 and it starts disappearing, creating an effective 60% tax rate.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/personal-allowance-uk</guid>
+    </item>
+    <item>
+      <title>UK Income Tax Brackets 2025/26 - Exactly How Much You Keep</title>
+      <link>https://www.thecalculatorapp.org/blog/uk-tax-brackets-2025</link>
+      <description>Frozen thresholds mean more people are paying 40% tax. Here is how the bands work and how to see your real take-home.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/uk-tax-brackets-2025</guid>
+    </item>
+    <item>
+      <title>First-Time Buyer UK 2025 - The Numbers You Need Before You Apply</title>
+      <link>https://www.thecalculatorapp.org/blog/first-time-buyer-uk-2025</link>
+      <description>Deposit, affordability, stamp duty relief, LISAs and schemes. Everything a first-time buyer needs in 2025 with the actual numbers.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/first-time-buyer-uk-2025</guid>
+    </item>
+    <item>
+      <title>Stamp Duty UK 2025 - What You Actually Pay and When</title>
+      <link>https://www.thecalculatorapp.org/blog/stamp-duty-uk-2025</link>
+      <description>Stamp duty rates changed in April 2025. First-time buyer thresholds dropped. Here is exactly what you owe and how it is calculated.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/stamp-duty-uk-2025</guid>
+    </item>
+    <item>
+      <title>What Happens to Your Mortgage When Interest Rates Rise?</title>
+      <link>https://www.thecalculatorapp.org/blog/mortgage-interest-rates</link>
+      <description>Rising rates hit tracker and variable mortgages immediately. Fixed rates protect you until the fix ends. Here is what rate rises mean for your payment.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/mortgage-interest-rates</guid>
+    </item>
+    <item>
+      <title>How to Pay Off Your Mortgage Early - The Numbers That Actually Work</title>
+      <link>https://www.thecalculatorapp.org/blog/pay-off-mortgage-early</link>
+      <description>You do not need to overpay by thousands to cut years off your mortgage. Small consistent overpayments compound dramatically.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/pay-off-mortgage-early</guid>
+    </item>
+    <item>
+      <title>What Is LTV and Why Does It Determine Your Mortgage Rate?</title>
+      <link>https://www.thecalculatorapp.org/blog/what-is-ltv-mortgage</link>
+      <description>Loan-to-value ratio is the single most important number in your mortgage application. Here is what it is, how it is calculated, and how to improve it.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/what-is-ltv-mortgage</guid>
+    </item>
+    <item>
+      <title>Fixed vs Tracker Mortgage - Which Is Right for You?</title>
+      <link>https://www.thecalculatorapp.org/blog/fixed-vs-tracker-mortgage</link>
+      <description>Fixed gives certainty. Tracker gives flexibility. The right choice depends on your situation, risk tolerance, and what rates are doing.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/fixed-vs-tracker-mortgage</guid>
+    </item>
+    <item>
+      <title>How Much Can I Borrow for a Mortgage in the UK?</title>
+      <link>https://www.thecalculatorapp.org/blog/how-much-can-i-borrow-mortgage-uk</link>
+      <description>Lenders use income multiples, stress tests, and affordability checks. Here is exactly how they calculate your maximum mortgage.</description>
+      <pubDate>Mon, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/how-much-can-i-borrow-mortgage-uk</guid>
+    </item>
+    <item>
+      <title>You are Losing $147,000 by Investing Monthly Instead of Weekly</title>
+      <link>https://www.thecalculatorapp.org/blog/weekly-vs-monthly-investing</link>
+      <description>Same investment. Same market. One small change in frequency can cost you $147,000 over 30 years. Here is the math and how to fix it.</description>
+      <pubDate>Sun, 13 Apr 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/weekly-vs-monthly-investing</guid>
+    </item>
+    <item>
+      <title>The Mortgage Cheat Code: How Weekly Payments Can Save You Years</title>
+      <link>https://www.thecalculatorapp.org/blog/mortgage-cheat-code</link>
+      <description>Discover how switching to weekly mortgage payments can shave years off your mortgage and save thousands in interest.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.thecalculatorapp.org/blog/mortgage-cheat-code</guid>
     </item>
   </channel>
 </rss>
