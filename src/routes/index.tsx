@@ -132,6 +132,15 @@ import WhatIsAGoodSalaryUK from '../pages/blog/WhatIsAGoodSalaryUK';
 import HowMuchShouldISavePerMonth from '../pages/blog/HowMuchShouldISavePerMonth';
 import WhatIsAnISA from '../pages/blog/WhatIsAnISA';
 import HowMuchDoINeedToRetire from '../pages/blog/HowMuchDoINeedToRetire';
+import WhatIsCompoundInterest from '../pages/blog/WhatIsCompoundInterest';
+import WhatIsCapitalGainsTax from '../pages/blog/WhatIsCapitalGainsTax';
+import WhatIsInheritanceTax from '../pages/blog/WhatIsInheritanceTax';
+import HowToCalculatePercentage from '../pages/blog/HowToCalculatePercentage';
+import WhatIsBMI from '../pages/blog/WhatIsBMI';
+import HowDoISaveForAHouse from '../pages/blog/HowDoISaveForAHouse';
+import WhatIsVAT from '../pages/blog/WhatIsVAT';
+import HowMuchIsStampDuty from '../pages/blog/HowMuchIsStampDuty';
+import WhatIsAStocksAndSharesISA from '../pages/blog/WhatIsAStocksAndSharesISA';
 import MortgageCheatCode from '../pages/blog/MortgageCheatCode';
 import CheatCode01 from '../pages/blog/CheatCode01';
 import CheatCode01Payment from '../pages/blog/CheatCode01Payment';
@@ -287,6 +296,15 @@ export const routes: RouteObject[] = [
       { path: 'blog/how-much-should-i-save-per-month', element: <HowMuchShouldISavePerMonth /> },
       { path: 'blog/what-is-an-isa', element: <WhatIsAnISA /> },
       { path: 'blog/how-much-do-i-need-to-retire', element: <HowMuchDoINeedToRetire /> },
+      { path: 'blog/what-is-compound-interest', element: <WhatIsCompoundInterest /> },
+      { path: 'blog/what-is-capital-gains-tax-uk', element: <WhatIsCapitalGainsTax /> },
+      { path: 'blog/what-is-inheritance-tax-uk', element: <WhatIsInheritanceTax /> },
+      { path: 'blog/how-to-calculate-percentage', element: <HowToCalculatePercentage /> },
+      { path: 'blog/what-is-bmi', element: <WhatIsBMI /> },
+      { path: 'blog/how-to-save-for-a-house-deposit', element: <HowDoISaveForAHouse /> },
+      { path: 'blog/what-is-vat-uk', element: <WhatIsVAT /> },
+      { path: 'blog/how-much-is-stamp-duty-2025', element: <HowMuchIsStampDuty /> },
+      { path: 'blog/what-is-a-stocks-and-shares-isa', element: <WhatIsAStocksAndSharesISA /> },
       { path: 'app', element: <AppLanding /> },
       { path: 'app/mortgage-calculator-app', element: <MortgageCalculatorApp /> },
       { path: 'app/compound-interest-app', element: <CompoundInterestApp /> },
