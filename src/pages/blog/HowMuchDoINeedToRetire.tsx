@@ -28,6 +28,12 @@ export default function HowMuchDoINeedToRetire() {
         heroImage="/og-image.png"
         directAnswer="To fund a moderate retirement of £31,300 per year in the UK, you need approximately £500,000 in pension savings alongside the full State Pension of £11,502 per year. Using the 4% withdrawal rule: £19,798 needed from investments ÷ 0.04 = £495,000. For a comfortable retirement at £43,100 per year, the required pot rises to approximately £790,000 with the State Pension offset."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Savings Calculator", path: "/finance/savings" },
+          { label: "ISA Calculator", path: "/finance/isa-calculator" },
+          { label: "Compound Interest", path: "/finance/compound-interest" },
+          { label: "Retirement Calculator", path: "/finance/retirement" },
+        ]}
         relatedArticles={[
           { title: "Retirement Calculator", description: "Model your pension pot at any contribution level and retirement age.", url: "/finance/retirement" },
           { title: "Compound Interest Calculator", description: "See how pension contributions compound over decades.", url: "/finance/compound-interest" },

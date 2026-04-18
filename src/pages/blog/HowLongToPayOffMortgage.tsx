@@ -28,6 +28,12 @@ export default function HowLongToPayOffMortgage() {
         heroImage="/og-image.png"
         directAnswer="The standard UK mortgage term is 25 years, though 30 and 35-year terms are increasingly common. How long yours actually takes depends on your term, interest rate, and overpayments. Overpaying by £200 per month on a £200,000 mortgage at 4.5% cuts roughly 5 years off the term and saves around £26,000 in interest."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Overpayment Calculator", description: "See exactly how many years you cut with different overpayment amounts.", url: "/finance/mortgage-overpayment" },
           { title: "Mortgage Calculator", description: "Calculate your monthly payment at any term and rate.", url: "/finance/mortgage" },

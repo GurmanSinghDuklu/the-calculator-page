@@ -28,6 +28,12 @@ export default function WhatIsAnISA() {
         heroImage="/og-image.png"
         directAnswer="An ISA (Individual Savings Account) is a UK tax wrapper that protects savings and investments from income tax and capital gains tax. You can deposit up to £20,000 per year across all ISA types. Any interest, dividends, or investment growth inside an ISA is completely tax-free — both now and when you withdraw. The allowance resets every 6 April and unused allowance cannot be carried forward."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Savings Calculator", path: "/finance/savings" },
+          { label: "ISA Calculator", path: "/finance/isa-calculator" },
+          { label: "Compound Interest", path: "/finance/compound-interest" },
+          { label: "Retirement Calculator", path: "/finance/retirement" },
+        ]}
         relatedArticles={[
           { title: "ISA Calculator", description: "See how your ISA balance grows with regular contributions.", url: "/finance/isa-calculator" },
           { title: "Savings Calculator", description: "Compare ISA and non-ISA savings growth side by side.", url: "/finance/savings" },

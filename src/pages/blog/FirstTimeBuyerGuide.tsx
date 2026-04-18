@@ -28,6 +28,11 @@ export default function FirstTimeBuyerGuide() {
         heroImage="/og-image.png"
         directAnswer="The minimum deposit for a UK mortgage is 5% of the purchase price. On a £250,000 property that is £12,500. However, a 10% deposit unlocks significantly better mortgage rates — typically 0.3 to 0.5 percentage points lower — which saves more over the term than the extra time spent saving. First-time buyers can use a Lifetime ISA to receive a 25% government bonus on up to £4,000 per year."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Future House Value", path: "/finance/future-house-value" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Calculator", description: "Calculate your monthly repayments on any loan amount.", url: "/finance/mortgage" },
           { title: "Stamp Duty Calculator", description: "First-time buyer relief calculated instantly.", url: "/finance/stamp-duty" },

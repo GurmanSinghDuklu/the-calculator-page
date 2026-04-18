@@ -28,6 +28,12 @@ export default function HowMuchCanIBorrow() {
         heroImage="/og-image.png"
         directAnswer="In the UK, most lenders will let you borrow 4 to 4.5 times your annual salary. On a single £50,000 salary that is £200,000 to £225,000; joint buyers use combined income. Your actual limit is also shaped by existing debts, childcare costs, and an affordability stress test at rates around 3% higher than the offered rate."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Calculator", description: "Work out your exact monthly repayments based on what you borrow.", url: "/finance/mortgage" },
           { title: "Mortgage Overpayment Calculator", description: "See how overpaying now slashes years off your term.", url: "/finance/mortgage-overpayment" },

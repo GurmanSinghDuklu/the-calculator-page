@@ -50,6 +50,169 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* ── Full calculator sitemap ── */}
+        <div className="mb-14 pb-14 border-b border-white/8">
+          <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/25 mb-8">All Calculators</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-10">
+
+            {/* UK Finance */}
+            <div>
+              <p className="font-heading uppercase text-white/40 mb-4" style={subHeaderStyle}>UK Finance</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/finance/mortgage",              "Mortgage Calculator"],
+                  ["/finance/mortgage-overpayment",  "Mortgage Overpayment"],
+                  ["/finance/stamp-duty",            "Stamp Duty (SDLT)"],
+                  ["/finance/weekly-mortgage",       "Weekly Mortgage"],
+                  ["/finance/mortgage-cost-comparison", "Mortgage Comparison"],
+                  ["/finance/salary",                "UK Salary Calculator"],
+                  ["/finance/compound-interest",     "Compound Interest"],
+                  ["/finance/savings",               "Savings Calculator"],
+                  ["/finance/isa-calculator",        "ISA Calculator"],
+                  ["/finance/inheritance-tax",       "Inheritance Tax"],
+                  ["/finance/capital-gains-tax",     "Capital Gains Tax"],
+                  ["/finance/vat-calculator",        "VAT Calculator"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* US Finance */}
+            <div>
+              <p className="font-heading uppercase text-white/40 mb-4" style={subHeaderStyle}>US Finance</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/finance/us-salary-calculator",  "US Salary Calculator"],
+                  ["/finance/401k-calculator",       "401(k) Calculator"],
+                  ["/finance/us-sales-tax-calculator","US Sales Tax"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="font-heading uppercase text-white/40 mb-4 mt-8" style={subHeaderStyle}>Loans & Debt</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/finance/loan",              "Loan Calculator"],
+                  ["/finance/car-loan",          "Car Loan Calculator"],
+                  ["/finance/credit-card-payoff","Credit Card Payoff"],
+                  ["/finance/multi-card-payoff", "Multi-Card Payoff"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="font-heading uppercase text-white/40 mb-4 mt-8" style={subHeaderStyle}>Planning</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/finance/retirement",        "Retirement Calculator"],
+                  ["/finance/budget",            "Budget Calculator"],
+                  ["/finance/how-long-to-save",  "How Long to Save"],
+                  ["/finance/how-much-to-save",  "How Much to Save"],
+                  ["/finance/future-house-value","Future House Value"],
+                  ["/finance/irr",               "IRR Calculator"],
+                  ["/finance/cashback",          "Cashback Calculator"],
+                  ["/finance/apy",               "APY Calculator"],
+                  ["/finance/simple-interest",   "Simple Interest"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Everyday */}
+            <div>
+              <p className="font-heading uppercase text-white/40 mb-4" style={subHeaderStyle}>Everyday</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/misc/percentage",           "Percentage Calculator"],
+                  ["/misc/percentage-of",        "Percentage Of"],
+                  ["/misc/percentage-change",    "Percentage Change"],
+                  ["/misc/discount",             "Discount Calculator"],
+                  ["/misc/tip",                  "Tip Calculator"],
+                  ["/misc/bmi-calculator",       "BMI Calculator"],
+                  ["/misc/calorie-calculator",   "Calorie Calculator"],
+                  ["/misc/age",                  "Age Calculator"],
+                  ["/misc/square-footage",       "Square Footage"],
+                  ["/misc/gravel-calculator",    "Gravel Calculator"],
+                  ["/misc/mulch-calculator",     "Mulch Calculator"],
+                  ["/misc/concrete-calculator",  "Concrete Calculator"],
+                  ["/misc/cubic-yards",          "Cubic Yards"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Date & Time */}
+            <div>
+              <p className="font-heading uppercase text-white/40 mb-4" style={subHeaderStyle}>Date & Time</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/misc/days-from-today",      "Days From Today"],
+                  ["/misc/days-between-dates",   "Days Between Dates"],
+                  ["/misc/months-between-dates", "Months Between Dates"],
+                  ["/misc/hours-calculator",     "Hours Calculator"],
+                  ["/misc/working-days",         "Working Days"],
+                  ["/misc/days-from-today/7",    "7 Days From Today"],
+                  ["/misc/days-from-today/14",   "14 Days From Today"],
+                  ["/misc/days-from-today/30",   "30 Days From Today"],
+                  ["/misc/days-from-today/60",   "60 Days From Today"],
+                  ["/misc/days-from-today/90",   "90 Days From Today"],
+                  ["/misc/days-from-today/180",  "180 Days From Today"],
+                  ["/misc/days-from-today/365",  "365 Days From Today"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Converters */}
+            <div>
+              <p className="font-heading uppercase text-white/40 mb-4" style={subHeaderStyle}>Unit Converters</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["/converters/cm-to-inches",         "CM to Inches"],
+                  ["/converters/inches-to-cm",         "Inches to CM"],
+                  ["/converters/lbs-to-kg",            "LBS to KG"],
+                  ["/converters/stone-to-kg",          "Stone to KG"],
+                  ["/converters/km-to-miles",          "KM to Miles"],
+                  ["/converters/metres-to-feet",       "Metres to Feet"],
+                  ["/converters/fahrenheit-to-celsius","Fahrenheit to Celsius"],
+                  ["/converters/gallons-to-litres",    "Gallons to Litres"],
+                  ["/converters/ml-to-oz",             "ML to Oz"],
+                  ["/converters/cups-to-grams",        "Cups to Grams"],
+                  ["/converters/grams-to-tablespoons", "Grams to Tablespoons"],
+                  ["/converters/ounces-to-grams",      "Ounces to Grams"],
+                  ["/converters/teaspoons-to-ml",      "Teaspoons to ML"],
+                  ["/converters/length",               "Length Converter"],
+                  ["/converters/weight",               "Weight Converter"],
+                  ["/converters/temperature",          "Temperature Converter"],
+                  ["/converters/universal",            "Universal Converter"],
+                ].map(([to, label]) => (
+                  <li key={to}>
+                    <Link to={to} className="text-zinc-500 hover:text-white transition-colors font-sans text-sm">{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
         {/* ── Main nav grid ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
 

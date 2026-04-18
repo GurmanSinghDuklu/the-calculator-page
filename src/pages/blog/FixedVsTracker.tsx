@@ -28,6 +28,12 @@ export default function FixedVsTracker() {
         heroImage="/og-image.png"
         directAnswer="A fixed rate mortgage locks your interest rate for 2 or 5 years so your payment never changes regardless of what the Bank of England does. A tracker mortgage moves directly with the base rate — cheaper when rates fall, more expensive when they rise. Fixed is right for budget certainty; tracker suits those who can absorb rate rises and want flexibility to overpay or exit without large penalties."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Calculator", description: "Compare monthly costs on fixed and tracker deals side by side.", url: "/finance/mortgage" },
           { title: "Mortgage Cost Comparison", description: "Put two mortgage deals head-to-head over the full term.", url: "/finance/mortgage-cost-comparison" },

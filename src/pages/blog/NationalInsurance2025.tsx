@@ -28,6 +28,11 @@ export default function NationalInsurance2025() {
         heroImage="/og-image.png"
         directAnswer="In 2025/26, employees pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. There is no NI below £12,570. On a £40,000 salary that is approximately £2,194 per year in NI contributions, or £183 per month, on top of income tax."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "UK Salary Calculator", path: "/finance/salary" },
+          { label: "UK Tax Brackets 2025", path: "/blog/uk-tax-brackets-2025" },
+          { label: "Budget Calculator", path: "/finance/budget" },
+        ]}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See your exact take-home after income tax and National Insurance.", url: "/finance/salary" },
           { title: "UK Tax Brackets 2025/26", description: "How income tax and NI combine to determine what you keep.", url: "/blog/uk-tax-brackets-2025" },

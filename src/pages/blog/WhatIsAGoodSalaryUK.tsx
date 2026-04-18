@@ -28,6 +28,11 @@ export default function WhatIsAGoodSalaryUK() {
         heroImage="/og-image.png"
         directAnswer="The UK median full-time salary is approximately £37,000 in 2025. Earning above £50,270 puts you in the top 25% of UK earners and into the higher rate tax bracket. Above £100,000 is roughly the top 5%. However, what counts as 'good' varies dramatically by location — £45,000 in London is tight, while the same salary in Leeds or Manchester supports a comfortable lifestyle."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "UK Salary Calculator", path: "/finance/salary" },
+          { label: "UK Tax Brackets 2025", path: "/blog/uk-tax-brackets-2025" },
+          { label: "Budget Calculator", path: "/finance/budget" },
+        ]}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See exactly what any salary gives you after tax and NI.", url: "/finance/salary" },
           { title: "UK Tax Brackets 2025/26", description: "How income tax bands determine what you keep from every pay rise.", url: "/blog/uk-tax-brackets-2025" },

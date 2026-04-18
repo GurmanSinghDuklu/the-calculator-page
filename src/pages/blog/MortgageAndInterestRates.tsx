@@ -28,6 +28,12 @@ export default function MortgageAndInterestRates() {
         heroImage="/og-image.png"
         directAnswer="When interest rates rise, tracker and standard variable rate mortgages increase immediately — every 0.25% rate rise adds around £25 per month on a £200,000 mortgage. Fixed rate mortgages are protected until the fixed term ends. When a fix expires you remortgage at current rates, which may be significantly higher than your original deal if rates have risen during your term."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Calculator", description: "Recalculate your monthly payments at any interest rate.", url: "/finance/mortgage" },
           { title: "Fixed vs Tracker Mortgage", description: "The full comparison of both mortgage types — with the numbers.", url: "/blog/fixed-vs-tracker-mortgage" },

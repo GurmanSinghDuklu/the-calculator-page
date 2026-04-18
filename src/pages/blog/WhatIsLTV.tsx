@@ -28,6 +28,12 @@ export default function WhatIsLTV() {
         heroImage="/og-image.png"
         directAnswer="Loan-to-value (LTV) is your mortgage as a percentage of the property value. On a £250,000 property with a £25,000 deposit, your LTV is 90%. The lower your LTV, the better the mortgage rate you qualify for — lenders reserve their best deals for borrowers at 60% LTV or below. Every 5% improvement in LTV typically unlocks a meaningfully cheaper rate."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+        ]}
         relatedArticles={[
           { title: "Mortgage Calculator", description: "Calculate repayments at any loan amount and rate.", url: "/finance/mortgage" },
           { title: "How Much Can I Borrow?", description: "Understand the full picture before you apply.", url: "/blog/how-much-can-i-borrow-mortgage-uk" },

@@ -28,6 +28,12 @@ export default function HowMuchShouldISavePerMonth() {
         heroImage="/og-image.png"
         directAnswer="The widely recommended savings benchmark is 20% of your net take-home pay per month, split across emergency fund, medium-term goals, and long-term investments or pension. On a £2,500 monthly take-home that is £500 per month. If 20% is not achievable yet, starting with 10% builds the habit — the consistency matters more than the amount at the beginning."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Savings Calculator", path: "/finance/savings" },
+          { label: "ISA Calculator", path: "/finance/isa-calculator" },
+          { label: "Compound Interest", path: "/finance/compound-interest" },
+          { label: "Retirement Calculator", path: "/finance/retirement" },
+        ]}
         relatedArticles={[
           { title: "Savings Calculator", description: "See how monthly contributions grow over any time period.", url: "/finance/savings" },
           { title: "Compound Interest Calculator", description: "Model your savings growth with reinvested interest.", url: "/finance/compound-interest" },

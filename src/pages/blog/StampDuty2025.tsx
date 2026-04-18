@@ -28,6 +28,11 @@ export default function StampDuty2025() {
         heroImage="/og-image.png"
         directAnswer="From April 2025, the standard stamp duty nil-rate threshold dropped back to £125,000. First-time buyers pay 0% up to £300,000, then 5% on the portion from £300,001 to £500,000, with no relief above £500,000. On a £350,000 first purchase the stamp duty bill is £2,500. A standard buyer pays £7,500 on the same property."
         hasPaidSection={false}
+        relatedCalculators={[
+          { label: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+          { label: "Mortgage Calculator", path: "/finance/mortgage" },
+          { label: "Future House Value", path: "/finance/future-house-value" },
+        ]}
         relatedArticles={[
           { title: "Stamp Duty Calculator", description: "Get your exact SDLT bill for any property price in seconds.", url: "/finance/stamp-duty" },
           { title: "Mortgage Calculator", description: "Calculate your monthly repayments alongside your stamp duty cost.", url: "/finance/mortgage" },

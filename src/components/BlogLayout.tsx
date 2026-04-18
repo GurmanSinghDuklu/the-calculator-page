@@ -16,6 +16,11 @@ interface RelatedArticle {
   image?: string;
 }
 
+interface RelatedCalculator {
+  label: string;
+  path: string;
+}
+
 interface BlogLayoutProps {
   title: string;
   subtitle: string;
@@ -27,6 +32,7 @@ interface BlogLayoutProps {
   hasPaidSection?: boolean;
   author?: string;
   relatedArticles?: RelatedArticle[];
+  relatedCalculators?: RelatedCalculator[];
   /** 1–2 sentence direct answer to the post's primary question — AI Mode lifts this verbatim */
   directAnswer?: string;
 }
@@ -42,6 +48,7 @@ export const BlogLayout = ({
   hasPaidSection = false,
   author = "Calculator App",
   relatedArticles = [],
+  relatedCalculators = [],
   directAnswer,
 }: BlogLayoutProps) => {
   return (
@@ -175,6 +182,24 @@ export const BlogLayout = ({
               Unlock for $20
               <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
             </button>
+          </div>
+        )}
+
+        {/* ── Related calculators ── */}
+        {relatedCalculators.length > 0 && (
+          <div className="border border-white/10 bg-white/[0.02] px-6 py-6 mb-8">
+            <p className="font-heading text-[9px] uppercase tracking-[0.2em] text-white/30 mb-4">Try These Calculators</p>
+            <div className="flex flex-wrap gap-2">
+              {relatedCalculators.map(({ label, path }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  className="inline-flex items-center gap-1.5 font-heading text-[9px] uppercase tracking-widest py-2 px-3 border border-white/15 text-white/50 hover:border-white/40 hover:text-white transition-all"
+                >
+                  {label} →
+                </Link>
+              ))}
+            </div>
           </div>
         )}
 
