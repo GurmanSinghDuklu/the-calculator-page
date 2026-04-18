@@ -115,7 +115,7 @@ export default function RetirementCalculator() {
   return (
     <>
       <SEO
-        title="Retirement Calculator UK"
+        title="Retirement Calculator UK 2025 — Pension Pot & Income Projector"
         description="Free UK retirement calculator. Estimate your pension pot and annual income including state pension and employer contributions."
         keywords="retirement calculator UK, pension calculator, retirement planning calculator, state pension calculator"
         faqSchema={faqSchema}

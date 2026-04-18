@@ -65,7 +65,7 @@ const SavingsCalculator = () => {
   return (
     <>
       <SEO
-        title="Savings Calculator UK - Free"
+        title="Savings Calculator UK 2025 — See How Your Money Grows With Interest"
         description="Free savings calculator. See how your money grows with compound interest, regular deposits and different compounding frequencies."
         keywords="savings calculator, savings account calculator, compound savings calculator, savings goal calculator"
         faqSchema={faqSchema}

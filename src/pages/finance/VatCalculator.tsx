@@ -69,7 +69,7 @@ const VatCalculator = () => {
   return (
     <>
       <SEO
-        title="VAT Calculator UK"
+        title="VAT Calculator UK 2025 — Add or Remove 20% VAT Instantly"
         description="Free UK VAT calculator. Add or remove VAT at 20%, 5% or 0%. Instant results for invoices, expenses and tax returns."
         keywords="VAT calculator, VAT calculator UK, add VAT, remove VAT, 20% VAT, value added tax calculator"
         canonicalUrl="https://www.thecalculatorapp.org/finance/vat-calculator"

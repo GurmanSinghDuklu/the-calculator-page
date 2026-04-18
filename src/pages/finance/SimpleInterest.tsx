@@ -43,7 +43,7 @@ const SimpleInterest = () => {
   return (
     <>
       <SEO
-        title="Simple Interest Calculator UK"
+        title="Simple Interest Calculator UK 2025 — I = PRT Formula"
         description="Free simple interest calculator to calculate interest on loans and investments. Find interest amount and total value."
         keywords="simple interest calculator, simple interest formula, calculate simple interest"
         faqSchema={faqSchema}

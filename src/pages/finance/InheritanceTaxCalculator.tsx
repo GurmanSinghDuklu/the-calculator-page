@@ -108,7 +108,7 @@ const InheritanceTaxCalculator = () => {
   return (
     <>
       <SEO
-        title="Inheritance Tax Calculator UK"
+        title="Inheritance Tax Calculator UK 2025 — IHT Nil-Rate Band & Threshold"
         description="Free UK inheritance tax calculator. Work out IHT on your estate including nil rate band, residence nil rate band and spouse exemption."
         keywords="inheritance tax calculator, IHT calculator UK, inheritance tax, nil rate band, estate tax calculator, IHT threshold"
         canonicalUrl="https://www.thecalculatorapp.org/finance/inheritance-tax"

@@ -102,7 +102,7 @@ const CompoundInterest = () => {
     return (
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
         <SEO
-          title="Compound Interest Calculator UK"
+          title="Compound Interest Calculator UK 2025 — A = P(1+r/n)^nt"
           description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
           structuredData={[structuredData, breadcrumbStructuredData]}
           faqSchema={faqSchema}
@@ -305,7 +305,7 @@ const CompoundInterest = () => {
   return (
     <>
       <SEO
-        title="Compound Interest Calculator UK"
+        title="Compound Interest Calculator UK 2025 — A = P(1+r/n)^nt"
         description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
         structuredData={[structuredData, breadcrumbStructuredData]}
         faqSchema={faqSchema}

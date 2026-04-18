@@ -96,7 +96,7 @@ const LoanCalculator = () => {
   return (
     <>
       <SEO
-        title="Loan Calculator UK - Free"
+        title="Loan Calculator UK 2025 — Monthly Repayments & Total Interest"
         description="Free loan calculator for personal loans, auto loans, and mortgages. Calculate monthly payments, total interest, and amortization schedules instantly."
         keywords="loan calculator, personal loan calculator, auto loan calculator, loan payment calculator"
         faqSchema={loanStaticContent.faqs}

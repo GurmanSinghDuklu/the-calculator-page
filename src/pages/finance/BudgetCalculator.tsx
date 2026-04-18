@@ -114,7 +114,7 @@ export default function BudgetCalculator() {
 
   return (
     <>
-      <SEO title="Budget Calculator - Free"
+      <SEO title="Budget Calculator UK 2025 — Track Monthly Income & Expenses"
         description="Free budget calculator to track your monthly income and expenses. Categorize spending, add custom expenses, and see your remaining balance."
         keywords="budget calculator, monthly budget, income tracker, expense tracker, financial planning"
         faqSchema={budgetStaticContent.faqs}

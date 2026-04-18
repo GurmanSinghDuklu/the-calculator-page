@@ -139,7 +139,7 @@ const IsaCalculator = () => {
   return (
     <>
       <SEO
-        title="ISA Calculator UK"
+        title="ISA Calculator UK 2025 — Cash ISA, Stocks & Shares, LISA Returns"
         description="Free UK ISA calculator. Compare Cash ISA, Stocks & Shares ISA and Lifetime ISA returns. See your tax-free growth and LISA government bonus."
         keywords="ISA calculator, ISA calculator UK, cash ISA, stocks and shares ISA, lifetime ISA calculator, LISA calculator, ISA allowance"
         faqSchema={faqSchema}

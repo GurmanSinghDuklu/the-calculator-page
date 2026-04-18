@@ -102,7 +102,7 @@ const CapitalGainsTaxCalculator = () => {
   return (
     <>
       <SEO
-        title="Capital Gains Tax Calculator UK"
+        title="Capital Gains Tax Calculator UK 2025 — CGT on Shares & Property"
         description="Free UK capital gains tax calculator. Work out CGT on shares, property and other assets. Includes 2024/25 annual exempt amount and tax rates."
         keywords="capital gains tax calculator, CGT calculator UK, capital gains tax, CGT on shares, CGT on property, annual exempt amount"
         canonicalUrl="https://www.thecalculatorapp.org/finance/capital-gains-tax"

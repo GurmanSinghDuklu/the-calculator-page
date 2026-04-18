@@ -101,7 +101,7 @@ const SalaryCalculator = () => {
   return (
     <>
       <SEO
-        title="Salary Calculator UK & US"
+        title="UK Salary Calculator 2025 — Take-Home Pay After Income Tax & NI"
         description="Calculate take-home pay after income tax, national insurance and state taxes. Supports UK and US with pension contributions."
         keywords="salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary, US income tax calculator, FICA calculator, state tax, federal tax, paycheck calculator, net pay"
         canonicalUrl="https://www.thecalculatorapp.org/finance/salary"
