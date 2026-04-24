@@ -24,7 +24,7 @@ export default function PercentageCalculatorApp() {
   return (
     <>
       <SEO
-        title="Percentage Calculator App — Free Online % Calculator | The Calculator App"
+        title="Percentage Calculator App — Free Online % Calculator"
         description="Free percentage calculator app. No download needed. Works on iPhone and Android. Calculate percentage of a number, percentage increase, decrease, and difference instantly."
         keywords="percentage calculator app, free percentage calculator app, percent calculator app, percentage app iphone, percentage app android, percentage increase calculator app, discount calculator app"
         canonicalUrl="https://www.thecalculatorapp.org/app/percentage-calculator-app"

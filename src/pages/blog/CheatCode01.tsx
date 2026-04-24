@@ -6,14 +6,14 @@ const CheatCode01 = () => {
   return (
     <>
       <SEO
-        title="The Cheat Code #1: How to Turn £0 into £1,000,000 | FinCalc"
+        title="The Cheat Code #1: Turn £0 into £1,000,000"
         description="Discover the proven strategy to build wealth from nothing. Learn how compound interest, DCA investing, and time can turn £0 into £1 million."
         keywords="millionaire strategy, compound interest, wealth building, DCA investing, accumulation funds, financial independence"
         canonicalUrl="https://fincalc.co.uk/blog/cheat-code-01"
       />
       
       <BlogLayout
-        title="💰 The Cheat Code #1: How to Turn £0 into £1,000,000 — Starting Today"
+        title="The Cheat Code #1: Turn £0 into £1,000,000"
         subtitle="Yes, you can go from absolutely nothing to £1 million. Here's the cheat code nobody taught you in school."
         category="The Cheat Code"
         publishDate="November 2024"

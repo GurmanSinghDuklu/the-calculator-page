@@ -24,7 +24,7 @@ export default function SalaryCalculatorApp() {
   return (
     <>
       <SEO
-        title="Salary Calculator App UK — Free Take-Home Pay App | The Calculator App"
+        title="Salary Calculator App UK — Free Take-Home Pay Calculator"
         description="Free UK salary calculator app. No download needed. Works on iPhone and Android. Calculate take-home pay after Income Tax, National Insurance, student loan and pension deductions."
         keywords="salary calculator app, uk salary calculator app, take home pay app, salary calculator app uk, free salary calculator app, salary app iphone, salary app android, paye calculator app"
         canonicalUrl="https://www.thecalculatorapp.org/app/salary-calculator-app"

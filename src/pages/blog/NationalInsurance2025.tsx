@@ -13,14 +13,14 @@ export default function NationalInsurance2025() {
   return (
     <>
       <SEO
-        title="National Insurance 2025/26 — Rates, Thresholds and What You Actually Pay"
+        title="National Insurance 2025/26 — Rates, Thresholds & What You Pay"
         description="National Insurance rates for 2025/26: 8% up to £50,270, 2% above. Here's how NI is calculated, how it affects your take-home, and what it means for your State Pension."
         keywords="national insurance 2025, national insurance rates 2025, ni threshold 2025, national insurance calculator, how much national insurance do i pay"
         canonicalUrl="https://www.thecalculatorapp.org/blog/national-insurance-2025"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="National Insurance 2025/26 — Rates, Thresholds and What You Actually Pay"
+        title="National Insurance 2025/26 — Rates, Thresholds & What You Pay"
         subtitle="The second deduction on your payslip — and the one most people understand least."
         category="Salary & Tax"
         publishDate="April 2026"

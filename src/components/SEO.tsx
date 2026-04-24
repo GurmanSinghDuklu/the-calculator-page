@@ -86,11 +86,8 @@ const SEO = ({
   // FIX: Force removal of trailing slash to match sitemap and avoid duplicate errors
   const cleanCanonical = resolvedCanonical.replace(/\/$/, "");
 
-  // Keep full title under 60 chars for SERPs. Use short brand suffix on inner pages.
-  const isHomepage = location.pathname === '/';
-  const fullTitle = isHomepage
-    ? finalTitle
-    : `${finalTitle} | The Calculator App`;
+  // Titles must stay under 70 chars (Bing/Google). No auto-suffix — each page's title is self-contained.
+  const fullTitle = finalTitle;
 
   // Author schema for E-E-A-T (YMYL financial content)
   const authorSchema = {

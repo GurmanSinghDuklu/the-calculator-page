@@ -13,7 +13,7 @@ export default function WhatIsInheritanceTax() {
   return (
     <>
       <SEO
-        title="What Is Inheritance Tax UK? Thresholds, Rules & How to Reduce It (2025)"
+        title="What Is Inheritance Tax UK? Thresholds & Rules 2025"
         description="IHT is 40% on estates above £325,000 — but couples can pass up to £1,000,000 tax-free. Here's how the thresholds work and the legal ways to reduce your bill."
         keywords="what is inheritance tax uk, inheritance tax threshold 2025, iht nil rate band, inheritance tax 7 year rule, how to avoid inheritance tax uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-inheritance-tax-uk"

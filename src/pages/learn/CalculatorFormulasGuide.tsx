@@ -50,7 +50,7 @@ export default function CalculatorFormulasGuide() {
   return (
     <ArticleLayout
         publishDate="2025-07-01"
-      title="Complete Guide to Calculator Formulas: Understanding the Math Behind Your Money"
+      title="Calculator Formulas Guide: Financial Maths Explained"
       description="Essential financial formulas: compound interest, mortgage amortization, annuity and present value explained."
       readTime="12 min read"
       category="Financial Education"

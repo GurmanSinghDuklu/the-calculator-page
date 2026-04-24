@@ -84,7 +84,7 @@ export default function UsSalaryCalculator() {
   return (
     <>
       <SEO
-        title="US Salary Calculator — Federal Tax, FICA & State Tax 2025 | The Calculator App"
+        title="US Salary Calculator 2025 — Federal Tax, FICA & State Tax"
         description="Free US salary calculator for 2025. Calculate take-home pay after federal income tax, Social Security, Medicare, and state tax. All 50 states supported."
         keywords="us salary calculator, salary calculator usa, take home pay calculator usa, federal tax calculator, paycheck calculator, net pay calculator us, salary after tax us"
         canonicalUrl="https://www.thecalculatorapp.org/finance/us-salary-calculator"

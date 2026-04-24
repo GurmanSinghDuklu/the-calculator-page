@@ -9,6 +9,26 @@
       "source": "/((?!$).*)/",
       "destination": "/$1",
       "permanent": true
+    },
+    {
+      "source": "/finance/mortgage-calculator",
+      "destination": "/finance/mortgage",
+      "permanent": true
+    },
+    {
+      "source": "/finance/loan-calculator",
+      "destination": "/finance/loan",
+      "permanent": true
+    },
+    {
+      "source": "/finance/retirement-calculator",
+      "destination": "/finance/retirement",
+      "permanent": true
+    },
+    {
+      "source": "/categories/health",
+      "destination": "/misc/bmi-calculator",
+      "permanent": true
     }
   ],
   "rewrites": [

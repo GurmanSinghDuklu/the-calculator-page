@@ -83,7 +83,7 @@ export default function FourOOneKCalculator() {
   return (
     <>
       <SEO
-        title="401(k) Calculator — Retirement Savings Calculator | The Calculator App"
+        title="401(k) Calculator — Plan Your US Retirement Savings"
         description="Free 401(k) calculator. See how your retirement savings grow with employer matching, compound interest, and annual raises. Plan your US retirement in 60 seconds."
         keywords="401k calculator, 401(k) calculator, retirement savings calculator, employer match calculator, 401k growth calculator, retirement planning calculator"
         canonicalUrl="https://www.thecalculatorapp.org/finance/401k-calculator"

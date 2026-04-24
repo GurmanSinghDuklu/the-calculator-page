@@ -132,7 +132,7 @@ const StampDutyCalculator = () => {
   return (
     <>
       <SEO
-        title="Stamp Duty Calculator UK 2025 — SDLT for First-Time Buyers & Investors"
+        title="Stamp Duty Calculator UK 2025 — SDLT Rates & Thresholds"
         description="Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland."
         keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
         canonicalUrl="https://www.thecalculatorapp.org/finance/stamp-duty"
