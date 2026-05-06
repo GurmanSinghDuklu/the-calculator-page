@@ -1,4 +1,4 @@
-import { RouteObject, Navigate } from 'react-router-dom';
+import { RouteObject } from 'react-router-dom';
 import App from '../App';
 
 // Main & Hubs
@@ -159,7 +159,6 @@ export const routes: RouteObject[] = [
     element: <App />,
     children: [
       { index: true, element: <Index /> },
-      { path: 'home', element: <Navigate to="/" replace /> },
       { path: 'learn', element: <LearnHub /> },
       { path: 'formulas', element: <Formulas /> },
 
