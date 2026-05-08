@@ -16,9 +16,11 @@ export default function MortgageOverpayment() {
   const [principal,          setPrincipal]          = useState("300000");
   const [interestRate,       setInterestRate]       = useState("4");
   const [termYears,          setTermYears]          = useState("30");
+  const [termMonths,         setTermMonths]         = useState("0");
   const [monthlyOverpayment, setMonthlyOverpayment] = useState("200");
   const [lumpSum,            setLumpSum]            = useState("10000");
-  const [lumpSumMonth,       setLumpSumMonth]       = useState("12");
+  const [lumpSumYear,        setLumpSumYear]        = useState("1");
+  const [lumpSumMonth,       setLumpSumMonth]       = useState("0");
   const [currency,           setCurrency]           = useState<Currency>("USD");
   const [mode,               setMode]               = useState<"regular" | "lump">("regular");
 
@@ -34,7 +36,7 @@ export default function MortgageOverpayment() {
 
   const calculateRegularOverpayment = () => {
     const P = parseFloat(principal), r = parseFloat(interestRate) / 100;
-    const N = parseInt(termYears) * 12, E = parseFloat(monthlyOverpayment);
+    const N = (parseInt(termYears) || 0) * 12 + (parseInt(termMonths) || 0), E = parseFloat(monthlyOverpayment);
     if (isNaN(P) || isNaN(r) || isNaN(N) || P <= 0 || N <= 0) return;
     const i = r / 12;
     const PMT = (P * i) / (1 - Math.pow(1 + i, -N));
@@ -50,7 +52,9 @@ export default function MortgageOverpayment() {
 
   const calculateLumpSumOverpayment = () => {
     const P = parseFloat(principal), r = parseFloat(interestRate) / 100;
-    const N = parseInt(termYears) * 12, L = parseFloat(lumpSum), k = parseInt(lumpSumMonth);
+    const N = (parseInt(termYears) || 0) * 12 + (parseInt(termMonths) || 0);
+    const L = parseFloat(lumpSum);
+    const k = (parseInt(lumpSumYear) || 0) * 12 + (parseInt(lumpSumMonth) || 0);
     if (isNaN(P) || isNaN(r) || isNaN(N) || isNaN(L) || isNaN(k) || P <= 0 || N <= 0 || k < 0 || k >= N) return;
     const i = r / 12;
     const PMT = (P * i) / (1 - Math.pow(1 + i, -N));
@@ -273,11 +277,19 @@ export default function MortgageOverpayment() {
                 </div>
                 <div>
                   <label className={labelClass}>Mortgage Term</label>
-                  <div className="relative">
-                    <input type="number" step="1" min="1" value={termYears} onChange={e => setTermYears(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium focus:outline-none transition-all"
-                      onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="30" />
-                    <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">Yrs</span>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="relative">
+                      <input type="number" step="1" min="0" value={termYears} onChange={e => setTermYears(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="30" />
+                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YRS</span>
+                    </div>
+                    <div className="relative">
+                      <input type="number" step="1" min="0" max="11" value={termMonths} onChange={e => setTermMonths(e.target.value)}
+                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium focus:outline-none transition-all"
+                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="0" />
+                      <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MOS</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -315,7 +327,7 @@ export default function MortgageOverpayment() {
                   </div>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
                   <div>
                     <label className={labelClass}>Lump Sum Amount</label>
                     <div className="relative">
@@ -326,10 +338,21 @@ export default function MortgageOverpayment() {
                     </div>
                   </div>
                   <div>
-                    <label className={labelClass}>Apply at Month</label>
-                    <input type="number" step="1" min="0" value={lumpSumMonth} onChange={e => setLumpSumMonth(e.target.value)}
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
-                      onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="12" />
+                    <label className={labelClass}>Apply at (into mortgage)</label>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="relative">
+                        <input type="number" step="1" min="0" value={lumpSumYear} onChange={e => setLumpSumYear(e.target.value)}
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="1" />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YR</span>
+                      </div>
+                      <div className="relative">
+                        <input type="number" step="1" min="0" max="11" value={lumpSumMonth} onChange={e => setLumpSumMonth(e.target.value)}
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="0" />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MO</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

@@ -9,7 +9,6 @@ import { toast } from "sonner";
 import { ArrowRight, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -51,24 +50,31 @@ const loanStaticContent = {
 };
 
 const LoanCalculator = () => {
-  const [loanAmount,   setLoanAmount]   = useState("200000");
-  const [interestRate, setInterestRate] = useState("4.5");
-  const [loanTerm,     setLoanTerm]     = useState("30");
-  const [currency,     setCurrency]     = useState<Currency>("USD");
+  const [loanAmount,    setLoanAmount]    = useState("200000");
+  const [interestRate,  setInterestRate]  = useState("4.5");
+  const [loanTermYears, setLoanTermYears] = useState("30");
+  const [loanTermMonths,setLoanTermMonths]= useState("0");
+  const [currency,      setCurrency]      = useState<Currency>("USD");
+  const [lumpEnabled,   setLumpEnabled]   = useState(false);
+  const [lumpAmount,    setLumpAmount]    = useState("5000");
+  const [lumpYear,      setLumpYear]      = useState("1");
+  const [lumpMonth,     setLumpMonth]     = useState("0");
   const [result, setResult] = useState<{
     monthlyPayment: number;
     totalPayment: number;
     totalInterest: number;
+    lumpInterestSaved?: number;
+    lumpTimeSaved?: number;
   } | null>(null);
 
   const calculateLoan = () => {
     const P    = parseFloat(loanAmount);
     const rate = parseFloat(interestRate);
-    const term = parseFloat(loanTerm);
+    const termYrs = (parseInt(loanTermYears) || 0) + (parseInt(loanTermMonths) || 0) / 12;
     try {
-      const validated = loanSchema.parse({ loanAmount: P, interestRate: rate, loanTerm: term });
+      const validated = loanSchema.parse({ loanAmount: P, interestRate: rate, loanTerm: termYrs });
       const r = validated.interestRate / 100 / 12;
-      const n = validated.loanTerm * 12;
+      const n = Math.round(validated.loanTerm * 12);
       const monthlyPayment = r === 0
         ? validated.loanAmount / n
         : (validated.loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
@@ -78,10 +84,30 @@ const LoanCalculator = () => {
         toast.error("Calculation resulted in invalid values. Please check your inputs.");
         return;
       }
+      let lumpInterestSaved: number | undefined;
+      let lumpTimeSaved: number | undefined;
+      if (lumpEnabled) {
+        const L = parseFloat(lumpAmount) || 0;
+        const k = (parseInt(lumpYear) || 0) * 12 + (parseInt(lumpMonth) || 0);
+        if (L > 0 && k < n && k >= 0) {
+          const balAtK = r === 0
+            ? P - monthlyPayment * k
+            : P * Math.pow(1 + r, k) - monthlyPayment * ((Math.pow(1 + r, k) - 1) / r);
+          const newBal = balAtK - L;
+          if (newBal > 0) {
+            const newN = r === 0 ? newBal / monthlyPayment : -Math.log(1 - (newBal * r) / monthlyPayment) / Math.log(1 + r);
+            const newTotal = monthlyPayment * k + monthlyPayment * newN;
+            lumpInterestSaved = Math.round((totalInterest - (newTotal - P)) * 100) / 100;
+            lumpTimeSaved = Math.round(((n - k - newN) / 12) * 10) / 10;
+          }
+        }
+      }
       setResult({
         monthlyPayment: Math.round(monthlyPayment * 100) / 100,
         totalPayment:   Math.round(totalPayment   * 100) / 100,
         totalInterest:  Math.round(totalInterest  * 100) / 100,
+        lumpInterestSaved,
+        lumpTimeSaved,
       });
     } catch (error: any) {
       toast.error(error.errors?.[0]?.message || "Invalid input values");
@@ -182,7 +208,7 @@ const LoanCalculator = () => {
                     { label: "Total Payment",  value: `${sym}${result.totalPayment.toLocaleString()}` },
                     { label: "Total Interest", value: `${sym}${result.totalInterest.toLocaleString()}` },
                     { label: "Loan Amount",    value: `${sym}${parseFloat(loanAmount).toLocaleString()}` },
-                    { label: "Loan Term",      value: `${loanTerm} years` },
+                    { label: "Loan Term", value: `${loanTermYears}y ${parseInt(loanTermMonths) > 0 ? loanTermMonths + "m" : ""}`.trim() },
                   ].map(({ label, value }) => (
                     <div key={label} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
                       <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">{label}</p>
@@ -286,19 +312,67 @@ const LoanCalculator = () => {
                   </div>
                   <div>
                     <label className={labelClass}>Loan Term</label>
-                    <div className="relative">
-                      <input
-                        type="number"
-                        value={loanTerm}
-                        onChange={e => setLoanTerm(e.target.value)}
-                        placeholder="30"
-                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
-                        onFocus={e => (e.target.style.borderColor = ACCENT)}
-                        onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")}
-                      />
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">Yrs</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="relative">
+                        <input type="number" min="0" value={loanTermYears} onChange={e => setLoanTermYears(e.target.value)}
+                          placeholder="30"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YRS</span>
+                      </div>
+                      <div className="relative">
+                        <input type="number" min="0" max="11" value={loanTermMonths} onChange={e => setLoanTermMonths(e.target.value)}
+                          placeholder="0"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MOS</span>
+                      </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Lump sum toggle */}
+                <div>
+                  <button type="button" onClick={() => setLumpEnabled(!lumpEnabled)}
+                    className="flex items-center gap-2 text-[10px] font-heading uppercase tracking-widest transition-colors"
+                    style={{ color: lumpEnabled ? ACCENT : "rgba(255,255,255,0.3)" }}>
+                    <span className="w-8 h-4 rounded-full flex items-center px-0.5 transition-all"
+                      style={{ background: lumpEnabled ? `${ACCENT}40` : "rgba(255,255,255,0.1)" }}>
+                      <span className="w-3 h-3 rounded-full transition-all"
+                        style={{ background: lumpEnabled ? ACCENT : "rgba(255,255,255,0.3)", transform: lumpEnabled ? "translateX(16px)" : "translateX(0)" }} />
+                    </span>
+                    Add Lump Sum Overpayment
+                  </button>
+                  {lumpEnabled && (
+                    <div className="mt-3 space-y-3">
+                      <div>
+                        <label className={labelClass}>Lump Sum Amount</label>
+                        <div className="relative">
+                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">{sym}</span>
+                          <input type="number" step="100" min="0" value={lumpAmount} onChange={e => setLumpAmount(e.target.value)}
+                            className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                            onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="5,000" />
+                        </div>
+                      </div>
+                      <div>
+                        <label className={labelClass}>Apply at (into loan)</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="relative">
+                            <input type="number" min="0" value={lumpYear} onChange={e => setLumpYear(e.target.value)}
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="1" />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YR</span>
+                          </div>
+                          <div className="relative">
+                            <input type="number" min="0" max="11" value={lumpMonth} onChange={e => setLumpMonth(e.target.value)}
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="0" />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MO</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Result preview */}
@@ -317,6 +391,19 @@ const LoanCalculator = () => {
                         <span className="font-heading" style={{ color: accent ? ACCENT : "rgba(255,255,255,0.7)" }}>{value}</span>
                       </div>
                     ))}
+                    {result.lumpInterestSaved !== undefined && result.lumpInterestSaved > 0 && (
+                      <div className="pt-2 border-t border-white/10 space-y-2">
+                        <p className="text-[9px] font-heading uppercase tracking-widest text-white/30">Lump Sum Impact</p>
+                        <div className="flex justify-between items-center">
+                          <span className="text-white/30 text-xs font-heading uppercase tracking-widest">Interest Saved</span>
+                          <span className="font-heading text-green-400">{sym}{result.lumpInterestSaved.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-white/30 text-xs font-heading uppercase tracking-widest">Time Saved</span>
+                          <span className="font-heading text-green-400">{result.lumpTimeSaved?.toFixed(1)} yrs</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
@@ -341,8 +428,6 @@ const LoanCalculator = () => {
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <CalculatorStaticContent {...loanStaticContent} />
         </div>
-
-        <FinancialDisclosure variant="mortgage" />
 
         <FinancialDisclosure variant="general" />
 

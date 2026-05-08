@@ -19,34 +19,62 @@ const SavingsCalculator = () => {
   const [monthlyDeposit,    setMonthlyDeposit]    = useState("200");
   const [interestRate,      setInterestRate]      = useState("3");
   const [years,             setYears]             = useState("10");
+  const [months,            setMonths]            = useState("0");
   const [compoundFrequency, setCompoundFrequency] = useState("12");
   const [currency,          setCurrency]          = useState<Currency>("USD");
+  const [lumpEnabled,       setLumpEnabled]       = useState(false);
+  const [lumpAmount,        setLumpAmount]        = useState("5000");
+  const [lumpYear,          setLumpYear]          = useState("3");
+  const [lumpMonth,         setLumpMonth]         = useState("0");
   const [result, setResult] = useState<{
     finalBalance: number; totalDeposits: number; totalInterest: number;
+    lumpBoost?: number;
   } | null>(null);
 
   const calculateSavings = () => {
     const P   = parseFloat(initialDeposit);
     const PMT = parseFloat(monthlyDeposit);
     const r   = parseFloat(interestRate);
-    const t   = parseFloat(years);
+    const t   = (parseInt(years) || 0) + (parseInt(months) || 0) / 12;
     const n   = parseFloat(compoundFrequency);
     try {
       compoundInterestSchema.parse({ principal: P, rate: r, years: t, frequency: n, contribution: PMT });
     } catch (e: any) { toast.error(e.errors?.[0]?.message || "Invalid input values"); return; }
 
     const rD = r / 100;
-    const futureValueInitial  = P * Math.pow(1 + rD / n, n * t);
-    const monthlyRate         = rD / 12;
-    const months              = t * 12;
-    const futureValueMonthly  = PMT * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
-    const finalBalance        = futureValueInitial + futureValueMonthly;
-    const totalDeposits       = P + PMT * months;
+    const monthlyRate = rD / 12;
+    const totalMonths = Math.round(t * 12);
+
+    // Month-by-month to support lump sum injection
+    let balance = P;
+    let totalDeposits = P;
+    const lumpAtMonth = lumpEnabled ? (parseInt(lumpYear) || 0) * 12 + (parseInt(lumpMonth) || 0) : -1;
+    const L = lumpEnabled ? (parseFloat(lumpAmount) || 0) : 0;
+    let lumpApplied = false;
+
+    for (let m = 1; m <= totalMonths; m++) {
+      balance *= (1 + monthlyRate);
+      balance += PMT;
+      totalDeposits += PMT;
+      if (lumpEnabled && !lumpApplied && m === lumpAtMonth) {
+        balance += L;
+        totalDeposits += L;
+        lumpApplied = true;
+      }
+    }
+
+    const baseBalance = (() => {
+      let b = P;
+      for (let m = 1; m <= totalMonths; m++) { b *= (1 + monthlyRate); b += PMT; }
+      return b;
+    })();
+    const lumpBoost = lumpEnabled && lumpApplied ? Math.round((balance - baseBalance) * 100) / 100 : undefined;
 
     setResult({
-      finalBalance:  Math.round(finalBalance  * 100) / 100,
-      totalDeposits: Math.round(totalDeposits * 100) / 100,
-      totalInterest: Math.round((finalBalance - totalDeposits) * 100) / 100,
+      finalBalance:  Math.round(balance        * 100) / 100,
+      totalDeposits: Math.round(totalDeposits  * 100) / 100,
+      totalInterest: Math.round((balance - totalDeposits) * 100) / 100,
+      lumpBoost,
     });
   };
 
@@ -237,11 +265,19 @@ const SavingsCalculator = () => {
                   </div>
                   <div>
                     <label className={labelClass}>Time Period</label>
-                    <div className="relative">
-                      <input type="number" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
-                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
-                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">Yrs</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="relative">
+                        <input type="number" min="0" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YRS</span>
+                      </div>
+                      <div className="relative">
+                        <input type="number" min="0" max="11" value={months} onChange={e => setMonths(e.target.value)} placeholder="0"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MOS</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -262,6 +298,50 @@ const SavingsCalculator = () => {
                   </Select>
                 </div>
 
+                {/* Lump sum toggle */}
+                <div>
+                  <button type="button" onClick={() => setLumpEnabled(!lumpEnabled)}
+                    className="flex items-center gap-2 text-[10px] font-heading uppercase tracking-widest transition-colors"
+                    style={{ color: lumpEnabled ? ACCENT : "rgba(255,255,255,0.3)" }}>
+                    <span className="w-8 h-4 rounded-full flex items-center px-0.5 transition-all"
+                      style={{ background: lumpEnabled ? `${ACCENT}40` : "rgba(255,255,255,0.1)" }}>
+                      <span className="w-3 h-3 rounded-full transition-all"
+                        style={{ background: lumpEnabled ? ACCENT : "rgba(255,255,255,0.3)", transform: lumpEnabled ? "translateX(16px)" : "translateX(0)" }} />
+                    </span>
+                    Add One-Off Lump Sum
+                  </button>
+                  {lumpEnabled && (
+                    <div className="mt-3 space-y-3">
+                      <div>
+                        <label className={labelClass}>Lump Sum Amount</label>
+                        <div className="relative">
+                          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">{sym}</span>
+                          <input type="number" step="100" min="0" value={lumpAmount} onChange={e => setLumpAmount(e.target.value)}
+                            className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                            onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="5,000" />
+                        </div>
+                      </div>
+                      <div>
+                        <label className={labelClass}>Deposit at (into savings)</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="relative">
+                            <input type="number" min="0" value={lumpYear} onChange={e => setLumpYear(e.target.value)}
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="3" />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YR</span>
+                          </div>
+                          <div className="relative">
+                            <input type="number" min="0" max="11" value={lumpMonth} onChange={e => setLumpMonth(e.target.value)}
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium placeholder-white/20 focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} placeholder="0" />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MO</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 {/* Result preview */}
                 {result && (
                   <div className="pt-4 border-t border-white/10 space-y-3">
@@ -279,6 +359,12 @@ const SavingsCalculator = () => {
                         <span className="font-heading" style={{ color: accent ? ACCENT : "rgba(255,255,255,0.7)" }}>{value}</span>
                       </div>
                     ))}
+                    {result.lumpBoost !== undefined && result.lumpBoost > 0 && (
+                      <div className="flex justify-between items-center pt-2 border-t border-white/10">
+                        <span className="text-white/30 text-xs font-heading uppercase tracking-widest">Lump Sum Growth Boost</span>
+                        <span className="font-heading text-green-400">+{sym}{result.lumpBoost.toLocaleString()}</span>
+                      </div>
+                    )}
                   </div>
                 )}
 

@@ -19,20 +19,26 @@ const IsaCalculator = () => {
   const [monthlyContribution, setMonthlyContribution] = useState("200");
   const [growthRate, setGrowthRate] = useState("5");
   const [years, setYears] = useState("10");
+  const [termMonths, setTermMonths] = useState("0");
   const [isaType, setIsaType] = useState<IsaType>("cash");
+  const [lumpEnabled, setLumpEnabled] = useState(false);
+  const [lumpAmount, setLumpAmount] = useState("5000");
+  const [lumpYear, setLumpYear] = useState("3");
+  const [lumpMonth, setLumpMonth] = useState("0");
   const [result, setResult] = useState<{
     finalValue: number;
     totalContributions: number;
     totalGrowth: number;
     totalBonus: number;
     taxSaved: number;
+    lumpBoost: number;
   } | null>(null);
 
   const calculateIsa = () => {
     const P = parseFloat(initialDeposit) || 0;
     const PMT = parseFloat(monthlyContribution) || 0;
     const r = parseFloat(growthRate);
-    const t = parseFloat(years);
+    const t = (parseInt(years) || 0) + (parseInt(termMonths) || 0) / 12;
 
     if (isNaN(r) || isNaN(t) || r < 0 || t <= 0) {
       toast.error("Please enter valid positive numbers for rate and years.");
@@ -65,6 +71,9 @@ const IsaCalculator = () => {
       yearlyContributionTracker = P; // track how much contributed in year 1
     }
 
+    const lumpAtMonth = lumpEnabled ? (parseInt(lumpYear) || 0) * 12 + (parseInt(lumpMonth) || 0) : -1;
+    const L = lumpEnabled ? (parseFloat(lumpAmount) || 0) : 0;
+
     for (let m = 1; m <= months; m++) {
       // Apply monthly interest/growth
       balance *= (1 + monthlyRate);
@@ -72,6 +81,12 @@ const IsaCalculator = () => {
       // Add monthly contribution
       balance += PMT;
       totalContributions += PMT;
+
+      // One-off lump sum injection
+      if (lumpEnabled && m === lumpAtMonth) {
+        balance += L;
+        totalContributions += L;
+      }
 
       // LISA bonus logic
       if (isaType === "lisa") {
@@ -95,13 +110,25 @@ const IsaCalculator = () => {
     }
 
     const totalGrowth = balance - totalContributions - totalBonus;
+    const taxSaved = Math.max(0, totalGrowth * 0.2);
 
-    // Tax saved vs non-ISA:
-    // Basic rate taxpayer: 20% on interest/growth above Personal Savings Allowance (£1,000)
-    // For simplicity we calculate total tax that WOULD be owed on the growth outside an ISA
-    // Using basic rate (20%) on all growth — conservative estimate
-    const taxableGrowth = totalGrowth;
-    const taxSaved = Math.max(0, taxableGrowth * 0.2);
+    // Compute lump boost: run again without lump to find difference
+    let lumpBoost = 0;
+    if (lumpEnabled && L > 0) {
+      let balBase = P; let contribBase = P; let bonusBase = 0;
+      let ycBase = 0;
+      if (isaType === "lisa") { const e = Math.min(P, 4000); bonusBase += e * 0.25; balBase += e * 0.25; ycBase = P; }
+      for (let m = 1; m <= months; m++) {
+        balBase *= (1 + monthlyRate); balBase += PMT; contribBase += PMT;
+        if (isaType === "lisa") {
+          ycBase += PMT;
+          const prev = ycBase - PMT;
+          if (prev < 4000) { const el = Math.min(PMT, 4000 - prev); bonusBase += el * 0.25; balBase += el * 0.25; }
+          if (m % 12 === 0) ycBase = 0;
+        }
+      }
+      lumpBoost = balance - balBase;
+    }
 
     setResult({
       finalValue: Math.round(balance * 100) / 100,
@@ -109,6 +136,7 @@ const IsaCalculator = () => {
       totalGrowth: Math.round(totalGrowth * 100) / 100,
       totalBonus: Math.round(totalBonus * 100) / 100,
       taxSaved: Math.round(taxSaved * 100) / 100,
+      lumpBoost: Math.round(lumpBoost * 100) / 100,
     });
   };
 
@@ -339,13 +367,63 @@ const IsaCalculator = () => {
                   </div>
                   <div>
                     <label className={labelClass}>Time Period</label>
-                    <div className="relative">
-                      <input type="number" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
-                        className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
-                        onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
-                      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">Yrs</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="relative">
+                        <input type="number" min="0" value={years} onChange={e => setYears(e.target.value)} placeholder="10"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">YRS</span>
+                      </div>
+                      <div className="relative">
+                        <input type="number" min="0" max="11" value={termMonths} onChange={e => setTermMonths(e.target.value)} placeholder="0"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">MOS</span>
+                      </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Lump Sum Toggle */}
+                <div className="border border-white/10 rounded-xl p-4 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/70 text-sm font-heading uppercase tracking-widest">One-Off Lump Sum</span>
+                    <button
+                      onClick={() => setLumpEnabled(v => !v)}
+                      className="relative w-11 h-6 rounded-full transition-colors duration-200"
+                      style={{ background: lumpEnabled ? ACCENT : "rgba(255,255,255,0.1)" }}
+                    >
+                      <span className="absolute top-1 left-1 w-4 h-4 rounded-full bg-white transition-transform duration-200"
+                        style={{ transform: lumpEnabled ? "translateX(20px)" : "translateX(0)" }} />
+                    </button>
+                  </div>
+                  {lumpEnabled && (
+                    <div className="space-y-3">
+                      <div className="relative">
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">£</span>
+                        <input type="number" value={lumpAmount} onChange={e => setLumpAmount(e.target.value)} placeholder="5000"
+                          className="w-full bg-black/40 border border-white/10 rounded-lg px-4 pl-8 py-3 text-white text-base font-medium focus:outline-none transition-all"
+                          onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                      </div>
+                      <div>
+                        <span className="text-white/40 text-xs font-heading uppercase tracking-widest">Apply at (into ISA)</span>
+                        <div className="grid grid-cols-2 gap-2 mt-1">
+                          <div className="relative">
+                            <input type="number" min="0" value={lumpYear} onChange={e => setLumpYear(e.target.value)} placeholder="3"
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">YR</span>
+                          </div>
+                          <div className="relative">
+                            <input type="number" min="0" max="11" value={lumpMonth} onChange={e => setLumpMonth(e.target.value)} placeholder="0"
+                              className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-3 text-white text-base font-medium focus:outline-none transition-all"
+                              onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+                            <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-sm">MO</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Result preview in form */}
@@ -360,6 +438,7 @@ const IsaCalculator = () => {
                       { label: "Growth", value: `£${result.totalGrowth.toLocaleString()}`, accent: true },
                       ...(isaType === "lisa" ? [{ label: "Gov Bonus", value: `£${result.totalBonus.toLocaleString()}`, accent: true }] : []),
                       { label: "Tax Saved", value: `£${result.taxSaved.toLocaleString()}`, accent: true },
+                      ...(lumpEnabled && result.lumpBoost > 0 ? [{ label: "Lump Sum Boost", value: `+£${result.lumpBoost.toLocaleString()}`, accent: true }] : []),
                     ].map(({ label, value, accent }) => (
                       <div key={label} className="flex justify-between items-center">
                         <span className="text-white/30 text-xs font-heading uppercase tracking-widest">{label}</span>

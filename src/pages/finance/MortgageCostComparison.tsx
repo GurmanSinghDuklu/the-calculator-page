@@ -14,6 +14,7 @@ interface DealInputs {
   rate: string;
   dealTermMonths: string;
   fullTermYears: string;
+  fullTermMonths: string;
   productFee: string;
   productFeeToBalance: boolean;
   valuationFee: string;
@@ -38,6 +39,7 @@ const DEFAULT_DEAL = (label: string): DealInputs => ({
   rate: label === "Deal A" ? "4.49" : "4.19",
   dealTermMonths: label === "Deal A" ? "26" : "62",
   fullTermYears: "25",
+  fullTermMonths: "0",
   productFee: label === "Deal A" ? "999" : "1499",
   productFeeToBalance: false,
   valuationFee: "300",
@@ -49,7 +51,7 @@ function calcDeal(d: DealInputs): DealResult | null {
   const balance = parseFloat(d.balance);
   const rate = parseFloat(d.rate);
   const dealMonths = parseInt(d.dealTermMonths);
-  const fullYears = parseFloat(d.fullTermYears);
+  const fullYears = parseFloat(d.fullTermYears) + (parseFloat(d.fullTermMonths) || 0) / 12;
   const productFee = parseFloat(d.productFee) || 0;
   const valuationFee = parseFloat(d.valuationFee) || 0;
   const legalFees = parseFloat(d.legalFees) || 0;
@@ -168,11 +170,23 @@ function DealCard({
         </div>
 
         <div>
-          <label className={labelClass}>Full Mortgage Term (Years)</label>
-          <input type="number" value={deal.fullTermYears} onChange={e => set("fullTermYears", e.target.value)}
-            placeholder="25" className={inputClass}
-            onFocus={e => (e.target.style.borderColor = accent)}
-            onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+          <label className={labelClass}>Full Mortgage Term</label>
+          <div className="grid grid-cols-2 gap-2">
+            <div className="relative">
+              <input type="number" min="0" value={deal.fullTermYears} onChange={e => set("fullTermYears", e.target.value)}
+                placeholder="25" className={inputClass}
+                onFocus={e => (e.target.style.borderColor = accent)}
+                onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">YRS</span>
+            </div>
+            <div className="relative">
+              <input type="number" min="0" max="11" value={deal.fullTermMonths} onChange={e => set("fullTermMonths", e.target.value)}
+                placeholder="0" className={inputClass}
+                onFocus={e => (e.target.style.borderColor = accent)}
+                onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
+              <span className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 font-heading text-xs pointer-events-none">MOS</span>
+            </div>
+          </div>
         </div>
 
         {/* Fees section */}
