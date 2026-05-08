@@ -1,4 +1,4 @@
-import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight } from "lucide-react";
+import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat } from "lucide-react";
 import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -74,6 +74,124 @@ const Index = () => {
     { title: "Grams to Tablespoons", path: "/converters/grams-to-tablespoons" },
     { title: "Ounces to Grams", path: "/converters/ounces-to-grams" },
     { title: "Teaspoons to ML", path: "/converters/teaspoons-to-ml" },
+  ];
+
+  const allFinanceCalcs = [
+    { title: "UK Salary Calculator", path: "/finance/salary", desc: "Take-home pay after tax and NI" },
+    { title: "Compound Interest", path: "/finance/compound-interest", desc: "How your money grows over time" },
+    { title: "Mortgage Calculator", path: "/finance/mortgage", desc: "Monthly mortgage repayments" },
+    { title: "Mortgage Overpayment", path: "/finance/mortgage-overpayment", desc: "Save interest by overpaying" },
+    { title: "Mortgage Cost Comparison", path: "/finance/mortgage-cost-comparison", desc: "Compare mortgage deals side by side" },
+    { title: "Weekly Mortgage", path: "/finance/weekly-mortgage", desc: "Weekly equivalent of your mortgage" },
+    { title: "Stamp Duty Calculator", path: "/finance/stamp-duty", desc: "SDLT on UK property purchases" },
+    { title: "Future House Value", path: "/finance/future-house-value", desc: "Project your property's future value" },
+    { title: "Loan Calculator", path: "/finance/loan", desc: "Monthly repayments on personal loans" },
+    { title: "Car Loan Calculator", path: "/finance/car-loan", desc: "Finance costs on a vehicle" },
+    { title: "Savings Calculator", path: "/finance/savings", desc: "Watch your savings pot grow" },
+    { title: "ISA Calculator", path: "/finance/isa-calculator", desc: "Cash ISA, Stocks & Shares and LISA" },
+    { title: "APY Calculator", path: "/finance/apy", desc: "Convert APR to AER and compare rates" },
+    { title: "Simple Interest", path: "/finance/simple-interest", desc: "Basic interest without compounding" },
+    { title: "Budget Calculator", path: "/finance/budget", desc: "Track income vs spending by category" },
+    { title: "VAT Calculator", path: "/finance/vat-calculator", desc: "Add or remove UK VAT instantly" },
+    { title: "Capital Gains Tax", path: "/finance/capital-gains-tax", desc: "CGT on UK assets and investments" },
+    { title: "Inheritance Tax", path: "/finance/inheritance-tax", desc: "IHT thresholds and liability" },
+    { title: "Retirement Calculator", path: "/finance/retirement", desc: "Plan pension and retirement income" },
+    { title: "US Salary Calculator", path: "/finance/us-salary", desc: "Federal tax, FICA and state tax" },
+    { title: "Credit Card Payoff", path: "/finance/credit-card-payoff", desc: "Time and cost to clear card debt" },
+    { title: "IRR Calculator", path: "/finance/irr", desc: "Internal rate of return on projects" },
+  ];
+
+  const allMiscCalcs = [
+    { title: "Percentage Calculator", path: "/misc/percentage", desc: "Percentage of, change, and difference" },
+    { title: "Age Calculator", path: "/misc/age", desc: "Exact age in years, months and days" },
+    { title: "Discount Calculator", path: "/misc/discount", desc: "Final price after any % discount" },
+    { title: "Tip Calculator", path: "/misc/tip", desc: "Split bills and calculate tips" },
+    { title: "BMI Calculator", path: "/misc/bmi-calculator", desc: "Body Mass Index and healthy range" },
+    { title: "Calorie Calculator", path: "/misc/calorie-calculator", desc: "Daily calorie needs by activity" },
+    { title: "Days From Today", path: "/misc/days-from-today", desc: "What date is N days from now?" },
+    { title: "Days Between Dates", path: "/misc/days-between-dates", desc: "Exact days between two dates" },
+    { title: "Months Between Dates", path: "/misc/months-between-dates", desc: "Months and days between dates" },
+    { title: "Hours Calculator", path: "/misc/hours-calculator", desc: "Add or subtract hours and minutes" },
+    { title: "Working Days Calculator", path: "/misc/working-days", desc: "Business days excluding weekends" },
+    { title: "Square Footage Calculator", path: "/misc/square-footage", desc: "Area in sq ft for any room or space" },
+    { title: "Cubic Yards Calculator", path: "/misc/cubic-yards", desc: "Volume for landscaping projects" },
+    { title: "Gravel Calculator", path: "/misc/gravel-calculator", desc: "Tonnes of gravel for a given area" },
+    { title: "Mulch Calculator", path: "/misc/mulch-calculator", desc: "Bags of mulch needed for garden beds" },
+    { title: "Concrete Calculator", path: "/misc/concrete-calculator", desc: "Cubic metres of concrete needed" },
+  ];
+
+  const allConverters = [
+    { title: "KM to Miles", path: "/converters/km-to-miles", desc: "Kilometres to miles conversion" },
+    { title: "Gallons to Litres", path: "/converters/gallons-to-litres", desc: "US and UK gallons to litres" },
+    { title: "ML to Oz", path: "/converters/ml-to-oz", desc: "Millilitres to fluid ounces" },
+    { title: "CM to Inches", path: "/converters/cm-to-inches", desc: "Centimetres to inches" },
+    { title: "Inches to CM", path: "/converters/inches-to-cm", desc: "Inches to centimetres" },
+    { title: "Metres to Feet", path: "/converters/metres-to-feet", desc: "Metres to feet and inches" },
+    { title: "LBS to KG", path: "/converters/lbs-to-kg", desc: "Pounds to kilograms" },
+    { title: "Stone to KG", path: "/converters/stone-to-kg", desc: "Stone and pounds to kilograms" },
+    { title: "Fahrenheit to Celsius", path: "/converters/fahrenheit-to-celsius", desc: "Temperature conversion" },
+    { title: "Cups to Grams", path: "/converters/cups-to-grams", desc: "Baking measurement conversion" },
+    { title: "Grams to Tablespoons", path: "/converters/grams-to-tablespoons", desc: "Cooking weight to volume" },
+    { title: "Ounces to Grams", path: "/converters/ounces-to-grams", desc: "Imperial to metric weight" },
+    { title: "Teaspoons to ML", path: "/converters/teaspoons-to-ml", desc: "Volume for recipes and medicine" },
+  ];
+
+  const blogPosts = [
+    { title: "The Mortgage Cheat Code", path: "/blog/mortgage-cheat-code", category: "Property" },
+    { title: "Weekly vs Monthly Investing — The $147k Difference", path: "/blog/weekly-vs-monthly-investing", category: "Investing" },
+    { title: "How Much Can I Borrow for a Mortgage?", path: "/blog/how-much-can-i-borrow-mortgage-uk", category: "Property" },
+    { title: "Fixed vs Tracker Mortgage", path: "/blog/fixed-vs-tracker-mortgage", category: "Property" },
+    { title: "What Is LTV on a Mortgage?", path: "/blog/what-is-ltv-mortgage", category: "Property" },
+    { title: "Pay Off Your Mortgage Early", path: "/blog/pay-off-mortgage-early", category: "Property" },
+    { title: "Stamp Duty UK 2025", path: "/blog/stamp-duty-uk-2025", category: "Property" },
+    { title: "First Time Buyer Guide UK 2025", path: "/blog/first-time-buyer-uk-2025", category: "Property" },
+    { title: "UK Tax Brackets 2025", path: "/blog/uk-tax-brackets-2025", category: "Tax" },
+    { title: "Personal Allowance UK", path: "/blog/personal-allowance-uk", category: "Tax" },
+    { title: "National Insurance 2025/26", path: "/blog/national-insurance-2025", category: "Tax" },
+    { title: "Mortgage & Interest Rates Explained", path: "/blog/mortgage-interest-rates", category: "Property" },
+    { title: "How Long to Pay Off a Mortgage?", path: "/blog/how-long-to-pay-off-mortgage", category: "Property" },
+    { title: "What Is a Good Salary UK?", path: "/blog/what-is-a-good-salary-uk", category: "Salary" },
+    { title: "How Much Should I Save Per Month?", path: "/blog/how-much-should-i-save-per-month", category: "Savings" },
+    { title: "What Is an ISA?", path: "/blog/what-is-an-isa", category: "Savings" },
+    { title: "How Much Do I Need to Retire?", path: "/blog/how-much-do-i-need-to-retire", category: "Retirement" },
+    { title: "What Is Compound Interest?", path: "/blog/what-is-compound-interest", category: "Investing" },
+    { title: "What Is Capital Gains Tax UK?", path: "/blog/what-is-capital-gains-tax-uk", category: "Tax" },
+    { title: "What Is Inheritance Tax UK?", path: "/blog/what-is-inheritance-tax-uk", category: "Tax" },
+    { title: "How to Calculate Percentage", path: "/blog/how-to-calculate-percentage", category: "Maths" },
+    { title: "What Is BMI?", path: "/blog/what-is-bmi", category: "Health" },
+    { title: "How to Save for a House Deposit", path: "/blog/how-to-save-for-a-house-deposit", category: "Property" },
+    { title: "What Is VAT UK?", path: "/blog/what-is-vat-uk", category: "Tax" },
+    { title: "How Much Is Stamp Duty 2025?", path: "/blog/how-much-is-stamp-duty-2025", category: "Property" },
+    { title: "What Is a Stocks & Shares ISA?", path: "/blog/what-is-a-stocks-and-shares-isa", category: "Investing" },
+  ];
+
+  const learnGuides = [
+    { title: "Your Financial Journey", path: "/learn/financial-journey", category: "Foundation" },
+    { title: "Where Does Your Money Go?", path: "/learn/where-money-goes", category: "Budgeting" },
+    { title: "The 50/30/20 Budget Rule", path: "/learn/50-30-20-budget", category: "Budgeting" },
+    { title: "Automate Your Finances", path: "/learn/automate-finances", category: "Budgeting" },
+    { title: "Build an Emergency Fund", path: "/learn/emergency-fund", category: "Savings" },
+    { title: "Calculator Formulas Guide", path: "/learn/calculator-formulas-guide", category: "Reference" },
+    { title: "Before You Invest", path: "/learn/before-you-invest", category: "Investing" },
+    { title: "Budgeting for Irregular Costs", path: "/learn/budget-irregular-costs", category: "Budgeting" },
+    { title: "Build Your Portfolio", path: "/learn/build-portfolio", category: "Investing" },
+    { title: "Choose a Savings Account", path: "/learn/choose-savings-account", category: "Savings" },
+    { title: "Understanding Credit Scores", path: "/learn/credit-scores", category: "Credit" },
+    { title: "The UK Debt Landscape", path: "/learn/debt-landscape", category: "Debt" },
+    { title: "Ethical Investing", path: "/learn/ethical-investing", category: "Investing" },
+    { title: "Financial Freedom", path: "/learn/financial-freedom", category: "Foundation" },
+    { title: "Your First £1,000", path: "/learn/first-1000", category: "Savings" },
+    { title: "The Inflation Guide", path: "/learn/inflation-guide", category: "Economics" },
+    { title: "The Interest Rate Impact", path: "/learn/interest-impact", category: "Economics" },
+    { title: "Investing Basics", path: "/learn/investing-basics", category: "Investing" },
+    { title: "Investing vs Trading", path: "/learn/investing-vs-trading", category: "Investing" },
+    { title: "Monthly Financial Dashboard", path: "/learn/monthly-dashboard", category: "Budgeting" },
+    { title: "Portfolio Rebalancing", path: "/learn/portfolio-rebalancing", category: "Investing" },
+    { title: "Protect Your Wealth", path: "/learn/protect-wealth", category: "Advanced" },
+    { title: "Snowball vs Avalanche Method", path: "/learn/snowball-avalanche", category: "Debt" },
+    { title: "Tax-Efficient Accounts", path: "/learn/tax-efficient-accounts", category: "Tax" },
+    { title: "Teach Kids About Money", path: "/learn/teach-money-skills", category: "Foundation" },
+    { title: "UK Finance Statistics", path: "/learn/uk-finance-statistics", category: "Reference" },
   ];
 
   const allCalculators = [...financeCalculators, ...homeCalculators, ...miscCalculators, ...converterCalculators];
@@ -314,6 +432,154 @@ const Index = () => {
 
         </div>
       </main>
+
+      {/* ── FULL CALCULATOR DIRECTORY ── */}
+
+      {/* Finance & Property */}
+      <section className="border-t border-dark-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                Finance <span className="text-accent-blue">&</span> Property
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Mortgages, tax, savings, loans and salary calculators</p>
+            </div>
+            <Link to="/categories/finance" className="hidden md:flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-accent-blue hover:text-white transition-colors">
+              View Category <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-dark-border">
+            {allFinanceCalcs.map(calc => (
+              <Link key={calc.path} to={calc.path}
+                className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex flex-col gap-1.5">
+                <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-blue transition-colors">{calc.title}</span>
+                <span className="text-xs text-white/40 font-sans leading-relaxed group-hover:text-white/60 transition-colors">{calc.desc}</span>
+                <ChevronRight className="h-3 w-3 text-accent-blue opacity-0 group-hover:opacity-100 transition-opacity mt-auto" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Everyday & Misc */}
+      <section className="border-t border-dark-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                Everyday <span className="text-accent-yellow">Calculators</span>
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Percentages, dates, health, construction and more</p>
+            </div>
+            <Link to="/categories/everyday" className="hidden md:flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-accent-yellow hover:text-white transition-colors">
+              View Category <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-dark-border">
+            {allMiscCalcs.map(calc => (
+              <Link key={calc.path} to={calc.path}
+                className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex flex-col gap-1.5">
+                <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-yellow transition-colors">{calc.title}</span>
+                <span className="text-xs text-white/40 font-sans leading-relaxed group-hover:text-white/60 transition-colors">{calc.desc}</span>
+                <ChevronRight className="h-3 w-3 text-accent-yellow opacity-0 group-hover:opacity-100 transition-opacity mt-auto" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Unit Converters */}
+      <section className="border-t border-dark-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                Unit <span className="text-accent-green">Converters</span>
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Length, weight, volume, temperature and cooking measurements</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-dark-border">
+            {allConverters.map(calc => (
+              <Link key={calc.path} to={calc.path}
+                className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex flex-col gap-1.5">
+                <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-green transition-colors">{calc.title}</span>
+                <span className="text-xs text-white/40 font-sans leading-relaxed group-hover:text-white/60 transition-colors">{calc.desc}</span>
+                <ChevronRight className="h-3 w-3 text-accent-green opacity-0 group-hover:opacity-100 transition-opacity mt-auto" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BLOG ── */}
+      <section className="border-t border-dark-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                From The <span className="text-accent-red">Blog</span>
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Guides, explainers and analysis on UK finance</p>
+            </div>
+            <Link to="/blog" className="hidden md:flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-accent-red hover:text-white transition-colors">
+              All Articles <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-dark-border">
+            {blogPosts.map(post => (
+              <Link key={post.path} to={post.path}
+                className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex items-start gap-4">
+                <FileText className="h-4 w-4 text-accent-red/40 group-hover:text-accent-red transition-colors mt-0.5 shrink-0" />
+                <div className="flex flex-col gap-1 min-w-0">
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-red/60 transition-colors">{post.category}</span>
+                  <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-red transition-colors leading-tight">{post.title}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 flex justify-center md:justify-start">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 transition-all">
+              View All Blog Articles <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LEARN GUIDES ── */}
+      <section className="border-t border-dark-border py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                Learn <span className="text-accent-cyan">Guides</span>
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Step-by-step financial education from basics to advanced</p>
+            </div>
+            <Link to="/learn" className="hidden md:flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-accent-cyan hover:text-white transition-colors">
+              All Guides <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-dark-border">
+            {learnGuides.map(guide => (
+              <Link key={guide.path} to={guide.path}
+                className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex items-start gap-4">
+                <BookOpen className="h-4 w-4 text-accent-cyan/40 group-hover:text-accent-cyan transition-colors mt-0.5 shrink-0" />
+                <div className="flex flex-col gap-1 min-w-0">
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-cyan/60 transition-colors">{guide.category}</span>
+                  <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-cyan transition-colors leading-tight">{guide.title}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 flex justify-center md:justify-start">
+            <Link to="/learn" className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 transition-all">
+              View All Guides <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-black text-white pt-20 border-t border-dark-border mt-auto">
