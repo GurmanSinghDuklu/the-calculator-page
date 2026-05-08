@@ -12,10 +12,10 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const popularCalculatorsAndConversions = [
-    { title: "UK Salary Calculator", description: "Calculate take-home pay after tax and NI", icon: Wallet, path: "/finance/salary", badge: "", color: "text-accent-blue", border: "hover:border-accent-blue", accent: "group-hover:bg-accent-blue/5" },
-    { title: "Compound Interest", description: "See how your investments grow over time", icon: TrendingUp, path: "/finance/compound-interest", badge: "", color: "text-accent-green", border: "hover:border-accent-green", accent: "group-hover:bg-accent-green/5" },
-    { title: "Mortgage Payment Calculator", description: "Calculate monthly mortgage payments", icon: Home, path: "/finance/mortgage", badge: "", color: "text-accent-yellow", border: "hover:border-accent-yellow", accent: "group-hover:bg-accent-yellow/5" },
-    { title: "Retirement Calculator", description: "Plan your retirement income and pension", icon: PiggyBank, path: "/finance/retirement", badge: "Popular", color: "text-accent-red", border: "hover:border-accent-red", accent: "group-hover:bg-accent-red/5" }
+    { title: "UK Salary Calculator", description: "Calculate take-home pay after tax and NI", icon: Wallet, path: "/finance/salary", badge: "", color: "text-accent-blue", border: "hover:border-accent-blue", accent: "group-hover:bg-accent-blue/10" },
+    { title: "Compound Interest", description: "See how your investments grow over time", icon: TrendingUp, path: "/finance/compound-interest", badge: "", color: "text-accent-green", border: "hover:border-accent-green", accent: "group-hover:bg-accent-green/10" },
+    { title: "Mortgage Payment Calculator", description: "Calculate monthly mortgage payments", icon: Home, path: "/finance/mortgage", badge: "", color: "text-accent-yellow", border: "hover:border-accent-yellow", accent: "group-hover:bg-accent-yellow/10" },
+    { title: "Retirement Calculator", description: "Plan your retirement income and pension", icon: PiggyBank, path: "/finance/retirement", badge: "Popular", color: "text-accent-red", border: "hover:border-accent-red", accent: "group-hover:bg-accent-red/10" }
   ];
 
   const homeCalculators = [
@@ -221,7 +221,7 @@ const Index = () => {
       <section className="relative pt-14 pb-10 px-6 overflow-hidden border-b border-dark-border">
         {/* Subtle background glow */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent-blue/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent-blue/12 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -332,13 +332,13 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Property Section */}
-          <div className="group border border-dark-border hover:border-accent-red/40 transition-colors duration-300 p-6">
+          <div className="group border border-dark-border hover:border-accent-red/60 transition-colors duration-300 p-6">
             <Link to="/categories/property" className="block mb-5">
               <div className="flex justify-between items-center">
                 <h2 className="font-display text-4xl text-white group-hover:text-accent-red transition-colors duration-300">Property</h2>
                 <ArrowRight className="h-6 w-6 text-accent-red opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
               </div>
-              <div className="h-px bg-accent-red/20 mt-3 group-hover:bg-accent-red/60 transition-colors" />
+              <div className="h-px bg-accent-red/40 mt-3 group-hover:bg-accent-red/80 transition-colors" />
             </Link>
             <ul className="space-y-1.5">
               {homeCalculators.map(calc => (
@@ -353,13 +353,13 @@ const Index = () => {
           </div>
 
           {/* Finance Section */}
-          <div className="group border border-dark-border hover:border-accent-blue/40 transition-colors duration-300 p-6">
+          <div className="group border border-dark-border hover:border-accent-blue/60 transition-colors duration-300 p-6">
             <Link to="/categories/finance" className="block mb-5">
               <div className="flex justify-between items-center">
                 <h2 className="font-display text-4xl text-white group-hover:text-accent-blue transition-colors duration-300">Finance</h2>
                 <ArrowRight className="h-6 w-6 text-accent-blue opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
               </div>
-              <div className="h-px bg-accent-blue/20 mt-3 group-hover:bg-accent-blue/60 transition-colors" />
+              <div className="h-px bg-accent-blue/40 mt-3 group-hover:bg-accent-blue/80 transition-colors" />
             </Link>
             <ul className="space-y-1.5">
               {financeCalculators.slice(0, 6).map(calc => (
@@ -379,13 +379,13 @@ const Index = () => {
           </div>
 
           {/* Everyday Section */}
-          <div className="group border border-dark-border hover:border-accent-yellow/40 transition-colors duration-300 p-6">
+          <div className="group border border-dark-border hover:border-accent-yellow/60 transition-colors duration-300 p-6">
             <Link to="/categories/everyday" className="block mb-5">
               <div className="flex justify-between items-center">
                 <h2 className="font-display text-4xl text-white group-hover:text-accent-yellow transition-colors duration-300">Everyday</h2>
                 <ArrowRight className="h-6 w-6 text-accent-yellow opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
               </div>
-              <div className="h-px bg-accent-yellow/20 mt-3 group-hover:bg-accent-yellow/60 transition-colors" />
+              <div className="h-px bg-accent-yellow/40 mt-3 group-hover:bg-accent-yellow/80 transition-colors" />
             </Link>
             <ul className="space-y-1.5">
               {miscCalculators.slice(0, 8).map(calc => (
@@ -405,13 +405,13 @@ const Index = () => {
           </div>
 
           {/* Converters Section */}
-          <div className="group border border-dark-border hover:border-accent-green/40 transition-colors duration-300 p-6">
+          <div className="group border border-dark-border hover:border-accent-green/60 transition-colors duration-300 p-6">
             <Link to="/categories/everyday" className="block mb-5">
               <div className="flex justify-between items-center">
                 <h2 className="font-display text-4xl text-white group-hover:text-accent-green transition-colors duration-300">Converters</h2>
                 <ArrowRight className="h-6 w-6 text-accent-green opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
               </div>
-              <div className="h-px bg-accent-green/20 mt-3 group-hover:bg-accent-green/60 transition-colors" />
+              <div className="h-px bg-accent-green/40 mt-3 group-hover:bg-accent-green/80 transition-colors" />
             </Link>
             <ul className="space-y-1.5">
               {converterCalculators.slice(0, 8).map(calc => (
@@ -436,8 +436,9 @@ const Index = () => {
       {/* ── FULL CALCULATOR DIRECTORY ── */}
 
       {/* Finance & Property */}
-      <section className="border-t border-dark-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-[500px] h-[300px] bg-accent-blue/5 rounded-full blur-3xl pointer-events-none -translate-x-1/4 -translate-y-1/4" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
@@ -463,8 +464,9 @@ const Index = () => {
       </section>
 
       {/* Everyday & Misc */}
-      <section className="border-t border-dark-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-accent-yellow/4 rounded-full blur-3xl pointer-events-none translate-x-1/3" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
@@ -490,8 +492,9 @@ const Index = () => {
       </section>
 
       {/* Unit Converters */}
-      <section className="border-t border-dark-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[300px] bg-accent-green/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
@@ -514,8 +517,9 @@ const Index = () => {
       </section>
 
       {/* ── BLOG ── */}
-      <section className="border-t border-dark-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[250px] bg-accent-red/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
@@ -531,9 +535,9 @@ const Index = () => {
             {blogPosts.map(post => (
               <Link key={post.path} to={post.path}
                 className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex items-start gap-4">
-                <FileText className="h-4 w-4 text-accent-red/40 group-hover:text-accent-red transition-colors mt-0.5 shrink-0" />
+                <FileText className="h-4 w-4 text-accent-red/60 group-hover:text-accent-red transition-colors mt-0.5 shrink-0" />
                 <div className="flex flex-col gap-1 min-w-0">
-                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-red/60 transition-colors">{post.category}</span>
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-red/80 transition-colors">{post.category}</span>
                   <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-red transition-colors leading-tight">{post.title}</span>
                 </div>
               </Link>
@@ -548,8 +552,9 @@ const Index = () => {
       </section>
 
       {/* ── LEARN GUIDES ── */}
-      <section className="border-t border-dark-border py-16 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-[500px] h-[300px] bg-accent-cyan/5 rounded-full blur-3xl pointer-events-none -translate-x-1/4" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-baseline justify-between mb-10">
             <div>
               <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
@@ -565,9 +570,9 @@ const Index = () => {
             {learnGuides.map(guide => (
               <Link key={guide.path} to={guide.path}
                 className="group bg-dark-bg hover:bg-dark-card p-5 transition-all duration-200 flex items-start gap-4">
-                <BookOpen className="h-4 w-4 text-accent-cyan/40 group-hover:text-accent-cyan transition-colors mt-0.5 shrink-0" />
+                <BookOpen className="h-4 w-4 text-accent-cyan/60 group-hover:text-accent-cyan transition-colors mt-0.5 shrink-0" />
                 <div className="flex flex-col gap-1 min-w-0">
-                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-cyan/60 transition-colors">{guide.category}</span>
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-white/30 group-hover:text-accent-cyan/80 transition-colors">{guide.category}</span>
                   <span className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-cyan transition-colors leading-tight">{guide.title}</span>
                 </div>
               </Link>
