@@ -6,6 +6,7 @@ import { SocialShare } from "@/components/SocialShare";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import { SEO } from "@/components/SEO";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { BackToTop } from "@/components/BackToTop";
 import Logo from "@/components/Logo";
 import { Home, Lock, ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -76,7 +77,7 @@ export const BlogLayout = ({
           <div className="flex items-center gap-4">
             <Link
               to="/"
-              className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/30 hover:text-white transition-colors"
+              className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors"
             >
               <Home className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Home</span>
@@ -224,6 +225,7 @@ export const BlogLayout = ({
           </Link>
         </div>
       </div>
+      <BackToTop />
     </div>
   );
 };

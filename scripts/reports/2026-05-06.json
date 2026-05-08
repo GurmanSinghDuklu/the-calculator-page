@@ -1,0 +1,2669 @@
+{
+  "date": "2026-05-06",
+  "startTime": "2026-05-06T02:11:45.156Z",
+  "status": "success",
+  "totalPages": 70,
+  "pagesOptimized": 0,
+  "errors": [
+    "Failed to analyze competitor: www.thecalculatorsite.com",
+    "Failed to analyze competitor: omnicalculator.com",
+    "Failed to analyze competitor: calculator.net",
+    "Failed to generate SEO for page home",
+    "Failed to generate SEO for page learn-hub",
+    "Failed to generate SEO for page formulas",
+    "Failed to generate SEO for page finance-category",
+    "Failed to generate SEO for page misc-category",
+    "Failed to generate SEO for page compound-interest",
+    "Failed to generate SEO for page mortgage",
+    "Failed to generate SEO for page loan",
+    "Failed to generate SEO for page savings",
+    "Failed to generate SEO for page roi",
+    "Failed to generate SEO for page retirement",
+    "Failed to generate SEO for page investment",
+    "Failed to generate SEO for page simple-interest",
+    "Failed to generate SEO for page apr-apy",
+    "Failed to generate SEO for page break-even",
+    "Failed to generate SEO for page future-value",
+    "Failed to generate SEO for page present-value",
+    "Failed to generate SEO for page annuity",
+    "Failed to generate SEO for page amortization",
+    "Failed to generate SEO for page debt-payoff",
+    "Failed to generate SEO for page net-worth",
+    "Failed to generate SEO for page tip",
+    "Failed to generate SEO for page gratuity",
+    "Failed to generate SEO for page cagr",
+    "Failed to generate SEO for page lumpsum",
+    "Failed to generate SEO for page percentage",
+    "Failed to generate SEO for page days-between",
+    "Failed to generate SEO for page bmi",
+    "Failed to generate SEO for page age",
+    "Failed to generate SEO for page average",
+    "Failed to generate SEO for page even-odd",
+    "Failed to generate SEO for page length-converter",
+    "Failed to generate SEO for page weight-converter",
+    "Failed to generate SEO for page temperature-converter",
+    "Failed to generate SEO for page volume-converter",
+    "Failed to generate SEO for page learn-50-30-20",
+    "Failed to generate SEO for page learn-compound-interest",
+    "Failed to generate SEO for page learn-simple-interest",
+    "Failed to generate SEO for page learn-mortgage",
+    "Failed to generate SEO for page learn-roi",
+    "Failed to generate SEO for page learn-amortization",
+    "Failed to generate SEO for page learn-savings",
+    "Failed to generate SEO for page learn-retirement",
+    "Failed to generate SEO for page learn-investment",
+    "Failed to generate SEO for page learn-debt",
+    "Failed to generate SEO for page learn-budgeting",
+    "Failed to generate SEO for page learn-credit",
+    "Failed to generate SEO for page learn-insurance",
+    "Failed to generate SEO for page learn-taxes",
+    "Failed to generate SEO for page learn-stocks",
+    "Failed to generate SEO for page learn-bonds",
+    "Failed to generate SEO for page learn-mutual-funds",
+    "Failed to generate SEO for page learn-crypto",
+    "Failed to generate SEO for page learn-real-estate",
+    "Failed to generate SEO for page learn-etf",
+    "Failed to generate SEO for page learn-inflation",
+    "Failed to generate SEO for page learn-forex",
+    "Failed to generate SEO for page learn-options",
+    "Failed to generate SEO for page learn-diversification",
+    "Failed to generate SEO for page learn-financial-freedom",
+    "Failed to generate SEO for page blog-index",
+    "Failed to generate SEO for page blog-mortgage-cheat",
+    "Failed to generate SEO for page blog-early-payoff",
+    "Failed to generate SEO for page blog-compound-growth",
+    "Failed to generate SEO for page blog-financial-tips",
+    "Failed to generate SEO for page about",
+    "Failed to generate SEO for page privacy",
+    "Failed to generate SEO for page cookies",
+    "Failed to generate SEO for page terms",
+    "Failed to generate SEO for page disclaimer"
+  ],
+  "warnings": [
+    "Google ping failed for https://www.thecalculatorapp.org: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app/mortgage-calculator-app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app/compound-interest-app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app/salary-calculator-app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app/savings-calculator-app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/app/percentage-calculator-app: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/categories/finance: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/categories/property: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/categories/everyday: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/compound-interest: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/salary: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/retirement: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/savings: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/loan: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/apy: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/budget: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/car-loan: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/simple-interest: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/stamp-duty: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage-cost-comparison: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/vat-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/isa-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/capital-gains-tax: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/inheritance-tax: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/weekly-mortgage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage-overpayment: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/future-house-value: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/cashback: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/credit-card-payoff: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/how-long-to-save: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/how-much-to-save: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/irr: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/finance/multi-card-payoff: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/percentage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/percentage-of: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/percentage-change: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/age: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/discount: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/tip: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/working-days: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/date: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/length: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/weight: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/temperature: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/universal: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/stone-to-kg: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/learn: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/financial-journey: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/50-30-20-budget: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/emergency-fund: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/investing-basics: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/interest-impact: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/debt-landscape: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/snowball-avalanche: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/first-1000: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/automate-finances: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/before-you-invest: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/budget-irregular-costs: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/build-portfolio: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/calculator-formulas-guide: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/choose-savings-account: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/credit-scores: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/ethical-investing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/financial-freedom: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/inflation-guide: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/investing-vs-trading: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/monthly-dashboard: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/portfolio-rebalancing: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/protect-wealth: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/tax-efficient-accounts: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/teach-money-skills: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/where-money-goes: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/learn/uk-finance-statistics: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/mortgage-cheat-code: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/formulas: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/about: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/privacy: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/cookies: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/terms: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/disclaimer: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/bmi-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/calorie-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/cups-to-grams: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/cm-to-inches: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/7: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/10: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/14: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/15: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/20: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/21: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/25: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/28: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/30: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/35: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/40: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/45: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/50: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/55: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/60: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/70: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/75: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/80: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/90: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/100: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/120: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/130: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/150: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/160: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/180: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/200: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/210: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/240: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/250: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/270: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/300: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/330: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/365: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/km-to-miles: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/gallons-to-litres: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/ml-to-oz: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/grams-to-tablespoons: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/days-between-dates: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/hours-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/lbs-to-kg: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/metres-to-feet: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/inches-to-cm: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/fahrenheit-to-celsius: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/ounces-to-grams: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/converters/teaspoons-to-ml: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/months-between-dates: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/square-footage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/gravel-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/cubic-yards: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/mulch-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/misc/concrete-calculator: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-can-i-borrow-mortgage-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/fixed-vs-tracker-mortgage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-ltv-mortgage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/pay-off-mortgage-early: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/stamp-duty-uk-2025: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/first-time-buyer-uk-2025: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/mortgage-interest-rates: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/uk-tax-brackets-2025: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/personal-allowance-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/national-insurance-2025: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-long-to-pay-off-mortgage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-a-good-salary-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-should-i-save-per-month: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-an-isa: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-do-i-need-to-retire: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-compound-interest: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-capital-gains-tax-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-inheritance-tax-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-to-calculate-percentage: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-bmi: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-to-save-for-a-house-deposit: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-vat-uk: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-is-stamp-duty-2025: Permission denied. Failed to verify the URL ownership.",
+    "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-a-stocks-and-shares-isa: Permission denied. Failed to verify the URL ownership.",
+    "Bing batch 1 failed: 400 {\"ErrorCode\":2,\"Message\":\"ERROR!!! Quota remaining for today: 100, Submitted: 163\"}"
+  ],
+  "competitorAnalysis": {
+    "fetchedAt": "2026-05-06T04:36:41.188Z",
+    "competitors": [],
+    "cachedFromDays": 0
+  },
+  "sitemapUpdated": true,
+  "googlePinged": false,
+  "bingPinged": false,
+  "logs": [
+    {
+      "timestamp": "2026-05-06T02:11:46.883Z",
+      "level": "info",
+      "message": "🚀 Starting SEO Agent..."
+    },
+    {
+      "timestamp": "2026-05-06T02:11:46.883Z",
+      "level": "info",
+      "message": "Total pages to optimize: 70"
+    },
+    {
+      "timestamp": "2026-05-06T02:11:46.883Z",
+      "level": "info",
+      "message": "📊 Phase 1: Competitor Analysis"
+    },
+    {
+      "timestamp": "2026-05-06T02:11:46.884Z",
+      "level": "info",
+      "message": "Refreshing competitor analysis (cache expired)"
+    },
+    {
+      "timestamp": "2026-05-06T02:11:46.884Z",
+      "level": "info",
+      "message": "Analyzing competitor: www.thecalculatorsite.com"
+    },
+    {
+      "timestamp": "2026-05-06T02:11:47.575Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: www.thecalculatorsite.com",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakWDVsDoDg6VV8W4YcN3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakWDVsDoDg6VV8W4YcN3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T02:11:47.576Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-05-06T02:18:50.677Z",
+      "level": "info",
+      "message": "Analyzing competitor: omnicalculator.com"
+    },
+    {
+      "timestamp": "2026-05-06T02:18:52.978Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: omnicalculator.com",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakWkqQakx3ovKLFrLfEV",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakWkqQakx3ovKLFrLfEV"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T02:18:52.979Z",
+      "level": "info",
+      "message": "Waiting 2 minutes before next competitor (rate limit)..."
+    },
+    {
+      "timestamp": "2026-05-06T04:36:08.316Z",
+      "level": "info",
+      "message": "Analyzing competitor: calculator.net"
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.180Z",
+      "level": "error",
+      "message": "Failed to analyze competitor: calculator.net",
+      "data": {
+        "error": {}
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.187Z",
+      "level": "info",
+      "message": "Competitor analysis cached"
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.188Z",
+      "level": "info",
+      "message": "Generated keyword gap analysis",
+      "data": {
+        "totalCompetitorKeywords": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.188Z",
+      "level": "info",
+      "message": "Found 0 keyword opportunities"
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.188Z",
+      "level": "info",
+      "message": "✨ Phase 2: SEO Optimization"
+    },
+    {
+      "timestamp": "2026-05-06T04:36:41.190Z",
+      "level": "info",
+      "message": "Optimizing 70 pages for SEO..."
+    },
+    {
+      "timestamp": "2026-05-06T04:37:01.891Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page home",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhHscp2q6JwubQWmQPX",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhHscp2q6JwubQWmQPX"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:02.135Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-hub",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhHtsDuPFZMqShaH6c6",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhHtsDuPFZMqShaH6c6"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:02.319Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page formulas",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhHuj4Zt836dtffmVVm",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhHuj4Zt836dtffmVVm"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:02.544Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page finance-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhHvafFp6mHuVXubrae",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhHvafFp6mHuVXubrae"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:02.725Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page misc-category",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhHwUV3Q1FgoUKksSVa",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhHwUV3Q1FgoUKksSVa"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:03.918Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJ2ZKyL6Htpu2i4xUY",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJ2ZKyL6Htpu2i4xUY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:04.134Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJ3PBcdQn5jFVi8Nmg",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJ3PBcdQn5jFVi8Nmg"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:04.334Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page loan",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJ4J1DvNSRdS4vVS49",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJ4J1DvNSRdS4vVS49"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:04.773Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJ5e7ZeS5FRirBqNq3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJ5e7ZeS5FRirBqNq3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:04.958Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJ71DdhtnyzC72pRG2",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJ71DdhtnyzC72pRG2"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:06.231Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJC7oMAMD1X3QuCBEQ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJC7oMAMD1X3QuCBEQ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:06.420Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJDEXLD3kYHJ5GP2H7",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJDEXLD3kYHJ5GP2H7"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:07.389Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJF7PBnDyTfLgAUkdW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJF7PBnDyTfLgAUkdW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:07.741Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page apr-apy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJJGt7se1VE8xv7yrz",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJJGt7se1VE8xv7yrz"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:07.985Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page break-even",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJKy5UQAPK2HR7AqyC",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJKy5UQAPK2HR7AqyC"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:09.239Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page future-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJR3BGxBrDB21Axofe",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJR3BGxBrDB21Axofe"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:09.448Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page present-value",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJSCdJT8MR4bfjEcvY",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJSCdJT8MR4bfjEcvY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:09.978Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page annuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJUUJYcUsqQFrPMrwb",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJUUJYcUsqQFrPMrwb"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:10.165Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJVHv7eLU4u4v3EMCc",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJVHv7eLU4u4v3EMCc"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:10.354Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page debt-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJW53WyBAeZC4DhwjU",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJW53WyBAeZC4DhwjU"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:11.539Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page net-worth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJbA91GjYib7euMDCk",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJbA91GjYib7euMDCk"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:11.720Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page tip",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJbwGRWn3cMUFZevXx",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJbwGRWn3cMUFZevXx"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:11.901Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page gratuity",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJcieSbdk5JdEeDfzh",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJcieSbdk5JdEeDfzh"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:12.258Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cagr",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJdUHctCpxyonmVGrf",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJdUHctCpxyonmVGrf"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:12.451Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page lumpsum",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJf33yzvosxc8SbHKA",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJf33yzvosxc8SbHKA"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:13.643Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page percentage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJkANPxtEpM6QVH1kN",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJkANPxtEpM6QVH1kN"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:13.842Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page days-between",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJkyV4YwrG9tnWpiwF",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJkyV4YwrG9tnWpiwF"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:14.023Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page bmi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJmmrhhvMaNnAxa83e",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJmmrhhvMaNnAxa83e"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:14.212Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page age",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJnayJ1CvCJSPXXzwD",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJnayJ1CvCJSPXXzwD"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:14.392Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page average",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJoMrcGpwFNYVZvE4E",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJoMrcGpwFNYVZvE4E"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:15.596Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page even-odd",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJtUSEyxWLYsp2iG1R",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJtUSEyxWLYsp2iG1R"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:15.776Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page length-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJuHJMshx7m6ajbW3c",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJuHJMshx7m6ajbW3c"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:15.952Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page weight-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJv2wyfnNQpMPRcXDH",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJv2wyfnNQpMPRcXDH"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:16.139Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page temperature-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJvpa48HsBC5qiCT6f",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJvpa48HsBC5qiCT6f"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:16.320Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page volume-converter",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhJwbxMCypY6bPagHgB",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhJwbxMCypY6bPagHgB"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:17.503Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-50-30-20",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhK2f4UsmZ2pR5DPYk3",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhK2f4UsmZ2pR5DPYk3"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:18.057Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-compound-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhK3Z8VXTEgf5H4BXas",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhK3Z8VXTEgf5H4BXas"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:18.326Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-simple-interest",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhK5umL3oKrYVaRQuHk",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhK5umL3oKrYVaRQuHk"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:18.722Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mortgage",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhK7V2MSf2nKSKPW2Tm",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhK7V2MSf2nKSKPW2Tm"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:19.010Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-roi",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhK8gCsxbzkCNEsW96U",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhK8gCsxbzkCNEsW96U"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:20.217Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-amortization",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhKEGomy9ttpJ5ADLHp",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhKEGomy9ttpJ5ADLHp"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:20.505Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-savings",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhKFS1QAJrwH44zhj2U",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhKFS1QAJrwH44zhj2U"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:20.680Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-retirement",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhKGFsLmZRW7aQG7iRr",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhKGFsLmZRW7aQG7iRr"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:20.889Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-investment",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhKH9CYNMgaVuwjLGtv",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhKH9CYNMgaVuwjLGtv"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:37:21.072Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-debt",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakhKHuLJUgushKdpNsx9",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakhKHuLJUgushKdpNsx9"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:53.290Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-budgeting",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGEUMnJ7u3HhHDp8Ar",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGEUMnJ7u3HhHDp8Ar"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:53.709Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-credit",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGFoyW6hipae95fpL4",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGFoyW6hipae95fpL4"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:53.893Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-insurance",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGH39YYFrnicJjLMim",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGH39YYFrnicJjLMim"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:54.094Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-taxes",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGHtjnbW7uCpnmEFtN",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGHtjnbW7uCpnmEFtN"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:54.270Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-stocks",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGJg7nqWJQbeuKH1zK",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGJg7nqWJQbeuKH1zK"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:55.534Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-bonds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGPjifoUt8JJE2vEVW",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGPjifoUt8JJE2vEVW"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:55.787Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-mutual-funds",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGQuRGmKzHpfKVLGfr",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGQuRGmKzHpfKVLGfr"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:56.046Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-crypto",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGRwBSVHNamTn5aY8n",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGRwBSVHNamTn5aY8n"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:56.305Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-real-estate",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGT2AViHkt8KCJoVmh",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGT2AViHkt8KCJoVmh"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:56.624Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-etf",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGURkkaFpHBsbvnp27",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGURkkaFpHBsbvnp27"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:57.808Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-inflation",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGZnTpHcYL4bvph3ri",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGZnTpHcYL4bvph3ri"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:57.991Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-forex",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGaZ6XDmqvpVhppQgQ",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGaZ6XDmqvpVhppQgQ"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:58.195Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-options",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGbMDh1Kmu9ezwaBkY",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGbMDh1Kmu9ezwaBkY"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:58.387Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-diversification",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGcEoU6GtixKZ6pj8g",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGcEoU6GtixKZ6pj8g"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:58.587Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page learn-financial-freedom",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGd3fvCohY2Gwdb6Tj",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGd3fvCohY2Gwdb6Tj"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:59.772Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-index",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGiCEM1pHzkJyKa8Ph",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGiCEM1pHzkJyKa8Ph"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:02:59.983Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-mortgage-cheat",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGj459qNL6tLPavytt",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGj459qNL6tLPavytt"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:00.223Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-early-payoff",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGk5aysqy74TZcdNbG",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGk5aysqy74TZcdNbG"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:00.499Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-compound-growth",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGm6cAdmK19179QtdD",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGm6cAdmK19179QtdD"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:00.838Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page blog-financial-tips",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGn882YcFcMbzoaSrU",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGn882YcFcMbzoaSrU"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:02.078Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page about",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGstPQNsin4fqgsPub",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGstPQNsin4fqgsPub"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:02.321Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page privacy",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGtqgtvBPY1vnvowTf",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGtqgtvBPY1vnvowTf"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:02.642Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page cookies",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGuy9j1gvWq42Gm7zD",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGuy9j1gvWq42Gm7zD"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:02.865Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page terms",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGwEJk3JEQbEJq6YX2",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGwEJk3JEQbEJq6YX2"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.049Z",
+      "level": "error",
+      "message": "Failed to generate SEO for page disclaimer",
+      "data": {
+        "error": {
+          "status": 400,
+          "headers": {},
+          "requestID": "req_011CakjGxCbiZ61qGMELAkNT",
+          "error": {
+            "type": "error",
+            "error": {
+              "type": "invalid_request_error",
+              "message": "Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."
+            },
+            "request_id": "req_011CakjGxCbiZ61qGMELAkNT"
+          }
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.049Z",
+      "level": "info",
+      "message": "SEO optimization complete",
+      "data": {
+        "optimized": 0
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.054Z",
+      "level": "info",
+      "message": "Optimized 0 pages"
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.056Z",
+      "level": "info",
+      "message": "SEO data file updated",
+      "data": {
+        "pages": 71
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.056Z",
+      "level": "info",
+      "message": "🔧 Phase 3: Technical SEO Updates"
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.065Z",
+      "level": "info",
+      "message": "Sitemap updated with fresh dates",
+      "data": {
+        "date": "2026-05-06",
+        "path": "/Users/mandeepduklu/Downloads/thecalculatorpage-main/public/sitemap.xml"
+      }
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.065Z",
+      "level": "info",
+      "message": "📡 Phase 4: Notifying Search Engines"
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.066Z",
+      "level": "info",
+      "message": "Preparing to ping 163 URLs to search engines"
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.328Z",
+      "level": "info",
+      "message": "✓ Authenticated with Google Indexing API"
+    },
+    {
+      "timestamp": "2026-05-06T05:03:03.586Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:04.671Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:05.753Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app/mortgage-calculator-app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:06.838Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app/compound-interest-app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:07.933Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app/salary-calculator-app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:09.082Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app/savings-calculator-app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:10.170Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/app/percentage-calculator-app: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:11.249Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/categories/finance: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:12.333Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/categories/property: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:13.415Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/categories/everyday: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:14.488Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/compound-interest: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:15.640Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:16.730Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/salary: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:17.859Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/retirement: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:18.943Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/savings: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:20.015Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/loan: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:21.089Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/apy: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:22.161Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/budget: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:23.237Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/car-loan: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:24.310Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/simple-interest: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:25.396Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/stamp-duty: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:26.469Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage-cost-comparison: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:27.619Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/vat-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:28.701Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/isa-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:29.769Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/capital-gains-tax: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:30.840Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/inheritance-tax: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:31.929Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/weekly-mortgage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:03:33.013Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/mortgage-overpayment: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:21:29.826Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/future-house-value: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T05:21:31.046Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/cashback: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:21:32.135Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/credit-card-payoff: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:21:33.224Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/how-long-to-save: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:36:35.874Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/how-much-to-save: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T05:36:37.082Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/irr: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:36:38.192Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/finance/multi-card-payoff: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:36:39.381Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/percentage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:53:00.917Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/percentage-of: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T05:53:02.120Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/percentage-change: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:53:03.214Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/age: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T05:53:04.300Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/discount: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:08:11.361Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/tip: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:08:12.764Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:08:13.854Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/working-days: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:08:14.937Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/date: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:23:50.849Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/length: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:23:51.928Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/weight: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:23:53.010Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/temperature: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:23:54.096Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/universal: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:28:00.500Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/stone-to-kg: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T06:28:01.682Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:28:02.760Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/financial-journey: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:28:03.848Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/50-30-20-budget: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:28:04.987Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/emergency-fund: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:45:39.531Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/investing-basics: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T06:45:40.787Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/interest-impact: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:45:41.866Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/debt-landscape: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T06:45:42.949Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/snowball-avalanche: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:04:26.565Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/first-1000: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T07:04:27.915Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/automate-finances: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:04:29.020Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/before-you-invest: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:04:30.247Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/budget-irregular-costs: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:20:57.690Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/build-portfolio: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T07:20:58.905Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/calculator-formulas-guide: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:21:00.063Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/choose-savings-account: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:21:01.194Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/credit-scores: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:34:52.076Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/ethical-investing: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ECONNRESET"
+    },
+    {
+      "timestamp": "2026-05-06T07:34:53.265Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/financial-freedom: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:34:54.344Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/inflation-guide: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T07:34:55.532Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/investing-vs-trading: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:14:55.511Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/monthly-dashboard: request to https://indexing.googleapis.com/v3/urlNotifications:publish failed, reason: read ETIMEDOUT"
+    },
+    {
+      "timestamp": "2026-05-06T13:14:57.337Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/portfolio-rebalancing: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:14:57.806Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/protect-wealth: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:14:58.795Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/tax-efficient-accounts: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:14:59.867Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/teach-money-skills: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:01.086Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/where-money-goes: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:02.181Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/learn/uk-finance-statistics: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:03.397Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:04.600Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/mortgage-cheat-code: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:05.804Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/formulas: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:06.969Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/about: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:08.038Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/privacy: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:09.141Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/cookies: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:10.539Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/terms: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:11.746Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/disclaimer: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:12.972Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/bmi-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:14.075Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/calorie-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:15.152Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/cups-to-grams: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:16.372Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/cm-to-inches: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:17.557Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/7: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:18.795Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/10: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:20.007Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/14: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:21.213Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/15: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:22.485Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/20: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:23.686Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/21: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:24.827Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/25: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:25.935Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/28: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:27.035Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/30: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:28.132Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/35: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:29.346Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/40: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:30.538Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/45: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:31.697Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/50: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:32.765Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/55: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:33.891Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/60: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:35.084Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/70: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:36.160Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/75: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:37.368Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/80: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:38.434Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/90: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:39.528Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/100: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:40.724Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/120: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:41.833Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/130: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:42.903Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/150: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:44.010Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/160: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:45.136Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/180: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:46.351Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/200: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:47.562Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/210: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:48.626Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/240: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:49.733Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/250: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:50.800Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/270: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:51.946Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/300: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:53.016Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/330: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:54.083Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-from-today/365: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:55.180Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/km-to-miles: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:56.282Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/gallons-to-litres: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:57.349Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/ml-to-oz: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:58.431Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/grams-to-tablespoons: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:15:59.639Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/days-between-dates: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:00.726Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/hours-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:01.822Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/lbs-to-kg: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:02.886Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/metres-to-feet: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:03.988Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/inches-to-cm: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:05.087Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/fahrenheit-to-celsius: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:06.228Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/ounces-to-grams: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:07.434Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/converters/teaspoons-to-ml: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:08.538Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/months-between-dates: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:09.638Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/square-footage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:10.773Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/gravel-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:11.937Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/cubic-yards: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:13.007Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/mulch-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:14.114Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/misc/concrete-calculator: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:16:15.236Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-can-i-borrow-mortgage-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:17:55.540Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/fixed-vs-tracker-mortgage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:17:56.633Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-ltv-mortgage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:17:57.739Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/pay-off-mortgage-early: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:17:58.842Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/stamp-duty-uk-2025: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:17:59.912Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/first-time-buyer-uk-2025: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:01.007Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/mortgage-interest-rates: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:02.114Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/uk-tax-brackets-2025: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:03.175Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/personal-allowance-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:04.239Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/national-insurance-2025: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:05.337Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-long-to-pay-off-mortgage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:06.413Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-a-good-salary-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:07.517Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-should-i-save-per-month: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:08.620Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-an-isa: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:09.687Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-do-i-need-to-retire: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:10.779Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-compound-interest: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:11.885Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-capital-gains-tax-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:12.980Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-inheritance-tax-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:14.042Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-to-calculate-percentage: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:15.184Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-bmi: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:16.281Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-to-save-for-a-house-deposit: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:17.345Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-vat-uk: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:18.567Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/how-much-is-stamp-duty-2025: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:19.671Z",
+      "level": "warn",
+      "message": "Google ping failed for https://www.thecalculatorapp.org/blog/what-is-a-stocks-and-shares-isa: Permission denied. Failed to verify the URL ownership."
+    },
+    {
+      "timestamp": "2026-05-06T13:18:20.674Z",
+      "level": "info",
+      "message": "Google pinging complete",
+      "data": {
+        "successCount": 0,
+        "errorCount": 163,
+        "total": 163
+      }
+    },
+    {
+      "timestamp": "2026-05-06T13:18:21.357Z",
+      "level": "warn",
+      "message": "Bing batch 1 failed: 400 {\"ErrorCode\":2,\"Message\":\"ERROR!!! Quota remaining for today: 100, Submitted: 163\"}"
+    },
+    {
+      "timestamp": "2026-05-06T13:18:21.357Z",
+      "level": "info",
+      "message": "Bing pinging complete",
+      "data": {
+        "successCount": 0,
+        "total": 163
+      }
+    }
+  ],
+  "endTime": "2026-05-06T13:18:21.360Z"
+}

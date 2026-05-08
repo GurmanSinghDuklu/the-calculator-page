@@ -1,7 +1,8 @@
 import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Percent, Calendar, Tag, Coffee, Clock, Activity, Scale, Thermometer, Ruler, FlaskConical, Square, Construction, Shovel } from "lucide-react";
+import { ArrowUpRight, Percent, Calendar, Tag, Coffee, Clock, Activity, Scale, Thermometer, Ruler, FlaskConical, Square, Construction, Shovel, Home } from "lucide-react";
+import { BackToTop } from "@/components/BackToTop";
 
 const sections = [
   {
@@ -89,8 +90,19 @@ const CategoryEveryday = () => {
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
 
+      {/* Sticky header */}
+      <header className="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-md border-b border-white/8">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Logo size="sm" linkTo="/" />
+          <Link to="/" className="flex items-center gap-2 font-heading text-[10px] uppercase tracking-widest text-white/60 hover:text-white transition-colors">
+            <Home className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Home</span>
+          </Link>
+        </div>
+      </header>
+
       {/* Hero */}
-      <section className="relative pt-24 pb-16 px-6 overflow-hidden">
+      <section className="relative pt-16 pb-16 px-6 overflow-hidden">
         <div className="absolute top-1/2 left-10 w-64 h-64 bg-accent-green/10 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-accent-yellow/5 rounded-full blur-3xl -z-10" />
 
@@ -179,6 +191,7 @@ const CategoryEveryday = () => {
           </div>
         </div>
       </footer>
+      <BackToTop />
     </div>
   );
 };

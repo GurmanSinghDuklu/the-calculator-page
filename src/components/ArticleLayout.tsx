@@ -1,8 +1,9 @@
 import React from "react";
 import { Head } from "vite-react-ssg";
 import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ArrowRight, Home } from "lucide-react";
 import { AuthorByline } from "@/components/AuthorByline";
+import { BackToTop } from "@/components/BackToTop";
 
 interface ArticleLayoutProps {
   title: string;
@@ -53,13 +54,22 @@ export function ArticleLayout({
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
 
-        <Link
-          to="/learn/financial-journey"
-          className="inline-flex items-center gap-2 font-heading text-[10px] uppercase tracking-[0.2em] text-white/30 hover:text-white transition-colors mb-8"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" />
-          Back to Journey
-        </Link>
+        <div className="flex items-center gap-6 mb-8">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 font-heading text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors"
+          >
+            <Home className="h-3.5 w-3.5" />
+            Home
+          </Link>
+          <Link
+            to="/learn/financial-journey"
+            className="inline-flex items-center gap-2 font-heading text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Back to Journey
+          </Link>
+        </div>
 
         <header className="mb-10 pb-10 border-b border-white/8">
           <div className="flex items-center gap-3 mb-4">
@@ -178,6 +188,7 @@ export function ArticleLayout({
         </Link>
 
       </div>
+      <BackToTop />
     </div>
     </>
   );

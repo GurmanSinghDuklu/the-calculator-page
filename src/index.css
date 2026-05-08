@@ -137,3 +137,20 @@ html {
   .shadow-card { box-shadow: var(--shadow-card); }
   .shadow-elevated { box-shadow: var(--shadow-elevated); }
 }
+
+/* Global brightness lift — dim text classes overridden site-wide */
+@layer utilities {
+  .text-white\/8  { color: rgb(255 255 255 / 0.15) !important; }
+  .text-white\/10 { color: rgb(255 255 255 / 0.20) !important; }
+  .text-white\/20 { color: rgb(255 255 255 / 0.35) !important; }
+  .text-white\/25 { color: rgb(255 255 255 / 0.45) !important; }
+  .text-white\/30 { color: rgb(255 255 255 / 0.55) !important; }
+  .text-white\/40 { color: rgb(255 255 255 / 0.65) !important; }
+  .text-white\/50 { color: rgb(255 255 255 / 0.75) !important; }
+  .text-gray-600  { color: rgb(180 180 180) !important; }
+  .text-gray-500  { color: rgb(200 200 200) !important; }
+  .text-gray-400  { color: rgb(215 215 215) !important; }
+  .text-zinc-500  { color: rgb(200 200 200) !important; }
+  .text-zinc-400  { color: rgb(215 215 215) !important; }
+  .dark-muted     { color: rgb(180 180 180) !important; }
+}

@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Home } from "lucide-react";
 import { NavigationMenu } from "@/components/NavigationMenu";
 import { Logo } from "@/components/Logo";
+import { BackToTop } from "@/components/BackToTop";
 
 interface CalculatorLayoutProps {
   children: ReactNode;
@@ -20,9 +21,9 @@ export const CalculatorLayout = ({ children, title, description }: CalculatorLay
           <Logo size="sm" linkTo="/" />
           <div className="flex items-center gap-4">
             <Link to="/"
-              className="flex items-center gap-2 text-white/25 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
-              <ArrowLeft className="h-4 w-4" />
-              <span className="hidden sm:inline">Back</span>
+              className="flex items-center gap-2 text-white/60 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
+              <Home className="h-4 w-4" />
+              <span className="hidden sm:inline">Home</span>
             </Link>
             <NavigationMenu />
           </div>
@@ -35,12 +36,12 @@ export const CalculatorLayout = ({ children, title, description }: CalculatorLay
           <h1 className="font-display text-5xl md:text-6xl leading-[0.9] tracking-tight text-white mb-4">
             {title}
           </h1>
-          <p className="text-zinc-500 text-lg font-sans leading-relaxed">{description}</p>
+          <p className="text-zinc-300 text-lg font-sans leading-relaxed">{description}</p>
         </div>
 
         <div>{children}</div>
       </main>
-
+      <BackToTop />
     </div>
   );
 };

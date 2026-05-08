@@ -1,0 +1,101 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1A1A"/>
+      <stop offset="100%" stop-color="#0f0e0e"/>
+    </linearGradient>
+    <pattern id="dots3" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="24" cy="24" r="0.9" fill="#ffffff" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bg3)"/>
+  <rect width="1080" height="1080" fill="url(#dots3)"/>
+
+  <!-- Blue glow top right -->
+  <ellipse cx="960" cy="180" rx="380" ry="320" fill="#3B82F6" opacity="0.07"/>
+  <!-- Green glow bottom left -->
+  <ellipse cx="120" cy="960" rx="320" ry="280" fill="#22C55E" opacity="0.05"/>
+
+  <!-- Top nav bar — matching site -->
+  <rect width="1080" height="60" fill="#ffffff" opacity="0.025"/>
+  <rect width="1080" height="0.8" y="60" fill="#ffffff" opacity="0.1"/>
+
+  <!-- Logo in nav -->
+  <text x="40" y="24" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="5" fill="#ffffff" opacity="0.3">THE</text>
+  <text x="38" y="48" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#22C55E">CALC</text>
+  <text x="102" y="48" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="#ffffff">APP</text>
+
+  <!-- Nav right -->
+  <text x="1040" y="36" font-family="Arial, sans-serif" font-size="11" letter-spacing="2" fill="#ffffff" opacity="0.25" text-anchor="end">THECALCULATORAPP.ORG</text>
+
+  <!-- ── HERO ── -->
+  <!-- Small label -->
+  <text x="40" y="132" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="6" fill="#ffffff" opacity="0.3">CALCULATOR APP</text>
+
+  <!-- CALCULATOR — electric blue, massive -->
+  <text x="36" y="295" font-family="'Oswald', 'Impact', 'Arial Narrow', Arial, sans-serif" font-size="230" font-weight="700" letter-spacing="-6" fill="#3B82F6">CALC</text>
+  <text x="36" y="490" font-family="'Oswald', 'Impact', 'Arial Narrow', Arial, sans-serif" font-size="210" font-weight="700" letter-spacing="-5" fill="#ffffff">PAGE</text>
+
+  <!-- small line under -->
+  <text x="40" y="528" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="14" font-weight="400" letter-spacing="5" fill="#ffffff" opacity="0.25">&amp; UNIT CONVERTERS</text>
+
+  <!-- Divider -->
+  <rect x="0" y="560" width="1080" height="0.8" fill="#ffffff" opacity="0.07"/>
+
+  <!-- ── BROWSE CATEGORIES section ── -->
+  <text x="40" y="598" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="5" fill="#ffffff">BROWSE</text>
+  <text x="152" y="598" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="5" fill="#22C55E">CATEGORIES</text>
+  <text x="1040" y="598" font-family="Arial, sans-serif" font-size="10" letter-spacing="3" fill="#ffffff" opacity="0.2" text-anchor="end">ALL CALCULATORS</text>
+
+  <!-- 4 Category cards — matching site layout -->
+  <!-- PROPERTY card -->
+  <rect x="40" y="614" width="236" height="340" rx="3" fill="#ffffff" opacity="0.03" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.12"/>
+  <text x="60" y="652" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#ffffff">PROPERTY</text>
+  <rect x="60" y="664" width="180" height="0.6" fill="#ffffff" opacity="0.1"/>
+  <text x="60" y="692" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">MORTGAGE CALCULATOR</text>
+  <text x="60" y="716" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">WEEKLY MORTGAGE</text>
+  <text x="60" y="740" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">MORTGAGE OVERPAYMENT</text>
+  <text x="60" y="764" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">STAMP DUTY CALCULATOR</text>
+  <text x="60" y="788" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">FUTURE HOUSE VALUE</text>
+  <text x="60" y="928" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="2" fill="#22C55E" opacity="0.8">VIEW ALL ›</text>
+
+  <!-- FINANCE card -->
+  <rect x="288" y="614" width="236" height="340" rx="3" fill="#ffffff" opacity="0.03" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.12"/>
+  <text x="308" y="652" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#ffffff">FINANCE</text>
+  <rect x="308" y="664" width="180" height="0.6" fill="#ffffff" opacity="0.1"/>
+  <text x="308" y="692" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">UK SALARY CALCULATOR</text>
+  <text x="308" y="716" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">COMPOUND INTEREST</text>
+  <text x="308" y="740" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">APY CALCULATOR</text>
+  <text x="308" y="764" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">BUDGET CALCULATOR</text>
+  <text x="308" y="788" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">LOAN CALCULATOR</text>
+  <text x="308" y="928" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="2" fill="#22C55E" opacity="0.8">VIEW ALL ›</text>
+
+  <!-- EVERYDAY card -->
+  <rect x="536" y="614" width="236" height="340" rx="3" fill="#ffffff" opacity="0.03" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.12"/>
+  <text x="556" y="652" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#ffffff">EVERYDAY</text>
+  <rect x="556" y="664" width="180" height="0.6" fill="#ffffff" opacity="0.1"/>
+  <text x="556" y="692" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">PERCENTAGE CALCULATOR</text>
+  <text x="556" y="716" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">AGE CALCULATOR</text>
+  <text x="556" y="740" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">DISCOUNT CALCULATOR</text>
+  <text x="556" y="764" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">BMI CALCULATOR</text>
+  <text x="556" y="788" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">CALORIE CALCULATOR</text>
+  <text x="556" y="928" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="2" fill="#22C55E" opacity="0.8">VIEW ALL ›</text>
+
+  <!-- CONVERTERS card -->
+  <rect x="784" y="614" width="256" height="340" rx="3" fill="#ffffff" opacity="0.03" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.12"/>
+  <text x="804" y="652" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2" fill="#ffffff">CONVERTERS</text>
+  <rect x="804" y="664" width="200" height="0.6" fill="#ffffff" opacity="0.1"/>
+  <text x="804" y="692" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">KM TO MILES</text>
+  <text x="804" y="716" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">GALLONS TO LITRES</text>
+  <text x="804" y="740" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">CM TO INCHES</text>
+  <text x="804" y="764" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">METRES TO FEET</text>
+  <text x="804" y="788" font-family="Arial, sans-serif" font-size="12" letter-spacing="0.5" fill="#ffffff" opacity="0.4">STONE TO KG</text>
+  <text x="804" y="928" font-family="'Oswald', 'Arial Narrow', Arial, sans-serif" font-size="12" letter-spacing="2" fill="#22C55E" opacity="0.8">VIEW ALL ›</text>
+
+  <!-- Bottom bar -->
+  <rect width="1080" height="0.8" y="1044" fill="#ffffff" opacity="0.07"/>
+  <text x="40" y="1066" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#ffffff" opacity="0.18">© 2026 THE CALCULATOR APP</text>
+  <text x="1040" y="1066" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#ffffff" opacity="0.18" text-anchor="end">ALL CALCULATORS ARE FREE FOR PERSONAL USE</text>
+</svg>

@@ -2,6 +2,7 @@ import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
+import { BackToTop } from "@/components/BackToTop";
 
 const ACCENT = "#3B82F6";
 
@@ -288,6 +289,7 @@ export default function UsSalesTaxCalculator() {
           </div>
         </footer>
       </div>
+      <BackToTop />
     </>
   );
 }

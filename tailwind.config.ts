@@ -35,12 +35,12 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          blue: '#3B82F6',
-          green: '#22C55E',
-          cyan: '#06B6D4',
-          yellow: '#EAB308',
-          red: '#EF4444',
-          orange: '#F97316'
+          blue: '#60A5FA',
+          green: '#4ADE80',
+          cyan: '#22D3EE',
+          yellow: '#FDE047',
+          red: '#F87171',
+          orange: '#FB923C'
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

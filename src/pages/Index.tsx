@@ -1,4 +1,5 @@
 import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight } from "lucide-react";
+import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
@@ -11,9 +12,9 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const popularCalculatorsAndConversions = [
-    { title: "UK Salary Calculator", description: "Calculate take-home pay after tax and NI", icon: Wallet, path: "/finance/salary", badge: "New", color: "text-accent-blue", border: "hover:border-accent-blue", accent: "group-hover:bg-accent-blue/5" },
-    { title: "Compound Interest", description: "See how your investments grow over time", icon: TrendingUp, path: "/finance/compound-interest", badge: "Trending", color: "text-accent-green", border: "hover:border-accent-green", accent: "group-hover:bg-accent-green/5" },
-    { title: "Mortgage Payment Calculator", description: "Calculate monthly mortgage payments", icon: Home, path: "/finance/mortgage", badge: "Essential", color: "text-accent-yellow", border: "hover:border-accent-yellow", accent: "group-hover:bg-accent-yellow/5" },
+    { title: "UK Salary Calculator", description: "Calculate take-home pay after tax and NI", icon: Wallet, path: "/finance/salary", badge: "", color: "text-accent-blue", border: "hover:border-accent-blue", accent: "group-hover:bg-accent-blue/5" },
+    { title: "Compound Interest", description: "See how your investments grow over time", icon: TrendingUp, path: "/finance/compound-interest", badge: "", color: "text-accent-green", border: "hover:border-accent-green", accent: "group-hover:bg-accent-green/5" },
+    { title: "Mortgage Payment Calculator", description: "Calculate monthly mortgage payments", icon: Home, path: "/finance/mortgage", badge: "", color: "text-accent-yellow", border: "hover:border-accent-yellow", accent: "group-hover:bg-accent-yellow/5" },
     { title: "Retirement Calculator", description: "Plan your retirement income and pension", icon: PiggyBank, path: "/finance/retirement", badge: "Popular", color: "text-accent-red", border: "hover:border-accent-red", accent: "group-hover:bg-accent-red/5" }
   ];
 
@@ -159,17 +160,9 @@ const Index = () => {
 
               {/* Quick stat pills */}
               <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/50">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/70">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-green inline-block" />
                   130+ Free Calculators
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent-blue inline-block" />
-                  No Signup Required
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-heading uppercase tracking-widest text-white/50">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent-yellow inline-block" />
-                  Instant Results
                 </span>
               </div>
             </div>
@@ -190,9 +183,11 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {popularCalculatorsAndConversions.map((calc) => (
               <Link key={calc.title} to={calc.path} className={`group bg-dark-bg border border-dark-border ${calc.border} ${calc.accent} transition-all duration-300 relative p-6 flex flex-col`}>
-                <div className="absolute top-0 right-0 p-3">
-                  <Badge className="bg-white text-black text-[9px] font-bold uppercase rounded-none">{calc.badge}</Badge>
-                </div>
+                {calc.badge && (
+                  <div className="absolute top-0 right-0 p-3">
+                    <Badge className="bg-white text-black text-[9px] font-bold uppercase rounded-none">{calc.badge}</Badge>
+                  </div>
+                )}
                 <div className={`mb-5 ${calc.color}`}>
                   <calc.icon className="h-8 w-8 group-hover:scale-110 transition-transform duration-300" />
                 </div>
@@ -400,6 +395,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <BackToTop />
     </div>
   );
 };
