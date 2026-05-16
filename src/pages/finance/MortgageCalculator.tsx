@@ -1,11 +1,11 @@
 import { Logo } from "@/components/Logo";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
-import { ArrowRight, Plus, X, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, Plus, X, ChevronDown, ChevronUp, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 
@@ -95,6 +95,15 @@ const MortgageCalculator = () => {
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [breakdownView, setBreakdownView] = useState<"yearly" | "monthly">("yearly");
   const [activePartTab, setActivePartTab] = useState(0);
+  const [jumpInput, setJumpInput] = useState("");
+  const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
+  const highlightRef = useRef<HTMLTableRowElement | null>(null);
+
+  useEffect(() => {
+    if (highlightRef.current) {
+      highlightRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [highlightedIndex]);
 
   const sym = currencies[currency].symbol;
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
@@ -516,13 +525,56 @@ const MortgageCalculator = () => {
                     {(["yearly", "monthly"] as const).map(v => (
                       <button
                         key={v}
-                        onClick={() => setBreakdownView(v)}
+                        onClick={() => { setBreakdownView(v); setHighlightedIndex(null); setJumpInput(""); }}
                         className={`px-4 py-2 text-[9px] font-heading uppercase tracking-widest transition-colors ${breakdownView === v ? "bg-white/10 text-white" : "text-white/30 hover:text-white"}`}
                       >
                         {v}
                       </button>
                     ))}
                   </div>
+                </div>
+              </div>
+
+              {/* Jump-to bar */}
+              <div className="px-6 py-4 border-b border-white/8 flex flex-col sm:flex-row items-start sm:items-center gap-3 flex-wrap">
+                <span className="text-[10px] font-heading uppercase tracking-widest text-white/40 shrink-0">
+                  Jump to {breakdownView === "yearly" ? "Year" : "Month"}
+                </span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <input
+                    type="number"
+                    min="1"
+                    value={jumpInput}
+                    onChange={e => setJumpInput(e.target.value)}
+                    onKeyDown={e => {
+                      if (e.key === "Enter") {
+                        const n = parseInt(jumpInput);
+                        if (!isNaN(n) && n >= 1) setHighlightedIndex(n - 1);
+                      }
+                    }}
+                    placeholder={breakdownView === "yearly" ? "e.g. 5" : "e.g. 24"}
+                    className="w-24 bg-black/40 border border-white/10 rounded-lg px-3 py-2 text-white text-sm font-heading focus:outline-none transition-all"
+                    style={{ borderColor: jumpInput ? `${ACCENT}60` : undefined }}
+                  />
+                  <button
+                    onClick={() => {
+                      const n = parseInt(jumpInput);
+                      if (!isNaN(n) && n >= 1) setHighlightedIndex(n - 1);
+                    }}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-lg font-heading text-[10px] uppercase tracking-widest text-black transition-all hover:-translate-y-0.5"
+                    style={{ background: ACCENT }}
+                  >
+                    <Search className="h-3 w-3" />
+                    Find
+                  </button>
+                  {highlightedIndex !== null && (
+                    <button
+                      onClick={() => { setHighlightedIndex(null); setJumpInput(""); }}
+                      className="text-[10px] font-heading uppercase tracking-widest text-white/30 hover:text-white transition-colors"
+                    >
+                      Clear
+                    </button>
+                  )}
                 </div>
               </div>
 
@@ -550,18 +602,23 @@ const MortgageCalculator = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {rows.map((row: { period: string; payment: number; principal: number; interest: number; balance: number }, i: number) => (
-                          <tr
-                            key={i}
-                            className="border-b border-white/[0.04] hover:bg-white/[0.02] transition-colors"
-                          >
-                            <td className="px-5 py-3 font-heading text-[10px] uppercase tracking-widest" style={{ color }}>{row.period}</td>
-                            <td className="px-5 py-3 text-white/70 font-heading text-xs">{sym}{row.payment?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td className="px-5 py-3 text-white/70 font-heading text-xs">{sym}{row.principal?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td className="px-5 py-3 text-white/50 font-heading text-xs">{sym}{row.interest?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                            <td className="px-5 py-3 font-heading text-xs font-medium text-white">{sym}{row.balance?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-                          </tr>
-                        ))}
+                        {rows.map((row: { period: string; payment: number; principal: number; interest: number; balance: number }, i: number) => {
+                          const isHighlighted = i === highlightedIndex;
+                          return (
+                            <tr
+                              key={i}
+                              ref={isHighlighted ? highlightRef : null}
+                              className={`border-b border-white/[0.04] transition-colors ${isHighlighted ? "border-l-2" : "hover:bg-white/[0.02]"}`}
+                              style={isHighlighted ? { backgroundColor: `${color}12`, borderLeftColor: color } : undefined}
+                            >
+                              <td className="px-5 py-3 font-heading text-[10px] uppercase tracking-widest" style={{ color }}>{row.period}</td>
+                              <td className="px-5 py-3 text-white/70 font-heading text-xs">{sym}{row.payment?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                              <td className="px-5 py-3 text-white/70 font-heading text-xs">{sym}{row.principal?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                              <td className="px-5 py-3 text-white/50 font-heading text-xs">{sym}{row.interest?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                              <td className="px-5 py-3 font-heading text-xs font-medium text-white">{sym}{row.balance?.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+                            </tr>
+                          );
+                        })}
                       </tbody>
                     </table>
                     {breakdownView === "monthly" && rawSchedule.length > 600 && (

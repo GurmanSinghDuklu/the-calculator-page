@@ -8,6 +8,7 @@ import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { AmortisationSchedule, ScheduleRow } from "@/components/AmortisationSchedule";
 
 // ─── Accent colour — green for savings / ISA ────────────────────────────────
 const ACCENT = "#22C55E";
@@ -25,6 +26,7 @@ const IsaCalculator = () => {
   const [lumpAmount, setLumpAmount] = useState("5000");
   const [lumpYear, setLumpYear] = useState("3");
   const [lumpMonth, setLumpMonth] = useState("0");
+  const [isaSchedule, setIsaSchedule] = useState<{ yearly: ScheduleRow[]; monthly: ScheduleRow[] } | null>(null);
   const [result, setResult] = useState<{
     finalValue: number;
     totalContributions: number;
@@ -74,6 +76,7 @@ const IsaCalculator = () => {
     const lumpAtMonth = lumpEnabled ? (parseInt(lumpYear) || 0) * 12 + (parseInt(lumpMonth) || 0) : -1;
     const L = lumpEnabled ? (parseFloat(lumpAmount) || 0) : 0;
 
+    const isaMonthlyRows: ScheduleRow[] = [];
     for (let m = 1; m <= months; m++) {
       // Apply monthly interest/growth
       balance *= (1 + monthlyRate);
@@ -102,12 +105,22 @@ const IsaCalculator = () => {
         }
       }
 
+      isaMonthlyRows.push({ period: `Month ${m}`, periodIndex: m, balance: Math.round(balance * 100) / 100 });
+
       // Reset yearly tracker at end of each tax year (every 12 months)
       if (m % 12 === 0) {
         yearlyContributionTracker = 0;
         currentYear++;
       }
     }
+
+    const totalYears = Math.ceil(months / 12);
+    const isaYearlyRows: ScheduleRow[] = [];
+    for (let y = 1; y <= totalYears; y++) {
+      const lastIdx = Math.min(y * 12, months) - 1;
+      isaYearlyRows.push({ period: `Year ${y}`, periodIndex: y, balance: isaMonthlyRows[lastIdx].balance });
+    }
+    setIsaSchedule({ yearly: isaYearlyRows, monthly: isaMonthlyRows });
 
     const totalGrowth = balance - totalContributions - totalBonus;
     const taxSaved = Math.max(0, totalGrowth * 0.2);
@@ -464,6 +477,19 @@ const IsaCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* Amortisation Schedule */}
+        {isaSchedule && (
+          <div className="max-w-7xl mx-auto px-6">
+            <AmortisationSchedule
+              rows={isaSchedule.yearly}
+              monthlyRows={isaSchedule.monthly}
+              currencySymbol="£"
+              accentColour={ACCENT}
+              balanceLabel="Portfolio Value"
+            />
+          </div>
+        )}
 
         {/* Static content */}
         <div className="max-w-7xl mx-auto px-6">

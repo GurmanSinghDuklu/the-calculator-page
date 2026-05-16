@@ -7,6 +7,7 @@ import { ArrowRight, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { AmortisationSchedule, ScheduleRow } from "@/components/AmortisationSchedule";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
@@ -29,6 +30,8 @@ export default function MortgageOverpayment() {
     interestSaved: number; timeSaved: number;
   } | null>(null);
 
+  const [overpaymentSchedule, setOverpaymentSchedule] = useState<{ yearly: ScheduleRow[]; monthly: ScheduleRow[] } | null>(null);
+
   const [lumpResult, setLumpResult] = useState<{
     basePayment: number; outstandingBefore: number; outstandingAfter: number;
     newTerm: number; interestSaved: number; timeSaved: number;
@@ -44,6 +47,27 @@ export default function MortgageOverpayment() {
     const newN = -Math.log(1 - (P * i) / newPMT) / Math.log(1 + i);
     const baseInterest = PMT * N - P;
     const newInterest  = newPMT * newN - P;
+    // Build dual-balance schedule: overpayment balance vs standard balance
+    const monthlyRows: ScheduleRow[] = [];
+    let balOver = P, balStd = P;
+    const totalMonths = Math.ceil(newN);
+    for (let m = 1; m <= totalMonths; m++) {
+      const intOver = balOver * i;
+      balOver = Math.max(0, balOver - (newPMT - intOver));
+      if (m <= N) {
+        const intStd = balStd * i;
+        balStd = Math.max(0, balStd - (PMT - intStd));
+      }
+      monthlyRows.push({ period: `Month ${m}`, periodIndex: m, balance: Math.round(balOver * 100) / 100, balance2: Math.round(balStd * 100) / 100 });
+    }
+    const totalYears = Math.ceil(totalMonths / 12);
+    const yearlyRows: ScheduleRow[] = [];
+    for (let y = 1; y <= totalYears; y++) {
+      const lastIdx = Math.min(y * 12, totalMonths) - 1;
+      yearlyRows.push({ period: `Year ${y}`, periodIndex: y, balance: monthlyRows[lastIdx].balance, balance2: monthlyRows[lastIdx].balance2 });
+    }
+    setOverpaymentSchedule({ yearly: yearlyRows, monthly: monthlyRows });
+
     setRegularResult({
       basePayment: PMT, newPayment: newPMT, newTerm: newN / 12,
       interestSaved: baseInterest - newInterest, timeSaved: (N - newN) / 12,
@@ -64,6 +88,26 @@ export default function MortgageOverpayment() {
     const newRemaining = -Math.log(1 - (newP * i) / PMT) / Math.log(1 + i);
     const baseInterest = PMT * N - P;
     const newInterest  = PMT * k + PMT * newRemaining - P;
+    // Build dual-balance schedule for lump sum mode
+    const lumpMonthlyRows: ScheduleRow[] = [];
+    let lbalOver = P, lbalStd = P;
+    const lTotalMonths = Math.ceil(k + newRemaining);
+    for (let m = 1; m <= lTotalMonths; m++) {
+      const intOver = lbalOver * i;
+      const intStd = lbalStd * i;
+      lbalOver = Math.max(0, lbalOver - (PMT - intOver));
+      if (m === k) lbalOver = Math.max(0, lbalOver - L);
+      lbalStd = Math.max(0, lbalStd - (PMT - intStd));
+      lumpMonthlyRows.push({ period: `Month ${m}`, periodIndex: m, balance: Math.round(lbalOver * 100) / 100, balance2: Math.round(lbalStd * 100) / 100 });
+    }
+    const lTotalYears = Math.ceil(lTotalMonths / 12);
+    const lumpYearlyRows: ScheduleRow[] = [];
+    for (let y = 1; y <= lTotalYears; y++) {
+      const lastIdx = Math.min(y * 12, lTotalMonths) - 1;
+      lumpYearlyRows.push({ period: `Year ${y}`, periodIndex: y, balance: lumpMonthlyRows[lastIdx].balance, balance2: lumpMonthlyRows[lastIdx].balance2 });
+    }
+    setOverpaymentSchedule({ yearly: lumpYearlyRows, monthly: lumpMonthlyRows });
+
     setLumpResult({
       basePayment: PMT, outstandingBefore: OB_k, outstandingAfter: newP,
       newTerm: (k + newRemaining) / 12,
@@ -412,6 +456,20 @@ export default function MortgageOverpayment() {
             </div>
           </div>
         </div>
+
+        {/* Amortisation Schedule */}
+        {overpaymentSchedule && (
+          <div className="max-w-7xl mx-auto px-6">
+            <AmortisationSchedule
+              rows={overpaymentSchedule.yearly}
+              monthlyRows={overpaymentSchedule.monthly}
+              currencySymbol={sym}
+              accentColour={ACCENT}
+              balanceLabel="Balance (With Overpayment)"
+              balance2Label="Balance (Standard)"
+            />
+          </div>
+        )}
 
                 <div className="max-w-7xl mx-auto px-6">
           <CalculatorStaticContent

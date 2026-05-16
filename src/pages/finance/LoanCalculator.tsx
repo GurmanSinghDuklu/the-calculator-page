@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { ArrowRight, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { AmortisationSchedule, ScheduleRow } from "@/components/AmortisationSchedule";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -66,6 +67,7 @@ const LoanCalculator = () => {
     lumpInterestSaved?: number;
     lumpTimeSaved?: number;
   } | null>(null);
+  const [loanSchedule, setLoanSchedule] = useState<{ yearly: ScheduleRow[]; monthly: ScheduleRow[] } | null>(null);
 
   const calculateLoan = () => {
     const P    = parseFloat(loanAmount);
@@ -102,6 +104,37 @@ const LoanCalculator = () => {
           }
         }
       }
+      // Build amortisation schedule
+      const monthlyRows: ScheduleRow[] = [];
+      let bal = validated.loanAmount;
+      for (let m = 1; m <= n; m++) {
+        const interestPaid = bal * r;
+        const principalPaid = monthlyPayment - interestPaid;
+        bal = Math.max(0, bal - principalPaid);
+        monthlyRows.push({
+          period: `Month ${m}`,
+          periodIndex: m,
+          payment: Math.round(monthlyPayment * 100) / 100,
+          principal: Math.round(principalPaid * 100) / 100,
+          interest: Math.round(interestPaid * 100) / 100,
+          balance: Math.round(bal * 100) / 100,
+        });
+      }
+      const yearlyRows: ScheduleRow[] = [];
+      const totalYears = Math.ceil(n / 12);
+      for (let y = 1; y <= totalYears; y++) {
+        const lastMonthOfYear = Math.min(y * 12, n) - 1;
+        yearlyRows.push({
+          period: `Year ${y}`,
+          periodIndex: y,
+          payment: Math.round(monthlyRows.slice((y - 1) * 12, y * 12).reduce((s, r) => s + (r.payment ?? 0), 0) * 100) / 100,
+          principal: Math.round(monthlyRows.slice((y - 1) * 12, y * 12).reduce((s, r) => s + (r.principal ?? 0), 0) * 100) / 100,
+          interest: Math.round(monthlyRows.slice((y - 1) * 12, y * 12).reduce((s, r) => s + (r.interest ?? 0), 0) * 100) / 100,
+          balance: monthlyRows[lastMonthOfYear].balance,
+        });
+      }
+      setLoanSchedule({ yearly: yearlyRows, monthly: monthlyRows });
+
       setResult({
         monthlyPayment: Math.round(monthlyPayment * 100) / 100,
         totalPayment:   Math.round(totalPayment   * 100) / 100,
@@ -423,6 +456,18 @@ const LoanCalculator = () => {
             </div>
           </div>
         </div>
+
+        {/* Amortisation Schedule */}
+        {loanSchedule && (
+          <div className="max-w-7xl mx-auto px-6">
+            <AmortisationSchedule
+              rows={loanSchedule.yearly}
+              monthlyRows={loanSchedule.monthly}
+              currencySymbol={sym}
+              accentColour={ACCENT}
+            />
+          </div>
+        )}
 
         {/* Static content + disclaimer */}
         <div className="max-w-7xl mx-auto px-6 pb-20">

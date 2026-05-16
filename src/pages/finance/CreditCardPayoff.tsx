@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { ArrowRight, CreditCard } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { AmortisationSchedule, ScheduleRow } from "@/components/AmortisationSchedule";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -60,6 +60,7 @@ export default function CreditCardPayoff() {
     totalInterest: number;
     totalPaid: number;
   } | null>(null);
+  const [ccSchedule, setCcSchedule] = useState<ScheduleRow[]>([]);
 
   const calculatePayoff = () => {
     const P = parseFloat(balance);
@@ -76,6 +77,27 @@ export default function CreditCardPayoff() {
     }
     const N = -Math.log(1 - (P * i) / A) / Math.log(1 + i);
     const totalPaid = A * N;
+
+    // Build monthly paydown schedule
+    const rows: ScheduleRow[] = [];
+    let bal = P;
+    let m = 0;
+    while (bal > 0.005 && m < 1200) {
+      m++;
+      const interestCharge = bal * i;
+      const payment = Math.min(A, bal + interestCharge);
+      const principalPaid = payment - interestCharge;
+      bal = Math.max(0, bal - principalPaid);
+      rows.push({
+        period: `Month ${m}`,
+        periodIndex: m,
+        payment: Math.round(payment * 100) / 100,
+        principal: Math.round(principalPaid * 100) / 100,
+        interest: Math.round(interestCharge * 100) / 100,
+        balance: Math.round(bal * 100) / 100,
+      });
+    }
+    setCcSchedule(rows);
     setResult({ monthsToPayoff: N, totalInterest: totalPaid - P, totalPaid });
   };
 
@@ -315,12 +337,22 @@ export default function CreditCardPayoff() {
           </div>
         </div>
 
+        {/* Amortisation Schedule */}
+        {ccSchedule.length > 0 && (
+          <div className="max-w-7xl mx-auto px-6">
+            <AmortisationSchedule
+              rows={ccSchedule}
+              currencySymbol={sym}
+              accentColour={ACCENT}
+              granularity="month"
+            />
+          </div>
+        )}
+
         {/* Static content + disclaimer below the fold */}
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <CalculatorStaticContent {...creditCardStaticContent} />
         </div>
-
-        <FinancialDisclosure variant="general" />
 
         <FinancialDisclosure variant="general" />
 
