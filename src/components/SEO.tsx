@@ -92,7 +92,7 @@ const SEO = ({
   // Author schema for E-E-A-T (YMYL financial content)
   const authorSchema = {
     "@type": "Person",
-    "name": "Mandeep Singh",
+    "name": "M Singh CeMAP DipFA",
     "jobTitle": "Financial Coach & Calculator Developer",
     "description": "Financial coach and calculator developer with 25+ years in UK financial services. Specialist in mortgage planning, salary optimisation, and investment strategy.",
     "url": `${siteUrl}/about`,

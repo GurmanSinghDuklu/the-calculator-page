@@ -60,7 +60,7 @@ export const BlogLayout = ({
         type="article"
         articleSchema={{
           headline: title,
-          author: "Mandeep Singh",
+          author: "M Singh CeMAP DipFA",
           datePublished: "2026-04-13",
           dateModified: "2026-04-15",
           image: "https://www.thecalculatorapp.org/og-image.png",
