@@ -71,6 +71,7 @@ const calculators = [
 ];
 
 const guides = [
+  { title: "UK Mortgage on a Visa: Guide for New Residents", path: "/mortgages/mortgage-for-new-residents", tag: "New" },
   { title: "How Much Can I Borrow?", path: "/blog/how-much-can-i-borrow-mortgage-uk", tag: "Affordability" },
   { title: "First-Time Buyer Guide UK 2026", path: "/blog/first-time-buyer-uk-2025", tag: "Getting Started" },
   { title: "Fixed vs Tracker Mortgage", path: "/blog/fixed-vs-tracker-mortgage", tag: "Rate Types" },

@@ -42,6 +42,7 @@ const SECTIONS = [
       {
         label: "Guides",
         items: [
+          { title: "Mortgage on a Visa: New Residents Guide", path: "/mortgages/mortgage-for-new-residents", badge: "New" },
           { title: "How Much Can I Borrow?", path: "/blog/how-much-can-i-borrow-mortgage-uk" },
           { title: "First-Time Buyer Guide", path: "/blog/first-time-buyer-uk-2025" },
           { title: "Fixed vs Tracker Rate", path: "/blog/fixed-vs-tracker-mortgage" },

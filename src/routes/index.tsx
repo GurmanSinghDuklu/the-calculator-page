@@ -6,6 +6,7 @@ import Index from '../pages/Index';
 import LearnHub from '../pages/LearnHub';
 import MortgageHub from '../pages/mortgages/MortgageHub';
 import SalaryForMortgage from '../pages/mortgages/SalaryForMortgage';
+import MortgageForNewResidents from '../pages/mortgages/MortgageForNewResidents';
 import Formulas from '../pages/Formulas';
 import NotFound from '../pages/NotFound';
 import CategoryProperty from '../pages/categories/CategoryProperty';
@@ -164,6 +165,7 @@ export const routes: RouteObject[] = [
       { path: 'learn', element: <LearnHub /> },
       { path: 'mortgages', element: <MortgageHub /> },
       { path: 'mortgages/salary-for-mortgage', element: <SalaryForMortgage /> },
+      { path: 'mortgages/mortgage-for-new-residents', element: <MortgageForNewResidents /> },
       { path: 'formulas', element: <Formulas /> },
 
       // Finance Routes
