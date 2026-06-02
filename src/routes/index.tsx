@@ -4,6 +4,8 @@ import App from '../App';
 // Main & Hubs
 import Index from '../pages/Index';
 import LearnHub from '../pages/LearnHub';
+import MortgageHub from '../pages/mortgages/MortgageHub';
+import SalaryForMortgage from '../pages/mortgages/SalaryForMortgage';
 import Formulas from '../pages/Formulas';
 import NotFound from '../pages/NotFound';
 import CategoryProperty from '../pages/categories/CategoryProperty';
@@ -160,6 +162,8 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: <Index /> },
       { path: 'learn', element: <LearnHub /> },
+      { path: 'mortgages', element: <MortgageHub /> },
+      { path: 'mortgages/salary-for-mortgage', element: <SalaryForMortgage /> },
       { path: 'formulas', element: <Formulas /> },
 
       // Finance Routes

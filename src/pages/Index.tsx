@@ -1,4 +1,4 @@
-import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat } from "lucide-react";
+import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2 } from "lucide-react";
 import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +16,16 @@ const Index = () => {
     { title: "Compound Interest", description: "See how your investments grow over time", icon: TrendingUp, path: "/finance/compound-interest", badge: "", color: "text-accent-green", border: "hover:border-accent-green", accent: "group-hover:bg-accent-green/10" },
     { title: "Mortgage Payment Calculator", description: "Calculate monthly mortgage payments", icon: Home, path: "/finance/mortgage", badge: "", color: "text-accent-yellow", border: "hover:border-accent-yellow", accent: "group-hover:bg-accent-yellow/10" },
     { title: "Retirement Calculator", description: "Plan your retirement income and pension", icon: PiggyBank, path: "/finance/retirement", badge: "Popular", color: "text-accent-red", border: "hover:border-accent-red", accent: "group-hover:bg-accent-red/10" }
+  ];
+
+  const mortgageCalculators = [
+    { title: "Mortgage Calculator", path: "/finance/mortgage" },
+    { title: "What Salary Do I Need?", path: "/mortgages/salary-for-mortgage" },
+    { title: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+    { title: "Stamp Duty Calculator", path: "/finance/stamp-duty" },
+    { title: "Mortgage Comparison", path: "/finance/mortgage-cost-comparison" },
+    { title: "Weekly Mortgage", path: "/finance/weekly-mortgage" },
+    { title: "Future House Value", path: "/finance/future-house-value" },
   ];
 
   const homeCalculators = [
@@ -194,7 +204,7 @@ const Index = () => {
     { title: "UK Finance Statistics", path: "/learn/uk-finance-statistics", category: "Reference" },
   ];
 
-  const allCalculators = [...financeCalculators, ...homeCalculators, ...miscCalculators, ...converterCalculators];
+  const allCalculators = [...mortgageCalculators, ...financeCalculators, ...homeCalculators, ...miscCalculators, ...converterCalculators];
 
   return (
     <div className="bg-dark-bg text-dark-text min-h-screen font-sans selection:bg-accent-yellow selection:text-black">
@@ -330,6 +340,35 @@ const Index = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          {/* Mortgages Section — new hub */}
+          <div className="group border border-dark-border hover:border-orange-500/60 transition-colors duration-300 p-6 relative overflow-hidden">
+            <div className="absolute top-3 right-3">
+              <span className="text-[8px] font-heading uppercase tracking-widest px-2 py-0.5 rounded-sm bg-orange-500/10 text-orange-400">Hub</span>
+            </div>
+            <Link to="/mortgages" className="block mb-5">
+              <div className="flex justify-between items-center">
+                <h2 className="font-display text-4xl text-white group-hover:text-orange-400 transition-colors duration-300">Mortgages</h2>
+                <ArrowRight className="h-6 w-6 text-orange-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+              </div>
+              <div className="h-px bg-orange-500/40 mt-3 group-hover:bg-orange-500/80 transition-colors" />
+            </Link>
+            <ul className="space-y-1.5">
+              {mortgageCalculators.slice(0, 6).map(calc => (
+                <li key={calc.path}>
+                  <Link to={calc.path} className="flex items-center justify-between py-2 px-3 text-sm text-gray-400 hover:text-white hover:bg-white/5 transition-all rounded group/item">
+                    <span className="font-heading uppercase tracking-wide text-xs">{calc.title}</span>
+                    <ChevronRight className="h-3.5 w-3.5 opacity-0 group-hover/item:opacity-100 transition-opacity text-orange-400" />
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/mortgages" className="flex items-center gap-1 py-2 px-3 text-xs text-orange-400/60 hover:text-orange-400 transition-colors font-heading uppercase tracking-widest">
+                  Mortgage hub <ChevronRight className="h-3 w-3" />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           {/* Property Section */}
           <div className="group border border-dark-border hover:border-accent-red/60 transition-colors duration-300 p-6">

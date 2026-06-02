@@ -5,12 +5,53 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Home, TrendingUp, DollarSign,
   Ruler, GraduationCap, BookOpen,
-  Calculator, ArrowRight, X
+  Calculator, ArrowRight, X, Building2
 } from "lucide-react";
 
 // ─── All calculator data ──────────────────────────────────────────────────────
 
 const SECTIONS = [
+  {
+    id: "mortgages",
+    label: "Mortgages",
+    color: "#F97316",
+    colorClass: "text-orange-400",
+    borderClass: "border-orange-400/30",
+    bgClass: "bg-orange-400/5",
+    icon: Building2,
+    hubPath: "/mortgages",
+    groups: [
+      {
+        label: "Calculators",
+        items: [
+          { title: "Mortgage Calculator", path: "/finance/mortgage", badge: "Popular" },
+          { title: "What Salary Do I Need?", path: "/mortgages/salary-for-mortgage", badge: "New" },
+          { title: "Mortgage Overpayment", path: "/finance/mortgage-overpayment" },
+          { title: "Mortgage Cost Comparison", path: "/finance/mortgage-cost-comparison" },
+          { title: "Weekly Mortgage", path: "/finance/weekly-mortgage" },
+          { title: "Future House Value", path: "/finance/future-house-value" },
+        ]
+      },
+      {
+        label: "Costs & Tax",
+        items: [
+          { title: "Stamp Duty (SDLT)", path: "/finance/stamp-duty", badge: "Updated" },
+          { title: "Inheritance Tax", path: "/finance/inheritance-tax" },
+        ]
+      },
+      {
+        label: "Guides",
+        items: [
+          { title: "How Much Can I Borrow?", path: "/blog/how-much-can-i-borrow-mortgage-uk" },
+          { title: "First-Time Buyer Guide", path: "/blog/first-time-buyer-uk-2025" },
+          { title: "Fixed vs Tracker Rate", path: "/blog/fixed-vs-tracker-mortgage" },
+          { title: "What Is LTV?", path: "/blog/what-is-ltv-mortgage" },
+          { title: "Pay Off Your Mortgage Early", path: "/blog/pay-off-mortgage-early" },
+          { title: "How Much Is Stamp Duty?", path: "/blog/how-much-is-stamp-duty-2025" },
+        ]
+      }
+    ]
+  },
   {
     id: "property",
     label: "Property",
