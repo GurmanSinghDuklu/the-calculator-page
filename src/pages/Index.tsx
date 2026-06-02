@@ -625,6 +625,118 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── FEATURED FROM THE GUIDES ── */}
+      <section className="border-t border-dark-border py-16 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-1/3 w-[600px] h-[300px] bg-orange-500/4 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10">
+
+          {/* Section header */}
+          <div className="flex items-baseline justify-between mb-10">
+            <div>
+              <h2 className="font-display text-4xl md:text-5xl uppercase text-white tracking-tight">
+                Featured <span style={{ color: "#F97316" }}>Reading</span>
+              </h2>
+              <p className="text-white/50 text-sm font-sans mt-2">Guides and articles worth your time — no fluff</p>
+            </div>
+            <Link to="/blog" className="hidden md:flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-white/30 hover:text-white transition-colors">
+              All Articles <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+          {/* Hero feature + side stack */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-dark-border mb-px">
+
+            {/* Hero card — spans 2 cols */}
+            <Link
+              to="/mortgages/mortgage-for-new-residents"
+              className="group lg:col-span-2 bg-dark-bg hover:bg-dark-card transition-all duration-200 p-8 flex flex-col justify-between min-h-[260px] relative overflow-hidden"
+            >
+              <div className="absolute top-5 right-5">
+                <span className="text-[8px] font-heading uppercase tracking-widest px-2 py-1 rounded-sm bg-orange-500/10 text-orange-400 border border-orange-500/20">New Guide</span>
+              </div>
+              <div>
+                <span className="text-[9px] font-heading uppercase tracking-widest text-orange-400/70 mb-3 block">Mortgages · Visa &amp; Immigration</span>
+                <h3 className="font-display text-3xl md:text-4xl text-white group-hover:text-orange-400 transition-colors duration-300 leading-tight uppercase tracking-wide mb-4">
+                  Nobody Tells You This About Getting a UK Mortgage on a Visa
+                </h3>
+                <p className="font-sans text-sm text-white/50 leading-relaxed max-w-lg">
+                  Deposit requirements by visa type, which lenders say yes, the SDLT non-resident surcharge, and the joint application strategy that changes everything.
+                </p>
+              </div>
+              <div className="flex items-center gap-2 mt-6">
+                <span className="font-heading text-xs text-orange-400 uppercase tracking-widest group-hover:gap-3 transition-all">Read the guide</span>
+                <ArrowRight className="h-3 w-3 text-orange-400 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            {/* Side stack */}
+            <div className="flex flex-col">
+              <Link
+                to="/blog/mortgage-cheat-code"
+                className="group bg-dark-bg hover:bg-dark-card transition-all duration-200 p-6 flex flex-col justify-between flex-1 border-b border-dark-border"
+              >
+                <div>
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-accent-blue/70 mb-2 block">Property · Strategy</span>
+                  <h3 className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-blue transition-colors leading-tight">The Mortgage Cheat Code</h3>
+                </div>
+                <ArrowRight className="h-3 w-3 text-accent-blue opacity-0 group-hover:opacity-100 transition-opacity mt-3" />
+              </Link>
+              <Link
+                to="/blog/first-time-buyer-uk-2025"
+                className="group bg-dark-bg hover:bg-dark-card transition-all duration-200 p-6 flex flex-col justify-between flex-1 border-b border-dark-border"
+              >
+                <div>
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-accent-green/70 mb-2 block">Property · First-Time Buyer</span>
+                  <h3 className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-green transition-colors leading-tight">First-Time Buyer Guide UK 2026</h3>
+                </div>
+                <ArrowRight className="h-3 w-3 text-accent-green opacity-0 group-hover:opacity-100 transition-opacity mt-3" />
+              </Link>
+              <Link
+                to="/blog/what-is-a-good-salary-uk"
+                className="group bg-dark-bg hover:bg-dark-card transition-all duration-200 p-6 flex flex-col justify-between flex-1"
+              >
+                <div>
+                  <span className="text-[9px] font-heading uppercase tracking-widest text-accent-yellow/70 mb-2 block">Salary · UK Finance</span>
+                  <h3 className="font-heading text-sm uppercase tracking-wide text-white group-hover:text-accent-yellow transition-colors leading-tight">What Is a Good Salary in the UK?</h3>
+                </div>
+                <ArrowRight className="h-3 w-3 text-accent-yellow opacity-0 group-hover:opacity-100 transition-opacity mt-3" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Bottom row — 4 compact cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-dark-border">
+            {[
+              { title: "What Is Compound Interest?", path: "/blog/what-is-compound-interest", cat: "Investing", color: "text-accent-cyan" },
+              { title: "How Much Do I Need to Retire?", path: "/blog/how-much-do-i-need-to-retire", cat: "Retirement", color: "text-accent-blue" },
+              { title: "UK Tax Brackets 2026", path: "/blog/uk-tax-brackets-2025", cat: "Tax", color: "text-accent-red" },
+              { title: "How to Save for a House Deposit", path: "/blog/how-to-save-for-a-house-deposit", cat: "Savings", color: "text-accent-green" },
+            ].map(card => (
+              <Link
+                key={card.path}
+                to={card.path}
+                className="group bg-dark-bg hover:bg-dark-card transition-all duration-200 p-5 flex flex-col gap-2"
+              >
+                <span className={`text-[9px] font-heading uppercase tracking-widest ${card.color} opacity-60 group-hover:opacity-100 transition-opacity`}>{card.cat}</span>
+                <span className="font-heading text-xs uppercase tracking-wide text-white group-hover:text-white leading-tight">{card.title}</span>
+                <ArrowRight className={`h-3 w-3 ${card.color} opacity-0 group-hover:opacity-100 transition-opacity mt-auto`} />
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA row */}
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 transition-all">
+              All Blog Articles <ArrowRight className="h-3 w-3" />
+            </Link>
+            <Link to="/learn" className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 transition-all">
+              All Learn Guides <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black text-white pt-20 border-t border-dark-border mt-auto">
         <div className="max-w-7xl mx-auto px-6 pb-8">
