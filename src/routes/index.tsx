@@ -82,6 +82,7 @@ import OuncesToGrams from '../pages/converters/OuncesToGrams';
 import TeaspoonsToMl from '../pages/converters/TeaspoonsToMl';
 
 // Learn Articles (Existing)
+import CompoundInterestFormula from '../pages/learn/CompoundInterestFormula';
 import FinancialJourney from '../pages/learn/FinancialJourney';
 import WhereMoneyGoes from '../pages/learn/WhereMoneyGoes';
 import FiftyThirtyTwentyBudget from '../pages/learn/FiftyThirtyTwentyBudget';
@@ -245,6 +246,7 @@ export const routes: RouteObject[] = [
       { path: 'converters/teaspoons-to-ml', element: <TeaspoonsToMl /> },
 
       // Learning Hub Routes
+      { path: 'learn/compound-interest-formula', element: <CompoundInterestFormula /> },
       { path: 'learn/financial-journey', element: <FinancialJourney /> },
       { path: 'learn/where-money-goes', element: <WhereMoneyGoes /> },
       { path: 'learn/50-30-20-budget', element: <FiftyThirtyTwentyBudget /> },

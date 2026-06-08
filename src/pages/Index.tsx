@@ -176,6 +176,7 @@ const Index = () => {
   ];
 
   const learnGuides = [
+    { title: "Compound Interest Formula: The Complete Guide", path: "/learn/compound-interest-formula", category: "Investing" },
     { title: "Your Financial Journey", path: "/learn/financial-journey", category: "Foundation" },
     { title: "Where Does Your Money Go?", path: "/learn/where-money-goes", category: "Budgeting" },
     { title: "The 50/30/20 Budget Rule", path: "/learn/50-30-20-budget", category: "Budgeting" },
