@@ -341,8 +341,9 @@ export const NavigationMenu = () => {
             {/* Divider */}
             <div className="mx-4 my-2 h-px bg-white/8" />
 
-            {/* Learn & Blog */}
+            {/* Learn, Most Searched & Blog */}
             {[
+              { label: "Most Searched", path: "/most-searched", icon: TrendingUp },
               { label: "Learn", path: "/learn", icon: GraduationCap },
               { label: "Blog", path: "/blog", icon: BookOpen },
             ].map(item => {
