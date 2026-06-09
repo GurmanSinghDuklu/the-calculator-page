@@ -1,2 +1,378 @@
-import type { AnswerPageData } from './types';
-export const usPages: AnswerPageData[] = [];
+import type { AnswerPageData } from "./types";
+import {
+  usTakeHome, mortgagePayment, futureValueMonthly,
+  creditCardAnnualInterest, creditCardPayoffMonths,
+} from "./calc";
+
+const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
+const TODAY = "2026-06-09";
+
+const um200 = mortgagePayment(200000, 7, 30); // US: 30-yr, 7%
+const um300 = mortgagePayment(300000, 7, 30);
+const ufv500 = futureValueMonthly(500, 7, 20);
+const ufv10k = 10000 * Math.pow(1.07, 10);
+const ucc10kInt = creditCardAnnualInterest(10000, 24);
+const ucc5kMonths = creditCardPayoffMonths(5000, 22, 150);
+
+export const usPages: AnswerPageData[] = [
+  {
+    slug: "200k-mortgage-monthly-payment",
+    market: "us", category: "Mortgage", currency: "$",
+    question: "How much is a $200,000 mortgage per month?",
+    metaDescription: `A $200,000 mortgage over 30 years at 7% costs ${usd(um200)} per month in principal and interest. See the rate comparison and full breakdown.`,
+    keywords: "200000 mortgage monthly payment, 200k mortgage per month, how much is a 200000 mortgage",
+    answer: `A $200,000 mortgage over 30 years at 7% costs ${usd(um200)} per month in principal and interest. Property taxes, insurance and HOA are extra. Over 30 years you repay about ${usd(um200 * 360)}.`,
+    answerNumber: `${usd(um200)}/mo`,
+    assumptions: ["30-year fixed term", "7% annual interest rate", "Principal & interest only", "Property taxes, insurance & HOA excluded"],
+    formula: "M = P·r(1+r)ⁿ ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "$200,000 monthly payment by rate (30-year fixed)",
+      columns: ["Interest rate", "Monthly payment"],
+      rows: [
+        { label: "5%", value: usd(mortgagePayment(200000, 5, 30)) },
+        { label: "6%", value: usd(mortgagePayment(200000, 6, 30)) },
+        { label: "7%", value: usd(um200) },
+        { label: "8%", value: usd(mortgagePayment(200000, 8, 30)) },
+      ],
+    },
+    chart: {
+      title: "Monthly payment by rate",
+      points: [
+        { name: "5%", value: Math.round(mortgagePayment(200000, 5, 30)) },
+        { name: "6%", value: Math.round(mortgagePayment(200000, 6, 30)) },
+        { name: "7%", value: Math.round(um200) },
+        { name: "8%", value: Math.round(mortgagePayment(200000, 8, 30)) },
+      ],
+    },
+    faqs: [
+      { question: "What's the total cost of a $200,000 mortgage?", answer: `Over 30 years at 7% you repay about ${usd(um200 * 360)} in principal and interest — roughly ${usd(um200 * 360 - 200000)} of that is interest.` },
+      { question: "What income do I need for a $200,000 mortgage?", answer: "Lenders often use a 28% front-end DTI rule, so roughly $60,000–$70,000 depending on taxes, insurance and other debts." },
+      { question: "Does this include taxes and insurance?", answer: "No — this is principal and interest only. Add property tax, homeowners insurance and any HOA or PMI for your true monthly cost." },
+    ],
+    calculatorPath: "/finance/mortgage?amount=200000&rate=7&term=30",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["300k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "300k-mortgage-monthly-payment",
+    market: "us", category: "Mortgage", currency: "$",
+    question: "How much is a $300,000 mortgage per month?",
+    metaDescription: `A $300,000 mortgage over 30 years at 7% costs ${usd(um300)} per month in principal and interest. Rate comparison and total-cost breakdown.`,
+    keywords: "300000 mortgage monthly payment, 300k mortgage per month, how much is a 300000 mortgage",
+    answer: `A $300,000 mortgage over 30 years at 7% costs ${usd(um300)} per month in principal and interest. Taxes and insurance are additional. Over the full term you repay about ${usd(um300 * 360)}.`,
+    answerNumber: `${usd(um300)}/mo`,
+    assumptions: ["30-year fixed term", "7% annual interest rate", "Principal & interest only", "Property taxes, insurance & HOA excluded"],
+    formula: "M = P·r(1+r)ⁿ ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "$300,000 monthly payment by rate (30-year fixed)",
+      columns: ["Interest rate", "Monthly payment"],
+      rows: [
+        { label: "5%", value: usd(mortgagePayment(300000, 5, 30)) },
+        { label: "6%", value: usd(mortgagePayment(300000, 6, 30)) },
+        { label: "7%", value: usd(um300) },
+        { label: "8%", value: usd(mortgagePayment(300000, 8, 30)) },
+      ],
+    },
+    chart: {
+      title: "Monthly payment by rate",
+      points: [
+        { name: "5%", value: Math.round(mortgagePayment(300000, 5, 30)) },
+        { name: "6%", value: Math.round(mortgagePayment(300000, 6, 30)) },
+        { name: "7%", value: Math.round(um300) },
+        { name: "8%", value: Math.round(mortgagePayment(300000, 8, 30)) },
+      ],
+    },
+    faqs: [
+      { question: "What income do I need for a $300,000 mortgage?", answer: "Using a 28% front-end DTI, roughly $90,000–$105,000 depending on your tax, insurance and existing debt load." },
+      { question: "How much is the total interest?", answer: `About ${usd(um300 * 360 - 300000)} over 30 years at 7%. A 15-year term or extra payments cut this dramatically.` },
+      { question: "Is a 15-year loan cheaper?", answer: "The monthly payment is higher, but the total interest is far lower because you borrow for half as long at a typically lower rate." },
+    ],
+    calculatorPath: "/finance/mortgage?amount=300000&rate=7&term=30",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["200k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "salary-for-400k-house",
+    market: "us", category: "Mortgage", currency: "$",
+    question: "What salary do I need to buy a $400,000 house?",
+    metaDescription: "To buy a $400,000 house you typically need around $105,000 income with 10% down, using a 28% front-end DTI rule. See the full breakdown.",
+    keywords: "salary for 400k house, income needed for 400000 house, what salary to buy 400k house",
+    answer: "To buy a $400,000 house with 10% down ($40,000), you borrow $360,000. Using the 28% front-end DTI rule at 7%, you'd need roughly $105,000 of income — less with a bigger down payment.",
+    answerNumber: "~$105,000",
+    assumptions: ["10% down payment ($40,000)", "$360,000 borrowed at 7%, 30-year", "28% front-end DTI rule", "Excludes taxes/insurance which raise the income needed"],
+    formula: "Income ≈ (P&I + taxes + insurance) × 12 ÷ 0.28",
+    comparison: {
+      title: "Income needed for a $400,000 house",
+      columns: ["Down payment", "Income needed"],
+      rows: [
+        { label: "5% down", value: "~$112,000" },
+        { label: "10% down", value: "~$105,000" },
+        { label: "20% down", value: "~$92,000" },
+      ],
+    },
+    faqs: [
+      { question: "What is the 28/36 rule?", answer: "Lenders prefer housing costs under 28% of gross income (front-end) and total debt under 36% (back-end). Both affect how much house you can afford." },
+      { question: "Does a bigger down payment help?", answer: "Yes — it lowers the loan, the monthly payment and the income needed, and a 20% down payment removes PMI entirely." },
+      { question: "Are taxes and insurance included?", answer: "They should be. Property tax and homeowners insurance vary by state and can add hundreds a month, raising the income you need." },
+    ],
+    calculatorPath: "/mortgages/salary-for-mortgage?price=400000",
+    calculatorLabel: "Open salary-for-mortgage calculator",
+    related: ["down-payment-for-250k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "down-payment-for-250k-house",
+    market: "us", category: "Mortgage", currency: "$",
+    question: "How much down payment for a $250,000 house?",
+    metaDescription: "A 20% down payment on a $250,000 house is $50,000; an FHA 3.5% down payment is $8,750. See every tier and what it unlocks.",
+    keywords: "down payment for 250k house, how much down payment 250000 house, 250k house down payment",
+    answer: "For a $250,000 house, a 20% down payment is $50,000 and an FHA 3.5% down payment is $8,750. Putting 20% down avoids PMI; lower down payments are possible but add mortgage insurance.",
+    answerNumber: "$50,000",
+    assumptions: ["Down payment shown as % of $250,000 price", "20% avoids private mortgage insurance (PMI)", "FHA loans allow 3.5% down with mortgage insurance"],
+    formula: "Down payment = price × down %",
+    comparison: {
+      title: "Down payment tiers for a $250,000 house",
+      columns: ["Down %", "Amount"],
+      rows: [
+        { label: "3.5% (FHA)", value: "$8,750" },
+        { label: "5%", value: "$12,500" },
+        { label: "10%", value: "$25,000" },
+        { label: "20%", value: "$50,000" },
+      ],
+    },
+    faqs: [
+      { question: "Do I have to put 20% down?", answer: "No. Conventional loans allow as little as 3–5% down and FHA loans 3.5%, but below 20% you'll pay PMI or mortgage insurance until you build enough equity." },
+      { question: "What is PMI?", answer: "Private mortgage insurance protects the lender when you put less than 20% down. It typically adds 0.3–1.5% of the loan annually until you reach 20% equity." },
+      { question: "What else do I need besides the down payment?", answer: "Closing costs of roughly 2–5% of the price ($5,000–$12,500 on a $250,000 home), plus reserves and moving costs." },
+    ],
+    calculatorPath: "/finance/mortgage?amount=250000&rate=7&term=30",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["salary-for-400k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
+    datePublished: TODAY,
+  },
+  // ---- Salary pages ----
+  ...[30000, 40000, 50000, 60000, 100000].map((gross): AnswerPageData => {
+    const th = usTakeHome(gross);
+    return {
+      slug: `${gross}-after-tax`,
+      market: "us", category: "Salary", currency: "$",
+      question: `$${gross.toLocaleString("en-US")} after tax`,
+      metaDescription: `$${gross.toLocaleString("en-US")} a year is about ${usd(th.net)} after federal tax and FICA (no state tax) — roughly ${usd(th.net / 12)} a month take-home.`,
+      keywords: `${gross} after tax, ${gross} take home pay, ${gross} salary after taxes`,
+      answer: `$${gross.toLocaleString("en-US")} a year is about ${usd(th.net)} after federal income tax and FICA — roughly ${usd(th.net / 12)} per month. You pay ${usd(th.federalTax ?? 0)} federal tax and ${usd(th.fica ?? 0)} FICA. State tax not included.`,
+      answerNumber: `${usd(th.net)}`,
+      assumptions: ["2025 federal single filer", "$15,000 standard deduction", "FICA 7.65% (Social Security + Medicare)", "No state income tax (varies by state)"],
+      formula: "Net = Gross − Federal Tax − FICA",
+      comparison: {
+        title: `$${gross.toLocaleString("en-US")} breakdown (2025, single)`,
+        columns: ["Item", "Amount"],
+        rows: [
+          { label: "Gross salary", value: usd(gross) },
+          { label: "Federal income tax", value: "−" + usd(th.federalTax ?? 0) },
+          { label: "FICA", value: "−" + usd(th.fica ?? 0) },
+          { label: "Take-home (year)", value: usd(th.net) },
+          { label: "Take-home (month)", value: usd(th.net / 12) },
+        ],
+      },
+      faqs: [
+        { question: `What is $${gross.toLocaleString("en-US")} a year per month after tax?`, answer: `About ${usd(th.net / 12)} per month after federal tax and FICA, before any state income tax.` },
+        { question: "Why isn't state tax included?", answer: "State income tax ranges from 0% (e.g. Texas, Florida) to over 13% (California). We show the federal baseline so you can add your state's rate." },
+        { question: "Does this include 401(k) contributions?", answer: "No — pre-tax 401(k) contributions would lower your taxable income and your take-home, while building retirement savings." },
+      ],
+      calculatorPath: `/finance/us-salary-calculator?salary=${gross}&country=US`,
+      calculatorLabel: "Open in US salary calculator",
+      related: [30000, 40000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
+      datePublished: TODAY,
+    };
+  }),
+  // ---- Savings / investing ----
+  {
+    slug: "500-a-month-20-years",
+    market: "us", category: "Savings", currency: "$",
+    question: "How much is $500 a month invested for 20 years?",
+    metaDescription: `Investing $500 a month for 20 years at a 7% average return grows to about ${usd(ufv500)} — you contribute $120,000 and growth adds the rest.`,
+    keywords: "500 a month invested for 20 years, 500 per month investment 20 years, invest 500 monthly",
+    answer: `Investing $500 a month for 20 years at a 7% average annual return grows to about ${usd(ufv500)}. You contribute $120,000 — compound growth adds roughly ${usd(ufv500 - 120000)} on top.`,
+    answerNumber: `${usd(ufv500)}`,
+    assumptions: ["7% average annual return (long-run S&P 500 proxy)", "$500 invested monthly for 240 months", "Returns reinvested (compounded monthly)", "Before inflation, fees and tax"],
+    formula: "FV = PMT × ((1+r)ⁿ − 1) ÷ r",
+    comparison: {
+      title: "$500/month for 20 years by return rate",
+      columns: ["Annual return", "Final value"],
+      rows: [
+        { label: "5%", value: usd(futureValueMonthly(500, 5, 20)) },
+        { label: "7%", value: usd(ufv500) },
+        { label: "9%", value: usd(futureValueMonthly(500, 9, 20)) },
+      ],
+    },
+    chart: {
+      title: "Final value by return rate",
+      points: [
+        { name: "5%", value: Math.round(futureValueMonthly(500, 5, 20)) },
+        { name: "7%", value: Math.round(ufv500) },
+        { name: "9%", value: Math.round(futureValueMonthly(500, 9, 20)) },
+      ],
+    },
+    faqs: [
+      { question: "Is 7% realistic?", answer: "It's a common long-run average for the S&P 500 before inflation. Returns vary year to year and aren't guaranteed." },
+      { question: "Should I use a Roth IRA?", answer: "A Roth IRA lets the growth come out tax-free in retirement. Over 20 years that can save a substantial amount versus a taxable account." },
+      { question: "What about inflation?", answer: "At ~2.5% inflation the real purchasing power of the final balance is lower than the headline figure, though still a large sum." },
+    ],
+    calculatorPath: "/finance/compound-interest?principal=0&contribution=500&rate=7&years=20",
+    calculatorLabel: "Open in compound interest calculator",
+    related: ["10000-invested-10-years", "save-100k-by-40", "401k-to-retire-at-60"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "10000-invested-10-years",
+    market: "us", category: "Savings", currency: "$",
+    question: "How much would $10,000 grow in 10 years?",
+    metaDescription: `$10,000 invested for 10 years at 7% grows to about ${usd(ufv10k)} with no further contributions — purely from compound growth.`,
+    keywords: "10000 invested for 10 years, how much will 10000 grow in 10 years, 10k investment 10 years",
+    answer: `$10,000 invested for 10 years at a 7% average annual return grows to about ${usd(ufv10k)} — with no further contributions. That's ${usd(ufv10k - 10000)} of pure compound growth.`,
+    answerNumber: `${usd(ufv10k)}`,
+    assumptions: ["7% average annual return", "Lump sum, no further contributions", "Returns compounded annually", "Before inflation, fees and tax"],
+    formula: "FV = P × (1 + r)ⁿ",
+    comparison: {
+      title: "$10,000 after 10 years by return rate",
+      columns: ["Annual return", "Final value"],
+      rows: [
+        { label: "3%", value: usd(10000 * Math.pow(1.03, 10)) },
+        { label: "5%", value: usd(10000 * Math.pow(1.05, 10)) },
+        { label: "7%", value: usd(ufv10k) },
+        { label: "9%", value: usd(10000 * Math.pow(1.09, 10)) },
+      ],
+    },
+    faqs: [
+      { question: "What if I add monthly contributions?", answer: "Regular contributions dramatically increase the total. $10,000 plus $200/month at 7% grows to far more than the lump sum alone." },
+      { question: "Is this guaranteed?", answer: "No. Markets fluctuate and you can lose money. 7% is a long-run average, not a promise of any single decade." },
+      { question: "High-yield savings vs investing?", answer: "A 4% high-yield savings account grows $10,000 to about $14,800 in 10 years — safer, but less than investing at 7%." },
+    ],
+    calculatorPath: "/finance/compound-interest?principal=10000&contribution=0&rate=7&years=10",
+    calculatorLabel: "Open in compound interest calculator",
+    related: ["500-a-month-20-years", "save-100k-by-40", "401k-to-retire-at-60"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "save-100k-by-40",
+    market: "us", category: "Savings", currency: "$",
+    question: "How much do I need to save to have $100k by 40?",
+    metaDescription: "Starting from zero at 25, you need about $290 a month at 7% to reach $100,000 by 40. Start later and the monthly figure climbs fast.",
+    keywords: "save 100k by 40, how to save 100000 by 40, reach 100k savings",
+    answer: "Starting from zero at age 25 (15 years), you need about $290 a month invested at 7% to reach $100,000 by 40. Start at 30 instead and it rises to roughly $480 a month.",
+    answerNumber: "~$290/mo",
+    assumptions: ["7% average annual return", "Starting from $0", "Target $100,000", "Monthly contributions, compounded monthly"],
+    formula: "PMT = FV × r ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "Monthly saving needed to hit $100k by 40",
+      columns: ["Start age", "Monthly amount"],
+      rows: [
+        { label: "25 (15 yrs)", value: "$290" },
+        { label: "30 (10 yrs)", value: "$480" },
+        { label: "35 (5 yrs)", value: "$1,165" },
+      ],
+    },
+    faqs: [
+      { question: "Why does starting earlier matter so much?", answer: "Compounding needs time. Starting at 25 instead of 35 roughly quarters the monthly amount, because returns do more of the work." },
+      { question: "Where should I keep it?", answer: "A Roth IRA or 401(k) in low-cost index funds keeps growth tax-advantaged and helps the balance reach $100,000 sooner in real terms." },
+      { question: "What return should I assume?", answer: "7% reflects a long-run diversified stock average. A high-yield savings account at 4% would need a larger monthly contribution." },
+    ],
+    calculatorPath: "/finance/savings?target=100000&rate=7",
+    calculatorLabel: "Open in savings calculator",
+    related: ["500-a-month-20-years", "10000-invested-10-years", "401k-to-retire-at-60"],
+    datePublished: TODAY,
+  },
+  // ---- Debt ----
+  {
+    slug: "payoff-5000-credit-card",
+    market: "us", category: "Debt", currency: "$",
+    question: "How long to pay off $5,000 of credit card debt?",
+    metaDescription: `Paying $150 a month on a $5,000 card at 22% APR clears it in about ${ucc5kMonths} months. Pay more each month and you finish far sooner.`,
+    keywords: "pay off 5000 credit card, how long to clear 5000 debt, 5000 credit card payoff time",
+    answer: `Paying $150 a month on a $5,000 credit card at 22% APR clears it in about ${ucc5kMonths} months. Raising payments to $250 a month roughly halves both the time and the interest.`,
+    answerNumber: `~${ucc5kMonths} mo`,
+    assumptions: ["$5,000 starting balance", "22% representative APR", "Fixed monthly payment", "No further spending on the card"],
+    formula: "n = −ln(1 − B·r ÷ PMT) ÷ ln(1 + r)",
+    comparison: {
+      title: "$5,000 at 22% APR — months to clear",
+      columns: ["Monthly payment", "Months to clear"],
+      rows: [
+        { label: "$100", value: String(creditCardPayoffMonths(5000, 22, 100)) },
+        { label: "$150", value: String(ucc5kMonths) },
+        { label: "$250", value: String(creditCardPayoffMonths(5000, 22, 250)) },
+        { label: "$400", value: String(creditCardPayoffMonths(5000, 22, 400)) },
+      ],
+    },
+    faqs: [
+      { question: "Would a 0% balance transfer help?", answer: "Hugely. Moving the $5,000 to a 0% APR balance-transfer card (minus a fee) means every dollar reduces the balance instead of paying interest." },
+      { question: "What if I only pay the minimum?", answer: "Minimum-only payments can stretch a $5,000 debt over decades and cost more in interest than the original balance. Always pay above the minimum." },
+      { question: "Avalanche or snowball?", answer: "Avalanche (highest APR first) saves the most money; snowball (smallest balance first) builds momentum and motivation." },
+    ],
+    calculatorPath: "/finance/credit-card-payoff?balance=5000&apr=22&payment=150",
+    calculatorLabel: "Open in credit card payoff calculator",
+    related: ["10000-credit-card-interest", "500-a-month-20-years", "10000-invested-10-years"],
+    datePublished: TODAY,
+  },
+  {
+    slug: "10000-credit-card-interest",
+    market: "us", category: "Debt", currency: "$",
+    question: "How much interest on $10,000 credit card at 24% APR?",
+    metaDescription: `A $10,000 balance at 24% APR costs about ${usd(ucc10kInt)} a year in interest — roughly ${usd(ucc10kInt / 12)} a month if the balance doesn't fall.`,
+    keywords: "10000 credit card interest, interest on 10000 at 24 apr, credit card 24 percent interest",
+    answer: `A $10,000 credit card balance at 24% APR costs about ${usd(ucc10kInt)} per year in interest — roughly ${usd(ucc10kInt / 12)} every month while the balance stays at $10,000.`,
+    answerNumber: `${usd(ucc10kInt)}/yr`,
+    assumptions: ["$10,000 balance", "24% APR", "Interest shown on the full balance", "Real cards compound daily, so actual cost can be higher"],
+    formula: "Annual interest = Balance × APR",
+    comparison: {
+      title: "Annual interest on $10,000 by APR",
+      columns: ["APR", "Yearly interest"],
+      rows: [
+        { label: "18%", value: usd(creditCardAnnualInterest(10000, 18)) },
+        { label: "24%", value: usd(ucc10kInt) },
+        { label: "30%", value: usd(creditCardAnnualInterest(10000, 30)) },
+      ],
+    },
+    faqs: [
+      { question: "How do I stop paying this interest?", answer: "A 0% APR balance-transfer card moves the debt to an interest-free promo period (for a fee), so payments reduce the balance instead of servicing interest." },
+      { question: "Is APR the same as monthly interest?", answer: "No. APR is annual; the monthly periodic rate is about APR ÷ 12, but most cards compound daily, so the effective annual cost is slightly higher." },
+      { question: "How much should I pay monthly?", answer: "As much above the minimum as possible. On a $10,000 balance, minimum payments barely reduce principal while interest keeps building." },
+    ],
+    calculatorPath: "/finance/credit-card-payoff?balance=10000&apr=24&payment=300",
+    calculatorLabel: "Open in credit card payoff calculator",
+    related: ["payoff-5000-credit-card", "500-a-month-20-years", "10000-invested-10-years"],
+    datePublished: TODAY,
+  },
+  // ---- Retirement ----
+  {
+    slug: "401k-to-retire-at-60",
+    market: "us", category: "Pension", currency: "$",
+    question: "How much 401(k) do I need to retire at 60?",
+    metaDescription: "To retire at 60 on about $50,000 a year before Social Security, you'd need roughly $1 million in your 401(k) using a 5% withdrawal rate.",
+    keywords: "401k to retire at 60, how much 401k to retire at 60, 401k needed to retire at 60",
+    answer: "To retire at 60 on about $50,000 a year before Social Security, you'd need roughly $1,000,000 in your 401(k) at a 5% withdrawal rate. For $40,000 a year, closer to $800,000.",
+    answerNumber: "~$1,000,000",
+    assumptions: ["Target income ~$50,000/year", "5% withdrawal rate", "Bridges to Social Security (62–67)", "Excludes Social Security and other savings"],
+    formula: "Balance ≈ Annual income ÷ withdrawal rate",
+    comparison: {
+      title: "401(k) needed at 60 by target income (5% withdrawal)",
+      columns: ["Annual income", "Balance needed"],
+      rows: [
+        { label: "$40,000", value: "$800,000" },
+        { label: "$50,000", value: "$1,000,000" },
+        { label: "$60,000", value: "$1,200,000" },
+        { label: "$80,000", value: "$1,600,000" },
+      ],
+    },
+    faqs: [
+      { question: "Can I withdraw from a 401(k) at 60?", answer: "Yes — penalty-free withdrawals start at 59½. Before that, the 10% early-withdrawal penalty usually applies unless you use rule 72(t) substantially equal payments." },
+      { question: "Does Social Security change this?", answer: "Yes. Social Security (claimable from 62) adds income later, so your 401(k) mainly bridges the gap from 60 until you claim, reducing the balance needed." },
+      { question: "Is 5% a safe withdrawal rate?", answer: "It's higher than the traditional 4% rule. Retiring at 60 means a longer horizon, so many planners prefer 4%, implying a larger balance." },
+    ],
+    calculatorPath: "/finance/retirement?retireAge=60&income=50000",
+    calculatorLabel: "Open in retirement calculator",
+    related: ["500-a-month-20-years", "save-100k-by-40", "10000-invested-10-years"],
+    datePublished: TODAY,
+  },
+];
