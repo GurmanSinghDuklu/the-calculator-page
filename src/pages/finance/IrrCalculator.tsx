@@ -342,6 +342,7 @@ export default function IrrCalculator() {
                 </div>
               ))}
             </div>
+            <p className="text-zinc-400 text-xs mt-2 mb-1">Further reading: <Link to="/learn/compound-interest-formula" className="text-blue-400 hover:text-blue-300 underline transition-colors">The Compound Interest Formula: Complete Guide</Link></p>
             <p className="text-zinc-400 text-xs mt-2">Sources: <a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/savings-accounts-explained" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">MoneyHelper</a>, <a href="https://www.vanguard.co.uk/professional/en/insights/research/capital-markets-model-faqs" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">Vanguard UK</a>, <a href="https://www.nerdwallet.com/uk/investing/roi-calculator/" target="_blank" rel="noopener noreferrer" className="text-white/60 underline hover:text-white transition-colors">NerdWallet UK</a></p>
           </section>
 

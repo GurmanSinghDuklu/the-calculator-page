@@ -517,6 +517,7 @@ const SavingsCalculator = () => {
           <section className="border border-white/8 bg-white/[0.015] px-8 py-8">
             <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/65 mb-4">Sources & Further Reading</p>
             <ul className="space-y-2 text-sm text-zinc-400 mb-6">
+              <li><Link to="/learn/compound-interest-formula" className="text-blue-400 hover:text-blue-300 underline transition-colors font-medium">The Compound Interest Formula: Complete Guide — Crypto, DCA, Inflation & More</Link></li>
               <li><a href="https://www.moneyhelper.org.uk/en/savings/types-of-savings/compare-savings-accounts" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline transition-colors">MoneyHelper — Compare savings accounts</a></li>
               <li><a href="https://www.vanguard.co.uk/professional/education/tools-and-resources/the-power-of-compounding" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline transition-colors">Vanguard UK — The power of compounding</a></li>
               <li><a href="https://www.nerdwallet.com/uk/savings/savings-calculator/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline transition-colors">NerdWallet UK — Savings calculator guide</a></li>

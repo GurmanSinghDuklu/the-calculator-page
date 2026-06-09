@@ -223,6 +223,10 @@ export default function ApyCalculator() {
           </div>
         </div>
 
+        <div className="max-w-5xl mx-auto px-6 pb-6">
+          <p className="text-zinc-500 text-xs">Further reading: <Link to="/learn/compound-interest-formula" className="text-blue-400 hover:text-blue-300 underline transition-colors">The Compound Interest Formula: Complete Guide — Crypto, DCA, Inflation & More</Link></p>
+        </div>
+
         <FinancialDisclosure variant="investment" />
 
         {/* Footer */}

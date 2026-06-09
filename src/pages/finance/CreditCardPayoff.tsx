@@ -764,6 +764,7 @@ export default function CreditCardPayoff() {
                   { title: "Loan Calculator", desc: "Calculate monthly payments and total interest for any personal loan.", to: "/finance/loan" },
                   { title: "Budget Calculator", desc: "Map your income against expenses to find money to throw at debt.", to: "/finance/budget" },
                   { title: "Compound Interest", desc: "See how interest grows — and why clearing high-APR debt is so urgent.", to: "/finance/compound-interest" },
+                  { title: "Compound Interest Formula Guide", desc: "Deep-dive: how compounding works, crypto markets, DCA, and inflation-adjusted returns.", to: "/learn/compound-interest-formula" },
                 ].map(c => (
                   <Link key={c.to} to={c.to}
                     className="flex flex-col gap-2 p-5 bg-dark-card border border-dark-border rounded-xl hover:border-blue-500/40 transition-colors group"
