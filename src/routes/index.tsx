@@ -157,6 +157,11 @@ import SalaryCalculatorApp from '../pages/app/SalaryCalculatorApp';
 import SavingsCalculatorApp from '../pages/app/SavingsCalculatorApp';
 import PercentageCalculatorApp from '../pages/app/PercentageCalculatorApp';
 
+// Most Searched — Financial Edition
+import MostSearchedHub from '../pages/most-searched/MostSearchedHub';
+import AnswerPageRoute from '../pages/most-searched/AnswerPageRoute';
+import { getAllAnswerPages } from '../data/most-searched';
+
 export const routes: RouteObject[] = [
   {
     path: '/',
@@ -168,6 +173,15 @@ export const routes: RouteObject[] = [
       { path: 'mortgages/salary-for-mortgage', element: <SalaryForMortgage /> },
       { path: 'mortgages/mortgage-for-new-residents', element: <MortgageForNewResidents /> },
       { path: 'formulas', element: <Formulas /> },
+
+      // Most Searched — Financial Edition
+      { path: 'most-searched', element: <MostSearchedHub /> },
+      {
+        path: 'most-searched/:market/:slug',
+        element: <AnswerPageRoute />,
+        getStaticPaths: () =>
+          getAllAnswerPages().map((p) => `/most-searched/${p.market}/${p.slug}`),
+      } as RouteObject,
 
       // Finance Routes
       { path: 'finance/compound-interest', element: <CompoundInterest /> },
