@@ -1,6 +1,8 @@
 import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2 } from "lucide-react";
 import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
+import { getByMarket } from "@/data/most-searched";
+import { MostSearchedCard } from "@/components/most-searched/MostSearchedCard";
 import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { NavigationMenu } from "@/components/NavigationMenu";
@@ -10,6 +12,8 @@ import { Input } from "@/components/ui/input";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [msMarket, setMsMarket] = useState<"uk" | "us">("uk");
+  const featured = getByMarket(msMarket).slice(0, 6);
 
   const popularCalculatorsAndConversions = [
     { title: "UK Salary Calculator", description: "Calculate take-home pay after tax and NI", icon: Wallet, path: "/finance/salary", badge: "", color: "text-accent-blue", border: "hover:border-accent-blue", accent: "group-hover:bg-accent-blue/10" },
@@ -329,6 +333,35 @@ const Index = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Internet's Most Searched — Financial Edition */}
+      <section className="py-14 px-6 border-b border-dark-border bg-gradient-to-b from-accent-blue/[0.04] to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <p className="font-heading text-xs uppercase tracking-[0.3em] text-accent-blue mb-2">The Internet's Most Searched</p>
+              <h2 className="font-display text-4xl md:text-5xl text-white tracking-tight uppercase">Financial Edition</h2>
+              <p className="text-white/55 mt-2 max-w-xl text-sm">The money questions everyone Googles — answered with the actual numbers.</p>
+            </div>
+            <div className="inline-flex rounded-lg border border-dark-border overflow-hidden self-start">
+              {(["uk", "us"] as const).map((m) => (
+                <button key={m} onClick={() => setMsMarket(m)}
+                  className={`px-5 py-2 font-heading text-xs uppercase tracking-widest transition-colors ${msMarket === m ? "bg-accent-blue text-white" : "text-white/50 hover:text-white"}`}>
+                  {m === "uk" ? "🇬🇧 UK" : "🇺🇸 US"}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featured.map((p) => <MostSearchedCard key={`${p.market}-${p.slug}`} page={p} />)}
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/most-searched" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-blue text-white font-heading uppercase tracking-widest text-sm hover:-translate-y-0.5 transition-transform">
+              See all most searched <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
