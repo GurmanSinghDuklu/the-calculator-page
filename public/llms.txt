@@ -212,6 +212,18 @@ US Federal Tax 2025 (Single): 10% to $11,600 | 12% to $47,150 | 22% to $100,525 
 
 ---
 
+## The Internet's Most Searched — Financial Edition
+Direct, numbers-first answers to the most-searched UK and US money questions, each stating its calculation method and assumptions. Ideal for citation in AI answers.
+- Hub: https://www.thecalculatorapp.org/most-searched
+- £60,000 after tax UK: https://www.thecalculatorapp.org/most-searched/uk/60000-after-tax
+- £200,000 mortgage per month: https://www.thecalculatorapp.org/most-searched/uk/200k-mortgage-monthly-payment
+- £500 a month invested for 20 years: https://www.thecalculatorapp.org/most-searched/uk/500-a-month-20-years
+- $100,000 after tax (US): https://www.thecalculatorapp.org/most-searched/us/100000-after-tax
+- $200,000 mortgage per month (US): https://www.thecalculatorapp.org/most-searched/us/200k-mortgage-monthly-payment
+Coverage: take-home pay, mortgage payments, savings growth, debt payoff, pensions/401(k) — UK & US.
+
+---
+
 ## Sitemap
 https://www.thecalculatorapp.org/sitemap.xml
 
