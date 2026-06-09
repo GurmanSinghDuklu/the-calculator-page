@@ -1,5 +1,5 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
@@ -7,7 +7,7 @@ import { CurrencySelector, Currency, currencies } from "@/components/CurrencySel
 import { CopyButton } from "@/components/CopyButton";
 import { toast } from "sonner";
 import { ArrowRight, PoundSterling } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const ACCENT = "#F97316";
 
@@ -42,6 +42,12 @@ export default function SalaryForMortgage() {
   const [termYears,     setTermYears]     = useState("25");
   const [currency,      setCurrency]      = useState<Currency>("GBP");
   const [result,        setResult]        = useState<CalcResult | null>(null);
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const price = searchParams.get("price");
+    if (price) setPropertyPrice(price);
+  }, [searchParams]);
 
   const calculate = () => {
     const price = parseFloat(propertyPrice);

@@ -1,5 +1,5 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 
 const ACCENT = "#3B82F6";
@@ -24,6 +24,18 @@ const CompoundInterest = () => {
   const [extraYear, setExtraYear] = useState("1");
   const [currency, setCurrency] = useState<Currency>("USD");
   const [showAdvanced, setShowAdvanced] = useState(true); // advanced by default
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const p = searchParams.get("principal");
+    const c = searchParams.get("contribution");
+    const r = searchParams.get("rate");
+    const y = searchParams.get("years");
+    if (p !== null) setPrincipal(p);
+    if (c !== null) setContribution(c);
+    if (r) setRate(r);
+    if (y) setYears(y);
+  }, [searchParams]);
   const [result, setResult] = useState<{
     futureValue: number;
     totalContributions: number;

@@ -1,5 +1,5 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
@@ -7,7 +7,7 @@ import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { retirementSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
@@ -74,6 +74,14 @@ export default function RetirementCalculator() {
   const [statePension,         setStatePension]         = useState("11502");
   const [withdrawalRate,       setWithdrawalRate]       = useState("4");
   const [results,              setResults]              = useState<RetirementResults | null>(null);
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const retireAge = searchParams.get("retireAge");
+    const income = searchParams.get("income");
+    if (retireAge) setRetirementAge(retireAge);
+    if (income) setSalary(income);
+  }, [searchParams]);
 
   const calculate = () => {
     const nums = {

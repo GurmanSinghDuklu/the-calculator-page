@@ -6,7 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
 import { ArrowRight, Plus, X, ChevronDown, ChevronUp, Search } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 
 const ACCENT = "#F97316";
@@ -97,6 +97,25 @@ const MortgageCalculator = () => {
   const [activePartTab, setActivePartTab] = useState(0);
   const [jumpInput, setJumpInput] = useState("");
   const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const amount = searchParams.get("amount");
+    const rate = searchParams.get("rate");
+    const term = searchParams.get("term");
+    if (amount || rate || term) {
+      setParts((prev) => {
+        const next = [...prev];
+        next[0] = {
+          ...next[0],
+          amount: amount ?? next[0].amount,
+          rate: rate ?? next[0].rate,
+          termYears: term ?? next[0].termYears,
+        };
+        return next;
+      });
+    }
+  }, [searchParams]);
   const highlightRef = useRef<HTMLTableRowElement | null>(null);
 
   useEffect(() => {

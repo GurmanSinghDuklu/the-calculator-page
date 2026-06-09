@@ -1,5 +1,5 @@
 import { Logo } from "@/components/Logo";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { seoData } from "@/utils/seoData";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
@@ -10,7 +10,7 @@ import {
   Tooltip, ResponsiveContainer, Legend,
 } from "recharts";
 import { Plus, Trash2, ArrowRight, CreditCard, TrendingDown, Zap, Info } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const ACCENT   = "#3B82F6";
 const AV_COLOR = "#3B82F6";   // blue  — avalanche
@@ -155,6 +155,20 @@ export default function CreditCardPayoff() {
   ]);
   const [sliderMonth, setSliderMonth] = useState(0);
   const [results, setResults] = useState<{ avalanche: StrategyResult; snowball: StrategyResult } | null>(null);
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const balance = searchParams.get("balance");
+    const apr = searchParams.get("apr");
+    const payment = searchParams.get("payment");
+    if (balance && apr) {
+      const bal = parseFloat(balance);
+      setDebts([
+        { id: "1", name: "Credit Card", balance: bal, apr: parseFloat(apr), minPayment: Math.max(25, Math.round(bal * 0.01)) },
+      ]);
+      if (payment) setExtraBudget(payment);
+    }
+  }, [searchParams]);
 
   const sym = currencies[currency].symbol;
 

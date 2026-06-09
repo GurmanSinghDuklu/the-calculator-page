@@ -1,5 +1,5 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
@@ -7,7 +7,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { compoundInterestSchema } from "@/lib/validation";
 import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
@@ -26,6 +26,16 @@ const SavingsCalculator = () => {
   const [lumpAmount,        setLumpAmount]        = useState("5000");
   const [lumpYear,          setLumpYear]          = useState("3");
   const [lumpMonth,         setLumpMonth]         = useState("0");
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const rate = searchParams.get("rate");
+    const monthly = searchParams.get("monthly");
+    const initial = searchParams.get("initial");
+    if (rate) setInterestRate(rate);
+    if (monthly) setMonthlyDeposit(monthly);
+    if (initial) setInitialDeposit(initial);
+  }, [searchParams]);
   const [result, setResult] = useState<{
     finalBalance: number; totalDeposits: number; totalInterest: number;
     lumpBoost?: number;

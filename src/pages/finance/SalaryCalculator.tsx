@@ -1,8 +1,8 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
@@ -76,6 +76,14 @@ const SalaryCalculator = () => {
   const [taxCode,       setTaxCode]       = useState("1257L");
   const [filingStatus,  setFilingStatus]  = useState<FilingStatus>("single");
   const [state,         setState]         = useState("none");
+
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const s = searchParams.get("salary");
+    const c = searchParams.get("country");
+    if (s) setSalary(s);
+    if (c === "UK" || c === "US") setCountry(c as Country);
+  }, [searchParams]);
 
   const annualSalary = parseFloat(salary) || 0;
   const taxResult = country === "UK"
