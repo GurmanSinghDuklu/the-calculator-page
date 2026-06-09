@@ -17,6 +17,7 @@
     "dev": "vite",
     "build": "vite-react-ssg build",
     "lint": "eslint .",
+    "test": "vitest run",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -93,6 +94,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
     "vite": "^7.3.0",
-    "vite-ssg-sitemap": "^0.7.1"
+    "vite-ssg-sitemap": "^0.7.1",
+    "vitest": "^2.1.9"
   }
 }
