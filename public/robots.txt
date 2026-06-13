@@ -38,6 +38,18 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 # Private/Utility Pages (not useful for indexing)
 User-agent: *
 Disallow: /blog/cheat-code-01-payment
@@ -50,9 +62,6 @@ Disallow: /node_modules/
 # The Calculator Page - AI-readable summary
 # See: https://www.thecalculatorapp.org/llms.txt
 
-Sitemap: https://www.thecalculatorapp.org/sitemap.xml
-
-# Bing
 Sitemap: https://www.thecalculatorapp.org/sitemap.xml
 
 # IndexNow
