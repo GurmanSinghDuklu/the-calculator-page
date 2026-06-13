@@ -18,13 +18,30 @@ export function AnswerPage({ page }: { page: AnswerPageData }) {
     .map((s) => getBySlug(page.market, s))
     .filter((p): p is AnswerPageData => Boolean(p));
 
+  const author = {
+    "@type": "Person",
+    name: "M Singh CeMAP DipFA",
+    url: `${SITE}/about`,
+  };
+
   const qaSchema = {
     "@context": "https://schema.org",
     "@type": "QAPage",
     mainEntity: {
       "@type": "Question",
       name: page.question,
-      acceptedAnswer: { "@type": "Answer", text: page.answer },
+      text: page.question,
+      answerCount: 1,
+      datePublished: page.datePublished,
+      author,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: page.answer,
+        datePublished: page.datePublished,
+        url: `${url}#most-searched-answer`,
+        upvoteCount: 1,
+        author,
+      },
     },
   };
 
