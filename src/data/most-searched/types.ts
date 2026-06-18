@@ -16,6 +16,11 @@ export interface ChartPoint {
   value: number;
 }
 
+export interface OfficialSource {
+  label: string;
+  url: string;
+}
+
 export interface AnswerPageData {
   /** URL slug, unique within a market, e.g. "200k-mortgage-monthly-payment" */
   slug: string;
@@ -44,6 +49,8 @@ export interface AnswerPageData {
   calculatorLabel: string;
   /** slugs (same market) for related links */
   related: string[];
+  /** Official government / regulatory sources that back the figures */
+  officialSources: OfficialSource[];
   datePublished: string; // ISO
   dateModified?: string;
 }

@@ -6,6 +6,33 @@ import {
 
 const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const TODAY = "2026-06-09";
+const MODIFIED = "2026-06-18";
+
+const US_MORTGAGE_SOURCES = [
+  { label: "CFPB — Understanding mortgage loan types", url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-fixed-rate-mortgage-en-96/" },
+  { label: "Freddie Mac — Primary Mortgage Market Survey", url: "https://www.freddiemac.com/pmms" },
+  { label: "HUD — Buying a home", url: "https://www.hud.gov/topics/buying_a_home" },
+];
+const US_SALARY_SOURCES = [
+  { label: "IRS — 2025 Tax Brackets and Rates", url: "https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2025" },
+  { label: "SSA — FICA contribution rates 2025", url: "https://www.ssa.gov/oact/cola/cbb.html" },
+  { label: "IRS — Standard deduction amounts", url: "https://www.irs.gov/taxtopics/tc551" },
+];
+const US_SAVINGS_SOURCES = [
+  { label: "SEC — Introduction to investing", url: "https://www.investor.gov/introduction-investing" },
+  { label: "IRS — Roth IRA contribution limits", url: "https://www.irs.gov/retirement-plans/roth-iras" },
+  { label: "FINRA — Compound interest calculator", url: "https://www.finra.org/investors/tools-and-calculators/compound-interest-calculator" },
+];
+const US_DEBT_SOURCES = [
+  { label: "CFPB — Credit card interest rates", url: "https://www.consumerfinance.gov/consumer-tools/credit-cards/" },
+  { label: "FTC — Dealing with credit card debt", url: "https://consumer.ftc.gov/articles/how-get-out-debt" },
+  { label: "CFPB — Balance transfer guide", url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-en-1445/" },
+];
+const US_RETIREMENT_SOURCES = [
+  { label: "IRS — 401(k) contribution limits 2025", url: "https://www.irs.gov/retirement-plans/401k-plans" },
+  { label: "SSA — When to start receiving retirement benefits", url: "https://www.ssa.gov/benefits/retirement/planner/ageincrease.html" },
+  { label: "DOL — 401(k) plan overview", url: "https://www.dol.gov/general/topic/retirement/401kplans" },
+];
 
 const um200 = mortgagePayment(200000, 7, 30); // US: 30-yr, 7%
 const um300 = mortgagePayment(300000, 7, 30);
@@ -52,7 +79,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/mortgage?amount=200000&rate=7&term=30",
     calculatorLabel: "Open in mortgage calculator",
     related: ["300k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
-    datePublished: TODAY,
+    officialSources: US_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "300k-mortgage-monthly-payment",
@@ -91,7 +119,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/mortgage?amount=300000&rate=7&term=30",
     calculatorLabel: "Open in mortgage calculator",
     related: ["200k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
-    datePublished: TODAY,
+    officialSources: US_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "salary-for-400k-house",
@@ -120,7 +149,11 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/mortgages/salary-for-mortgage?price=400000",
     calculatorLabel: "Open salary-for-mortgage calculator",
     related: ["down-payment-for-250k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
-    datePublished: TODAY,
+    officialSources: [
+      ...US_MORTGAGE_SOURCES,
+      { label: "CFPB — Debt-to-income ratio", url: "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/" },
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "down-payment-for-250k-house",
@@ -150,7 +183,12 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/mortgage?amount=250000&rate=7&term=30",
     calculatorLabel: "Open in mortgage calculator",
     related: ["salary-for-400k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
-    datePublished: TODAY,
+    officialSources: [
+      { label: "CFPB — Down payment and PMI", url: "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/" },
+      { label: "HUD — FHA loan requirements", url: "https://www.hud.gov/buying/loans" },
+      ...US_MORTGAGE_SOURCES.slice(0, 2),
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Salary pages ----
   ...[30000, 40000, 50000, 60000, 100000].map((gross): AnswerPageData => {
@@ -184,7 +222,8 @@ export const usPages: AnswerPageData[] = [
       calculatorPath: `/finance/us-salary-calculator?salary=${gross}&country=US`,
       calculatorLabel: "Open in US salary calculator",
       related: [30000, 40000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
-      datePublished: TODAY,
+      officialSources: US_SALARY_SOURCES,
+      datePublished: TODAY, dateModified: MODIFIED,
     };
   }),
   // ---- Savings / investing ----
@@ -223,7 +262,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/compound-interest?principal=0&contribution=500&rate=7&years=20",
     calculatorLabel: "Open in compound interest calculator",
     related: ["10000-invested-10-years", "save-100k-by-40", "401k-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: US_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "10000-invested-10-years",
@@ -253,7 +293,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/compound-interest?principal=10000&contribution=0&rate=7&years=10",
     calculatorLabel: "Open in compound interest calculator",
     related: ["500-a-month-20-years", "save-100k-by-40", "401k-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: US_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "save-100k-by-40",
@@ -282,7 +323,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/savings?target=100000&rate=7",
     calculatorLabel: "Open in savings calculator",
     related: ["500-a-month-20-years", "10000-invested-10-years", "401k-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: US_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Debt ----
   {
@@ -313,7 +355,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/credit-card-payoff?balance=5000&apr=22&payment=150",
     calculatorLabel: "Open in credit card payoff calculator",
     related: ["10000-credit-card-interest", "500-a-month-20-years", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: US_DEBT_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "10000-credit-card-interest",
@@ -342,7 +385,8 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/credit-card-payoff?balance=10000&apr=24&payment=300",
     calculatorLabel: "Open in credit card payoff calculator",
     related: ["payoff-5000-credit-card", "500-a-month-20-years", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: US_DEBT_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Retirement ----
   {
@@ -373,6 +417,7 @@ export const usPages: AnswerPageData[] = [
     calculatorPath: "/finance/retirement?retireAge=60&income=50000",
     calculatorLabel: "Open in retirement calculator",
     related: ["500-a-month-20-years", "save-100k-by-40", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: US_RETIREMENT_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
 ];

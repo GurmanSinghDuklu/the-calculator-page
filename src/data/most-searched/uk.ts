@@ -6,6 +6,34 @@ import {
 
 const gbp = (n: number) => "£" + Math.round(n).toLocaleString("en-GB");
 const TODAY = "2026-06-09";
+const MODIFIED = "2026-06-18";
+
+// Shared official source sets
+const UK_MORTGAGE_SOURCES = [
+  { label: "Bank of England — Mortgage Rates", url: "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate" },
+  { label: "FCA — Mortgage Conduct of Business Rules", url: "https://www.fca.org.uk/consumers/mortgages" },
+  { label: "MoneyHelper — How mortgages work", url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/how-repayment-mortgages-work" },
+];
+const UK_SALARY_SOURCES = [
+  { label: "HMRC — Income Tax rates and allowances 2025/26", url: "https://www.gov.uk/income-tax-rates" },
+  { label: "HMRC — National Insurance rates 2025/26", url: "https://www.gov.uk/national-insurance/how-much-national-insurance-you-pay" },
+  { label: "HMRC — Personal Allowance", url: "https://www.gov.uk/income-tax-rates/personal-allowances" },
+];
+const UK_SAVINGS_SOURCES = [
+  { label: "FCA — Investing basics", url: "https://www.fca.org.uk/consumers/investing" },
+  { label: "MoneyHelper — How to save and invest", url: "https://www.moneyhelper.org.uk/en/savings/types-of-savings/stocks-and-shares-isas" },
+  { label: "HMRC — ISA allowances", url: "https://www.gov.uk/individual-savings-accounts" },
+];
+const UK_DEBT_SOURCES = [
+  { label: "FCA — Credit card rules", url: "https://www.fca.org.uk/consumers/credit-cards" },
+  { label: "StepChange — Understanding credit card debt", url: "https://www.stepchange.org/debt-info/credit-card-debt.aspx" },
+  { label: "MoneyHelper — Balance transfers explained", url: "https://www.moneyhelper.org.uk/en/everyday-money/credit/credit-card-balance-transfers" },
+];
+const UK_PENSION_SOURCES = [
+  { label: "Gov.uk — State Pension age", url: "https://www.gov.uk/state-pension-age" },
+  { label: "MoneyHelper — Pension withdrawal options", url: "https://www.moneyhelper.org.uk/en/pensions-and-retirement/taking-your-pension" },
+  { label: "The Pensions Regulator — Workplace pensions", url: "https://www.thepensionsregulator.gov.uk/en/workers/what-is-a-workplace-pension" },
+];
 
 // Pre-computed figures
 const m200 = mortgagePayment(200000, 5, 25);
@@ -58,7 +86,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/mortgage?amount=200000&rate=5&term=25",
     calculatorLabel: "Open in mortgage calculator",
     related: ["300k-mortgage-monthly-payment", "salary-for-400k-house", "deposit-for-250k-house"],
-    datePublished: TODAY,
+    officialSources: UK_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "300k-mortgage-monthly-payment",
@@ -97,7 +126,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/mortgage?amount=300000&rate=5&term=25",
     calculatorLabel: "Open in mortgage calculator",
     related: ["200k-mortgage-monthly-payment", "salary-for-400k-house", "deposit-for-250k-house"],
-    datePublished: TODAY,
+    officialSources: UK_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "salary-for-400k-house",
@@ -127,7 +157,11 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/mortgages/salary-for-mortgage?price=400000",
     calculatorLabel: "Open salary-for-mortgage calculator",
     related: ["deposit-for-250k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
-    datePublished: TODAY,
+    officialSources: [
+      ...UK_MORTGAGE_SOURCES,
+      { label: "FCA — Mortgage affordability rules", url: "https://www.fca.org.uk/consumers/mortgages/mortgage-affordability" },
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "deposit-for-250k-house",
@@ -157,7 +191,12 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/stamp-duty?price=250000",
     calculatorLabel: "Check stamp duty on £250,000",
     related: ["salary-for-400k-house", "200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment"],
-    datePublished: TODAY,
+    officialSources: [
+      { label: "Gov.uk — Stamp Duty Land Tax rates", url: "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates" },
+      { label: "Gov.uk — Help to Buy: Equity Loan", url: "https://www.gov.uk/help-to-buy-equity-loan" },
+      ...UK_MORTGAGE_SOURCES.slice(0, 2),
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Salary pages ----
   ...[
@@ -195,7 +234,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: `/finance/salary?salary=${gross}&country=UK`,
     calculatorLabel: "Open in UK salary calculator",
     related: [30000, 40000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
-    datePublished: TODAY,
+    officialSources: UK_SALARY_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   })),
   // ---- Savings / investing ----
   {
@@ -233,7 +273,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/compound-interest?principal=0&contribution=500&rate=7&years=20",
     calculatorLabel: "Open in compound interest calculator",
     related: ["10000-invested-10-years", "save-100k-by-40", "pension-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: UK_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "10000-invested-10-years",
@@ -263,7 +304,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/compound-interest?principal=10000&contribution=0&rate=7&years=10",
     calculatorLabel: "Open in compound interest calculator",
     related: ["500-a-month-20-years", "save-100k-by-40", "pension-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: UK_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "save-100k-by-40",
@@ -292,7 +334,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/savings?target=100000&rate=7",
     calculatorLabel: "Open in savings calculator",
     related: ["500-a-month-20-years", "10000-invested-10-years", "pension-to-retire-at-60"],
-    datePublished: TODAY,
+    officialSources: UK_SAVINGS_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Debt ----
   {
@@ -323,7 +366,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/credit-card-payoff?balance=5000&apr=22&payment=150",
     calculatorLabel: "Open in credit card payoff calculator",
     related: ["10000-credit-card-interest", "500-a-month-20-years", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: UK_DEBT_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   {
     slug: "10000-credit-card-interest",
@@ -352,7 +396,8 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/credit-card-payoff?balance=10000&apr=24&payment=300",
     calculatorLabel: "Open in credit card payoff calculator",
     related: ["payoff-5000-credit-card", "500-a-month-20-years", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: UK_DEBT_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Pension ----
   {
@@ -383,6 +428,7 @@ export const ukPages: AnswerPageData[] = [
     calculatorPath: "/finance/retirement?retireAge=60&income=25000",
     calculatorLabel: "Open in retirement calculator",
     related: ["500-a-month-20-years", "save-100k-by-40", "10000-invested-10-years"],
-    datePublished: TODAY,
+    officialSources: UK_PENSION_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
   },
 ];
