@@ -225,7 +225,8 @@ const DaysBetweenDatesCalculator = () => {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Days Between Dates Calculator</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[14vw] lg:text-[110px]"
                 style={{
@@ -247,7 +248,7 @@ const DaysBetweenDatesCalculator = () => {
               >
                 BETWEEN DATES
               </span>
-            </h1>
+            </div>
 
             <div
               className="mt-8 max-w-sm pl-4 border-l-2"

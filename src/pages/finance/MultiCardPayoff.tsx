@@ -236,7 +236,8 @@ export default function MultiCardPayoff() {
         {/* Hero title */}
         <div className="max-w-5xl mx-auto px-6 pt-12 pb-8 select-none">
           <div className="absolute w-[600px] h-[400px] rounded-full blur-[140px] opacity-[0.07] pointer-events-none -z-10" style={{ background: ACCENT }} />
-          <h1 className="font-display leading-[0.85] tracking-tighter">
+          <h1 className="sr-only">Multi-Card Payoff Calculator UK 2025</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[12vw] md:text-[95px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -249,7 +250,7 @@ export default function MultiCardPayoff() {
             <span className="block text-[5vw] md:text-[42px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
               CALCULATOR
             </span>
-          </h1>
+          </div>
           <div className="mt-6 max-w-md pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
             <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
               Simulate Avalanche or Snowball payoff across multiple credit cards. See exactly when each card gets paid off and how much interest you'll save.

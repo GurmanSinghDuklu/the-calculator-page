@@ -56,7 +56,8 @@ const CategoryProperty = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-white/60 text-sm font-sans uppercase tracking-[0.2em] mb-4">Category</p>
 
-          <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter select-none">
+          <h1 className="sr-only">Property Calculators</h1>
+          <div aria-hidden="true" className="font-display text-[15vw] leading-[0.8] tracking-tighter select-none">
             <div className="flex justify-center gap-[0.5vw]">
               {["P","R","O","P","E","R","T","Y"].map((letter, i) => (
                 <span
@@ -74,7 +75,7 @@ const CategoryProperty = () => {
             <div className="text-outline hover:text-white transition-colors duration-500 cursor-default mt-2">
               CALCULATORS
             </div>
-          </h1>
+          </div>
 
           {/* Search */}
           <div className="max-w-xl mx-auto mt-16 relative group">

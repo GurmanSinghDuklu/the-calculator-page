@@ -109,7 +109,8 @@ const CategoryEveryday = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <p className="text-white/60 text-sm font-sans uppercase tracking-[0.2em] mb-4">Category</p>
 
-          <h1 className="font-display text-[15vw] leading-[0.8] tracking-tighter select-none">
+          <h1 className="sr-only">Everyday Calculators</h1>
+          <div aria-hidden="true" className="font-display text-[15vw] leading-[0.8] tracking-tighter select-none">
             <div className="flex justify-center gap-[0.5vw]">
               {["E","V","E","R","Y","D","A","Y"].map((letter, i) => (
                 <span key={i} className="hover:-translate-y-4 transition-transform duration-500 block" style={{ color: i % 2 === 0 ? "#22c55e" : "#eab308", transitionDelay: `${i * 50}ms` }}>
@@ -120,7 +121,7 @@ const CategoryEveryday = () => {
             <div className="text-outline hover:text-white transition-colors duration-500 cursor-default mt-2">
               CALCULATORS
             </div>
-          </h1>
+          </div>
 
           <div className="max-w-xl mx-auto mt-16 relative group">
             <input

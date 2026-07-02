@@ -101,7 +101,8 @@ const LearnHub = () => {
             <div className="w-8 h-px bg-white/20" />
           </div>
 
-          <h1 className="font-display leading-[0.85] tracking-tighter">
+          <h1 className="sr-only">Learn — Financial Education Hub</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[11vw] md:text-[92px]" style={{
               background: "linear-gradient(135deg, #3B82F6 0%, #a78bfa 100%)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -111,7 +112,7 @@ const LearnHub = () => {
               background: "linear-gradient(135deg, #3B82F6 0%, #a78bfa 100%)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
             }}>INSIGHTS</span>
-          </h1>
+          </div>
 
           <div className="mt-8 max-w-lg pl-4 border-l-2 border-blue-500/40">
             <p className="text-gray-400 text-base leading-relaxed font-sans font-light">

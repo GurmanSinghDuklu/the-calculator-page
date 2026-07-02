@@ -245,7 +245,8 @@ const Index = () => {
             {/* Left: Title block */}
             <div className="flex-1">
               <p className="text-white/40 text-xs font-sans uppercase tracking-[0.3em] mb-3">Calculator App</p>
-              <h1 className="font-display leading-[0.82] tracking-tighter select-none">
+              <h1 className="sr-only">The Calculator App — 130+ Free UK & US Calculators</h1>
+              <div aria-hidden="true" className="font-display leading-[0.82] tracking-tighter select-none">
                 <div className="flex gap-[0.3vw]">
                   {["C", "A", "L", "C", "U", "L", "A", "T", "O", "R"].map((letter, i) => (
                     <span key={i} className="hover:-translate-y-3 transition-transform duration-500 block text-accent-blue text-[9vw] md:text-[7vw] lg:text-[5.5vw]" style={{ transitionDelay: `${i * 40}ms` }}>
@@ -256,7 +257,7 @@ const Index = () => {
                 <div className="text-outline hover:text-white transition-colors duration-500 cursor-default mt-1 text-[9vw] md:text-[7vw] lg:text-[5.5vw]">
                   PAGE
                 </div>
-              </h1>
+              </div>
               <p className="mt-4 font-heading text-sm text-gray-500 uppercase tracking-widest">& Unit Converters</p>
             </div>
 

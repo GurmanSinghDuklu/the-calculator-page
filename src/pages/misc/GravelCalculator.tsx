@@ -100,10 +100,11 @@ const GravelCalculator = () => {
         <div className="flex flex-col lg:flex-row min-h-[90vh] max-w-7xl mx-auto px-6 py-12 gap-12 lg:gap-20 items-center">
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-8 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Gravel Calculator</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[10vw] lg:text-[82px]" style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, #d97706 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", filter: `drop-shadow(0 0 40px ${ACCENT}40)` }}>GRAVEL</span>
               <span className="block text-[8vw] lg:text-[65px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>CALCULATOR</span>
-            </h1>
+            </div>
             <div className="mt-6 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Calculate gravel for paths, driveways, and drainage. Get tonnes, cubic metres, and bag counts.</p>
             </div>

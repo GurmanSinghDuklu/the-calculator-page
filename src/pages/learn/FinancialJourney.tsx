@@ -149,7 +149,8 @@ export default function FinancialJourney() {
           <div className="absolute w-[700px] h-[400px] rounded-full blur-[180px] opacity-[0.04] pointer-events-none -z-10"
             style={{ background: "linear-gradient(135deg,#3B82F6,#a78bfa)", top: 0, left: 0 }} />
 
-          <h1 className="font-display leading-[0.85] tracking-tighter select-none">
+          <h1 className="sr-only">Financial Growth Journey</h1>
+          <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter select-none">
             <span className="block text-[10vw] md:text-[82px]" style={{
               background: "linear-gradient(135deg, #3B82F6 0%, #a78bfa 100%)",
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -162,7 +163,7 @@ export default function FinancialJourney() {
               style={{ WebkitTextStroke: "1px rgba(255,255,255,0.12)", color: "transparent" }}>
               GROWTH ROADMAP
             </span>
-          </h1>
+          </div>
 
           <div className="mt-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-lg border-l-2 border-blue-500/25 pl-5">

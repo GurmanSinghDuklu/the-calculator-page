@@ -81,7 +81,8 @@ const WeightConverter = () => {
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10"
               style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Weight Converter</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[13vw] lg:text-[105px]" style={{
                 background: `linear-gradient(135deg, ${ACCENT} 0%, #06b6d4 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -90,7 +91,7 @@ const WeightConverter = () => {
               <span className="block text-[8vw] lg:text-[65px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
                 CONVERTER
               </span>
-            </h1>
+            </div>
 
             <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">

@@ -98,7 +98,8 @@ const PercentageOfCalculator = () => {
         {/* Hero title */}
         <div className="max-w-5xl mx-auto px-6 pt-12 pb-4 select-none">
           <div className="absolute w-[600px] h-[400px] rounded-full blur-[140px] opacity-[0.07] pointer-events-none -z-10" style={{ background: ACCENT }} />
-          <h1 className="font-display leading-[0.85] tracking-tighter">
+          <h1 className="sr-only">What is X% of Y? Calculator</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[10vw] md:text-[82px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #06b6d4 100%)`,
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -111,7 +112,7 @@ const PercentageOfCalculator = () => {
             <span className="block text-[5vw] md:text-[42px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
               CALCULATOR
             </span>
-          </h1>
+          </div>
           <div className="mt-6 max-w-md pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
             <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
               Instantly find what any percentage of a number is. Enter your values below and press calculate.

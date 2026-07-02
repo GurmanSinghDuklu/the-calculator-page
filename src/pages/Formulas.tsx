@@ -229,7 +229,8 @@ export default function Formulas() {
         {/* Hero title */}
         <div className="max-w-5xl mx-auto px-6 pt-12 pb-10 select-none">
           <div className="absolute w-[600px] h-[400px] rounded-full blur-[140px] opacity-[0.06] pointer-events-none -z-10" style={{ background: accent, transition: "background 0.4s" }} />
-          <h1 className="font-display leading-[0.85] tracking-tighter">
+          <h1 className="sr-only">Calculator Formulas Guide</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[11vw] md:text-[90px]" style={{
               background: `linear-gradient(135deg, ${accent} 0%, #a78bfa 100%)`,
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -244,7 +245,7 @@ export default function Formulas() {
             <span className="block text-[5vw] md:text-[42px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
               GUIDE
             </span>
-          </h1>
+          </div>
 
           <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="max-w-md pl-4 border-l-2" style={{ borderColor: `${accent}60`, transition: "border-color 0.4s" }}>

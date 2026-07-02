@@ -107,7 +107,8 @@ const VatCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">VAT Calculator UK 2025</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[100px]"
                 style={{
@@ -123,7 +124,7 @@ const VatCalculator = () => {
               <span className="block text-[7vw] lg:text-[55px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
                 CALCULATOR
               </span>
-            </h1>
+            </div>
 
             <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">

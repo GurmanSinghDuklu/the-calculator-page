@@ -407,7 +407,8 @@ export default function MortgageCostComparison() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
               <p className="text-[10px] font-heading uppercase tracking-[0.3em] text-white/30 mb-3">Property Tools</p>
-              <h1 className="font-display leading-[0.85] tracking-tighter">
+              <h1 className="sr-only">Mortgage Cost Comparison UK</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
                 <span
                   className="block text-[13vw] lg:text-[100px]"
                   style={{
@@ -426,7 +427,7 @@ export default function MortgageCostComparison() {
                 >
                   COST COMPARISON
                 </span>
-              </h1>
+              </div>
             </div>
 
             <div className="max-w-md">

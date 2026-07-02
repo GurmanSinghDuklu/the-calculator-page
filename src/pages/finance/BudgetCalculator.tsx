@@ -304,7 +304,8 @@ export default function BudgetCalculator() {
             Monthly Budget Planner
           </div>
 
-          <h1 className="font-display leading-none tracking-wide mb-6">
+          <h1 className="sr-only">Budget Calculator UK 2025</h1>
+          <div aria-hidden="true" className="font-display leading-none tracking-wide mb-6">
             <span className="block text-[14vw] sm:text-[100px] lg:text-[120px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #06b6d4 50%, #22c55e 100%)`,
               WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -313,7 +314,7 @@ export default function BudgetCalculator() {
             <span className="block text-[8vw] sm:text-[58px] lg:text-[70px] -mt-2" style={{
               WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent"
             }}>CALCULATOR</span>
-          </h1>
+          </div>
 
           <p className="font-sans text-base text-white/60 max-w-xl leading-relaxed mb-8">
             The only free UK budget calculator with irregular income support, sinking funds,

@@ -61,13 +61,14 @@ const Disclaimer = () => {
           <div className="mb-12 select-none">
             <div className="absolute w-[400px] h-[300px] rounded-full blur-[120px] opacity-[0.05] pointer-events-none -z-10"
               style={{ background: ACCENT }} />
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Disclaimer</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[11vw] md:text-[88px]" style={{
                 background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
                 filter: `drop-shadow(0 0 40px ${ACCENT}40)`,
               }}>DISCLAIMER</span>
-            </h1>
+            </div>
             <p className="mt-4 text-white/20 font-heading text-[10px] uppercase tracking-widest">Last updated: January 2025</p>
           </div>
 

@@ -59,7 +59,8 @@ const Cookies = () => {
           <div className="mb-16 select-none">
             <div className="absolute w-[400px] h-[300px] rounded-full blur-[120px] opacity-[0.05] pointer-events-none -z-10"
               style={{ background: ACCENT }} />
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Cookie Policy</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[12vw] md:text-[95px]" style={{
                 background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
                 WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
@@ -68,7 +69,7 @@ const Cookies = () => {
               <span className="block text-[7vw] md:text-[55px] mt-1" style={{ WebkitTextStroke: "1px rgba(255,255,255,0.2)", color: "transparent" }}>
                 POLICY
               </span>
-            </h1>
+            </div>
             <p className="mt-6 text-white/20 font-heading text-[10px] uppercase tracking-widest">Last updated: January 2025</p>
           </div>
 

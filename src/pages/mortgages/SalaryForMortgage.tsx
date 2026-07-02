@@ -139,7 +139,8 @@ export default function SalaryForMortgage() {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="font-display leading-[0.85] tracking-tighter">
+            <h1 className="sr-only">Salary for Mortgage Calculator UK 2025</h1>
+            <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[10vw] lg:text-[82px]"
                 style={{
@@ -169,7 +170,7 @@ export default function SalaryForMortgage() {
               >
                 MORTGAGE
               </span>
-            </h1>
+            </div>
 
             <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
