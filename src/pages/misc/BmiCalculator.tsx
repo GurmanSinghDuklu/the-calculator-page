@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { ArrowRight, Activity } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
@@ -372,6 +373,8 @@ const BmiCalculator = () => {
             </div>
           </div>
         </div>
+
+        <RelatedCalculators pageKey="bmi-calculator" />
 
         {/* Static content */}
         <div className="max-w-7xl mx-auto px-6">

@@ -130,20 +130,6 @@ export default function FinancialJourney() {
 
       <div className="min-h-screen bg-black text-white font-sans">
 
-        {/* ── Sticky header ── */}
-        <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/8">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Logo linkTo="/" size="sm" />
-            <div className="flex items-center gap-4">
-              <Link to="/"
-                className="flex items-center gap-2 text-white/25 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
-                <ArrowLeft className="h-4 w-4" /> Back
-              </Link>
-              <NavigationMenu />
-            </div>
-          </div>
-        </header>
-
         {/* ── Hero ── */}
         <div className="max-w-7xl mx-auto px-6 pt-14 pb-10 relative">
           <div className="absolute w-[700px] h-[400px] rounded-full blur-[180px] opacity-[0.04] pointer-events-none -z-10"

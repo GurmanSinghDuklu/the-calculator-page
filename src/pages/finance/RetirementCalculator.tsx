@@ -2,6 +2,7 @@ import { Logo } from "@/components/Logo";
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { retirementSchema } from "@/lib/validation";
@@ -330,6 +331,8 @@ export default function RetirementCalculator() {
               </div>
             </>
           )}
+
+          <RelatedCalculators pageKey="retirement" />
 
           {/* Disclaimer + static content */}
           <CalculatorStaticContent

@@ -2,6 +2,7 @@ import { Logo } from "@/components/Logo";
 import { useState, useMemo, useRef, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";

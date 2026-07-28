@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { Navbar } from "@/components/Navbar";
 import { Lock, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/blog-savings-growth.jpg";
 
@@ -316,7 +315,7 @@ const BlogIndex = () => {
       />
 
       <div className="min-h-screen bg-black text-white">
-        <Navbar />
+        
 
         {/* Hero Section */}
         <section className="py-20 md:py-28 px-6">

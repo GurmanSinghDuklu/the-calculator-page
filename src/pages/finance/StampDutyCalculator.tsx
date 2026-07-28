@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
@@ -380,6 +381,8 @@ const StampDutyCalculator = () => {
             </p>
           </div>
         </div>
+
+        <RelatedCalculators pageKey="stamp-duty" />
 
                 <div className="max-w-7xl mx-auto px-6">
           <CalculatorStaticContent

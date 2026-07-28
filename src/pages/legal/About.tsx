@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Calculator, Shield, Zap, Users, CheckCircle2 } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 // ─── Accent ───────────────────────────────────────────────────────────────────
@@ -56,7 +55,7 @@ const About = () => {
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
-        <Navbar />
+        
 
         <main className="max-w-4xl mx-auto px-6 py-12">
 

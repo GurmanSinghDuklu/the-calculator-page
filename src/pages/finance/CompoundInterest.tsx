@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 
 const ACCENT = "#3B82F6";
 
@@ -129,6 +130,8 @@ const CompoundInterest = () => {
           </button>
           <AdvancedCompoundCalculator />
         </div>
+
+        <RelatedCalculators pageKey="compound-interest" />
 
         {/* ── Static content + disclaimer ── */}
         <div className="max-w-5xl mx-auto px-6 pb-20">

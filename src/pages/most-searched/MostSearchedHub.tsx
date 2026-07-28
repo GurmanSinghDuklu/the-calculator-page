@@ -23,12 +23,6 @@ export default function MostSearchedHub() {
         canonicalUrl="https://www.thecalculatorapp.org/most-searched"
       />
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
-        <header className="border-b border-dark-border bg-dark-bg/90 backdrop-blur-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <Logo size="sm" /><NavigationMenu />
-          </div>
-        </header>
-
         <section className="max-w-5xl mx-auto px-6 pt-14 pb-8 text-center">
           <p className="font-heading text-xs uppercase tracking-[0.3em] text-accent-blue mb-3">The Internet's Most Searched</p>
           <h1 className="font-display text-5xl md:text-7xl text-white tracking-wide mb-4">Financial Edition</h1>

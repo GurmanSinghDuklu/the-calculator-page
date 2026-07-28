@@ -77,19 +77,6 @@ const LearnHub = () => {
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
 
-        {/* ── Sticky header ── */}
-        <header className="sticky top-0 z-50 bg-[#1C1A1A]/90 backdrop-blur-md border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Logo linkTo="/" size="sm" />
-            <div className="flex items-center gap-4">
-              <Link to="/" className="flex items-center gap-2 text-white/40 hover:text-white transition-colors font-heading text-[10px] uppercase tracking-widest">
-                <Home className="h-4 w-4" /> Home
-              </Link>
-              <NavigationMenu />
-            </div>
-          </div>
-        </header>
-
         {/* ── Hero ── */}
         <div className="max-w-7xl mx-auto px-6 pt-16 pb-16 select-none">
           <div className="absolute w-[700px] h-[500px] rounded-full blur-[160px] opacity-[0.06] pointer-events-none -z-10"

@@ -10,7 +10,7 @@ import {
 
 // ─── All calculator data ──────────────────────────────────────────────────────
 
-const SECTIONS = [
+export const SECTIONS = [
   {
     id: "mortgages",
     label: "Mortgages",

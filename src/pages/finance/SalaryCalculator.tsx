@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
@@ -356,6 +357,8 @@ const SalaryCalculator = () => {
             </div>
           </div>
         </div>
+
+        <RelatedCalculators pageKey="salary" />
 
                 <div className="max-w-7xl mx-auto px-6">
           <CalculatorStaticContent

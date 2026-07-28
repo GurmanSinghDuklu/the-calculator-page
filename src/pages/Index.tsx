@@ -220,17 +220,6 @@ const Index = () => {
         canonicalUrl="https://www.thecalculatorapp.org"
       />
 
-      <header className="border-b border-dark-border bg-dark-bg/90 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Logo size="sm" linkTo="/" />
-          <div className="flex items-center gap-8">
-            <NavigationMenu />
-            <a className="hidden md:flex font-heading text-sm font-bold uppercase tracking-widest color-cycle transition-colors" href="mailto:thecalculatorpage@gmail.com">
-            <span>t</span><span>h</span><span>e</span><span>c</span><span>a</span><span>l</span><span>c</span><span>u</span><span>l</span><span>a</span><span>t</span><span>o</span><span>r</span><span>p</span><span>a</span><span>g</span><span>e</span><span>@</span><span>g</span><span>m</span><span>a</span><span>i</span><span>l</span><span>.</span><span>c</span><span>o</span><span>m</span>
-            </a>
-          </div>
-        </div>
-      </header>
 
       {/* Hero — compact, above-the-fold */}
       <section className="relative pt-14 pb-10 px-6 overflow-hidden border-b border-dark-border">

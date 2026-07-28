@@ -5,6 +5,7 @@ import { ArrowRight, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Health category ───────────────────────────────────────
@@ -626,6 +627,8 @@ const CalorieCalculator = () => {
             ]}
           />
         </div>
+
+        <RelatedCalculators pageKey="calorie-calculator" />
 
         <FinancialDisclosure variant="general" />
 

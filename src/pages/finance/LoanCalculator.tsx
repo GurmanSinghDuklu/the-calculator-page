@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
 import { loanSchema } from "@/lib/validation";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { toast } from "sonner";
@@ -469,6 +470,8 @@ const LoanCalculator = () => {
             />
           </div>
         )}
+
+        <RelatedCalculators pageKey="loan" />
 
         {/* Static content + disclaimer */}
         <div className="max-w-7xl mx-auto px-6 pb-20">

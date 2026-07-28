@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
+import { SiteHeader } from "@/components/SiteHeader";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
           title="The Calculator App - Professional Financial Tools"
           description="Expert financial calculators, mortgage advice tools, and unit converters."
         />
+
+        <SiteHeader />
 
         <main className="flex-grow">
           <Outlet />

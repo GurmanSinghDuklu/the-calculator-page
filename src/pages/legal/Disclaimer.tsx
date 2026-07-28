@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
 import { SEO } from "@/components/SEO";
-import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const ACCENT = "#3B82F6";
@@ -47,7 +46,7 @@ const Disclaimer = () => {
       />
 
       <div className="min-h-screen bg-dark-bg text-dark-text font-sans">
-        <Navbar />
+        
 
         <main className="max-w-4xl mx-auto px-6 py-12">
 

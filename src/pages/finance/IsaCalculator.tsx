@@ -2,6 +2,7 @@ import { Logo } from "@/components/Logo";
 import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { toast } from "sonner";
 import { ArrowRight, PiggyBank } from "lucide-react";
@@ -491,6 +492,8 @@ const IsaCalculator = () => {
             />
           </div>
         )}
+
+        <RelatedCalculators pageKey="isa-calculator" />
 
         {/* Static content */}
         <div className="max-w-7xl mx-auto px-6">

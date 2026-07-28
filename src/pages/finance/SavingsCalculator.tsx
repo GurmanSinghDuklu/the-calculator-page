@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
+import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { compoundInterestSchema } from "@/lib/validation";
 import { toast } from "sonner";
@@ -399,6 +400,8 @@ const SavingsCalculator = () => {
         {/* Disclaimer */}
         <div className="max-w-7xl mx-auto px-6 pb-16">
         </div>
+
+        <RelatedCalculators pageKey="savings" />
 
         <div className="max-w-7xl mx-auto px-6">
           <CalculatorStaticContent
