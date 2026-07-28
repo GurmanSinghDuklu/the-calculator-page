@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { ArrowRight, Plus, X, ChevronDown, ChevronUp, Search } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#F97316";
 
@@ -93,6 +94,7 @@ const MortgageCalculator = () => {
     { id: 1, label: "Part 1", amount: "280000", rate: "4.5", termYears: "25", termMonths: "0" },
   ]);
   const [results, setResults] = useState<PartResult[] | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
   const [showBreakdown, setShowBreakdown] = useState(false);
   const [breakdownView, setBreakdownView] = useState<"yearly" | "monthly">("yearly");
   const [activePartTab, setActivePartTab] = useState(0);
@@ -288,7 +290,7 @@ const MortgageCalculator = () => {
 
             {/* Summary results */}
             {results && (
-              <div className="mt-8 space-y-4">
+              <div ref={resultRef} className="mt-8 space-y-4">
                 {/* Combined total */}
                 <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-1">Total Monthly Payment</p>
@@ -492,7 +494,7 @@ const MortgageCalculator = () => {
 
             {/* Calculate */}
             <button
-              onClick={calculate}
+              onClick={() => onCalculate(calculate)}
               className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 px-6 rounded-xl transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
               style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
               onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

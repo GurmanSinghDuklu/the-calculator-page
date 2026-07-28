@@ -6,6 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Ruler } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#EC4899";
 const CM_PER_INCH = 2.54;
@@ -14,6 +15,7 @@ const labelClass = "block text-[10px] font-heading uppercase tracking-widest tex
 const InchesToCm = () => {
   const [inputValue, setInputValue] = useState("55");
   const [result, setResult] = useState<{ inches: number; cm: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -76,7 +78,7 @@ const InchesToCm = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert inches to centimetres. Great for TV sizes, monitor screens, and clothing measurements.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">In Centimetres</p>
                   <p className="font-display text-5xl" style={{ color: ACCENT }}>{result.cm}<span className="text-2xl text-white/40 ml-2">cm</span></p>
@@ -110,7 +112,7 @@ const InchesToCm = () => {
                     ))}
                   </div>
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

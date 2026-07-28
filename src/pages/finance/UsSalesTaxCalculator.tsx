@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { BackToTop } from "@/components/BackToTop";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#3B82F6";
 
@@ -81,6 +82,7 @@ export default function UsSalesTaxCalculator() {
     priceBeforeTax: number;
     priceAfterTax: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {
     const p = parseFloat(price);
@@ -182,7 +184,7 @@ export default function UsSalesTaxCalculator() {
                 </div>
 
                 <button
-                  onClick={calculate}
+                  onClick={() => onCalculate(calculate)}
                   className="w-full py-4 bg-white text-black font-heading text-sm uppercase tracking-widest hover:bg-white/90 transition-colors"
                 >
                   Calculate Sales Tax →
@@ -190,7 +192,7 @@ export default function UsSalesTaxCalculator() {
               </div>
             </div>
 
-            <div className="space-y-3">
+            <div ref={resultRef} className="space-y-3">
               {result ? (
                 <>
                   <div className="border border-white/8 bg-white/[0.015] p-6">

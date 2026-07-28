@@ -5,6 +5,7 @@ import { CurrencySelector, Currency, currencies } from "@/components/CurrencySel
 import { ArrowRight, UtensilsCrossed } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -19,6 +20,7 @@ const TipCalculator = () => {
   const [result, setResult] = useState<{
     tipAmount: number; totalAmount: number; perPerson: number; tipPerPerson: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculateTip = () => {
     const bill   = parseFloat(billAmount);
@@ -106,7 +108,7 @@ const TipCalculator = () => {
 
             {/* Results */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* Total hero */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Total Amount</p>
@@ -234,7 +236,7 @@ const TipCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculateTip}
+                  onClick={() => onCalculate(calculateTip)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

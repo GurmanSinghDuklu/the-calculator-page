@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -52,6 +53,7 @@ export default function MultiCardPayoff() {
   const [days,      setDays]      = useState("30");
   const [maxMonths, setMaxMonths] = useState("600");
   const [result,    setResult]    = useState<SimulationResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const addCard = () => setCards([...cards, {
     id: Date.now().toString(),
@@ -291,7 +293,7 @@ export default function MultiCardPayoff() {
               </div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <button onClick={handleSimulate}
+              <button onClick={() => onCalculate(handleSimulate)}
                 className="flex items-center gap-2 px-6 py-3 text-black font-heading font-bold rounded-lg text-xs uppercase tracking-widest transition-all"
                 style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                 onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
@@ -343,7 +345,7 @@ export default function MultiCardPayoff() {
 
           {/* Results */}
           {result && (
-            <>
+            <div ref={resultRef}>
               {/* Summary */}
               <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8">
                 <p className="text-[10px] font-heading uppercase tracking-widest mb-5" style={{ color: ACCENT }}>Results Summary</p>
@@ -440,7 +442,7 @@ export default function MultiCardPayoff() {
                   </p>
                 )}
               </div>
-            </>
+            </div>
           )}
         </div>
 

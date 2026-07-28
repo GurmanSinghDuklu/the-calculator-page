@@ -6,6 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Thermometer } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#EF4444";
 const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
@@ -14,6 +15,7 @@ const FahrenheitToCelsius = () => {
   const [direction, setDirection] = useState<"f-to-c" | "c-to-f">("f-to-c");
   const [inputValue, setInputValue] = useState("350");
   const [result, setResult] = useState<{ f: number; c: number; k: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -87,7 +89,7 @@ const FahrenheitToCelsius = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert between Fahrenheit and Celsius. Includes oven Gas Mark reference and key temperatures.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">{direction === "f-to-c" ? "In Celsius" : "In Fahrenheit"}</p>
                   <p className="font-display text-5xl" style={{ color: ACCENT }}>{direction === "f-to-c" ? result.c : result.f}<span className="text-2xl text-white/40 ml-2">{direction === "f-to-c" ? "°C" : "°F"}</span></p>
@@ -127,7 +129,7 @@ const FahrenheitToCelsius = () => {
                     ))}
                   </div>
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

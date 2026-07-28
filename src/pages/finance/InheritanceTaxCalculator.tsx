@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Estate Planning category ─────────────────────────────
 const ACCENT = "#A78BFA";
@@ -84,6 +85,7 @@ const InheritanceTaxCalculator = () => {
   const [maritalStatus, setMaritalStatus] = useState<MaritalStatus>("single");
   const [leavingToDescendants, setLeavingToDescendants] = useState<DirectDescendant>("yes");
   const [result, setResult] = useState<IHTResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   useEffect(() => {
     const estate = parseFloat(estateValue) || 0;
@@ -230,7 +232,7 @@ const InheritanceTaxCalculator = () => {
 
             {/* Summary stats if result exists */}
             {result && estate > 0 && (
-              <div className="mt-8 space-y-3">
+              <div ref={resultRef} className="mt-8 space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { label: "IHT Due",         value: formatCurrency(result.ihtDue) },
@@ -362,13 +364,13 @@ const InheritanceTaxCalculator = () => {
                 )}
 
                 <button
-                  onClick={() => {
+                  onClick={() => onCalculate(() => {
                     const e = parseFloat(estateValue) || 0;
                     const r = parseFloat(residenceValue) || 0;
                     const d = parseFloat(debts) || 0;
                     const g = parseFloat(gifts) || 0;
                     setResult(calculateIHT(e, r, d, g, maritalStatus, leavingToDescendants));
-                  }}
+                  })}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

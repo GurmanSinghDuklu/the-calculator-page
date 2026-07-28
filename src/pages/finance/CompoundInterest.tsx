@@ -12,6 +12,7 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { RelatedCalculators } from "@/components/RelatedCalculators";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#3B82F6";
 
@@ -42,6 +43,7 @@ const CompoundInterest = () => {
     totalContributions: number;
     totalInterest: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculateCompoundInterest = () => {
     const P = parseFloat(principal);
@@ -560,7 +562,7 @@ const CompoundInterest = () => {
 
                 {/* Result preview */}
                 {result && (
-                  <div className="pt-4 pb-2 border-t border-white/10">
+                  <div ref={resultRef} className="pt-4 pb-2 border-t border-white/10">
                     <div className="flex justify-between items-end pb-3 border-b border-white/10">
                       <span className="text-white/40 text-sm font-heading uppercase tracking-widest">Future Value</span>
                       <span className="text-3xl font-display text-white">{sym}{result.futureValue.toLocaleString()}</span>
@@ -583,7 +585,7 @@ const CompoundInterest = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculateCompoundInterest}
+                  onClick={() => onCalculate(calculateCompoundInterest)}
                   className="w-full group relative overflow-hidden text-white font-heading font-bold py-5 px-6 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm flex items-center justify-center gap-2"
                   style={{
                     background: ACCENT,

@@ -4,6 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { TrendingUp, Download, PiggyBank, Sparkles, Plus, X, BarChart3, Target, ArrowRight } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area } from "recharts";
 import { CurrencySelector, Currency, currencies } from "@/components/CurrencySelector";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#3B82F6";
 
@@ -189,6 +190,7 @@ export const AdvancedCompoundCalculator = () => {
   const [platformFee,         setPlatformFee]         = useState("");
   const [fundFee,             setFundFee]             = useState("");
   const [result,              setResult]              = useState<CalculationResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
   const [showBreakdown,       setShowBreakdown]       = useState(false);
   const [showMarketComparison,setShowMarketComparison]= useState(true);
 
@@ -556,7 +558,7 @@ export const AdvancedCompoundCalculator = () => {
         <div className="pt-6 border-t border-white/10">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button
-              onClick={calculate}
+              onClick={() => onCalculate(calculate)}
               className="flex items-center justify-center gap-2 py-4 font-heading font-bold text-sm uppercase tracking-widest text-black rounded-lg transition-all hover:-translate-y-0.5"
               style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
             >
@@ -584,7 +586,7 @@ export const AdvancedCompoundCalculator = () => {
 
       {/* ── Results ── */}
       {result && (
-        <div className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl space-y-8">
+        <div ref={resultRef} className="bg-[#252323]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 shadow-2xl space-y-8">
 
           <div className="flex items-center gap-3">
             <TrendingUp className="h-6 w-6" style={{ color: ACCENT }} />

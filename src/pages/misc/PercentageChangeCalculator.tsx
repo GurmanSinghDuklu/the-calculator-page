@@ -5,6 +5,7 @@ import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Everyday category ─────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -47,6 +48,7 @@ const PercentageChangeCalculator = () => {
   const [number,     setNumber]     = useState("");
   const [mode,       setMode]       = useState<"increase" | "decrease">("increase");
   const [result, setResult] = useState<{ value: number; change: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {
     const p = parseFloat(percentage), n = parseFloat(number);
@@ -171,7 +173,7 @@ const PercentageChangeCalculator = () => {
 
             {/* Result */}
             {result !== null && (
-              <div className="mt-10 text-center">
+              <div ref={resultRef} className="mt-10 text-center">
                 <p className="text-[9px] font-heading uppercase tracking-widest text-white/25 mb-3">New Value</p>
                 <p className="font-display text-7xl md:text-8xl" style={{ color: ACCENT }}>
                   {result.value.toLocaleString(undefined, { maximumFractionDigits: 6 })}
@@ -194,7 +196,7 @@ const PercentageChangeCalculator = () => {
             {/* Calculate button */}
             <div className="flex justify-center mt-8">
               <button
-                onClick={calculate}
+                onClick={() => onCalculate(calculate)}
                 className="group flex items-center gap-2 px-10 py-4 text-black font-heading font-bold rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                 style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                 onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

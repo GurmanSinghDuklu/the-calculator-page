@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#3B82F6";
 
@@ -68,6 +69,7 @@ export default function UsSalaryCalculator() {
   const [filing, setFiling] = useState<FilingStatus>("single");
   const [state, setState] = useState("none");
   const [result, setResult] = useState<ReturnType<typeof calcUSTax> | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {
     const s = parseFloat(salary);
@@ -140,7 +142,7 @@ export default function UsSalaryCalculator() {
                   </select>
                 </div>
                 <button
-                  onClick={calculate}
+                  onClick={() => onCalculate(calculate)}
                   className="w-full py-4 bg-white text-black font-heading text-sm uppercase tracking-widest hover:bg-white/90 transition-colors"
                 >
                   Calculate Take-Home Pay →
@@ -148,7 +150,7 @@ export default function UsSalaryCalculator() {
               </div>
             </div>
 
-            <div className="space-y-3">
+            <div ref={resultRef} className="space-y-3">
               {result ? (
                 <>
                   <div className="border border-white/8 bg-white/[0.015] p-6">

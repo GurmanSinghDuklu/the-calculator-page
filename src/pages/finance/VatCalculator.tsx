@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ─────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -43,6 +44,7 @@ const VatCalculator = () => {
   const [vatRate, setVatRate] = useState<VatRate>(20);
   const [amount, setAmount] = useState("100");
   const [result, setResult] = useState<VatResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   useEffect(() => {
     const value = parseFloat(amount) || 0;
@@ -189,7 +191,7 @@ const VatCalculator = () => {
 
             {/* Summary stats */}
             {result && value > 0 && (
-              <div className="mt-8 space-y-3">
+              <div ref={resultRef} className="mt-8 space-y-3">
                 <div className="grid grid-cols-3 gap-3">
                   {[
                     { label: "Net Amount", value: formatCurrency(result.netAmount) },
@@ -264,7 +266,7 @@ const VatCalculator = () => {
                 )}
 
                 <button
-                  onClick={() => setResult(calculateVat(value, mode, vatRate))}
+                  onClick={() => onCalculate(() => setResult(calculateVat(value, mode, vatRate)))}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

@@ -7,6 +7,7 @@ import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#F97316";
 const G_PER_OZ = 28.3495;
@@ -16,6 +17,7 @@ const OuncesToGrams = () => {
   const [direction, setDirection] = useState<"oz-to-g" | "g-to-oz">("oz-to-g");
   const [inputValue, setInputValue] = useState("8");
   const [result, setResult] = useState<{ oz: number; g: number; lbs: number; remOz: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -82,7 +84,7 @@ const OuncesToGrams = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert ounces to grams for cooking, baking, and postal weights.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">{direction === "oz-to-g" ? "In Grams" : "In Ounces"}</p>
                   <p className="font-display text-5xl" style={{ color: ACCENT }}>{direction === "oz-to-g" ? result.g : result.oz}<span className="text-2xl text-white/40 ml-2">{direction === "oz-to-g" ? "g" : "oz"}</span></p>
@@ -114,7 +116,7 @@ const OuncesToGrams = () => {
                   <label className={labelClass}>{direction === "oz-to-g" ? "Ounces (oz)" : "Grams (g)"}</label>
                   <input type="number" min="0" step="0.1" value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyDown={e => e.key === "Enter" && convert()} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all" onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

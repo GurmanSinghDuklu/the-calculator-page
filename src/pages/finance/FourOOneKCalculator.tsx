@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#3B82F6";
 
@@ -36,6 +37,7 @@ export default function FourOOneKCalculator() {
     yearsToRetirement: number;
     monthlyContribution: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {
     const age = parseFloat(currentAge);
@@ -178,7 +180,7 @@ export default function FourOOneKCalculator() {
               </div>
 
               <button
-                onClick={calculate}
+                onClick={() => onCalculate(calculate)}
                 className="w-full py-4 bg-white text-black font-heading text-sm uppercase tracking-widest hover:bg-white/90 transition-colors"
               >
                 Calculate Retirement Balance →
@@ -186,7 +188,7 @@ export default function FourOOneKCalculator() {
             </div>
 
             {/* Results */}
-            <div className="space-y-3">
+            <div className="space-y-3" ref={resultRef}>
               {result ? (
                 <>
                   <div className="border border-white/8 bg-white/[0.015] p-6">

@@ -11,6 +11,7 @@ import { ArrowRight, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { AmortisationSchedule, ScheduleRow } from "@/components/AmortisationSchedule";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -69,6 +70,7 @@ const LoanCalculator = () => {
     lumpTimeSaved?: number;
   } | null>(null);
   const [loanSchedule, setLoanSchedule] = useState<{ yearly: ScheduleRow[]; monthly: ScheduleRow[] } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculateLoan = () => {
     const P    = parseFloat(loanAmount);
@@ -228,7 +230,7 @@ const LoanCalculator = () => {
             </div>
 
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* Monthly payment hero */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Monthly Payment</p>
@@ -444,7 +446,7 @@ const LoanCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculateLoan}
+                  onClick={() => onCalculate(calculateLoan)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

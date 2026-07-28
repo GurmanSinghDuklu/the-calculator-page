@@ -6,6 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#10B981";
 const KG_PER_LB = 0.453592;
@@ -15,6 +16,7 @@ const LbsToKg = () => {
   const [direction, setDirection] = useState<"lbs-to-kg" | "kg-to-lbs">("lbs-to-kg");
   const [inputValue, setInputValue] = useState("150");
   const [result, setResult] = useState<{ lbs: number; kg: number; stone: number; stoneLbs: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -84,7 +86,7 @@ const LbsToKg = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert pounds to kilograms with stone and lbs breakdown for UK users.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">{direction === "lbs-to-kg" ? "In Kilograms" : "In Pounds"}</p>
                   <p className="font-display text-5xl" style={{ color: ACCENT }}>
@@ -128,7 +130,7 @@ const LbsToKg = () => {
                   <label className={labelClass}>{direction === "lbs-to-kg" ? "Pounds (lbs)" : "Kilograms (kg)"}</label>
                   <input type="number" min="0" step="0.1" value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyDown={e => e.key === "Enter" && convert()} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all" onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

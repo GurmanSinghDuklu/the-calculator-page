@@ -7,6 +7,7 @@ import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Ruler } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#6366F1";
 const FEET_PER_METRE = 3.28084;
@@ -16,6 +17,7 @@ const MetresToFeet = () => {
   const [direction, setDirection] = useState<"m-to-ft" | "ft-to-m">("m-to-ft");
   const [inputValue, setInputValue] = useState("1.8");
   const [result, setResult] = useState<{ metres: number; totalFeet: number; feet: number; inches: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -85,7 +87,7 @@ const MetresToFeet = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert between metres and feet+inches. Handles heights, room sizes, and garden dimensions.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">{direction === "m-to-ft" ? "In Feet & Inches" : "In Metres"}</p>
                   {direction === "m-to-ft" ? (
@@ -121,7 +123,7 @@ const MetresToFeet = () => {
                   <label className={labelClass}>{direction === "m-to-ft" ? "Metres" : "Feet (decimal)"}</label>
                   <input type="number" min="0" step="0.01" value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyDown={e => e.key === "Enter" && convert()} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all" onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

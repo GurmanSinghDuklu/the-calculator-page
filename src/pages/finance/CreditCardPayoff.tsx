@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import { Plus, Trash2, ArrowRight, CreditCard, TrendingDown, Zap, Info } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT   = "#3B82F6";
 const AV_COLOR = "#3B82F6";   // blue  — avalanche
@@ -155,6 +156,7 @@ export default function CreditCardPayoff() {
   ]);
   const [sliderMonth, setSliderMonth] = useState(0);
   const [results, setResults] = useState<{ avalanche: StrategyResult; snowball: StrategyResult } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const [searchParams] = useSearchParams();
   useEffect(() => {
@@ -370,7 +372,7 @@ export default function CreditCardPayoff() {
 
           {/* Calculate button */}
           <button
-            onClick={calculate}
+            onClick={() => onCalculate(calculate)}
             className="w-full group flex items-center justify-center gap-3 text-white font-heading font-bold py-5 rounded-xl transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
             style={{ background: `linear-gradient(135deg, ${AV_COLOR}, #6366f1, ${SB_COLOR})`, boxShadow: `0 0 30px -8px ${ACCENT}80` }}
           >
@@ -380,7 +382,7 @@ export default function CreditCardPayoff() {
 
           {/* ── RESULTS ── */}
           {results && (
-            <div className="space-y-8">
+            <div ref={resultRef} className="space-y-8">
 
               {/* Strategy comparison cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

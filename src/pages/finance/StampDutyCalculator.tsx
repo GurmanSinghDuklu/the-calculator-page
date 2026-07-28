@@ -7,6 +7,7 @@ import { CopyButton } from "@/components/CopyButton";
 import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -106,6 +107,7 @@ const StampDutyCalculator = () => {
   const [buyerType, setBuyerType] = useState<BuyerType>("first-time");
   const [propertyPrice, setPropertyPrice] = useState("350000");
   const [result, setResult] = useState<CalculationResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   useEffect(() => {
     const price = parseFloat(propertyPrice) || 0;
@@ -225,7 +227,7 @@ const StampDutyCalculator = () => {
 
             {/* Summary stats if result exists */}
             {result && price > 0 && (
-              <div className="mt-8 space-y-3">
+              <div ref={resultRef} className="mt-8 space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { label: "Stamp Duty",    value: formatCurrency(result.totalTax) },
@@ -308,7 +310,7 @@ const StampDutyCalculator = () => {
                 )}
 
                 <button
-                  onClick={() => setResult(calculateStampDuty(price, buyerType))}
+                  onClick={() => onCalculate(() => setResult(calculateStampDuty(price, buyerType)))}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

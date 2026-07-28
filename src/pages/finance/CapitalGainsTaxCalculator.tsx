@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Tax category ─────────────────────────────────────────
 const ACCENT = "#F97316";
@@ -66,6 +67,7 @@ const CapitalGainsTaxCalculator = () => {
   const [salePrice, setSalePrice] = useState("80000");
   const [costs, setCosts] = useState("1000");
   const [result, setResult] = useState<CalculationResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   useEffect(() => {
     const purchase = parseFloat(purchasePrice) || 0;
@@ -218,7 +220,7 @@ const CapitalGainsTaxCalculator = () => {
 
             {/* Summary stats if result exists */}
             {result && result.totalGain > 0 && (
-              <div className="mt-8 space-y-3">
+              <div ref={resultRef} className="mt-8 space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     { label: "CGT Due",        value: formatCurrency(result.cgtDue) },
@@ -340,7 +342,7 @@ const CapitalGainsTaxCalculator = () => {
                 )}
 
                 <button
-                  onClick={() => setResult(calculateCGT(purchase, sale, totalCosts, assetType, taxBand))}
+                  onClick={() => onCalculate(() => setResult(calculateCGT(purchase, sale, totalCosts, assetType, taxBand)))}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

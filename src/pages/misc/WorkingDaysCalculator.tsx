@@ -6,6 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour ──────────────────────────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -53,6 +54,7 @@ const WorkingDaysCalculator = () => {
     holidaysExcluded: number;
     resultDate?: string;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const countBetween = (start: Date, end: Date) => {
     let working = 0, weekends = 0, holidays = 0;
@@ -188,7 +190,7 @@ const WorkingDaysCalculator = () => {
 
             {/* Results */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* Main result */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">
@@ -312,7 +314,7 @@ const WorkingDaysCalculator = () => {
                         {[5, 10, 20, 30].map(d => (
                           <button
                             key={d}
-                            onClick={() => handleQuickAdd(d)}
+                            onClick={() => onCalculate(() => handleQuickAdd(d))}
                             className="py-3 rounded-lg text-sm font-heading uppercase tracking-wider transition-all border border-white/10 hover:border-white/30 text-white/60 hover:text-white bg-black/30"
                           >
                             {d} days
@@ -358,7 +360,7 @@ const WorkingDaysCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculate}
+                  onClick={() => onCalculate(calculate)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

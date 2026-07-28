@@ -7,6 +7,7 @@ import { ArrowRight, Car } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -23,6 +24,7 @@ export default function CarLoanCalculator() {
     totalInterest: number;
     balloonPayment: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculateCarLoan = () => {
     const P = parseFloat(loanAmount);
@@ -138,7 +140,7 @@ export default function CarLoanCalculator() {
 
             {/* Result stats on left */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { label: "Monthly Payment", value: `${sym}${result.monthlyPayment.toFixed(2)}` },
@@ -274,7 +276,7 @@ export default function CarLoanCalculator() {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculateCarLoan}
+                  onClick={() => onCalculate(calculateCarLoan)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

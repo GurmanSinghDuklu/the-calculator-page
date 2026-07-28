@@ -6,6 +6,7 @@ import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, FlaskConical } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#A855F7";
 const ML_PER_TSP = 5;
@@ -32,6 +33,7 @@ const TeaspoonsToMl = () => {
   const [fromUnit, setFromUnit] = useState<Unit>("tsp");
   const [inputValue, setInputValue] = useState("3");
   const [result, setResult] = useState<{ tsp: number; tbsp: number; ml: number; cup: number } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convert = () => {
     const val = parseFloat(inputValue);
@@ -105,7 +107,7 @@ const TeaspoonsToMl = () => {
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">Convert between teaspoons, tablespoons, millilitres, and cups in both directions.</p>
             </div>
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   {(["tsp","tbsp","ml","cup"] as Unit[]).map(u => (
                     <div key={u} className="bg-white/[0.03] border border-white/10 rounded-lg p-4">
@@ -139,7 +141,7 @@ const TeaspoonsToMl = () => {
                   <label className={labelClass}>{unitLabels[fromUnit]}</label>
                   <input type="number" min="0" step="0.25" value={inputValue} onChange={e => setInputValue(e.target.value)} onKeyDown={e => e.key === "Enter" && convert()} className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-xl font-medium placeholder-white/20 focus:outline-none transition-all" onFocus={e => (e.target.style.borderColor = ACCENT)} onBlur={e => (e.target.style.borderColor = "rgba(255,255,255,0.1)")} />
                 </div>
-                <button onClick={convert} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
+                <button onClick={() => onCalculate(convert)} className="w-full group flex items-center justify-center gap-2 text-white font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm" style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}>
                   Convert <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>

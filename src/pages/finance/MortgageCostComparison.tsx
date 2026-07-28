@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#F97316";
 
@@ -314,6 +315,7 @@ export default function MortgageCostComparison() {
   const [results, setResults] = useState<(DealResult | null)[]>([null, null]);
   const [calculated, setCalculated] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const updateDeal = (i: number, d: DealInputs) => {
     const updated = [...deals];
@@ -466,7 +468,7 @@ export default function MortgageCostComparison() {
 
           {/* Calculate button */}
           <button
-            onClick={calculate}
+            onClick={() => onCalculate(calculate)}
             className="w-full mt-6 group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
             style={{ background: ACCENT, boxShadow: `0 0 24px -5px ${ACCENT}70` }}
             onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 40px -5px ${ACCENT}90`)}
@@ -479,7 +481,7 @@ export default function MortgageCostComparison() {
 
         {/* Comparison Summary */}
         {calculated && resA && resB && (
-          <div className="max-w-7xl mx-auto px-6 pb-12">
+          <div ref={resultRef} className="max-w-7xl mx-auto px-6 pb-12">
 
             {/* Winner banner */}
             <div

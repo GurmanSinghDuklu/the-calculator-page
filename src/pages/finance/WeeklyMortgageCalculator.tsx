@@ -8,6 +8,7 @@ import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lu
 import { toast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";
@@ -51,6 +52,7 @@ const WeeklyMortgageCalculator = () => {
   const [mortgageTerm,   setMortgageTerm]   = useState("");
   const [currency,       setCurrency]       = useState<Currency>("GBP");
   const [result,         setResult]         = useState<CalculationResult | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const symbol = currencySymbols[currency] || "£";
   const labelClass = "block text-[10px] font-heading uppercase tracking-widest text-white/40 mb-2";
@@ -158,7 +160,7 @@ const WeeklyMortgageCalculator = () => {
 
             {/* Results */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* Interest saved hero */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <div className="flex items-center gap-2 mb-2">
@@ -288,7 +290,7 @@ const WeeklyMortgageCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculate}
+                  onClick={() => onCalculate(calculate)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

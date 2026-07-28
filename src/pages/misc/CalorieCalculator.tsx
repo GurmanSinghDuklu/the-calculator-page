@@ -7,6 +7,7 @@ import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Health category ───────────────────────────────────────
 const ACCENT = "#22C55E";
@@ -50,6 +51,7 @@ const CalorieCalculator = () => {
     loss: number;
     gain: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {
     const a = parseInt(age);
@@ -214,7 +216,7 @@ const CalorieCalculator = () => {
 
             {/* Results */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* BMR hero */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">
@@ -556,7 +558,7 @@ const CalorieCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculate}
+                  onClick={() => onCalculate(calculate)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{
                     background: ACCENT,

@@ -10,6 +10,7 @@ import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -74,6 +75,7 @@ export default function RetirementCalculator() {
   const [statePension,         setStatePension]         = useState("12547");
   const [withdrawalRate,       setWithdrawalRate]       = useState("4");
   const [results,              setResults]              = useState<RetirementResults | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const [searchParams] = useSearchParams();
   useEffect(() => {
@@ -224,7 +226,7 @@ export default function RetirementCalculator() {
           {/* Action buttons */}
           <div className="flex flex-wrap gap-3">
             <button
-              onClick={calculate}
+              onClick={() => onCalculate(calculate)}
               className="group flex items-center gap-2 px-8 py-4 text-black font-heading font-bold rounded-xl transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
               style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
               onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
@@ -243,7 +245,7 @@ export default function RetirementCalculator() {
 
           {/* Results */}
           {results && (
-            <>
+            <div ref={resultRef}>
               {/* Summary cards */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
@@ -329,7 +331,7 @@ export default function RetirementCalculator() {
                   <li>This is an estimate — consult a financial adviser for personalised advice</li>
                 </ul>
               </div>
-            </>
+            </div>
           )}
 
           <RelatedCalculators pageKey="retirement" />

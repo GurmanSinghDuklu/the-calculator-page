@@ -11,6 +11,7 @@ import { ArrowRight, PiggyBank } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -41,6 +42,7 @@ const SavingsCalculator = () => {
     finalBalance: number; totalDeposits: number; totalInterest: number;
     lumpBoost?: number;
   } | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculateSavings = () => {
     const P   = parseFloat(initialDeposit);
@@ -162,7 +164,7 @@ const SavingsCalculator = () => {
 
             {/* Results */}
             {result && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 {/* Final balance hero */}
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Final Balance</p>
@@ -382,7 +384,7 @@ const SavingsCalculator = () => {
 
                 {/* Calculate button */}
                 <button
-                  onClick={calculateSavings}
+                  onClick={() => onCalculate(calculateSavings)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}

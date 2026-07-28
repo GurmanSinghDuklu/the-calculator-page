@@ -5,6 +5,7 @@ import { seoData } from "@/utils/seoData";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
 const ACCENT = "#22C55E";
 
@@ -30,6 +31,7 @@ const WeightConverter = () => {
   const [fromUnit, setFromUnit]     = useState<WeightUnit>("kilograms");
   const [toUnit, setToUnit]         = useState<WeightUnit>("pounds");
   const [result, setResult]         = useState<number | null>(null);
+  const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const convertWeight = () => {
     const value = parseFloat(inputValue);
@@ -100,7 +102,7 @@ const WeightConverter = () => {
             </div>
 
             {result !== null && (
-              <div className="mt-10 space-y-4">
+              <div ref={resultRef} className="mt-10 space-y-4">
                 <div className="bg-white/[0.03] border border-white/10 rounded-lg p-5">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/30 mb-2">Converted Value</p>
                   <p className="font-display text-6xl" style={{ color: ACCENT }}>{result.toLocaleString()}</p>
@@ -177,7 +179,7 @@ const WeightConverter = () => {
                 )}
 
                 {/* Convert button */}
-                <button onClick={convertWeight}
+                <button onClick={() => onCalculate(convertWeight)}
                   className="w-full group flex items-center justify-center gap-2 text-black font-heading font-bold py-5 rounded-lg transition-all duration-300 hover:-translate-y-0.5 uppercase tracking-widest text-sm"
                   style={{ background: ACCENT, boxShadow: `0 0 20px -5px ${ACCENT}80` }}
                   onMouseEnter={e => (e.currentTarget.style.boxShadow = `0 0 35px -5px ${ACCENT}90`)}
