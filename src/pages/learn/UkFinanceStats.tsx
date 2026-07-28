@@ -109,7 +109,7 @@ export default function UkFinanceStats() {
           <li><strong>Mean UK salary (full-time):</strong> £42,200 per year. The gap between median and mean reflects high earners pulling the average up. <em>Source: ONS ASHE 2025.</em></li>
           <li><strong>Personal allowance:</strong> £12,570 (frozen since 2021 and expected to remain frozen until 2028). <em>Source: HMRC.</em></li>
           <li><strong>Number of higher-rate taxpayers:</strong> 6.3 million (up from 4.2 million in 2021, due to frozen thresholds). <em>Source: HMRC.</em></li>
-          <li><strong>National Insurance rate:</strong> 8% on earnings between £12,570-£50,270, then 2% above. <em>Source: HMRC 2025/26.</em></li>
+          <li><strong>National Insurance rate:</strong> 8% on earnings between £12,570-£50,270, then 2% above. <em>Source: HMRC 2026/27.</em></li>
           <li><strong>Take-home pay on £35,400 salary:</strong> Approximately £28,200 (£2,350/month) after income tax and NI. <em>Calculated using standard assumptions.</em></li>
           <li><strong>Gender pay gap:</strong> 7.7% for full-time employees (median). <em>Source: ONS ASHE 2025.</em></li>
         </ul>
@@ -147,7 +147,7 @@ export default function UkFinanceStats() {
         {/* ── Pensions & Retirement ── */}
         <h2>Pensions & Retirement</h2>
         <ul>
-          <li><strong>Full new State Pension:</strong> £11,502 per year (£221.20/week) in 2024/25. <em>Source: DWP.</em></li>
+          <li><strong>Full new State Pension:</strong> £12,547 per year (£241.30/week) in 2026/27. <em>Source: DWP.</em></li>
           <li><strong>State Pension age:</strong> 66 (rising to 67 between 2026-2028). <em>Source: GOV.UK.</em></li>
           <li><strong>Auto-enrolment minimum contribution:</strong> 8% of qualifying earnings (3% employer, 5% employee). <em>Source: The Pensions Regulator.</em></li>
           <li><strong>Average pension pot at retirement:</strong> £107,000 (median). Financial advisers suggest £370,000-£500,000 is needed for a comfortable retirement. <em>Source: FCA Retirement Income Market Data.</em></li>

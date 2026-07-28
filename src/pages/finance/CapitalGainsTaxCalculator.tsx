@@ -102,7 +102,7 @@ const CapitalGainsTaxCalculator = () => {
   return (
     <>
       <SEO
-        title="Capital Gains Tax Calculator UK 2025 — CGT on Shares & Property"
+        title="Capital Gains Tax Calculator UK 2026 — CGT on Shares & Property"
         description="Free UK capital gains tax calculator. Work out CGT on shares, property and other assets. Includes 2024/25 annual exempt amount and tax rates."
         keywords="capital gains tax calculator, CGT calculator UK, capital gains tax, CGT on shares, CGT on property, annual exempt amount"
         canonicalUrl="https://www.thecalculatorapp.org/finance/capital-gains-tax"
@@ -140,7 +140,7 @@ const CapitalGainsTaxCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">Capital Gains Tax Calculator UK 2025</h1>
+            <h1 className="sr-only">Capital Gains Tax Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[100px]"

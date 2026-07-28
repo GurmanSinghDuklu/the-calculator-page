@@ -85,7 +85,7 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "Stamp Duty UK 2025 — What You Actually Pay and When",
+      title: "Stamp Duty UK 2026 — What You Actually Pay and When",
       description: "Stamp duty rates changed in April 2025. First-time buyer thresholds dropped. Here's exactly what you owe, how it's calculated, and what changed.",
       path: "/blog/stamp-duty-uk-2025",
       category: "Mortgage",
@@ -96,8 +96,8 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "First-Time Buyer UK 2025 — The Numbers You Need Before You Apply",
-      description: "Deposit, affordability, stamp duty relief, LISAs, schemes. Everything a first-time buyer needs to know in 2025 — with the actual numbers.",
+      title: "First-Time Buyer UK 2026 — The Numbers You Need Before You Apply",
+      description: "Deposit, affordability, stamp duty relief, LISAs, schemes. Everything a first-time buyer needs to know in 2026 — with the actual numbers.",
       path: "/blog/first-time-buyer-uk-2025",
       category: "Mortgage",
       readTime: "5 min",
@@ -118,7 +118,7 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "UK Income Tax Brackets 2025/26 — Exactly How Much You Keep",
+      title: "UK Income Tax Brackets 2026/27 — Exactly How Much You Keep",
       description: "Frozen thresholds mean more people are paying 40% tax. Here's how the bands work — and how to see your real take-home.",
       path: "/blog/uk-tax-brackets-2025",
       category: "Salary & Tax",
@@ -130,7 +130,7 @@ const BlogIndex = () => {
     },
     {
       title: "What Is the Personal Allowance and Who Loses It?",
-      description: "The UK personal allowance is £12,570 in 2025/26. But earn over £100,000 and it starts disappearing — creating an effective 60% tax rate.",
+      description: "The UK personal allowance is £12,570 in 2026/27. But earn over £100,000 and it starts disappearing — creating an effective 60% tax rate.",
       path: "/blog/personal-allowance-uk",
       category: "Salary & Tax",
       readTime: "3 min",
@@ -140,8 +140,8 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "National Insurance 2025/26 — Rates, Thresholds and What You Actually Pay",
-      description: "NI rates for 2025/26: 8% up to £50,270, 2% above. Here's how NI is calculated, what it means for your take-home, and what it pays for.",
+      title: "National Insurance 2026/27 — Rates, Thresholds and What You Actually Pay",
+      description: "NI rates for 2026/27: 8% up to £50,270, 2% above. Here's how NI is calculated, what it means for your take-home, and what it pays for.",
       path: "/blog/national-insurance-2025",
       category: "Salary & Tax",
       readTime: "4 min",
@@ -162,7 +162,7 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "What Is a Good Salary in the UK in 2025?",
+      title: "What Is a Good Salary in the UK in 2026?",
       description: "The UK median salary is £37,000. Above £50,270 you're in the top 25% of earners. Here's what different salaries actually give you after tax.",
       path: "/blog/what-is-a-good-salary-uk",
       category: "Salary & Tax",
@@ -283,7 +283,7 @@ const BlogIndex = () => {
       hasPremium: false,
     },
     {
-      title: "How Much Is Stamp Duty in 2025?",
+      title: "How Much Is Stamp Duty in 2026?",
       description: "Thresholds changed on 1 April 2025. First-time buyer relief dropped to £300,000. Here's exactly what you'll pay on any purchase price.",
       path: "/blog/how-much-is-stamp-duty-2025",
       category: "Property",

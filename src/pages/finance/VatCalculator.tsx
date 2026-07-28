@@ -69,7 +69,7 @@ const VatCalculator = () => {
   return (
     <>
       <SEO
-        title="VAT Calculator UK 2025 — Add or Remove 20% VAT Instantly"
+        title="VAT Calculator UK 2026 — Add or Remove 20% VAT Instantly"
         description="Free UK VAT calculator. Add or remove VAT at 20%, 5% or 0%. Instant results for invoices, expenses and tax returns."
         keywords="VAT calculator, VAT calculator UK, add VAT, remove VAT, 20% VAT, value added tax calculator"
         canonicalUrl="https://www.thecalculatorapp.org/finance/vat-calculator"
@@ -107,7 +107,7 @@ const VatCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">VAT Calculator UK 2025</h1>
+            <h1 className="sr-only">VAT Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[100px]"

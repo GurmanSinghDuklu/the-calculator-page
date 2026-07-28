@@ -13,7 +13,7 @@ export default function HowToCalculatePercentage() {
   return (
     <>
       <SEO
-        title="How to Calculate a Percentage — 5 Methods With Examples (2025)"
+        title="How to Calculate a Percentage — 5 Methods With Examples (2026)"
         description="Percentage of a number, percentage change, reverse percentage, VAT — all the formulas explained with simple worked examples you can use instantly."
         keywords="how to calculate percentage, percentage formula, percentage change formula, reverse percentage, how to work out percentage"
         canonicalUrl="https://www.thecalculatorapp.org/blog/how-to-calculate-percentage"

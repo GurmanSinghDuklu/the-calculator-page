@@ -108,7 +108,7 @@ const InheritanceTaxCalculator = () => {
   return (
     <>
       <SEO
-        title="Inheritance Tax Calculator UK 2025 — IHT Nil-Rate Band & Threshold"
+        title="Inheritance Tax Calculator UK 2026 — IHT Nil-Rate Band & Threshold"
         description="Free UK inheritance tax calculator. Work out IHT on your estate including nil rate band, residence nil rate band and spouse exemption."
         keywords="inheritance tax calculator, IHT calculator UK, inheritance tax, nil rate band, estate tax calculator, IHT threshold"
         canonicalUrl="https://www.thecalculatorapp.org/finance/inheritance-tax"
@@ -146,7 +146,7 @@ const InheritanceTaxCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">Inheritance Tax Calculator UK 2025</h1>
+            <h1 className="sr-only">Inheritance Tax Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[11vw] lg:text-[85px]"
@@ -170,7 +170,7 @@ const InheritanceTaxCalculator = () => {
 
             <div className="mt-8 max-w-sm pl-4 border-l-2" style={{ borderColor: `${ACCENT}60` }}>
               <p className="text-gray-400 text-base leading-relaxed font-sans font-light">
-                Work out how much Inheritance Tax (IHT) your estate could owe. Includes nil rate band, residence nil rate band, and spouse exemptions for 2025/26.
+                Work out how much Inheritance Tax (IHT) your estate could owe. Includes nil rate band, residence nil rate band, and spouse exemptions for 2026/27.
               </p>
             </div>
 

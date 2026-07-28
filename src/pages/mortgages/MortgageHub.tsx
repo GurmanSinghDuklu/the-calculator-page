@@ -35,7 +35,7 @@ const calculators = [
   },
   {
     title: "Stamp Duty Calculator",
-    description: "Instant SDLT calculation for England & Northern Ireland. Covers first-time buyers, second homes, and 2025/26 thresholds.",
+    description: "Instant SDLT calculation for England & Northern Ireland. Covers first-time buyers, second homes, and 2026/27 thresholds.",
     icon: Calculator,
     path: "/finance/stamp-duty",
     badge: "Updated 2026",

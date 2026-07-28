@@ -236,7 +236,7 @@ export default function MultiCardPayoff() {
         {/* Hero title */}
         <div className="max-w-5xl mx-auto px-6 pt-12 pb-8 select-none">
           <div className="absolute w-[600px] h-[400px] rounded-full blur-[140px] opacity-[0.07] pointer-events-none -z-10" style={{ background: ACCENT }} />
-          <h1 className="sr-only">Multi-Card Payoff Calculator UK 2025</h1>
+          <h1 className="sr-only">Multi-Card Payoff Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[12vw] md:text-[95px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,

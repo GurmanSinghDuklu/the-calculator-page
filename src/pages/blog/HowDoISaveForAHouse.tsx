@@ -13,7 +13,7 @@ export default function HowDoISaveForAHouse() {
   return (
     <>
       <SEO
-        title="How to Save for a House Deposit UK: LISA, Timelines & Strategy (2025)"
+        title="How to Save for a House Deposit UK: LISA, Timelines & Strategy (2026)"
         description="The minimum deposit is 5% but 10% unlocks better rates. With a Lifetime ISA you get £1,000 free per year from the government. Here's the fastest realistic path."
         keywords="how to save for a house deposit uk, lifetime isa house deposit, first time buyer savings uk, house deposit savings 2025, how long to save house deposit"
         canonicalUrl="https://www.thecalculatorapp.org/blog/how-to-save-for-a-house-deposit"
@@ -36,8 +36,8 @@ export default function HowDoISaveForAHouse() {
         ]}
         relatedArticles={[
           { title: "How Much Can I Borrow for a Mortgage?", description: "Work out your borrowing limit before you start saving.", url: "/blog/how-much-can-i-borrow-mortgage-uk" },
-          { title: "Stamp Duty in 2025", description: "Budget for the tax you'll owe on top of the purchase price.", url: "/blog/stamp-duty-uk-2025" },
-          { title: "First-Time Buyer Guide 2025", description: "The full end-to-end guide for first-time buyers.", url: "/blog/first-time-buyer-uk-2025" },
+          { title: "Stamp Duty in 2026", description: "Budget for the tax you'll owe on top of the purchase price.", url: "/blog/stamp-duty-uk-2025" },
+          { title: "First-Time Buyer Guide 2026", description: "The full end-to-end guide for first-time buyers.", url: "/blog/first-time-buyer-uk-2025" },
         ]}
       >
         <p>Saving for a house deposit in the UK is a long game. But there's a government scheme that adds 25% to your savings every year — and most first-time buyers either don't know about it or aren't using it optimally.</p>
@@ -62,7 +62,7 @@ export default function HowDoISaveForAHouse() {
           <li>£450,000 home: 5% = £22,500 | 10% = £45,000 | 20% = £90,000</li>
         </ul>
 
-        <p>Don't forget to budget for additional costs: stamp duty (if applicable — first-time buyers are exempt on homes up to £425,000 until March 2025, then £300,000), solicitor fees (£1,500–£3,000), survey (£400–£1,500), and mortgage arrangement fees (£0–£2,000).</p>
+        <p>Don't forget to budget for additional costs: stamp duty (if applicable — first-time buyers are exempt on homes up to £300,000 (reduced from £425,000 in April 2025)), solicitor fees (£1,500–£3,000), survey (£400–£1,500), and mortgage arrangement fees (£0–£2,000).</p>
 
         <h2>The Lifetime ISA: the most underused first-time buyer tool</h2>
 

@@ -2,10 +2,10 @@ import { BlogLayout } from "@/components/BlogLayout";
 import { SEO } from "@/components/SEO";
 
 const faqs = [
-  { question: "What are the National Insurance rates for 2025/26?", answer: "For 2025/26, employees pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. The lower earnings limit is £6,396. Below that, no NI is due. Self-employed people pay Class 4 NI at 6% on profits between £12,570 and £50,270, and 2% above." },
-  { question: "What is the National Insurance threshold for 2025/26?", answer: "The Primary Threshold — where employees start paying NI — is £12,570 per year (£1,048 per month). This aligns with the income tax personal allowance. Below £12,570, you pay no NI. Between £6,396 and £12,570 you're still building NI credits without actually paying contributions." },
+  { question: "What are the National Insurance rates for 2026/27?", answer: "For 2026/27, employees pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. The lower earnings limit is £6,396. Below that, no NI is due. Self-employed people pay Class 4 NI at 6% on profits between £12,570 and £50,270, and 2% above." },
+  { question: "What is the National Insurance threshold for 2026/27?", answer: "The Primary Threshold — where employees start paying NI — is £12,570 per year (£1,048 per month). This aligns with the income tax personal allowance. Below £12,570, you pay no NI. Between £6,396 and £12,570 you're still building NI credits without actually paying contributions." },
   { question: "Does National Insurance reduce after 50 or 60?", answer: "No. Employee NI rates are the same regardless of age until you reach State Pension age. Once you reach State Pension age, you stop paying employee National Insurance entirely — even if you continue working." },
-  { question: "How does National Insurance affect my State Pension?", answer: "You need 35 qualifying years of NI contributions for the full new State Pension (£221.20 per week in 2025/26). Earning between £6,396 and £12,570 counts as a qualifying year even though you don't pay contributions. You can also make voluntary Class 3 contributions (£17.45/week in 2025/26) to fill gaps." },
+  { question: "How does National Insurance affect my State Pension?", answer: "You need 35 qualifying years of NI contributions for the full new State Pension (£241.30 per week in 2026/27). Earning between £6,396 and £12,570 counts as a qualifying year even though you don't pay contributions. You can also make voluntary Class 3 contributions (£17.45/week in 2026/27) to fill gaps." },
   { question: "Do employers pay National Insurance too?", answer: "Yes. Employers pay Class 1 NI at 15% on employee earnings above £5,000 per year (from April 2025). This is a cost to the employer on top of your salary — you don't see it in your payslip, but it significantly increases the total cost of employing you." },
 ];
 
@@ -13,35 +13,35 @@ export default function NationalInsurance2025() {
   return (
     <>
       <SEO
-        title="National Insurance 2025/26 — Rates, Thresholds & What You Pay"
-        description="National Insurance rates for 2025/26: 8% up to £50,270, 2% above. Here's how NI is calculated, how it affects your take-home, and what it means for your State Pension."
+        title="National Insurance 2026/27 — Rates, Thresholds & What You Pay"
+        description="National Insurance rates for 2026/27: 8% up to £50,270, 2% above. Here's how NI is calculated, how it affects your take-home, and what it means for your State Pension."
         keywords="national insurance 2025, national insurance rates 2025, ni threshold 2025, national insurance calculator, how much national insurance do i pay"
         canonicalUrl="https://www.thecalculatorapp.org/blog/national-insurance-2025"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="National Insurance 2025/26 — Rates, Thresholds & What You Pay"
+        title="National Insurance 2026/27 — Rates, Thresholds & What You Pay"
         subtitle="The second deduction on your payslip — and the one most people understand least."
         category="Salary & Tax"
         publishDate="April 2026"
         readTime="4 min"
         heroImage="/og-image.png"
-        directAnswer="In 2025/26, employees pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. There is no NI below £12,570. On a £40,000 salary that is approximately £2,194 per year in NI contributions, or £183 per month, on top of income tax."
+        directAnswer="In 2026/27, employees pay 8% National Insurance on earnings between £12,570 and £50,270, and 2% on earnings above £50,270. There is no NI below £12,570. On a £40,000 salary that is approximately £2,194 per year in NI contributions, or £183 per month, on top of income tax."
         hasPaidSection={false}
         relatedCalculators={[
           { label: "UK Salary Calculator", path: "/finance/salary" },
-          { label: "UK Tax Brackets 2025", path: "/blog/uk-tax-brackets-2025" },
+          { label: "UK Tax Brackets 2026/27", path: "/blog/uk-tax-brackets-2025" },
           { label: "Budget Calculator", path: "/finance/budget" },
         ]}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See your exact take-home after income tax and National Insurance.", url: "/finance/salary" },
-          { title: "UK Tax Brackets 2025/26", description: "How income tax and NI combine to determine what you keep.", url: "/blog/uk-tax-brackets-2025" },
+          { title: "UK Tax Brackets 2026/27", description: "How income tax and NI combine to determine what you keep.", url: "/blog/uk-tax-brackets-2025" },
           { title: "What Is the Personal Allowance?", description: "The tax-free amount that also aligns with the NI threshold.", url: "/blog/personal-allowance-uk" },
         ]}
       >
         <p>Most people know they pay income tax. Fewer people know exactly how much National Insurance they pay — or what they're getting for it. It's on every payslip, it's significant, and it's worth understanding properly.</p>
 
-        <h2>The 2025/26 employee NI rates</h2>
+        <h2>The 2026/27 employee NI rates</h2>
 
         <ul>
           <li><strong>£0 – £12,570</strong> — No NI (below Primary Threshold)</li>
@@ -61,7 +61,7 @@ export default function NationalInsurance2025() {
 
         <h2>What NI actually pays for</h2>
 
-        <p>National Insurance contributions build entitlement to the State Pension and other benefits including Jobseeker's Allowance, Employment and Support Allowance, and Maternity Allowance. You need <strong>35 qualifying years</strong> to get the full new State Pension — currently <strong>£221.20 per week</strong> in 2025/26.</p>
+        <p>National Insurance contributions build entitlement to the State Pension and other benefits including Jobseeker's Allowance, Employment and Support Allowance, and Maternity Allowance. You need <strong>35 qualifying years</strong> to get the full new State Pension — currently <strong>£241.30 per week</strong> in 2026/27.</p>
 
         <p>Even if you earn between £6,396 and £12,570 — below the threshold where you actually pay contributions — those years still count as qualifying years. You're building your pension record without making any payment.</p>
 

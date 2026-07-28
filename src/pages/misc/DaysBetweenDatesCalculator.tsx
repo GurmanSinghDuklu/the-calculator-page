@@ -168,7 +168,7 @@ const DaysBetweenDatesCalculator = () => {
     {
       question: "What are the UK tax year dates?",
       answer:
-        "The UK tax year runs from 6 April to 5 April the following year. For example, the 2025/26 tax year runs from 6 April 2025 to 5 April 2026. Use the quick preset to see how many days remain until the next tax year end.",
+        "The UK tax year runs from 6 April to 5 April the following year. For example, the 2026/27 tax year runs from 6 April 2025 to 5 April 2026. Use the quick preset to see how many days remain until the next tax year end.",
     },
     {
       question: "How many working days are in a UK notice period?",
@@ -539,7 +539,7 @@ const DaysBetweenDatesCalculator = () => {
               {
                 question: "What are the UK tax year dates?",
                 answer:
-                  "The UK tax year runs from 6 April to 5 April the following year. For example, the 2025/26 tax year starts 6 April 2025 and ends 5 April 2026. Use the \"Today to Tax Year End\" preset to see how many days remain.",
+                  "The UK tax year runs from 6 April to 5 April the following year. For example, the 2026/27 tax year starts 6 April 2025 and ends 5 April 2026. Use the \"Today to Tax Year End\" preset to see how many days remain.",
               },
               {
                 question: "How many working days are in a typical UK notice period?",

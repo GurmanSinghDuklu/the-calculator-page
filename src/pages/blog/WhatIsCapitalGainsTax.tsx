@@ -2,9 +2,9 @@ import { BlogLayout } from "@/components/BlogLayout";
 import { SEO } from "@/components/SEO";
 
 const faqs = [
-  { question: "What is capital gains tax in the UK?", answer: "Capital Gains Tax (CGT) is a tax on the profit you make when you sell an asset that has increased in value. You pay CGT on the gain, not the full sale price. In 2025/26, basic-rate taxpayers pay 18% on residential property gains and 10% on other assets. Higher-rate taxpayers pay 24% on residential property and 20% on other assets. Everyone has an annual CGT exemption of £3,000." },
-  { question: "What is the CGT annual exempt amount in 2025?", answer: "The CGT annual exempt amount (AEA) is £3,000 for individuals in 2025/26. This means you can make up to £3,000 of capital gains in a tax year without paying any CGT. This is significantly reduced from £12,300 in 2022/23, representing one of the largest CGT changes in recent years. Married couples and civil partners can each use their own exemption, giving a combined £6,000." },
-  { question: "Do you pay CGT on shares?", answer: "Yes, if you sell shares outside an ISA or pension and make a gain exceeding your annual exempt amount (£3,000 in 2025/26). CGT on shares is 10% for basic-rate taxpayers and 20% for higher and additional-rate taxpayers. Shares held inside a Stocks and Shares ISA are completely exempt from CGT — this is one of the key reasons ISAs are so valuable for long-term investors." },
+  { question: "What is capital gains tax in the UK?", answer: "Capital Gains Tax (CGT) is a tax on the profit you make when you sell an asset that has increased in value. You pay CGT on the gain, not the full sale price. In 2026/27, basic-rate taxpayers pay 18% on residential property gains and 10% on other assets. Higher-rate taxpayers pay 24% on residential property and 20% on other assets. Everyone has an annual CGT exemption of £3,000." },
+  { question: "What is the CGT annual exempt amount in 2026?", answer: "The CGT annual exempt amount (AEA) is £3,000 for individuals in 2026/27. This means you can make up to £3,000 of capital gains in a tax year without paying any CGT. This is significantly reduced from £12,300 in 2022/23, representing one of the largest CGT changes in recent years. Married couples and civil partners can each use their own exemption, giving a combined £6,000." },
+  { question: "Do you pay CGT on shares?", answer: "Yes, if you sell shares outside an ISA or pension and make a gain exceeding your annual exempt amount (£3,000 in 2026/27). CGT on shares is 10% for basic-rate taxpayers and 20% for higher and additional-rate taxpayers. Shares held inside a Stocks and Shares ISA are completely exempt from CGT — this is one of the key reasons ISAs are so valuable for long-term investors." },
   { question: "Do you pay CGT on your main home?", answer: "Usually not. Your main home is typically exempt from CGT under Private Residence Relief (PRR), provided you've lived there for the entire period of ownership. PRR can be reduced if you let out part of the property, used it for business, or owned a garden larger than half a hectare. Second homes, buy-to-let properties, and holiday lets are subject to CGT at residential property rates." },
   { question: "When do you need to report and pay capital gains tax?", answer: "For UK residential property, you must report and pay CGT within 60 days of completion. For other assets, you report via Self Assessment — the deadline is 31 January following the end of the tax year in which the gain was made. Failing to report on time results in late filing penalties from HMRC." },
 ];
@@ -13,7 +13,7 @@ export default function WhatIsCapitalGainsTax() {
   return (
     <>
       <SEO
-        title="What Is Capital Gains Tax UK? Rates, Exemptions & How to Pay (2025)"
+        title="What Is Capital Gains Tax UK? Rates, Exemptions & How to Pay (2026)"
         description="CGT is 10–24% on profits from selling assets. Everyone gets a £3,000 annual exemption. Here's what triggers it, what's exempt, and how to reduce your bill."
         keywords="capital gains tax uk, what is capital gains tax, cgt rates 2025, capital gains tax on shares uk, capital gains tax property uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-capital-gains-tax-uk"
@@ -26,7 +26,7 @@ export default function WhatIsCapitalGainsTax() {
         publishDate="April 2026"
         readTime="5 min"
         heroImage="/og-image.png"
-        directAnswer="Capital Gains Tax (CGT) is charged on the profit when you sell an asset that has risen in value. In 2025/26, rates are 10% (basic rate) or 20% (higher rate) on most assets, and 18% or 24% on residential property. The annual CGT exemption is £3,000 — gains below this are tax-free. Your main home is typically exempt under Private Residence Relief."
+        directAnswer="Capital Gains Tax (CGT) is charged on the profit when you sell an asset that has risen in value. In 2026/27, rates are 10% (basic rate) or 20% (higher rate) on most assets, and 18% or 24% on residential property. The annual CGT exemption is £3,000 — gains below this are tax-free. Your main home is typically exempt under Private Residence Relief."
         hasPaidSection={false}
         relatedCalculators={[
           { label: "Capital Gains Tax Calculator", path: "/finance/capital-gains-tax" },
@@ -54,7 +54,7 @@ export default function WhatIsCapitalGainsTax() {
 
         <p>Common chargeable assets include: shares (outside an ISA), second properties, buy-to-let property, business assets, and personal possessions worth over £6,000 (excluding your car).</p>
 
-        <h2>CGT rates in 2025/26</h2>
+        <h2>CGT rates in 2026/27</h2>
 
         <p>Your CGT rate depends on your total taxable income plus the gain.</p>
 
@@ -74,7 +74,7 @@ export default function WhatIsCapitalGainsTax() {
 
         <h2>The annual exempt amount</h2>
 
-        <p>Every individual gets a <strong>£3,000 CGT annual exempt amount</strong> in 2025/26. Gains below this threshold are tax-free. It resets every April.</p>
+        <p>Every individual gets a <strong>£3,000 CGT annual exempt amount</strong> in 2026/27. Gains below this threshold are tax-free. It resets every April.</p>
 
         <p>Married couples and civil partners each have their own exemption. Transferring assets between spouses is CGT-free (the recipient takes on the original base cost). This allows couples to crystallise £6,000 of gains per year tax-free by each using their own allowance.</p>
 
@@ -106,7 +106,7 @@ export default function WhatIsCapitalGainsTax() {
 
         <p>For <strong>UK residential property</strong> sold at a gain: you must report to HMRC and pay the tax within <strong>60 days of completion</strong> using the online CGT property account. This applies even if you file a Self Assessment return.</p>
 
-        <p>For <strong>all other assets</strong>: report via Self Assessment. The deadline is <strong>31 January</strong> following the end of the tax year in which you made the gain. So a gain in the 2025/26 tax year must be reported by 31 January 2027.</p>
+        <p>For <strong>all other assets</strong>: report via Self Assessment. The deadline is <strong>31 January</strong> following the end of the tax year in which you made the gain. So a gain in the 2026/27 tax year must be reported by 31 January 2027.</p>
 
         <h2>Frequently asked questions</h2>
         {faqs.map((faq, i) => (

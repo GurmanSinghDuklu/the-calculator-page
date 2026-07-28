@@ -120,7 +120,7 @@ export function AnswerPage({ page }: { page: AnswerPageData }) {
               Updated {displayDate}
             </span>
             <span className="uppercase tracking-widest font-heading text-accent-blue/70">
-              {page.market === "uk" ? "UK 2025/26" : "US 2025"}
+              {page.market === "uk" ? "UK 2026/27" : "US 2025"}
             </span>
           </div>
 

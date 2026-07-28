@@ -101,7 +101,7 @@ export default function HowLongToSave() {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="sr-only">How Long to Save Calculator UK 2025</h1>
+            <h1 className="sr-only">How Long to Save Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[10vw] lg:text-[82px]"

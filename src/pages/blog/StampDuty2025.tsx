@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 
 const faqs = [
   { question: "What is stamp duty in the UK?", answer: "Stamp Duty Land Tax (SDLT) is a tax paid when you buy a property in England or Northern Ireland above a certain threshold. Scotland has LBTT and Wales has LTT — similar taxes with different rates. The amount you pay depends on the purchase price, whether you're a first-time buyer, and whether you own other properties." },
-  { question: "What are the stamp duty rates in 2025?", answer: "From April 2025, standard rates are: 0% up to £125,000, 2% from £125,001–£250,000, 5% from £250,001–£925,000, 10% from £925,001–£1.5m, 12% above £1.5m. First-time buyers pay 0% up to £300,000 and 5% from £300,001–£500,000 (no relief above £500,000)." },
+  { question: "What are the stamp duty rates in 2026?", answer: "From April 2025, standard rates are: 0% up to £125,000, 2% from £125,001–£250,000, 5% from £250,001–£925,000, 10% from £925,001–£1.5m, 12% above £1.5m. First-time buyers pay 0% up to £300,000 and 5% from £300,001–£500,000 (no relief above £500,000)." },
   { question: "Do first-time buyers pay stamp duty?", answer: "First-time buyers get relief up to £300,000 (paying 0% on that portion) and 5% on the portion from £300,001 to £500,000. Properties above £500,000 get no first-time buyer relief. The threshold was reduced from £425,000 in April 2025." },
   { question: "Do I pay extra stamp duty on a second home?", answer: "Yes. Buying an additional residential property attracts a 3% surcharge on top of standard rates. This applies to buy-to-let properties, second homes, and holiday homes. If you're replacing your main residence, the surcharge usually doesn't apply." },
   { question: "When do I pay stamp duty?", answer: "Stamp duty is due within 14 days of completing your property purchase. Your solicitor or conveyancer typically handles the payment and filing on your behalf as part of the conveyancing process." },
@@ -13,14 +13,14 @@ export default function StampDuty2025() {
   return (
     <>
       <SEO
-        title="Stamp Duty UK 2025 — What You Actually Pay and When"
+        title="Stamp Duty UK 2026 — What You Actually Pay and When"
         description="Stamp duty rates changed in April 2025. First-time buyer thresholds dropped. Here's exactly what you owe, how it's calculated, and what changed."
         keywords="stamp duty 2025, sdlt 2025, stamp duty rates uk, stamp duty first time buyer 2025, stamp duty calculator"
         canonicalUrl="https://www.thecalculatorapp.org/blog/stamp-duty-uk-2025"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="Stamp Duty UK 2025 — What You Actually Pay and When"
+        title="Stamp Duty UK 2026 — What You Actually Pay and When"
         subtitle="The thresholds changed in April 2025. If you're buying this year, you need the updated numbers."
         category="Mortgage"
         publishDate="April 2026"

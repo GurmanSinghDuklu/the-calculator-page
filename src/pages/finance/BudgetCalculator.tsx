@@ -304,7 +304,7 @@ export default function BudgetCalculator() {
             Monthly Budget Planner
           </div>
 
-          <h1 className="sr-only">Budget Calculator UK 2025</h1>
+          <h1 className="sr-only">Budget Calculator UK 2026</h1>
           <div aria-hidden="true" className="font-display leading-none tracking-wide mb-6">
             <span className="block text-[14vw] sm:text-[100px] lg:text-[120px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #06b6d4 50%, #22c55e 100%)`,

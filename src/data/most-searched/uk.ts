@@ -15,8 +15,8 @@ const UK_MORTGAGE_SOURCES = [
   { label: "MoneyHelper — How mortgages work", url: "https://www.moneyhelper.org.uk/en/homes/buying-a-home/how-repayment-mortgages-work" },
 ];
 const UK_SALARY_SOURCES = [
-  { label: "HMRC — Income Tax rates and allowances 2025/26", url: "https://www.gov.uk/income-tax-rates" },
-  { label: "HMRC — National Insurance rates 2025/26", url: "https://www.gov.uk/national-insurance/how-much-national-insurance-you-pay" },
+  { label: "HMRC — Income Tax rates and allowances 2026/27", url: "https://www.gov.uk/income-tax-rates" },
+  { label: "HMRC — National Insurance rates 2026/27", url: "https://www.gov.uk/national-insurance/how-much-national-insurance-you-pay" },
   { label: "HMRC — Personal Allowance", url: "https://www.gov.uk/income-tax-rates/personal-allowances" },
 ];
 const UK_SAVINGS_SOURCES = [
@@ -209,14 +209,14 @@ export const ukPages: AnswerPageData[] = [
     slug: `${gross}-after-tax`,
     market: "uk", category: "Salary", currency: "£",
     question: `£${gross.toLocaleString("en-GB")} after tax UK`,
-    metaDescription: `£${gross.toLocaleString("en-GB")} a year is ${gbp(th.net)} after tax and National Insurance in 2025/26 — about ${gbp(th.net / 12)} a month take-home.`,
+    metaDescription: `£${gross.toLocaleString("en-GB")} a year is ${gbp(th.net)} after tax and National Insurance in 2026/27 — about ${gbp(th.net / 12)} a month take-home.`,
     keywords: `${gross} after tax uk, ${gross} take home pay, ${gross} salary after tax`,
-    answer: `£${gross.toLocaleString("en-GB")} a year is ${gbp(th.net)} after tax and National Insurance in 2025/26 — about ${gbp(th.net / 12)} per month. You pay ${gbp(th.incomeTax)} income tax and ${gbp(th.ni ?? 0)} NI.`,
+    answer: `£${gross.toLocaleString("en-GB")} a year is ${gbp(th.net)} after tax and National Insurance in 2026/27 — about ${gbp(th.net / 12)} per month. You pay ${gbp(th.incomeTax)} income tax and ${gbp(th.ni ?? 0)} NI.`,
     answerNumber: `${gbp(th.net)}`,
-    assumptions: ["2025/26 tax year", "England/Wales/NI rates (Scotland differs)", "Standard 1257L tax code", "Class 1 employee National Insurance"],
+    assumptions: ["2026/27 tax year", "England/Wales/NI rates (Scotland differs)", "Standard 1257L tax code", "Class 1 employee National Insurance"],
     formula: "Net = Gross − Income Tax − National Insurance",
     comparison: {
-      title: `£${gross.toLocaleString("en-GB")} breakdown (2025/26)`,
+      title: `£${gross.toLocaleString("en-GB")} breakdown (2026/27)`,
       columns: ["Item", "Amount"],
       rows: [
         { label: "Gross salary", value: gbp(gross) },
@@ -227,7 +227,7 @@ export const ukPages: AnswerPageData[] = [
       ],
     },
     faqs: [
-      { question: `What is £${gross.toLocaleString("en-GB")} after tax per month?`, answer: `About ${gbp(th.net / 12)} per month in the 2025/26 tax year, after income tax and National Insurance.` },
+      { question: `What is £${gross.toLocaleString("en-GB")} after tax per month?`, answer: `About ${gbp(th.net / 12)} per month in the 2026/27 tax year, after income tax and National Insurance.` },
       { question: "Does this include a pension?", answer: "No — this is take-home before any workplace pension contribution. Pension contributions would reduce both your taxable pay and your net pay." },
       { question: "Are Scottish rates different?", answer: "Yes. Scotland has its own income tax bands, so take-home differs slightly. National Insurance is the same UK-wide." },
     ],

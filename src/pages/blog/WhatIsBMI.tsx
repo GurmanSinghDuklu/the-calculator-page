@@ -13,7 +13,7 @@ export default function WhatIsBMI() {
   return (
     <>
       <SEO
-        title="What Is BMI? How to Calculate It and What It Means (2025)"
+        title="What Is BMI? How to Calculate It and What It Means (2026)"
         description="BMI = weight (kg) ÷ height (m)². Healthy range is 18.5–24.9. Here's how to calculate yours, what the categories mean, and where BMI falls short."
         keywords="what is bmi, how to calculate bmi, healthy bmi, bmi chart uk, bmi calculator, what is a healthy bmi"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-bmi"

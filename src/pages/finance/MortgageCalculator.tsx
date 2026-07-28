@@ -233,7 +233,7 @@ const MortgageCalculator = () => {
   return (
     <>
       <SEO
-        title="Mortgage Calculator UK 2025 — Monthly Repayments & Total Cost"
+        title="Mortgage Calculator UK 2026 — Monthly Repayments & Total Cost"
         description="Free UK mortgage calculator with multi-part mortgage support. Calculate monthly payments for up to 3 parts with different rates and terms, plus full month-by-month balance breakdown."
         keywords="mortgage calculator uk, mortgage payment calculator, part and part mortgage, multi part mortgage calculator, monthly mortgage breakdown, amortisation schedule uk"
         canonicalUrl="https://www.thecalculatorapp.org/finance/mortgage"
@@ -269,7 +269,7 @@ const MortgageCalculator = () => {
           <div className="flex flex-col z-10 lg:w-[45%] lg:sticky lg:top-8 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">Mortgage Calculator UK 2025</h1>
+            <h1 className="sr-only">Mortgage Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[12vw] lg:text-[100px]" style={{ background: `linear-gradient(135deg, ${ACCENT} 0%, #ef4444 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", filter: `drop-shadow(0 0 40px ${ACCENT}40)` }}>
                 MORTGAGE

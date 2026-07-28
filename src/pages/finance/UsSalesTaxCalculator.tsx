@@ -236,7 +236,7 @@ export default function UsSalesTaxCalculator() {
           {/* State rates table */}
           <div className="space-y-0 mt-12">
             <div className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
-              <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4">Sales tax rates by state (2025)</p>
+              <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4">Sales tax rates by state (2026)</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm text-zinc-300">
                   <thead>

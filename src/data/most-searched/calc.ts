@@ -9,7 +9,7 @@ export interface TakeHomeResult {
   federalTax?: number;
 }
 
-/** UK take-home for 2025/26: Personal Allowance £12,570 (tapered above £100k),
+/** UK take-home for 2026/27: Personal Allowance £12,570 (tapered above £100k),
  *  20% to £50,270, 40% to £125,140, 45% above. NI: 8% £12,570–£50,270, 2% above. */
 export function ukTakeHome(gross: number): TakeHomeResult {
   // Personal allowance taper: lose £1 per £2 over £100,000
@@ -25,7 +25,7 @@ export function ukTakeHome(gross: number): TakeHomeResult {
   const additionalBand = Math.max(0, taxable - basicBand - higherBand);
   const incomeTax = basicBand * 0.2 + higherBand * 0.4 + additionalBand * 0.45;
 
-  // National Insurance (employee, 2025/26)
+  // National Insurance (employee, 2026/27)
   const niLower = 12570;
   const niUpper = 50270;
   const niMain = Math.max(0, Math.min(gross, niUpper) - niLower) * 0.08;

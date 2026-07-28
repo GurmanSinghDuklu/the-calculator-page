@@ -13,7 +13,7 @@ export default function HowMuchCanIBorrow() {
   return (
     <>
       <SEO
-        title="How Much Can I Borrow for a Mortgage in the UK? (2025 Guide)"
+        title="How Much Can I Borrow for a Mortgage in the UK? (2026 Guide)"
         description="UK lenders use income multiples, deposit size, and affordability stress tests to decide what you can borrow. Here's exactly how the numbers work."
         keywords="how much can i borrow mortgage uk, mortgage affordability calculator, mortgage income multiple, uk mortgage 2025"
         canonicalUrl="https://www.thecalculatorapp.org/blog/how-much-can-i-borrow-mortgage-uk"

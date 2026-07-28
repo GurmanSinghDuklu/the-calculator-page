@@ -13,7 +13,7 @@ export default function WhatIsInheritanceTax() {
   return (
     <>
       <SEO
-        title="What Is Inheritance Tax UK? Thresholds & Rules 2025"
+        title="What Is Inheritance Tax UK? Thresholds & Rules 2026"
         description="IHT is 40% on estates above £325,000 — but couples can pass up to £1,000,000 tax-free. Here's how the thresholds work and the legal ways to reduce your bill."
         keywords="what is inheritance tax uk, inheritance tax threshold 2025, iht nil rate band, inheritance tax 7 year rule, how to avoid inheritance tax uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-inheritance-tax-uk"
@@ -35,7 +35,7 @@ export default function WhatIsInheritanceTax() {
         ]}
         relatedArticles={[
           { title: "What Is Capital Gains Tax UK?", description: "The other major asset tax — how it works and how to reduce it.", url: "/blog/what-is-capital-gains-tax-uk" },
-          { title: "UK Tax Brackets 2025", description: "Income tax bands explained for 2025/26.", url: "/blog/uk-tax-brackets-2025" },
+          { title: "UK Tax Brackets 2025", description: "Income tax bands explained for 2026/27.", url: "/blog/uk-tax-brackets-2025" },
           { title: "What Is an ISA?", description: "Tax-free savings — ISA assets are outside your estate after 2 years in an AIM ISA.", url: "/blog/what-is-an-isa" },
         ]}
       >
@@ -51,7 +51,7 @@ export default function WhatIsInheritanceTax() {
 
         <h2>The Residence Nil-Rate Band: an extra £175,000</h2>
 
-        <p>Since 2017, there is an additional allowance — the <strong>Residence Nil-Rate Band (RNRB)</strong> — worth £175,000 in 2025/26. It applies when:</p>
+        <p>Since 2017, there is an additional allowance — the <strong>Residence Nil-Rate Band (RNRB)</strong> — worth £175,000 in 2026/27. It applies when:</p>
 
         <ul>
           <li>You leave your main home (or its equivalent value if it was sold) to a direct descendant</li>

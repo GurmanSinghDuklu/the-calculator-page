@@ -2,25 +2,25 @@ import { BlogLayout } from "@/components/BlogLayout";
 import { SEO } from "@/components/SEO";
 
 const faqs = [
-  { question: "What is a good salary in the UK in 2025?", answer: "The UK median salary is approximately £37,000 per year in 2025. A salary above £50,270 puts you in the top 25% of earners and into the 40% income tax bracket. A salary above £100,000 puts you in roughly the top 5%. What counts as 'good' depends heavily on where you live — £45,000 in London barely covers rent, whereas the same salary in Leeds or Liverpool provides a comfortable standard of living." },
-  { question: "What is the average UK salary in 2025?", answer: "The median UK full-time salary is approximately £37,000 per year in 2025, according to ONS data. The mean (average) is higher at around £42,000 because high earners pull it up. London median earnings are significantly higher at around £48,000, while Northern Ireland and Wales are closer to £32,000–£34,000." },
+  { question: "What is a good salary in the UK in 2026?", answer: "The UK median salary is approximately £37,000 per year in 2025. A salary above £50,270 puts you in the top 25% of earners and into the 40% income tax bracket. A salary above £100,000 puts you in roughly the top 5%. What counts as 'good' depends heavily on where you live — £45,000 in London barely covers rent, whereas the same salary in Leeds or Liverpool provides a comfortable standard of living." },
+  { question: "What is the average UK salary in 2026?", answer: "The median UK full-time salary is approximately £37,000 per year in 2025, according to ONS data. The mean (average) is higher at around £42,000 because high earners pull it up. London median earnings are significantly higher at around £48,000, while Northern Ireland and Wales are closer to £32,000–£34,000." },
   { question: "What salary do you need to buy a house in the UK?", answer: "To buy a £250,000 property with a 10% deposit, you need to borrow £225,000. At 4.5x income, that requires a salary of £50,000 — or a joint income of £50,000. For a £350,000 property with 10% deposit, the required salary rises to around £70,000 individually or combined. These figures assume no significant existing debt." },
   { question: "How much of my salary should go on rent or mortgage?", answer: "The standard guidance is that housing costs should not exceed 30–35% of gross income, or ideally 25–28% of net take-home. On a £37,000 salary (£2,540 net/month), that puts the comfortable housing budget at £635–£889 per month. In London and other high-cost cities, many people spend 40–50% of net income on housing, which significantly constrains savings." },
-  { question: "What take-home pay does a £50,000 salary give you in the UK?", answer: "A £50,000 salary in the UK (2025/26) gives a take-home of approximately £3,074 per month after income tax and National Insurance, assuming no student loan or pension. The breakdown is roughly: income tax £7,540, National Insurance £3,024, leaving £39,436 net annually. Adding a 5% pension contribution reduces take-home further but saves £2,500 gross." },
+  { question: "What take-home pay does a £50,000 salary give you in the UK?", answer: "A £50,000 salary in the UK (2026/27) gives a take-home of approximately £3,074 per month after income tax and National Insurance, assuming no student loan or pension. The breakdown is roughly: income tax £7,540, National Insurance £3,024, leaving £39,436 net annually. Adding a 5% pension contribution reduces take-home further but saves £2,500 gross." },
 ];
 
 export default function WhatIsAGoodSalaryUK() {
   return (
     <>
       <SEO
-        title="What Is a Good Salary in the UK in 2025?"
+        title="What Is a Good Salary in the UK in 2026?"
         description="The UK median salary is £37,000. Above £50,270 you're in the top 25% of earners. Here's what different salaries actually mean for take-home pay, buying power, and lifestyle."
         keywords="good salary uk 2025, average uk salary 2025, uk median salary, what is a good salary uk, uk salary take home pay"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-a-good-salary-uk"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="What Is a Good Salary in the UK in 2025?"
+        title="What Is a Good Salary in the UK in 2026?"
         subtitle="The median is £37,000. But what you take home — and what it buys — depends on far more than the headline number."
         category="Salary & Tax"
         publishDate="April 2026"
@@ -35,7 +35,7 @@ export default function WhatIsAGoodSalaryUK() {
         ]}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See exactly what any salary gives you after tax and NI.", url: "/finance/salary" },
-          { title: "UK Tax Brackets 2025/26", description: "How income tax bands determine what you keep from every pay rise.", url: "/blog/uk-tax-brackets-2025" },
+          { title: "UK Tax Brackets 2026/27", description: "How income tax bands determine what you keep from every pay rise.", url: "/blog/uk-tax-brackets-2025" },
           { title: "What Is the Personal Allowance?", description: "The tax-free amount every UK worker gets — and who loses it.", url: "/blog/personal-allowance-uk" },
         ]}
       >
@@ -56,7 +56,7 @@ export default function WhatIsAGoodSalaryUK() {
 
         <h2>What different salaries actually give you after tax</h2>
 
-        <p>Monthly take-home figures (2025/26, England, no student loan, 5% pension):</p>
+        <p>Monthly take-home figures (2026/27, England, no student loan, 5% pension):</p>
         <ul>
           <li><strong>£25,000:</strong> ~£1,720/month take-home</li>
           <li><strong>£35,000:</strong> ~£2,360/month take-home</li>

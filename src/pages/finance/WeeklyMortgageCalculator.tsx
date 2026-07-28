@@ -8,8 +8,6 @@ import { Home, TrendingDown, Clock, PiggyBank, Calculator, ArrowRight } from "lu
 import { toast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
-import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 
 // ─── Accent colour for Property category ─────────────────────────────────────
 const ACCENT = "#F97316";

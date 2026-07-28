@@ -155,7 +155,7 @@ const LoanCalculator = () => {
   return (
     <>
       <SEO
-        title="Loan Calculator UK 2025 — Monthly Repayments & Total Interest"
+        title="Loan Calculator UK 2026 — Monthly Repayments & Total Interest"
         description="Free loan calculator for personal loans, auto loans, and mortgages. Calculate monthly payments, total interest, and amortization schedules instantly."
         keywords="loan calculator, personal loan calculator, auto loan calculator, loan payment calculator"
         faqSchema={loanStaticContent.faqs}
@@ -198,7 +198,7 @@ const LoanCalculator = () => {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="sr-only">Loan Calculator UK 2025</h1>
+            <h1 className="sr-only">Loan Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[14vw] lg:text-[115px]"

@@ -109,7 +109,7 @@ const SalaryCalculator = () => {
   return (
     <>
       <SEO
-        title="UK Salary Calculator 2025 — Take-Home Pay After Income Tax & NI"
+        title="UK Salary Calculator 2026 — Take-Home Pay After Income Tax & NI"
         description="Calculate take-home pay after income tax, national insurance and state taxes. Supports UK and US with pension contributions."
         keywords="salary calculator, take home pay calculator, income tax calculator UK, national insurance calculator, net salary, US income tax calculator, FICA calculator, state tax, federal tax, paycheck calculator, net pay"
         canonicalUrl="https://www.thecalculatorapp.org/finance/salary"
@@ -147,7 +147,7 @@ const SalaryCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">UK Salary Calculator 2025</h1>
+            <h1 className="sr-only">UK Salary Calculator 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[12vw] lg:text-[100px]" style={{
                 background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
@@ -374,7 +374,7 @@ const SalaryCalculator = () => {
               ]
             }}
             formula={{
-              title: "UK Income Tax Formula (2025/26)",
+              title: "UK Income Tax Formula (2026/27)",
               formula: "Tax = 0% × £12,570 + 20% × (£50,270 - £12,570) + 40% × (£125,140 - £50,270) + 45% × (income - £125,140)",
               explanation: "The personal allowance of £12,570 is tax-free. The basic rate of 20% applies to income from £12,571 to £50,270. The higher rate of 40% applies from £50,271 to £125,140. The additional rate of 45% applies to income above £125,140. Note: the personal allowance reduces by £1 for every £2 earned above £100,000."
             }}

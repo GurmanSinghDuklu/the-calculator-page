@@ -104,7 +104,7 @@ export default function IrrCalculator() {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="sr-only">IRR Calculator UK 2025</h1>
+            <h1 className="sr-only">IRR Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[20vw] lg:text-[150px]"

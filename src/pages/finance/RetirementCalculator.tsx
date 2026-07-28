@@ -9,7 +9,6 @@ import { toast } from "sonner";
 import { ArrowRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
-import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 
 // ─── Accent colour for Finance category ───────────────────────────────────────
 const ACCENT = "#3B82F6";
@@ -56,7 +55,7 @@ interface RetirementResults {
 const faqSchema = [
   { question: "How much do I actually need to retire in the UK?", answer: "The Pensions and Lifetime Savings Association (PLSA) puts it at around £14,400/year for a minimum standard, £31,300 for moderate, and £43,100 for comfortable — those are for a single person outside London. But honestly, the right number for you depends on whether you own your home outright, what your health looks like, and what kind of life you want. Someone who loves walking and gardening needs a very different pot to someone who wants to travel six months a year. Start with the PLSA figures as a rough anchor, then adjust for your actual situation." },
   { question: "What's the 4% rule and should I use it?", answer: "The 4% rule is a rough guideline that says if you withdraw 4% of your pension pot in year one, then adjust for inflation each year after, your money should last 30 years. So a £500,000 pot gives you about £20,000 a year. It's a useful starting point but not a guarantee — it was based on US market data from a specific period, and some advisors now suggest 3–3.5% is more prudent for UK retirees given current conditions. The calculator lets you change this rate so you can see the impact of being more or less conservative." },
-  { question: "How much State Pension will I get?", answer: "The full new State Pension is £11,502 a year (2024/25 tax year). To get the full amount you need 35 qualifying National Insurance years. You need at least 10 years to get anything at all. The important thing is to check your actual forecast — go to gov.uk/check-state-pension and log in with your Government Gateway account. It takes five minutes and tells you exactly where you stand, including whether there are gaps worth filling. Buying missing NI years can be one of the best financial decisions you ever make." },
+  { question: "How much State Pension will I get?", answer: "The full new State Pension is £12,547 a year (2026/27 tax year). To get the full amount you need 35 qualifying National Insurance years. You need at least 10 years to get anything at all. The important thing is to check your actual forecast — go to gov.uk/check-state-pension and log in with your Government Gateway account. It takes five minutes and tells you exactly where you stand, including whether there are gaps worth filling. Buying missing NI years can be one of the best financial decisions you ever make." },
   { question: "When can I access my pension?", answer: "Private and workplace pensions can currently be accessed from age 55, though this is rising to 57 in April 2028 — so if you're in your 40s now, plan for 57. The State Pension kicks in at 66 and is rising to 67 between 2026 and 2028. Taking your pension early reduces what you'll draw each year from it, so it's worth thinking hard before accessing it before State Pension age unless you really need to. You don't have to take everything at once either — many people draw a flexible income in phases." },
   { question: "Is it worth increasing my pension contributions?", answer: "Almost always yes, for two reasons. First, if your employer matches your contributions and you're not maxing that out, you're literally leaving free money on the table — even a 3% employer match on a £40,000 salary is £1,200 a year going into your pot for nothing. Second, pension contributions get tax relief. A basic rate taxpayer effectively pays £80 to put £100 into their pension. A higher rate taxpayer pays just £60. That's an instant return before your investments have done anything. Even a small increase now — say 1% of salary — makes a meaningful difference over decades." },
 ];
@@ -71,7 +70,7 @@ export default function RetirementCalculator() {
   const [employerContribution, setEmployerContribution] = useState("3");
   const [inflationRate,        setInflationRate]        = useState("2");
   const [growthRate,           setGrowthRate]           = useState("7");
-  const [statePension,         setStatePension]         = useState("11502");
+  const [statePension,         setStatePension]         = useState("12547");
   const [withdrawalRate,       setWithdrawalRate]       = useState("4");
   const [results,              setResults]              = useState<RetirementResults | null>(null);
 
@@ -114,7 +113,7 @@ export default function RetirementCalculator() {
   const loadDemo = () => {
     setCurrentAge("35"); setRetirementAge("67"); setCurrentPot("25000"); setSalary("45000");
     setEmployeeContribution("5"); setEmployerContribution("3"); setInflationRate("2");
-    setGrowthRate("7"); setStatePension("11502"); setWithdrawalRate("4");
+    setGrowthRate("7"); setStatePension("12547"); setWithdrawalRate("4");
     setTimeout(calculate, 100);
   };
 
@@ -123,7 +122,7 @@ export default function RetirementCalculator() {
   return (
     <>
       <SEO
-        title="Retirement Calculator UK 2025 — Pension Pot & Income Projector"
+        title="Retirement Calculator UK 2026 — Pension Pot & Income Projector"
         description="Free UK retirement calculator. Estimate your pension pot and annual income including state pension and employer contributions."
         keywords="retirement calculator UK, pension calculator, retirement planning calculator, state pension calculator"
         faqSchema={faqSchema}
@@ -156,7 +155,7 @@ export default function RetirementCalculator() {
         {/* Hero title */}
         <div className="max-w-5xl mx-auto px-6 pt-12 pb-8 select-none">
           <div className="absolute w-[600px] h-[400px] rounded-full blur-[140px] opacity-[0.07] pointer-events-none -z-10" style={{ background: ACCENT }} />
-          <h1 className="sr-only">Retirement Calculator UK 2025</h1>
+          <h1 className="sr-only">Retirement Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
             <span className="block text-[12vw] md:text-[95px]" style={{
               background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
@@ -212,7 +211,7 @@ export default function RetirementCalculator() {
               </div>
               <div>
                 <label className={labelClass}>State Pension (£/yr)</label>
-                <DI value={statePension} onChange={setStatePension} min="0" step="0.01" placeholder="11502" />
+                <DI value={statePension} onChange={setStatePension} min="0" step="0.01" placeholder="12547" />
               </div>
               <div>
                 <label className={labelClass}>Withdrawal Rate (%)</label>
@@ -336,7 +335,7 @@ export default function RetirementCalculator() {
           <CalculatorStaticContent
             whatIs={{
               title: "What is this calculator actually showing you?",
-              description: "It's giving you a projection — a best guess of what your pension pot might look like by the time you retire, and how much annual income that could support. It's not a guarantee and it's not financial advice. But it's a genuinely useful reality check.\n\nThe UK pension system has three main layers. The State Pension (up to £11,502/year) is the foundation, paid from age 66. On top of that most people have workplace pensions — money you and your employer both put in, invested over decades. Then there's anything else you've saved personally, whether ISAs, property, or other investments. This calculator focuses on the workplace and personal pension piece and adds the State Pension on top."
+              description: "It's giving you a projection — a best guess of what your pension pot might look like by the time you retire, and how much annual income that could support. It's not a guarantee and it's not financial advice. But it's a genuinely useful reality check.\n\nThe UK pension system has three main layers. The State Pension (up to £12,547/year) is the foundation, paid from age 66. On top of that most people have workplace pensions — money you and your employer both put in, invested over decades. Then there's anything else you've saved personally, whether ISAs, property, or other investments. This calculator focuses on the workplace and personal pension piece and adds the State Pension on top."
             }}
             howItWorks={{
               title: "How to get a useful number out of this",

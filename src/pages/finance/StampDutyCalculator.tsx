@@ -132,7 +132,7 @@ const StampDutyCalculator = () => {
   return (
     <>
       <SEO
-        title="Stamp Duty Calculator UK 2025 — SDLT Rates & Thresholds"
+        title="Stamp Duty Calculator UK 2026 — SDLT Rates & Thresholds"
         description="Free UK stamp duty calculator for 2025. Calculate SDLT for first time buyers, home movers, and buy to let properties in England and Northern Ireland."
         keywords="stamp duty calculator, SDLT calculator, UK stamp duty, first time buyer stamp duty"
         canonicalUrl="https://www.thecalculatorapp.org/finance/stamp-duty"
@@ -170,7 +170,7 @@ const StampDutyCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">Stamp Duty Calculator UK 2025</h1>
+            <h1 className="sr-only">Stamp Duty Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[100px]"
@@ -397,7 +397,7 @@ const StampDutyCalculator = () => {
               ]
             }}
             formula={{
-              title: "SDLT Bands (England & Northern Ireland 2025/26)",
+              title: "SDLT Bands (England & Northern Ireland 2026/27)",
               formula: "£0-£250,000: 0% | £250,001-£925,000: 5% | £925,001-£1,500,000: 10% | £1,500,001+: 12%",
               explanation: "First-time buyers pay 0% up to £425,000 and 5% on the portion from £425,001 to £625,000 (no relief if price exceeds £625,000). Additional properties incur a 3% surcharge on top of standard rates. Non-UK residents pay an additional 2% surcharge. For example, a £350,000 home costs £5,000 in SDLT for home movers (5% on £100,000 above £250,000) but £0 for first-time buyers."
             }}

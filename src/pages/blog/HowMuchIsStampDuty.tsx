@@ -2,7 +2,7 @@ import { BlogLayout } from "@/components/BlogLayout";
 import { SEO } from "@/components/SEO";
 
 const faqs = [
-  { question: "How much is stamp duty in the UK in 2025?", answer: "From 1 April 2025, stamp duty thresholds reverted to pre-2022 levels. Standard residential rates: 0% on the first £125,000, 2% on £125,001–£250,000, 5% on £250,001–£925,000, 10% on £925,001–£1.5m, 12% above £1.5m. First-time buyers pay 0% on the first £300,000 (down from £425,000 before April 2025) and 5% on the portion from £300,001–£500,000. Additional properties (buy-to-let, second homes) pay a 5% surcharge on top of standard rates." },
+  { question: "How much is stamp duty in the UK in 2026?", answer: "From 1 April 2025, stamp duty thresholds reverted to pre-2022 levels. Standard residential rates: 0% on the first £125,000, 2% on £125,001–£250,000, 5% on £250,001–£925,000, 10% on £925,001–£1.5m, 12% above £1.5m. First-time buyers pay 0% on the first £300,000 (down from £425,000 before April 2025) and 5% on the portion from £300,001–£500,000. Additional properties (buy-to-let, second homes) pay a 5% surcharge on top of standard rates." },
   { question: "Do first-time buyers pay stamp duty?", answer: "First-time buyers are exempt from stamp duty on the first £300,000 of a purchase (as of 1 April 2025, reduced from £425,000). On purchases from £300,001 to £500,000, first-time buyers pay 5% on the amount above £300,000. For properties above £500,000, first-time buyer relief does not apply and standard rates are used from £0. So a first-time buyer purchasing a £450,000 property pays: 0% on first £300,000 + 5% on remaining £150,000 = £7,500." },
   { question: "How is stamp duty calculated?", answer: "Stamp Duty Land Tax (SDLT) is calculated in bands — like income tax. You pay the rate on each portion of the price in that band, not the full purchase price at the top rate. For a £350,000 home (standard rates): 0% on first £125,000 = £0. 2% on next £125,000 (£125k–£250k) = £2,500. 5% on remaining £100,000 (£250k–£350k) = £5,000. Total SDLT = £7,500." },
   { question: "What is the stamp duty surcharge for second homes?", answer: "Buyers of additional residential properties (buy-to-let, second homes, holiday lets) pay a 5% surcharge on top of the standard residential rates at every band. This applies from the first pound of the purchase price. On a £300,000 buy-to-let property: standard SDLT = £5,000. Surcharge = 5% × £300,000 = £15,000. Total = £20,000. The surcharge was raised from 3% to 5% in October 2024." },
@@ -13,14 +13,14 @@ export default function HowMuchIsStampDuty() {
   return (
     <>
       <SEO
-        title="How Much Is Stamp Duty in 2025? Rates, Thresholds & Calculator"
+        title="How Much Is Stamp Duty in 2026? Rates, Thresholds & Calculator"
         description="Stamp duty thresholds changed on 1 April 2025. First-time buyer relief now applies to the first £300,000. Here's exactly what you'll pay on any purchase price."
         keywords="how much is stamp duty, stamp duty 2025, stamp duty calculator, stamp duty first time buyer, sdlt rates 2025"
         canonicalUrl="https://www.thecalculatorapp.org/blog/how-much-is-stamp-duty-2025"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="How Much Is Stamp Duty in 2025?"
+        title="How Much Is Stamp Duty in 2026?"
         subtitle="The thresholds changed on 1 April 2025. First-time buyer relief dropped from £425,000 to £300,000. Here's what you'll actually pay."
         category="Property"
         publishDate="April 2026"
@@ -34,7 +34,7 @@ export default function HowMuchIsStampDuty() {
           { label: "Future House Value", path: "/finance/future-house-value" },
         ]}
         relatedArticles={[
-          { title: "First-Time Buyer Guide 2025", description: "Everything you need to know about buying your first home.", url: "/blog/first-time-buyer-uk-2025" },
+          { title: "First-Time Buyer Guide 2026", description: "Everything you need to know about buying your first home.", url: "/blog/first-time-buyer-uk-2025" },
           { title: "How Much Can I Borrow for a Mortgage?", description: "Work out your borrowing limit before you start searching.", url: "/blog/how-much-can-i-borrow-mortgage-uk" },
           { title: "How to Save for a House Deposit", description: "The LISA strategy that gives you £1,000 free per year.", url: "/blog/how-to-save-for-a-house-deposit" },
         ]}

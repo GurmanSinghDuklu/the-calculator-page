@@ -5,7 +5,7 @@ import { ArrowRight, Wallet, Smartphone } from "lucide-react";
 
 const faqs = [
   { q: "Is there a free salary calculator app for the UK?", a: "Yes. The Calculator App includes a free UK salary calculator that works on iPhone and Android with no download. It calculates take-home pay after Income Tax, National Insurance, student loan deductions, and pension contributions." },
-  { q: "What is the best salary calculator app in the UK?", a: "The best UK salary calculator app accounts for all deductions — PAYE Income Tax across all bands, Class 1 National Insurance, Plan 1/2/4 student loans, and pension contributions. The Calculator App covers all of these accurately for the 2025/26 tax year." },
+  { q: "What is the best salary calculator app in the UK?", a: "The best UK salary calculator app accounts for all deductions — PAYE Income Tax across all bands, Class 1 National Insurance, Plan 1/2/4 student loans, and pension contributions. The Calculator App covers all of these accurately for the 2026/27 tax year." },
   { q: "Does the salary app calculate National Insurance?", a: "Yes. The UK Salary Calculator in The Calculator App calculates Class 1 National Insurance contributions at the current rates, broken down alongside Income Tax so you can see exactly what you pay." },
   { q: "Can I calculate my take-home pay after student loan?", a: "Yes. The salary calculator includes Plan 1, Plan 2, and Plan 4 student loan repayment options, so your take-home pay figure is accurate whether you're a recent graduate or have an older loan." },
   { q: "Does the salary calculator app work for self-employed?", a: "The current tool focuses on PAYE employment. For self-employed income, use it alongside the savings and tax calculators to estimate your net position after Class 2/4 NI and Income Tax." },
@@ -87,7 +87,7 @@ export default function SalaryCalculatorApp() {
         <section className="max-w-4xl mx-auto px-6 py-16 border-t border-white/8">
           <div className="space-y-0">
             <div className="border border-white/8 bg-white/[0.015] px-8 py-8 mb-px">
-              <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4">UK Income Tax bands 2025/26</p>
+              <p className="font-heading text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4">UK Income Tax bands 2026/27</p>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm text-zinc-300 max-w-2xl">
                   <thead><tr className="border-b border-white/10">{["Band","Income","Rate"].map(h => <th key={h} className="text-left py-3 pr-6 text-[10px] font-heading uppercase tracking-widest text-white/40">{h}</th>)}</tr></thead>

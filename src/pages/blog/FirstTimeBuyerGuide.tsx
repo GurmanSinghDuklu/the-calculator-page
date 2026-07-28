@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 
 const faqs = [
   { question: "How much deposit do I need as a first-time buyer?", answer: "The minimum is typically 5% of the purchase price. On a £250,000 property that's £12,500. A 10% deposit opens up significantly better mortgage rates. Most financial advisers recommend saving at least 10% if you can, as the rate difference saves more than the extra time spent saving." },
-  { question: "What government schemes are available for first-time buyers in 2025?", answer: "The main scheme in 2025 is the Mortgage Guarantee Scheme, which helps buyers with 5% deposits access 95% LTV mortgages. Shared Ownership allows you to buy a percentage of a property and pay rent on the rest. Help to Buy ISA and the Lifetime ISA (LISA) provide government top-ups on savings used for a first home purchase." },
+  { question: "What government schemes are available for first-time buyers in 2026?", answer: "The main scheme in 2026 is the Mortgage Guarantee Scheme, which helps buyers with 5% deposits access 95% LTV mortgages. Shared Ownership allows you to buy a percentage of a property and pay rent on the rest. Help to Buy ISA and the Lifetime ISA (LISA) provide government top-ups on savings used for a first home purchase." },
   { question: "What is a Lifetime ISA and should I use one?", answer: "A Lifetime ISA (LISA) lets you save up to £4,000 per year and receive a 25% government bonus — up to £1,000 per year. The money must be used to buy your first home (valued under £450,000) or held until retirement. It's one of the best savings vehicles available to first-time buyers." },
   { question: "How long does it take to buy a house as a first-time buyer?", answer: "From offer accepted to completion typically takes 8–12 weeks. Getting a mortgage agreement in principle before you start viewing takes 1–2 days. The full process including solicitors, surveys, and searches usually runs 2–4 months." },
   { question: "Should I use a mortgage broker as a first-time buyer?", answer: "Almost always yes. Brokers have access to deals not available directly to consumers, can advise on which lenders are most likely to accept your specific situation, and handle the paperwork. Many charge no fee (they're paid by the lender). For a first purchase, the guidance is worth more than the potential saving of going direct." },
@@ -13,14 +13,14 @@ export default function FirstTimeBuyerGuide() {
   return (
     <>
       <SEO
-        title="First-Time Buyer UK 2025 — The Numbers You Need Before You Apply"
-        description="Deposit, affordability, stamp duty relief, LISAs, schemes. Everything a first-time buyer needs to know in 2025 — with the actual numbers."
+        title="First-Time Buyer UK 2026 — The Numbers You Need Before You Apply"
+        description="Deposit, affordability, stamp duty relief, LISAs, schemes. Everything a first-time buyer needs to know in 2026 — with the actual numbers."
         keywords="first time buyer uk 2025, first time buyer guide, first time buyer deposit, first time buyer mortgage, lifetime isa first home"
         canonicalUrl="https://www.thecalculatorapp.org/blog/first-time-buyer-uk-2025"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="First-Time Buyer UK 2025 — The Numbers You Need Before You Apply"
+        title="First-Time Buyer UK 2026 — The Numbers You Need Before You Apply"
         subtitle="Before you look at a single property, know your deposit, your borrowing limit, and your stamp duty bill."
         category="Mortgage"
         publishDate="April 2026"

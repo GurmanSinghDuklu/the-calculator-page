@@ -13,7 +13,7 @@ export default function WhatIsAStocksAndSharesISA() {
   return (
     <>
       <SEO
-        title="What Is a Stocks and Shares ISA? How It Works & Is It Worth It? (2025)"
+        title="What Is a Stocks and Shares ISA? How It Works & Is It Worth It? (2026)"
         description="A Stocks and Shares ISA shelters your investments from capital gains tax and dividend tax permanently. You can invest up to £20,000/year. Here's how it works."
         keywords="what is a stocks and shares isa, stocks and shares isa explained, stocks and shares isa vs cash isa, should i open a stocks and shares isa, best stocks and shares isa uk 2025"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-a-stocks-and-shares-isa"

@@ -114,13 +114,13 @@ const CompoundInterest = () => {
     return (
       <div className="bg-dark-bg text-dark-text min-h-screen font-sans">
         <SEO
-          title="Compound Interest Calculator UK 2025 — A = P(1+r/n)^nt"
+          title="Compound Interest Calculator UK 2026 — A = P(1+r/n)^nt"
           description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
           structuredData={[structuredData, breadcrumbStructuredData]}
           faqSchema={faqSchema}
         />
         <div className="max-w-5xl mx-auto px-6 py-20">
-          <h1 className="sr-only">Compound Interest Calculator UK 2025</h1>
+          <h1 className="sr-only">Compound Interest Calculator UK 2026</h1>
           <button
             onClick={() => setShowAdvanced(false)}
             className="flex items-center gap-2 font-heading text-xs uppercase tracking-widest text-white/40 hover:text-white transition-colors mb-12"
@@ -318,7 +318,7 @@ const CompoundInterest = () => {
   return (
     <>
       <SEO
-        title="Compound Interest Calculator UK 2025 — A = P(1+r/n)^nt"
+        title="Compound Interest Calculator UK 2026 — A = P(1+r/n)^nt"
         description="Free compound interest calculator with daily, monthly and yearly compounding. See how your savings grow over time with compound interest."
         structuredData={[structuredData, breadcrumbStructuredData]}
         faqSchema={faqSchema}
@@ -348,7 +348,7 @@ const CompoundInterest = () => {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="sr-only">Compound Interest Calculator UK 2025</h1>
+            <h1 className="sr-only">Compound Interest Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[120px]"

@@ -161,7 +161,7 @@ const IsaCalculator = () => {
   const isaTypeLabel = isaType === "cash" ? "Cash ISA" : isaType === "stocks" ? "Stocks & Shares ISA" : "Lifetime ISA";
 
   const faqSchema = [
-    { question: "What is the ISA allowance for 2025/26?", answer: "The ISA allowance for the 2025/26 tax year is £20,000. You can split this across different ISA types (Cash, Stocks & Shares, Innovative Finance, Lifetime) but the total cannot exceed £20,000. The Lifetime ISA has a separate sub-limit of £4,000 per year." },
+    { question: "What is the ISA allowance for 2026/27?", answer: "The ISA allowance for the 2026/27 tax year is £20,000. You can split this across different ISA types (Cash, Stocks & Shares, Innovative Finance, Lifetime) but the total cannot exceed £20,000. The Lifetime ISA has a separate sub-limit of £4,000 per year." },
     { question: "Should I choose a Cash ISA or Stocks & Shares ISA?", answer: "Cash ISAs suit short-term savings (under 5 years) and offer guaranteed returns. Stocks & Shares ISAs historically outperform over longer periods (5+ years) but your capital is at risk. Many people use both: a Cash ISA for emergency savings and a Stocks & Shares ISA for long-term goals." },
     { question: "How does the Lifetime ISA government bonus work?", answer: "The government adds a 25% bonus on contributions to a Lifetime ISA, up to £4,000 per year — meaning a maximum bonus of £1,000 annually. You can use it to buy your first home (worth up to £450,000) or withdraw from age 60. Early withdrawal for other reasons incurs a 25% penalty on the amount withdrawn." },
     { question: "Do I pay tax on ISA interest or gains?", answer: "No. All growth inside an ISA — whether interest, dividends, or capital gains — is completely tax-free. This is one of the biggest advantages of ISAs. Outside an ISA, basic rate taxpayers get a £1,000 Personal Savings Allowance, but anything above that is taxed at your marginal rate." },
@@ -180,7 +180,7 @@ const IsaCalculator = () => {
   return (
     <>
       <SEO
-        title="ISA Calculator UK 2025 — Cash ISA, Stocks & Shares, LISA Returns"
+        title="ISA Calculator UK 2026 — Cash ISA, Stocks & Shares, LISA Returns"
         description="Free UK ISA calculator. Compare Cash ISA, Stocks & Shares ISA and Lifetime ISA returns. See your tax-free growth and LISA government bonus."
         keywords="ISA calculator, ISA calculator UK, cash ISA, stocks and shares ISA, lifetime ISA calculator, LISA calculator, ISA allowance"
         faqSchema={faqSchema}
@@ -217,7 +217,7 @@ const IsaCalculator = () => {
           <div className="flex flex-col z-10 lg:w-1/2 select-none">
             <div className="absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-10 pointer-events-none -z-10" style={{ background: ACCENT, top: "10%", left: "0" }} />
 
-            <h1 className="sr-only">ISA Calculator UK 2025</h1>
+            <h1 className="sr-only">ISA Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span className="block text-[12vw] lg:text-[100px]" style={{
                 background: `linear-gradient(135deg, ${ACCENT} 0%, #a78bfa 100%)`,
@@ -515,7 +515,7 @@ const IsaCalculator = () => {
               explanation: "Where FV is the final ISA value, P is the initial deposit, r is the annual interest/growth rate as a decimal, t is time in years, and PMT is the monthly contribution. For Lifetime ISAs, the government bonus is calculated as 25% of annual contributions up to £4,000 — giving a maximum bonus of £1,000 per year. The bonus is added to the ISA and compounds alongside your own contributions. Tax saved is estimated at 20% (basic rate) of total growth, representing the income tax you would have owed on interest or gains outside an ISA."
             }}
             faqs={[
-              { question: "What is the ISA allowance for 2025/26?", answer: "The total ISA allowance for 2025/26 is £20,000 per person per tax year. You can split this across different ISA types — for example, £4,000 in a Lifetime ISA and £16,000 in a Stocks & Shares ISA. The Lifetime ISA has its own sub-limit of £4,000. You cannot carry over unused allowance to the next year, so it's genuinely use-it-or-lose-it." },
+              { question: "What is the ISA allowance for 2026/27?", answer: "The total ISA allowance for 2026/27 is £20,000 per person per tax year. You can split this across different ISA types — for example, £4,000 in a Lifetime ISA and £16,000 in a Stocks & Shares ISA. The Lifetime ISA has its own sub-limit of £4,000. You cannot carry over unused allowance to the next year, so it's genuinely use-it-or-lose-it." },
               { question: "Cash ISA or Stocks & Shares ISA — which is better?", answer: "It depends on your timeframe. For money you might need within the next 5 years, a Cash ISA is safer — your capital is protected and you earn a fixed or variable interest rate. For longer-term goals (5+ years), a Stocks & Shares ISA has historically delivered better returns, averaging 7-8% annually for global equity funds before fees. But your capital is at risk and values can fall. Many people sensibly use both." },
               { question: "How does the Lifetime ISA (LISA) work?", answer: "You can open a LISA if you're aged 18-39. Contribute up to £4,000 per year and the government adds a 25% bonus — that's up to £1,000 of free money annually. You can use it for your first home (property up to £450,000) or from age 60 for retirement. Withdraw early for any other reason and you'll pay a 25% withdrawal penalty, which actually means you lose more than the bonus. The LISA contribution counts toward your overall £20,000 ISA allowance." },
               { question: "Do I pay any tax on ISA returns?", answer: "No. Zero. That's the whole point. Interest earned in a Cash ISA, dividends in a Stocks & Shares ISA, and capital gains when you sell investments — all completely tax-free. Outside an ISA, basic rate taxpayers get a £1,000 Personal Savings Allowance for interest and a £500 dividend allowance, but above those thresholds you're paying 20%+ tax. Higher rate taxpayers only get a £500 Personal Savings Allowance, making ISAs even more valuable." },

@@ -44,7 +44,7 @@ export default function ApyCalculator() {
   return (
     <>
       <SEO
-        title="APY Calculator UK 2025 — Convert APR to AER Instantly"
+        title="APY Calculator UK 2026 — Convert APR to AER Instantly"
         description="Free APY calculator to find your effective annual percentage yield based on nominal interest rate and compounding frequency."
         keywords="apy calculator, annual percentage yield calculator, apy vs apr, effective annual rate calculator"
         faqSchema={faqSchema}
@@ -84,7 +84,7 @@ export default function ApyCalculator() {
               style={{ background: ACCENT, top: "10%", left: "0" }}
             />
 
-            <h1 className="sr-only">APY Calculator UK 2025</h1>
+            <h1 className="sr-only">APY Calculator UK 2026</h1>
             <div aria-hidden="true" className="font-display leading-[0.85] tracking-tighter">
               <span
                 className="block text-[13vw] lg:text-[130px]"

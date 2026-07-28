@@ -13,14 +13,14 @@ export default function FixedVsTracker() {
   return (
     <>
       <SEO
-        title="Fixed vs Tracker Mortgage — Which Saves You More in 2025?"
+        title="Fixed vs Tracker Mortgage — Which Saves You More in 2026?"
         description="Fixed rate gives you certainty. Tracker gives you flexibility. The right answer depends on one thing: what you think rates will do next. Here's how to decide."
         keywords="fixed vs tracker mortgage, fixed rate mortgage uk, tracker mortgage uk, mortgage rates 2025, best mortgage type uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/fixed-vs-tracker-mortgage"
         faqSchema={faqs}
       />
       <BlogLayout
-        title="Fixed vs Tracker Mortgage — Which Saves You More in 2025?"
+        title="Fixed vs Tracker Mortgage — Which Saves You More in 2026?"
         subtitle="Certainty vs flexibility. The right answer depends on your situation — not just the rate."
         category="Mortgage"
         publishDate="April 2026"
@@ -64,7 +64,7 @@ export default function FixedVsTracker() {
 
         <p>If a £200/month payment increase would seriously stretch your finances, a fixed rate gives you protection that's worth paying for. If you have flexibility in your budget and think rates are heading down, a tracker could save you real money.</p>
 
-        <h2>What most buyers do in 2025</h2>
+        <h2>What most buyers do in 2026</h2>
 
         <p>The majority of UK buyers still choose fixed rates. The certainty is worth more than the potential saving — especially with mortgage payments already higher than they were three years ago.</p>
 

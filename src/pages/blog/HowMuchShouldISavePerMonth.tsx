@@ -14,7 +14,7 @@ export default function HowMuchShouldISavePerMonth() {
     <>
       <SEO
         title="How Much Should I Save Each Month in the UK?"
-        description="The benchmark is 20% of take-home pay. Here's how to hit it — emergency fund first, then investments, with the exact numbers for UK salaries in 2025."
+        description="The benchmark is 20% of take-home pay. Here's how to hit it — emergency fund first, then investments, with the exact numbers for UK salaries in 2026."
         keywords="how much should i save per month uk, uk savings benchmark, 50 30 20 rule uk, how much to save salary uk, monthly savings target"
         canonicalUrl="https://www.thecalculatorapp.org/blog/how-much-should-i-save-per-month"
         faqSchema={faqs}

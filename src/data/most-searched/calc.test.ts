@@ -8,8 +8,8 @@ import {
   creditCardPayoffMonths,
 } from './calc';
 
-describe('ukTakeHome (2025/26)', () => {
-  // Verified 2025/26: PA £12,570, 20%/40%/45% bands, NI 8%/2%
+describe('ukTakeHome (2026/27)', () => {
+  // Verified 2026/27: PA £12,570, 20%/40%/45% bands, NI 8%/2%
   it('£30,000 gross → £25,120 net', () => {
     expect(Math.round(ukTakeHome(30000).net)).toBe(25120);
   });

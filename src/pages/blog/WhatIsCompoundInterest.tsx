@@ -13,7 +13,7 @@ export default function WhatIsCompoundInterest() {
   return (
     <>
       <SEO
-        title="What Is Compound Interest? How It Works + Real Examples (2025)"
+        title="What Is Compound Interest? How It Works + Real Examples (2026)"
         description="Compound interest earns interest on interest — and over 30 years it turns £10,000 into £76,000. Here's how it works, the Rule of 72, and how to use it."
         keywords="what is compound interest, compound interest explained, compound interest formula, rule of 72, compound interest calculator uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-compound-interest"

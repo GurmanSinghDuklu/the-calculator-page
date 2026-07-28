@@ -3,7 +3,7 @@ import { SEO } from "@/components/SEO";
 
 const faqs = [
   { question: "What is VAT?", answer: "VAT (Value Added Tax) is a consumption tax charged on most goods and services sold in the UK. Businesses registered for VAT add it to their prices, collect it on behalf of HMRC, and pay it over quarterly. The standard rate is 20%. Consumers ultimately bear the cost — businesses act as tax collectors. VAT is the UK's third largest source of tax revenue, raising around £170 billion per year." },
-  { question: "What is the VAT threshold in 2025?", answer: "The VAT registration threshold is £90,000 in 2025/26. Businesses with taxable turnover above £90,000 in any 12-month rolling period must register for VAT within 30 days. Businesses below this threshold can register voluntarily, which allows them to reclaim VAT on purchases — beneficial if they have significant VAT-able costs or sell mainly to VAT-registered businesses." },
+  { question: "What is the VAT threshold in 2026?", answer: "The VAT registration threshold is £90,000 in 2026/27. Businesses with taxable turnover above £90,000 in any 12-month rolling period must register for VAT within 30 days. Businesses below this threshold can register voluntarily, which allows them to reclaim VAT on purchases — beneficial if they have significant VAT-able costs or sell mainly to VAT-registered businesses." },
   { question: "What are the UK VAT rates?", answer: "The UK has three VAT rates: Standard rate (20%) — applies to most goods and services. Reduced rate (5%) — applies to domestic energy, children's car seats, sanitary products, and some renovation work. Zero rate (0%) — applies to most food, children's clothing, books, newspapers, and public transport. Some things are VAT exempt (not the same as zero-rated) — including insurance, finance, education, and healthcare. Exempt supplies cannot reclaim VAT on costs, whereas zero-rated businesses can." },
   { question: "How do you calculate VAT?", answer: "To add 20% VAT: multiply the price by 1.20. £500 + VAT = £500 × 1.20 = £600. To find the VAT amount only: multiply by 0.20. VAT on £500 = £500 × 0.20 = £100. To remove VAT from a VAT-inclusive price: divide by 1.20. £600 inc VAT: £600 ÷ 1.20 = £500 ex-VAT. The VAT element is £100. For 5% VAT: multiply by 1.05 to add, divide by 1.05 to remove." },
   { question: "What is the difference between zero-rated and VAT exempt?", answer: "Zero-rated goods have a VAT rate of 0% — businesses selling them can still reclaim VAT on their own purchases (inputs). VAT-exempt goods and services fall outside the VAT system entirely — businesses making only exempt supplies generally cannot register for VAT or reclaim input VAT. Examples: zero-rated = food, books. Exempt = insurance, financial services, education. Partially exempt businesses have complex rules for reclaiming input VAT proportionally." },
@@ -13,7 +13,7 @@ export default function WhatIsVAT() {
   return (
     <>
       <SEO
-        title="What Is VAT? UK Rates, Threshold & How to Calculate It (2025)"
+        title="What Is VAT? UK Rates, Threshold & How to Calculate It (2026)"
         description="VAT is 20% on most UK goods and services. The registration threshold is £90,000. Here's how it works, the three rates, and how to add or remove VAT from any price."
         keywords="what is vat, vat uk, vat rates uk 2025, vat threshold 2025, how to calculate vat, add vat, remove vat"
         canonicalUrl="https://www.thecalculatorapp.org/blog/what-is-vat-uk"
@@ -82,7 +82,7 @@ export default function WhatIsVAT() {
 
         <h2>The VAT registration threshold</h2>
 
-        <p>In 2025/26, you must register for VAT if your taxable turnover exceeds <strong>£90,000</strong> in any rolling 12-month period. You must register within 30 days of exceeding the threshold and start charging VAT from the date you should have registered.</p>
+        <p>In 2026/27, you must register for VAT if your taxable turnover exceeds <strong>£90,000</strong> in any rolling 12-month period. You must register within 30 days of exceeding the threshold and start charging VAT from the date you should have registered.</p>
 
         <p>You can also register <strong>voluntarily</strong> if below the threshold. This makes sense if:</p>
         <ul>

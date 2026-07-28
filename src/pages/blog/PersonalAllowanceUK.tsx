@@ -2,11 +2,11 @@ import { BlogLayout } from "@/components/BlogLayout";
 import { SEO } from "@/components/SEO";
 
 const faqs = [
-  { question: "What is the personal allowance for 2025/26?", answer: "The personal allowance is £12,570 for 2025/26. This is the amount you can earn before paying any income tax. It has been frozen at this level since 2021 and is set to remain frozen until at least 2028." },
+  { question: "What is the personal allowance for 2026/27?", answer: "The personal allowance is £12,570 for 2026/27. This is the amount you can earn before paying any income tax. It has been frozen at this level since 2021 and is set to remain frozen until at least 2028." },
   { question: "Who loses their personal allowance?", answer: "Your personal allowance reduces by £1 for every £2 you earn over £100,000. It disappears completely at £125,140. So someone earning £110,000 has a personal allowance of £7,570 — not the full £12,570." },
   { question: "Does the personal allowance apply to all types of income?", answer: "Yes — the personal allowance applies to all taxable income including employment income, self-employment profits, rental income, and savings interest. However, different rules apply to savings interest (Personal Savings Allowance) and dividends (Dividend Allowance), which are separate allowances." },
   { question: "Can I transfer my personal allowance to my spouse?", answer: "The Marriage Allowance lets a lower-earning spouse transfer £1,260 of their personal allowance to their partner, saving up to £252 per year in tax. Both partners must be basic rate taxpayers. The transfer can be backdated up to 4 years." },
-  { question: "What is the blind person's allowance?", answer: "People registered as blind or severely sight impaired can claim an additional tax-free allowance of £3,070 in 2025/26, on top of the standard personal allowance." },
+  { question: "What is the blind person's allowance?", answer: "People registered as blind or severely sight impaired can claim an additional tax-free allowance of £3,070 in 2026/27, on top of the standard personal allowance." },
 ];
 
 export default function PersonalAllowanceUK() {
@@ -14,7 +14,7 @@ export default function PersonalAllowanceUK() {
     <>
       <SEO
         title="What Is the Personal Allowance and Who Loses It?"
-        description="The UK personal allowance is £12,570 in 2025/26. But earn over £100,000 and it starts disappearing — creating an effective 60% tax rate. Here's how it works."
+        description="The UK personal allowance is £12,570 in 2026/27. But earn over £100,000 and it starts disappearing — creating an effective 60% tax rate. Here's how it works."
         keywords="personal allowance uk 2025, personal allowance £12570, who loses personal allowance, personal allowance over 100k, marriage allowance uk"
         canonicalUrl="https://www.thecalculatorapp.org/blog/personal-allowance-uk"
         faqSchema={faqs}
@@ -26,20 +26,20 @@ export default function PersonalAllowanceUK() {
         publishDate="April 2026"
         readTime="3 min"
         heroImage="/og-image.png"
-        directAnswer="The UK personal allowance is £12,570 for 2025/26 — the amount you can earn before paying any income tax. If your income exceeds £100,000, you lose £1 of personal allowance for every £2 earned above that threshold. The allowance disappears entirely at £125,140, creating an effective marginal tax rate of 60% on income in that range."
+        directAnswer="The UK personal allowance is £12,570 for 2026/27 — the amount you can earn before paying any income tax. If your income exceeds £100,000, you lose £1 of personal allowance for every £2 earned above that threshold. The allowance disappears entirely at £125,140, creating an effective marginal tax rate of 60% on income in that range."
         hasPaidSection={false}
         relatedCalculators={[
           { label: "UK Salary Calculator", path: "/finance/salary" },
-          { label: "UK Tax Brackets 2025", path: "/blog/uk-tax-brackets-2025" },
+          { label: "UK Tax Brackets 2026/27", path: "/blog/uk-tax-brackets-2025" },
           { label: "Budget Calculator", path: "/finance/budget" },
         ]}
         relatedArticles={[
           { title: "UK Salary Calculator", description: "See exactly how the personal allowance affects your take-home pay.", url: "/finance/salary" },
-          { title: "UK Tax Brackets 2025/26", description: "The full breakdown of every income tax band.", url: "/blog/uk-tax-brackets-2025" },
-          { title: "National Insurance 2025", description: "The other deduction that comes straight out of your salary.", url: "/blog/national-insurance-2025" },
+          { title: "UK Tax Brackets 2026/27", description: "The full breakdown of every income tax band.", url: "/blog/uk-tax-brackets-2025" },
+          { title: "National Insurance 2026/27", description: "The other deduction that comes straight out of your salary.", url: "/blog/national-insurance-2025" },
         ]}
       >
-        <p>The personal allowance is the portion of your income you don't pay tax on. In 2025/26 it's <strong>£12,570</strong>. Earn less than that and you owe no income tax at all. Earn more and you pay tax only on the excess.</p>
+        <p>The personal allowance is the portion of your income you don't pay tax on. In 2026/27 it's <strong>£12,570</strong>. Earn less than that and you owe no income tax at all. Earn more and you pay tax only on the excess.</p>
 
         <p>Simple enough. Until you earn over £100,000.</p>
 

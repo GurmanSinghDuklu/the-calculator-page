@@ -156,7 +156,7 @@ export const seoData = {
     keywords: 'weight converter, kg to pounds, pounds to kg, stones to kg, grams to ounces, mass converter, weight conversion UK, lbs to kg, kilos to pounds, ounces to grams, weight units'
   },
   '/finance/stamp-duty': {
-    title: 'UK Stamp Duty Calculator 2025 - SDLT England & N. Ireland',
+    title: 'UK Stamp Duty Calculator 2026 - SDLT England & N. Ireland',
     description: 'Calculate Stamp Duty Land Tax (SDLT) for any UK property purchase. Covers first-time buyer relief, standard rates, second home surcharge, and buy-to-let properties.',
     keywords: 'stamp duty calculator 2025, SDLT calculator, UK stamp duty, first time buyer stamp duty relief, buy to let stamp duty, second home surcharge, property tax England'
   }
