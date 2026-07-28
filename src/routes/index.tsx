@@ -159,6 +159,8 @@ import PercentageCalculatorApp from '../pages/app/PercentageCalculatorApp';
 
 // Most Searched — Financial Edition
 import MostSearchedHub from '../pages/most-searched/MostSearchedHub';
+import ConverterValueRoute from '../pages/converters/ConverterValueRoute';
+import { getAllConverterValuePages } from '../data/converter-values';
 import AnswerPageRoute from '../pages/most-searched/AnswerPageRoute';
 import { getAllAnswerPages } from '../data/most-searched';
 
@@ -258,6 +260,14 @@ export const routes: RouteObject[] = [
       { path: 'converters/fahrenheit-to-celsius', element: <FahrenheitToCelsius /> },
       { path: 'converters/ounces-to-grams', element: <OuncesToGrams /> },
       { path: 'converters/teaspoons-to-ml', element: <TeaspoonsToMl /> },
+
+      // Programmatic per-value converter pages (seeded from GSC page-1 queries)
+      {
+        path: 'converters/:slug',
+        element: <ConverterValueRoute />,
+        getStaticPaths: () =>
+          getAllConverterValuePages().map((p) => `/converters/${p.slug}`),
+      } as RouteObject,
 
       // Learning Hub Routes
       { path: 'learn/compound-interest-formula', element: <CompoundInterestFormula /> },

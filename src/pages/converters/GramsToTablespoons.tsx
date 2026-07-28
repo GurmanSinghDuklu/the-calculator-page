@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, CookingPot } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -340,6 +341,7 @@ const GramsToTablespoons = () => {
           />
         </div>
 
+        <PopularConversions parentPath="/converters/grams-to-tablespoons" accent={ACCENT} />
         <FinancialDisclosure variant="general" />
 
         {/* Footer */}

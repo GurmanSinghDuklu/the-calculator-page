@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Droplets } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -339,6 +340,7 @@ const MlToOz = () => {
           />
         </div>
 
+        <PopularConversions parentPath="/converters/ml-to-oz" accent={ACCENT} />
         <FinancialDisclosure variant="general" />
 
         {/* Footer */}

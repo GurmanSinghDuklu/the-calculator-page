@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Ruler } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -319,6 +320,7 @@ const CmToInches = () => {
           />
         </div>
 
+        <PopularConversions parentPath="/converters/cm-to-inches" accent={ACCENT} />
         <FinancialDisclosure variant="general" />
 
         {/* Footer */}

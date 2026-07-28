@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SEO } from "@/components/SEO";
 import { CalculatorStaticContent } from "@/components/CalculatorStaticContent";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
+import { PopularConversions } from "@/components/PopularConversions";
 import { CopyButton } from "@/components/CopyButton";
 import { ArrowRight, Ruler } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -155,6 +156,7 @@ const MetresToFeet = () => {
             faqs={faqSchema}
           />
         </div>
+        <PopularConversions parentPath="/converters/metres-to-feet" accent={ACCENT} />
         <FinancialDisclosure variant="general" />
         <footer className="bg-black border-t border-white/10 py-8 px-6"><div className="max-w-7xl mx-auto flex justify-between items-center"><Logo size="sm" /><p className="text-xs text-gray-500 uppercase tracking-widest">&copy; 2026 The Calculator App.</p></div></footer>
       </div>
