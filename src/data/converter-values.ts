@@ -261,6 +261,90 @@ function gramsPage(g: number): ConverterValuePage {
   };
 }
 
+// ─── gallons → litres ─────────────────────────────────────────────────────────
+const LITRES_PER_US_GAL = 3.78541;
+const GAL_VALUES = [4.5, 20, 58, 62, 130, 145, 270, 20000];
+
+function gallonsPage(gal: number): ConverterValuePage {
+  const us = r(gal * LITRES_PER_US_GAL);
+  const uk = r(gal * 4.54609);
+  const slug = `${slugify(gal)}-gallons-to-litres`;
+  return {
+    slug,
+    title: `${gal} Gallons to Litres — ${us} L (US) / ${uk} L (UK)`,
+    description: `${gal} gallons is ${us} litres using US gallons, or ${uk} litres using UK (imperial) gallons. Both conversions with formula and comparison table.`,
+    h1: `${gal} Gallons to Litres`,
+    keywords: `${gal} gallons to litres, ${gal} gallons to liters, ${gal} gallon to litres, ${gal} gal to l`,
+    bigAnswer: `${us} L`,
+    answer: `${gal} gallons is ${us} litres using a US gallon (3.78541 L), or ${uk} litres using a UK imperial gallon (4.54609 L).`,
+    formula: `${gal} gal × 3.78541 = ${us} L (US)`,
+    extraResults: [
+      { label: "Litres (US gallon)", value: `${us} L` },
+      { label: "Litres (UK gallon)", value: `${uk} L` },
+      { label: "US fluid ounces", value: `${r(gal * 128, 1)} fl oz` },
+    ],
+    table: {
+      title: "Common gallons to litres conversions",
+      columns: ["Gallons", "Litres (US)", "Litres (UK)"],
+      rows: GAL_VALUES.map((v) => ({
+        label: `${v} gal`,
+        value: `${r(v * LITRES_PER_US_GAL)} / ${r(v * 4.54609)}`,
+        slug: v === gal ? undefined : `${slugify(v)}-gallons-to-litres`,
+      })),
+    },
+    faqs: [
+      { question: `Is ${gal} gallons the same in US and UK litres?`, answer: `No. ${gal} gallons is ${us} litres using a US gallon but ${uk} litres using a UK imperial gallon, because a UK gallon (4.54609 L) is larger than a US gallon (3.78541 L).` },
+      { question: "How do I convert gallons to litres?", answer: "Multiply US gallons by 3.78541 for litres, or multiply UK (imperial) gallons by 4.54609 for litres." },
+    ],
+    parentPath: "/converters/gallons-to-litres",
+    parentLabel: "Gallons to Litres Converter",
+    accent: "#0EA5E9",
+  };
+}
+
+// ─── lbs → kg ─────────────────────────────────────────────────────────────────
+const KG_PER_LB = 0.453592;
+const LBS_VALUES = [50.7, 154.3];
+
+function lbsPage(lbs: number): ConverterValuePage {
+  const kg = r(lbs * KG_PER_LB);
+  const stone = Math.floor(lbs / 14);
+  const stoneLbs = r(lbs - stone * 14, 1);
+  const slug = `${slugify(lbs)}-lbs-to-kg`;
+  return {
+    slug,
+    title: `${lbs} lbs to kg — ${kg} kg (${stone} st ${stoneLbs} lb)`,
+    description: `${lbs} pounds is ${kg} kilograms, or ${stone} stone ${stoneLbs} pounds. Exact lbs-to-kg conversion with formula and weight table.`,
+    h1: `${lbs} Pounds to Kilograms`,
+    keywords: `${lbs} lbs to kg, ${lbs} pounds to kg, ${lbs}lbs in kg, ${lbs} lb to kilograms`,
+    bigAnswer: `${kg} kg`,
+    answer: `${lbs} pounds is ${kg} kilograms, which is ${stone} stone ${stoneLbs} pounds. To convert, multiply pounds by 0.453592.`,
+    formula: `${lbs} lb × 0.453592 = ${kg} kg`,
+    extraResults: [
+      { label: "Kilograms", value: `${kg} kg` },
+      { label: "Stone & pounds", value: `${stone} st ${stoneLbs} lb` },
+      { label: "Grams", value: `${r(lbs * KG_PER_LB * 1000, 0)} g` },
+    ],
+    table: {
+      title: "Nearby weights",
+      columns: ["Pounds", "Kilograms", "Stone & lb"],
+      rows: LBS_VALUES.map((v) => {
+        const k = r(v * KG_PER_LB);
+        const st = Math.floor(v / 14);
+        const stLb = r(v - st * 14, 1);
+        return { label: `${v} lb`, value: `${k} kg (${st} st ${stLb} lb)`, slug: v === lbs ? undefined : `${slugify(v)}-lbs-to-kg` };
+      }),
+    },
+    faqs: [
+      { question: `How many kg is ${lbs} lbs?`, answer: `${lbs} pounds is ${kg} kilograms — that's ${stone} stone ${stoneLbs} pounds.` },
+      { question: "What is the lbs to kg formula?", answer: "Kilograms = pounds × 0.453592. One pound is defined as exactly 0.45359237 kilograms." },
+    ],
+    parentPath: "/converters/lbs-to-kg",
+    parentLabel: "Lbs to Kg Converter",
+    accent: "#EC4899",
+  };
+}
+
 // ─── Registry ─────────────────────────────────────────────────────────────────
 const pages: ConverterValuePage[] = [
   ...M_VALUES.map(metresPage),
@@ -268,6 +352,8 @@ const pages: ConverterValuePage[] = [
   ...OZ_VALUES.map(ozPage),
   ...CM_VALUES.map(cmPage),
   ...G_VALUES.map(gramsPage),
+  ...GAL_VALUES.map(gallonsPage),
+  ...LBS_VALUES.map(lbsPage),
 ];
 
 const bySlug = new Map(pages.map((p) => [p.slug, p]));
