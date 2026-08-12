@@ -205,9 +205,10 @@ const SEO = ({
       */}
       <link rel="canonical" href={cleanCanonical} data-rh="true" />
       
-      {/* Favicons (Using PNG as specified in your icons fix) */}
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/favicon.png" />
+      {/* Favicons — kept in sync with the static tags in index.html */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon-32.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
       {/* Social Meta Tags */}
       <meta property="og:site_name" content="The Calculator App" />
