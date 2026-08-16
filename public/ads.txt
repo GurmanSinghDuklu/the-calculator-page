@@ -1,0 +1,5 @@
+# Google AdSense authorized sellers.
+# TODO(owner): replace pub-XXXXXXXXXXXXXXXX with your real AdSense publisher
+# ID (the digits after "ca-pub-"), then this line authorizes Google to sell
+# ad inventory on this domain. AdSense will not serve ads until this is set.
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

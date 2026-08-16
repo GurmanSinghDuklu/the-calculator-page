@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HelpCircle, BookOpen, Calculator, CheckCircle, ChevronDown } from "lucide-react";
+import { AdUnit } from "@/components/ads/AdUnit";
 
 interface FAQ {
   question: string;
@@ -42,6 +43,10 @@ export const CalculatorStaticContent = ({
 
   return (
     <div className="mt-16 space-y-px border-t border-white/8 pt-16">
+
+      {/* In-content ad: below the calculator result, above the article body.
+          Renders nothing until AdSense is configured (see adsenseConfig.ts). */}
+      <AdUnit slot="calculatorInContent" className="!mt-0 !mb-10" />
 
       {/* ── What Is ── */}
       <section className="border border-white/8 bg-white/[0.015] px-6 py-6 mb-px">
