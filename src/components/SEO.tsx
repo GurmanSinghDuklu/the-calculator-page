@@ -89,14 +89,15 @@ const SEO = ({
   // Titles must stay under 70 chars (Bing/Google). No auto-suffix — each page's title is self-contained.
   const fullTitle = finalTitle;
 
-  // Author schema for E-E-A-T (YMYL financial content)
+  // Author schema for E-E-A-T (YMYL financial content).
+  // Organization, not Person — content is maintained by an editorial team,
+  // not attributed to a named individual.
   const authorSchema = {
-    "@type": "Person",
-    "name": "M Singh CeMAP DipFA",
-    "jobTitle": "Financial Coach & Calculator Developer",
-    "description": "Financial coach and calculator developer with 25+ years in UK financial services. Specialist in mortgage planning, salary optimisation, and investment strategy.",
+    "@type": "Organization",
+    "name": "The Calculator App Editorial Team",
+    "description": "Editorial team with 25+ years of combined UK financial services experience. Specialists in mortgage planning, salary optimisation, and investment strategy.",
     "url": `${siteUrl}/about`,
-    "worksFor": {
+    "parentOrganization": {
       "@type": "Organization",
       "name": "The Calculator App",
       "url": siteUrl

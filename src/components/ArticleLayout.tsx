@@ -37,7 +37,7 @@ export function ArticleLayout({
         "@type": "Article",
         headline: title,
         description,
-        author: { "@type": "Person", name: "M Singh CeMAP DipFA", jobTitle: "Financial Coach & Calculator Developer" },
+        author: { "@type": "Organization", name: "The Calculator App Editorial Team" },
         publisher: { "@type": "Organization", name: "The Calculator App", url: "https://www.thecalculatorapp.org" },
         datePublished: publishDate,
         dateModified: "2026-03-06",

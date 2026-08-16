@@ -23,8 +23,8 @@ export function AnswerPage({ page }: { page: AnswerPageData }) {
     .filter((p): p is AnswerPageData => Boolean(p));
 
   const author = {
-    "@type": "Person",
-    name: "M Singh CeMAP DipFA",
+    "@type": "Organization",
+    name: "The Calculator App Editorial Team",
     url: `${SITE}/about`,
   };
 
@@ -82,7 +82,7 @@ export function AnswerPage({ page }: { page: AnswerPageData }) {
         faqSchema={page.faqs.map((f) => ({ question: f.question, answer: f.answer }))}
         articleSchema={{
           headline: page.question,
-          author: "M Singh CeMAP DipFA",
+          author: "The Calculator App Editorial Team",
           datePublished: page.datePublished,
           dateModified: page.dateModified ?? page.datePublished,
         }}
@@ -113,7 +113,7 @@ export function AnswerPage({ page }: { page: AnswerPageData }) {
           <div className="flex flex-wrap items-center gap-4 mb-8 text-xs text-white/40">
             <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-accent-green" />
-              Verified by M Singh CeMAP DipFA
+              Verified by The Calculator App Editorial Team
             </span>
             <span className="flex items-center gap-1.5">
               <CalendarDays className="w-3.5 h-3.5" />

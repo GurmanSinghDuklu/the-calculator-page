@@ -119,7 +119,7 @@ export default function MortgageHub() {
         faqSchema={faqSchema}
         articleSchema={{
           headline: "UK Mortgage Calculators & Guides 2026",
-          author: "M Singh CeMAP DipFA",
+          author: "The Calculator App Editorial Team",
           datePublished: "2026-06-02",
           dateModified: "2026-06-02",
         }}
@@ -307,11 +307,11 @@ export default function MortgageHub() {
             <div>
               <p className="text-[9px] font-heading uppercase tracking-[0.25em] text-white/35 mb-2">About This Hub</p>
               <p className="text-sm text-white/55 font-sans leading-relaxed">
-                All calculators and content on this page are written and maintained by M Singh CeMAP DipFA, a mortgage adviser with 25+ years in UK financial services including senior roles at Lloyds Banking Group. Calculations are based on standard UK mortgage formulae and current regulatory frameworks. This is not financial advice — always speak with an FCA-regulated adviser before making mortgage decisions.
+                All calculators and content on this page are written and maintained by The Calculator App Editorial Team, drawing on 25+ years of combined UK financial services experience. Calculations are based on standard UK mortgage formulae and current regulatory frameworks. This is not financial advice — always speak with an FCA-regulated adviser before making mortgage decisions.
               </p>
               <div className="flex flex-wrap gap-4 mt-4">
                 <Link to="/about" className="text-[9px] font-heading uppercase tracking-widest text-white/30 hover:text-white transition-colors flex items-center gap-1">
-                  About the author <ArrowRight className="h-2.5 w-2.5" />
+                  About us <ArrowRight className="h-2.5 w-2.5" />
                 </Link>
                 <Link to="/disclaimer" className="text-[9px] font-heading uppercase tracking-widest text-white/30 hover:text-white transition-colors flex items-center gap-1">
                   Disclaimer <ArrowRight className="h-2.5 w-2.5" />

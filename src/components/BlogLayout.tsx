@@ -60,7 +60,7 @@ export const BlogLayout = ({
         type="article"
         articleSchema={{
           headline: title,
-          author: "M Singh CeMAP DipFA",
+          author: "The Calculator App Editorial Team",
           datePublished: "2026-04-13",
           dateModified: "2026-04-15",
           image: "https://www.thecalculatorapp.org/og-image.png",

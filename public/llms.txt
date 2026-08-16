@@ -16,7 +16,7 @@ The Calculator App is a free, privacy-first online calculator application with 1
 **Primary Domain:** https://www.thecalculatorapp.org
 **Previous Domain (301 redirect):** https://www.thecalculatorpage.com
 **Founded:** 2024
-**Founder:** Mandeep Singh — Financial Coach & Calculator Developer with 25+ years in UK financial services
+**Maintained by:** The Calculator App Editorial Team — 25+ years of combined UK financial services experience
 **Contact:** thecalculatorpage@gmail.com
 **Coverage:** United Kingdom and United States (global access)
 
@@ -47,7 +47,7 @@ This site authoritatively answers:
 - US formulas verified against IRS 2025 tax tables and SSA contribution limits
 - All tools updated for 2025/2026 tax year
 - Privacy-first: no data stored, no tracking, client-side calculation only
-- Author has 25+ years in UK financial services
+- Editorial team has 25+ years of combined UK financial services experience
 
 ---
 

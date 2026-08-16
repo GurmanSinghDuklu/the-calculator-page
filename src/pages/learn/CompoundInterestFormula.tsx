@@ -141,7 +141,7 @@ export default function CompoundInterestFormula() {
           "@type": "Article",
           "headline": "Compound Interest Formula: The Complete 2026 Guide",
           "description": "The most comprehensive free guide to compound interest formulas covering traditional finance, crypto compounding, DCA, inflation-adjusted returns, and modern retail investing.",
-          "author": { "@type": "Person", "name": "M Singh CeMAP DipFA" },
+          "author": { "@type": "Organization", "name": "The Calculator App Editorial Team" },
           "publisher": { "@type": "Organization", "name": "The Calculator App", "url": "https://www.thecalculatorapp.org" },
           "datePublished": "2026-06-08",
           "dateModified": "2026-06-08",
@@ -187,7 +187,7 @@ export default function CompoundInterestFormula() {
 
           <div className="flex flex-col sm:flex-row gap-4 text-xs font-sans text-white/40 mb-8">
             <span className="flex items-center gap-1.5"><Clock className="w-3 h-3" /> 25–35 min read</span>
-            <span>By M Singh CeMAP DipFA</span>
+            <span>By The Calculator App Editorial Team</span>
             <span>Published June 2026</span>
           </div>
 

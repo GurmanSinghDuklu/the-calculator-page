@@ -29,7 +29,7 @@ export default function UkFinanceStats() {
         type="article"
         articleSchema={{
           headline: "UK Personal Finance Statistics 2026 — 50+ Key Facts",
-          author: "M Singh CeMAP DipFA",
+          author: "The Calculator App Editorial Team",
           datePublished: "2026-04-05",
           dateModified: "2026-04-05",
         }}
@@ -179,8 +179,8 @@ export default function UkFinanceStats() {
           All statistics are sourced from official UK government bodies, the Bank of England, the Office for
           National Statistics (ONS), the Financial Conduct Authority (FCA), and established industry sources.
           Where exact 2026 figures are not yet published, we use the most recent available data and note the
-          source year. This page is reviewed and updated quarterly by M Singh CeMAP DipFA, 25+ years UK financial services
-          mortgage adviser with 25+ years in UK financial services.
+          source year. This page is reviewed and updated quarterly by The Calculator App Editorial Team, drawing on
+          25+ years of combined UK financial services experience.
         </p>
         <p>
           <strong>Last updated:</strong> April 2026. <strong>Next review:</strong> July 2026.
