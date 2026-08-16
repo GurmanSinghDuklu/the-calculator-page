@@ -10,7 +10,7 @@
 //   - public/ads.txt
 // Search the repo for ADSENSE_CLIENT_ID_PLACEHOLDER to find every spot.
 
-export const ADSENSE_CLIENT_ID = "ADSENSE_CLIENT_ID_PLACEHOLDER"; // e.g. "ca-pub-1234567890123456"
+export const ADSENSE_CLIENT_ID = "ca-pub-8712184384438047";
 
 /** True once a real publisher ID has been filled in. Guards all rendering. */
 export const ADSENSE_ENABLED =
@@ -24,3 +24,7 @@ export const AD_SLOTS = {
 } as const;
 
 export type AdSlotName = keyof typeof AD_SLOTS;
+
+/** A slot is live only once its placeholder is replaced by a numeric AdSense slot ID. */
+export const isSlotConfigured = (name: AdSlotName): boolean =>
+  /^\d+$/.test(AD_SLOTS[name]);

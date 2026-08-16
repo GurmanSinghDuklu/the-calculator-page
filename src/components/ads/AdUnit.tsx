@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ADSENSE_CLIENT_ID, ADSENSE_ENABLED, AD_SLOTS, AdSlotName } from "./adsenseConfig";
+import { ADSENSE_CLIENT_ID, ADSENSE_ENABLED, AD_SLOTS, AdSlotName, isSlotConfigured } from "./adsenseConfig";
 
 declare global {
   interface Window {
@@ -25,9 +25,10 @@ interface AdUnitProps {
  */
 export const AdUnit = ({ slot, label = "Advertisement", className = "" }: AdUnitProps) => {
   const pushed = useRef(false);
+  const live = ADSENSE_ENABLED && isSlotConfigured(slot);
 
   useEffect(() => {
-    if (!ADSENSE_ENABLED || pushed.current || typeof window === "undefined") return;
+    if (!live || pushed.current || typeof window === "undefined") return;
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
       pushed.current = true;
@@ -36,8 +37,9 @@ export const AdUnit = ({ slot, label = "Advertisement", className = "" }: AdUnit
     }
   }, []);
 
-  // Before approval, or during SSG, render nothing so there's no empty box.
-  if (!ADSENSE_ENABLED) return null;
+  // Render nothing until this slot has a real numeric ID (and during SSG),
+  // so no empty/broken ad frame ships while the site is under AdSense review.
+  if (!live) return null;
 
   return (
     <div className={`my-10 ${className}`}>
