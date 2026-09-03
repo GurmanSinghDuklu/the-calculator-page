@@ -20,7 +20,7 @@ export const ADSENSE_ENABLED =
 // Keeping them named (not scattered magic numbers) means one place to manage.
 export const AD_SLOTS = {
   /** In-content responsive unit shown below each calculator, above the article body. */
-  calculatorInContent: "AD_SLOT_CALCULATOR_INCONTENT",
+  calculatorInContent: "9489053727",
 } as const;
 
 export type AdSlotName = keyof typeof AD_SLOTS;
