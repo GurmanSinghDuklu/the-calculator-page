@@ -90,15 +90,25 @@ const FINANCE_CARDS = [
     ],
   },
   {
-    title: "Mortgage Payment",
+    title: "Mortgage Payment — UK (Principal & Interest)",
+    formulas: [{ formula: "M = L × [r(1 + r)^n] / [(1 + r)^n - 1]" }],
+    variables: [
+      { name: "M", desc: "Monthly repayment (P&I only — no escrow in UK mortgages)" },
+      { name: "L", desc: "Loan amount (price − deposit)" },
+      { name: "r", desc: "Monthly interest rate" },
+      { name: "n", desc: "Total payments (years × 12)" },
+    ],
+  },
+  {
+    title: "Mortgage Payment — US (PITI)",
     formulas: [{ formula: "M = L × [r(1 + r)^n] / [(1 + r)^n - 1] + T/12 + I/12" }],
     variables: [
-      { name: "M", desc: "Total monthly payment" },
+      { name: "M", desc: "Total monthly payment, incl. escrowed tax & insurance" },
       { name: "L", desc: "Loan amount (price − down payment)" },
       { name: "r", desc: "Monthly interest rate" },
       { name: "n", desc: "Total payments (years × 12)" },
-      { name: "T", desc: "Annual property tax" },
-      { name: "I", desc: "Annual home insurance" },
+      { name: "T", desc: "Annual property tax, escrowed by the lender" },
+      { name: "I", desc: "Annual home insurance, escrowed by the lender" },
     ],
   },
   {

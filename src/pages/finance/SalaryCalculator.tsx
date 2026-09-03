@@ -40,7 +40,7 @@ function calculateUKTax(annualSalary: number) {
   if (taxableIncome > (ukHigherRateThreshold - ukPersonalAllowance)) incomeTax += (taxableIncome - (ukHigherRateThreshold - ukPersonalAllowance)) * 0.45;
   let nationalInsurance = 0;
   if (annualSalary > 12570) {
-    nationalInsurance += Math.min(annualSalary - 12570, 50270 - 12570) * 0.12;
+    nationalInsurance += Math.min(annualSalary - 12570, 50270 - 12570) * 0.08;
     if (annualSalary > 50270) nationalInsurance += (annualSalary - 50270) * 0.02;
   }
   return { incomeTax, socialTax: nationalInsurance, socialTaxLabel: "National Insurance", federalTax: undefined, stateTax: undefined };
@@ -279,7 +279,7 @@ const SalaryCalculator = () => {
                 {/* UK-specific */}
                 {country === "UK" && (
                   <div>
-                    <label className={labelClass}>Tax Code (2024/25)</label>
+                    <label className={labelClass}>Tax Code (2026/27)</label>
                     <input
                       type="text" value={taxCode} onChange={e => setTaxCode(e.target.value)} placeholder="1257L"
                       className="w-full bg-black/40 border border-white/10 rounded-lg px-4 py-4 text-white text-lg font-medium focus:outline-none transition-all"
@@ -330,7 +330,7 @@ const SalaryCalculator = () => {
                 {/* Info about tax rates */}
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-[9px] font-heading uppercase tracking-widest text-white/25 mb-3">
-                    {country === "UK" ? "UK Tax Rates 2024/25" : "US Tax Rates 2024"}
+                    {country === "UK" ? "UK Tax Rates 2026/27" : "US Tax Rates 2025"}
                   </p>
                   {country === "UK" ? (
                     <ul className="text-[10px] text-white/20 font-sans space-y-1">
@@ -338,7 +338,7 @@ const SalaryCalculator = () => {
                       <li>Basic Rate 20%: £12,571–£50,270</li>
                       <li>Higher Rate 40%: £50,271–£125,140</li>
                       <li>Additional Rate 45%: Over £125,140</li>
-                      <li>NI: 12% on £12,571–£50,270, then 2%</li>
+                      <li>NI: 8% on £12,571–£50,270, then 2%</li>
                     </ul>
                   ) : (
                     <ul className="text-[10px] text-white/20 font-sans space-y-1">

@@ -128,21 +128,27 @@ export default function CalculatorFormulasGuide() {
 
       {/* ── 3. Mortgage ── */}
       <h2 id="mortgage">3. Mortgage Payment Formula</h2>
-      <p>Mortgages include principal, interest, property taxes, and insurance (PITI). Understanding this helps you determine what home you can truly afford.</p>
-      <FormulaBox>M = L × [r(1 + r)^n] / [(1 + r)^n - 1] + T/12 + I/12</FormulaBox>
+      <p>
+        Mortgage cost structure differs by country. <strong>US mortgages</strong> typically bundle principal, interest,
+        property taxes, and homeowners insurance into one monthly payment (PITI) via an escrow account.
+        <strong> UK mortgages</strong> do not — a UK mortgage payment covers principal and interest (P&I) only; council tax
+        and buildings insurance are paid separately by the homeowner, not collected by the lender. The UK mortgage
+        calculator on this site uses the P&I-only repayment formula below, without the PITI additions.
+      </p>
 
-      <h3>Variable Breakdown:</h3>
+      <h3>🇺🇸 US: PITI (Principal, Interest, Taxes, Insurance)</h3>
+      <FormulaBox>M = L × [r(1 + r)^n] / [(1 + r)^n - 1] + T/12 + I/12</FormulaBox>
       <ul>
         <li><strong>M:</strong> Total monthly payment</li>
         <li><strong>L (Loan Amount):</strong> Home price minus down payment</li>
         <li><strong>r:</strong> Monthly interest rate (annual rate ÷ 12)</li>
         <li><strong>n:</strong> Loan term in months (30 years = 360)</li>
-        <li><strong>T:</strong> Annual property tax</li>
-        <li><strong>I:</strong> Annual homeowners insurance</li>
+        <li><strong>T:</strong> Annual property tax, escrowed by the lender</li>
+        <li><strong>I:</strong> Annual homeowners insurance, escrowed by the lender</li>
       </ul>
 
       <ExampleCard color={CARD_COLORS.mortgage}>
-        <ExLabel color={CARD_COLORS.mortgage}>Complete Example</ExLabel>
+        <ExLabel color={CARD_COLORS.mortgage}>US Example</ExLabel>
         <p className="text-zinc-500 text-sm mb-3">Buying a <strong className="text-zinc-300">$400,000</strong> home, 20% down, 7% APR, 30 years:</p>
         <ExMono>
           <div>P&I: 320,000 × [0.00583(1.00583)^360] / [(1.00583)^360 - 1] = $2,129</div>
@@ -150,6 +156,21 @@ export default function CalculatorFormulasGuide() {
           <div>Insurance: $1,800 ÷ 12 = $150</div>
         </ExMono>
         <p className="font-heading text-sm uppercase tracking-widest mt-3" style={{ color: CARD_COLORS.mortgage }}>Total Monthly Payment: $2,779</p>
+      </ExampleCard>
+
+      <h3>🇬🇧 UK: Principal & Interest only</h3>
+      <FormulaBox>M = L × [r(1 + r)^n] / [(1 + r)^n - 1]</FormulaBox>
+      <p className="text-zinc-500 text-sm">
+        Same formula, without the tax/insurance terms — because a UK mortgage lender doesn't collect either. Use the{" "}
+        <Link to="/finance/mortgage" className="underline">UK Mortgage Calculator</Link> for repayments, and the{" "}
+        <Link to="/finance/stamp-duty" className="underline">Stamp Duty Calculator</Link> and separate home/contents
+        insurance quotes for the costs a US PITI figure would otherwise bundle in.
+      </p>
+      <ExampleCard color={CARD_COLORS.mortgage}>
+        <ExLabel color={CARD_COLORS.mortgage}>UK Example</ExLabel>
+        <p className="text-zinc-500 text-sm mb-3">£320,000 loan, 5.5% interest, 25-year term:</p>
+        <ExMono>M = 320,000 × [0.00458(1.00458)^300] / [(1.00458)^300 - 1] = £1,965</ExMono>
+        <p className="font-heading text-sm uppercase tracking-widest mt-3" style={{ color: CARD_COLORS.mortgage }}>Monthly Repayment: £1,965 (P&I only)</p>
       </ExampleCard>
 
       {/* ── 4. APY ── */}
