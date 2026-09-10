@@ -1,2 +1,3 @@
-# Google AdSense authorized sellers.
-google.com, pub-8712184384438047, DIRECT, f08c47fec0942fa0
+# AdSense removed 2026-09-10 while investigating a suspected link between
+# Auto ads and a site-wide GSC impressions collapse. Publisher ID was
+# pub-8712184384438047 — restore this line if/when ads are reactivated.

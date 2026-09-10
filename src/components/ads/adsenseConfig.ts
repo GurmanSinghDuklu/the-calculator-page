@@ -1,16 +1,22 @@
 // AdSense configuration.
 //
-// TODO(owner): after AdSense approval, replace CLIENT_ID with your real
-// publisher ID (looks like "ca-pub-XXXXXXXXXXXXXXXX") and create ad units in
-// the AdSense dashboard, pasting each unit's slot ID below. Until a real
-// CLIENT_ID is set, ad components render nothing (no broken/empty ad boxes).
+// ADS ARE FULLY DISABLED as of 2026-09-10. Auto ads was strongly suspected
+// (never conclusively confirmed by Google) of causing a ~98% site-wide GSC
+// impressions collapse starting 2026-08-18. Auto ads was switched off in
+// the dashboard on 2026-09-03; impressions had not clearly recovered by
+// 2026-09-10, and the owner decided the ad revenue isn't worth the risk
+// while the site is still recovering. See memory: gsc-impressions-drop-watch.
 //
-// The same CLIENT_ID must also be set in:
-//   - index.html (the loader <script>)
-//   - public/ads.txt
-// Search the repo for ADSENSE_CLIENT_ID_PLACEHOLDER to find every spot.
+// The publisher ID is kept here (commented) for whenever ads are revisited —
+// the account itself is paused/units removed in the AdSense dashboard, not
+// deleted, but the loader script has been removed from index.html entirely
+// so nothing Google-ad-related loads on the page at all right now.
+//
+// To re-enable in future: restore the loader script in index.html, set a
+// real ADSENSE_CLIENT_ID below, create/paste a real ad unit slot ID into
+// AD_SLOTS, and re-add the line to public/ads.txt.
 
-export const ADSENSE_CLIENT_ID = "ca-pub-8712184384438047";
+export const ADSENSE_CLIENT_ID = "ADSENSE_CLIENT_ID_PLACEHOLDER"; // was ca-pub-8712184384438047
 
 /** True once a real publisher ID has been filled in. Guards all rendering. */
 export const ADSENSE_ENABLED =
@@ -20,7 +26,7 @@ export const ADSENSE_ENABLED =
 // Keeping them named (not scattered magic numbers) means one place to manage.
 export const AD_SLOTS = {
   /** In-content responsive unit shown below each calculator, above the article body. */
-  calculatorInContent: "9489053727",
+  calculatorInContent: "AD_SLOT_CALCULATOR_INCONTENT", // was "9489053727"
 } as const;
 
 export type AdSlotName = keyof typeof AD_SLOTS;
