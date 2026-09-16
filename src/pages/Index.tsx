@@ -1,4 +1,4 @@
-import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2 } from "lucide-react";
+import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2, GraduationCap, Sparkles } from "lucide-react";
 import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { getByMarket } from "@/data/most-searched";
@@ -53,6 +53,7 @@ const Index = () => {
     { title: "ISA Calculator", path: "/finance/isa-calculator" },
     { title: "Capital Gains Tax", path: "/finance/capital-gains-tax" },
     { title: "Inheritance Tax", path: "/finance/inheritance-tax" },
+    { title: "RAP Calculator", path: "/finance/rap-calculator" },
   ];
 
   const miscCalculators = [
@@ -110,9 +111,10 @@ const Index = () => {
     { title: "Capital Gains Tax", path: "/finance/capital-gains-tax", desc: "CGT on UK assets and investments" },
     { title: "Inheritance Tax", path: "/finance/inheritance-tax", desc: "IHT thresholds and liability" },
     { title: "Retirement Calculator", path: "/finance/retirement", desc: "Plan pension and retirement income" },
-    { title: "US Salary Calculator", path: "/finance/us-salary", desc: "Federal tax, FICA and state tax" },
+    { title: "US Salary Calculator", path: "/finance/us-salary-calculator", desc: "Federal tax, FICA and state tax" },
     { title: "Credit Card Payoff", path: "/finance/credit-card-payoff", desc: "Time and cost to clear card debt" },
     { title: "IRR Calculator", path: "/finance/irr", desc: "Internal rate of return on projects" },
+    { title: "RAP Calculator", path: "/finance/rap-calculator", desc: "US student loan Repayment Assistance Plan" },
   ];
 
   const allMiscCalcs = [
@@ -291,6 +293,36 @@ const Index = () => {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* New calculator callout — above Featured Tools, above the fold */}
+      <section className="pt-10 px-6">
+        <div className="max-w-7xl mx-auto">
+          <Link
+            to="/finance/rap-calculator"
+            className="group flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 bg-gradient-to-r from-accent-blue/10 to-transparent border border-accent-blue/30 hover:border-accent-blue/60 rounded-xl px-6 py-5 transition-all"
+          >
+            <div className="flex items-center gap-3 shrink-0">
+              <div className="p-2.5 rounded-lg bg-accent-blue/15 text-accent-blue">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <Badge className="bg-accent-blue text-white text-[9px] font-bold uppercase rounded-none flex items-center gap-1">
+                <Sparkles className="h-2.5 w-2.5" /> New
+              </Badge>
+            </div>
+            <div className="flex-1">
+              <h2 className="font-display text-xl md:text-2xl uppercase text-white tracking-tight">
+                RAP Calculator — US Student Loan Repayment
+              </h2>
+              <p className="text-sm text-gray-400 font-sans mt-1">
+                The Repayment Assistance Plan replaced SAVE on 1 July 2026. Estimate your payment, forgiveness date and the tax on any balance written off.
+              </p>
+            </div>
+            <div className="flex items-center gap-1 text-xs font-heading uppercase tracking-widest text-accent-blue shrink-0 group-hover:translate-x-1 transition-transform">
+              Calculate <ChevronRight className="h-3.5 w-3.5" />
+            </div>
+          </Link>
         </div>
       </section>
 
