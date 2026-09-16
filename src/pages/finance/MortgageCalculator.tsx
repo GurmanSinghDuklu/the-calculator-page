@@ -21,7 +21,11 @@ interface MortgagePart {
   rate: string;
   termYears: string;
   termMonths: string;
+  /** Repayment = capital + interest. Interest-only = interest only, capital repaid at term end. */
+  repaymentType: RepaymentType;
 }
+
+type RepaymentType = "repayment" | "interestOnly";
 
 interface PartResult {
   id: number;
@@ -31,6 +35,9 @@ interface PartResult {
   totalPayment: number;
   totalInterest: number;
   termMonths: number;
+  repaymentType: RepaymentType;
+  /** Capital still outstanding at end of term — 0 for repayment, full loan for interest-only. */
+  balloonAmount: number;
   schedule: ScheduleRow[];
 }
 
@@ -43,9 +50,33 @@ interface ScheduleRow {
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
-function calcPart(amount: number, annualRate: number, totalMonths: number): { monthly: number; schedule: ScheduleRow[] } {
+function calcPart(
+  amount: number,
+  annualRate: number,
+  totalMonths: number,
+  repaymentType: RepaymentType = "repayment",
+): { monthly: number; schedule: ScheduleRow[] } {
   if (totalMonths <= 0 || amount <= 0) return { monthly: 0, schedule: [] };
   const r = annualRate / 100 / 12;
+
+  // Interest-only: pay the interest each month, capital is untouched and stays
+  // outstanding in full until the end of the term (when it must be repaid by
+  // some other means — sale, endowment, savings). No amortisation at all.
+  if (repaymentType === "interestOnly") {
+    const monthlyInterest = amount * r;
+    const schedule: ScheduleRow[] = [];
+    for (let m = 1; m <= totalMonths; m++) {
+      schedule.push({
+        month: m,
+        payment: Math.round(monthlyInterest * 100) / 100,
+        principal: 0,
+        interest: Math.round(monthlyInterest * 100) / 100,
+        balance: Math.round(amount * 100) / 100, // balance never reduces
+      });
+    }
+    return { monthly: Math.round(monthlyInterest * 100) / 100, schedule };
+  }
+
   const monthly = r === 0
     ? amount / totalMonths
     : (amount * r * Math.pow(1 + r, totalMonths)) / (Math.pow(1 + r, totalMonths) - 1);
@@ -91,7 +122,7 @@ const MortgageCalculator = () => {
   const [currency, setCurrency] = useState<Currency>("GBP");
   const [houseValuation, setHouseValuation] = useState("350000");
   const [parts, setParts] = useState<MortgagePart[]>([
-    { id: 1, label: "Part 1", amount: "280000", rate: "4.5", termYears: "25", termMonths: "0" },
+    { id: 1, label: "Part 1", amount: "280000", rate: "4.5", termYears: "25", termMonths: "0", repaymentType: "repayment" },
   ]);
   const [results, setResults] = useState<PartResult[] | null>(null);
   const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
@@ -150,6 +181,7 @@ const MortgageCalculator = () => {
       rate: "5.5",
       termYears: "20",
       termMonths: "0",
+      repaymentType: "repayment",
     }]);
   };
 
@@ -160,6 +192,10 @@ const MortgageCalculator = () => {
 
   const updatePart = (id: number, field: keyof MortgagePart, value: string) => {
     setParts(prev => prev.map(p => p.id === id ? { ...p, [field]: value } : p));
+  };
+
+  const setRepaymentType = (id: number, value: RepaymentType) => {
+    setParts(prev => prev.map(p => p.id === id ? { ...p, repaymentType: value } : p));
   };
 
   // ── Calculate ──────────────────────────────────────────────────────────────
@@ -178,9 +214,14 @@ const MortgageCalculator = () => {
       if (totalMonths < 1) { toast.error(`${p.label}: term must be at least 1 month`); return; }
       if (amount > 100_000_000) { toast.error(`${p.label}: amount seems too large`); return; }
 
-      const { monthly, schedule } = calcPart(amount, rate, totalMonths);
+      const { monthly, schedule } = calcPart(amount, rate, totalMonths, p.repaymentType);
       const totalPayment = schedule.reduce((s, r) => s + r.payment, 0);
-      const totalInterest = Math.round((totalPayment - amount) * 100) / 100;
+      // On interest-only every payment IS interest, and the capital is still
+      // owed at the end — so total interest is the payments themselves, not
+      // payments minus capital (which would wrongly subtract money never repaid).
+      const totalInterest = p.repaymentType === "interestOnly"
+        ? Math.round(totalPayment * 100) / 100
+        : Math.round((totalPayment - amount) * 100) / 100;
 
       partResults.push({
         id: p.id,
@@ -190,6 +231,8 @@ const MortgageCalculator = () => {
         totalPayment: Math.round(totalPayment * 100) / 100,
         totalInterest,
         termMonths: totalMonths,
+        repaymentType: p.repaymentType,
+        balloonAmount: p.repaymentType === "interestOnly" ? amount : 0,
         schedule,
       });
     }
@@ -202,6 +245,7 @@ const MortgageCalculator = () => {
   const totalMonthly = results ? results.reduce((s, r) => s + r.monthlyPayment, 0) : 0;
   const totalInterest = results ? results.reduce((s, r) => s + r.totalInterest, 0) : 0;
   const totalRepayment = results ? results.reduce((s, r) => s + r.totalPayment, 0) : 0;
+  const totalBalloon = results ? results.reduce((s, r) => s + r.balloonAmount, 0) : 0;
   const maxTerm = results ? Math.max(...results.map(r => r.termMonths)) : 0;
 
   // ── Combined schedule (all parts, month by month up to longest term) ───────
@@ -304,13 +348,16 @@ const MortgageCalculator = () => {
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-2 h-2 rounded-full" style={{ background: partColors[i] }} />
                       <p className="text-[10px] font-heading uppercase tracking-widest" style={{ color: partColors[i] }}>{r.label}</p>
+                      <span className="text-[8px] font-heading uppercase tracking-widest px-1.5 py-0.5 rounded border border-white/10 text-white/40">
+                        {r.repaymentType === "interestOnly" ? "Interest Only" : "Repayment"}
+                      </span>
                     </div>
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       {[
                         { l: "Monthly", v: `${sym}${r.monthlyPayment.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` },
                         { l: "Borrowed", v: `${sym}${r.loanAmount.toLocaleString()}` },
                         { l: "Total Interest", v: `${sym}${r.totalInterest.toLocaleString()}` },
-                        { l: "Total Repayment", v: `${sym}${r.totalPayment.toLocaleString()}` },
+                        { l: r.repaymentType === "interestOnly" ? "Total Paid" : "Total Repayment", v: `${sym}${r.totalPayment.toLocaleString()}` },
                       ].map(({ l, v }) => (
                         <div key={l}>
                           <p className="text-white/30 font-heading uppercase tracking-widest text-[8px]">{l}</p>
@@ -318,6 +365,12 @@ const MortgageCalculator = () => {
                         </div>
                       ))}
                     </div>
+                    {r.repaymentType === "interestOnly" && (
+                      <div className="mt-3 pt-3 border-t border-white/8">
+                        <p className="text-[8px] font-heading uppercase tracking-widest text-amber-400/70 mb-1">Capital Still Owed At End Of Term</p>
+                        <p className="font-display text-xl text-amber-400">{sym}{r.balloonAmount.toLocaleString()}</p>
+                      </div>
+                    )}
                   </div>
                 ))}
 
@@ -326,7 +379,7 @@ const MortgageCalculator = () => {
                   {[
                     { l: "Total Borrowed", v: `${sym}${results.reduce((s, r) => s + r.loanAmount, 0).toLocaleString()}` },
                     { l: "Total Interest", v: `${sym}${Math.round(totalInterest).toLocaleString()}` },
-                    { l: "Total Repayment", v: `${sym}${Math.round(totalRepayment).toLocaleString()}` },
+                    { l: "Total Paid", v: `${sym}${Math.round(totalRepayment).toLocaleString()}` },
                     { l: "LTV Ratio", v: ltv ? `${ltv}%` : "—" },
                   ].map(({ l, v }) => (
                     <div key={l} className="bg-white/[0.03] border border-white/8 rounded-lg p-3">
@@ -336,10 +389,29 @@ const MortgageCalculator = () => {
                   ))}
                 </div>
 
+                {totalBalloon > 0 && (
+                  <div className="bg-amber-500/[0.07] border border-amber-500/25 rounded-xl p-4">
+                    <p className="text-[9px] font-heading uppercase tracking-widest text-amber-400/80 mb-1">
+                      Capital Outstanding At End Of Term
+                    </p>
+                    <p className="font-display text-3xl text-amber-400 mb-2">
+                      {sym}{totalBalloon.toLocaleString()}
+                    </p>
+                    <p className="text-[11px] text-white/45 font-sans leading-relaxed">
+                      Interest-only payments do not reduce the amount you borrowed. You will still owe this in full
+                      when the term ends, and will need a separate plan to repay it — savings, investments, or selling
+                      the property.
+                    </p>
+                  </div>
+                )}
+
                 <CopyButton accentColor={ACCENT} results={[
                   { label: "Total Monthly Payment", value: `${sym}${totalMonthly.toFixed(2)}` },
-                  { label: "Total Repayment", value: `${sym}${totalRepayment.toFixed(2)}` },
+                  { label: "Total Paid", value: `${sym}${totalRepayment.toFixed(2)}` },
                   { label: "Total Interest", value: `${sym}${totalInterest.toFixed(2)}` },
+                  ...(totalBalloon > 0
+                    ? [{ label: "Capital Outstanding At End Of Term", value: `${sym}${totalBalloon.toFixed(2)}` }]
+                    : []),
                 ]} />
 
                 {/* Toggle breakdown */}
@@ -408,6 +480,40 @@ const MortgageCalculator = () => {
                 </div>
 
                 <div className="space-y-4">
+                  {/* Repayment type switch */}
+                  <div>
+                    <label className={labelClass}>Repayment Type</label>
+                    <div className="grid grid-cols-2 gap-2 p-1 bg-black/40 border border-white/10 rounded-lg">
+                      {([
+                        { key: "repayment" as const, label: "Repayment" },
+                        { key: "interestOnly" as const, label: "Interest Only" },
+                      ]).map(opt => {
+                        const active = part.repaymentType === opt.key;
+                        return (
+                          <button
+                            key={opt.key}
+                            type="button"
+                            onClick={() => setRepaymentType(part.id, opt.key)}
+                            aria-pressed={active}
+                            className="py-2.5 px-3 rounded-md font-heading text-[11px] uppercase tracking-widest transition-all"
+                            style={{
+                              background: active ? `${partColors[idx]}22` : "transparent",
+                              color: active ? partColors[idx] : "rgba(255,255,255,0.35)",
+                              boxShadow: active ? `inset 0 0 0 1px ${partColors[idx]}55` : "none",
+                            }}
+                          >
+                            {opt.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    <p className="text-[10px] text-white/25 font-sans mt-1.5 leading-relaxed">
+                      {part.repaymentType === "interestOnly"
+                        ? "You pay only the interest each month. The full capital is still owed at the end of the term."
+                        : "Capital and interest — the balance reduces to zero by the end of the term."}
+                    </p>
+                  </div>
+
                   {/* Mortgage Amount */}
                   <div>
                     <label className={labelClass}>Mortgage Amount ({sym})</label>

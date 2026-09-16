@@ -21,7 +21,10 @@ interface DealInputs {
   valuationFee: string;
   legalFees: string;
   otherFees: string;
+  repaymentType: RepaymentType;
 }
+
+type RepaymentType = "repayment" | "interestOnly";
 
 interface DealResult {
   monthlyPayment: number;
@@ -46,6 +49,7 @@ const DEFAULT_DEAL = (label: string): DealInputs => ({
   valuationFee: "300",
   legalFees: "1000",
   otherFees: "0",
+  repaymentType: "repayment",
 });
 
 function calcDeal(d: DealInputs): DealResult | null {
@@ -75,14 +79,20 @@ function calcDeal(d: DealInputs): DealResult | null {
 
   // Monthly payment with product fee added to balance
   const effectiveBalance = d.productFeeToBalance ? balance + productFee : balance;
-  const monthly =
-    r === 0
+  const isInterestOnly = d.repaymentType === "interestOnly";
+
+  // Interest-only: monthly payment is just the interest on the balance, and the
+  // balance is unchanged at the end of the deal period (no capital is repaid).
+  const monthly = isInterestOnly
+    ? effectiveBalance * r
+    : r === 0
       ? effectiveBalance / n
       : (effectiveBalance * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
 
   // Remaining balance after deal period
-  const remainingBalance =
-    r === 0
+  const remainingBalance = isInterestOnly
+    ? effectiveBalance
+    : r === 0
       ? effectiveBalance - monthly * k
       : effectiveBalance * Math.pow(1 + r, k) - monthly * ((Math.pow(1 + r, k) - 1) / r);
 
@@ -130,7 +140,7 @@ function DealCard({
   const [showOptional, setShowOptional] = useState(true);
   const accent = index === 0 ? ACCENT : "#22C55E";
 
-  const set = (field: keyof DealInputs, value: string | boolean) =>
+  const set = (field: keyof DealInputs, value: string | boolean | RepaymentType) =>
     onChange({ ...deal, [field]: value });
 
   return (
@@ -144,6 +154,40 @@ function DealCard({
       </div>
 
       <div className="p-6 space-y-4">
+        {/* Repayment type switch */}
+        <div>
+          <label className={labelClass}>Repayment Type</label>
+          <div className="grid grid-cols-2 gap-2 p-1 bg-black/40 border border-white/10 rounded-lg">
+            {([
+              { key: "repayment" as const, label: "Repayment" },
+              { key: "interestOnly" as const, label: "Interest Only" },
+            ]).map(opt => {
+              const active = deal.repaymentType === opt.key;
+              return (
+                <button
+                  key={opt.key}
+                  type="button"
+                  onClick={() => set("repaymentType", opt.key)}
+                  aria-pressed={active}
+                  className="py-2.5 px-3 rounded-md font-heading text-[11px] uppercase tracking-widest transition-all"
+                  style={{
+                    background: active ? `${accent}22` : "transparent",
+                    color: active ? accent : "rgba(255,255,255,0.35)",
+                    boxShadow: active ? `inset 0 0 0 1px ${accent}55` : "none",
+                  }}
+                >
+                  {opt.label}
+                </button>
+              );
+            })}
+          </div>
+          <p className="text-[10px] text-white/25 font-sans mt-1.5 leading-relaxed">
+            {deal.repaymentType === "interestOnly"
+              ? "Interest only — the balance does not reduce over the deal period."
+              : "Capital and interest — the balance reduces with every payment."}
+          </p>
+        </div>
+
         {/* Core inputs */}
         <div>
           <label className={labelClass}>Mortgage Balance (£)</label>
@@ -541,6 +585,11 @@ export default function MortgageCostComparison() {
               </div>
               {(
                 [
+                  {
+                    label: "Repayment Type",
+                    a: deals[0].repaymentType === "interestOnly" ? "Interest Only" : "Repayment",
+                    b: deals[1].repaymentType === "interestOnly" ? "Interest Only" : "Repayment",
+                  },
                   { label: "Monthly Payment", a: fmt(resA.monthlyPayment), b: fmt(resB.monthlyPayment) },
                   { label: "Deal Term", a: `${deals[0].dealTermMonths} months`, b: `${deals[1].dealTermMonths} months` },
                   { label: "Total Payments", a: fmt(resA.totalPaymentsDeal), b: fmt(resB.totalPaymentsDeal) },
@@ -575,6 +624,30 @@ export default function MortgageCostComparison() {
                 </div>
               ))}
             </div>
+
+            {/* Mixed repayment-type warning — these are not like-for-like comparisons */}
+            {deals[0].repaymentType !== deals[1].repaymentType && (
+              <div className="bg-amber-500/[0.07] border border-amber-500/25 rounded-lg px-5 py-4 mb-4 flex gap-3 items-start">
+                <Info className="h-4 w-4 mt-0.5 shrink-0 text-amber-400" />
+                <p className="text-xs text-white/50 font-sans leading-relaxed">
+                  <span className="text-amber-400 font-heading uppercase tracking-widest text-[10px]">Not a like-for-like comparison — </span>
+                  one deal is interest-only and the other is repayment. The interest-only deal will show a lower monthly
+                  payment, but none of that money reduces what you owe — the full balance is still outstanding at the end.
+                  Compare the remaining balance row, not just the monthly payment.
+                </p>
+              </div>
+            )}
+
+            {/* Interest-only note (both deals) */}
+            {deals[0].repaymentType === "interestOnly" && deals[1].repaymentType === "interestOnly" && (
+              <div className="bg-white/[0.02] border border-white/10 rounded-lg px-5 py-4 mb-4 flex gap-3 items-start">
+                <Info className="h-4 w-4 mt-0.5 shrink-0" style={{ color: ACCENT }} />
+                <p className="text-xs text-white/40 font-sans leading-relaxed">
+                  Both deals are interest-only, so neither reduces the capital. The remaining balance is unchanged at the
+                  end of each deal period and will need repaying separately.
+                </p>
+              </div>
+            )}
 
             {/* Fee-to-balance note */}
             {(deals[0].productFeeToBalance || deals[1].productFeeToBalance) && (
