@@ -1,4 +1,4 @@
-import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2, GraduationCap, Sparkles } from "lucide-react";
+import { TrendingUp, Search, Wallet, Home, ArrowRight, PiggyBank, ChevronRight, BookOpen, FileText, RefreshCw, Repeat, Building2, GraduationCap, Sparkles, ShieldCheck, EyeOff, ServerOff, Code2, Ban, Terminal } from "lucide-react";
 import { BackToTop } from "@/components/BackToTop";
 import { Link } from "react-router-dom";
 import { getByMarket } from "@/data/most-searched";
@@ -790,6 +790,86 @@ const Index = () => {
             </Link>
           </div>
 
+        </div>
+      </section>
+
+      {/* Trust Section — verifiable facts, not slogans. See research: unverifiable
+          claims (net-zero, "B-Corp type") get called out precisely because they
+          can't be checked. Everything here is something a visitor can confirm
+          themselves — open the page source, check DevTools, count the trackers. */}
+      <section className="py-16 px-6 border-b border-dark-border bg-gradient-to-b from-accent-green/[0.03] to-transparent">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10">
+            <p className="font-heading text-xs uppercase tracking-[0.3em] text-accent-green mb-3">Not Just A Claim</p>
+            <h2 className="font-display text-3xl md:text-5xl uppercase text-white tracking-tight">
+              Don't Trust Us. <span className="text-accent-green">Check For Yourself.</span>
+            </h2>
+            <p className="text-white/50 mt-3 max-w-2xl mx-auto text-sm font-sans">
+              No badge, no certification logo, no "we care about the planet" paragraph. Just things
+              you can verify in under a minute — open DevTools, check the Network tab, see it yourself.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+            {[
+              {
+                icon: ServerOff,
+                title: "Runs In Your Browser",
+                body: "Every calculation happens on your device. Your numbers never touch a server — there's nothing to send, so there's nothing to leak.",
+                colorClass: "text-accent-green",
+              },
+              {
+                icon: Ban,
+                title: "No Account, No Bank Login",
+                body: "No sign-up, no email, no linking your bank. Use every calculator without creating anything or handing over anything.",
+                colorClass: "text-accent-blue",
+              },
+              {
+                icon: EyeOff,
+                title: "No Tracking Scripts",
+                body: "No ad pixels, no cross-site trackers, no fingerprinting. Open the page source or your browser's tracker blocker — count them yourself.",
+                colorClass: "text-accent-cyan",
+              },
+              {
+                icon: Terminal,
+                title: "Verify It Yourself",
+                body: "Press F12, open the Network tab, use a calculator. Watch what actually gets sent. We'd rather you check than take our word for it.",
+                colorClass: "text-accent-yellow",
+              },
+              {
+                icon: Code2,
+                title: "Formulas Shown, Not Hidden",
+                body: "Every calculator shows the actual formula it uses — not a black box. Check our maths, not just our motives.",
+                colorClass: "text-accent-orange",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Free, No Paywall",
+                body: "No premium tier gatekeeping the calculators you actually need. Whatever we build to sustain this stays separate from the tools themselves.",
+                colorClass: "text-accent-red",
+              },
+            ].map(({ icon: Icon, title, body, colorClass }) => (
+              <div
+                key={title}
+                className="bg-dark-bg border border-dark-border hover:border-white/20 transition-all duration-300 p-6 flex flex-col"
+              >
+                <div className={`mb-4 ${colorClass}`}>
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="font-heading text-sm uppercase tracking-wide text-white mb-2">{title}</h3>
+                <p className="text-xs text-gray-500 font-sans leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/privacy"
+              className="inline-flex items-center gap-2 text-xs font-heading uppercase tracking-widest text-white/40 hover:text-white border border-white/10 hover:border-white/30 px-5 py-3 transition-all"
+            >
+              Read The Full Privacy Policy <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
         </div>
       </section>
 
