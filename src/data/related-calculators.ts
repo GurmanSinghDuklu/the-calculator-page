@@ -11,6 +11,11 @@ export interface RelatedItem {
 /** Curated "related calculator" sets, keyed by calculator page. Shown between
  * Results and the Why/How section — the highest-intent moment on the page. */
 export const RELATED_CALCULATORS: Record<string, RelatedItem[]> = {
+  "rap-calculator": [
+    { title: "US Salary Calculator", hook: "Work out the take-home pay behind your AGI", path: "/finance/us-salary-calculator", accent: "#3B82F6", shape: "bars" },
+    { title: "Budget Calculator", hook: "Fit your student loan payment into a monthly plan", path: "/finance/budget", accent: "#3B82F6", shape: "donut" },
+    { title: "Compound Interest", hook: "See what paying extra could earn you instead", path: "/finance/compound-interest", accent: "#3B82F6", shape: "growth-curve" },
+  ],
   "compound-interest": [
     { title: "Savings Calculator", hook: "See it with regular deposits added in", path: "/finance/savings", accent: "#3B82F6", shape: "growth-curve" },
     { title: "ISA Calculator", hook: "Same growth, tax-free in a UK ISA wrapper", path: "/finance/isa-calculator", accent: "#22C55E", shape: "growth-curve" },

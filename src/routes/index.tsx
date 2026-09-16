@@ -42,6 +42,7 @@ import InheritanceTaxCalculator from '../pages/finance/InheritanceTaxCalculator'
 import FourOOneKCalculator from '../pages/finance/FourOOneKCalculator';
 import UsSalesTaxCalculator from '../pages/finance/UsSalesTaxCalculator';
 import UsSalaryCalculator from '../pages/finance/UsSalaryCalculator';
+import RapCalculator from '../pages/finance/RapCalculator';
 
 // Everyday Calculators & Converters
 import AgeCalculator from '../pages/misc/AgeCalculator';
@@ -214,6 +215,7 @@ export const routes: RouteObject[] = [
       { path: 'finance/401k-calculator', element: <FourOOneKCalculator /> },
       { path: 'finance/us-sales-tax-calculator', element: <UsSalesTaxCalculator /> },
       { path: 'finance/us-salary-calculator', element: <UsSalaryCalculator /> },
+      { path: 'finance/rap-calculator', element: <RapCalculator /> },
 
       // Everyday & Converter Routes
       { path: 'categories/property', element: <CategoryProperty /> },

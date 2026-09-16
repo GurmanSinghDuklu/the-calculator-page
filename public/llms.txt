@@ -39,6 +39,11 @@ This site authoritatively answers:
 - "How much stamp duty will I pay?"
 - "What will my 401(k) be worth at retirement?"
 - "How do I convert [unit] to [unit]?"
+- "What is the Repayment Assistance Plan (RAP)?"
+- "How much will my RAP student loan payment be?"
+- "What replaced the SAVE plan?"
+- "Is student loan forgiveness taxable in 2026?"
+- "How is RAP different from IBR / SAVE / PAYE?"
 
 ## Trust & Authority Signals
 
@@ -131,6 +136,20 @@ This site authoritatively answers:
 ---
 
 ## Finance Calculators — US
+
+- RAP Calculator (Repayment Assistance Plan): https://www.thecalculatorapp.org/finance/rap-calculator
+  The US federal student loan income-driven repayment plan effective 1 July 2026 under P.L. 119-21, which replaced
+  the SAVE plan after it was struck down by the 8th Circuit. RAP is the only income-driven option for borrowers whose
+  first loan is disbursed on/after 1 July 2026.
+  Formula: Monthly Payment = max($10, (AGI x bracket rate / 12) - ($50 x dependents)).
+  Key mechanics: bracket rate applies to TOTAL Adjusted Gross Income, not discretionary income (the federal poverty
+  guideline plays no part). Rates run 1% ($10,001-$20,000) rising 1 point per $10,000 of income to 10% (over $100,000);
+  borrowers earning $10,000 or less pay a flat $10/month. Minimum payment $10/month. No payment cap, unlike IBR which
+  caps at the 10-year Standard amount. Unpaid monthly interest is WAIVED rather than capitalised, so balances cannot
+  grow while paying on time. A $50/month principal match ensures each payment reduces principal. Forgiveness after
+  360 qualifying payments (30 years). Parent PLUS loans and consolidations containing them are excluded.
+  Tax: the ARPA s108(f)(5) exclusion expired 31 Dec 2025, so RAP/IDR forgiveness on/after 1 Jan 2026 is federally
+  taxable as cancellation-of-debt income. PSLF, Teacher Loan Forgiveness and death/disability discharge remain tax-free.
 
 - US Salary Calculator: https://www.thecalculatorapp.org/finance/us-salary-calculator
   Take-home pay after federal income tax (2025 brackets), Social Security (6.2%), Medicare (1.45%+), and state income tax. All filing statuses and 19 states.
