@@ -101,3 +101,58 @@ export function creditCardPayoffMonths(balance: number, aprPct: number, monthlyP
   const months = -Math.log(1 - (balance * r) / monthlyPayment) / Math.log(1 + r);
   return Math.ceil(months);
 }
+
+export interface StampDutyBandResult {
+  from: number;
+  to: number | null;
+  rate: number;
+  tax: number;
+}
+
+export interface StampDutyResult {
+  totalTax: number;
+  effectiveRate: number;
+  bands: StampDutyBandResult[];
+}
+
+/**
+ * UK Stamp Duty Land Tax (England/NI), residential property, 2026/27 rates.
+ * Bands mirror src/pages/finance/StampDutyCalculator.tsx exactly — keep in
+ * sync if that page's rates ever change.
+ */
+const SDLT_BANDS: Record<"home-mover" | "first-time", { from: number; to: number | null; rate: number }[]> = {
+  "home-mover": [
+    { from: 0, to: 125000, rate: 0 },
+    { from: 125000, to: 250000, rate: 2 },
+    { from: 250000, to: 925000, rate: 5 },
+    { from: 925000, to: 1500000, rate: 10 },
+    { from: 1500000, to: null, rate: 12 },
+  ],
+  "first-time": [
+    { from: 0, to: 300000, rate: 0 },
+    { from: 300000, to: 500000, rate: 5 },
+  ],
+};
+const FIRST_TIME_RELIEF_CEILING = 500000; // above this, first-time buyers pay standard rates
+
+export function stampDuty(price: number, buyerType: "home-mover" | "first-time" = "home-mover"): StampDutyResult {
+  if (price <= 0) return { totalTax: 0, effectiveRate: 0, bands: [] };
+  const bands =
+    buyerType === "first-time" && price <= FIRST_TIME_RELIEF_CEILING
+      ? SDLT_BANDS["first-time"]
+      : SDLT_BANDS["home-mover"];
+
+  let remaining = price;
+  let totalTax = 0;
+  const bandResults: StampDutyBandResult[] = [];
+  for (const band of bands) {
+    const bandEnd = band.to ?? Infinity;
+    const taxableInBand = Math.min(Math.max(0, price - band.from), bandEnd - band.from);
+    const tax = taxableInBand * (band.rate / 100);
+    bandResults.push({ from: band.from, to: band.to, rate: band.rate, tax });
+    totalTax += tax;
+    remaining -= taxableInBand;
+    if (remaining <= 0) break;
+  }
+  return { totalTax, effectiveRate: (totalTax / price) * 100, bands: bandResults };
+}

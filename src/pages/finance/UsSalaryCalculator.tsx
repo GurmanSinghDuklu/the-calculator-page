@@ -1,7 +1,7 @@
 import { Logo } from "@/components/Logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
 import { useCalculateScroll } from "@/hooks/useCalculateScroll";
 
@@ -69,6 +69,13 @@ export default function UsSalaryCalculator() {
   const [filing, setFiling] = useState<FilingStatus>("single");
   const [state, setState] = useState("none");
   const [result, setResult] = useState<ReturnType<typeof calcUSTax> | null>(null);
+
+  // Pre-fill from deep-links, e.g. /finance/us-salary-calculator?salary=75000
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const s = searchParams.get("salary");
+    if (s) setSalary(s);
+  }, [searchParams]);
   const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
   const calculate = () => {

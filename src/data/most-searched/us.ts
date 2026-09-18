@@ -4,6 +4,9 @@ import {
   creditCardAnnualInterest, creditCardPayoffMonths,
 } from "./calc";
 
+/** US income tax uses 2025 brackets throughout this file, consistent with
+ * usTakeHome() in calc.ts and the live US salary calculator. */
+
 const usd = (n: number) => "$" + Math.round(n).toLocaleString("en-US");
 const TODAY = "2026-06-09";
 const MODIFIED = "2026-06-18";
@@ -36,6 +39,7 @@ const US_RETIREMENT_SOURCES = [
 
 const um200 = mortgagePayment(200000, 7, 30); // US: 30-yr, 7%
 const um300 = mortgagePayment(300000, 7, 30);
+const um400 = mortgagePayment(400000, 7, 30);
 const ufv500 = futureValueMonthly(500, 7, 20);
 const ufv10k = 10000 * Math.pow(1.07, 10);
 const ucc10kInt = creditCardAnnualInterest(10000, 24);
@@ -118,7 +122,47 @@ export const usPages: AnswerPageData[] = [
     ],
     calculatorPath: "/finance/mortgage?amount=300000&rate=7&term=30",
     calculatorLabel: "Open in mortgage calculator",
-    related: ["200k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
+    related: ["400k-mortgage-monthly-payment", "salary-for-400k-house", "down-payment-for-250k-house"],
+    officialSources: US_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
+  },
+  {
+    slug: "400k-mortgage-monthly-payment",
+    market: "us", category: "Mortgage", currency: "$",
+    question: "How much is a $400,000 mortgage per month?",
+    metaDescription: `A $400,000 mortgage over 30 years at 7% costs ${usd(um400)} per month in principal and interest — close to the current US median home price.`,
+    keywords: "400000 mortgage monthly payment, 400k mortgage per month, how much is a 400000 mortgage",
+    answer: `A $400,000 mortgage over 30 years at 7% costs ${usd(um400)} per month in principal and interest. Property taxes, insurance and HOA are extra. Over 30 years you repay about ${usd(um400 * 360)}.`,
+    answerNumber: `${usd(um400)}/mo`,
+    assumptions: ["30-year fixed term", "7% annual interest rate", "Principal & interest only", "Property taxes, insurance & HOA excluded"],
+    formula: "M = P·r(1+r)ⁿ ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "$400,000 monthly payment by rate (30-year fixed)",
+      columns: ["Interest rate", "Monthly payment"],
+      rows: [
+        { label: "5%", value: usd(mortgagePayment(400000, 5, 30)) },
+        { label: "6%", value: usd(mortgagePayment(400000, 6, 30)) },
+        { label: "7%", value: usd(um400) },
+        { label: "8%", value: usd(mortgagePayment(400000, 8, 30)) },
+      ],
+    },
+    chart: {
+      title: "Monthly payment by rate",
+      points: [
+        { name: "5%", value: Math.round(mortgagePayment(400000, 5, 30)) },
+        { name: "6%", value: Math.round(mortgagePayment(400000, 6, 30)) },
+        { name: "7%", value: Math.round(um400) },
+        { name: "8%", value: Math.round(mortgagePayment(400000, 8, 30)) },
+      ],
+    },
+    faqs: [
+      { question: "Is $400,000 a typical mortgage size?", answer: "Yes — it's close to the current US median home price, so this is one of the most commonly searched mortgage amounts." },
+      { question: "What income do I need for a $400,000 mortgage?", answer: "Using a 28% front-end DTI, roughly $120,000–$135,000 depending on your down payment, tax rate, insurance and existing debt." },
+      { question: "How much is the total interest?", answer: `About ${usd(um400 * 360 - 400000)} over 30 years at 7%. A larger down payment or extra payments reduce this substantially.` },
+    ],
+    calculatorPath: "/finance/mortgage?amount=400000&rate=7&term=30",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["300k-mortgage-monthly-payment", "salary-for-400k-house", "200k-mortgage-monthly-payment"],
     officialSources: US_MORTGAGE_SOURCES,
     datePublished: TODAY, dateModified: MODIFIED,
   },
@@ -191,7 +235,7 @@ export const usPages: AnswerPageData[] = [
     datePublished: TODAY, dateModified: MODIFIED,
   },
   // ---- Salary pages ----
-  ...[30000, 40000, 50000, 60000, 100000].map((gross): AnswerPageData => {
+  ...[30000, 40000, 50000, 60000, 65000, 75000, 100000].map((gross): AnswerPageData => {
     const th = usTakeHome(gross);
     return {
       slug: `${gross}-after-tax`,
@@ -221,7 +265,7 @@ export const usPages: AnswerPageData[] = [
       ],
       calculatorPath: `/finance/us-salary-calculator?salary=${gross}&country=US`,
       calculatorLabel: "Open in US salary calculator",
-      related: [30000, 40000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
+      related: [30000, 40000, 50000, 60000, 65000, 75000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
       officialSources: US_SALARY_SOURCES,
       datePublished: TODAY, dateModified: MODIFIED,
     };

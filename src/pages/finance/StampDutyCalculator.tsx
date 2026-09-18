@@ -2,7 +2,7 @@ import { Logo } from "@/components/Logo";
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Home, Building2, TrendingUp, Calculator, Info, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { CopyButton } from "@/components/CopyButton";
 import { RelatedCalculators } from "@/components/RelatedCalculators";
 import { FinancialDisclosure } from "@/components/FinancialDisclosure";
@@ -109,6 +109,15 @@ const StampDutyCalculator = () => {
   const [result, setResult] = useState<CalculationResult | null>(null);
   const { resultRef, onCalculate } = useCalculateScroll<HTMLDivElement>();
 
+  // Pre-fill from deep-links, e.g. /finance/stamp-duty?price=300000&buyerType=home-mover
+  const [searchParams] = useSearchParams();
+  useEffect(() => {
+    const price = searchParams.get("price");
+    const type = searchParams.get("buyerType");
+    if (price) setPropertyPrice(price);
+    if (type === "first-time" || type === "home-mover" || type === "additional") setBuyerType(type);
+  }, [searchParams]);
+
   useEffect(() => {
     const price = parseFloat(propertyPrice) || 0;
     setResult(calculateStampDuty(price, buyerType));
@@ -127,9 +136,9 @@ const StampDutyCalculator = () => {
 
   const faqSchema = [
     { question: "What is Stamp Duty Land Tax (SDLT)?", answer: "Stamp Duty Land Tax is a tax paid when buying property or land in England and Northern Ireland. The amount depends on the purchase price and whether you are a first-time buyer." },
-    { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £425,000. Between £425,001 and £625,000 they pay 5%. Properties above £625,000 do not qualify for first-time buyer relief." },
+    { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £300,000. Between £300,001 and £500,000 they pay 5% on the portion above £300,000. Properties above £500,000 do not qualify for first-time buyer relief at all — standard rates apply to the full price." },
     { question: "When do I pay stamp duty?", answer: "Stamp duty must be paid within 14 days of completing your property purchase. Your solicitor or conveyancer usually handles the payment on your behalf." },
-    { question: "Do I pay stamp duty on a second home?", answer: "Yes, there is a 3% surcharge on top of standard stamp duty rates for second homes and buy-to-let properties in England and Northern Ireland." }
+    { question: "Do I pay stamp duty on a second home?", answer: "Yes — there is a surcharge on top of standard stamp duty rates for second homes and buy-to-let properties in England and Northern Ireland (5 percentage points on every band, e.g. 5% instead of 0%, 7% instead of 2%)." }
   ];
 
   return (
@@ -403,20 +412,20 @@ const StampDutyCalculator = () => {
             }}
             formula={{
               title: "SDLT Bands (England & Northern Ireland 2026/27)",
-              formula: "£0-£250,000: 0% | £250,001-£925,000: 5% | £925,001-£1,500,000: 10% | £1,500,001+: 12%",
-              explanation: "First-time buyers pay 0% up to £425,000 and 5% on the portion from £425,001 to £625,000 (no relief if price exceeds £625,000). Additional properties incur a 3% surcharge on top of standard rates. Non-UK residents pay an additional 2% surcharge. For example, a £350,000 home costs £5,000 in SDLT for home movers (5% on £100,000 above £250,000) but £0 for first-time buyers."
+              formula: "£0-£125,000: 0% | £125,001-£250,000: 2% | £250,001-£925,000: 5% | £925,001-£1,500,000: 10% | £1,500,001+: 12%",
+              explanation: "First-time buyers pay 0% up to £300,000 and 5% on the portion from £300,001 to £500,000 (no relief at all if the price exceeds £500,000 — standard rates then apply to the full amount). Additional properties incur a surcharge of 5 percentage points on every band (5% instead of 0%, 7% instead of 2%, and so on). For example, a £350,000 home costs £7,500 in SDLT for a home mover (0% on the first £125,000, 2% on the next £125,000, 5% on the remaining £100,000) but £2,500 for a first-time buyer (5% on the £50,000 above the £300,000 relief threshold)."
             }}
             faqs={[
-              { question: "What is Stamp Duty Land Tax?", answer: "SDLT is a tax charged on property purchases in England and Northern Ireland. It applies to residential properties above £250,000 (or £425,000 for first-time buyers). The tax is paid by the buyer and must be submitted to HMRC within 14 days of completion." },
-              { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £425,000. For properties between £425,001 and £625,000, they pay 5% only on the amount above £425,000. If the property exceeds £625,000, first-time buyer relief does not apply and standard rates are used." },
+              { question: "What is Stamp Duty Land Tax?", answer: "SDLT is a tax charged on property purchases in England and Northern Ireland. It applies to residential properties above £125,000 (or £300,000 for first-time buyers, up to a £500,000 price cap). The tax is paid by the buyer and must be submitted to HMRC within 14 days of completion." },
+              { question: "How much stamp duty do first-time buyers pay?", answer: "First-time buyers pay no stamp duty on properties up to £300,000. For properties between £300,001 and £500,000, they pay 5% only on the amount above £300,000. If the property exceeds £500,000, first-time buyer relief does not apply at all and standard rates are used on the full price." },
               { question: "When do I pay stamp duty?", answer: "Stamp duty must be paid within 14 days of completing your property purchase. Your solicitor or conveyancer typically handles the SDLT return and payment on your behalf as part of the conveyancing process." },
-              { question: "Do I pay extra stamp duty on a second home?", answer: "Yes. There is a 3% surcharge on top of standard SDLT rates for additional residential properties. This applies to buy-to-let investments, holiday homes, and any property where you already own another residential property." }
+              { question: "Do I pay extra stamp duty on a second home?", answer: "Yes. There is a surcharge of 5 percentage points on top of standard SDLT rates for additional residential properties, applied to every band (5% instead of 0% on the first £125,000, 7% instead of 2% on the next band, and so on). This applies to buy-to-let investments, holiday homes, and any property where you already own another residential property." }
             ]}
             tips={[
               "If you are a first-time buyer, check you qualify — you must never have owned property anywhere in the world",
               "Budget for stamp duty separately from your deposit — it is due on completion day and cannot be added to your mortgage",
-              "Consider the additional 3% surcharge before purchasing buy-to-let property — it significantly increases upfront costs",
-              "If buying jointly and one partner already owns property, the 3% surcharge applies to the entire purchase",
+              "Consider the additional 5-percentage-point surcharge before purchasing buy-to-let property — it significantly increases upfront costs",
+              "If buying jointly and one partner already owns property, the additional-property surcharge applies to the entire purchase",
               "Your solicitor should file the SDLT return within 14 days — late filing attracts penalties and interest"
             ]}
           />

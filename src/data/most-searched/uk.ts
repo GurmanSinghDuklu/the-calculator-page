@@ -1,7 +1,7 @@
 import type { AnswerPageData } from "./types";
 import {
   ukTakeHome, mortgagePayment, futureValueMonthly,
-  creditCardAnnualInterest, creditCardPayoffMonths,
+  creditCardAnnualInterest, creditCardPayoffMonths, stampDuty,
 } from "./calc";
 
 const gbp = (n: number) => "£" + Math.round(n).toLocaleString("en-GB");
@@ -38,15 +38,24 @@ const UK_PENSION_SOURCES = [
 // Pre-computed figures
 const m200 = mortgagePayment(200000, 5, 25);
 const m300 = mortgagePayment(300000, 5, 25);
+const m250 = mortgagePayment(250000, 5, 25);
+const m350 = mortgagePayment(350000, 5, 25);
 const th30 = ukTakeHome(30000);
 const th40 = ukTakeHome(40000);
 const th50 = ukTakeHome(50000);
 const th60 = ukTakeHome(60000);
 const th100 = ukTakeHome(100000);
+const th25 = ukTakeHome(25000);
+const th35 = ukTakeHome(35000);
+const th45 = ukTakeHome(45000);
 const fv500 = futureValueMonthly(500, 7, 20);
 const fv10k = 10000 * Math.pow(1.07, 10);
 const cc10kInt = creditCardAnnualInterest(10000, 24);
 const cc5kMonths = creditCardPayoffMonths(5000, 22, 150);
+const sdlt300k = stampDuty(300000, "home-mover");
+const sdlt400k = stampDuty(400000, "home-mover");
+const sdlt300kFtb = stampDuty(300000, "first-time");
+const sdlt400kFtb = stampDuty(400000, "first-time");
 
 export const ukPages: AnswerPageData[] = [
   {
@@ -125,7 +134,87 @@ export const ukPages: AnswerPageData[] = [
     ],
     calculatorPath: "/finance/mortgage?amount=300000&rate=5&term=25",
     calculatorLabel: "Open in mortgage calculator",
-    related: ["200k-mortgage-monthly-payment", "salary-for-400k-house", "deposit-for-250k-house"],
+    related: ["350k-mortgage-monthly-payment", "salary-for-400k-house", "deposit-for-250k-house"],
+    officialSources: UK_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
+  },
+  {
+    slug: "250k-mortgage-monthly-payment",
+    market: "uk", category: "Mortgage", currency: "£",
+    question: "How much is a £250,000 mortgage per month?",
+    metaDescription: `A £250,000 mortgage over 25 years at 5% costs ${gbp(m250)} per month. Full repayment breakdown and rate comparison.`,
+    keywords: "250000 mortgage monthly payment, 250k mortgage per month uk, how much is a 250000 mortgage",
+    answer: `A £250,000 mortgage over 25 years at 5% costs ${gbp(m250)} per month. Across the full term you repay ${gbp(m250 * 300)}, of which around ${gbp(m250 * 300 - 250000)} is interest.`,
+    answerNumber: `${gbp(m250)}/mo`,
+    assumptions: ["25-year term", "5% annual interest rate", "Repayment mortgage", "Rate held constant for illustration"],
+    formula: "M = P·r(1+r)ⁿ ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "£250,000 monthly payment by rate (25-year term)",
+      columns: ["Interest rate", "Monthly payment"],
+      rows: [
+        { label: "4%", value: gbp(mortgagePayment(250000, 4, 25)) },
+        { label: "5%", value: gbp(m250) },
+        { label: "6%", value: gbp(mortgagePayment(250000, 6, 25)) },
+        { label: "7%", value: gbp(mortgagePayment(250000, 7, 25)) },
+      ],
+    },
+    chart: {
+      title: "Monthly payment by rate",
+      points: [
+        { name: "4%", value: Math.round(mortgagePayment(250000, 4, 25)) },
+        { name: "5%", value: Math.round(m250) },
+        { name: "6%", value: Math.round(mortgagePayment(250000, 6, 25)) },
+        { name: "7%", value: Math.round(mortgagePayment(250000, 7, 25)) },
+      ],
+    },
+    faqs: [
+      { question: "What salary do I need for a £250,000 mortgage?", answer: "At 4.5× income, roughly £56,000 combined. Lenders also assess outgoings and credit history, not just the income multiple." },
+      { question: "How much deposit for a £250,000 mortgage?", answer: "£250,000 is close to the UK average house price, so a 10% deposit typically means around £27,000–£28,000 depending on the property price." },
+      { question: "How much interest will I pay?", answer: `About ${gbp(m250 * 300 - 250000)} over 25 years at 5% — the exact figure depends on your actual rate and any overpayments.` },
+    ],
+    calculatorPath: "/finance/mortgage?amount=250000&rate=5&term=25",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["200k-mortgage-monthly-payment", "300k-mortgage-monthly-payment", "deposit-for-250k-house"],
+    officialSources: UK_MORTGAGE_SOURCES,
+    datePublished: TODAY, dateModified: MODIFIED,
+  },
+  {
+    slug: "350k-mortgage-monthly-payment",
+    market: "uk", category: "Mortgage", currency: "£",
+    question: "How much is a £350,000 mortgage per month?",
+    metaDescription: `A £350,000 mortgage over 25 years at 5% costs ${gbp(m350)} per month. Full repayment breakdown and rate comparison.`,
+    keywords: "350000 mortgage monthly payment, 350k mortgage per month uk, how much is a 350000 mortgage",
+    answer: `A £350,000 mortgage over 25 years at 5% costs ${gbp(m350)} per month. Across the full term you repay ${gbp(m350 * 300)}, of which around ${gbp(m350 * 300 - 350000)} is interest.`,
+    answerNumber: `${gbp(m350)}/mo`,
+    assumptions: ["25-year term", "5% annual interest rate", "Repayment mortgage", "Rate held constant for illustration"],
+    formula: "M = P·r(1+r)ⁿ ÷ ((1+r)ⁿ − 1)",
+    comparison: {
+      title: "£350,000 monthly payment by rate (25-year term)",
+      columns: ["Interest rate", "Monthly payment"],
+      rows: [
+        { label: "4%", value: gbp(mortgagePayment(350000, 4, 25)) },
+        { label: "5%", value: gbp(m350) },
+        { label: "6%", value: gbp(mortgagePayment(350000, 6, 25)) },
+        { label: "7%", value: gbp(mortgagePayment(350000, 7, 25)) },
+      ],
+    },
+    chart: {
+      title: "Monthly payment by rate",
+      points: [
+        { name: "4%", value: Math.round(mortgagePayment(350000, 4, 25)) },
+        { name: "5%", value: Math.round(m350) },
+        { name: "6%", value: Math.round(mortgagePayment(350000, 6, 25)) },
+        { name: "7%", value: Math.round(mortgagePayment(350000, 7, 25)) },
+      ],
+    },
+    faqs: [
+      { question: "What salary do I need for a £350,000 mortgage?", answer: "At 4.5× income, roughly £78,000 combined — often two incomes for most buyers at this level. Some lenders stretch to 5x for strong applicants." },
+      { question: "How much deposit for a £350,000 mortgage?", answer: "A 10% deposit is typically around £39,000 on a property priced near £389,000. Bigger deposits usually unlock better rates." },
+      { question: "How much interest will I pay?", answer: `About ${gbp(m350 * 300 - 350000)} over 25 years at 5% — a bigger deposit or shorter term both reduce this.` },
+    ],
+    calculatorPath: "/finance/mortgage?amount=350000&rate=5&term=25",
+    calculatorLabel: "Open in mortgage calculator",
+    related: ["300k-mortgage-monthly-payment", "salary-for-400k-house", "400k-stamp-duty"],
     officialSources: UK_MORTGAGE_SOURCES,
     datePublished: TODAY, dateModified: MODIFIED,
   },
@@ -198,10 +287,95 @@ export const ukPages: AnswerPageData[] = [
     ],
     datePublished: TODAY, dateModified: MODIFIED,
   },
+  {
+    slug: "300k-stamp-duty",
+    market: "uk", category: "Tax", currency: "£",
+    question: "How much is stamp duty on a £300,000 house?",
+    metaDescription: `Stamp duty on a £300,000 home is ${gbp(sdlt300k.totalTax)} for home movers, or ${gbp(sdlt300kFtb.totalTax)} for first-time buyers using the relief.`,
+    keywords: "300000 stamp duty, 300k stamp duty, stamp duty on 300000 house, sdlt 300000",
+    answer: `Stamp duty on a £300,000 house is ${gbp(sdlt300k.totalTax)} for a home mover (standard rates), or ${gbp(sdlt300kFtb.totalTax)} for a first-time buyer using first-time-buyer relief — £300,000 sits exactly at the relief's 0% threshold.`,
+    answerNumber: `${gbp(sdlt300k.totalTax)}`,
+    assumptions: ["England / Northern Ireland rates (Scotland and Wales have separate systems)", "2026/27 SDLT thresholds", "Main residence, not an additional property", "Purchase completed as a single transaction"],
+    formula: "SDLT = Σ (portion of price in each band × that band's rate)",
+    comparison: {
+      title: "£300,000 stamp duty by buyer type",
+      columns: ["Buyer type", "Stamp duty"],
+      rows: [
+        { label: "First-time buyer", value: gbp(sdlt300kFtb.totalTax) },
+        { label: "Home mover", value: gbp(sdlt300k.totalTax) },
+        { label: "Additional property (+5%)", value: gbp(stampDuty(300000, "home-mover").totalTax + 300000 * 0.05) },
+      ],
+    },
+    chart: {
+      title: "Stamp duty by buyer type",
+      points: [
+        { name: "First-time", value: Math.round(sdlt300kFtb.totalTax) },
+        { name: "Home mover", value: Math.round(sdlt300k.totalTax) },
+        { name: "Additional property", value: Math.round(stampDuty(300000, "home-mover").totalTax + 300000 * 0.05) },
+      ],
+    },
+    faqs: [
+      { question: "Why is stamp duty different for first-time buyers?", answer: "First-time buyers pay 0% up to £300,000 and 5% on the portion between £300,000 and £500,000, as long as the total price doesn't exceed £500,000. £300,000 is exactly the relief's 0% ceiling." },
+      { question: "What if I'm buying a second home?", answer: "You pay an extra 5% surcharge on top of standard rates across the whole price — on £300,000 that adds £15,000 to the standard-rate bill." },
+      { question: "Is stamp duty the same across the UK?", answer: "No. This is the England/Northern Ireland system (SDLT). Scotland has Land and Buildings Transaction Tax and Wales has Land Transaction Tax, both with different bands." },
+    ],
+    calculatorPath: "/finance/stamp-duty?price=300000&buyerType=home-mover",
+    calculatorLabel: "Check stamp duty on £300,000",
+    related: ["400k-stamp-duty", "300k-mortgage-monthly-payment", "deposit-for-250k-house"],
+    officialSources: [
+      { label: "Gov.uk — Stamp Duty Land Tax rates", url: "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates" },
+      { label: "Gov.uk — Relief for first-time buyers", url: "https://www.gov.uk/guidance/stamp-duty-land-tax-relief-for-first-time-buyers" },
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
+  },
+  {
+    slug: "400k-stamp-duty",
+    market: "uk", category: "Tax", currency: "£",
+    question: "How much is stamp duty on a £400,000 house?",
+    metaDescription: `Stamp duty on a £400,000 home is ${gbp(sdlt400k.totalTax)} for home movers, or ${gbp(sdlt400kFtb.totalTax)} for first-time buyers using the relief.`,
+    keywords: "400000 stamp duty, 400k stamp duty, stamp duty on 400000 house, sdlt 400000",
+    answer: `Stamp duty on a £400,000 house is ${gbp(sdlt400k.totalTax)} for a home mover, or ${gbp(sdlt400kFtb.totalTax)} for a first-time buyer — the relief still applies since £400,000 is below the £500,000 ceiling, so only the amount above £300,000 is taxed.`,
+    answerNumber: `${gbp(sdlt400k.totalTax)}`,
+    assumptions: ["England / Northern Ireland rates (Scotland and Wales have separate systems)", "2026/27 SDLT thresholds", "Main residence, not an additional property", "Purchase completed as a single transaction"],
+    formula: "SDLT = Σ (portion of price in each band × that band's rate)",
+    comparison: {
+      title: "£400,000 stamp duty by buyer type",
+      columns: ["Buyer type", "Stamp duty"],
+      rows: [
+        { label: "First-time buyer", value: gbp(sdlt400kFtb.totalTax) },
+        { label: "Home mover", value: gbp(sdlt400k.totalTax) },
+        { label: "Additional property (+5%)", value: gbp(stampDuty(400000, "home-mover").totalTax + 400000 * 0.05) },
+      ],
+    },
+    chart: {
+      title: "Stamp duty by buyer type",
+      points: [
+        { name: "First-time", value: Math.round(sdlt400kFtb.totalTax) },
+        { name: "Home mover", value: Math.round(sdlt400k.totalTax) },
+        { name: "Additional property", value: Math.round(stampDuty(400000, "home-mover").totalTax + 400000 * 0.05) },
+      ],
+    },
+    faqs: [
+      { question: "Do first-time buyers save money on a £400,000 house?", answer: `Yes — a first-time buyer pays ${gbp(sdlt400kFtb.totalTax)} versus ${gbp(sdlt400k.totalTax)} for a home mover, a saving of ${gbp(sdlt400k.totalTax - sdlt400kFtb.totalTax)}, because the first £300,000 is tax-free under the relief.` },
+      { question: "What if the price is over £500,000?", answer: "First-time buyer relief stops applying entirely above £500,000 — you'd pay standard rates on the full amount, not just lose the relief on the portion above £500,000." },
+      { question: "How is stamp duty actually paid?", answer: "Your solicitor or conveyancer normally calculates and pays it as part of completion, then adds it to your completion statement — you don't deal with HMRC directly." },
+    ],
+    calculatorPath: "/finance/stamp-duty?price=400000&buyerType=home-mover",
+    calculatorLabel: "Check stamp duty on £400,000",
+    related: ["300k-stamp-duty", "salary-for-400k-house", "350k-mortgage-monthly-payment"],
+    officialSources: [
+      { label: "Gov.uk — Stamp Duty Land Tax rates", url: "https://www.gov.uk/stamp-duty-land-tax/residential-property-rates" },
+      { label: "Gov.uk — Relief for first-time buyers", url: "https://www.gov.uk/guidance/stamp-duty-land-tax-relief-for-first-time-buyers" },
+    ],
+    datePublished: TODAY, dateModified: MODIFIED,
+  },
   // ---- Salary pages ----
   ...[
+    { gross: 25000, th: th25 },
     { gross: 30000, th: th30 },
+    { gross: 35000, th: th35 },
     { gross: 40000, th: th40 },
+    { gross: 45000, th: th45 },
     { gross: 50000, th: th50 },
     { gross: 60000, th: th60 },
     { gross: 100000, th: th100 },
@@ -233,7 +407,7 @@ export const ukPages: AnswerPageData[] = [
     ],
     calculatorPath: `/finance/salary?salary=${gross}&country=UK`,
     calculatorLabel: "Open in UK salary calculator",
-    related: [30000, 40000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
+    related: [25000, 30000, 35000, 40000, 45000, 50000, 60000, 100000].filter((g) => g !== gross).slice(0, 3).map((g) => `${g}-after-tax`),
     officialSources: UK_SALARY_SOURCES,
     datePublished: TODAY, dateModified: MODIFIED,
   })),

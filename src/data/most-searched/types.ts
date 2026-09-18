@@ -1,5 +1,5 @@
 export type Market = 'uk' | 'us';
-export type Category = 'Mortgage' | 'Salary' | 'Savings' | 'Debt' | 'Pension';
+export type Category = 'Mortgage' | 'Salary' | 'Savings' | 'Debt' | 'Pension' | 'Tax';
 
 export interface ComparisonRow {
   label: string;
