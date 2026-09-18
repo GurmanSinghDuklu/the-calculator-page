@@ -86,13 +86,15 @@ function metresPage(m: number): ConverterValuePage {
 // ─── ml → fl oz ───────────────────────────────────────────────────────────────
 const US_FLOZ_ML = 29.5735;
 const UK_FLOZ_ML = 28.4131;
-const ML_VALUES = [35, 50, 100, 250, 330, 473, 500, 568, 750];
+const ML_VALUES = [35, 50, 100, 130, 250, 330, 398, 473, 500, 568, 750, 796];
 const ML_NOTES: Record<number, string> = {
   330: "a standard drinks can",
   568: "one UK pint",
   473: "one US pint",
   35: "a large UK spirit measure",
   750: "a standard wine bottle",
+  796: "a standard large US can (28 oz)",
+  398: "a standard medium US can (14 oz)",
 };
 
 function mlPage(ml: number): ConverterValuePage {
@@ -136,7 +138,7 @@ function mlPage(ml: number): ConverterValuePage {
 
 // ─── oz → grams ───────────────────────────────────────────────────────────────
 const G_PER_OZ = 28.3495;
-const OZ_VALUES = [2.2, 4, 8, 8.8, 8.82, 12, 16];
+const OZ_VALUES = [2.2, 4, 8, 8.8, 8.82, 12, 16, 28];
 
 function ozPage(oz: number): ConverterValuePage {
   const g = r(oz * G_PER_OZ, 1);
@@ -263,7 +265,7 @@ function gramsPage(g: number): ConverterValuePage {
 
 // ─── gallons → litres ─────────────────────────────────────────────────────────
 const LITRES_PER_US_GAL = 3.78541;
-const GAL_VALUES = [4.5, 20, 58, 62, 130, 145, 270, 20000];
+const GAL_VALUES = [4.5, 10, 20, 40, 58, 62, 130, 145, 270, 20000];
 
 function gallonsPage(gal: number): ConverterValuePage {
   const us = r(gal * LITRES_PER_US_GAL);
@@ -345,6 +347,59 @@ function lbsPage(lbs: number): ConverterValuePage {
   };
 }
 
+// ─── cups → grams ─────────────────────────────────────────────────────────────
+// Real queries ("1 cup to grams", "2 cups to grams") never name an ingredient —
+// they almost always mean flour, the default in virtually every baking
+// context. Unlike the other families this isn't a fixed physical constant
+// (a cup of honey ≠ a cup of flour), so the page is explicit that this is the
+// flour answer, with a comparison table for other common ingredients right
+// there rather than a caveat buried in an FAQ.
+const CUP_VALUES = [1, 2];
+const G_PER_CUP_FLOUR = 125;
+const CUP_INGREDIENTS: { label: string; gramsPerCup: number }[] = [
+  { label: "Plain flour", gramsPerCup: 125 },
+  { label: "Caster sugar", gramsPerCup: 200 },
+  { label: "Butter", gramsPerCup: 227 },
+  { label: "Rice", gramsPerCup: 185 },
+  { label: "Honey", gramsPerCup: 340 },
+];
+
+function cupsToGramsPage(cups: number): ConverterValuePage {
+  const g = r(cups * G_PER_CUP_FLOUR, 1);
+  const slug = `${slugify(cups)}-cups-to-grams`;
+  return {
+    slug,
+    title: `${cups} ${cups === 1 ? "Cup" : "Cups"} to Grams — ${g}g of Flour`,
+    description: `${cups} ${cups === 1 ? "cup" : "cups"} of plain flour is ${g} grams. Cups aren't a fixed weight — see the conversion for sugar, butter, rice and honey too.`,
+    h1: `${cups} ${cups === 1 ? "Cup" : "Cups"} to Grams`,
+    keywords: `${cups} cup${cups === 1 ? "" : "s"} to grams, ${cups} cup${cups === 1 ? "" : "s"} in grams, ${cups} cup flour grams, how many grams is ${cups} cup${cups === 1 ? "" : "s"}`,
+    bigAnswer: `${g} g`,
+    answer: `${cups} US ${cups === 1 ? "cup" : "cups"} of plain flour is ${g} grams. This is the flour answer specifically — a cup is a volume, not a weight, so the gram figure changes completely for denser ingredients like sugar (${r(cups * 200, 1)} g) or honey (${r(cups * 340, 1)} g).`,
+    formula: `${cups} cup × 125 g (flour, per US cup) = ${g} g`,
+    extraResults: [
+      { label: "Plain flour", value: `${g} g` },
+      { label: "Caster sugar", value: `${r(cups * 200, 1)} g` },
+      { label: "Butter", value: `${r(cups * 227, 1)} g` },
+    ],
+    table: {
+      title: `${cups} ${cups === 1 ? "cup" : "cups"}, by ingredient`,
+      columns: ["Ingredient", "Grams"],
+      rows: CUP_INGREDIENTS.map((ing) => ({
+        label: ing.label,
+        value: `${r(cups * ing.gramsPerCup, 1)} g`,
+      })),
+    },
+    faqs: [
+      { question: `How many grams is ${cups} ${cups === 1 ? "cup" : "cups"} of flour?`, answer: `${cups} US ${cups === 1 ? "cup" : "cups"} of plain (or self-raising) flour is ${g} grams, using the standard 125 g per US cup.` },
+      { question: `Why isn't ${cups} ${cups === 1 ? "cup" : "cups"} always ${g} grams?`, answer: "A cup measures volume, not weight. Different ingredients pack differently — honey is roughly 2.7x denser than flour by volume, so the same cup measurement gives very different gram amounts depending what's in it." },
+      { question: "Is this a US cup or UK cup?", answer: "US cup (236.6 ml). Most modern UK recipes that use cups mean the US measurement — the old imperial UK cup (284 ml) is rarely used today." },
+    ],
+    parentPath: "/converters/cups-to-grams",
+    parentLabel: "Cups to Grams Converter",
+    accent: "#F97316",
+  };
+}
+
 // ─── Registry ─────────────────────────────────────────────────────────────────
 const pages: ConverterValuePage[] = [
   ...M_VALUES.map(metresPage),
@@ -354,6 +409,7 @@ const pages: ConverterValuePage[] = [
   ...G_VALUES.map(gramsPage),
   ...GAL_VALUES.map(gallonsPage),
   ...LBS_VALUES.map(lbsPage),
+  ...CUP_VALUES.map(cupsToGramsPage),
 ];
 
 const bySlug = new Map(pages.map((p) => [p.slug, p]));

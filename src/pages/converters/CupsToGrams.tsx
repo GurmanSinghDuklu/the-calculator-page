@@ -85,7 +85,7 @@ const CupsToGrams = () => {
         structuredData={{
           "@context": "https://schema.org",
           "@type": "SoftwareApplication",
-          "name": "Age Calculator",
+          "name": "Cups to Grams Converter",
           "alternateName": "The Calculator App",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Any (Web App — iOS, Android, Desktop)",
