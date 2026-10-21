@@ -1,0 +1,14 @@
+// Cloudflare Workers (static assets) config — replaces vercel.json.
+// Redirects live in public/_redirects, headers in public/_headers.
+{
+  "name": "thecalculatorapp",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    // Vercel cleanUrls + trailingSlash:false: /finance/mortgage.html and
+    // /finance/mortgage/ both redirect to /finance/mortgage.
+    "html_handling": "drop-trailing-slash",
+    // Unknown paths return a real 404 (Vercel's SPA rewrite never fired either).
+    "not_found_handling": "none"
+  }
+}

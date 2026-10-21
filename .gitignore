@@ -29,3 +29,6 @@ scripts/service-account.json
 scripts/seo-agent/.env
 scripts/seo-agent/com.thecalculatorpage.seo-agent.plist
 gsc-data/
+
+# Cloudflare wrangler local state
+.wrangler

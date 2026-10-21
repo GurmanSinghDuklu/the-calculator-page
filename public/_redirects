@@ -1,0 +1,10 @@
+# Cloudflare redirects (mirrors the "redirects" block in vercel.json)
+/finance/mortgage-calculator    /finance/mortgage       308
+/finance/loan-calculator        /finance/loan           308
+/finance/retirement-calculator  /finance/retirement     308
+/categories/health              /misc/bmi-calculator    308
+
+# Clean URLs, permanent like Vercel (Cloudflare's built-in html_handling uses 307)
+/index.html                     /                       308
+/*.html                         /:splat                 308
+/*/                             /:splat                 308
