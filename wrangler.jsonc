@@ -1,14 +1,21 @@
-// Cloudflare Workers (static assets) config — replaces vercel.json.
+// Cloudflare Workers (static assets) config.
 // Redirects live in public/_redirects, headers in public/_headers.
+// The apex -> www 301 is a Redirect Rule on the thecalculatorapp.org zone.
 {
   "name": "thecalculatorapp",
   "compatibility_date": "2026-10-01",
+  // Serve only on the real domain; workers.dev/preview URLs would be duplicate content.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "www.thecalculatorapp.org/*", "zone_name": "thecalculatorapp.org" }
+  ],
   "assets": {
     "directory": "./dist",
-    // Vercel cleanUrls + trailingSlash:false: /finance/mortgage.html and
+    // Clean, slashless URLs: /finance/mortgage.html and
     // /finance/mortgage/ both redirect to /finance/mortgage.
     "html_handling": "drop-trailing-slash",
-    // Unknown paths return a real 404 (Vercel's SPA rewrite never fired either).
+    // Unknown paths return a real 404, not the homepage.
     "not_found_handling": "none"
   }
 }

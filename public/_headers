@@ -1,4 +1,4 @@
-# Cloudflare headers (mirrors the "headers" block in vercel.json)
+# Security and cache headers
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
